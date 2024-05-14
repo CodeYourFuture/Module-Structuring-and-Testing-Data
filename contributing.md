@@ -8,13 +8,7 @@ Repo: https://github.com/CodeYourFuture/Module-Template
 
 Use Git & Github to submit your coursework as a pull request.
 
-The Github Desktop cheatsheet will help you.
-
-[Github Desktop Cheatsheet](http://syllabus.codeyourfuture.io/git/cheatsheet)
-
-This module will help you submit your coursework.
-
-[Git](http://syllabus.codeyourfuture.io/git/index)
+[Creating a pull request](https://curriculum.codeyourfuture.io/guides/create-a-pull-request/)
 
 ## Questions & Help
 
