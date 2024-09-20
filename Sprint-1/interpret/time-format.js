@@ -6,9 +6,7 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const remainingHours = totalHours % 24;
-
-const result = `${remainingHours}:${remainingMinutes}:${remainingSeconds}`;
+const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
 
 // For the piece of code above, read the code and then answer the following questions
