@@ -2,7 +2,7 @@
 
 ## Errors
 
-In this section, you need to go to each file in `errors` directory and run the file with node to check what the error is. Your task is to interpret the error message and explain why it occurs. The [errors documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors) will help you figure out the solution.
+In this section, you need to go to each file in `errors` directory. Read the file and predict what error will happen. Then run the file with node to check what the error is. Your task is to interpret the error message and explain why it occurs. The [errors documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors) will help you figure out the solution.
 
 ## Debug
 
@@ -10,7 +10,7 @@ In this section, you need to go to each file in `debug` to **explain and predict
 
 ## Implement
 
-In this section, you will have a short set of requirements about a function. You will need to implement a function based off this set of requirements.Make sure you check your function works for a number of different inputs.
+In this section, you will have a short set of requirements about a function. You will need to implement a function based off this set of requirements. Make sure you check your function works for a number of different inputs.
 Here is a recommended order:
 
 1. `to-pounds.js`
