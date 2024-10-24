@@ -16,3 +16,7 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+// alert shows a small window saying "Hello World!"
+// prompt shows a small window with a input area 
+// what you write in the input area in prompt is the return value of prompt

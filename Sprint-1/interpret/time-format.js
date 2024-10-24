@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 9784; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -22,3 +22,15 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+
+// a) 6 varieble declaration
+
+// b) one function call - console.log()
+
+// c) it divides movielength by 60 which will separate the seconds which is not enough to be one minute
+
+// d) it removes remaining seconds which is not enough to be a minute and then divide the seconds to 60 to make total mitutes
+
+// e) it is length of movie with hour minute and second - movie time
+
+// f) yes it works
