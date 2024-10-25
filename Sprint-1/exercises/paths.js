@@ -25,6 +25,6 @@ const lastDotIndex = filePath.lastIndexOf(".");
 const ext = filePath.slice(lastDotIndex+1);
 console.log(ext);
 
-//another way to extract ext part of filePath string:
+//another way to extract ext part of filePath string is: 
 const ext2 = filePath.split(".").pop();
 console.log(ext2);

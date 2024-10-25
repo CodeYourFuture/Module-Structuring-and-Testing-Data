@@ -7,4 +7,4 @@ let lastName = "Johnson";
 // This should produce the string "CKJ", but you must not write the characters C, K, or J in the code of your solution.
 let initials = firstName.charAt(0) + middleName.charAt(0) + lastName.charAt(0);
 
-console.log("initials:" + initials);
+console.log("initials are:" + initials);
