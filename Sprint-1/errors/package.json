@@ -1,0 +1,19 @@
+{
+  "name": "errors",
+  "version": "1.0.0",
+  "description": "resolves errors ",
+  "main": "0.js",
+  "scripts": {
+  "start": "node "
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArminNouri98/Module-Structuring-and-Testing-Data.git"
+  },
+  "author": "Armin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArminNouri98/Module-Structuring-and-Testing-Data/issues"
+  },
+  "homepage": "https://github.com/ArminNouri98/Module-Structuring-and-Testing-Data#readme"
+}
