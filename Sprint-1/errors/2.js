@@ -3,3 +3,5 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+//cityofBirth variable must go to the beginning. we have to define the variables first and then use them 
