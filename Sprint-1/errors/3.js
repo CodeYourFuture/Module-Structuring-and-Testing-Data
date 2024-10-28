@@ -7,3 +7,6 @@ const last4Digits = cardNumber.slice(-4);
 // Then run the code and see what error it gives.
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
+
+
+// I believe the the code is correct. However, the first variable is considered as a string. If operation were to be done on it, the output should first be converted into an integer.
