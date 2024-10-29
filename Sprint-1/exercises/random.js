@@ -10,13 +10,13 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 //A.Math.random():
 
-//This function generates a random floating-point number between 0 (inclusive) and 1 (exclusive).
+//This function generates a random floating-point number between 0  and 1.
 //This means the value could be something like 0.234 or 0.999, but it will never be 1.
 //B.Math.random() * (maximum - minimum + 1):
 
 //Math.random() is multiplied by (maximum - minimum + 1).
 //In this case, (maximum - minimum + 1) is 100 - 1 + 1, which equals 100.
-//So, Math.random() * 100 will produce a random number between 0 (inclusive) and 100 (exclusive).
+//So, Math.random() * 100 will produce a random number between 0  and 100 .
 //Math.floor(...):
 
 //C.Math.floor rounds down the resulting floating-point number to the nearest whole number (integer).
@@ -24,7 +24,7 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 //D.+ minimum:
 
 //Adding minimum shifts the range from [0, 99] to [1, 100].
-//This ensures the final result, num, is between 1 and 100 (inclusive).
+//This ensures the final result, num, is between 1 and 100 .
 
 //RESULT
 console.log(num);
