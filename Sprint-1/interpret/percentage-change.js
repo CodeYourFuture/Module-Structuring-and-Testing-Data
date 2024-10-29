@@ -32,4 +32,4 @@ console.log(`The percentage change is ${percentageChange}`);
 
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
-    //it removes "," from between the carprice string and then converts the string to the number
+    //it removes "," from between the carprice string and then converts the string to the number to be used in operations
