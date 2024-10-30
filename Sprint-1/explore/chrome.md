@@ -12,7 +12,11 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
+<!-- a pop up alert with will show up on chrome displaying Hello world! -->
+
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+<!-- prompt will ask for a prompt from the user by asking 'What is your name?'. The input is then added to the variable myName. The cancel button cancels the prompt. -->
