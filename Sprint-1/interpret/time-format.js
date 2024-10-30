@@ -2,7 +2,6 @@ const movieLength = 8784; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
-
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
@@ -21,6 +20,7 @@ console.log(result);
 //The modulo operation (%) calculates the remainder when movieLength is divided by 60.
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
+// The expression assigned to totalMinutes calculates the total number of whole minutes in the movie's length (in seconds) by removing the leftover seconds and then converting the remaining time to minutes
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 /*
