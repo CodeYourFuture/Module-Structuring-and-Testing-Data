@@ -6,5 +6,5 @@ function multiply(a, b) {
 
   return multiple1;
 }
-let multiple = multiply(10, 32);
-console.log(`The result of multiplying 10 and 32 is ${multiple}`);
+
+console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
