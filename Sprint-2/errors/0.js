@@ -4,6 +4,8 @@
 // interpret the error message and figure out why an error is occurring
 
 function capitalise(str) {
-  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  let str1 = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
+//syntax error: Identifier 'str' has already been declared: we can't use the same variable name both as a function's argument
+//and as a variable inside the function. so I changed the one inside the function to another name
