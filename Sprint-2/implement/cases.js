@@ -13,3 +13,9 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function conversion(origin) {
+  return origin.replaceAll(" ", "_").toUpperCase();
+}
+
+console.log(`${conversion("lord of the rings")}`);
