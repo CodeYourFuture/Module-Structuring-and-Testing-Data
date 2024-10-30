@@ -12,7 +12,7 @@ function convertToPercentage(decimalNumber) {
 
 //console.log(percentage);
 console.log(`${convertToPercentage(0.5)}`);
-//In line 6,syntax error: Identifier 'str' has already been declared: we can't use the same variable name both as a function's argument
+//In line 6,syntax error: Identifier 'str' has already been declared: we can't use the same variable name both as a function's parameter
 //and as a variable inside the function. I'm not going the variable name in this project as it seems line 7 is a useless line
 //so I just put // to ignore this line
 
