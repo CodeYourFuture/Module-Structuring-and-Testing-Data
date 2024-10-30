@@ -3,6 +3,7 @@
 const age = 33;
 age = age + 1;
 
-const age=33
-const updatedage=`${age+1}`
-console.log(updatedage);
+let age = 33;
+age = age + 1;
+console.log(`Updated age: ${age}`); 
+
