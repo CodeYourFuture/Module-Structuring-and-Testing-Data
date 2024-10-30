@@ -46,6 +46,11 @@ The complete expression generates a random integer between 1 and 100, including 
 -----------------------------------------------------------------------------------
  -Try logging the value of num and running the program several times to build an idea of what the program is doing
 
+*********Answer:**********
+
+I've done multiple tests by logging num with different ranges and without Math.floor to observe floating-point results
+
+
  */
 
 const random = Math.random() * (maximum - minimum + 1) + minimum;
