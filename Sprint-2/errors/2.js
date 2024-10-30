@@ -4,7 +4,7 @@
 
 //function square(3) {
 function square(num) {
-  return (square = num * num);
+  return num * num;
 }
 
 console.log(`${square(5)}`);
