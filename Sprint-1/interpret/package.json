@@ -1,0 +1,12 @@
+{
+  "name": "interpret",
+  "version": "1.0.0",
+  "main": "percentage-change.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

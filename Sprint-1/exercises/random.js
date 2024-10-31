@@ -7,3 +7,6 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
+
+
+//here we are just make a random number between 1 to 100 and The num variable represents a random integer between 1 and 100. Every time you run the program, num will take a different value within that range.
