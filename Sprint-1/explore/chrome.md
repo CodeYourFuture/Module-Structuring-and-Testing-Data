@@ -16,3 +16,7 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+//Answer:
+The function alert("Hello world!") displays undefined and prompt("What is your name?") displays null.
+ 
