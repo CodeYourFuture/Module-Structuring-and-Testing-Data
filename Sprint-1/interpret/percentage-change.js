@@ -9,9 +9,7 @@ const percentageChange = (priceDifference / carPrice) * 100;
 
 console.log(`The percentage change is ${percentageChange}`);
 
-// Read the code and then answer the questions below
 
-// a) How many function calls are there in this file? Write down all the lines where a function call is made
 5 lines 
 Number(carPrice.replaceAll(",", "")); (Line 3)
 carPrice.replaceAll(",", "") (within Line 3)
