@@ -9,7 +9,7 @@ const totalHours = (totalMinutes - remainingMinutes) / 60;
 const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
 
-// For the piece of code above, read the code and then answer the following questions
+
 
 // a) How many variable declarations are there in this program?
 6 variables
