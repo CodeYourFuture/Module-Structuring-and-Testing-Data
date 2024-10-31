@@ -4,10 +4,10 @@
 // Try playing computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
+  // Multiply the input by 100 and add the '%' symbol
   const percentage = `${decimalNumber * 100}%`;
-
   return percentage;
 }
 
-console.log(decimalNumber);
+// Example usage
+console.log(convertToPercentage(0.5));
