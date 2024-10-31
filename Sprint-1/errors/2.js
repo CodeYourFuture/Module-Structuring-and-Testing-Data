@@ -2,4 +2,4 @@
 // what's the error ?
 
 console.log(`I was born in ${cityOfBirth}`);
-const cityOfBirth = "Bolton";
+return cityOfBirth = "Bolton";
