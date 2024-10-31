@@ -1,2 +1,4 @@
-const 24HourClockTime = "20:53"; // changed to 24HourClockTime instead of 12, as the variable and the value do not match 12/24
-const 24hourClockTime = "08:53";
+const HourClockTime12 = "20:53"; // changed to HourClockTime12 as in javascript the variable names start with _, letter or $, they can't start with a number
+const HourClockTime24 = "08:53";
+console.log(HourClockTime12);
+console.log(HourClockTime24);
