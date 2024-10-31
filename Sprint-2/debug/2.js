@@ -2,7 +2,9 @@
 
 const num = 103;
 
-function getLastDigit() {
+// function getLastDigit() {
+  function getLastDigit(num) {//we need write input for method
+
   return num.toString().slice(-1);
 }
 
