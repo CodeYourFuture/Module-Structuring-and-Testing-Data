@@ -6,5 +6,5 @@ let count = 0;
 count = count + 1;
 console.log(count);
 
-// line 3 is taking the first value and reassings this new value to count its value + the number 1
+// line 3 is taking the first value and reassigns this new value to count its value + the number 1
 
