@@ -1,6 +1,6 @@
 // Below are the steps for how BMI is calculated
 
-// The BMI calculation divides an adult's weight in kilograms (kg) by their height in metres (m) squared.
+// The BMI calculation divides an adult's weight in kilograms (kg) by their height in metres (m)  .
 
 // For example, if you weigh 70kg (around 11 stone) and are 1.73m (around 5 feet 8 inches) tall, you work out your BMI by:
 
@@ -13,3 +13,9 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+function BMI(weight,height){
+    let heightSquared = height*height;
+    let BMICalc = (weight/heightSquared).toFixed(1);
+    return `Your BMI is:${BMICalc}`;
+}
+console.log(BMI(65,1.71));
