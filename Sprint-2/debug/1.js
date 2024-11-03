@@ -1,5 +1,5 @@
 // Predict and explain first...
-
+// sum function passed two arguments and returns undefined;
 function sum(a, b) {
   return;
   a + b;
