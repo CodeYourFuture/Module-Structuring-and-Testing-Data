@@ -13,3 +13,14 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+/*function convertToUpperSnakeCase(str){
+    let x = str[0].toUpperCase()+str.slice(1);
+    return x;
+}
+console.log(convertToUpperSnakeCase("sue and moein the best older brother")); */
+function convertToUpperSnakeCase(str){
+    let x = str.split(" ");
+    let upperX = x[0].charAt(0).toUpperCase();
+    return upperX;
+}
+console.log(convertToUpperSnakeCase("sue and moein the best older brother"));

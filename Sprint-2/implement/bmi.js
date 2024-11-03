@@ -18,4 +18,5 @@ function BMI(weight,height){
     let BMICalc = (weight/heightSquared).toFixed(1);
     return `Your BMI is:${BMICalc}`;
 }
-console.log(BMI(65,1.71));
+console.log(BMI(65,1.72));
+//what if i wanted to ask questions first? prompt is not working here. i need something more complex named readline ... 
