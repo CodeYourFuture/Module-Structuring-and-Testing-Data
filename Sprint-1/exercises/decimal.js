@@ -9,4 +9,9 @@ const wholeNumberPart = Math.floor(num);
 console.log(wholeNumberPart);
 
 // Create a variable called decimalPart and assign to it an expression that evaluates to 0.5678 ( the decimal part of num )
+const decimalPart = num - Math.floor(num);
+console.log(decimalPart.toFixed(4));
+
 // Create a variable called roundedNum and assign to it an expression that evaluates to 57 ( num rounded to the nearest whole number )
+const roundedNum = Math.round(num);
+console.log(roundedNum);
