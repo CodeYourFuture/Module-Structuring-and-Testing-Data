@@ -1,5 +1,5 @@
 // Predict and explain first...
-
+// multiply function passes two arguments and displays the result and outputs once exited undefined.
 function multiply(a, b) {
   console.log(a * b);
 }
