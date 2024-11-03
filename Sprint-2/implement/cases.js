@@ -13,3 +13,9 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function UPPER_SNAKE_CASE(sentence){
+    return sentence.replaceAll(' ', '_').toUpperCase();
+}
+
+console.log(`Upper snake case ${UPPER_SNAKE_CASE('lord of the rings')}`)
