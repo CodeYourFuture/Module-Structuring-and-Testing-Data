@@ -8,6 +8,16 @@ function toPounds(penceString) {  //example: 123p
     let removeP = penceString.slice(0,penceString.length-1); // output: 123
     let getPoundPart = removeP.slice(0,removeP.length-2); //output: 1
     let getPencePart = removeP.slice(-2); //23
-    return `${getPencePart}.${getPoundPart} pounds`;
+    return `${getPoundPart}.${getPencePart} pound`;
 }
 console.log(toPounds("123p"));
+
+// bug for 23p!. needs padding
+function toPounds2(penceString) {  //example: 23p
+    let removeP = penceString.slice(0,penceString.length-1); // output: 23
+    let getPoundPart = removeP.slice(0,removeP.length-2).padStart(1,"0"); //it was output: empty before padding. 
+    let getPencePart = removeP.slice(-2); //23
+    return `${getPoundPart}.${getPencePart} pound`;
+
+}
+console.log(toPounds2("23p"));
