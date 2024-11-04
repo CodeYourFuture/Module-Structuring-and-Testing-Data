@@ -18,4 +18,4 @@ What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
 
 // so I used the let MyName = prompt ("What is your name?"), a popup box showed where I could type in my name. I guess the effect is the pop up box with the name field.
-// the return value is in prompt i can put in my name then it is stored in the variable MyName.
+// the return value is in prompt i can put in my name then it is stored in the variable MyName.e
