@@ -11,7 +11,6 @@ function toPounds(penceString) {  //example: 123p
     return `${getPoundPart}.${getPencePart} pound`;
 }
 console.log(toPounds("123p"));
-
 // bug for 23p!. needs padding
 function toPounds2(penceString) {  //example: 23p
     let removeP = penceString.slice(0,penceString.length-1); // output: 23
