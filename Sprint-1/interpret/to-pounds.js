@@ -1,7 +1,6 @@
 const penceString = "399p"; //This line creates a string variable named penceString with the value “399p,” representing the price in pence.
 
-const penceStringWithoutTrailingP = penceString.substring(
-  0,
+const penceStringWithoutTrailingP = penceString.substring(0,
   penceString.length - 1 //This line removes the “p” character from the end of penceString. The substring method takes characters from 
   //the start up to the second-to-last character, storing the result in penceStringWithoutTrailingP.
 );
