@@ -3,11 +3,11 @@
 
 //Corrected Code :
 
-const hour12ClockTime = "20:53";
-const hour24ClockTime = "08:53";
+const TimeIn12HourFormat = "08:53 PM";
+const TimeIn24HourFormat = "20:53";
 
-console.log(hour12ClockTime);
-console.log(hour24ClockTime);
+console.log(TimeIn12HourFormat);
+console.log(TimeIn24HourFormat);
 
 //Error: Uncaught SyntaxError: Invalid or unexpected token
 
