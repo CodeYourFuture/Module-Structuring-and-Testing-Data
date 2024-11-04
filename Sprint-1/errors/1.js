@@ -3,7 +3,7 @@
 const age = 33;
 age = age + 1;
 
-//we can not use const we must  to use let variable .
+//we can not use const we must use let variable .
  
 
 
