@@ -22,3 +22,11 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+
+// Answers:
+// a) There are 5 variable declarations: movieLength, remainingSeconds, totalMinutes, remainingMinutes, totalHours
+// b) There is 1 function call: console.log()
+// c) movieLength % 60 finds leftover seconds that don’t fit into a full minute
+// d) totalMinutes gives the number of complete minutes by removing extra seconds
+// e) result is the formatted time (HH:MM:SS); a better name could be formattedTime
+// f) Code works for any non-negative movieLength, but not for negative values
