@@ -1,7 +1,7 @@
 const minimum = 1;
 const maximum = 100;
 
-const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+// const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 // In this exercise, you will need to work out what num represents?
 /* Each time this code runs, num will represent a random integer between 1 and 100 */
@@ -35,4 +35,5 @@ ORDER:
 
 for (let i = 0; i < 10; i++) {
   const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+  console.log(num);
 }
