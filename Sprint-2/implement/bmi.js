@@ -13,3 +13,11 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function  bmi_Calculation(height, weight) {
+    let squareHeight = height * height;
+    
+    return  weight / squareHeight
+}
+
+console.log(bmi_Calculation(1.73, 70));
