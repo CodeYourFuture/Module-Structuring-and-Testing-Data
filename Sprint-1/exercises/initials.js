@@ -2,7 +2,7 @@ let firstName = "Creola";
 let middleName = "Katherine";
 let lastName = "Johnson";
 
-let initials = [firstName[0], middleName[0], lastName[0]];
+let initials = [firstName[0], middleName[0], lastName[0]].join('');
 console.log(initials);
 
 // Declare a variable called initials that stores the first character of each string.

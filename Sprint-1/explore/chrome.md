@@ -16,7 +16,7 @@ A pop-up alert appear with "Hello world!"
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
-a prompt dialog appear in the browser with "What is your name?"
+a prompt dialog appear in the browser with "What is your name?", input field where the user can type a respond, it has 2 buttons: Ok and Cancel, the text is stored in the variable `myName`
 
 What is the return value of `prompt`?
-myName
+the text the user enters returned as a string
