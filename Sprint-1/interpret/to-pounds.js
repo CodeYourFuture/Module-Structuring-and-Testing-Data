@@ -25,4 +25,11 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
-// 2. 
+// 2. const penceStringWithoutTrailingP = penceString.substring(
+// 0, penceString.length - 1); remove the "p" in penceString so it return "399"
+// 3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+//  the variable paddedPenceNumberString has a length of 3 caracters starting from "0"-3
+// 4. const pounds = paddedPenceNumberString.substring(0,paddedPenceNumberString.length - 2);
+// the variable paddedPenceNumberString has now "3" as the value since the last digit "99" were removed by the function 
+// 5. const pence = paddedPenceNumberString .substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
+// allows to have 2 digits in pence 
