@@ -2,3 +2,7 @@
 
 const age = 33;
 age = age + 1;
+
+console.log(age);
+
+//TypeError: Assignment to constant variable. We cannot reassign the value to const variable

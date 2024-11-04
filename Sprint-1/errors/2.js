@@ -3,3 +3,6 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+//ReferenceError: Cannot access 'cityOfBirth' before initialization. in javaScript variable that declare with const and let can not access before assigning theme
+//for fixing this simply we should assign variable before using it with console.log().
