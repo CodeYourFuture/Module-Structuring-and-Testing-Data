@@ -1,4 +1,4 @@
-let carPrice = "10,000";
+let carPrice = "10,000"; // changed the variable to let 
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
