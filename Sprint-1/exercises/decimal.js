@@ -12,5 +12,7 @@ const decimalPart = (num - wholeNumberPart).toFixed(4);// First, I need to subst
 console.log (decimalPart);
 
 // Create a variable called roundedNum and assign to it an expression that evaluates to 57 ( num rounded to the nearest whole number )
-
+const roundedNum = Math.round(num);// Math.round() Returns the value of the input rounded to the nearest integer.
 // Log your variables to the console to check your answers
+
+console.log ()
