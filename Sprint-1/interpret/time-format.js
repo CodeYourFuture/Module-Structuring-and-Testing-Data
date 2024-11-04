@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 5; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -32,3 +32,4 @@ console.log(MovieLengthHourMinSec);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // it gives the exact running time of a move hours:minutes:seconds. variable name MovieLengthHourMinSec
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+// if i put in movieLength =20 0.0.20 or 5, 0.0.5. The expression for positive and large numbers, but for small numbers the formatting for hours and min return in 0.0 and not 00.00.
