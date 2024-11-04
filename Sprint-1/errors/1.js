@@ -2,3 +2,5 @@
 
 const age = 33;
 age = age + 1;
+
+/* Node gave a TypeError because we can't reassign a constant variable */
