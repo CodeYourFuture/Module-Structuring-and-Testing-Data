@@ -19,4 +19,4 @@ console.log(`The base part of ${filePath} is ${base}`);
 const dir=filePath.slice(0,lastSlashIndex);
  console.log('${filePath}is${dir}');
 const ext=base.slice(lastDotIndex);
-console.log('${base}is${ext}');
+console.log('${filepath}is${ext}');
