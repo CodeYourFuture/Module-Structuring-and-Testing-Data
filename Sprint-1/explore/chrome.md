@@ -21,4 +21,8 @@ What effect does calling the `prompt` function have?
  *a pop-up dialog box will open with input field to enter the input
 
 What is the return value of `prompt`?
- *prompt return the value in the console but when we store it in variable it shows undifined. we can use console.log(myName) then we can see the return value, 
+ *If I enter input and press OK, prompt return the value in the console or when we store it in variable it shows undifined. we can use console.log(myName) then we can see the return value
+
+ *If I don't enter input and press Ok, it will return empty string ' ' or when we store it in variable it shows undifined. we can use console.log(myName) then we can see the return empty string
+
+ *If I press cancel, it will return null
