@@ -12,5 +12,5 @@ Try also entering `typeof console` 'typeof consolel'
 
 Answer the following questions:
 
-What does `console` store?General output of information.
+What does `console` store? General output of information.
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
