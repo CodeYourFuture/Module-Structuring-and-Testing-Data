@@ -25,8 +25,8 @@ console.log(`The percentage change is ${percentageChange}`);
 
 /*
 Answer
-a) There are 4 function calls.
-   Line 4 snd 5
+a) There are 5 function calls.
+   Line 4,5, and 11
 
 b) The error comes from line 5 because of missing comma between the comman and empthy string replacing argumentt, to fix this we have ato add comma
 like this priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",",""));
