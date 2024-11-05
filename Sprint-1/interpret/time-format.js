@@ -1,4 +1,5 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 8760; // length of movie in seconds
+// const movieLength = 8784;
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -28,5 +29,16 @@ console.log(result);
 
 a) 6
 
+b) 1
+
+c) This uses a  modulus operator (%) to find the remainder when movieLength is divided by 60. 
+
+d) Calculating the total number of full minutes in movieLength. 
+movieLength represents the total duration of the movie in seconds ,remainingSeconds is the number of seconds left after accounting for all full minutes (from the previous line).
+By subtracting remainingSeconds from movieLength, we get only the seconds that make up complete minutes, effectively rounding down to the nearest minute.
+
+e)movieDuration
+
+f) Yes, it works correctly for all values. 
 
 */
