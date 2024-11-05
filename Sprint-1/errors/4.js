@@ -1,4 +1,4 @@
-const timeIn12HourFormat  = "20:53";
-const timeIn24HourFormat  = "08:53";
+const timeIn12HourFormat = "12:00";
+const timeIn24HourFormat = "00:00";
 
 //names were wrong.
