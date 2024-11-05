@@ -2,3 +2,6 @@ node_modules
 .DS_Store
 .vscode
 **/.DS_Store
+Sprint-3/implement/getCardValue.test.js
+Sprint-3/implement/package.json
+Sprint-3/implement/package-lock.json
