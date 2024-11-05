@@ -33,3 +33,40 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+
+function isValidTriangle(a, b, c) {
+    // Check if any side is less than or equal to zero (invalid input)
+    if (a <= 0 || b <= 0 || c <= 0) {
+        return false;
+    }
+
+    // Check the Triangle Inequality Theorem
+    if (a + b > c && a + c > b && b + c > a) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Test cases using console.assert
+
+// Valid triangle cases
+console.assert(isValidTriangle(3, 4, 5) === true, "3, 4, 5 should return true (valid triangle)");
+console.assert(isValidTriangle(5, 5, 5) === true, "5, 5, 5 should return true (valid triangle)");
+
+// Invalid triangle cases
+console.assert(isValidTriangle(1, 2, 3) === false, "1, 2, 3 should return false (invalid triangle)");
+console.assert(isValidTriangle(3, 1, 1) === false, "3, 1, 1 should return false (invalid triangle)");
+console.assert(isValidTriangle(10, 2, 2) === false, "10, 2, 2 should return false (invalid triangle)");
+
+// Zero or negative side length cases
+console.assert(isValidTriangle(0, 5, 7) === false, "0, 5, 7 should return false (invalid triangle)");
+console.assert(isValidTriangle(-3, 4, 5) === false, "-3, 4, 5 should return false (invalid triangle)");
+console.assert(isValidTriangle(6, -1, 6) === false, "6, -1, 6 should return false (invalid triangle)");
+
+// Edge case: very small valid triangle
+console.assert(isValidTriangle(0.1, 0.1, 0.1) === true, "0.1, 0.1, 0.1 should return true (valid triangle)");
+
+// Edge case: sum exactly equals one side (invalid)
+console.assert(isValidTriangle(1, 1, 2) === false, "1, 1, 2 should return false (invalid triangle)");
