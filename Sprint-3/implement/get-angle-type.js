@@ -33,3 +33,4 @@ function getAngleType(n) {
   if (180 < n && n < 360) return "Reflex Angle ";
 }
 console.log(getAngleType(23));
+//This function will get a number as a angle and return what angle  is

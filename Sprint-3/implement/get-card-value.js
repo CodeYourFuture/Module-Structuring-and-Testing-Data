@@ -29,3 +29,14 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+function getCardValue(cardString) {
+  let firstPartOfCard;
+  let seconPartOfCard;
+  cardStringPadded = cardString.padStart(3, "0");
+  rank = cardStringPadded.substring(0, 2);
+  if (2 <= rank && rank <= 10) return rank;
+  if (rank == "0A") return 11;
+  if (rank == "0Q" || rank == "0J" || rank == "0K") return 10;
+  else return "Invalid Card rank";
+}
+console.log(getCardValue("3B"));
