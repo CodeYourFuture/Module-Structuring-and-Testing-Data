@@ -1,8 +1,10 @@
 const num = 56.5678;
-let wholeNumberPart=Math.floor(num);
-let decimalPart=num-wholeNumberPart;
+let wholeNumberPart = Math.floor(num);
+let decimalPart = num - wholeNumberPart;
 let roundedNum = Math.round(num);
-
+console.log("Whole Number Part:", wholeNumberPart); // Output: 56
+console.log("Decimal Part:", decimalPart.toFixed(4)); // Output: 0.5678
+console.log("Rounded Number:", roundedNum); // Output: 57
 // You should look up Math functions for this exercise https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 // Create a variable called wholeNumberPart and assign to it an expression that evaluates to 56 ( the whole number part of num )
