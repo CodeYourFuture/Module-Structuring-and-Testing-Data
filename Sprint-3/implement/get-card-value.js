@@ -30,8 +30,6 @@
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 function getCardValue(cardString) {
-  let firstPartOfCard;
-  let seconPartOfCard;
   cardStringPadded = cardString.padStart(3, "0");
   rank = cardStringPadded.substring(0, 2);
   if (2 <= rank && rank <= 10) return rank;
