@@ -1,5 +1,5 @@
 // Predict and explain first...
-
+//this function will get a number and return the square of the number.
 // this function should square any number but instead we're going to get an error
 
 //function square(3) {
