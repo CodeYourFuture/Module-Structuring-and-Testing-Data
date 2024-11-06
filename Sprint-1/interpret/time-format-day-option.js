@@ -7,5 +7,5 @@ const totalHours = (totalMinutes - remainingMinutes) / 60; // calculate total ho
 const totalDays = Math.floor(totalHours / 24); // calculate total days
 const remainingHours = totalHours % 24; // calculate remaining hours
 
-const result = `${totalDays} days, ${remainingHours} hours, ${remainingMinutes} minutes, ${remainingSeconds} seconds`;
+const formattedTime = `${totalDays} days, ${remainingHours} hours, ${remainingMinutes} minutes, ${remainingSeconds} seconds`;
 console.log(result);
