@@ -42,4 +42,21 @@ function isProperFraction(numerator, denominator) {
     return false;
   if (denominator == 0) return "Error";
 }
-console.log(isProperFraction(5, 0));
+//console.log(isProperFraction(5, 0));
+console.assert(
+  isProperFraction(-3, 4) == true,
+  "The absolute value of numerator is less than denominator, so it should return `true` "
+);
+console.assert(
+  isProperFraction(8, 4) == false,
+  "The absolute value of numerator is higher than denominator,and also denominator is not 0, so it should return false"
+);
+console.assert(
+  isProperFraction(8, 8) == false,
+  "The absolute value of numerator equals to denominator,and also denominator is not 0, so it should return false"
+);
+
+console.assert(
+  isProperFraction(5, 0) == "Error",
+  "Denominator is 0, so it should return `error`"
+);

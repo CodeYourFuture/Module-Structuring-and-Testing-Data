@@ -37,4 +37,5 @@ function getCardValue(cardString) {
   if (rank == "0Q" || rank == "0J" || rank == "0K") return 10;
   else return "Invalid Card rank";
 }
-console.log(getCardValue("3B"));
+//console.log(getCardValue("3B"));
+console.assert(getCardValue("QB") == "0", "False");
