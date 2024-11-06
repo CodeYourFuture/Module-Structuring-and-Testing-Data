@@ -30,12 +30,11 @@ function convertToUpperSnakeCase(str){
     return upperX;
 }
 console.log(convertToUpperSnakeCase("sue and moein the best older brother"));
-
 //a function to turn "sue and moein the best older brother" to "Sue And Moein The Best Brother In The World":
 function capitaliseFirstLetter(sentence){
     let x = sentence.split(" "); // Split the sentence into an array of words
     let y= x.map(word => {
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        return word[0].toUpperCase() + word.slice(1).toLowerCase();
     })
     let z = y.join(" ")  // Join the words back into a single string
     return z;
