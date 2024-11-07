@@ -9,4 +9,3 @@ test("tests cards", () => {
   expect(getCardValue("3B")).toEqual("03");
   expect(getCardValue("RB")).toEqual("Invalid Card rank");
 });
-//});

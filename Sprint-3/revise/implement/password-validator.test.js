@@ -1,3 +1,6 @@
+const { default: test } = require("node:test");
+const { hasUncaughtExceptionCaptureCallback } = require("process");
+
 /* 
 Password Validation
 
@@ -14,3 +17,18 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+function passwordValidation(pass) {
+  let passwordsArrey = ["ydt635RERE!¬", "hdud738+=sg", "bxv735@@ls0HG"];
+  if (
+    /[A-Z]/.test(pass) &&
+    /[a-z]/.test(pass) &&
+    pass.length >= 5 &&
+    /\d/.test(pass) &&
+    /\w/.test(pass) &&
+    passwordsArrey.every((password) => password !== pass)
+  )
+    return "Valid Pasword!";
+  else return "Invalid Password";
+}
+console.log(passwordValidation("ghqd43ghF~+"));
+test("if the password is valid or invalid", () => {});
