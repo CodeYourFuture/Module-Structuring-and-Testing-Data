@@ -13,3 +13,6 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+const toUpperSnakeCase=(str)=> str.replaceAll(' ','_').toUpperCase();
+console.log(toUpperSnakeCase('lord of the rings'))
