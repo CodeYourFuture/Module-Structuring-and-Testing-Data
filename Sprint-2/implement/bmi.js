@@ -20,3 +20,20 @@ function BMI(weight,height){
 }
 console.log(BMI(65,1.72));
 //what if i wanted to ask questions first? prompt is not working here. i need something more complex named readline ... 
+function printManyTimes(str) {
+    "use strict";
+  
+    const SENTENCE = str + " is cool!";
+    let output = ""; // Store the full output here
+  
+    for (let i = 0; i < str.length; i += 2) {
+      output += SENTENCE + "<br>"; // Adds each sentence with a line break
+    }
+  
+    // Find the element with id 'output' and set its HTML content
+    document.getElementById("output").innerHTML = output;
+  }
+  
+  // Call the function
+  printManyTimes("freeCodeCamp");
+  

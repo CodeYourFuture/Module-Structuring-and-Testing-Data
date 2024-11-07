@@ -25,3 +25,7 @@
 // Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+test('adds 2 + 3 to equal 5', () => {
+    expect(add(2, 3)).toBe(5);
+  });
+  
