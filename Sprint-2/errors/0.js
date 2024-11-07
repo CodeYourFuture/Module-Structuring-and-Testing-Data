@@ -7,3 +7,7 @@ function capitalise(str) {
   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
+
+/*
+An error will be diplayed  because str varibale redecaration. it is declared twice one as parameter and another one as variable in side function.
+*/
