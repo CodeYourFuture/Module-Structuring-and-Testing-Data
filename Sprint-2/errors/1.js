@@ -11,3 +11,7 @@ function convertToPercentage(decimalNumber) {
 }
 
 console.log(decimalNumber);
+
+/*
+Syntax error because decimalNumber is redecalred, and the second one is accessing the decimalNuber out of the scope while logging.
+*/
