@@ -56,3 +56,21 @@ function isProperFraction(fraction) {
 test ('expected output is error', () => {
     expect(isProperFraction("5/0")).toBe('Error');
 });
+// assertion check for is-valid-triangle:
+function isValidTriangle(a,b,c){
+    let sum_V1 = a+b;
+    let sum_V2 = a+c;
+    let sum_v3 = b+c;
+    if (sum_V1 > c && sum_V2 > b && sum_v3 > a) {
+        return true;
+    }
+    else {
+        return false
+    }
+}
+test ('expected output is true', () =>{
+    expect(isValidTriangle(1,7,7)).toBe(true);
+})
+test ('expected output is false', () =>{
+    expect(isValidTriangle(1,2,7)).toBe(false);
+})
