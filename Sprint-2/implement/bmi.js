@@ -13,3 +13,20 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+function calculateBMI(weight, height) {
+    // Step 1: Square the height
+    const heightSquared = height * height;
+    
+    // Step 2: Divide the weight by the squared height
+    const bmi = weight / heightSquared;
+    
+    // Step 3: Return the BMI rounded to 1 decimal place
+    return bmi.toFixed(1);
+  }
+  
+  // Example usage:
+  const weight = 55; // weight in kg
+  const height = 1.67; // height in meters
+  
+  const bmi = calculateBMI(weight, height);
+  console.log(bmi);  // Output: 23.4
