@@ -36,8 +36,10 @@
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 // Input: numerator = 3, denominator = 3 return The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 function isProperFraction(numerator, denominator) {
-  if (denominator === 0) {
+  if (denominator == 0) {
     throw new Error("Denominator cannot be zero");
   }
   return Math.abs(numerator) < Math.abs(denominator);
 }
+
+module.exports = isProperFraction; // Export the function
