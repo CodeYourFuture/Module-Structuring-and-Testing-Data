@@ -11,4 +11,3 @@ function square(3) {
 Variable name can not be numberic . It must be a correct identifier to recive andy number and make a square.
 */
 
-
