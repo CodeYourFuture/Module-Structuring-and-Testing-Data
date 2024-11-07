@@ -9,5 +9,5 @@ function capitalise(str) {
 }
 
 /*
-An error will be diplayed  because str varibale redecaration. it is declared twice one as parameter and another one as variable in side function.
+ SyntaxError will be diplayed  because of str varibale redecaration. it is declared twice one as parameter and another one as variable in side function.
 */
