@@ -34,5 +34,5 @@ function formatTimeDisplay(seconds) {
 //This is because remainingSeconds is calculated as 61 % 60, which equals 1. When pad is called for remainingSeconds, it receives this value (1) as num.
 
 
-// e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+// e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer.
 //he return value is pad(1) returns "01" because padStart(2, "0") ensures it has two
