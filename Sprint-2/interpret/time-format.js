@@ -29,3 +29,14 @@ function formatTimeDisplay(seconds) {
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+
+
+/* Answer
+a, 3 times
+b,totalHours wich is 0
+c, "00"
+d,The last value assigned to num is remainingSeconds, which is 1. Therefore, the value assigned to num is 1 on the last call.
+e, The pad(1) returns "01" because 1 is padded to a two-character string, so the return value is "01"
+
+
+*/
