@@ -1,8 +1,8 @@
 // Predict and explain first...
 
-const num = 103;
+// const num = 103; // deleted declaration of the num variable
 
-function getLastDigit() {
+function getLastDigit(num) { // Added parameter to the function to make it more flexible
   return num.toString().slice(-1);
 }
 
