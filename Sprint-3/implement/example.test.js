@@ -20,7 +20,7 @@ function getAngleType(angle) {
 test ('obtuse angle', () => {
     expect(getAngleType("120 degrees")).toBe('Obtuse angle');
 });
-//assertion check for get-card-value function
+//assertion check for get-card-value function:
 function getCardValue(rankSuit) {
     let rankPart = rankSuit.slice(0,rankSuit.length-1);
     if (rankPart >= 2 && rankPart <= 9){
@@ -38,4 +38,21 @@ function getCardValue(rankSuit) {
 }
 test (`expected output is 10`, () => {
     expect(getCardValue("10♠")).toBe(10);
+});
+// assertion check for is-proper-fraction function:
+function isProperFraction(fraction) {
+    let fractionArray = fraction.split("/");
+    //position special case at the beginning of condition.
+    if (fractionArray[1] == 0){
+        return "Error";
+    }
+    else if (Math.abs(fractionArray[0]) < fractionArray[1]){
+        return true;
+    }
+    else if (Math.abs(fractionArray[0]) >= fractionArray[1] ){
+        return false;
+    }
+}
+test ('expected output is error', () => {
+    expect(isProperFraction("5/0")).toBe('Error');
 });
