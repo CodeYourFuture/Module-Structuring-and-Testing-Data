@@ -8,8 +8,7 @@ const num = 56.5678;
 
 // Log your variables to the console to check your answers
 const wholeNumberPart = Math.floor(num);
-const decimalPart = Math.ceil (num - wholeNumberPart) ; 
+const decimalPart = +(num - wholeNumberPart).toFixed(2); 
 const roundedNum = Math.round(num);
 console.log("Whole Number Part:", wholeNumberPart);
-console.log("Decimal Part (rounded up ):" , decimalPart);
-console.log("Rounded Number:", roundedNum);
+console.log("Decimal Part (rounded ):" , decimalPart);
