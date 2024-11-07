@@ -1,0 +1,14 @@
+{
+  "name": "implement",
+  "version": "1.0.0",
+  "main": "count.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

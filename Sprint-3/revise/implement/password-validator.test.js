@@ -14,3 +14,31 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+const passwordValidation = require("./password-validator");
+describe("passwordValidation", () => {
+  let existingPasswords = ["password123", "Qwerty1!"]; // Example existing passwords
+
+  it("should return false if password is already in existingPasswords list", () => {
+    expect(passwordValidation("password123")).toBe(false); // Password already exists
+  });
+
+  it("should return false if password is less than or equal to 5 characters", () => {
+    expect(passwordValidation("abc12")).toBe(false); // Too short
+  });
+
+  it("should return false if password does not contain an uppercase letter", () => {
+    expect(passwordValidation("lowercase1!")).toBe(false); // Missing uppercase letter
+  });
+
+  it("should return false if password does not contain a lowercase letter", () => {
+    expect(passwordValidation("UPPERCASE1!")).toBe(false); // Missing lowercase letter
+  });
+
+  it("should return false if password does not contain a number", () => {
+    expect(passwordValidation("NoNumbers!")).toBe(false); // Missing number
+  });
+
+  it("should return false if password does not contain a symbol", () => {
+    expect(passwordValidation("NoSymbol123")).toBe(false); // Missing symbol
+  });
+});

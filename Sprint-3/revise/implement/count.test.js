@@ -15,3 +15,32 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+// Test cases
+const countChar = require("./count"); // Adjust the path to where your function is defined
+
+describe("countChar", () => {
+  it("should return the correct count for a character that appears multiple times", () => {
+    expect(countChar("hello", "l")).toBe(2); // 'l' appears twice in "hello"
+  });
+
+  it("should return 0 when the character does not appear in the string", () => {
+    expect(countChar("hello", "z")).toBe(0); // 'z' does not appear in "hello"
+  });
+
+  it("should return 0 when the string is empty", () => {
+    expect(countChar("", "a")).toBe(0); // No characters to count in an empty string
+  });
+
+  it("should return the correct count for a single character string", () => {
+    expect(countChar("a", "a")).toBe(1); // 'a' appears once in "a"
+  });
+
+  it("should return the correct count for special characters", () => {
+    expect(countChar("!@#$%", "$")).toBe(1); // '$' appears once in "!@#$%"
+  });
+
+  it("should return the correct count for uppercase and lowercase characters", () => {
+    expect(countChar("AaaAAa", "a")).toBe(3); // 'a' appears 3 times in "AaaAAa"
+  });
+});
