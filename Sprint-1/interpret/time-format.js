@@ -12,13 +12,29 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
+//There are 5 variable declarations: const movieLength,const remainingSeconds,const totalMinutes,const remainingMinutes,const totalHours
+
 
 // b) How many function calls are there?
+//There are 0 function calls in this program. 
+//The expressions involve arithmetic operations, but no functions 
+
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
+//It calculates the remainder when dividing movieLength by 60. 
+
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
+//TIT calculates the total number of minutes by subtracting the remaining seconds from the total movie length, 
+//and then dividing by 60 to convert the seconds into minutes.
+
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
+//The variable result represents the formatted time of the movie in hours:minutes:seconds format. 
+
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+//The code will work for movie lengths that fit within a single day (i.e., 86400 seconds or less), 
+//but it will not handle cases where the movie exceeds 24 hours correctly. 
+//For example, if movieLength exceeds 86400 seconds (24 hours), the code would not account for days, and the time calculation could become incorrect. 
+//To handle movie lengths over a day, additional logic would be needed to calculate days.
