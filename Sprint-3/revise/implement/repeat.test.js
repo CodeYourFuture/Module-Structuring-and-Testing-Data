@@ -1,5 +1,7 @@
 // Implement a function repeat
 
+const { default: test } = require("node:test");
+
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
 // Then it should:
@@ -34,4 +36,4 @@ function repeat(string, integer) {
   }
   return string1;
 }
-console.log(repeat("hi", -2));
+console.assert(repeat("hi", 2) == "hihi", "true");
