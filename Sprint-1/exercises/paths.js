@@ -28,7 +28,7 @@ console.log(base); //  file.txt
 const lastDotIndex = filePath.lastIndexOf(".");
 console.log(lastDotIndex); //   index position 49
 const extractDir = filePath.slice(0, lastDotIndex);
-console.log(`Directory and filename (without extension) ${extractDir}`);
+console.log(`Directory and filename (without extension) is: ${extractDir}`);
 
 
 // Create a variable to store the ext part of the variable"
