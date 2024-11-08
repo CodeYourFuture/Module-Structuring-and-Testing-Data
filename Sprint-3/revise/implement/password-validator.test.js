@@ -14,3 +14,14 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+const { hasUncaughtExceptionCaptureCallback } = require("process");
+
+/* function PassValidChecker() outputs true if all the 6 conditions stated above equal to true. I create a function for each condition first.
+Afterward I use those conditions in my PassValidChecker(). */
+
+//first function: it counts the number of characters in the string str.
+let charCount = (str) => str.length;
+test (`expected output `, ()=>{
+    hasUncaughtExceptionCaptureCallback(charCount("sogand")).toBe(6);
+});
