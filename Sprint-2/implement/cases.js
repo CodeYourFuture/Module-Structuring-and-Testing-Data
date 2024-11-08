@@ -13,3 +13,14 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function upperSnakeCase(input) {
+  const uppercassed = input.toUpperCase();
+
+  const toSnakeCase = uppercassed.replace(/ /g, "_");
+
+  return toSnakeCase;
+}
+
+console.log(upperSnakeCase("Hello there"));
+console.log(upperSnakeCase("lord of ring"));
