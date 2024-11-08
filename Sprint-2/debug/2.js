@@ -12,3 +12,16 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
+
+//Line3:It always uses the num variable which you defined.
+//It will always return the last digit of 103 (i.e., 3).
+//Line5:
+//To fix this, we need to make getLastDigit accept a parameter.
+//Fixed code:
+function getLastDigit(number) {
+  return number.toString().slice(-1);
+}
+
+console.log(`The last digit of 42 is ${getLastDigit(42)}`);
+console.log(`The last digit of 105 is ${getLastDigit(105)}`);
+console.log(`The last digit of 806 is ${getLastDigit(806)}`);
