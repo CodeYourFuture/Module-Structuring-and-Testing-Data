@@ -1,5 +1,6 @@
-const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.slice(-4);
+//const cardNumber = 4533787178994213;
+const cardNumber = "4533787178994213"; // slice() is a method for Array, and string is an Array of characters
+const last4Digits = cardNumber.slice(-4); //TypeError: cardNumber.slice is not a function
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
