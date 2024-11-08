@@ -13,3 +13,16 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function calcBMI(weight, height) {
+  const bmi = weight / height ** 2;
+
+  //Converts the roundedf result to a number with one decimal place
+  //Without parseFloat, the function will still work, but th result will be returned as a string instead of a number!!
+  //Because toFixed(1) converts the result to a string
+  return parseFloat(bmi.toFixed(1));
+}
+
+const SajadBMI = calcBMI(70, 1.73);
+console.log(SajadBMI);
+console.log(typeof SajadBMI);

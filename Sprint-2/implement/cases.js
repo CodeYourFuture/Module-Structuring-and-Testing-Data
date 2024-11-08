@@ -13,3 +13,9 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function toUpperCase(string) {
+  return string.split(" ").join("_").toUpperCase();
+}
+
+console.log(toUpperCase("hello there"));
