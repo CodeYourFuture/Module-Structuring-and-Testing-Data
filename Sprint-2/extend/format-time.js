@@ -27,7 +27,7 @@ function formatAs12HourClock(time) {
 }
 
 const currentOutput = formatAs12HourClock("1:3");
-const targetOutput = "08:00 am";
+const targetOutput = "01:03 am";
 console.assert(
   currentOutput === targetOutput,
   `current output: ${currentOutput}, target output: ${targetOutput}`
