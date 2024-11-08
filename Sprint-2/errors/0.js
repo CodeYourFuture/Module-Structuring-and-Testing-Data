@@ -3,7 +3,10 @@
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
 
+// redeclaring a function parameter which already defined
+
+
 function capitalise(str) {
-  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
