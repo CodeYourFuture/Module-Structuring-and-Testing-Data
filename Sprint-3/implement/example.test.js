@@ -74,3 +74,26 @@ test ('expected output is true', () =>{
 test ('expected output is false', () =>{
     expect(isValidTriangle(1,2,7)).toBe(false);
 })
+//assertion check for rotate-char:
+function rotateCharacter(letter,shift){
+    if (letter >= 'a' && letter <= 'z'){
+        let lowerCase = ((letter.charCodeAt(0) - 'a'.charCodeAt(0) + shift) % 26) + 'a'.charCodeAt(0); 
+        return String.fromCharCode(lowerCase);
+    }
+    else if (letter >= 'A' && letter <= 'Z'){
+        let upperCase = ((letter.charCodeAt(0) - 'A'.charCodeAt(0) + shift) % 26) + 'A'.charCodeAt(0);
+        return String.fromCharCode(upperCase);
+    }
+    else {
+        return letter;
+    }
+}
+test ('expected output is f', () =>  {
+    expect(rotateCharacter('b',4)).toBe('f');
+})
+test ('expected output is K', () =>  {
+    expect(rotateCharacter('H',3)).toBe('K');
+})
+test ('expected output is E', () =>  {
+    expect(rotateCharacter('Z',5)).toBe('E');
+})
