@@ -14,7 +14,7 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-
+let previousPasswords = ["StarDust3434##"];
 const { count } = require("console");
 const { hasUncaughtExceptionCaptureCallback } = require("process");
 const { Z_ASCII } = require("zlib");
@@ -61,7 +61,7 @@ const symbolCount = (str) => {
 }
 console.log(symbolCount("sog!#*"));
 //sixth function: I need to have access to user's previous password recorded in a database. 
-let previousPasswords = ["StarDust3434##"];
+
 const previousPassCheck = (str,previousPasswords) => {
     if (previousPasswords.includes(str)){
         return false;
@@ -70,6 +70,35 @@ const previousPassCheck = (str,previousPasswords) => {
         return true;
     }
 }
-console.log(previousPassCheck("Star7ust3434##", previousPasswords));
+console.log(previousPassCheck("StarDust3434##", previousPasswords)); 
 
 //now it's time to use these functions to write passValidChecker():
+function passValidChecker(str, previousPasswords) {
+    let errors = [];
+    if ( (charCount(str)) < 5) {
+        let charNumError = "Add at least 5 characters";
+         errors.push(charNumError);
+        
+    }
+    if ((upperCaseCount(str)) < 1){
+        let upperCaseError = "Add at least 1 English uppercase letter e.g. A, B, M";
+         errors.push(upperCaseError);
+    }
+    if((lowerCaseCount(str)) < 1){
+         errors.push("Add at least 1 English lowercase letter e.g. a, b, m");
+    }
+    if((numCount(str)) < 1){
+        errors.push("Add at least one number e.g. 1, 2, 9");
+    }
+    if((symbolCount(str)) < 1){
+        errors.push("Add at least one of the following symbols: !, #, $, %, ., *, &");
+    }  
+    if (!previousPassCheck(str, previousPasswords)) {
+        errors.push("You can not use previous passwords.")
+    }
+  
+    
+    return errors.length > 0 ? errors.join(",") : "Password is valid";
+    
+}
+console.log(passValidChecker("sue"));
