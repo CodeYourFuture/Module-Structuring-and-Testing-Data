@@ -8,3 +8,16 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+
+function addVAT(price) {
+  const newPrice = price * 1.2;
+  
+  return newPrice;
+}
+
+console.log(addVAT(50)); // Expected output: 60
+console.log(addVAT(100)); // Expected output: 120
+console.log(addVAT(200)); // Expected output: 240
+console.log(addVAT(0));   // Expected output: 0
+console.log(addVAT(25));  // Expected output: 30
