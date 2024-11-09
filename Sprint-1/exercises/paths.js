@@ -9,7 +9,7 @@
 
 // (All spaces in the "" line should be ignored. They are purely for formatting.)
 
-const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
+const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.json";
 const lastSlashIndex = filePath.lastIndexOf("/");
 const base = filePath.slice(lastSlashIndex + 1);
 console.log(`The base part of ${filePath} is ${base}`);
@@ -18,5 +18,5 @@ console.log(`The base part of ${filePath} is ${base}`);
 const dir = filePath.slice(0,lastSlashIndex);
 console.log(dir);
 // Create a variable to store the ext part of the variable
-const ext = filePath.slice(lastSlashIndex).slice(-3);
-console.log(ext)
+const ext = filePath.indexOf('.');
+console.log(filePath.slice(ext + 1 ));
