@@ -62,8 +62,8 @@ const symbolCount = (str) => {
 console.log(symbolCount("sog!#*"));
 //sixth function: I need to have access to user's previous password recorded in a database. 
 
-const previousPassCheck = (str,previousPasswords) => {
-    if (previousPasswords.includes(str)){
+const previousPassCheck = (currentPass,previousPasswords) => {
+    if (previousPasswords.includes(currentPass)){
         return false;
     }
     else{
