@@ -97,7 +97,7 @@ function passValidChecker(str, previousPasswords) {
     if (!previousPassCheck(str, previousPasswords)) {
         errors.push("You can not use previous passwords.")
     }  
-    return errors.length > 0 ? errors.join(",") : "Password is valid";
+    return errors.length > 0 ? errors.join("\n") : "Password is valid";
     
 }
 console.log(passValidChecker("sue"));
