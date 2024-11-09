@@ -13,3 +13,9 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function upperCaseSnake(str) {
+  return str.toUpper().replaceAll(" ", "_");
+}
+
+console.log(upperCaseSnake("lord of the rings"));
