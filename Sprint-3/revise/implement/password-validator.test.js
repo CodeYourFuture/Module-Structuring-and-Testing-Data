@@ -1,5 +1,5 @@
-const { default: test } = require("node:test");
-const { hasUncaughtExceptionCaptureCallback } = require("process");
+//const { default: test } = require("node:test");
+//const { hasUncaughtExceptionCaptureCallback } = require("process");
 
 /* 
 Password Validation
@@ -18,17 +18,61 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 function passwordValidation(pass) {
-  let passwordsArrey = ["ydt635RERE!¬", "hdud738+=sg", "bxv735@@ls0HG"];
+  let bannedPasswords = ["ydt635RERE!!", "hdud738#&sg", "bxv735#$ls0HG"];
   if (
     /[A-Z]/.test(pass) &&
     /[a-z]/.test(pass) &&
     pass.length >= 5 &&
-    /\d/.test(pass) &&
-    /\w/.test(pass) &&
-    passwordsArrey.every((password) => password !== pass)
+    /[0-9]/.test(pass) &&
+    /[!#$%.*&]/.test(pass) &&
+    bannedPasswords.every((password) => password !== pass) &&
+    !/[" ")(£`¬|\\]/.test(pass)
   )
-    return "Valid Pasword!";
+    return "Valid Password!";
   else return "Invalid Password";
 }
-console.log(passwordValidation("ghqd43ghF~+"));
-test("if the password is valid or invalid", () => {});
+//Hi!
+//not_very_good
+//This is a really great 1 sentence to test! please and :slightly_smiling_face: thank you
+//console.log(passwordValidation(" Lo 5# j"));
+it("should allow valid passwords", () => {
+  expect(passwordValidation("gah45SA!")).toBe("Valid Password!");
+  expect(passwordValidation("gah45SA#")).toBe("Valid Password!");
+});
+it("should not allow invalid password", () => {
+  expect(passwordValidation("hssssgdwu")).toBe("Invalid Password");
+  expect(passwordValidation("DDTTUOLH")).toBe("Invalid Password");
+  expect(passwordValidation("$.*!$£")).toBe("Invalid Password");
+  expect(passwordValidation("165875584")).toBe("Invalid Password");
+  expect(passwordValidation("Lo 5#j")).toBe("Invalid Password");
+  expect(passwordValidation("L2m()!")).toBe("Invalid Password");
+  expect(passwordValidation("1`\\UYgs")).toBe("Invalid Password");
+});
+it("should not be less than 5 digits", () => {
+  expect(passwordValidation("hs3Q")).toBe("Invalid Password");
+  expect(passwordValidation("")).toBe("Invalid Password");
+});
+
+it("should haves at least one English upper Case letter", () => {
+  expect(passwordValidation("hs.3Q")).toBe("Valid Password!");
+  expect(passwordValidation("hs&34")).toBe("Invalid Password");
+});
+
+it("should have at least one English lower Case letter", () => {
+  expect(passwordValidation("hX$3Q")).toBe("Valid Password!");
+  expect(passwordValidation("LK#34")).toBe("Invalid Password");
+});
+it("should have at least one number", () => {
+  expect(passwordValidation("hX!3Q")).toBe("Valid Password!");
+  expect(passwordValidation("LK#vg")).toBe("Invalid Password");
+});
+
+it("should have at least one non-alphanumeric symbol", () => {
+  expect(passwordValidation("&esAZ6")).toBe("Valid Password!");
+  expect(passwordValidation("LK98vg")).toBe("Invalid Password");
+});
+it("should not be from previous passwords", () => {
+  expect(passwordValidation("ydt635RERE!!")).toBe("Invalid Password");
+  expect(passwordValidation("hdud738#&sg")).toBe("Invalid Password");
+  expect(passwordValidation("bxv735#$ls0HG")).toBe("Invalid Password");
+});

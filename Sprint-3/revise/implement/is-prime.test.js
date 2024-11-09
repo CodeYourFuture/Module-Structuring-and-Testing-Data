@@ -1,8 +1,8 @@
 // Given a positive integer num,
 // When the isPrime function is called with num as input,
 
-const { default: test } = require("node:test");
-const { hasUncaughtExceptionCaptureCallback } = require("process");
+//const { default: test } = require("node:test");
+//const { hasUncaughtExceptionCaptureCallback } = require("process");
 
 // Then it should check if the num is prime
 function isPrime(num) {
@@ -16,7 +16,21 @@ function isPrime(num) {
   return "True";
 }
 
-test("It tests if a number is prime or not,if yes it will return `True`", () => {
-  hasUncaughtExceptionCaptureCallback();
+test("Numbers less than or equal to 1 are not accepted", () => {
+  expect(isPrime(-4)).toBe("False");
+  expect(isPrime(0)).toBe("False");
+  expect(isPrime(1)).toBe("False");
 });
-console.log(isPrime(17));
+test("2 is a prime number", () => {
+  expect(isPrime(2)).toBe("True");
+});
+test("number is prime", () => {
+  expect(isPrime(17)).toBe("True");
+  expect(isPrime(1033)).toBe("True");
+  expect(isPrime(3911)).toBe("True");
+});
+test("Number is not prime", () => {
+  expect(isPrime(6)).toBe("False");
+  expect(isPrime(65480)).toBe("False");
+  expect(isPrime(3309785)).toBe("False");
+});
