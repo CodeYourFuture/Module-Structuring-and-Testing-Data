@@ -1,5 +1,5 @@
-const cardNumber = '4533787178994213';
-const last4Digits = cardNumber.slice(-4);
+const cardNumber = 4533787178994213;
+const last4Digits = cardNumber.toString().slice(-4);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
@@ -10,7 +10,6 @@ const last4Digits = cardNumber.slice(-4);
  console.log(last4Digits)
 
 /*
-TypeError. cardNumber is not an array or string being slice works with those types. so I get the same result with what I gess before when i run the code
-To get the last four digits of the cardNumber I have to change the cardNumber to String.
+We have to convert the number to string and then extract the last four characters.
 
 */
