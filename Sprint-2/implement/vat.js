@@ -8,3 +8,10 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+function priceWithVat(price){
+    let vatPrice = price*1.2;
+    return `£${vatPrice}`;
+}
+const targetGoal = "£60";
+const currentGoal = priceWithVat(50);
+console.assert(targetGoal===currentGoal, "try again!");

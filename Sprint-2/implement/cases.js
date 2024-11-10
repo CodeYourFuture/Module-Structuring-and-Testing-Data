@@ -13,3 +13,30 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+/*function convertToUpperSnakeCase(str){
+    let x = str[0].toUpperCase()+str.slice(1);
+    return x;
+}
+console.log(convertToUpperSnakeCase("sue and moein the best older brother")); */
+/* function convertToUpperSnakeCase(str){
+    let x = str.split(" ");
+    let upperX = x[0].charAt(0).toUpperCase();
+    return upperX;       // output: S
+}
+console.log(convertToUpperSnakeCase("sue and moein the best older brother")); */
+function convertToUpperSnakeCase(str){
+    let x = str.replaceAll(" ","_");
+   let upperX = x.toUpperCase();
+    return upperX;
+}
+console.log(convertToUpperSnakeCase("sue and moein the best older brother"));
+//a function to turn "sue and moein the best older brother" to "Sue And Moein The Best Brother In The World":
+function capitaliseFirstLetter(sentence){
+    let x = sentence.split(" "); // Split the sentence into an array of words
+    let y= x.map(word => {
+        return word[0].toUpperCase() + word.slice(1).toLowerCase();
+    })
+    let z = y.join(" ")  // Join the words back into a single string
+    return z;
+}
+console.log(capitaliseFirstLetter("sue and moein the best older brother"));
