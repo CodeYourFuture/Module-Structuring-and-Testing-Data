@@ -37,7 +37,7 @@ d) Calculating the total number of full minutes in movieLength.
 movieLength represents the total duration of the movie in seconds ,remainingSeconds is the number of seconds left after accounting for all full minutes (from the previous line).
 By subtracting remainingSeconds from movieLength, we get only the seconds that make up complete minutes, effectively rounding down to the nearest minute.
 
-e)movieDuration
+e)timer
 
 f) Yes, it works correctly for all values. 
 
