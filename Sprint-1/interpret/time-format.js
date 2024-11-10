@@ -20,7 +20,7 @@ console.log(result);
 
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
-/*It calculates the movie length in minutes */
+/*It transforms the movie length(which is initially in seconds) to minutes */
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 /*it shows how long the movie is in hour/minute/seconds format like 2:34:44 . A better name is: totalMovieLength */

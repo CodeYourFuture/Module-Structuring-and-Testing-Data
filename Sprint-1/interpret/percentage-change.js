@@ -15,7 +15,7 @@ console.log(`The percentage change is ${percentageChange}`);
 /*Line 4: Number() replaceAll() | line 5: Number() replaceAll() | line 10: console.log() */
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-/*Line 4; lack of comma between "," and ""; add a comma between them. */
+/*Line 4; carPrice.replaceAll(",","") */
 
 // c) Identify all the lines that are variable reassignment statements
 /*Line 4, line 5 */
