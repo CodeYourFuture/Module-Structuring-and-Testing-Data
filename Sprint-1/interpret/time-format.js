@@ -39,6 +39,6 @@ By subtracting remainingSeconds from movieLength, we get only the seconds that m
 
 e)timer
 
-f) Yes, it works correctly for all values. 
+f) Yes, it works correctly for all postive numbers,but I get an error if movieLength value is either negative or fractional number.
 
 */
