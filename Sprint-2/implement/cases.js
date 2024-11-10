@@ -13,3 +13,12 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+//Answer:
+function toUpperSnakeCase(str) {
+
+    return str.toUpperCase().replace(/\s+/g, '_');
+  }
+  
+  console.log(toUpperSnakeCase("hello there"));  
+  console.log(toUpperSnakeCase("lord of the rings")); 
