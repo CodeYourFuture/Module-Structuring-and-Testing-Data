@@ -12,9 +12,10 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
+//  6 variabls
 
 // b) How many function calls are there?
-
+//    1
 // c) Using documentation, explain what the expression movieLength % 60 represents
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
