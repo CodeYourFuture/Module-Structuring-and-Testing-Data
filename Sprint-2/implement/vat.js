@@ -8,3 +8,12 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+
+function addVAT(price) {
+    let newPrice = price * 1.2;
+
+    return newPrice.toFixed(2);
+}
+
+console.log(`The new price with VAT is: £${addVAT(50)}`); 
