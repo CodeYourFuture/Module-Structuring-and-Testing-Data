@@ -3,6 +3,8 @@
 // it rotates the character by the specified shift value within the alphabet,
 // considering wrapping around if necessary. Non-letter characters are returned unchanged.
 
+const { string } = require("yargs");
+
 // This function is commonly used for text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
@@ -43,6 +45,25 @@
 //console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
 
 function charToAscii(char, shift) {
-  return char.charCodeAt(0) + shift;
+  if (/[a-z]/.test(char)) {
+    let shiftedAsciiCode =
+      ((char.charCodeAt(0) - "a".charCodeAt(0) + shift) % 26) +
+      "a".charCodeAt(0);
+
+    let shiftedChar = String.fromCharCode(shiftedAsciiCode);
+    return shiftedChar;
+    console.log(shiftedChar); // Output: 'A'
+  }
+  if (/[A-Z]/.test(char)) {
+    let shiftedAsciiCode =
+      ((char.charCodeAt(0) - "A".charCodeAt(0) + shift) % 26) +
+      "A".charCodeAt(0);
+    let shiftedChar = String.fromCharCode(shiftedAsciiCode);
+    return shiftedChar;
+  }
 }
-console.log(charToAscii("Z", 3));
+console.log(charToAscii("A", 1));
+console.assert(charToAscii("a", 3) == "d", "a with 3 shifts must be d");
+console.assert(charToAscii("z", 5) == "e", "z with 5 shifts must be e");
+console.assert(charToAscii("F", 26) == "F", "F with 3 shifts must be d");
+console.assert(charToAscii("Z", 260) == "Z", "Z with 260 shifts must be Z");
