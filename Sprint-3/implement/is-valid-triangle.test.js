@@ -29,4 +29,8 @@ describe("isValidTriangle", () => {
   it("should return false for sides that cannot form a triangle (e.g., 1, 1, 3)", () => {
     expect(isValidTriangle(1, 1, 3)).toBe(false); // 1 + 1 is not greater than 3
   });
+
+  it("should return false for sides that cannot form a triangle (e.g., 1, 1, 3)", () => {
+    expect(isValidTriangle(3, 2, 0)).toBe(false); // 1 + 1 is not greater than 3
+  });
 });
