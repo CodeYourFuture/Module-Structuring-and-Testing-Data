@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "jest": "^29.7.0",
+    "jext": "^0.4.3"
+  },
+  "name": "module-structuring-and-testing-data",
+  "version": "1.0.0",
+  "description": "Like learning a musical instrument, programming requires daily practice.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}

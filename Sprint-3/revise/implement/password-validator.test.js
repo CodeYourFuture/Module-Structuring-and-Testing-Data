@@ -31,10 +31,6 @@ function passwordValidation(pass) {
     return "Valid Password!";
   else return "Invalid Password";
 }
-//Hi!
-//not_very_good
-//This is a really great 1 sentence to test! please and :slightly_smiling_face: thank you
-//console.log(passwordValidation(" Lo 5# j"));
 it("should allow valid passwords", () => {
   expect(passwordValidation("gah45SA!")).toBe("Valid Password!");
   expect(passwordValidation("gah45SA#")).toBe("Valid Password!");

@@ -11,7 +11,7 @@ function getOrdinalNumber(num) {
   if (lastDigit == 1) return num + "st";
   if (lastDigit == 2) return num + "nd";
   if (lastDigit == 3) return num + "rd";
-  if (lastDigit >= 4) return num + "th";
+  if (lastDigit >= 4 || lastDigit == 0) return num + "th";
 }
 //console.log(getOrdinalNumber(1113));
 test("should return 1st", () => {

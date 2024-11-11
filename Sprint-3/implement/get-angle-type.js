@@ -1,5 +1,7 @@
 // Implement a function getAngleType
 
+const { default: test } = require("node:test");
+
 // Acceptance criteria:
 
 // Given an angle in degrees,
@@ -28,9 +30,40 @@
 function getAngleType(n) {
   if (n == 90) return "Right Angle";
   if (n == 180) return "Straight Angle";
-  if (n < 90) return "Acute Angle";
-  if (90 < n && n <= 180) return "Obtuse Angle";
+  if (n < 90 && n > 0) return "Acute Angle";
+  if (90 < n && n < 180) return "Obtuse Angle";
   if (180 < n && n < 360) return "Reflex Angle ";
+  if (n <= 0 || n >= 360) return "Error";
 }
-console.log(getAngleType(23));
+//console.log(getAngleType(23));
 //This function will get a number as a angle and return what angle  is
+console.assert(
+  getAngleType(90) == "Right Angle",
+  "Angle 90 must be Right Angle"
+);
+console.assert(
+  getAngleType(180) == "Straight Angle",
+  "Angle 180 must be Right Angle"
+);
+console.assert(
+  getAngleType(0) == "Error",
+  "Angle 0 or negative number is not acceptable"
+);
+console.assert(
+  getAngleType(360) == "Error",
+  "Angle 0 or negative number is not acceptable"
+);
+
+console.assert(
+  getAngleType(23) == "Acute Angle",
+  "Angle 0 or negative number is not acceptable"
+);
+
+console.assert(
+  getAngleType(179) == "Obtuse Angle",
+  "Angle 179 must be Obtuse Angle"
+);
+console.assert(
+  getAngleType(190) == "Reflex Angle ",
+  "Angle 190 must be  Reflex Angle"
+);
