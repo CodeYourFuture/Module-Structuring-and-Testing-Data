@@ -4,9 +4,9 @@
 // this is given an error because we can no start an variable starting naming with number, So we can fix moving the number 
 // in the middle or we can write the number instead declare the integer number
 
-const hour12ClockTime = "20:53";
+const hour12ClockTime = "8:53";
 console.log(hour12ClockTime);
 
 
-const hour24ClockTime = "08:53";
+const hour24ClockTime = "20:53";
 console.log(hour24ClockTime);
