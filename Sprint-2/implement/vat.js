@@ -8,3 +8,12 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+
+function addVAT(price) {
+    const vatRate = 1.2;  
+    return (price * vatRate).toFixed(2);  
+}
+
+
+console.log(addVAT(50));  
