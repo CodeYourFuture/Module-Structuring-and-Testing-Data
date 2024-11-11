@@ -1,31 +1,57 @@
-// This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
+public class CardValue {
 
-// You will need to implement a function getCardValue
+    // Function to get the card value based on blackjack rules
+    public static int getCardValue(String card) {
+        String rank = card.substring(0, card.length() - 1);
 
-// You need to write assertions for your function to check it works in different cases
+        switch (rank) {
+            case "A":
+                return 11; 
+            case "K":
+            case "Q":
+            case "J":
+            case "10":
+                return 10; 
+            case "2":
+            case "3":
+            case "4":
+            case "5":
+            case "6":
+            case "7":
+            case "8":
+            case "9":
+                return Integer.parseInt(rank); 
+            default:
+                throw new IllegalArgumentException("Invalid card rank");
+        }
+    }
 
-// Acceptance criteria:
+    public static void main(String[] args) {
+        // Test cases for different scenarios
+        assert getCardValue("A♠") == 11 : "Ace should be worth 11 points";
+        assert getCardValue("K♣") == 10 : "King should be worth 10 points";
+        assert getCardValue("Q♦") == 10 : "Queen should be worth 10 points";
+        assert getCardValue("J♥") == 10 : "Jack should be worth 10 points";
+        assert getCardValue("10♠") == 10 : "10 should be worth 10 points";
+        assert getCardValue("9♣") == 9 : "9 should be worth 9 points";
+        assert getCardValue("5♦") == 5 : "5 should be worth 5 points";
 
-// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
-// When the function getCardValue is called with this card string as input,
-// Then it should return the numerical card value
+        // Testing invalid card rank
+        try {
+            getCardValue("1♠");
+            assert false : "Expected IllegalArgumentException for invalid rank '1'";
+        } catch (IllegalArgumentException e) {
+            assert e.getMessage().equals("Invalid card rank") : "Exception message should be 'Invalid card rank'";
+        }
 
-// Handle Number Cards (2-10):
-// Given a card with a rank between "2" and "9",
-// When the function is called with such a card,
-// Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
+        try {
+            getCardValue("Z♦");
+            assert false : "Expected IllegalArgumentException for invalid rank 'Z'";
+        } catch (IllegalArgumentException e) {
+            assert e.getMessage().equals("Invalid card rank") : "Exception message should be 'Invalid card rank'";
+        }
 
-// Handle Face Cards (J, Q, K):
-// Given a card with a rank of "10," "J," "Q," or "K",
-// When the function is called with such a card,
-// Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+        System.out.println("All tests passed!");
+    }
+}
 
-// Handle Ace (A):
-// Given a card with a rank of "A",
-// When the function is called with an Ace,
-// Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
-
-// Handle Invalid Cards:
-// Given a card with an invalid rank (neither a number nor a recognized face card),
-// When the function is called with such a card,
-// Then it should throw an error indicating "Invalid card rank."
