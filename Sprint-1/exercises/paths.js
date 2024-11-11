@@ -9,12 +9,14 @@
 
 // (All spaces in the "" line should be ignored. They are purely for formatting.)
 
+
 /* ================  lastIndexOf() ===================
--we use this to obtain the last position of / where is located the File.txt
--const base = filePath.slice(lastSlashIndex + 1); with + 1 we start to subtract after /
-Index:       0    1    2  ...    37   38       39      40      41      42
-filePath:    /   U    s   ...    /    f        i       l       e       .txt
--
+
+    -we use this to obtain the last position of / where is located the File.txt
+    -const base = filePath.slice(lastSlashIndex + 1); with + 1 we start to subtract after /
+    Index:       0    1    2  ...    37   38       39      40      41      42
+    filePath:    /   U    s   ...    /    f        i       l       e       .txt
+    -
 */
 
 const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
@@ -23,6 +25,7 @@ console.log(lastSlashIndex); //   44
 const base = filePath.slice(lastSlashIndex + 1);
 console.log(base); //  file.txt
 // console.log(`The base part of ${filePath} is ${base}`);
+
 
 // Create a variable to store the dir part of the filePath variable
 const lastDotIndex = filePath.lastIndexOf(".");
