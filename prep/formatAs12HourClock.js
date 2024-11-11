@@ -97,7 +97,7 @@ function formatAs12HourClock(time) {
 
 
 
-
+//I have to change the targetOutput to "8:00 am " instead of "08:00 am"
 
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "8:00 am";
