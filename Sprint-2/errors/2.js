@@ -8,3 +8,4 @@ function square(3) {
 }
 
 
+//console.log(`This is the square of the Number ${square(6)}`);

@@ -6,18 +6,17 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(result);
+const formattedMovieDuration = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+console.log(formattedMovieDuration);
 
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
-//There are 5 variable declarations: const movieLength,const remainingSeconds,const totalMinutes,const remainingMinutes,const totalHours
+//There are 6 variable declarations: const movieLength,const remainingSeconds,const totalMinutes,const remainingMinutes,const totalHours
 
 
 // b) How many function calls are there?
-//There are 0 function calls in this program. 
-//The expressions involve arithmetic operations, but no functions 
+//There is 1 function calls in this program which is console.log(result)
 
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
