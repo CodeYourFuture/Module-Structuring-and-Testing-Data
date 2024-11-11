@@ -30,4 +30,10 @@ describe("getCardValue", () => {
   it('should return "Invalid card rank" for an invalid numeric card (e.g., "1")', () => {
     expect(getCardValue("1♠")).toBe("Invalid card rank");
   });
+  it('should return "Invalid card rank" for an invalid numeric card (e.g., "1")', () => {
+    expect(getCardValue("2♠")).toBe(2);
+  });
+  it('should return "Invalid card rank" for an invalid numeric card (e.g., "1")', () => {
+    expect(getCardValue("10♠")).toBe(10);
+  });
 });
