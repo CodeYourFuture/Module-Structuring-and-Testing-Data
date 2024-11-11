@@ -45,18 +45,12 @@ console.assert(
   getAngleType(180) == "Straight Angle",
   "Angle 180 must be Right Angle"
 );
-console.assert(
-  getAngleType(0) == "Error",
-  "Angle 0 or negative number is not acceptable"
-);
-console.assert(
-  getAngleType(360) == "Error",
-  "Angle 0 or negative number is not acceptable"
-);
+console.assert(getAngleType(0) == "Error", "Angle 0  is not acceptable");
+console.assert(getAngleType(360) == "Error", "Angle 360 is not acceptable");
 
 console.assert(
   getAngleType(23) == "Acute Angle",
-  "Angle 0 or negative number is not acceptable"
+  "Angle 23 must be Acute Angle"
 );
 
 console.assert(
@@ -67,3 +61,4 @@ console.assert(
   getAngleType(190) == "Reflex Angle ",
   "Angle 190 must be  Reflex Angle"
 );
+console.assert(getAngleType(-260) == "Error", "Angle -260  is not acceptable");

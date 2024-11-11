@@ -38,4 +38,23 @@ function getCardValue(cardString) {
   else return "Invalid Card rank";
 }
 //console.log(getCardValue("3B"));
-console.assert(getCardValue("QB") == "0", "False");
+console.assert(
+  getCardValue("Q♠") == "10",
+  "the rturn value for `Q♠` must be 10"
+);
+console.assert(
+  getCardValue("A♠") == "11",
+  "the rturn value for `A♠` must be 11"
+);
+console.assert(
+  getCardValue("3♠") == "03",
+  "the rturn value for `3♠` must be 3"
+);
+console.assert(
+  getCardValue("K♠") == "10",
+  "the rturn value for `K♠` must be 10"
+);
+console.assert(
+  getCardValue("J♠") == "10",
+  "the rturn value for `J♠` must be 10"
+);
