@@ -11,14 +11,12 @@ const pounds = paddedPenceNumberString.substring(
   paddedPenceNumberString.length - 2
 );
 3;
-let f = "99";
-console.log(f.padEnd(2, "0") + "paddedPenceNumberString");
-// const pence = paddedPenceNumberString
-//   .substring(paddedPenceNumberString.length - 2)
-//   .padEnd(2, "0");
-// console.log(pence);
 
-// console.log(`£${pounds}.${pence}`);
+const pence = paddedPenceNumberString
+  .substring(paddedPenceNumberString.length - 2)
+  .padEnd(2, "0");
+
+console.log(`£${pounds}.${pence}`);
 
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
@@ -37,6 +35,7 @@ console.log(f.padEnd(2, "0") + "paddedPenceNumberString");
 // 4.const pounds = paddedPenceNumberString.substring( 0,paddedPenceNumberString.length - 2);
 //  samilar to 2 just in this case last to index not inclouded
 // 5.const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
-// this will finsh i 3 steps A/initialises a string variable/B- git the value (paddedPenceNumberString.length - 2 == 1)and  take us arg
+// this will finsh i 4 steps A/initialises a string variable/B- git the value (paddedPenceNumberString.length - 2 == 1)and  take us arg
 //  C/ calc paddedPenceNumberString.substring(1)=="99"  and the resultof padEnd() = 99 asign tp the pence
-// .
+// 5.console.log(£${pounds}.${pence});
+// This line outputs the formatted price in pounds and pence using template literals.
