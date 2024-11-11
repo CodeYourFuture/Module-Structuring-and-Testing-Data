@@ -14,3 +14,28 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+function passwordValidation (password, passwords){
+    const haveMinLength = password.length >= 5;
+    const haveUpperCase = /[A-Z]/.test(password);
+    const haveLowerCase = /[a-z]/.test(password);
+    const haveNumber = /\d/.test(password);
+    const haveSymbol = /[!#$%.*&]/.test(password);
+    const isNewPassword = !passwords.includes(password);
+
+    return ( haveLowerCase &&
+    haveMinLength &&
+    haveNumber &&
+    haveSymbol && 
+    haveUpperCase &&
+    isNewPassword);
+}
+
+// test case
+const previousPasswords = ["Password5!", "Secure$823", "HelloWorld#4"];
+
+console.log(passwordValidation("NewPass1!", previousPasswords)); 
+console.log(passwordValidation("Secure$123", previousPasswords)); 
+console.log(passwordValidation("short", previousPasswords));
+console.log(passwordValidation("NoNumberOrSymbol", previousPasswords)); 
+console.log(passwordValidation("Only123!", previousPasswords));
