@@ -16,7 +16,7 @@
 
 // Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
-// Then the function should return "Obtuse angle"
+// Then the function should return "Obtuse angle"fed
 
 // Identify Straight Angles:
 // When the angle is exactly 180 degrees,
@@ -25,3 +25,28 @@
 // Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+
+function getAngleType(angle){
+    if (angle == 90){
+        return "Right angle";
+    } else if(angle < 90){
+        return "Acute angle";
+    } else if(angle > 90 && angle < 180){
+        return "Obtuse angle";
+    } else if(angle == 180){
+        return "Straight angle";
+    }  else if(angle > 180 && angle < 360) {
+        return "Reflex angle";
+    }
+}
+
+let angle = getAngleType("180");
+console.log(angle);
+
+// test("identify angle", () => {
+//     exportAllDeclaration(getOrdinalNumber(90).toBe("Right angle"));
+//     exportAllDeclaration(getOrdinalNumber(80).toBe("Acute angle"));
+//     exportAllDeclaration(getOrdinalNumber(100).toBe("Obtuse angle"));
+//     exportAllDeclaration(getOrdinalNumber(180).toBe("Straight angle"));
+//     exportAllDeclaration(getOrdinalNumber(300).toBe("Reflex angle"));
+// })

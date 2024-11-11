@@ -1,0 +1,10 @@
+{
+  "name": "test-for-3_exercise",
+  "description": "tests for JavaScript functions",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
