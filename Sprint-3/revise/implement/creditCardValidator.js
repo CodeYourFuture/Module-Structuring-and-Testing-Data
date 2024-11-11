@@ -1,5 +1,5 @@
 function isValidCreditCard(cardNumber) {
-  if (cardNumber.length === 16 && !isNaN(cardNumber)) {
+  if (/^\d{16}$/.test(cardNumber)) {
     //number must be 16 digits
     let uniqueDigits = new Set(cardNumber);
     if (uniqueDigits.size < 2) {

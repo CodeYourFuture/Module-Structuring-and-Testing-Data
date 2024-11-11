@@ -13,7 +13,6 @@ function testIsValidCreditCard() {
   console.log(isValidCreditCard("123456789012345")); // false, only 15 digits
   console.log(isValidCreditCard("12345678901234567")); // false, more than 16 digits
   console.log(isValidCreditCard("1111111111111111")); // false, sum of digits is 16, not greater
-  console.log(isValidCreditCard("1222222222222222")); // false, only one unique digit
 }
 
 // Run test cases
