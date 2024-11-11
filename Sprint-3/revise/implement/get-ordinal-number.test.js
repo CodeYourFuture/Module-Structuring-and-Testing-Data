@@ -44,4 +44,18 @@ describe("getOrdinalNumber", () => {
   it('should return "Invalid input" for non-number inputs', () => {
     expect(getOrdinalNumber("Hello")).toBe("Invalid input");
   });
+
+  it('should return "111th" for 111', () => {
+    expect(getOrdinalNumber(111)).toBe("111th"); // 111 is a special case and should return "th"
+  });
+
+  it('should return "213th" for 213', () => {
+    expect(getOrdinalNumber(213)).toBe("213th"); // 213 ends in 13, so it should be "th"
+  });
+
+  it('should return "1012th" for 1012', () => {
+    expect(getOrdinalNumber(1012)).toBe("1012th"); // 1012 ends in 12, so it should be "th"
+  });
 });
+
+// testing 111, 1012, 213? (Special cases)
