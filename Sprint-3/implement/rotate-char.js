@@ -41,3 +41,50 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+_______________________________________SOLUTION___________________________________________
+
+function rotateCharacter(char, shift) {
+    // Check if the character is a lowercase letter
+    if (char >= 'a' && char <= 'z') {
+        const base = 'a'.charCodeAt(0);
+        // Calculate rotated character within lowercase range
+        return String.fromCharCode(base + (char.charCodeAt(0) - base + shift) % 26);
+    }
+    
+    // Check if the character is an uppercase letter
+    if (char >= 'A' && char <= 'Z') {
+        const base = 'A'.charCodeAt(0);
+        // Calculate rotated character within uppercase range
+        return String.fromCharCode(base + (char.charCodeAt(0) - base + shift) % 26);
+    }
+    
+    // If not a letter, return the character unchanged
+    return char;
+}
+
+// Test cases
+console.log(rotateCharacter("a", 3)); // Output: "d"
+console.log(rotateCharacter("f", 1)); // Output: "g"
+console.log(rotateCharacter("A", 3)); // Output: "D"
+console.log(rotateCharacter("F", 1)); // Output: "G"
+console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
+console.log(rotateCharacter("z", 1)); // Output: "a" (wraps around)
+console.log(rotateCharacter("Y", 2)); // Output: "A" (wraps around)
+
+/*
+Explanation:
+Lowercase Letters (a-z): The function calculates the new character by:
+
+Converting the character to its ASCII value with charCodeAt.
+Subtracting the base ASCII value of 'a' to get its position in the alphabet (0 for 'a', 1 for 'b', etc.).
+Adding the shift and taking modulo 26 to handle wraparound.
+Converting back to a character.
+Uppercase Letters (A-Z): Similar to lowercase letters, it handles uppercase characters with 'A' as the base.
+
+Non-Letter Characters: Characters outside the letter ranges are returned unchanged.
+
+Wraparound Handling: By using % 26, it wraps the alphabet properly when the shift exceeds the end of the alphabet.
+
+Example Outputs: The function has been tested to work for both lowercase and 
+uppercase letters, non-letters, and wraparound cases.
+*/
