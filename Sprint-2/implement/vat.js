@@ -8,6 +8,8 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+// Code to calculate vat and return total with the vat added
 const vat = 1.2;
 function valueAddedTax(num) {
   return (num * vat).toFixed(2);
