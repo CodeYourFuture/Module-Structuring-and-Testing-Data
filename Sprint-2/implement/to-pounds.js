@@ -4,28 +4,29 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
+
 function toPounds(penceString) {
-  // Remove the trailing "p" from the input string
+  // Removing the trailing "p" from the input string
   const penceStringWithoutTrailingP = penceString.substring(
     0,
     penceString.length - 1
   );
 
-  // Pad the number to ensure it has at least 3 digits
+  // Padding the number to ensure it has at least 3 digits
   const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
 
-  // Extract the pounds (first part of the number)
+  // Extracting the pounds (first part of the number)
   const pounds = paddedPenceNumberString.substring(
     0,
     paddedPenceNumberString.length - 2
   );
 
-  // Extract the pence (last two digits) and ensure it has two digits
+  // Extracting the pence (last two digits) and ensure it has two digits
   const pence = paddedPenceNumberString
     .substring(paddedPenceNumberString.length - 2)
     .padEnd(2, "0");
 
-  // Return the formatted string as a pounds and pence value
+  // Returning the formatted string as a pounds and pence value
   return `£${pounds}.${pence}`;
 }
 
