@@ -1,8 +1,9 @@
 // Predict and explain first...
+//num is hardcoded 
 
-const num = 103;
 
-function getLastDigit() {
+
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
