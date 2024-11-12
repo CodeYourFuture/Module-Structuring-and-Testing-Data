@@ -1,5 +1,6 @@
 // This is the latest solution to the problem from the prep.
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
+// I added the test codes below
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
