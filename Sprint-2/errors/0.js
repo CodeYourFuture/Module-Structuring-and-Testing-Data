@@ -8,6 +8,5 @@ function capitalise(str) {
   return result;
 }
 
-
 /* 'str' is a variable, if I use 'let' for it, 'str' would be re-declaring. 
 I should use result instead of str in the line 7 & 8, to avoid redefining 'str' */

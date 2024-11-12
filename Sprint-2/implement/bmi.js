@@ -23,3 +23,4 @@ function bodyMassIndex(weigh, height) {
 
 console.log(bodyMassIndex(70, 1.73));
 console.log(bodyMassIndex(65, 1.73));
+console.log(bodyMassIndex(60, 1.78));

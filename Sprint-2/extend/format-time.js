@@ -34,3 +34,4 @@ console.log(formatAs12HourClock("9:03"));
 console.log(formatAs12HourClock("11:01"));
 console.log(formatAs12HourClock("12:01"));
 console.log(formatAs12HourClock("13:49"));
+console.log(formatAs12HourClock("14:20"));

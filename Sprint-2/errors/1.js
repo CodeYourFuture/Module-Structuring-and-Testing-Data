@@ -12,7 +12,6 @@ function convertToPercentage() {
 
 console.log(convertToPercentage());
 
-
 /*This will occur error because it is re-defining the decimalNumber variable inside the function, 
 but decimalNumber has already been used as a parameter.
 

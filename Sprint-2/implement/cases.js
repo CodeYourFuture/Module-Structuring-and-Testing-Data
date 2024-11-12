@@ -20,3 +20,4 @@ function toUpperSnakeCase(input) {
 
 console.log(toUpperSnakeCase('hello there'));
 console.log(toUpperSnakeCase("lord of the rings"));
+console.log(toUpperSnakeCase("upper snake case"));

@@ -15,3 +15,4 @@ function newPrice(num) {
 }
 console.log(newPrice(10));
 console.log(newPrice(1000));
+console.log(newPrice(30));
