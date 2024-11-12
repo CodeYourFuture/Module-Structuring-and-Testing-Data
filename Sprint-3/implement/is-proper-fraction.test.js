@@ -33,7 +33,6 @@
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 
-
 function isProperFraction(numerator, denominator){
     if (denominator === 0) {
         return "Error (Denominator cannot be zero)";
@@ -78,3 +77,12 @@ const currentOutput5 = isProperFraction(3, 3);
 const targetOutput5 = false;
 console.log(currentOutput5);
 console.assert(currentOutput5 === targetOutput5, `${currentOutput5} is not equal ${targetOutput5}`);
+
+// Jest tests
+test("fraction check", () => {
+    expect(isProperFraction(2, 3)).toBe(true);
+    expect(isProperFraction(5, 2)).toBe(false);
+    expect(isProperFraction(3, 0)).toBe("Error (Denominator cannot be zero)");
+    expect(isProperFraction(-4, 7)).toBe(true);
+    expect(isProperFraction(3, 3)).toBe(false);  
+});
