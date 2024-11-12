@@ -18,7 +18,7 @@ console.log(`The percentage change is ${percentageChange}`);
     a) How many function calls are there in this file? Write down all the lines where a function call is made
 
         --------  Number(carPrice.replaceAll(",", "")); this convert string in numbers
-        --------  replaceAll(",", "") this line is removing the "," and returning just the numbers
+        --------  replaceAll(",", "") this function is removing the "," and returning just the numbers
         --------  console.log(`The percentage change is ${percentageChange}`); this is a function to print what we call inside.
 
 
@@ -44,11 +44,11 @@ console.log(`The percentage change is ${percentageChange}`);
     e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 
         -------  The expression Number(carPrice.replaceAll(",", "")) performs two actions:
-            *  carPrice.replaceAll(",", ""):
+            * carPrice.replaceAll(",", ""):
                 The replaceAll() method is used on the string carPrice. It removes all commas "," from the 
                 string by replacing them with an empty string "".
 
-            *  Number(...);
+            * Number(...);
                 this function is then called on the result of replaceAll(),
                 converting the string now without commas into a numeric value eg 10,000 => 10000
 
