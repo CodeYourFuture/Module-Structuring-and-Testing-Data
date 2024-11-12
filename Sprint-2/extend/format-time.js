@@ -11,8 +11,9 @@ function formatAs12HourClock(time) {
   }if(hours === 12){
     return `${12}:${minutes} pm`
   }
-  return `${hours}${minuets} am`;
+  return `${hours}${minutes} am`;
 }
+// there were few problems
 
 /*
 expected output
