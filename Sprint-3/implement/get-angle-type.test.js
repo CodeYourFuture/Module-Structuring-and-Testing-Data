@@ -40,13 +40,13 @@ function getAngleType(angle){
     }
 }
 
-let angle = getAngleType("180");
+let angle = getAngleType("100");
 console.log(angle);
 
-// test("identify angle", () => {
-//     exportAllDeclaration(getOrdinalNumber(90).toBe("Right angle"));
-//     exportAllDeclaration(getOrdinalNumber(80).toBe("Acute angle"));
-//     exportAllDeclaration(getOrdinalNumber(100).toBe("Obtuse angle"));
-//     exportAllDeclaration(getOrdinalNumber(180).toBe("Straight angle"));
-//     exportAllDeclaration(getOrdinalNumber(300).toBe("Reflex angle"));
-// })
+test("identify angle", () => {
+    expect(getAngleType(90)).toBe("Right angle");
+    expect(getAngleType(80)).toBe("Acute angle");
+    expect(getAngleType(100)).toBe("Obtuse angle");
+    expect(getAngleType(180)).toBe("Straight angle");
+    expect(getAngleType(300)).toBe("Reflex angle");
+})
