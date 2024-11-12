@@ -13,3 +13,13 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function bodyMassIndex(weigh, height) {
+
+  const bmi = weigh / (height * height);
+
+  return Math.round(bmi * 10) / 10;
+}
+
+console.log(bodyMassIndex(70, 1.73));
+console.log(bodyMassIndex(65, 1.73));

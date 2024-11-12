@@ -8,3 +8,10 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function newPrice(num) {
+  return num * 1.2;
+
+}
+console.log(newPrice(10));
+console.log(newPrice(1000));
