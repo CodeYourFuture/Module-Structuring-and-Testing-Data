@@ -36,4 +36,4 @@ function formatTimeDisplay(seconds) {
 // b) num = totalHours = 0
 // c) ("00")
 // d) num  =  remainingSeconds = 1
-// e) pad(1) to "01", it converts 1 to a string character "01"
+// e) pad(1) to "01", it converts 1 to a string character "01" .
