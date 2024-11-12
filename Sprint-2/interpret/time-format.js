@@ -8,9 +8,7 @@ function formatTimeDisplay(seconds) {
   const remainingMinutes = totalMinutes % 60;
   const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-  return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(
-    remainingSeconds
-  )}`;
+  return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
 
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
@@ -19,13 +17,21 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
+// Pad will be called 3 times to makesure that all hours, minutes and seconds are return with only 2 digits
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
+// The first value of num will be zero, since the pad(totalHours) is the first to be called
 
 // c) What is the return value of pad is called for the first time?
+// The return value of pad is "00" since 0 is the assigned ot num first, pad always ensures that there is a zero at the beginning if the digit is just 1
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
+// The last call to pad happens with the argument num = remainingSeconds, which is 1.
+// So the value of num when pad is called for the last time is 1
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+// In the last call remainingSeconds value will be 1. So when pad is called, num value will be 1.
+// The pad function now converts the 1 to a string "1" and pads it to ensure it is at least 2 characters by adding a leading "0"
+// The last value will be "01"
