@@ -72,3 +72,9 @@ const currentOutput4 = isProperFraction(-4, 7);
 const targetOutput4 = true;
 console.log(currentOutput4);
 console.assert(currentOutput4 === targetOutput4, `${currentOutput4} is not equal ${targetOutput4}`);
+
+// Test 5
+const currentOutput5 = isProperFraction(3, 3);
+const targetOutput5 = false;
+console.log(currentOutput5);
+console.assert(currentOutput5 === targetOutput5, `${currentOutput5} is not equal ${targetOutput5}`);
