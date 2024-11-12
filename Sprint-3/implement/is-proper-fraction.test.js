@@ -39,14 +39,18 @@ function isProperFraction(numerator, denominator){
         return true;
     } else if (numerator > denominator) {
         return false;
-    } else if (denominator == 0) {
+    } else if (denominator === 0) {
         return false;
     } else if(numerator < 0 && numerator < denominator){
         return true;
-    } else if(numerator == denominator) {
+    } else if(numerator === denominator) {
         return false;
     }
 }
 
-let fraction = isProperFraction(0,0);
-console.log(fraction);
+// console.assert tests
+// Test 1
+const currentOutput1 = isProperFraction(2, 3);
+const targetOutput1 = true;
+console.log(currentOutput1);
+console.assert(currentOutput1 === targetOutput1, `${currentOutput1} is not equal ${targetOutput1}`);
