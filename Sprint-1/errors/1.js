@@ -2,3 +2,5 @@
 
 const age = 33;
 age = age + 1;
+
+// Line 4 returns a TypeError because of the attempt to reassign a constant variable.
