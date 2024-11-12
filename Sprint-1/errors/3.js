@@ -1,5 +1,5 @@
-const cardNumber = 4533787178994213; // const cardNumber = `${4533787178994213}` also fixes the error by changing data type to string.
-const last4Digits = cardNumber.toString().slice(-4);
+const CARD_NUMBER = 4533787178994213; // const cardNumber = `${4533787178994213}` also fixes the error by changing data type to string.
+const last4Digits = CARD_NUMBER.toString().slice(-4);
 console.log(`The last 4 digits of the card number are: ${last4Digits}`);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
