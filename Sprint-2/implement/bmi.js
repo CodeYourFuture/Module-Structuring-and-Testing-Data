@@ -14,6 +14,8 @@
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
 
+// Below is the code to calculate the bmi
+
 function bmi(weight, height) {
   return Math.floor(weight / (height * height)).toFixed(1);
 }
