@@ -14,7 +14,7 @@ console.log(wholeNumberPart);
 
 const num=56.5678;
 const whole NumberPart=Math.floor(num);
-const decimalPart=num-wholeNumberPart;
+const decimalPart=(num-wholeNumberPart).tofixed(4);
 console.log(decimalPart);
 
 const roundedNum=Math.floor(num);
