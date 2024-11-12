@@ -1,28 +1,56 @@
 let sum = 0;
-let test = 0;
-
+let sameDigit = 0;
+// Function to validate a credit card number
 function cardValidation(cardNumber) {
-  if (!/^\d{4}$/.test(cardNumber)) return false;
+  if (!/^\d{16}$/.test(cardNumber)) return false; //checks that card number has exactly 16 number digits
 
   for (let i = 1; i < cardNumber.length; i++) {
+    //checks that all the digits are not the same
     if (cardNumber[0] !== cardNumber[i]) {
-      test = 1;
-      break;
+      sameDigit = 1;
+      break; //if at least 2 digits are different, breaks the loop
     }
-    return i;
   }
-  if ((test = 0)) return false;
-  if (Number(cardNumber[15]) % 2 !== 0) return false;
+  if (sameDigit == 0) return false; //if all digits are the same returns "false"
+  if (Number(cardNumber[15]) % 2 !== 0) return false; //checks the last digit is an even number
 
   for (let i = 0; i < cardNumber.length; i++) {
+    //sum of digits
     sum += Number(cardNumber[i]);
   }
-  return sum;
+  if (sum <= 16) {
+    return false; // Invalid if sum of digits is 16 or less
+  } else return true; // If all conditions are met, the card number is valid
 }
 
-//console.log(cardValidation("1223"))
+//console.log(cardValidation("1111556111111112"));
 
+test("card number must have exactly 16 digits", () => {
+  expect(cardValidation("3")).toBe(false);
+  expect(cardValidation(" ")).toBe(false);
+  expect(cardValidation("1268")).toBe(false);
+  expect(cardValidation("555555556669878")).toBe(false);
+});
+test("crad number must include just numbers", () => {
+  expect(cardValidation("123456789a123456")).toBe(false);
+  expect(cardValidation(" 9876543219874A25")).toBe(false);
+  expect(cardValidation("123456789`123456")).toBe(false);
+});
 
+test(" must have at least two different digits", () => {
+  expect(cardValidation("1111111111111111")).toBe(false);
+});
+test("final digit must be even", () => {
+  expect(cardValidation("1234567891234567")).toBe(false);
+  expect(cardValidation("1234567891234561")).toBe(false);
+});
+test("The sum of all the digits must be greater than 16", () => {
+  expect(cardValidation("1111000111111112")).toBe(false);
+});
+
+test("This is a proper card number", () => {
+  expect(cardValidation("0022334455667788")).toBe(true);
+});
 
 //## **PROJECT: Credit Card Validator**
 
