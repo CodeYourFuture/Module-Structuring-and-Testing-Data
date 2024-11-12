@@ -8,3 +8,18 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+
+// 〰️ Define a function named addVAT that takes one parameter: price
+function addVAT(price) {
+
+    // 〰️ Step 1: Calculate the price with VAT by multiplying the price by 1.2
+    // 〰️ (1.2 represents the original price + 20% VAT)
+    const priceWithVAT = price * 1.2;
+
+    // 〰️ Step 2: Return the new price with VAT included
+    return priceWithVAT;
+} 
+
+console.log(addVAT(50)); // Outputs "60"
+console.log(addVAT(80)); // Outputs "96"
