@@ -16,3 +16,6 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+A: return value of using the prompt function is pop up message
+A: well when i enter const myName = prompt("What is your name?"); it gives a pop-up message at the top of my browser asking me my name. i use the return like alert myName to display the myName variable

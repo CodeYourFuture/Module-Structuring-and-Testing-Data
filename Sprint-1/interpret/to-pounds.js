@@ -25,3 +25,4 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// struggled with the padStart function but i get it now, it adds 3 0's the same for the padEnd function. other than these two functions the program is straightforward.
