@@ -29,3 +29,11 @@ function formatTimeDisplay(seconds) {
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+
+// answers
+
+// a) three times, for total hours, remaining minuts and remaining seconds
+// b) num = totalHours = 0
+// c) ("00")
+// d) num  =  remainingSeconds = 1
+// e) pad(1) to "01", it converts 1 to a string character "01"
