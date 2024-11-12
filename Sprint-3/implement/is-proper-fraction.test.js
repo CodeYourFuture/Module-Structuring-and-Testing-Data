@@ -35,11 +35,11 @@
 
 
 function isProperFraction(numerator, denominator){
-    if(numerator < denominator){
+    if (denominator === 0) {
+        return "Error (Denominator cannot be zero)";
+    } else if(numerator < denominator){
         return true;
     } else if (numerator > denominator) {
-        return false;
-    } else if (denominator === 0) {
         return false;
     } else if(numerator < 0 && numerator < denominator){
         return true;
@@ -60,3 +60,10 @@ const currentOutput2 = isProperFraction(5, 2);
 const targetOutput2 = false;
 console.log(currentOutput2);
 console.assert(currentOutput2 === targetOutput2, `${currentOutput2} is not equal ${targetOutput2}`);
+
+// Test 3
+const currentOutput3 = isProperFraction(3, 0);
+const targetOutput3 = "Error (Denominator cannot be zero)";
+console.log(currentOutput3);
+console.assert(currentOutput3 === targetOutput3, `${currentOutput3} is not equal ${targetOutput3}`);
+
