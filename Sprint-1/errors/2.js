@@ -3,3 +3,6 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+/* Line 4 returns a ReferenceError because the constant cityOfBirth is declared after the print so
+cannot be initialized */ 
