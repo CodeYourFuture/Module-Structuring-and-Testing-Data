@@ -67,3 +67,8 @@ const targetOutput3 = "Error (Denominator cannot be zero)";
 console.log(currentOutput3);
 console.assert(currentOutput3 === targetOutput3, `${currentOutput3} is not equal ${targetOutput3}`);
 
+// Test 4
+const currentOutput4 = isProperFraction(-4, 7);
+const targetOutput4 = true;
+console.log(currentOutput4);
+console.assert(currentOutput4 === targetOutput4, `${currentOutput4} is not equal ${targetOutput4}`);
