@@ -17,15 +17,21 @@ If your PR is rejected, check the task list.
 
 Self checklist
 
-- [ ] I have committed my files one by one, on purpose, and for a reason
-- [ ] I have titled my PR with COHORT_NAME | FIRST_NAME LAST_NAME | REPO_NAME | WEEK 
-- [ ] I have tested my changes
-- [ ] My changes follow the [style guide](https://curriculum.codeyourfuture.io/guides/contributing/)
-- [ ] My changes meet the [requirements](./README.md) of this task
+- [x]  I have committed my files one by one, on purpose, and for a reason
+- [x]  I have titled my PR with COHORT_NAME | FIRST_NAME LAST_NAME | REPO_NAME | WEEK 
+- [x]  I have tested my changes
+- [x]  My changes follow the [style guide](https://curriculum.codeyourfuture.io/guides/contributing/)
+- [x]  My changes meet the [requirements](./README.md) of this task
 
 ## Changelist
 
-Briefly explain your PR.
+This Pull Request includes JavaScript exercises where I learned about identifying and fixing errors. 
+
+I improved my skills in creating new branches, committing individual files, and committing all changes at once. I also prefer using command-line commands rather than buttons for these tasks. 
+
+I used String.prototype.padStart() for the first time and gained a good understanding of its usefulness.
+
+To view changes instantly, I used nodemon with a command (while true; do nodemon $(ls *.js | fzf); done) for interactive, real-time feedback.
 
 ## Questions
 
