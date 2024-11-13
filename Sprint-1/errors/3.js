@@ -9,6 +9,7 @@ const last4Digits = cardNumber.slice(-4);
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
 /* The TypeError given during debugging is that cardNumber.slice is not a function.
+
 The code won't work because cardNumber is a number and .slice works with strings and arrays.
 Assuming that cardNumber cannot be modified by adding commas between each character to create an array 
 (this would run the code without bugs but it would not be logical to modify the cardNumber) the solution is to convert
