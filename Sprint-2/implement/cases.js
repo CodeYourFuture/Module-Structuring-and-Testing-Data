@@ -13,3 +13,17 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function toUpperSnakeCase(str) {
+    const words = str.split(" ");
+    const upperWords = words.map(word => 
+ word.toUpperCase());
+    const result = upperWords.join("_");
+    return result;
+  }
+    const example1 = "hello everyone";
+    console.log(toUpperSnakeCase(example1));
+   //output; "HELLO EVERYONE"
+    const example2 = "how are you";
+  console.log(toUpperSnakeCase(example2));
+  //output; "HOW ARE YOU"
