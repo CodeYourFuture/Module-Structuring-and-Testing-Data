@@ -10,7 +10,7 @@ Let's try an example.
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
-##This outputs a popup which says "Hello World"
+## This outputs a popup which says "Hello World"
 
 What effect does calling the `alert` function have?
 
@@ -19,4 +19,11 @@ What effect does calling the `alert` function have?
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+
+## It displays a little input box where you can type in information and click the ok button. If you save the input in a varibale you can acess information that was typed in.
+
+## W3Schools says that the prompt() method displays a dialog box that prompts the user for input.
+
 What is the return value of `prompt`?
+
+## W3Schools says that the prompt() method returns the input value if the user clicks "OK", otherwise it returns null. I also noticed it when typing in my name it returned my name in the console. When I typed nothing it returned nothing.
