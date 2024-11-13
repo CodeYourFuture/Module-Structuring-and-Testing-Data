@@ -18,6 +18,10 @@ console.log(result);
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // according to the documentation the The remainder (%) operator returns the remainder left over when one operand is divided by a second operand. It always takes the sign of the dividend.
 
+
+// //According to GPT The expression movieLength % 60 gives the remaining seconds after dividing the total movie length by 60, which provides the seconds left after accounting for full minutes. This is how we get the seconds part for the time in "hours:minutes
+// " format.
+
 // The remaining value of the movieLength will be return as the remaining amounts of minutes since the saved 60 minutes will be equivalent to an hour
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 
@@ -29,3 +33,4 @@ console.log(result);
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 
 //I think it would work for all movie lengths as long as the number of seconds is correct, it is emant to work around standard time values either way
+
