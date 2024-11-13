@@ -42,13 +42,13 @@ function getAngleType(angle){
     else if(angle === 180){
         return "Straight angle";
     }
-    else if(angle > 180 && angle < 360){
+    else 
         return "Reflex angle";
-    }
 }
 console.log(getAngleType(-5));
 console.log(getAngleType(360));
 console.log(getAngleType(90));
+console.log(getAngleType(92));
 console.log(getAngleType(30));
 console.log(getAngleType(180));
 console.log(getAngleType(280));

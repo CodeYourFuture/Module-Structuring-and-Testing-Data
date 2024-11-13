@@ -36,26 +36,22 @@
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 //CHecked
 
-function isProperFraction(numerator, denominator){
-    if(denominator === 0){
-        return false;
+function isProperFraction(numerator, denominator) {
+    if (denominator === 0) {
+        throw new Error("Denominator cannot be zero"); // Throw error when denominator is zero
     }
-    else if(numerator === denominator){
-        return false;
+    if (numerator === denominator || numerator === 0) {
+        return false; // Fraction is not proper if numerator equals denominator or if the numerator is 0
     }
-    else if(numerator === 0 && denominator === 0){
-        return false;
+    if (Math.abs(numerator) < denominator) {
+        return true; // Proper fraction: numerator's absolute value is less than the denominator
     }
-    else if((Math.abs(numerator < 0)) && denominator > numerator){
-            return 'true';
-    }
-    else
-        return false;
-  
+    return false; // Otherwise, it's an improper fraction
 }
 
-console.assert(isProperFraction(4,0) === 'false', 'Error (Denominator cannot be zero)');
-console.assert(isProperFraction(3,3) === 'false', 'The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator.');
-console.assert(isProperFraction(0,0) === 'false', 'Error (numerator and denominator cannot be zero)');
-console.assert(isProperFraction(-4,7) === 'true',  'The fraction is a proper fraction');
-console.assert(isProperFraction(50,2) === 'false',  'The fraction is a improper fraction');
+// Assertions for various cases
+console.assert(isProperFraction(4, 0) === false, 'Error (Denominator cannot be zero)'); // This will throw an error
+console.assert(isProperFraction(3, 3) === false, 'The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator.');
+console.assert(isProperFraction(0, 0) === false, 'Error (numerator and denominator cannot be zero)'); // This will throw an error
+console.assert(isProperFraction(-4, 7) === true, 'The fraction is a proper fraction');
+console.assert(isProperFraction(50, 2) === false, 'The fraction is an improper fraction');

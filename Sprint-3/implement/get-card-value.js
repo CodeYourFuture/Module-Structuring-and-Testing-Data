@@ -34,22 +34,20 @@ function getCardValue(_card) {
     // Remove the suit (emoji) from the card string
     _card = _card.slice(0, -1);
     
-    // Check if the card rank is valid (2-10, J, Q, K, A)
-    if (!/^(10|[2-9]|[JQKA])$/.test(_card)) {
+    // Map for card values: numbers 2-9, J, Q, K, 10, A
+    const cardValues = {
+        'A': 11,
+        '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10,
+        'J': 10, 'Q': 10, 'K': 10
+    };
+
+    // Check if the card rank is valid
+    if (!(cardValues.hasOwnProperty(_card))) {
         throw new Error("Invalid card rank"); // Throw an error for invalid card ranks
     }
-    
-    // Convert card to a number if it's between 2 and 9
-    if (_card >= 2 && _card <= 9) {
-        return Number(_card); // Return numeric value for ranks 2-9
-    } else if (_card === 'A') {
-        return 11; // Ace is worth 11
-    } else if (_card === 'J' || _card === 'Q' || _card === 'K' || _card === '10') {
-        return 10; // Face cards and 10 are worth 10
-    }
 
-    // This return is not needed, as the function will throw on invalid ranks
-    return "Invalid card rank"; 
+    // Return the corresponding value from the cardValues map
+    return cardValues[_card];
 }
 
 // Assertions for valid inputs
