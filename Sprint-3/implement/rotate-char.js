@@ -6,6 +6,33 @@
 // This function is commonly used for text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
+
+
+function rotateCharacter(char, shift) {
+  if (
+    typeof +char === "number" &&
+    !isNaN(char) &&
+    (+char !== 0 || char === "0")
+  ) {
+    return char;
+  } else if (typeof char === "string" && char.length === 1) {
+    const acsiiCode = char.charCodeAt();
+    if (acsiiCode >= 65 && acsiiCode <= 90) {
+      return acsiiCode + shift <= 90
+        ? String.fromCharCode(acsiiCode + shift)
+        : String.fromCharCode(acsiiCode + shift - 26);
+    } else if (acsiiCode >= 97 && acsiiCode <= 122) {
+      return acsiiCode + shift <= 122
+        ? String.fromCharCode(acsiiCode + shift)
+        : String.fromCharCode(acsiiCode + shift - 26);
+    } else {
+      return "Wrong input, enter a letter"; // space case
+    }
+  } else {
+    return "Wrong input, enter a letter";
+  }
+}
+
 // Acceptance criteria:
 
 // Given a character and a shift value,
@@ -41,3 +68,4 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+

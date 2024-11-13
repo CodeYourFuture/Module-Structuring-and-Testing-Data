@@ -2,6 +2,35 @@
 
 // Acceptance criteria:
 
+function getAngleType(angle) {
+  if (typeof angle !== "number" || isNaN(angle)) {
+    return "Enter a valid number";
+  }
+  if (angle === 90) {
+    return "Right angle";
+  } else if (angle < 90) {
+    return "Acute angle";
+  } else if (angle > 90 && angle < 180) {
+    return "Obtuse angle";
+  } else if (angle === 180) {
+    return "Straight angle";
+  } else if (angle > 180 && angle < 360) {
+    return "Reflex angle";
+  } else {
+    return "Angle out of range";
+  }
+}
+
+test("check for Right angle", function () {
+  expect(getAngleType()).toEqual("Enter a valid input");
+  expect(getAngleType("")).toEqual("Enter a valid input");
+  expect(getAngleType(900)).toEqual("Angle out of range");
+  expect(getAngleType(90)).toEqual("Right angle");
+  expect(getAngleType(9)).toEqual("Acute angle");
+  expect(getAngleType(119)).toEqual("Obtuse angle");
+  expect(getAngleType(180)).toEqual("Straight angle");
+});
+
 // Given an angle in degrees,
 // When the function getAngleType is called with this angle,
 // Then it should:
