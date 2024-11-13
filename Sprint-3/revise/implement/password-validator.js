@@ -1,8 +1,4 @@
 function passwordValidation(password) {
-  //   if (existingPasswords.includes(password)) {
-  //     return false;
-  //   }
-  // Check if the password contains at least one uppercase letter
   if (!validatePassword(password)) {
     return false;
   } else return true;
