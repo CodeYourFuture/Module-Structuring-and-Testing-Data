@@ -17,8 +17,7 @@ const pounds = paddedPenceNumberString.substring(
 // This code takes everything except the last two digits
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2);
 //  This code takes the last two numbers for pence and makes sure it has 2 digits
 
 console.log(`£${pounds}.${pence}`);
