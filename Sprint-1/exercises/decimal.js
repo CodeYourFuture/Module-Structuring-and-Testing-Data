@@ -7,7 +7,7 @@ let wholeNumberPart = Math.trunc(num);
 // Create a variable called decimalPart and assign to it an expression that evaluates to 0.5678 ( the decimal part of num )
 let decimalPart = num - wholeNumberPart;
 // Create a variable called roundedNum and assign to it an expression that evaluates to 57 ( num rounded to the nearest whole number )
-let roundNum = Math.round(56.5);
+let roundNum = Math.round(num);
 // Log your variables to the console to check your answers
 
 console.log(wholeNumberPart);
