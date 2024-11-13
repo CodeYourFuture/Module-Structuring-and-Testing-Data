@@ -43,7 +43,7 @@ function getCardValue(card) {
     case "A":
       return 11;
     default:
-      return "Invalid card rank";
+      throw new Error("Invalid card rank");
   }
 }
 module.exports = getCardValue;
