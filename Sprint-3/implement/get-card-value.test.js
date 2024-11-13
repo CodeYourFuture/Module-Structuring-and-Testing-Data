@@ -29,3 +29,11 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card){
+    if (Number(card[0]) >= 2 && Number(card[0]) <= 9)
+        return Number(card[0]);
+}
+
+let card = getCardValue("9♠");
+console.log(card);
