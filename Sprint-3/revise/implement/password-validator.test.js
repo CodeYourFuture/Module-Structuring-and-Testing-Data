@@ -21,7 +21,9 @@ describe("passwordValidation", () => {
   it("should return false if password is already in existingPasswords list", () => {
     expect(passwordValidation("password123")).toBe(false); // Password already exists
   });
-
+  it("should return return is equal to 5 characters", () => {
+    expect(passwordValidation("A3$bP")).toBe(true); // Password already exists
+  });
   it("should return false if password is less than or equal to 5 characters", () => {
     expect(passwordValidation("abc12")).toBe(false); // Too short
   });
