@@ -29,3 +29,20 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+
+// solution
+
+function getCardValue(card) {
+    if (typeof card === "number" && card >= 2 && card <= 9) {
+        return card;
+    } else if (["10", "J", "Q", "K"].includes(card)) {
+        return 10; 
+    } else if (card === "A") {
+        return 11; 
+    } else {
+        throw new Error("Invalid card"); 
+    }
+}
+
+
