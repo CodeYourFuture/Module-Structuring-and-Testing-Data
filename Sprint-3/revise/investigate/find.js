@@ -8,7 +8,7 @@ function find(str, char) {
     index++;
   }
   return -1;
-}
+}    
 
 console.log(find("code your future", "u"));
 console.log(find("code your future", "z"));
