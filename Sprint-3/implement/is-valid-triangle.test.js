@@ -71,3 +71,10 @@ const currentOutput4 = isValidTriangle(5, 3, 4);
 const targetOutput4 = true;
 console.log(currentOutput4);
 console.assert(currentOutput4 === targetOutput4, `${currentOutput4} is not equal ${targetOutput4}`);
+
+test("valid triangle", ()=> {
+    expect(isValidTriangle(5, 3, 4)).toBe(true);
+    expect(isValidTriangle(5, 0, 7)).toBe(false);
+    expect(isValidTriangle(5, 2, 7)).toBe(false);
+    expect(isValidTriangle(-2, 4, 5)).toBe(false);
+})
