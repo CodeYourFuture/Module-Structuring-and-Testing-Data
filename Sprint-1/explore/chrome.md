@@ -16,3 +16,6 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+// When I invoked the function `alert` a popup appear the text I input `"Hello world!"`.
+//Similarly, the `prompt` function asked me to input my name and it return myName in a popup.
