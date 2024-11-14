@@ -46,20 +46,22 @@ function rotateCharacter(char, shiftNum) {
     const alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
         'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
         'U', 'V', 'W', 'X', 'Y', 'Z'];
-
-    if (char === char.toUpperCase()) {
+    
+    if (!(/^[a-zA-Z]$/.test(char))) {
+        return shiftNum;
+    } else if (char === char.toUpperCase()) {
         let charIndex = alphabetArray.indexOf(char);
         let shiftIndex = charIndex + shiftNum;
-        console.log(shiftIndex);
+        // console.log(shiftIndex);
         return alphabetArray[shiftIndex];
     } else if (char === char.toLowerCase()){
         char = char.toUpperCase();
         let charIndex = alphabetArray.indexOf(char);
         let shiftIndex = charIndex + shiftNum;
-        console.log(shiftIndex);
+        // console.log(shiftIndex);
         return alphabetArray[shiftIndex].toLocaleLowerCase();
-    }
+    } 
 }
 
-let rotateChar = rotateCharacter("f", 1);
+let rotateChar = rotateCharacter("H", 5);
 console.log(rotateChar);
