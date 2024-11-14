@@ -15,7 +15,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
-- Console stores values/variables that users input / pass to the console 
+- Console doesn't store values instead it writes something but doesn't save it anywhere permanent. Console is great to check thing while one is working
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 - The syntax means that console.log is a built-in function that allows users to output messages or values to the console.
 - The "." is known as the "dot operator" or "property access dot notation". It is specifically used as the syntax for accessing an object's properties directly 
