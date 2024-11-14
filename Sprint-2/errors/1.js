@@ -11,3 +11,9 @@ function convertToPercentage(decimalNumber) {
 }
 
 console.log(decimalNumber);
+
+/* An error will occur when this program runs because decimalNumber has been declared 
+but then declared again within the function. By moving the const decimalNumber = 0.5% out of the 
+function, it would solve for that error.
+The next error is that console log is not calling the function correctly, it must state 
+the full name of convertToPercentage(decimalNumber) to return the correct value. */
