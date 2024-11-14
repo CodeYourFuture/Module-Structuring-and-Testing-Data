@@ -85,3 +85,12 @@ const targetOutput5 = "A";
 console.log(currentOutput5);
 console.assert(currentOutput5 === targetOutput5, `${currentOutput5} is not equal ${targetOutput5}`);
 
+// Jest tests
+test("rotate char", () =>{
+    expect(rotateCharacter("a", 3)).toBe("d");
+    expect(rotateCharacter("A", 3)).toBe("D");
+    expect(rotateCharacter("!", 3)).toBe("!");
+    expect(rotateCharacter("z", 1)).toBe("a");
+    expect(rotateCharacter("Y", 2)).toBe("A");
+
+})
