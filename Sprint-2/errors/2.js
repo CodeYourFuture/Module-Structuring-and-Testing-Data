@@ -13,4 +13,4 @@ function square(num) {
 }
 // throw an syntax error
 //Parameters should be valid identifiers (usually variable names), which must start with a letter./using valid parameter name 
-console.log(squere(3));
+console.log(square(3));
