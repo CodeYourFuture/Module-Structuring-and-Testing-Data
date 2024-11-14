@@ -30,10 +30,10 @@
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 
-function getCardValue(card){
+function getCardValue(card) {
     if (Number(card[0]) >= 2 && Number(card[0]) <= 9){
         return Number(card[0]);
-    } else if (card.slice(0,2) === "10" || card[0] === "J" || card[0] === "Q" || card[0] === "K"){
+    } else if (card.slice(0,2) === "10" || card[0] === "J" || card[0] === "Q" || card[0] === "K") {
         return 10;
     } else if (card[0] === "A") {
         return 11;
@@ -87,3 +87,14 @@ const currentOutput7 = getCardValue("12♦");
 const targetOutput7 = "Invalid card rank";
 console.log(currentOutput7);
 console.assert(currentOutput7 === targetOutput7, `${currentOutput7} is not equal ${targetOutput7}`);
+
+// Jest tests
+test("value of card", () => {
+    expect(getCardValue("2♠")).toBe(2);
+    expect(getCardValue("5♦")).toBe(5);
+    expect(getCardValue("9♡")).toBe(9);
+    expect(getCardValue("10♣")).toBe(10);
+    expect(getCardValue("Q♣")).toBe(10);
+    expect(getCardValue("A♦")).toBe(11);
+    expect(getCardValue("12♦")).toBe("Invalid card rank");
+});
