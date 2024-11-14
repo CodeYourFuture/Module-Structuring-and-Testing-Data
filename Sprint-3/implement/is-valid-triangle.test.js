@@ -47,3 +47,27 @@ function isValidTriangle(a, b, c){
 let triangle = isValidTriangle(-2, 4, 5);
 console.log(triangle);
 
+// console.assert tests
+// Test 1
+const currentOutput1 = isValidTriangle(-2, 4, 5);
+const targetOutput1 = false;
+console.log(currentOutput1);
+console.assert(currentOutput1 === targetOutput1, `${currentOutput1} is not equal ${targetOutput1}`);
+
+// Test 2
+const currentOutput2 = isValidTriangle(5, 2, 7);
+const targetOutput2 = false;
+console.log(currentOutput2);
+console.assert(currentOutput2 === targetOutput2, `${currentOutput2} is not equal ${targetOutput2}`);
+
+// Test 3
+const currentOutput3 = isValidTriangle(5, 0, 7);
+const targetOutput3 = false;
+console.log(currentOutput3);
+console.assert(currentOutput3 === targetOutput3, `${currentOutput3} is not equal ${targetOutput3}`);
+
+// Test 4
+const currentOutput4 = isValidTriangle(5, 3, 4);
+const targetOutput4 = true;
+console.log(currentOutput4);
+console.assert(currentOutput4 === targetOutput4, `${currentOutput4} is not equal ${targetOutput4}`);
