@@ -53,3 +53,35 @@ function rotateCharacter(char, shiftNum) {
 
 let rotateChar = rotateCharacter("!", 1);
 console.log(rotateChar);
+
+// console.assert tests 
+// Test 1
+const currentOutput1 = rotateCharacter("a", 3);
+const targetOutput1 = "d";
+console.log(currentOutput1);
+console.assert(currentOutput1 === targetOutput1, `${currentOutput1} is not equal ${targetOutput1}`);
+
+// Test 2
+const currentOutput2 = rotateCharacter("A", 3);
+const targetOutput2 = "D";
+console.log(currentOutput2);
+console.assert(currentOutput2 === targetOutput2, `${currentOutput2} is not equal ${targetOutput2}`);
+
+// Test 3
+const currentOutput3 = rotateCharacter("*", 3);
+const targetOutput3 = "*";
+console.log(currentOutput3);
+console.assert(currentOutput3 === targetOutput3, `${currentOutput3} is not equal ${targetOutput3}`);
+
+// Test 4
+const currentOutput4 = rotateCharacter("z", 1);
+const targetOutput4 = "a";
+console.log(currentOutput4);
+console.assert(currentOutput4 === targetOutput4, `${currentOutput4} is not equal ${targetOutput4}`);
+
+// Test 5
+const currentOutput5 = rotateCharacter("Y", 2);
+const targetOutput5 = "A";
+console.log(currentOutput5);
+console.assert(currentOutput5 === targetOutput5, `${currentOutput5} is not equal ${targetOutput5}`);
+
