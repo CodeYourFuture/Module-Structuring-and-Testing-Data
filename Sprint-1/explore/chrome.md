@@ -19,3 +19,4 @@ What effect does calling the `prompt` function have?
 - The function pops up a prompt box for the user to enter an input 
 What is the return value of `prompt`?
 - The return value is whatever the user inputs into the prompt box eg a name in this case
+- if the user were to click Ok or Cancel the return value would be null. Null is an assignment value that represents no value or no object 
