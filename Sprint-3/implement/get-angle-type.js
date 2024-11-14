@@ -50,22 +50,9 @@ function getAngleType(angle) {
     }
 }
 
-// Example Usage:
-console.log(getAngleType(45));  // Output: "Acute angle"
-console.log(getAngleType(90));  // Output: "Right angle"
-console.log(getAngleType(135)); // Output: "Obtuse angle"
-console.log(getAngleType(180)); // Output: "Straight angle"
-console.log(getAngleType(270)); // Output: "Reflex angle"
-console.log(getAngleType(360)); // Output: "Invalid angle"
 
 
 
-function getAngleType(angle){
-    const rightAngles = (angle = 90)
-    const acuteAngles = (angle < 90)
-    const obtuseAngles = (90 < angle > 180)
-    const straightAngles = (angle = 180)
-    const reflexAngles = (180 < angle > 360)
-    return (getAngleType)
-}
+
+
 
