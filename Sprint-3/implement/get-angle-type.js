@@ -25,3 +25,19 @@
 // Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+
+const getAngleType = (angleInDegree) => {
+    if (angleInDegree === 90) {
+      return "Right angle";
+    } else if (angleInDegree < 90) {
+      return "Acute angle";
+    } else if (angleInDegree > 90 && angleInDegree < 180) {
+      return "Obtuse angle";
+    } else if (angleInDegree === 180) {
+      return "Straight angle";
+    } else if (angleInDegree > 180 && angleInDegree < 360) {
+      return "Reflex angle";
+    } else {
+      return "Invalid angle";  // In case angle is not in the expected range
+    }
+  };
