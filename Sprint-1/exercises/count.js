@@ -2,7 +2,7 @@ let count = 0;
 
 count = count + 1;
 
-// on line three 1 is added to the count variable by using the assignment operator =
+// Line 3 is incrementing count by 1 by assigning (=) the value 1 
 
 console.log(count);
 
