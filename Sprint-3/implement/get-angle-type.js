@@ -1,3 +1,26 @@
+function getAngleType(degree) {
+    if (degree === 90) {
+        return "Right angle"
+    }
+    else if (degree < 90 && degree >= 0) {
+        return "Acute angle"
+    }
+    else if (degree > 90 && degree < 180) {
+        return "Obtuse angle"
+    }
+    else if (degree === 180) {
+        return "Straight angle"
+    }
+    else if (degree > 180 && degree < 360) {
+        return "Reflex angle"
+    }
+    else {
+        return "Invalid angle"
+    }
+}
+
+module.exports = { getAngleType };
+
 // Implement a function getAngleType
 
 // Acceptance criteria:
