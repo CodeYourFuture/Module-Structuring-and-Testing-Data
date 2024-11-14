@@ -36,15 +36,15 @@ describe("getOrdinalNumber", () => {
 });
 //feedback
 // PASS  ./getOrdinalNumber.test.js
-  getOrdinalNumber
-    ✓ returns correct suffix for 1st, 2nd, 3rd, and other basic cases (x ms)
-    ✓ handles special case for numbers ending in 11, 12, 13 (x ms)
-    ✓ returns correct suffix for numbers ending in 1, 2, or 3 but not in the teens (x ms)
-    ✓ handles large numbers with correct suffixes (x ms)
-    ✓ returns '0th' for input 0 (x ms)
+ // getOrdinalNumber
+   // ✓ returns correct suffix for 1st, 2nd, 3rd, and other basic cases (x ms)
+   // ✓ handles special case for numbers ending in 11, 12, 13 (x ms)
+   // ✓ returns correct suffix for numbers ending in 1, 2, or 3 but not in the teens (x ms)
+    //✓ handles large numbers with correct suffixes (x ms)
+   // ✓ returns '0th' for input 0 (x ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       5 passed, 5 total
-Snapshots:   0 total
-Time:        X seconds
+//Test Suites: 1 passed, 1 total
+//Tests:       5 passed, 5 total
+//Snapshots:   0 total
+//Time:        X seconds
 
