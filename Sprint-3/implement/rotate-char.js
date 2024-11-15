@@ -6,6 +6,28 @@
 // This function is commonly used for text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
+
+//......Answer......
+
+const rotateCharacter = (char, shift) => {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // Handle lower letters
+    if (alphabet.includes(char)) {
+        const index = (alphabet.indexOf(char) + shift) % 26;
+        return alphabet[(index + 26) % 26]; 
+    }
+
+    // Handle uppercase letters
+    if (ALPHABET.includes(char)) {
+        const index = (ALPHABET.indexOf(char) + shift) % 26;
+        return ALPHABET[(index + 26) % 26]; 
+    }
+    
+    return char;
+};
+
+
 // Acceptance criteria:
 
 // Given a character and a shift value,
@@ -41,3 +63,6 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+
+
