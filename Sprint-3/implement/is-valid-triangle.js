@@ -33,3 +33,12 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+const isValidTriangle=(side1,side2,side3)=>{
+    if(side1<=0||side2<=0||side3<=0)
+      return false
+    else 
+      return side1+side2>side3&&side2+side3>side1&&side1+side3>side2?true:false;
+}
+
+ console.log(isValidTriangle(7,5,6))
