@@ -31,3 +31,10 @@ const currentOutput2 = convert24HoursTimeTo12Hours("23:00");
 const targetOutput2 = "11 PM";
 console.log(currentOutput2);
 console.assert(currentOutput2 === targetOutput2, `${currentOutput2} is not equal ${targetOutput2}`);
+
+// 4th test
+
+const currentOutput3 = convert24HoursTimeTo12Hours("14:15");
+const targetOutput3 = "2:15 PM";
+console.log(currentOutput3);
+console.assert(currentOutput3 === targetOutput3, `${currentOutput3} is not equal ${targetOutput3}`);
