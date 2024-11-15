@@ -26,5 +26,7 @@ function checkPassword(pass){
     return true;
 }
 
-let userPassword = checkPassword("te3A");
+let userPassword = checkPassword("te^A");
 console.log(userPassword);
+
+
