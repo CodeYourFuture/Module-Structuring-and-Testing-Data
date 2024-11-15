@@ -1,32 +1,20 @@
-// In Sprint-1, there is a program written in interpret/to-pounds.js
+// If products or services are subject to the 20% standard rate of VAT:
+// You must add 20% to the price you charge for the goods or service.
+// You can do this by multiplying the price you charge by 1.2.
+// For example, if your business sells sports equipment for £50, you multiply £50 by 1.2 for a total VAT inclusive price of £60.
 
-// You will need to take this code and turn it into a reusable block of code.
-// You will need to declare a function called toPounds with an appropriately named parameter.
+// Implement a function that calculates the new price with VAT (Value Added Tax) added on
 
-// You should call this function a number of times to check it works for different inputs
+// Given a number,
+// When I call this function with a number
+// it returns the new price with VAT added on
 
-function toPounds(penceString){
-
-  const penceStringWithoutTrailingP = penceString.substring(
-  0,
-  penceString.length - 1
-);
-
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
-const pounds = paddedPenceNumberString.substring(
-  0,
-  paddedPenceNumberString.length - 2
-);
-
-const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
-  return `£${pounds}.${pence}`;
+function calculateVAT(productPrice) {
+  return `${productPrice *1.2}`;
 }
+const priceWithVat = calculateVAT(89);
+console.log (`£${priceWithVat}`);
 
-
-
-console.log(toPounds("250p"));
 
 
 
