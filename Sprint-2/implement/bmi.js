@@ -13,3 +13,12 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function calculateBmi(height, weight){
+    let heightMtr = height * height;
+    let bodyMass = weight / heightMtr;
+    return Math.round(bodyMass * 10) / 10 ; // Dividing the round number by 10 
+}
+
+let results = calculateBmi(1.73, 70)
+console.log(results)
