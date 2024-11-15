@@ -14,3 +14,17 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+function checkPassword(pass){
+    if(pass < 5){
+        return false;
+    } else if(!/[0-9]/.test(pass)){
+        return false;
+    } else if (!/[!#$%.&*]/.test(pass)){
+        return false;
+    }
+    return true;
+}
+
+let userPassword = checkPassword("te3A");
+console.log(userPassword);
