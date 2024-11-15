@@ -32,3 +32,14 @@ function validateCreditCard(num){
 
 let cardValidation = validateCreditCard(6666666666661666);
 console.log(cardValidation);
+
+// jest test
+test("check if a credit card is valid", () => {
+    expect(validateCreditCard(6666666666661666)).toBe(true);
+    expect(validateCreditCard(9999777788880000)).toBe(true);
+    expect(validateCreditCard("a92332119c011112")).toBe(false);
+    expect(validateCreditCard(1111111111111110)).toBe(false);
+    expect(validateCreditCard(4444444444444444)).toBe(false);
+    expect(validateCreditCard(6666666666666661)).toBe(false);
+})
+
