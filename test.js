@@ -8,15 +8,5 @@
 
 
 
-function CalculateBMI (weight, height){
-  const heightMeters = height/100;// coverted into meters
-  const bmi = weight/(heightMeters ** 2); 
-  return parseFloat(bmi.toFixed(1));// using the parseFloat to allow to return the value in numerical and .toFixed allows to round the value to specified decimal number
-  }
-  
-
-  const DoBMI = CalculateBMI (60, 170);
-  console.log (DoBMI);
-  console.log (typeof DoBMI)
 
   
