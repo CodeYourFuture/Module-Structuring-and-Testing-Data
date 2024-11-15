@@ -26,22 +26,8 @@ const expectedOutput = "8 AM";
 console.log(testOutput);
 console.assert(testOutput === expectedOutput, `${testOutput} is not equal to ${expectedOutput}`);
 
-// const currentOutput = formatAs12HourClock("08:00");
-// const targetOutput = "08:00 am";
-// console.assert(
-//   currentOutput === targetOutput,
-//   `current output: ${currentOutput}, target output: ${targetOutput}`
-// );
-
-// const currentOutput2 = formatAs12HourClock("23:00");
-// const targetOutput2 = "11:00 pm";
-// console.assert(
-//   currentOutput2 === targetOutput2,
-//   `current output: ${currentOutput2}, target output: ${targetOutput2}`
-// );
-
-// 1st test
-const currentOutput = convert24HoursTimeTo12Hours("08:00");
-const targetOutput = "8 AM";
-console.log(currentOutput);
-console.assert(currentOutput === targetOutput, `${currentOutput} is not equal ${targetOutput}`);
+// 2nd test
+const currentOutput2 = convert24HoursTimeTo12Hours("23:00");
+const targetOutput2 = "11 PM";
+console.log(currentOutput2);
+console.assert(currentOutput2 === targetOutput2, `${currentOutput2} is not equal ${targetOutput2}`);
