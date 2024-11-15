@@ -1,16 +1,17 @@
 // Predict and explain first...
 
 // call the function capitalise with a string input
-// interpret the error message and figure out why an error is occurring
+// interpret the error message and figure out why an error occurring
 
-  /*  
+
+/*  
   we are creating a variable with (let = nameVariable) but the same time we can not assing
   the value in the same line.
   instead we should call directly the (str = valueAssigned) and with this will Worker.
 */
 
 
-// function capitalise(str) {
+// function capitalize(str) {
 //   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
 //   return str;
 // }
@@ -19,12 +20,12 @@
 
 /*================== fixed =======================*/
 
-function capitalise(str) {
+function capitalize(str) {
   str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
 
-console.log(capitalise("alejandra"));
+console.log(capitalize("alejandra"));
 
 
 /*
