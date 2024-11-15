@@ -17,7 +17,7 @@
 function calculateBmi(height, weight){
     let heightMtr = height * height;
     let bodyMass = weight / heightMtr;
-    return Math.round(bodyMass * 10) / 10 ; // Dividing the round number by 10 
+    return Math.round(bodyMass * 10) / 10 ; // Dividing the rounded number by 10 
 }
 
 let results = calculateBmi(1.73, 70)
