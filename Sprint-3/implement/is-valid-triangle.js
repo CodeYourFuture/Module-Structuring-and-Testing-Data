@@ -5,21 +5,22 @@
 // Side a = 3
 // Side b = 3
 // Side c = 3
-
 // This is a valid triangle, because a plus b = 6 and 6 is greater than 3
 // Another way to write this is a + b > c
 // It's also true that b + c > a
 // It's also true that a + c > b
+// In our function isValidTriangle which takes as parameters the lengths of three sides, we need to invalidate 
+//any triangle where the sum of any two sides is less than or equal to the length of the third side.
 
-// In our function isValidTriangle which takes as parameters the lengths of three sides, we need to invalidate any triangle where the sum of any two sides is less than or equal to the length of the third side.
 // and we need to validate any triangle where the sum of any two sides is greater than the length of the third side.
-
 // Acceptance criteria:
-
 // scenario: invalid triangle
 // Given the side lengths a, b, and c,
-// When the sum of any two side lengths is less than or equal to the length of the third side (i.e., a + b <= c, a + c <= b, b + c <= a),
-// Then it should return false because these conditions violate the Triangle Inequality, which states that the sum of the lengths of any two sides of a triangle must be greater than the length of the third side.
+// When the sum of any two side lengths is less than or equal to the length of the third side 
+//(i.e., a + b <= c, a + c <= b, b + c <= a),
+
+// Then it should return false because these conditions violate the Triangle Inequality, which states that the sum of 
+//the lengths of any two sides of a triangle must be greater than the length of the third side.
 
 // scenario: invalid triangle
 // Check for Valid Input:
@@ -32,4 +33,48 @@
 // When the function is called with these values as input,
 // Then it should return true because the input forms a valid triangle.
 
-// This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+// This specification outlines the behavior of the isValidTriangle function for different input scenarios, 
+//ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+function isValidTriangle(a, b, c) {
+    // Check if any side is less than or equal to zero
+    if (a <= 0 || b <= 0 || c <= 0) {
+        return false;
+    }
+
+    // Check the Triangle Inequality conditions
+    if (a + b > c && a + c > b && b + c > a) {
+        return true;
+    }
+
+    // If any of the Triangle Inequality conditions fail, return false
+    return false;
+}
+
+module.exports = isValidTriangle;
+
+//test code 
+if (require.main === module) {
+    try {
+        // Test for a valid triangle
+        console.log(isValidTriangle(3, 4, 5) === true ? "Pass" : "Fail"); // Should return true (valid triangle)
+
+        // Test for an invalid triangle where the sum of two sides is equal to the third side
+        console.log(isValidTriangle(1, 2, 3) === false ? "Pass" : "Fail"); // Should return false (invalid triangle)
+
+        // Test for an invalid triangle where one side is zero
+        console.log(isValidTriangle(0, 4, 5) === false ? "Pass" : "Fail"); // Should return false (side is zero)
+
+        // Test for an invalid triangle where one side is negative
+        console.log(isValidTriangle(-3, 4, 5) === false ? "Pass" : "Fail"); // Should return false (side is negative)
+
+        // Test for an invalid triangle where the sum of two sides is less than the third side
+        console.log(isValidTriangle(1, 1, 3) === false ? "Pass" : "Fail"); // Should return false (invalid triangle)
+
+        // Test for a valid triangle where all sides are positive and satisfy the Triangle Inequality
+        console.log(isValidTriangle(6, 8, 10) === true ? "Pass" : "Fail"); // Should return true (valid triangle)
+
+    } catch (error) {
+        console.error("Test failed:", error);
+    }
+}
