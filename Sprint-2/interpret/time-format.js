@@ -27,7 +27,7 @@ console.log(time)
 
 // c) What is the return value of pad is called for the first time?00
 
-// d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-//second 1     
+// d) What is  the value assigned to num when pad is called for the last time in this program?  Explain your answer
+//second 1     The last call to pad is on remainingSeconds, which is 1 (since remainingSeconds = 61 % 60 = 1).
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-//01
+//01When pad is called with num = 1, it will convert 1 to a string and then pad it to a width of 2 characters, so the return value is "01".
