@@ -35,3 +35,10 @@ function repeatStr(str, count){
 
 let resultStr = repeatStr("Hello", 0);
 
+// jest tests
+test("repeat a string", () => {
+    expect(repeatStr("Hello", 0)).toBe("");
+    expect(repeatStr("Hello", -1)).toBe("Error. Negative counts are not valid");
+    expect(repeatStr("Hello", 5)).toBe("HelloHelloHelloHelloHello");
+    expect(repeatStr("World", 2)).toBe("WorldWorld");
+})
