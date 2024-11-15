@@ -18,3 +18,4 @@ function fullPriceWithVAT(noVatValue) {
 console.log(fullPriceWithVAT(700));
 console.log(fullPriceWithVAT(55));
 console.log(fullPriceWithVAT(50));
+
