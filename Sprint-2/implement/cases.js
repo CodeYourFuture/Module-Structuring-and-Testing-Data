@@ -13,3 +13,12 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+// My code starts here
+
+function snakeString(text) {
+    let inputText = text.toUpperCase();
+    return inputText.replaceAll(" ", "_")
+}
+
+console.log(snakeString("Natalie and Serna do pair programming"));

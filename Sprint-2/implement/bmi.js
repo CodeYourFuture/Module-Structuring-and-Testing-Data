@@ -23,3 +23,4 @@ return Number(BMI.toFixed(1));
 }
 
 console.log (BMIcalc(75, 1.8));
+
