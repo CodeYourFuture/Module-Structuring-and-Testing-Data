@@ -33,3 +33,50 @@ These are the requirements your project needs to fulfill:
 - Return a boolean from the function to indicate whether the credit card number is valid.
 
 Good luck!
+
+
+
+
+//.....Answer......
+
+const validateCreditCard = (cardNumber) => {
+   
+    if (cardNumber.length !== 16) 
+        return false; 
+
+    // Check if the card number contains only digits 
+    for (let i = 0; i < cardNumber.length; i++) {
+        if (cardNumber[i] < '0' || cardNumber[i] > '9') 
+            return false;  
+    }
+
+    // Check if there are at least two different digits
+    let hasDifferentDigits = false;
+    for (let i = 0; i < cardNumber.length; i++) {
+        for (let j = i + 1; j < cardNumber.length; j++) {
+            if (cardNumber[i] !== cardNumber[j]) {
+                hasDifferentDigits = true;
+                break;
+            }
+        }
+        if (hasDifferentDigits) break;
+    }
+    if (!hasDifferentDigits) 
+        return false; // Invalid: All digits are the same
+    
+
+    // Check if the last digit is even
+    const lastDigit = cardNumber[cardNumber.length - 1];
+    if (lastDigit % 2 !== 0) 
+        return false; 
+
+    // Check if the sum of the digits is greater than 16
+    let sum = 0;
+    for (let i = 0; i < cardNumber.length; i++)
+        sum += +cardNumber[i]; 
+    
+    if (sum <= 16) 
+    return false; 
+    return true;
+};
+
