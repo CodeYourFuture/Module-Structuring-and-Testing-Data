@@ -1,10 +1,23 @@
-// Below are the steps for how BMI is calculated
+// A set of words can be grouped together in different cases.
 
-// The BMI calculation divides an adult's weight in kilograms (kg) by their height in metres (m) squared.
+// For example, "hello there" in snake case would be written "hello_there"
+// UPPER_SNAKE_CASE means taking a string and writing it in all caps with underscores instead of spaces.
 
-// For example, if you weigh 70kg (around 11 stone) and are 1.73m (around 5 feet 8 inches) tall, you work out your BMI by:
+// Implement a function that:
 
+// Given a string input like "hello there"
+// When we call this function with the input string
+// it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
 
+// Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
+
+// You will need to come up with an appropriate name for the function
+// Use the string documentation to help you find a solution
+
+function toUpperCase(string){
+  return string.split(" ").join ("_").toUpperCase();
+}
+console.log(toUpperCase("hello there"));
 
 
 
