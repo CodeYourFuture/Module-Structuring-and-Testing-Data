@@ -15,3 +15,21 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+// Function countChar that returns the number of times a character occurs in a string
+
+function countChar(str, char) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// Tests
+// Scenario: Multiple Occurrences
+console.log(countChar("aaaaa", "a")); // Expected output: 5
+
+// Scenario: No Occurrences
+console.log(countChar("hello", "z")); // Expected output: 0
