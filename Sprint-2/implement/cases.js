@@ -13,3 +13,10 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+function UPPER_SNAKE_CASE(str){
+    
+    let arr=str.split(" ").map(a => a.toUpperCase());
+    
+    return arr.join('_');
+}
+console.log(UPPER_SNAKE_CASE("hi cyf london"));
