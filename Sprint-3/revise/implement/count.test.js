@@ -24,8 +24,16 @@ function countChar(str, char){
             countResult++;
         }
     }
-    return `${char} occurs ${countResult} times in the ${str}.`;
+    return `"${char}" occurs ${countResult} times in the ${str}.`;
 }
 
 let charInStr = countChar("Hellooo", "O");
-console.log(charInStr)
+console.log(charInStr);
+
+// jest tests 
+test("a char occurs in a string", () => {
+    expect(countChar("Hellooo", "O")).toBe('"O" occurs 0 times in the Hellooo.');
+    expect(countChar("Hellooo", "o")).toBe('"o" occurs 3 times in the Hellooo.');
+    expect(countChar("World world World", "w")).toBe('"w" occurs 1 times in the World world World.');
+    expect(countChar("World world World", "W")).toBe('"W" occurs 2 times in the World world World.');
+})
