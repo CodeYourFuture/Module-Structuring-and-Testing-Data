@@ -1,23 +1,33 @@
-// A set of words can be grouped together in different cases.
+// In Sprint-1, there is a program written in interpret/to-pounds.js
 
-// For example, "hello there" in snake case would be written "hello_there"
-// UPPER_SNAKE_CASE means taking a string and writing it in all caps with underscores instead of spaces.
+// You will need to take this code and turn it into a reusable block of code.
+// You will need to declare a function called toPounds with an appropriately named parameter.
 
-// Implement a function that:
+// You should call this function a number of times to check it works for different inputs
 
-// Given a string input like "hello there"
-// When we call this function with the input string
-// it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
+function toPounds(penceString){
 
-// Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
+  const penceStringWithoutTrailingP = penceString.substring(
+  0,
+  penceString.length - 1
+);
 
-// You will need to come up with an appropriate name for the function
-// Use the string documentation to help you find a solution
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+const pounds = paddedPenceNumberString.substring(
+  0,
+  paddedPenceNumberString.length - 2
+);
 
-function toUpperCase(string){
-  return string.split(" ").join ("_").toUpperCase();
+const pence = paddedPenceNumberString
+  .substring(paddedPenceNumberString.length - 2)
+  .padEnd(2, "0");
+  return `£${pounds}.${pence}`;
 }
-console.log(toUpperCase("hello there"));
+
+
+
+console.log(toPounds("250p"));
+
 
 
 
