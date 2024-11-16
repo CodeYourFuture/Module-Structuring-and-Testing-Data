@@ -6,6 +6,27 @@
 // When the function getAngleType is called with this angle,
 // Then it should:
 
+function getAngleType(degrees){
+    
+    if(degrees === 90){
+        return 'Right angle';
+    }else if(degrees < 90){
+        return 'Acute angle';
+    }else if(degrees > 90 && degrees < 180){
+        return 'Obtuse angle';
+    }else if(degrees === 180){
+        return 'Straight angle';
+    }else if(degrees > 180 && degrees < 360){
+        return 'Reflex angle';
+    }else {
+        return 'Invalid input';
+    }
+}
+
+console.log(getAngleType(359));
+
+
+
 // Identify Right Angles:
 // When the angle is exactly 90 degrees,
 // Then the function should return "Right angle"
