@@ -13,3 +13,13 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+const upperSnakeCase = (input) => {
+  for ( let i = 0; i < input.length; i++) {
+    
+  }
+  const upperCase = input.replace(/\s+/g, '_').toUpperCase();
+  console.log(upperCase)
+}
+
+upperSnakeCase('lords of the rings');

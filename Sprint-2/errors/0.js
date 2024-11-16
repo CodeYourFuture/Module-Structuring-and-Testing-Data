@@ -7,3 +7,8 @@ function capitalise(str) {
   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
+
+
+capitalise('hello world')
+
+// This function is intended to get the first character in a string entered.
