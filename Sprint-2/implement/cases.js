@@ -13,3 +13,10 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function convertToSnakeCase(str){
+ return str.toUpperCase().replace(" ","_");
+}
+var testStr = "hello there"
+const myString = convertToSnakeCase(testStr);
+console.log(myString)
