@@ -1,6 +1,6 @@
 {
-  "name": "get-angle-type",
-  "description": "Writing tests for get angle type application",
+  "name": "test",
+  "description": "Writing tests applications",
   "scripts": {
   "test": "jest"
   },
