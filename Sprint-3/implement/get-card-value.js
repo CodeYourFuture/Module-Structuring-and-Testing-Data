@@ -1,3 +1,61 @@
+function getCardValue(card) {
+    if (!card || card.length < 2) {
+        throw new Error("Invalid card format");
+    }
+    const rank = card.slice(0, -1);
+    const suit = card.slice(-1);
+    const faceCardValues = { J: 10, Q: 10, K: 10, A: 11 };
+    if (!isNaN(rank)) {
+        const value =  parseInt(rank, 10);
+        if (value >= 2 && value <= 10) {
+            return value;
+        } else {
+            throw new Error("Invalid card rank");
+        }
+    }
+    if (faceCardValues[rank] !== undefined) {
+        return faceCardValues[rank];
+    }
+    throw new Error("Invalid card rank");
+}
+
+try {
+    console.assert(getCardValue("2♠") === 2, "Test case 1 failed");
+    console.assert(getCardValue("9♥") === 9, "Test case 2 failed");
+    console.assert(getCardValue("10♦") === 10, "Test case 3 failed");
+    console.assert(getCardValue("J♣") === 10, "Test case 4 failed");
+    console.assert(getCardValue("Q♠") === 10, "Test case 5 failed");
+    console.assert(getCardValue("K♥") === 10, "Test case 6 failed");
+    console.assert(getCardValue("A♦") === 11, "Test case 7 failed");
+
+    try {
+        getCardValue("1♠");
+        console.assert(false, "Test case 8 failed - invalid card rank should throw");
+    } catch (e) {
+        console.assert(e.message === "Invalid card rank", "Test case 8 failed");
+    }
+
+    try {
+        getCardValue("Z♣");
+        console.assert(false, "Test case 9 failed - invalid card rank should throw");
+    } catch (e) {
+        console.assert(e.message === "Invalid card rank", "Test case 9 failed");
+    }
+
+    try {
+        getCardValue("♣");
+        console.assert(false, "Test case 10 failed - invalid card format should throw");
+    } catch (e) {
+        console.assert(e.message === "Invalid card format", "Test case 10 failed");
+    }
+
+    console.log("All test cases passed!");
+} catch (error) {
+    console.error(error.message);
+}
+
+module.exports = { getCardValue };
+
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
 // You will need to implement a function getCardValue
