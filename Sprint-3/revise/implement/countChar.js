@@ -12,3 +12,5 @@ const countChar=(str, char)=>{
   
     return count;
   }
+
+  module.exports=countChar
