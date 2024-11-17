@@ -9,3 +9,5 @@ const isPrime=(num)=>{
   
     return true; 
   }
+
+  module.exports=isPrime

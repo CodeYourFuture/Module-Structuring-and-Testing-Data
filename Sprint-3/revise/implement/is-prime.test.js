@@ -25,6 +25,6 @@ const isPrime=require('./isPrime')
         expect(isPrime(1.5)).toBe(false); 
         expect(isPrime('text')).toBe(false); 
         expect(isPrime(NaN)).toBe(false); 
-        expect(isPrime(Infinity)).toBe(false); //
+        expect(isPrime(Infinity)).toBe(false); 
     })
  })
