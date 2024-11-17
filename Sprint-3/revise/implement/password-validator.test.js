@@ -14,7 +14,7 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-const isValidPassword=require(./isValidPassword)
+const isValidPassword=require('./isValidPassword')
 const passwords = ['Hello123!', 'Password1$', 'Admin#22'];
 
 describe('isValidPassword', () => {
