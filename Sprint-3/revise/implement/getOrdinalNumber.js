@@ -13,13 +13,13 @@ const getOrdinalNumber=(num)=>{
   
     switch (lastDigit) {
       case 1:
-        return `${num}st`;
+        return `${Math.floor(num)}st`;
       case 2:
-        return `${num}nd`;
+        return `${Math.floor(num)}nd`;
       case 3:
-        return `${num}rd`;
+        return `${Math.floor(num)}rd`;
       default:
-        return `${num}th`;
+        return `${Math.floor(num)}th`;
     }
   }
   

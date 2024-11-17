@@ -40,7 +40,7 @@ describe('getOrdinalNumber', () => {
   });
 
   test('handles non-integer inputs gracefully', () => {
-    expect(getOrdinalNumber(1.1)).toBe('1st'); 
+    expect(getOrdinalNumber(1.1)).toBe('1st'); // rounds down
     expect(() => getOrdinalNumber('text')).toThrow('Invalid input'); 
     expect(() => getOrdinalNumber(null)).toThrow('Invalid input');
   });
