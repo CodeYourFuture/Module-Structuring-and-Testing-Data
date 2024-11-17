@@ -31,7 +31,12 @@ describe('getOrdinalNumber', () => {
     expect(getOrdinalNumber(1011)).toBe('1011th');
     expect(getOrdinalNumber(1021)).toBe('1021st');
   });
-
+  test('handles millons numbers correctly', () => {
+    expect(getOrdinalNumber(1000000)).toBe('1000000th');
+    expect(getOrdinalNumber(1000001)).toBe('1000001st');
+    expect(getOrdinalNumber(1000053)).toBe('1000053rd');
+    expect(getOrdinalNumber(1000067)).toBe('1000067th');
+  });
 
   test('handles edge cases', () => {
     expect(getOrdinalNumber(0)).toBe('0th');
@@ -39,7 +44,7 @@ describe('getOrdinalNumber', () => {
     expect(getOrdinalNumber(101)).toBe('101st');
   });
 
-  test('handles non-integer inputs gracefully', () => {
+  test('handles non-integer inputs correctly', () => {
     expect(getOrdinalNumber(1.1)).toBe('1st'); // rounds down
     expect(() => getOrdinalNumber('text')).toThrow('Invalid input'); 
     expect(() => getOrdinalNumber(null)).toThrow('Invalid input');
