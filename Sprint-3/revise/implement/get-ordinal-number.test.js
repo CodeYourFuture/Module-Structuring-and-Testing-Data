@@ -31,7 +31,7 @@ describe('getOrdinalNumber', () => {
     expect(getOrdinalNumber(1011)).toBe('1011th');
     expect(getOrdinalNumber(1021)).toBe('1021st');
   });
-  test('handles millons numbers correctly', () => {
+  test('handles millions numbers correctly', () => {
     expect(getOrdinalNumber(1000000)).toBe('1000000th');
     expect(getOrdinalNumber(1000001)).toBe('1000001st');
     expect(getOrdinalNumber(1000053)).toBe('1000053rd');
