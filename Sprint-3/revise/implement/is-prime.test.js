@@ -9,7 +9,7 @@ const isPrime=require('./isPrime')
         expect(isPrime(1)).toBe(false); 
         expect(isPrime(0)).toBe(false); 
         expect(isPrime(4)).toBe(false); 
-        expect(isPrime(6).toBe(false))
+        expect(isPrime(6)).toBe(false)
         expect(isPrime(9)).toBe(false); 
         expect(isPrime(100)).toBe(false); 
     })
