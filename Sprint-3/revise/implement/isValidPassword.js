@@ -11,3 +11,4 @@ const isValidPassword=(password, passwords)=>{
   
     return hasUpperCase && hasLowerCase && hasNumber && hasSymbol && isUnique;
   }
+  module.exports=isValidPassword
