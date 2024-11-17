@@ -1,31 +1,48 @@
-// This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
+function getCardValue(card) {
+    // Extract the rank and suit from the card string
+    const rank = card.slice(0, -1); // All except the last character
+    const suit = card.slice(-1);   // The last character (the suit emoji)
 
-// You will need to implement a function getCardValue
+    // Validate the suit
+    if (!["♠", "♥", "♦", "♣"].includes(suit)) {
+        throw new Error("Invalid card suit.");
+    }
 
-// You need to write assertions for your function to check it works in different cases
+    // Determine the card value based on rank
+    if (rank >= "2" && rank <= "10") {
+        return parseInt(rank); // Numeric cards return their number value
+    } else if (["J", "Q", "K"].includes(rank)) {
+        return 10; // Face cards (J, Q, K) return 10
+    } else if (rank === "A") {
+        return 11; // Aces (A) default to 11
+    } else {
+        throw new Error("Invalid card rank."); // Handle invalid ranks
+    }
+}
 
-// Acceptance criteria:
+// Assertions for testing
+const assert = require('assert');
 
-// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
-// When the function getCardValue is called with this card string as input,
-// Then it should return the numerical card value
+// Test cases for valid cards
+assert.strictEqual(getCardValue("2♠"), 2);   // Number card
+assert.strictEqual(getCardValue("10♥"), 10); // Number card
+assert.strictEqual(getCardValue("J♦"), 10);  // Face card
+assert.strictEqual(getCardValue("Q♣"), 10);  // Face card
+assert.strictEqual(getCardValue("K♠"), 10);  // Face card
+assert.strictEqual(getCardValue("A♥"), 11);  // Ace
 
-// Handle Number Cards (2-10):
-// Given a card with a rank between "2" and "9",
-// When the function is called with such a card,
-// Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
+// Test cases for invalid rank
+assert.throws(() => getCardValue("1♠"), /Invalid card rank/); // Invalid rank
+assert.throws(() => getCardValue("Z♣"), /Invalid card rank/); // Invalid rank
 
-// Handle Face Cards (J, Q, K):
-// Given a card with a rank of "10," "J," "Q," or "K",
-// When the function is called with such a card,
-// Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+// Test cases for invalid suit
+assert.throws(() => getCardValue("10X"), /Invalid card suit/); // Invalid suit
+assert.throws(() => getCardValue("A#"), /Invalid card suit/);  // Invalid suit
 
-// Handle Ace (A):
-// Given a card with a rank of "A",
-// When the function is called with an Ace,
-// Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+// Test edge cases
+assert.throws(() => getCardValue(""), /Invalid card rank/);    // Empty string
+assert.throws(() => getCardValue(" "), /Invalid card rank/);   // Whitespace only
 
-// Handle Invalid Cards:
-// Given a card with an invalid rank (neither a number nor a recognized face card),
-// When the function is called with such a card,
-// Then it should throw an error indicating "Invalid card rank."
+// If all tests pass
+console.log("All tests passed!");
+

@@ -1,25 +1,44 @@
-// Implement a function repeat
+function repeat(str, count) {
+    // Case 1: If count is negative, throw an error
+    if (count < 0) {
+        throw new Error("The count must not be a negative number!");
+    }
 
-// Given a target string str and a positive integer count,
-// When the repeat function is called with these inputs,
-// Then it should:
+    // Case 2: If count is 0, return an empty string
+    if (count === 0) {
+        return "";
+    }
 
-// case: repeat String:
-// Given a target string str and a positive integer count,
-// When the repeat function is called with these inputs,
-// Then it should repeat the str count times and return a new string containing the repeated str values.
+    // Case 3: If count is 1, return the original string
+    if (count === 1) {
+        return str;
+    }
 
-// case: handle Count of 1:
-// Given a target string str and a count equal to 1,
-// When the repeat function is called with these inputs,
-// Then it should return the original str without repetition, ensuring that a count of 1 results in no repetition.
+    // Case 4: If count is a positive number greater than 1, repeat the string
+    let text = "";
+    for (let i = 0; i < count; i++) {
+        text += str;
+    }
+    return text;
+}
 
-// case: Handle Count of 0:
-// Given a target string str and a count equal to 0,
-// When the repeat function is called with these inputs,
-// Then it should return an empty string, ensuring that a count of 0 results in an empty output.
+// Test cases:
 
-// case: Negative Count:
-// Given a target string str and a negative integer count,
-// When the repeat function is called with these inputs,
-// Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+// Case: Repeating string 3 times
+console.log(repeat("hello", 3));  // Expected output: "hellohellohello"
+
+// Case: Count of 1 (no repetition)
+console.log(repeat("hello", 1));  // Expected output: "hello"
+
+// Case: Count of 0 (empty string)
+console.log(repeat("hello", 0));  // Expected output: ""
+
+// Case: Negative count (should throw error)
+try {
+    console.log(repeat("hello", -3));  // Should throw an error
+} catch (e) {
+    console.log(e.message);  // Expected: "The count must not be a negative number!"
+}
+
+// Case: Test invalid count (greater than 9) — optional condition
+console.assert(repeat("hello", 11) === "hellohellohellohellohellohellohellohellohellohellohello", "Test failed: invalid count number");
