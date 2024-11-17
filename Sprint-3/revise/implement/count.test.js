@@ -15,3 +15,19 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+//.....Answer.....
+const countChar = (str, char) => {
+    let count = 0;  
+    let occurence = 0;  
+    while (occurence < str.length) {
+        occurence = str.indexOf(char, occurence);
+        if (occurence === -1) break;
+
+        count++;
+        occurence++;  
+    }
+    return count;
+};
+
+
