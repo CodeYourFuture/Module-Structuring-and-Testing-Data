@@ -14,3 +14,35 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+const isValidPassword=require(./isValidPassword)
+const passwords = ['Hello123!', 'Password1$', 'Admin#22'];
+
+describe('isValidPassword', () => {
+  test('returns true for a valid password', () => {
+    expect(isValidPassword('Valid1!', passwords)).toBe(true);
+  });
+
+  test('returns false for a password shorter than 5 characters', () => {
+    expect(isValidPassword('Ab1!', passwords)).toBe(false);
+  });
+
+  test('returns false for a password without uppercase letters', () => {
+    expect(isValidPassword('valid1!', passwords)).toBe(false);
+  });
+
+  test('returns false for a password without lowercase letters', () => {
+    expect(isValidPassword('VALID1!', passwords)).toBe(false);
+  });
+
+  test('returns false for a password without numbers', () => {
+    expect(isValidPassword('Valid!', passwords)).toBe(false);
+  });
+
+  test('returns false for a password without symbols', () => {
+    expect(isValidPassword('Valid12', passwords)).toBe(false);
+  });
+
+  test('returns false for a password that is not unique', () => {
+    expect(isValidPassword('Hello123!', passwords)).toBe(false);
+  });
+});
