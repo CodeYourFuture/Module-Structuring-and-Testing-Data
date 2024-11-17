@@ -28,3 +28,5 @@ const isPrime=require('./isPrime')
         expect(isPrime(Infinity)).toBe(false); 
     })
  })
+
+ //npm run test is-prime.test.js
