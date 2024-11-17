@@ -15,7 +15,7 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 const isValidPassword=require('./isValidPassword')
-const passwords = ['Hello123!', 'Password1$', 'Admin#22'];
+const passwords = ['Haftamu123!', 'Password1$', 'Admin#22'];
 
 describe('isValidPassword', () => {
   test('returns true for a valid password', () => {
@@ -43,6 +43,6 @@ describe('isValidPassword', () => {
   });
 
   test('returns false for a password that is not unique', () => {
-    expect(isValidPassword('Hello123!', passwords)).toBe(false);
+    expect(isValidPassword('Haftamu123!', passwords)).toBe(false);
   });
 });
