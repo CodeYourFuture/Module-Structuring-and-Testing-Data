@@ -9,7 +9,7 @@ Use the acceptance criteria as an aid to **_write tests_** for the different cas
 
 Here is a recommended order:
 
-1. `get-angle-type.js`
+1. `get-angle-type.js` - Done
 1. `is-proper-fraction.js`
 1. `get-card-value.js`
 1. `is-valid-triangle.js`

@@ -1,5 +1,7 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
+const { error } = require("console");
+
 // You will need to implement a function getCardValue
 
 // You need to write assertions for your function to check it works in different cases
@@ -31,36 +33,36 @@
 // Then it should throw an error indicating "Invalid card rank."
 
 function getCardValue(card) {
-    // Extract the rank part of the card (the first part, excluding the suit)
-    const rank = card.slice(0, -1); // Removing the last character e.g "A♠" =>"A" etc.
 
-    // Handle number cards (2-10)
+     // Extract the rank part of the card (the first part, excluding the suit)
+     const rank = card.slice(0, -1); // Removing the last character e.g "A♠" =>"A" etc.
+
+     // Handle number cards (2-10)
     if (rank >= "2" && rank <= "9") {
         return parseInt(rank); //  converts a string into an integer. "2" => 2
     }
 
     // Handle face cards (J, Q, K)
-    if (rank === "J" || rank === "Q" || rank === "K") {
-        return 10;
-    }
+     else if (rank === "J" || rank === "Q" || rank === "K" || rank === "10") {
+         return 10;
+     }
 
-    // Handle Ace (A)
-    if (rank === "A") {
+     // Handle Ace (A)
+    else if (rank === "A") {
         return 11;
-    }  else {
-        return "Invalid card rank";  // If the rank is invalid, 
-    }   
-};
+   } else {
+    console.log("this is rank", rank)
+    
+        throw new Error("Invalid card rank"); 
+   }
+ };
+
 
 console.log(getCardValue("J♠"))
+
 console.log(getCardValue("9♠"))
 
-    console.assert(getCardValue("2♠") === 2, "Test case 1 failed");
-    console.assert(getCardValue("10♠") === 10, "Test case 2 failed");
-    console.assert(getCardValue("J♠") === 10, "Test case 3 failed");
-    console.assert(getCardValue("Q♠") === 10, "Test case 4 failed");
-    console.assert(getCardValue("K♠") === 10, "Test case 5 failed");
-    console.assert(getCardValue("A♠") === 11, "Test case 6 failed");
-    console.assert(getCardValue("5♠") === 5, "Test case 7 failed");
-    console.assert(getCardValue("9♠") === 9, "Test case 8 failed");
-    console.log("All test cases passed!");
+console.log(getCardValue("1♠"))
+
+
+module.exports = getCardValue
