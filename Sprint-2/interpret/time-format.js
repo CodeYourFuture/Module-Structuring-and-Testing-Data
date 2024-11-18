@@ -12,7 +12,7 @@ function formatTimeDisplay(seconds) {
     remainingSeconds
   )}`;
 }
-console.log(formatTimeDisplay(git 61))
+console.log(formatTimeDisplay(61))
 
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
