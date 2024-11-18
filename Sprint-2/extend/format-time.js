@@ -1,11 +1,17 @@
 // This is the latest solution to the problem from the prep.
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
+// we have to consider minutes and two eage cases that comes to my mind : 12 and 00
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
+  const minutes = time.slice(3,5)
+  if (hours === 0){
+    return `12:${minutes} am`
+  }else if (hours === 12){
+    return `12:${minutes} pm`
+  }else if(hours > 12) {
     return `${hours - 12}:00 pm`;
-  }
+  }else
   return `${time} am`;
 }
 
@@ -22,3 +28,6 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+
+console.log(formatAs12HourClock("00:00"));
+console.log(formatAs12HourClock("12:00"));
