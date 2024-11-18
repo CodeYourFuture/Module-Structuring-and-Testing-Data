@@ -8,3 +8,18 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function calculatePriceWithVAT(price) {
+    // Multiply the price by 1.2 to include VAT
+    const priceWithVAT = price * 1.2;
+  
+    // Return the result rounded to 2 decimal places
+    return +priceWithVAT.toFixed(2);
+  }
+  
+  // Example usage
+  console.log(calculatePriceWithVAT(50)); // Expected: 60.00
+  console.log(calculatePriceWithVAT(100)); // Expected: 120.00
+  console.log(calculatePriceWithVAT(0));   // Expected: 0.00
+  console.log(calculatePriceWithVAT(19.99)); // Expected: 23.99
+  
