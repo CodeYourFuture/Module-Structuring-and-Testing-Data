@@ -33,8 +33,8 @@ function formatAs12HourClock(time) {
   if (!/^\d{2}:\d{2}$/.test(time)) {
     throw new Error("Invalid time format. Use 'hh:mm' format.");
   }
-  const hours = Number(time.slice(0, 2));
-  const minutes = time.slice(3, 5);
+const [hours, minutes] = time.split(':').map(Number);
+
   
   let period = 'am'; 
   let formattedHours = hours;
