@@ -10,10 +10,10 @@
 // it returns the new price with VAT added on
 
 
-function addVAT(price) {
+function calculateVAT(price) {
     let newPrice = price * 1.2;
 
     return newPrice.toFixed(2);
 }
 
-console.log(`The new price with VAT is: £${addVAT(50)}`); 
+console.log(`The new price with VAT is: £${calculateVAT(50)}`); 

@@ -5,22 +5,24 @@
 
 // You should call this function a number of times to check it works for different inputs
 
-function toPounds(penceString){
-const penceStringWithoutTrailingP = penceString.substring(
-  0,
-  penceString.length - 1
-);
+// Function to convert pence (in string format) to pounds
+function toPounds(penceAmount) {
+  // Remove trailing 'p' from the string
+  const penceStringWithoutTrailingP = penceAmount.slice(0, -1);
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
-const pounds = paddedPenceNumberString.substring(
-  0,
-  paddedPenceNumberString.length - 2
-);
-const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  // Pad the pence number to ensure it has at least 3 digits
+  const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+
+  // Separate the pounds and pence from the padded string
+  const pounds = paddedPenceNumberString.slice(0, -2); // The first digits represent pounds
+  const pence = paddedPenceNumberString.slice(-2); // The last two digits represent pence
   
-  return pounds.toString() +'.' + pence.toString();
+  // Return the formatted pounds and pence
+  return `${pounds}.${pence}`;
 }
 
-console.log(`£${toPounds("9078p")}`);
+// Test cases with different inputs
+console.log(`£${toPounds("9078p")}`); // £90.78
+console.log(`£${toPounds("789p")}`);  // £07.89
+console.log(`£${toPounds("123p")}`);  // £01.23
+console.log(`£${toPounds("1000p")}`); // £10.00
