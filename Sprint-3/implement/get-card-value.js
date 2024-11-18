@@ -32,41 +32,18 @@
 
 //Answer:
 function getCardValue(card) {
-    // Extract the rank (everything except the last character)
-    const rank = card.slice(0, -1);
+    const rank = card.slice(0, -1); // Extract all except the last character
+    const validRanks = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2'];
 
-    // Handle number cards (2-10)
-    if (!isNaN(rank) && parseInt(rank) >= 2 && parseInt(rank) <= 10) {
-        return parseInt(rank);
+    if (!validRanks.includes(rank)) {
+        throw new Error("Invalid card rank");
     }
 
-    // Handle face cards (J, Q, K)
-    if (['J', 'Q', 'K'].includes(rank)) {
-        return 10;
-    }
+    if (rank === 'A') return 11;
+    if (['K', 'Q', 'J', '10'].includes(rank)) return 10;
 
-    // Handle Ace (A)
-    if (rank === 'A') {
-        return 11;
-    }
-
-    // Handle invalid cards
-    throw new Error("Invalid card rank.");
-}
-//Test Cases :
-console.assert(getCardValue("2♠") === 2, "Test failed for card: 2♠");
-console.assert(getCardValue("10♦") === 10, "Test failed for card: 10♦");
-console.assert(getCardValue("J♥") === 10, "Test failed for card: J♥");
-console.assert(getCardValue("Q♣") === 10, "Test failed for card: Q♣");
-console.assert(getCardValue("K♠") === 10, "Test failed for card: K♠");
-console.assert(getCardValue("A♦") === 11, "Test failed for card: A♦");
-
-try {
-    getCardValue("1♠"); // Invalid card
-    console.error("Test failed for invalid card: 1♠");
-} catch (e) {
-    console.assert(e.message === "Invalid card rank.", "Test failed for invalid card: 1♠");
+    return parseInt(rank, 10); // Convert numeric ranks to a number
 }
 
-console.log("All tests passed!");
+module.exports = getCardValue;
 
