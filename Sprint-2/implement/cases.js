@@ -13,3 +13,13 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function toUpperCaseSnake(inputString) {
+  const withUnderScores = inputString.replaceAll(" ", "_");
+  const upperCaseSnake = withUnderScores.toUpperCase();
+
+  return `${upperCaseSnake}`;
+}
+
+console.log(toUpperCaseSnake("Hello there"));
+console.log(toUpperCaseSnake("Lord of the rings"));
