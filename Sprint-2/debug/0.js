@@ -1,5 +1,5 @@
 // Predict and explain first...
-
+// The code will give an error because we are trying to nest console.log into another console.log
 function multiply(a, b) {
   console.log(a * b);
 }
