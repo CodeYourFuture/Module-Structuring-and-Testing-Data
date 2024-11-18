@@ -1,6 +1,6 @@
 const getAngleType = require('./getAngleType');
 
-describe('getAngleType', () => {
+
   test('should return "Right angle" for 90 degrees', () => {
     expect(getAngleType(90)).toBe('Right angle');
   });
@@ -20,4 +20,4 @@ describe('getAngleType', () => {
   test('should return "Reflex angle" for angles between 180 and 360 degrees', () => {
     expect(getAngleType(270)).toBe('Reflex angle');
   });
-});
+
