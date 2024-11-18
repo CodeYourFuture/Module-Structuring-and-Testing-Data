@@ -1,0 +1,12 @@
+{
+  "name": "sprint-3",
+  "version": "1.0.0",
+  "description": "In the `implement` directory you've got a number of functions you'll need to implement.\r For each function, you also have a number of different cases you'll need to check for your function.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
