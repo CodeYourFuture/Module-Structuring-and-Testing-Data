@@ -12,9 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-//line 4, line 5, line 10 so 2 unique function calls but 3 used in total
-
-//There are three function calls in total: two replaceAll calls on lines 4 and 5, and one Number call in each line (lines 4 and 5). This means two unique function calls, replaceAll and Number, each used twice.
+//5 function calls in total
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 //The error occurs on line 5. This happens because I needed to add a comma between the two arguments inside replaceAll, ensuring both the search value (",") and the replacement value ("") are properly specified.
