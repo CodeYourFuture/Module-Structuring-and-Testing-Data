@@ -13,3 +13,17 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function extract1decimal(x){
+    return Math.floor(x*10)/10
+}
+
+function bmi(height, weight){
+    let bmivalue = weight/(height*height)
+    return extract1decimal(bmivalue)
+}
+
+console.log(bmi(1.97, 97))
+console.log(bmi(1.90, 90))
+console.log(bmi(1.88, 90))  //25.46401086
+console.log(bmi(1.73, 70))  // Our result is more accurate. We didn't round the height*height number.
