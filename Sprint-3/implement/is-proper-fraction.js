@@ -1,7 +1,7 @@
 // You wil need to implement a function isProperFraction
 // You need to write assertions for your function to check it works in different cases
 
-// Terms:
+// Terms: 
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
 
@@ -32,3 +32,25 @@
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+function isProperFraction(numerator, denominator){
+    if(denominator === 0){
+
+        throw new Error("Denominator cannot be zero")
+    }
+        return numerator < denominator;
+}
+try{
+
+    isProperFraction(9,4)
+}catch(error){
+    console.log(error.message)
+}
+
+
+const  currentOutPut =  isProperFraction(3,6);
+const targetOutPut = true
+console.assert(currentOutPut === targetOutPut,  `currentOutPut:${currentOutPut},targetOutPut:${targetOutPut}`)
+
+const  currentOutPut2 =  isProperFraction(40,30);
+const targetOutPut2 = false
+console.assert(currentOutPut2 === targetOutPut2,  `currentOutPut2:${currentOutPut2},targetOutPut2:${targetOutPut2}`)
