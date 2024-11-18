@@ -19,11 +19,14 @@ function extract1decimal(x){
 }
 
 function bmi(height, weight){
+    if (height === 0) {
+        return Error;
+    }
     let bmivalue = weight/(height*height)
     return extract1decimal(bmivalue)
 }
 
-console.log(bmi(1.97, 97))
+console.log(bmi(1.97, 97), 24.9)
 console.log(bmi(1.90, 90))
 console.log(bmi(1.88, 90))  //25.46401086
 console.log(bmi(1.73, 70))  // Our result is more accurate. We didn't round the height*height number.
