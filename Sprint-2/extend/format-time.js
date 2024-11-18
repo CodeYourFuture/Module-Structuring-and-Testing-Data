@@ -30,7 +30,7 @@ console.assert(
 //The function doesn't handle minutes correctly.
 //Fixed code:
 function formatAs12HourClock(time) {
-  if (!/^\d{2}:\d{2}$/.test(time)) {
+  if (!/^([01]?\d|2[0-3]):([0-5]?\d)$/.test(time)) {
     throw new Error("Invalid time format. Use 'hh:mm' format.");
   }
 const [hours, minutes] = time.split(':').map(Number);
@@ -48,8 +48,14 @@ const [hours, minutes] = time.split(':').map(Number);
     formattedHours = hours - 12;
     period = 'pm';
   }
-  const formattedHoursString = formattedHours < 10 ? `0${formattedHours}` : `${formattedHours}`;
+  const formattedHoursString = formattedHours.toString().padStart(2, '0');
+  const formattedMinutesString = minutes.toString().padStart(2, '0');
 
-  return `${formattedHoursString}:${minutes} ${period}`;
+  return `${formattedHoursString}:${formattedMinutesString} ${period}`;
 }
 
+// Examples
+console.log(formatAs12HourClock("00:15")); // "12:15 am"
+console.log(formatAs12HourClock("12:30")); // "12:30 pm"
+console.log(formatAs12HourClock("23:45")); // "11:45 pm"
+console.log(formatAs12HourClock("27:99")); // Throws an error
