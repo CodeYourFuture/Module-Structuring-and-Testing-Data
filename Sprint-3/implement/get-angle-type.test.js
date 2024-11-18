@@ -21,3 +21,4 @@ describe('getAngleType', () => {
         expect(getAngleType(270)).toBe('Reflex angle');
     });
 });
+
