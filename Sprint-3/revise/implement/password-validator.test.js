@@ -14,3 +14,16 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+const previousPasswords = ["Pass123!", "Welcome2023*", "Admin!234"];
+
+function isValidPassword(password, previousPasswords) {
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!#$%.*&]).{5,}$/;
+    return regex.test(password) && !previousPasswords.includes(password);
+}
+
+const testPasswords = ["Pass123!","Pass1!","pass123","PASS123!","Pass",];
+
+testPasswords.forEach(password => {
+    console.log(`Password '${password}': ${isValidPassword(password, previousPasswords)}`);
+});
