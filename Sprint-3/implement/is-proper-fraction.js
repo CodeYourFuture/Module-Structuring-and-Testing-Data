@@ -48,3 +48,20 @@ const fraction4 = isProperFraction(-4, 7);
 const fraction5 = isProperFraction(3, 3);
 
 console.log(fraction1, fraction2, fraction3, fraction4, fraction5);
+
+
+// The example below is in case we need to throw an Error for Zero Denominator check
+// function isProperFraction(numerator, denominator) {
+//     if (denominator === 0) {
+//       throw new Error("Denominator cannot be zero.");
+//     }
+  
+//     return numerator < denominator;
+// }
+  
+// try {
+//     const fraction = isProperFraction(3, 0);
+//     console.log(fraction);
+// } catch (error) {
+//     console.error("Error:", error.message);
+// }
