@@ -1,8 +1,7 @@
 // Predict and explain first...
+// Prediction : num is defined with const. All of these console.log()s will return "3".
 
-const num = 103;
-
-function getLastDigit() {
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
