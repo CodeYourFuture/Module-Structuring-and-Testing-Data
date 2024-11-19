@@ -5,12 +5,12 @@
 function getCardValue(cardRank){
     if(cardRank ==="A"){
         return 11;
-    }else if(cardRank === "J" || cardRank === "K" || cardRank === "Q"){
+    }else if(cardRank === "J" || cardRank === "K" || cardRank === "Q" || cardRank === 10){
         return 10;
     }
 
     const numericalValue = parseInt(cardRank, 10);
-    if(numericalValue >= 2 && numericalValue <= 9){
+    if(numericalValue >= 2 && numericalValue <= 10){
         return numericalValue;
     }else {
         return 'Invalid card rank'
@@ -37,7 +37,7 @@ function testGetCardValue(){
 
 
 //testGetCardValue();
-console.log(getCardValue("A"))
+console.log(getCardValue("9"))
 
 // You need to write assertions for your function to check it works in different cases
 
