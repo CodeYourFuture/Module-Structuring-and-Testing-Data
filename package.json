@@ -1,6 +1,6 @@
 {
     "name": "Sprint 2 exercise",
-    "description": "bmi test",
+    "description": "Sprint2 test",
     "scripts": {
       "test": "jest"
     },
