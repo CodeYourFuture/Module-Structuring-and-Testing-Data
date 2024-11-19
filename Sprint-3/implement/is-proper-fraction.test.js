@@ -1,6 +1,8 @@
 // tests/isProperFraction.test.js
 
-const { isProperFraction } = require('../isProperFraction');  // Path to the function
+const  isProperFraction = require('./is-proper-fraction');
+
+ // Path to the function
 
 describe('isProperFraction', () => {
   test('should return true for a proper fraction', () => {
