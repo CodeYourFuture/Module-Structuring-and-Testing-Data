@@ -11,6 +11,17 @@
 // It's also true that b + c > a
 // It's also true that a + c > b
 
+function isValidTriangle(a,b,c){
+
+    if ( (a + b > c) && (a + c > b) && (b + c > a)){
+        return true;
+    }else if((a + b <= c) || (a + c <= b) || (b + c <= a)){
+        return false;
+    }
+}
+
+console.log(isValidTriangle(3,3,5));
+
 // In our function isValidTriangle which takes as parameters the lengths of three sides, we need to invalidate any triangle where the sum of any two sides is less than or equal to the length of the third side.
 // and we need to validate any triangle where the sum of any two sides is greater than the length of the third side.
 
