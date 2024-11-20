@@ -6,6 +6,19 @@
 // This function is commonly used for text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
+function rotateCharacter(character, shift){
+// Checks if the the input is a lowercase letter
+   if(character >= 'a'  && character <= 'z'){
+// Finds the position of the character in the alphabet (0-based index)
+    const charCode = character.charCodeAt(0) - 'a'.charCodeAt(0);
+
+    const newCharCode = (charCode + shift) % 26;
+
+    return String.fromCharCode(newCharCode + 'a'.charCodeAt(0));
+   }
+   return character;
+}
+
 // Acceptance criteria:
 
 // Given a character and a shift value,
