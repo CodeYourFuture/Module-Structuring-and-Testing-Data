@@ -6,11 +6,11 @@
 // Firstly, the decimalNumber variable has already been declared. Secondly, the function convertToPercentage has not been called correctly, instead console.log was used to log decimalNumber. By removing the const keyword and calling the function correctly allows the code to convert the given decimalNumber to a percentage.
 
 function convertToPercentage(decimalNumber) {
-  decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
 
-  return percentage;
+  let percentage = (decimalNumber * 100);
+
+  return `${percentage}%`;
 }
 
-let myPercentage = convertToPercentage()
+let myPercentage = convertToPercentage(0.6)
 console.log(myPercentage);
