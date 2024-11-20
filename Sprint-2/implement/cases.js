@@ -13,3 +13,11 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+// Below is the code to convert strings to capital letters and add underscores inbetween the words
+
+function upperCaseSnake(str) {
+  return str.toUpper().replaceAll(" ", "_");
+}
+
+console.log(upperCaseSnake("lord of the rings"));
