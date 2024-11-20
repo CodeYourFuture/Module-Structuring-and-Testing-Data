@@ -18,14 +18,20 @@ function formatTimeDisplay(seconds) {
 
 // Questions
 
-// a) When formatTimeDisplay is called how many times will pad be called? 3
+// a) When formatTimeDisplay is called how many times will pad be called? 
+  // first call of formatTimeDisplay without a parameter has 7 steps first set to undefined 
+  // then navigating to the steps the value change to NAN. Last steps return TypeError: num.toString(...).padStart is not a function
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-    // = 0
+    // undefined this value is from the remainingSeconds call
+    // remainingSeconds	undefined
+
 // c) What is the return value of pad is called for the first time?
-    // = 1
+    // = 1 remainingSeconds	value changed from undefined to 1
+    // remainingSeconds	1
+    
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
     // = 1, this is because remainingSeconds is calculated as seconds % 60, which in this case is 1
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
