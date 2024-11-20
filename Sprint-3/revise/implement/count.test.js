@@ -15,3 +15,24 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+function countChar(str, char) {
+    let count = 0;
+    let i = 0;
+
+    // Search for overlapping occurrences
+    while (i < str.length) {
+        // Find the character at position i
+        i = str.indexOf(char, i);
+        
+        if (i === -1) {  // If no occurrence is found, break the loop
+            break;
+        }
+
+        // If found, increment the count and move to the next position
+        count++;
+        i++;  // Move to the next index after the found character
+    }
+
+    return count;
+}
+console.log(countChar("aaaaa", "a"));  // Output: 5
