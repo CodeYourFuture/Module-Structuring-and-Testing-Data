@@ -24,6 +24,16 @@ test ("angle is exactly 90 degrees", function() {
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
 
+function getAngleType(degrees){
+  if (degrees < 90){
+    return ("Acute angle");
+  }
+  
+} 
+test ("angle < 90 degrees", function() {
+  expect(getAngleType(63)).toEqual("Acute angle");
+});
+
 // Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
