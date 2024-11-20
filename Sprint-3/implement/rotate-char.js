@@ -41,3 +41,35 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+
+function rotateCharacter(char, shift) {
+    // Check if the character is a lowercase letter
+    if (char >= 'a' && char <= 'z') {
+        let start = 'a'.charCodeAt(0); // ASCII code for 'a'
+        let offset = (char.charCodeAt(0) - start + shift) % 26;
+        return String.fromCharCode(start + (offset >= 0 ? offset : offset + 26));
+    }
+
+    // Check if the character is an uppercase letter
+    if (char >= 'A' && char <= 'Z') {
+        let start = 'A'.charCodeAt(0); // ASCII code for 'A'
+        let offset = (char.charCodeAt(0) - start + shift) % 26;
+        return String.fromCharCode(start + (offset >= 0 ? offset : offset + 26));
+    }
+
+    // If the character is not a letter, return it unchanged
+    return char;
+}
+
+// Test code
+if (require.main === module) {
+    console.log(rotateCharacter("a", 3) === 'd' ? "Pass" : "Fail"); // Expected output: "d"
+    console.log(rotateCharacter("z", 3) === 'c' ? "Pass" : "Fail"); // Expected output: "c" (wrap around)
+    console.log(rotateCharacter("A", 3) === 'D' ? "Pass" : "Fail"); // Expected output: "D"
+    console.log(rotateCharacter("F", 1) === 'G' ? "Pass" : "Fail"); // Expected output: "G"
+    console.log(rotateCharacter("7", 5) === '7' ? "Pass" : "Fail"); // Expected output: "7" (non-letter character)
+    console.log(rotateCharacter("y", 2) === 'a' ? "Pass" : "Fail"); // Expected output: "a" (wrap around)
+    console.log(rotateCharacter("Z", 3) === 'C' ? "Pass" : "Fail"); // Expected output: "C" (wrap around)
+}
+
