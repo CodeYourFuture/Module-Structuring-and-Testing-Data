@@ -29,3 +29,39 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+function getCardValue(card) {
+    // Extract the rank part of the card (the first part before the suit emoji)
+    const rank = card.slice(0, -1); 
+
+    // Handle Number Cards (2-10)
+    if (rank >= '2' && rank <= '9') {
+        return parseInt(rank); // Return the numeric value of the card
+    }
+
+    // Handle Face Cards (J, Q, K)
+    if (rank === '10' || rank === 'J' || rank === 'Q' || rank === 'K') {
+        return 10; // Face cards are worth 10 points
+    }
+
+    // Handle Ace (A)
+    if (rank === 'A') {
+        return 11; // Ace is worth 11 points by default
+    }
+
+    // Handle Invalid Cards
+    throw new Error('Invalid card rank.');
+}
+
+// Example assertions to test the function
+try {
+    console.assert(getCardValue("2♠") === 2, "Test failed for '2♠'");
+    console.assert(getCardValue("5♠") === 5, "Test failed for '5♠'");
+    console.assert(getCardValue("10♠") === 10, "Test failed for '10♠'");
+    console.assert(getCardValue("J♠") === 10, "Test failed for 'J♠'");
+    console.assert(getCardValue("Q♠") === 10, "Test failed for 'Q♠'");
+    console.assert(getCardValue("K♠") === 10, "Test failed for 'K♠'");
+    console.assert(getCardValue("A♠") === 11, "Test failed for 'A♠'");
+    console.log("All tests passed!");
+} catch (error) {
+    console.error(error.message);
+}
