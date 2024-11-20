@@ -25,7 +25,7 @@ console.log(result);
 // It calculates the total minutes in movieLength, excluding seconds that do not complete a full minute.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// It represent time, in my opinion better name for this variable is "time"
+// It represents the formatted time duration of the movie in HH:MM:SS format, in my opinion better name for this variable is "formattedTime"
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // This code will work for most positive values but it may not format correctly if movieLength is less than 60 or movieLength is exactly 3600 or a multiple of 3600
