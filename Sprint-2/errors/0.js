@@ -6,9 +6,7 @@
 //The error is cause by an already declared str variable. The problem is fixed by removing the let keyword.
 
 function capitalise(str) {
-   str = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
+   return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 
-let myCapString = capitalise("simphiwe");
-console.log(myCapString);
+console.log(capitalise("simphiwe"));
