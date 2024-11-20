@@ -13,6 +13,7 @@ function formatTimeDisplay(seconds) {
   )}`;
 }
 
+
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
 
