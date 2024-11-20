@@ -38,10 +38,30 @@ test ("angle < 90 degrees", function() {
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
 
+function getAngleType(degrees){
+  if (degrees > 90 && degrees < 180){
+    return ("Obtuse angle");
+  }
+  
+} 
+test ("angle is greater than 90 degrees and less than 180 degrees", function() {
+  expect(getAngleType(135)).toEqual("Obtuse angle");
+});
+
 // Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
 
+
+function getAngleType(degrees){
+  if (degrees === 180){
+    return ("Straight angle");
+  }
+  
+} 
+test ("angle is exactly 180 degrees", function() {
+  expect(getAngleType(180)).toEqual("Straight angle");
+});
 // Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
