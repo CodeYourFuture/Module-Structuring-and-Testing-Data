@@ -16,21 +16,30 @@
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
 // Answer:
-// countChar.js
+// countChar.test.js
 
-function countChar(str, char) {
-    let count = 0;
-  
-    // Loop through each character in the string
-    for (let i = 0; i < str.length; i++) {
-      // If the current character matches the one we're looking for, increase the count
-      if (str[i] === char) {
-        count++;
-      }
-    }
-  
-    return count;
-  }
-  
-  module.exports = countChar;
-  
+const countChar = require('./countChar');  // Import the function
+
+describe('countChar', () => {
+
+  // Scenario 1: Multiple Occurrences
+  test('counts overlapping occurrences', () => {
+    expect(countChar("aaaaa", "a")).toBe(5);  // 'a' appears 5 times
+  });
+
+  // Scenario 2: No Occurrences
+  test('returns 0 if character is not found', () => {
+    expect(countChar("hello world", "x")).toBe(0);  // 'x' does not exist
+  });
+
+  // Scenario 3: Single Occurrence
+  test('counts a single occurrence', () => {
+    expect(countChar("hello world", "o")).toBe(2);  // 'o' appears 2 times
+  });
+
+  // Scenario 4: Empty String
+  test('returns 0 for empty string', () => {
+    expect(countChar("", "a")).toBe(0);  // No characters to count
+  });
+
+});
