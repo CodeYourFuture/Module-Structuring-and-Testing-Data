@@ -1,3 +1,5 @@
+
+
 /* 
 Password Validation
 
@@ -41,5 +43,7 @@ const oldsPasswords = ["Alds.33","Hdsd@88"]
     return true
  }
 
-//  console.log(isValidPassword("Hdsd.98","oldsPasswords")) //Expected outpu : true
-//  console.log(isValidPassword("Hdsd@88","oldsPasswords")) // Expected outpu : false
+test("Write a function that should check if a password is validand returns a boolean",() => {
+    expect(isValidPassword("Hdsd.98","oldsPasswords")).toBe(true);
+    expect(isValidPassword("Hdsd@88","oldsPasswords")).toBe(false);
+})

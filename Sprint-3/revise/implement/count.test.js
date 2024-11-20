@@ -24,4 +24,7 @@ function countChar(str, character){
     }
     return count
 }
-console.log(countChar("dggdg","d"))
+
+test("implement a function countChar that counts the number of times a character occurs in a string",() => {
+  expect(countChar("dggdg","d")).toBe(2)
+})

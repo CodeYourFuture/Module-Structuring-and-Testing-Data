@@ -13,3 +13,6 @@ function isPrime(num){
  return true
 }
 console.log(isPrime(11))
+test("find function wich take 1 parameter and should check if the parameter is prime,and return boolean",() =>{
+  expect(isPrime(11)).toBe(true)
+})
