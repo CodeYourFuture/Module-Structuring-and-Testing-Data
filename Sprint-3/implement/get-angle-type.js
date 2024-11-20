@@ -40,3 +40,4 @@ function getAngleType(angle) {
     }
 }
 console.log(getAngleType(30));
+module.exports = getAngleType;
