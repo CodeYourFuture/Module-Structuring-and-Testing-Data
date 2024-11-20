@@ -34,18 +34,21 @@
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 
 function isProperFraction (numerator, denominator){
-  if ( numerator < denominator){
-     return ("true");
+  if ( numerator > 0 && denominator === 0 ){
+     return "Error";
   }
  else if (numerator > denominator){
-  return ("false");
+  return "false";
   
 }
-else if (numerator > 0 && denominator === 0){
-  return ("Error");
+else if (numerator < denominator){
+  return "true";
 }
-else (numerator <0 && denominator > 0){
-  return ("true")
+else if (numerator < 0 && denominator > 0){
+  return "true";
+}
+else if (numerator === denominator){
+  return "false";
 }
 }
 
@@ -53,5 +56,6 @@ test ("", function() {
   expect(isProperFraction(2,3)).toEqual("true");
   expect(isProperFraction(5,3)).toEqual("false");
   expect(isProperFraction(5,0)).toEqual("Error");
-  expect(isProperFraction(5,0)).toEqual("Error");
+  expect(isProperFraction(-4,7)).toEqual("true");
+  expect(isProperFraction(5,5)).toEqual("false");
 });
