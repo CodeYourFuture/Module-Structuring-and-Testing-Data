@@ -10,6 +10,16 @@
 // When the angle is exactly 90 degrees,
 // Then the function should return "Right angle"
 
+function getAngleType(degrees){
+  if (degrees === 90){
+    return ("Right angle");
+  }
+  
+}
+test ("angle is exactly 90 degrees", function() {
+  expect(getAngleType(90)).toEqual("Right angle");
+});
+
 // Identify Acute Angles:
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
