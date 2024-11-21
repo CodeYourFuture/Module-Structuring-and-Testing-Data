@@ -1,5 +1,5 @@
 // Import the function (you might need to adjust this depending on your file structure)
-const isProperFraction = require('./isProperFraction'); // Adjust path if necessary
+const isProperFraction = require('./is-proper-fraction'); // Adjust path if necessary
 
 describe('isProperFraction', () => {
   test('should return true for a proper fraction (2/3)', () => {

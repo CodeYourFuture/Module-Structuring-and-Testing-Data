@@ -1,5 +1,5 @@
 // getCardValue.test.js
-const { getCardValue } = require('./getCardValue'); // Adjust the path if needed
+const { getCardValue } = require('./get-card-value'); // Adjust the path if needed
 
 describe('getCardValue function', () => {
   test('should return correct value for number cards (2-9)', () => {
