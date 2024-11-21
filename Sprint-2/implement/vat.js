@@ -11,7 +11,7 @@
 
 function priceWithVat(price){
     let percentage = 1.2;
-    return `£${(price * percentage)}`; 
+    return `£${Number(price * percentage)}`; 
 }
 
-console.log(priceWithVat(90));
+console.log(priceWithVat(50));
