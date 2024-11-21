@@ -12,6 +12,61 @@ function formatTimeDisplay(seconds) {
     remainingSeconds
   )}`;
 }
+/* I have improve the time function according to mentor's feedback
+function pad(num) {
+  return num.toString().padStart(2, "0");
+}
+
+function validateTimeFormat(time) {
+  // Check if the input is in the format HH:MM:SS
+  const timePattern = /^([0-9]{1,2}):([0-9]{2}):([0-9]{2})$/;
+  const match = time.match(timePattern);
+
+  if (!match) {
+    return false; // Invalid format
+  }
+
+  // Extract hours, minutes, and seconds from the match
+  const hours = parseInt(match[1], 10);
+  const minutes = parseInt(match[2], 10);
+  const seconds = parseInt(match[3], 10);
+
+  // Validate if minutes and seconds are within valid range
+  if (minutes < 0 || minutes > 59 || seconds < 0 || seconds > 59) {
+    return false; // Invalid time value
+  }
+
+  return true; // Valid time format and values
+}
+
+function formatTimeDisplay(seconds) {
+  // Validate if the seconds argument is a positive integer
+  if (isNaN(seconds) || seconds < 0) {
+    return 'Invalid time input';
+  }
+
+  const remainingSeconds = seconds % 60; // Get the remaining seconds
+  const totalMinutes = Math.floor(seconds / 60); // Total minutes from the seconds
+  const remainingMinutes = totalMinutes % 60; // Get the remaining minutes after calculating total minutes
+  const totalHours = Math.floor(totalMinutes / 60); // Get total hours from the minutes
+
+  return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
+}
+
+// Example usage:
+console.log(formatTimeDisplay(3661)); // "01:01:01"
+console.log(formatTimeDisplay(59));   // "00:00:59"
+console.log(formatTimeDisplay(3600)); // "01:00:00"
+console.log(formatTimeDisplay(86400)); // "24:00:00"
+
+// Check if the time is valid (testing against "45:90")
+const time = "45:90";
+if (validateTimeFormat(time)) {
+  console.log(`The time "${time}" is valid.`);
+} else {
+  console.log(`The time "${time}" is invalid.`);
+}*/
+
 
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
