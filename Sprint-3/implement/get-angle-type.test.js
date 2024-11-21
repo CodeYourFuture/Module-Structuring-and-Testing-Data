@@ -1,5 +1,5 @@
 // angleUtils.test.js
-const getAngleType = require('./getAngleType');
+const getAngleType = require('./get-angle-type');
 
 describe('getAngleType', () => {
   it('should return "Acute angle" for angles less than 90', () => {
