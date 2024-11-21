@@ -46,7 +46,7 @@ function isValidTriangle(a, b, c) {
         return false;
     }
 }
-
+module.exports =  {isValidTriangle} ;
 // Test Cases
 function runTests() {
     console.log("Test 1: Valid Triangle (a = 3, b = 3, c = 3)");
