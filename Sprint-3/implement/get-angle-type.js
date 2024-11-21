@@ -23,5 +23,5 @@ console.log(AngleType.getAngleType(120));   // Output: Obtuse angle
 console.log(AngleType.getAngleType(180));   // Output: Straight angle
 console.log(AngleType.getAngleType(270));   // Output: Reflex angle
 console.log(AngleType.getAngleType(360));   // Output: Invalid angle
-
+console.log(AngleType.getAngleType(420));   //Invalid angle
 
