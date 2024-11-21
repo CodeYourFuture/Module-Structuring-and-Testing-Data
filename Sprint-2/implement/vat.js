@@ -17,3 +17,29 @@ function calculatePriceWithVAT(price) {
 console.log(calculatePriceWithVAT(50));
 console.log(calculatePriceWithVAT(80));
 console.log(calculatePriceWithVAT(10));
+
+/*I have improved my function according the mentor's feedback.
+
+// Function to calculate the price with VAT added
+// Now allows the user to input a custom VAT rate, instead of a fixed 20%
+
+function calculatePriceWithVAT(price, vatRate = 0.2) {
+    // Validate if price is a positive number by checking it directly
+    if (price <= 0 || price !== price) {  // price !== price is a simple way to check if it's NaN
+        return 'Invalid price'; // Return error message for invalid price
+    }
+
+    // Calculate the price with the custom VAT rate (default is 20%)
+    const priceWithVAT = price * (1 + vatRate); // Apply the custom VAT rate
+    return priceWithVAT;
+}
+
+// Test cases with the default VAT of 20% and custom VAT rates
+console.log(calculatePriceWithVAT(50)); // Default VAT 20% => 60
+console.log(calculatePriceWithVAT(80)); // Default VAT 20% => 96
+console.log(calculatePriceWithVAT(10)); // Default VAT 20% => 12
+
+// Custom VAT rates
+console.log(calculatePriceWithVAT(50, 0.15)); // Custom VAT 15% => 57.5
+console.log(calculatePriceWithVAT(100, 0.25)); // Custom VAT 25% => 125
+console.log(calculatePriceWithVAT(200, 0.18)); // Custom VAT 18% => 236*/
