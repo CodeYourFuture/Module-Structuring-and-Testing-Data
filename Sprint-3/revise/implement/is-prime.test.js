@@ -3,7 +3,7 @@
 // Then it should check if the num is prime
 
 //Answer:
-const isPrime = require('./isPrime');
+const isPrime = require('./is-prime');
 
 describe('isPrime function', () => {
     test('should return false for numbers less than or equal to 1', () => {
