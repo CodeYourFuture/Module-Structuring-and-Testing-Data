@@ -56,5 +56,13 @@ console.assert(
 );
 
 
-let myTime = formatAs12HourClock("12:25");
+const currentOutput6 = formatAs12HourClock("23:59");
+const targetOutput6 = "11:59 pm";
+console.assert(
+  currentOutput6 === targetOutput6,
+  `current output: ${currentOutput6}, target output: ${targetOutput6}`
+);
+
+
+let myTime = formatAs12HourClock("23:59");
 console.log(myTime);
