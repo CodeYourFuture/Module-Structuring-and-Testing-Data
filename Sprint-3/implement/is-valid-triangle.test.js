@@ -44,24 +44,17 @@ function isValidTriangle (a, b, c){
   if (a + b <= c || a + c <= b || b + c <= a){
   return "false";
 }
-  
+if (a + b > c || a + c > b || b + c > a){
+  return "true";
+}
 }
 
-// else if (numerator < denominator){
-//   return "true";
-// }
-// else if (numerator < 0 && denominator > 0){
-//   return "true";
-// }
-// else if (numerator === denominator){
-//   return "false";
-// }
-// }
+
+
 
 test ("", function() {
   expect(isValidTriangle(-5,0,0)).toEqual("false");
   expect(isValidTriangle(5,3,9)).toEqual("false");
-  // expect(isValidTriangle(5,0)).toEqual("Error");
-  // expect(isValidTriangle(-4,7)).toEqual("true");
-  // expect(isValidTriangle(5,5)).toEqual("false");
+  expect(isValidTriangle(4,5,3)).toEqual("true");
+
 });
