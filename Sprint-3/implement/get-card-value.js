@@ -37,7 +37,7 @@ function testGetCardValue(){
 
 
 //testGetCardValue();
-console.log(getCardValue("9"))
+console.log(getCardValue("A"));
 
 // You need to write assertions for your function to check it works in different cases
 
