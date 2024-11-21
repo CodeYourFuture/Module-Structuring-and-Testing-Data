@@ -10,7 +10,7 @@ function formatAs12HourClock(time) {
   }
 
   if(hours === 12){
-    return `${time} pm`       // Checks for (12:00 pm)
+    return `${time} pm`       // Checks for (12:01 pm)
   }
 
   if (hours > 12) {
