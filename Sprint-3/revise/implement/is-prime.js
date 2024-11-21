@@ -25,3 +25,4 @@ console.log(isPrime(15));  // Output: false
 console.log(isPrime(2));   // Output: true
 console.log(isPrime(1));   // Output: false
 
+module.exports=isPrime;
