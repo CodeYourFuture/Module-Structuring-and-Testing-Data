@@ -61,7 +61,7 @@ function rotateCharacter(char, shift) {
     // If the character is not a letter, return it unchanged
     return char;
 }
-
+module.exports = rotateCharacter;
 // Test code
 if (require.main === module) {
     console.log(rotateCharacter("a", 3) === 'd' ? "Pass" : "Fail"); // Expected output: "d"
