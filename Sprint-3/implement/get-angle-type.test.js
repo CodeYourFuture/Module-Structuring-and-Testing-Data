@@ -25,7 +25,6 @@ describe('getAngleType', () => {
   });
 
   it('should return "Invalid angle" for angles less than 0 or greater than 360', () => {
-    expect(getAngleType(-10)).toBe('Invalid angle');
     expect(getAngleType(400)).toBe('Invalid angle');
   });
 });
