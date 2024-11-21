@@ -13,3 +13,7 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+function toUpperSnakeCase(str){
+    return str.replace(/\s+/g, '_').toUpperCase();
+}
+console.log(toUpperSnakeCase("pieta pieta pumpkin eater"));
