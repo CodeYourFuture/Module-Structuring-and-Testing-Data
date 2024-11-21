@@ -36,7 +36,8 @@
 
 
 function isValidTriangle (a, b, c){
-  if ( a<= 0 && b<= 0 && c <= 0){
+  if ( a<= 0 || b<= 0 || c <= 0){  
+    // first i put && and it gave undefined, so I used | | which checks checks if at least one condition is true.It returns true if any of the conditions is true.It only returns false if all conditions are false.
      return "false";
   }
 }
@@ -56,7 +57,7 @@ function isValidTriangle (a, b, c){
 // }
 
 test ("", function() {
-  expect(isValidTriangle(2,3,0)).toEqual("false");
+  expect(isValidTriangle(-5,0,0)).toEqual("false");
   // expect(isProperFraction(5,3)).toEqual("false");
   // expect(isProperFraction(5,0)).toEqual("Error");
   // expect(isProperFraction(-4,7)).toEqual("true");
