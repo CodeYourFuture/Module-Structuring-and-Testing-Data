@@ -15,24 +15,29 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
-function countChar(str, char) {
-    let count = 0;
-    let i = 0;
 
-    // Search for overlapping occurrences
-    while (i < str.length) {
-        // Find the character at position i
-        i = str.indexOf(char, i);
-        
-        if (i === -1) {  // If no occurrence is found, break the loop
-            break;
-        }
+const countChar = require('./count');  // Import the function
 
-        // If found, increment the count and move to the next position
-        count++;
-        i++;  // Move to the next index after the found character
-    }
+describe('countChar', () => {
 
-    return count;
-}
-console.log(countChar("aaaaa", "a"));  // Output: 5
+  // Scenario 1: Multiple Occurrences
+  test('counts overlapping occurrences', () => {
+    expect(countChar("aaaaa", "a")).toBe(5);  // 'a' appears 5 times
+  });
+
+  // Scenario 2: No Occurrences
+  test('returns 0 if character is not found', () => {
+    expect(countChar("hello world", "x")).toBe(0);  // 'x' does not exist
+  });
+
+  // Scenario 3: Single Occurrence
+  test('counts a single occurrence', () => {
+    expect(countChar("hello world", "o")).toBe(2);  // 'o' appears 2 times
+  });
+
+  // Scenario 4: Empty String
+  test('returns 0 for empty string', () => {
+    expect(countChar("", "a")).toBe(0);  // No characters to count
+  });
+
+});
