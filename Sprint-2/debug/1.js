@@ -1,5 +1,5 @@
 // Predict and explain first...
-
+// the function will not run because the return statement end as soon as the code reach to it but the console.log will run
 function sum(a, b) {
   return;
   a + b;
