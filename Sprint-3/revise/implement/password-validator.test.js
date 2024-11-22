@@ -14,3 +14,38 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+// password-validator.test.js
+const passwordValidator = require("./password-validator");
+
+describe("Password Validator Tests", () => {
+  test("should return false for a password shorter than 5 characters", () => {
+    expect(passwordValidator("1234")).toBe(false);
+  });
+
+  test("should return false for a password with no uppercase letter", () => {
+    expect(passwordValidator("password1$")).toBe(false);
+  });
+
+  test("should return false for a password with no lowercase letter", () => {
+    expect(passwordValidator("PASSWORD1$")).toBe(false);
+  });
+
+  test("should return false for a password with no number", () => {
+    expect(passwordValidator("Password$")).toBe(false);
+  });
+
+  test("should return false for a password with no special character", () => {
+    expect(passwordValidator("Password1")).toBe(false);
+  });
+
+  test("should return true for a valid password and add it to the password list", () => {
+    expect(passwordValidator("Sajad1989$")).toBe(true);
+    // Test that the password was added to the list
+    expect(passwordValidator("Sajad1989$")).toBe(false); // Should fail because it's already used
+  });
+
+  test("should return false for a password that has been used previously", () => {
+    passwordValidator("NewPass1$"); // Add this password
+    expect(passwordValidator("NewPass1$")).toBe(false); // Should fail because it's already used
+  });
+});
