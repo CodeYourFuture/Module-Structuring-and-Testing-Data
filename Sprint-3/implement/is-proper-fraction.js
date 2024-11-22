@@ -35,7 +35,7 @@
 
 function isProperFraction(input) {
 
-    input - input.toString();
+    input = input.toString();
 
     let whole = input.split("/");
 
