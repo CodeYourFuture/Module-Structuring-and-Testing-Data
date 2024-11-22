@@ -43,3 +43,5 @@ function isProperFraction(Numerator, Denominator ){
     }
     
 }
+
+module.exports = isProperFraction;
