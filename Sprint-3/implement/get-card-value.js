@@ -1,5 +1,9 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
+const { error } = require("console");
+const { get } = require("https");
+const { number } = require("yargs");
+
 // You will need to implement a function getCardValue
 
 // You need to write assertions for your function to check it works in different cases
@@ -29,3 +33,32 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(input) {
+
+    let value = input.slice(0, -1);
+    let result = 0;
+    //instead of using typeof use !isNaN to check for numbers
+    if (!isNaN(Number(value)) && Number(value) >= 2 && !isNaN(Number(value)) && Number(value) <= 10) {
+        result = Number(value);
+    }
+    else if (value === "J" || value === "Q" || value === "K") {
+        result = 10;
+    }
+    else if (value === "A") {
+        result = 11;
+    }
+    else {
+        throw new Error("Invalid card rank.");
+    }
+    return result;
+}
+
+console.log(getCardValue("5♠"));  // 5
+console.log(getCardValue("J♦"));  // 10
+console.log(getCardValue("A♣"));  // 11
+console.log(getCardValue("Q♠"));  // 10
+console.log(getCardValue("Z♠"));  // This should help debug.
+
+
+module.exports = getCardValue;
