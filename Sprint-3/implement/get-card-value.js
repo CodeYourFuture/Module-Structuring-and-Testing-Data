@@ -29,3 +29,35 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+
+function getCardValue(str){
+//second criteria
+if(str > 2 && str < 9){
+    return Number(str)
+}//third criteria
+if( str==="10" || str==="J" || str==="Q" || str==="K"){
+    return Number("10")
+}//fourth criteria
+if(str = "A"){
+    return Number("11")
+}
+}
+
+//test2
+const str2 = "3";
+const output2 = getCardValue(str2);
+const expectedOutput2 = 3;
+console.assert( output2 === expectedOutput2, "expecting number 3") //passed
+
+//test3
+const str3 = "10";
+const output3 = getCardValue(str3);
+const expectedOutput3 = 10;
+console.assert( output3===expectedOutput3, "expecting 10") //passed
+
+//test4
+const str4 = "A";
+const output4 = getCardValue(str4);
+const expectedOutput4 = 11
+console.assert(output4 === expectedOutput4 , "expecting 11")

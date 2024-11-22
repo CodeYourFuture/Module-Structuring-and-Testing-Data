@@ -32,3 +32,52 @@
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+function isProperFraction(numerator, denominator) {
+    if(numerator < denominator  ){
+        return true
+    }else if(numerator > denominator ){
+        return false
+    }else if(numerator > 0 && denominator == 0){
+        return "Error (Denominator cannot be zero)"
+    } else if(numerator < 0 && denominator > 0){
+        return true
+    } else if( numerator === denominator ){
+        return false
+    }
+}
+
+//test1
+const numerator1 = 2;
+const denominator1 = 3;
+const output1 = isProperFraction(numerator1, denominator1);
+const expectedOutput1 = true;
+console.assert( output1 === expectedOutput1, "expecting true") //passed
+
+//test2
+const numerator2 = 3;
+const denominator2 = 2;
+const output2 = isProperFraction(numerator2, denominator2);
+const expectedOutput2 = false;
+console.assert(output2 === expectedOutput2, "expecting false" ) //passed
+
+//test3
+const numerator3 = 10;
+const denominator3 = 0;
+const output3 = isProperFraction(numerator3, denominator3);
+const expectedOutput3 = "Error (Denominator cannot be zero)"
+console.assert( output3 === expectedOutput3, "expecting : Error (Denominator cannot be zero)") //failed
+
+//test4
+const numerator4 = -3;
+const denominator4 = 4;
+const output4 = isProperFraction(numerator4, denominator4);
+const expectedOutput4 = true;
+console.assert( numerator4 === denominator4, "expecting: true") //failed
+
+//test5
+const numerator5 = 5;
+const denominator5 = 5;
+const output5 = isProperFraction(numerator5, denominator5);
+const expectedOutput5 = false;
+console.assert( output5===expectedOutput5,"expecting false") //passed
