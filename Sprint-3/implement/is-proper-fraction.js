@@ -58,3 +58,5 @@ function isProperFraction(input) {
 console.log(isProperFraction("2/7"));
 console.log(isProperFraction("8/3"));
 //console.log(isProperFraction("8/0"));
+
+module.exports = isProperFraction;
