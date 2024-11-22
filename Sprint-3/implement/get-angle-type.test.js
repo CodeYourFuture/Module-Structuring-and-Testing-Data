@@ -33,26 +33,32 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+
 function isValidTriangle (a, b, c){
-  if ( a<= 0 || b<= 0 || c <= 0){  
-    // first i put && and it gave undefined, so I used | | which checks checks if at least one condition is true.It returns true if any of the conditions is true.It only returns false if all conditions are false.
+  if ( a<= 0 && b<= 0 && c <= 0){
      return "false";
   }
-
-  if (a + b <= c || a + c <= b || b + c <= a){
-  return "false";
 }
-if (a + b > c || a + c > b || b + c > a){
-  return "true";
-}
-}
-
-
-
+//  else if (numerator > denominator){
+//   return "false";
+  
+// }
+// else if (numerator < denominator){
+//   return "true";
+// }
+// else if (numerator < 0 && denominator > 0){
+//   return "true";
+// }
+// else if (numerator === denominator){
+//   return "false";
+// }
+// }
 
 test ("", function() {
-  expect(isValidTriangle(-5,0,0)).toEqual("false");
-  expect(isValidTriangle(5,3,9)).toEqual("false");
-  expect(isValidTriangle(4,5,3)).toEqual("true");
-
+  expect(isValidTriangle(2,3,0)).toEqual("false");
+  // expect(isProperFraction(5,3)).toEqual("false");
+  // expect(isProperFraction(5,0)).toEqual("Error");
+  // expect(isProperFraction(-4,7)).toEqual("true");
+  // expect(isProperFraction(5,5)).toEqual("false");
 });
