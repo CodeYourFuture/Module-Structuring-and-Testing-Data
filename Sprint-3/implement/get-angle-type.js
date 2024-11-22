@@ -36,7 +36,7 @@ function getAngleType(angle) {
     } else if (angle < 90) {
         return "Acute angle";
         // to get the obtuse angle
-    } else if (angle > 90 && angle < 180) {
+    } else if (90 < angle < 180) {
         return "Obtuse angle";
         // to get the stright line, or angle
     } else if (angle === 180) {
@@ -50,7 +50,7 @@ function getAngleType(angle) {
     }
 }
 
-
+module.exports = getAngleType;
 
 
 
