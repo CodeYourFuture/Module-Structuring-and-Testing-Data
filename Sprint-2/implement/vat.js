@@ -9,5 +9,5 @@
 // When I call this function with a number
 // it returns the new price with VAT added on
 
-const totalPrice=(price)=>price*1.2
+const totalPrice=(priceInPound)=>priceInPound*1.2
 console.log(totalPrice(50))
