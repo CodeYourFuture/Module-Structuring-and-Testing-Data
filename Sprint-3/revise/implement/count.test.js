@@ -29,10 +29,10 @@ function countChar(str, char){
 
 //console.log(countChar("hello","l"))
 
-test('expecting count to be 2', () => {
+test('expecting count of `l` in hello to be 2', () => {
     expect(countChar("hello", "l")).toBe(2)
 }) //passed
 
-test('expecting count to be 0', () => {
+test('expecting count of `a` in hello to be 0', () => {
     expect(countChar("hello", "a")).toBe(0)
 }) //passed
