@@ -11,17 +11,14 @@ function isPrime(num) {
 module.exports = isPrime;
 
 //Feedback 
-//PASS  ./isPrime.test.js
- // isPrime
-   // ✓ returns false for numbers less than 2 (x ms)
-   // ✓ returns true for small prime numbers (x ms)
-    //✓ returns false for small non-prime numbers (x ms)
-    //✓ returns true for larger prime numbers (x ms)
-   // ✓ returns false for larger non-prime numbers (x ms)
+ //PASS  ./is-prime.test.js
+  //isPrime
+   // √ should return false for numbers less than or equal to 1 (4 ms)
+    //√ should return true for prime numbers (2 ms)
+    //√ should return false for non-prime numbers (3 ms)
 
 //Test Suites: 1 passed, 1 total
-//Tests:       5 passed, 5 total
+//Tests:       3 passed, 3 total
 //Snapshots:   0 total
-//Time:        X s
-
-
+//Time:        0.748 s, estimated 2 s
+//Ran all test suites matching /is-prime.test.js/i.
