@@ -10,7 +10,7 @@ function convertToPercentage(decimalNumber) {
   return percentage;
 }
 
-console.log(decimalNumber);
+console.log(convertToPercentage(9.6));
 
 /*
 Syntax error because decimalNumber is redecalred, and the second one is accessing the decimalNuber out of the scope while logging.
