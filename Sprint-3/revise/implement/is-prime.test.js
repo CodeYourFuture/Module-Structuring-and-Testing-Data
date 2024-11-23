@@ -1,27 +1,23 @@
-function isPrime(num) {
-    if (num <= 1) return false;
-    
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) return false;
-    }
-    
-    return true;
-}
+const isPrime = require('./is-prime');
 
-module.exports = isPrime;
+describe('isPrime', () => {
+  test('should return false for numbers less than or equal to 1', () => {
+    expect(isPrime(0)).toBe(false);
+    expect(isPrime(1)).toBe(false);
+    expect(isPrime(-5)).toBe(false);
+  });
 
-//Feedback 
-//PASS  ./isPrime.test.js
- // isPrime
-   // ✓ returns false for numbers less than 2 (x ms)
-   // ✓ returns true for small prime numbers (x ms)
-    //✓ returns false for small non-prime numbers (x ms)
-    //✓ returns true for larger prime numbers (x ms)
-   // ✓ returns false for larger non-prime numbers (x ms)
+  test('should return true for prime numbers', () => {
+    expect(isPrime(2)).toBe(true); // Smallest prime number
+    expect(isPrime(3)).toBe(true);
+    expect(isPrime(17)).toBe(true);
+    expect(isPrime(97)).toBe(true);
+  });
 
-//Test Suites: 1 passed, 1 total
-//Tests:       5 passed, 5 total
-//Snapshots:   0 total
-//Time:        X s
-
-
+  test('should return false for non-prime numbers', () => {
+    expect(isPrime(4)).toBe(false);
+    expect(isPrime(9)).toBe(false);
+    expect(isPrime(100)).toBe(false);
+    expect(isPrime(1_000_000)).toBe(false);
+  });
+});
