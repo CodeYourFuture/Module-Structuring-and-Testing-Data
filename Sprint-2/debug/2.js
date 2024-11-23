@@ -2,8 +2,8 @@
 
 const num = 103;
 
-function getLastDigit(num) {
-  return num.toString().slice(-1);
+function getLastDigit(para) {
+  return para.toString().slice(-1);
 }
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
