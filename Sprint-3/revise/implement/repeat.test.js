@@ -1,12 +1,41 @@
-function repeat(str, count) {
-    if (count < 0 || !Number.isInteger(count)) {
-        throw new Error('Count must be a non-negative integer');
-    }
+const isValidPassword = require('./repeat'); // Adjust the path as needed
 
-    if (count === 0) {
-        return '';
-    }
+describe('isValidPassword', () => {
+  // Sample list of previous passwords
+  const previousPasswords = ["password123", "abc123", "welcome1"];
 
-    return str.repeat(count);
-}
+  test('returns false if the password is less than 5 characters long', () => {
+    expect(isValidPassword('1234', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password does not contain an uppercase letter', () => {
+    expect(isValidPassword('password1!', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password does not contain a lowercase letter', () => {
+    expect(isValidPassword('PASSWORD1!', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password does not contain a number', () => {
+    expect(isValidPassword('Password!', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password does not contain a special character', () => {
+    expect(isValidPassword('Password1', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password is in the list of previous passwords', () => {
+    expect(isValidPassword('password123', previousPasswords)).toBe(false);
+    expect(isValidPassword('abc123', previousPasswords)).toBe(false);
+  });
+
+  test('returns true for a valid password', () => {
+    expect(isValidPassword('Password1!', previousPasswords)).toBe(true);
+  });
+
+  test('returns false for a valid password format but already used', () => {
+    expect(isValidPassword('welcome1', previousPasswords)).toBe(false);
+  });
+});
+
 
