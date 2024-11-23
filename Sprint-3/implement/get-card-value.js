@@ -59,7 +59,6 @@ console.assert(getCardValue("2♦") === 2, "Test case 7 failed");
 console.assert(getCardValue("3♥") === 3, "Test case 8 failed");
 
 // Invalid card test case
-// Invalid card test case
 try {
   getCardValue("Z♠");
   console.log("Test case 9 failed: No error thrown for invalid card");
