@@ -1,31 +1,55 @@
-// This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
+function getCardValue(card) {
+    const rank = card.slice(0, -1); 
 
-// You will need to implement a function getCardValue
+    switch (rank) {
+        case "A":
+            return 11; 
+        case "K":
+        case "Q":
+        case "J":
+        case "10":
+            return 10; 
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+        case "9":
+            return parseInt(rank);
+        default:
+            throw new Error("Invalid card rank");
+    }
+}
 
-// You need to write assertions for your function to check it works in different cases
+// Test cases for different scenarios
+try {
+    console.assert(getCardValue("A♠") === 11, "Ace should be worth 11 points");
+    console.assert(getCardValue("K♣") === 10, "King should be worth 10 points");
+    console.assert(getCardValue("Q♦") === 10, "Queen should be worth 10 points");
+    console.assert(getCardValue("J♥") === 10, "Jack should be worth 10 points");
+    console.assert(getCardValue("10♠") === 10, "10 should be worth 10 points");
+    console.assert(getCardValue("9♣") === 9, "9 should be worth 9 points");
+    console.assert(getCardValue("5♦") === 5, "5 should be worth 5 points");
 
-// Acceptance criteria:
+    // Testing invalid card rank
+    try {
+        getCardValue("1♠");
+        console.assert(false, "Expected Error for invalid rank '1'");
+    } catch (e) {
+        console.assert(e.message === "Invalid card rank", "Exception message should be 'Invalid card rank'");
+    }
 
-// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
-// When the function getCardValue is called with this card string as input,
-// Then it should return the numerical card value
+    try {
+        getCardValue("Z♦");
+        console.assert(false, "Expected Error for invalid rank 'Z'");
+    } catch (e) {
+        console.assert(e.message === "Invalid card rank", "Exception message should be 'Invalid card rank'");
+    }
 
-// Handle Number Cards (2-10):
-// Given a card with a rank between "2" and "9",
-// When the function is called with such a card,
-// Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
+    console.log("All tests passed!");
+} catch (e) {
+    console.error("Test failed:", e.message);
+}
 
-// Handle Face Cards (J, Q, K):
-// Given a card with a rank of "10," "J," "Q," or "K",
-// When the function is called with such a card,
-// Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-
-// Handle Ace (A):
-// Given a card with a rank of "A",
-// When the function is called with an Ace,
-// Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
-
-// Handle Invalid Cards:
-// Given a card with an invalid rank (neither a number nor a recognized face card),
-// When the function is called with such a card,
-// Then it should throw an error indicating "Invalid card rank."

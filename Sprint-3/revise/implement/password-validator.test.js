@@ -1,16 +1,44 @@
-/* 
-Password Validation
+const isValidPassword = require('./password-validator'); // Adjust the path as needed
 
-Write a program that should check if a password is valid
-and returns a boolean
+describe('isValidPassword', () => {
+  // Sample list of previous passwords
+  const previousPasswords = ["password123", "abc123", "welcome1"];
 
-To be valid, a password must:
-- Have at least 5 characters.
-- Have at least one English uppercase letter (A-Z)
-- Have at least one English lowercase letter (a-z)
-- Have at least one number (0-9)
-- Have at least one non-alphanumeric symbol ("!", "#", "$", "%", ".", "*", "&")
-- Must not be any previous password in the passwords array. 
+  test('returns false if the password is less than 5 characters long', () => {
+    expect(isValidPassword('1234', previousPasswords)).toBe(false);
+  });
 
-You must breakdown this problem in order to solve it. Find one test case first and get that working
-*/
+  test('returns false if the password does not contain an uppercase letter', () => {
+    expect(isValidPassword('password1!', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password does not contain a lowercase letter', () => {
+    expect(isValidPassword('PASSWORD1!', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password does not contain a number', () => {
+    expect(isValidPassword('Password!', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password does not contain a special character', () => {
+    expect(isValidPassword('Password1', previousPasswords)).toBe(false);
+  });
+
+  test('returns false if the password is in the list of previous passwords', () => {
+    expect(isValidPassword('password123', previousPasswords)).toBe(false);
+    expect(isValidPassword('abc123', previousPasswords)).toBe(false);
+  });
+
+  test('returns true for a valid password', () => {
+    expect(isValidPassword('Password1!', previousPasswords)).toBe(true);
+  });
+
+  test('returns false for a valid password format but already used', () => {
+    expect(isValidPassword('welcome1', previousPasswords)).toBe(false);
+  });
+});
+
+
+
+
+
