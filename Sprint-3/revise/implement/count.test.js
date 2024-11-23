@@ -1,14 +1,29 @@
-function countChar(str, char) {
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === char) {
-            count++;
-        }
-    }
-    return count;
-}
+const countChar = require('./count'); // Adjust the path as needed
 
-// Testing the function
-console.log(countChar("aaaaa", "a")); // Scenario: Multiple Occurrences, Output: 5
-console.log(countChar("hello world", "z")); // Scenario: No Occurrences, Output: 0
+describe('countChar', () => {
+  test('counts multiple occurrences of a character', () => {
+    expect(countChar("aaaaa", "a")).toBe(5);
+  });
+
+  test('returns 0 when the character is not present', () => {
+    expect(countChar("hello world", "z")).toBe(0);
+  });
+
+  test('handles empty strings', () => {
+    expect(countChar("", "a")).toBe(0);
+  });
+
+  test('is case-sensitive by default', () => {
+    expect(countChar("Hello", "h")).toBe(0); // Lowercase 'h' doesn't match uppercase 'H'
+  });
+
+  test('works with special characters', () => {
+    expect(countChar("hello! world!", "!")).toBe(2);
+  });
+
+  test('counts spaces as valid characters', () => {
+    expect(countChar("a b c", " ")).toBe(2);
+  });
+});
+
 
