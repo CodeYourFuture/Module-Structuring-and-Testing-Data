@@ -15,11 +15,11 @@
 // It should return their Body Mass Index to 1 decimal place
 
 
-function bmi(weight,height){
-if(weight<=0||weight>635||height<=0||height>3||!Number(weight)||!Number(height))
+function bmi(weightKg,heightM){
+if(weightKg<=0||weightKg>635||heightM<=0||heightM>3||!Number(weightKg)||!Number(heightM))
     return 'Please insert correct weight and height.';
 
- const bmi=weight/(height**2);
+ const bmi=weightKg/(heightM**2);
  return `Your body mass index=${bmi.toFixed(1)}`;
 
 
