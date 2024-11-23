@@ -1,5 +1,5 @@
 // getOrdinalNumber.test.js
-const getOrdinalNumber = require('./getOrdinalNumber');
+const getOrdinalNumber = require('./get-ordinal-number');
 
 describe("getOrdinalNumber", () => {
     test("returns correct suffix for 1st, 2nd, 3rd, and other basic cases", () => {
