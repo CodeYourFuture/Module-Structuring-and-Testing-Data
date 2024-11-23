@@ -18,10 +18,10 @@
 function bmi(weight,height){
 if(weight<=0||weight>635||height<=0||height>3||!Number(weight)||!Number(height))
     return 'Please insert correct weight and height.';
-else{
-    const bmi=weight/(height**2);
-    return `Your body mass index=${bmi.toFixed(1)}`;
 
-}
+ const bmi=weight/(height**2);
+ return `Your body mass index=${bmi.toFixed(1)}`;
+
+
 }
 console.log(bmi(55,1.68));
