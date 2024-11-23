@@ -15,7 +15,7 @@
 // Use the string documentation to help you find a solution
 
 function snakeCase(str) {
-    str = str.toUpperCase().replace(/[\s0-9]+/g, "_");
+    str = str.toUpperCase().replace(/\s+/g, "_");
     return str;
 }
 
