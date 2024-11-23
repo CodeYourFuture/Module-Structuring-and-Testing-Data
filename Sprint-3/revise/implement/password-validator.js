@@ -1,4 +1,3 @@
-
 function isValidPassword(password, previousPasswords) {
     // 1. Check length
     if (password.length < 5) {
@@ -35,3 +34,4 @@ function isValidPassword(password, previousPasswords) {
 
 // Sample list of previous passwords
 const previousPasswords = ["password123", "abc123", "welcome1"];
+module.exports = isValidPassword;
