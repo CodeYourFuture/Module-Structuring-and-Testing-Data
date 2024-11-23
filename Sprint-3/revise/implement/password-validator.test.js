@@ -38,7 +38,7 @@ function isValidPassword(password, previousPasswords) {
 const previousPasswords = ["password123", "abc123", "welcome1"];
 
 // Test cases
-console.log(isValidPassword("abc123!", previousPasswords));  // true
+console.log(isValidPassword("abc123!", previousPasswords));  // false
 console.log(isValidPassword("abc123", previousPasswords));   // false 
 console.log(isValidPassword("ABC123!", previousPasswords));  // false 
 console.log(isValidPassword("password123", previousPasswords)); // false 
