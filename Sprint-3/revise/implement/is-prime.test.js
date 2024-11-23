@@ -4,22 +4,30 @@
 
 function isPrime(num){
     if(num < 2){
-        return `${num} is not a prime number`
+        return false
     }
     for (let i = 2; i < num ; i++){
         if (num % i === 0){
-            return `${num} is not a prime number`
+            return false
         }
     }
-    return `${num} is a prime number`
+    return true
 }
 
 
-
 test('expecting 17 to be a prime number', () => {
-    expect(isPrime(17)).toBe(`17 is a prime number`)
+    expect(isPrime(17)).toBe(true)
 }) //passed
 
 test('expecting 3 to be a prime number', () => {
-    expect(isPrime(3)).toBe(`3 is a prime number`)
+    expect(isPrime(3)).toBe(true)
 }) //passed
+
+test('expecting 220 to be false', () =>{
+    expect(isPrime(220)).toBe(false)
+}) //passed
+
+test.each([[7,true],[12,false],[17,true], [122,false]])("%p isPrime %p",(input,expectedResult)  =>{
+    console.log(input,expectedResult)
+    expect(isPrime(input)).toBe(expectedResult)
+ }) //passed
