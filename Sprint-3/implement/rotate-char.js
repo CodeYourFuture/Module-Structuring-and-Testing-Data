@@ -3,6 +3,44 @@
 // it rotates the character by the specified shift value within the alphabet,
 // considering wrapping around if necessary. Non-letter characters are returned unchanged.
 
+function rotateCharacter(character, shiftValue) {
+    // 65 - 91
+    // 95 - 121
+    let currentValue = character.charCodeAt(0);
+    let newVal = 0;
+    if (currentValue >= 65 && currentValue <= 90) {
+        //Uppercase method
+        newVal = currentValue + shiftValue;
+
+        if (newVal <= 90) {
+            return String.fromCharCode(newVal);
+        }
+        else if (newVal > 90) {
+            newVal = newVal - 90 + 64;
+            return String.fromCharCode(newVal);
+        }
+
+    }
+
+    else if (currentValue >= 97 && currentValue <= 122) {
+        //lowercase method
+        newVal = currentValue + shiftValue;
+
+        if (newVal <= 122) {
+            return String.fromCharCode(newVal);
+        }
+        else if (newVal > 122) {
+            newVal = newVal - 122 + 96;
+            return String.fromCharCode(newVal);
+        }
+    }
+    else {
+        return character;
+    }
+
+}
+
+
 // This function is commonly used for text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
