@@ -1,5 +1,5 @@
 
-const getCardValue = require("./get-card-value");
+const getCardValue = require("./get-card-value.js");
 const currentOutput = getCardValue("5♠");
 const targetOutput = 5;
 
@@ -25,7 +25,7 @@ const currentOutput4 = getCardValue("Q♦");
 const targetOutput4 = 10;
 
 test("This will be used to check if all cases are accomodated for when looking at a deck of cards", () => {
-    expect(currentOutput4).toEqual(targetOutput3);
+    expect(currentOutput4).toEqual(targetOutput4);
 });
 
 const currentOutput5 = getCardValue("J♦");
@@ -50,13 +50,5 @@ test("This will be used to check if all cases are accomodated for when looking a
 
 
 test("This will be used to check if all cases are accomodated for when looking at a deck of cards", () => {
-    expect(() => getCardValue("Z♣")).toThrowError(new Error("Invalid card rank."));
-
-    // try {
-    //     getCardValue("Z♣");
-    // }
-    // catch (error) {
-    //     console.log(error);
-    //     expect(error.message).toEqual("Invalid card rank.");
-    // }
+    expect(() => getCardValue("Z♣")).toThrow("Invalid card rank.");
 });

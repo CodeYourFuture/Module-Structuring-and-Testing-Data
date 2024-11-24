@@ -47,8 +47,8 @@ function isValidTriangle(a, b, c) {
     }
 }
 
-console.log(isValidTriangle(3, 3, 3));
-console.log(isValidTriangle(2, 7, 3));
-console.log(isValidTriangle(3, 4, 5));
+// console.log(isValidTriangle(3, 3, 3));
+// console.log(isValidTriangle(2, 7, 3));
+// console.log(isValidTriangle(3, 4, 5));
 
 module.exports = isValidTriangle;

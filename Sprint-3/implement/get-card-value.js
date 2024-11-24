@@ -58,7 +58,7 @@ console.log(getCardValue("5♠"));  // 5
 console.log(getCardValue("J♦"));  // 10
 console.log(getCardValue("A♣"));  // 11
 console.log(getCardValue("Q♠"));  // 10
-console.log(getCardValue("Z♠"));  // This should help debug.
+// console.log(getCardValue("Z♠"));  // This should help debug.
 
 
 module.exports = getCardValue;
