@@ -4,19 +4,23 @@
 // considering wrapping around if necessary. Non-letter characters are returned unchanged.
 
 function rotateCharacter(character, shiftValue) {
-    // 65 - 91
-    // 95 - 121
+    // 65 - 90
+    // 97 - 122
     let currentValue = character.charCodeAt(0);
     let newVal = 0;
     if (currentValue >= 65 && currentValue <= 90) {
         //Uppercase method
         newVal = currentValue + shiftValue;
 
-        if (newVal <= 90) {
+        if (newVal <= 90 && newVal >= 65) {
             return String.fromCharCode(newVal);
         }
         else if (newVal > 90) {
             newVal = newVal - 90 + 64;
+            return String.fromCharCode(newVal);
+        }
+        else if (newVal < 65) {
+            newVal = 91 - (65 - newVal);
             return String.fromCharCode(newVal);
         }
 
@@ -26,11 +30,16 @@ function rotateCharacter(character, shiftValue) {
         //lowercase method
         newVal = currentValue + shiftValue;
 
-        if (newVal <= 122) {
+        if (newVal <= 122 && newVal >= 97) {
             return String.fromCharCode(newVal);
         }
         else if (newVal > 122) {
             newVal = newVal - 122 + 96;
+            return String.fromCharCode(newVal);
+        }
+        else if (newVal < 97) {
+
+            newVal = 123 - (97 - newVal);
             return String.fromCharCode(newVal);
         }
     }
@@ -79,3 +88,8 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+console.log(rotateCharacter('A', 3));  // Output: 'D'
+console.log(rotateCharacter('Z', 1));  // Output: 'A'
+console.log(rotateCharacter('a', -1)); // Output: 'z'
+console.log(rotateCharacter('c', -3)); // Output: 'z'
+console.log(rotateCharacter('!', 5));  // Output: '!' (unchanged)
