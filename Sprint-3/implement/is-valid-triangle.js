@@ -36,10 +36,10 @@
 
 function isValidTriangle(a, b, c) {
 
-    a = Math.abs(a);
-    b = Math.abs(b);
-    c = Math.abs(c);
-    if ((a + b) > c && (a + c) > b && (b + c) > a) {
+    if (a <= 0 || b <= 0 || c <= 0) {
+        return false
+    }
+    else if ((a + b) > c && (a + c) > b && (b + c) > a) {
         return true;
     }
     else {
