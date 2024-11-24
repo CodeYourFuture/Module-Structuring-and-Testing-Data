@@ -1,0 +1,22 @@
+{
+    "name": "sprint3",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "jest": "^29.0.0"
+    },
+    "jest": {
+        "moduleFileExtensions": ["js", "mjs", "cjs", "json", "node"],  
+        "testEnvironment": "node",                                    
+        "testMatch": ["**/?(*.)+(test).[jt]s?(x)"],                   
+        "verbose": true                                              
+    }
+}
+
+
+    
+
