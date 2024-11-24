@@ -13,3 +13,28 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function calculateBMI(personWeight,personHeight) {
+    // using .toFixed() to getting accurate decimal numbers
+    // then Decimal convert to Number
+    return Number((personWeight / (personHeight * personHeight).toFixed(2)).toFixed(1));
+}
+
+
+let currentTestOutput = 0;
+let targetTestOutput = 0;
+
+currentTestOutput = calculateBMI(70,1.73);
+targetTestOutput = 23.4;
+console.assert(
+  currentTestOutput === targetTestOutput,
+  `current output: ${currentTestOutput}, target output: ${targetTestOutput}`
+);
+
+// for more complex math rounding
+currentTestOutput = calculateBMI(73,2.01);
+targetTestOutput = 18.1;
+console.assert(
+  currentTestOutput === targetTestOutput,
+  `current output: ${currentTestOutput}, target output: ${targetTestOutput}`
+);

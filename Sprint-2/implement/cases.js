@@ -13,3 +13,40 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+function convertToUpperCase(paramStr) {
+    return paramStr.split(" ").map(str => str.toUpperCase()).join("_");
+}
+
+
+let currentTestOutput = "";
+let targetTestOutput = "";
+
+currentTestOutput = convertToUpperCase("hello there");
+targetTestOutput = "HELLO_THERE";
+console.assert(
+  currentTestOutput === targetTestOutput,
+  `current output: ${currentTestOutput}, target output: ${targetTestOutput}`
+);
+
+currentTestOutput = convertToUpperCase("lord of the rings");
+targetTestOutput = "LORD_OF_THE_RINGS";
+console.assert(
+  currentTestOutput === targetTestOutput,
+  `current output: ${currentTestOutput}, target output: ${targetTestOutput}`
+);
+
+currentTestOutput = convertToUpperCase("HeLlO tHErE");
+targetTestOutput = "HELLO_THERE";
+console.assert(
+  currentTestOutput === targetTestOutput,
+  `current output: ${currentTestOutput}, target output: ${targetTestOutput}`
+);
+
+currentTestOutput = convertToUpperCase("lOrD Of tHe RiNgS");
+targetTestOutput = "LORD_OF_THE_RINGS";
+console.assert(
+  currentTestOutput === targetTestOutput,
+  `current output: ${currentTestOutput}, target output: ${targetTestOutput}`
+);
