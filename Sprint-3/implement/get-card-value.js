@@ -1,19 +1,51 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
 // You will need to implement a function getCardValue
+const cardValues = {
+  A: 11,
+  K: 10,
+  Q: 10,
+  J: 10,
+  10: 10,
+  9: 9,
+};
+
+
+function getCardValue(card) {
+  const rank = card.slice(0, -1);
+
+  if (rank === "A") {
+    return 11;
+  } else if (rank === "K" || rank === "Q" || rank === "J" || rank === "10") {
+    return 10;
+  } else {
+    return parseInt(rank, 10);
+  }
+}
+module.exports = getCardValue;
+
+console.log(getCardValue("A♠")); // Output: 11
+console.log(getCardValue("10♣")); // Output: 10
+console.log(getCardValue("K♦")); // Output: 10
+console.log(getCardValue("5♥")); // Output: 5
+console.log(getCardValue("2♠")); // Output: 2
 
 // You need to write assertions for your function to check it works in different cases
 
 // Acceptance criteria:
 
-// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
+// Given a card string in the format "A♠" (representing a card in blackjack - the last 
+// character will always be an emoji for a suit, and all 
+//characters before will be a number 2-10, 
+// or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
 
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
 // When the function is called with such a card,
-// Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
+// Then it should return the numeric value corresponding to the rank 
+//(e.g., "5" should return 5).
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
@@ -29,3 +61,5 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+

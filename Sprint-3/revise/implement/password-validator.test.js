@@ -1,16 +1,31 @@
-/* 
-Password Validation
 
-Write a program that should check if a password is valid
-and returns a boolean
+const isNumberValid = require("./password-validator");
 
-To be valid, a password must:
-- Have at least 5 characters.
-- Have at least one English uppercase letter (A-Z)
-- Have at least one English lowercase letter (a-z)
-- Have at least one number (0-9)
-- Have at least one non-alphanumeric symbol ("!", "#", "$", "%", ".", "*", "&")
-- Must not be any previous password in the passwords array. 
+test("Should validate a number with at least 5 characters", () => {
+  const input = 112206;
+  const output = isNumberValid(input);
+  expect(output).toBe(true); // A valid number
+});
 
-You must breakdown this problem in order to solve it. Find one test case first and get that working
-*/
+test("Should invalidate a string longer than one character", () => {
+  const input = "password";
+  const output = isNumberValid(input);
+  expect(output).toBe(false); // Invalid because it's longer than one character
+});
+
+test("Should validate a single uppercase letter", () => {
+  const input = "A";
+  const output = isNumberValid(input);
+  expect(output).toBe(true); // Valid
+});
+
+test("Should invalidate a special character not in the list", () => {
+  const input = "@";
+  const output = isNumberValid(input);
+  expect(output).toBe(false); // Invalid because "@" is not in the list of special characters
+});
+
+
+
+
+

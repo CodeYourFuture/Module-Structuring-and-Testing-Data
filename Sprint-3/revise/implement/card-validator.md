@@ -4,6 +4,10 @@ In this project you'll write a script that validates whether or not a credit car
 
 Here are the rules for a valid number:
 
+function (){};
+
+
+
 - Number must be 16 digits, all of them must be numbers.
 - You must have at least two different digits represented (all of the digits cannot be the same).
 - The final digit must be even.
