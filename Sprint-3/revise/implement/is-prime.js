@@ -20,7 +20,9 @@ function isPrime(num) {
             return false;
         }
     }
-    return false;
+    else if (num < 1) {
+        throw new Error("This function works with positive integers only.")
+    }
 
 }
 
