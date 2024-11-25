@@ -1,7 +1,7 @@
 function isPrime(num) {
 
     let count = 0;
-    if (num > 1) {
+    if (num >= 1) {
 
         for (let i = 1; i <= num; i++) {
 
