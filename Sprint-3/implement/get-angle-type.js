@@ -23,6 +23,8 @@ function getAngleType(degrees){
     }
 }
 
+module.exports = getAngleType;
+
 console.log(getAngleType(359));
 
 
