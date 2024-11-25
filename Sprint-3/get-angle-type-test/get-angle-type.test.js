@@ -1,5 +1,5 @@
 
-const getAngleType = require("./get-angle-type");
+const getAngleType = require("./get-angle-type"); 
 
 test("It checks angle types", function () {
     expect(getAngleType(90)).toBe("Right angle");
