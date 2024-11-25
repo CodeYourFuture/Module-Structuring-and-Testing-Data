@@ -7,6 +7,7 @@
 // Acceptance criteria:
 
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
+// so just off the cuff this sounds like a array for the cards. maybe make them all objects.
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
 
