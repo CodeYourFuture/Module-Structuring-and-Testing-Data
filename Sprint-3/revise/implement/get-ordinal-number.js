@@ -1,9 +1,9 @@
 function getOrdinalNumber(num) {
-    if (num === 1) return "1st";
-    if (num === 2) return "2nd";
-    if (num === 3) return "3rd";
-    return num + "th"; // For all other numbers
-  }
-  
-  module.exports = getOrdinalNumber;
-  
+  if ([11, 12, 13].includes(num % 100)) return num + "th";
+  if (num % 10 === 1) return num + "st";
+  if (num % 10 === 2) return num + "nd";
+  if (num % 10 === 3) return num + "rd";
+  return num + "th";
+}
+
+module.exports = getOrdinalNumber;
