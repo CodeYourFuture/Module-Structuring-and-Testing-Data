@@ -27,21 +27,32 @@
 // Then the function should return "Reflex angle"
 
 //Answer :
-function getAngleType (angle) {
-
+function getAngleType(angle) {
+    if (angle < 0 || angle >= 360) {
+        return "Invalid angle";
+    }
+    if (angle === 0) {
+        return "Zero angle";
+    }
+    if (angle < 90) {
+        return "Acute angle";
+    }
     if (angle === 90) {
         return "Right angle";
-    }else if (angle < 90) {
-        return "Acute angle";
-    }else if (angle > 90 && angle < 180){
+    }
+    if (angle < 180) {
         return "Obtuse angle";
-    }else if (angle === 180) {
+    }
+    if (angle === 180) {
         return "Straight angle";
-    }else if (angle > 180 && angle< 360){
+    }
+    if (angle < 360) {
         return "Reflex angle";
     }
 }
+
 module.exports = getAngleType;
+
 
 
 
