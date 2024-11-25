@@ -2,7 +2,7 @@
 
 const num = 103;
 
-function getLastDigit() {
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
@@ -12,3 +12,8 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
+
+
+// Here the function does not get any value other than the num defined at the beginning, because we didn't assign any parameter for it.
+// therefore it will return "3" everytime it is called which represents the last digit of "num = 103"
+// to solve it, we need to assign "num" as the function parameter.
