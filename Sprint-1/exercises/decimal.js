@@ -1,4 +1,12 @@
 const num = 56.5678;
+let wholeNumberPart = Math.floor(num);
+console.log(wholeNumberPart);
+
+let decimalPart = num - Math.floor(num);
+console.log(decimalPart.toFixed(4));
+
+let roundedNum = Math.round(num);
+console.log(roundedNum);
 
 // You should look up Math functions for this exercise https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
@@ -7,3 +15,5 @@ const num = 56.5678;
 // Create a variable called roundedNum and assign to it an expression that evaluates to 57 ( num rounded to the nearest whole number )
 
 // Log your variables to the console to check your answers
+
+// I modify my code and use the toFixed() method. This method formats a number as a string with a specified number of digits after the decimal point.
