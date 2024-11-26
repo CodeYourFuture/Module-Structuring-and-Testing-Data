@@ -4,17 +4,25 @@
 // considering wrapping around if necessary. Non-letter characters are returned unchanged.
 
 function rotateCharacter(character, shiftValue) {
-    // 65 - 90
-    // 97 - 122
+    // 65 - 90 UPPERCASE
+    // 97 - 122 LOWERCASE
+
     let currentValue = character.charCodeAt(0);
+    //character.charCodeAt(0) takes the first index value and gives the unique code of that character
+
     let newVal = 0;
     if (currentValue >= 65 && currentValue <= 90) {
         //Uppercase method
+        //shift value tells us how much we must shift
         newVal = currentValue + shiftValue;
 
         if (newVal <= 90 && newVal >= 65) {
+            //if newValue is within the scope we return the character by using the String.fromCharCode(newVal)
+            //this String.fromCharCode(newVal); uses the value to get the appropriate character
             return String.fromCharCode(newVal);
         }
+
+        //When out of scope the newVal has to be manipulated to wrap around so that it can go to the beginning of the alphabet once again
         else if (newVal > 90) {
             newVal = newVal - 90 + 64;
             return String.fromCharCode(newVal);
@@ -28,11 +36,15 @@ function rotateCharacter(character, shiftValue) {
 
     else if (currentValue >= 97 && currentValue <= 122) {
         //lowercase method
+        //shift value tells us how much we must shift
         newVal = currentValue + shiftValue;
 
         if (newVal <= 122 && newVal >= 97) {
+            //if newValue is within the scope we return the character by using the String.fromCharCode(newVal)
+            //this String.fromCharCode(newVal); uses the value to get the appropriate character
             return String.fromCharCode(newVal);
         }
+        //When out of scope the newVal has to be manipulated to wrap around so that it can go to the beginning of the alphabet once again
         else if (newVal > 122) {
             newVal = newVal - 122 + 96;
             return String.fromCharCode(newVal);
@@ -43,6 +55,9 @@ function rotateCharacter(character, shiftValue) {
             return String.fromCharCode(newVal);
         }
     }
+
+    //if the character is not an alpabet character which is between  97-122 & 65-90
+    //it must be returned as is
     else {
         return character;
     }
@@ -86,6 +101,7 @@ function rotateCharacter(character, shiftValue) {
 // // When the rotateCharacter function is called with char and shift as inputs,
 // // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
+
 // console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 // console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
 // console.log(rotateCharacter('A', 3));  // Output: 'D'

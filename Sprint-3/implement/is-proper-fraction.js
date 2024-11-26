@@ -42,6 +42,8 @@ function isProperFraction(numerator, denominator) {
     // let firstValue = Number(whole[0]);
     // let lastValue = Number(whole[1]);
 
+    //This function takes a numerator and denominator value and determines whether it is a proper function
+    //The numerator has to be less than the denominator when the denominator is not 0
     if (Math.abs(denominator) === 0) {
         throw new Error("Denominator cannot be zero");
     }

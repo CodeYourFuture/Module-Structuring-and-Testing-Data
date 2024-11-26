@@ -36,6 +36,12 @@ const { number } = require("yargs");
 
 function getCardValue(input) {
 
+    //This function deals with card values and the different faces of the cards
+    //It returns a specific value based on the card face
+    //2-10 get their respective values returned
+    //"J", "Q" and "K" get 10 returned
+    //"A" gets 11 returned
+
     let value = input.slice(0, -1);
     let result = 0;
     //instead of using typeof use !isNaN to check for numbers
@@ -58,7 +64,7 @@ console.log(getCardValue("5♠"));  // 5
 console.log(getCardValue("J♦"));  // 10
 console.log(getCardValue("A♣"));  // 11
 console.log(getCardValue("Q♠"));  // 10
-// console.log(getCardValue("Z♠"));  // This should help debug.
+// console.log(getCardValue("Z♠"));  
 
 
 module.exports = getCardValue;

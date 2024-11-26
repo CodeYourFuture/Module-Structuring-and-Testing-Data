@@ -36,6 +36,10 @@
 
 function isValidTriangle(a, b, c) {
 
+    //this function tests whether the given a, b, c values give values of a valid triangle
+    //To be a triangle it needs to meet the proper conditions
+    //none of the sides can be negative
+    //the function returns a boolean value
     if (a <= 0 || b <= 0 || c <= 0) {
         return false
     }

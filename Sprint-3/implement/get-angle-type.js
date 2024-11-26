@@ -29,6 +29,7 @@
 
 function getAngleType(angle) {
 
+    //this function returns which type of angle the specific number is eg. 90 is a right angle
     let result = "";
     if (angle === 90) {
         result = "Right angle";

@@ -14,9 +14,6 @@ test('This will test if a proper fraction is tested properly', () => {
     expect(currentOutput2).toEqual(targetOutput2);
 })
 
-
-
-
 test('This will test for division by zero', () => {
     expect(() => isProperFraction(5, 0)).toThrow("Denominator cannot be zero");
 }) 
