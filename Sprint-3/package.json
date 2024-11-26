@@ -1,0 +1,10 @@
+{
+  "name": "Sprint-3",
+    "description": "Performing jest tests on various functions",
+    "scripts": {
+        "test": "jest"
+      },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
