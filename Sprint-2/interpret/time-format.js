@@ -8,24 +8,24 @@ function formatTimeDisplay(seconds) {
   const remainingMinutes = totalMinutes % 60;
   const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-  return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(
-    remainingSeconds
-  )}`;
+  // a) `pad` is called 3 times.
+  return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
 
-// You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
-// to help you answer these questions
+// Call formatTimeDisplay with an input of 61
+formatTimeDisplay(61);
 
-// Questions
+// Explanation of answers:
 
-// a) When formatTimeDisplay is called how many times will pad be called?
+// b) For the first call to `pad`, `num` is `0`.
+// This is because the first call to `pad` is for `totalHours`, which is `0`.
 
-// Call formatTimeDisplay with an input of 61, now answer the following:
+// c) The return value of the first call to `pad` is `"00"`.
+// Since `num` is `0`, `pad(0)` returns `"00"` by padding `0` with a leading zero.
 
-// b) What is the value assigned to num when pad is called for the first time?
+// d) For the last call to `pad`, `num` is `1`.
+// The last call to `pad` is for `remainingSeconds`, which is `1`.
+// This is because `remainingSeconds` is calculated as `61 % 60 = 1`.
 
-// c) What is the return value of pad is called for the first time?
-
-// d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-
-// e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+// e) The return value of the last call to `pad` is `"01"`.
+// The last return value of `pad` is `"01"` because `pad(1)` pads the single digit `1` with a leading zero.

@@ -1,15 +1,21 @@
-// A set of words can be grouped together in different cases.
-
-// For example, "hello there" in snake case would be written "hello_there"
-// UPPER_SNAKE_CASE means taking a string and writing it in all caps with underscores instead of spaces.
-
-// Implement a function that:
-
-// Given a string input like "hello there"
-// When we call this function with the input string
-// it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
-
-// Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
-
-// You will need to come up with an appropriate name for the function
-// Use the string documentation to help you find a solution
+// Function to convert a string to UPPER_SNAKE_CASE
+function toUpperSnakeCase(str) {
+    // Step 1: Split the string into words (splitting by spaces)
+    const words = str.split(" ");
+    
+    // Step 2: Convert each word to uppercase using map() and toUpperCase()
+    const upperWords = words.map(word => word.toUpperCase());
+    
+    // Step 3: Join the array of uppercase words with underscores
+    const result = upperWords.join("_");
+    
+    // Step 4: Return the result
+    return result;
+  }
+  
+  // Example usage:
+  const example1 = "hello there";
+  console.log(toUpperSnakeCase(example1)); // Output: "HELLO_THERE"
+  
+  const example2 = "lord of the rings";
+  console.log(toUpperSnakeCase(example2)); // Output: "LORD_OF_THE_RINGS"
