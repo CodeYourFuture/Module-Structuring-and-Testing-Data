@@ -1,4 +1,4 @@
-const getAngleType = require('./path-to-your-function-file');
+const getAngleType = require('./get-angle-type.test.js');
 
 describe("getAngleType", () => {
     test("should return 'Invalid angle' for negative angles", () => {
