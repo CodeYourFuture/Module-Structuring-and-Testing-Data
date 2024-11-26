@@ -3,11 +3,14 @@
 // Why will an error occur when this program runs?
 // Try playing computer with the example to work out what is going on
 
-function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
+// Firstly, the decimalNumber variable has already been declared. Secondly, the function convertToPercentage has not been called correctly, instead console.log was used to log decimalNumber. By removing the const keyword and calling the function correctly allows the code to convert the given decimalNumber to a percentage.
 
-  return percentage;
+function convertToPercentage(decimalNumber) {
+
+  let percentage = (decimalNumber * 100);
+
+  return `${percentage}%`;
 }
 
-console.log(decimalNumber);
+let myPercentage = convertToPercentage(0.6)
+console.log(myPercentage);

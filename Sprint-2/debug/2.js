@@ -1,8 +1,8 @@
 // Predict and explain first...
 
-const num = 103;
 
-function getLastDigit() {
+
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
@@ -12,3 +12,5 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
+
+// The problem lies with the global variable num. Instead num should be passed as a parameter for the getLastDigit function.

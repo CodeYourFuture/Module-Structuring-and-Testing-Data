@@ -8,3 +8,10 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function priceWithVat(price){
+    let percentage = 1.2;
+    return `£${Number(price * percentage)}`; 
+}
+
+console.log(priceWithVat(50));

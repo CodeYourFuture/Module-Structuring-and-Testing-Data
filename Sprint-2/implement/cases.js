@@ -13,3 +13,10 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function snakeCase(str){
+   return str.split(' ').join('_').toUpperCase();
+}
+
+let mySnakeCase = snakeCase('Lord Of The Rings');
+console.log(mySnakeCase);
