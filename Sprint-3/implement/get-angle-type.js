@@ -6,12 +6,12 @@
 // When the function getAngleType is called with this angle,
 // Then it should:
 
-function getAngleType(angle) {
-    if (angle === 90) return "Right angle";
-    if (angle < 90) return "Acute angle";
-    if (angle > 90 && angle < 180) return "Obtuse angle";
-    if (angle === 180) return "Straight angle";
-    if (angle > 180 && angle < 360) return "Reflex angle";
+function getAngleType(degrees) {
+    if (degrees === 90) return "Right angle";
+    if (degrees < 90) return "Acute angle";
+    if (degrees > 90 && degrees < 180) return "Obtuse angle";
+    if (degrees === 180) return "Straight angle";
+    if (degrees > 180 && degrees < 360) return "Reflex angle";
     return "Invalid angle";
 }
 
