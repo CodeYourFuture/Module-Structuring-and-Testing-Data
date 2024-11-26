@@ -1,3 +1,4 @@
+/* The value assign to variable cardNumber has turn it to an integer datatype. The error is the stating that integer has no function slice() */
 const cardNumber = 4533787178994213;
 const last4Digits = cardNumber.slice(-4);
 

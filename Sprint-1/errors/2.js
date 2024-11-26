@@ -1,3 +1,5 @@
+/* The error occur because a variable that is not known or yet to be  declared is being referenced. */
+
 // Currently trying to print the string "I was born in Bolton" but it isn't working...
 // what's the error ?
 

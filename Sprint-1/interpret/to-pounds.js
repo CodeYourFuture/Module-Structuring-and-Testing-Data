@@ -17,7 +17,7 @@ const pence = paddedPenceNumberString
 
 console.log(`£${pounds}.${pence}`);
 
-// This program takes a string representing a price in pence
+// This prograpaddedPenceNumberString takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
 
 // You need to do a step-by-step breakdown of each line in this program
@@ -25,3 +25,9 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2. Line 3 Removes trailing the p
+// 3. Line 8 added 0 to front of 399 to become 0399
+// 4. Line 9 Extracts the pound portion of the value as 03 
+// 5. Line 14 Extracts the pence portion of the value as 99
+// 6. Line 18 Constructs a formatted string to pounds and pence (£pounds.pence).('399' to £3.99)
+
