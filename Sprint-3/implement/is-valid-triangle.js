@@ -20,7 +20,9 @@ function isValidTriangle(a,b,c){
     }
 }
 
-console.log(isValidTriangle(3,3,5));
+module.exports = isValidTriangle;
+
+console.log(isValidTriangle(2,2,4));
 
 // In our function isValidTriangle which takes as parameters the lengths of three sides, we need to invalidate any triangle where the sum of any two sides is less than or equal to the length of the third side.
 // and we need to validate any triangle where the sum of any two sides is greater than the length of the third side.
