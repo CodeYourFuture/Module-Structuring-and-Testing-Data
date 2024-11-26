@@ -13,3 +13,9 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function convertStringsToUppercases(origin) {
+  return origin.replaceAll(" ", "_").toUpperCase();
+}
+
+console.log(`${convertStringsToUppercases("lord of the rings")}`);
