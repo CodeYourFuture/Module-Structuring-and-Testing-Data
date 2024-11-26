@@ -13,3 +13,15 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+// my fucntion
+
+function upperSnakeCase(upperCaseTexts) {
+    return upperCaseTexts.toUpperCase().replace(/\s+/g, '_');
+}
+
+console.log(`${upperSnakeCase("hello there")}`);
+
+//gisdellabella@Giss-MBP implement % node cases.js
+// HELLO_THERE
