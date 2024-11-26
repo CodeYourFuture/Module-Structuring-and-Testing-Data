@@ -1,4 +1,4 @@
-const getAngleType = require('../get-angle-type');
+const getAngleType = require('./get-angle-type.js');
 
 describe("getAngleType", () => {
     test("Checks Right angle for when angle is 90 degrees", () => {
