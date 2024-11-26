@@ -29,3 +29,29 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+  
+  switch (true) {
+    case rank === 'A':
+      return 11;
+    case ['K', 'Q', 'J', '10'].includes(rank):
+      return 10;
+    case ['2', '3', '4', '5', '6', '7', '8', '9'].includes(rank):
+      return parseInt(rank);
+    default:
+      throw new Error('Invalid card rank');
+  }
+}
+
+console.log(getCardValue("5♠"));
+console.log(getCardValue("A♠"));
+console.log(getCardValue("K♠"));
+console.log(getCardValue("Q♠"));
+console.log(getCardValue("J♠"));
+//console.log(getCardValue("10♠"));
+//console.log(getCardValue("11♠"));
+
+module.exports = {getCardValue};
