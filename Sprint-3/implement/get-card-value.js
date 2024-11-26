@@ -3,6 +3,9 @@
 // You will need to implement a function getCardValue
 
 function getCardValue(cardRank){
+    
+    cardRank = cardRank.slice(0, 1);
+    
     if(cardRank ==="A"){
         return 11;
     }else if(cardRank === "J" || cardRank === "K" || cardRank === "Q" || cardRank === 10){
@@ -38,7 +41,7 @@ function testGetCardValue(){
 
 
 //testGetCardValue();
-console.log(getCardValue("A"));
+console.log(getCardValue("A@"));
 
 // You need to write assertions for your function to check it works in different cases
 
