@@ -16,6 +16,7 @@ function getCardValue(cardRank){
         return 'Invalid card rank'
     }
 }
+module.exports = getCardValue;
 
 const assert = require("assert");
 
