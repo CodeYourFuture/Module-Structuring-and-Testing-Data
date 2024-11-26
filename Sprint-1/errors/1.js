@@ -2,3 +2,7 @@
 
 const age = 33;
 age = age + 1;
+
+
+// const is used to declare a constant variable which cannot be reassigned. 
+//To fix this we can use let instead of const
