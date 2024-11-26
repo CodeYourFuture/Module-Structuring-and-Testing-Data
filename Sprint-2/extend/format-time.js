@@ -22,3 +22,40 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+
+//If the input time is "00:00", the function returns "0:00 am", which is incorrect. Midnight should be represented as "12:00 am".
+//If the input is "12:00", the function returns "12:00 am", which is incorrect. Noon should be represented as "12:00 pm".
+//If the time has a single digit for the hour (e.g., "03:00"), the function will return it in the format "3:00 am", which is missing a leading zero. 
+//There should be some validation for invalid input (e.g., strings not in a valid time format, non-numeric strings, etc.).
+//The function doesn't handle minutes correctly.
+//Fixed code:
+function formatAs12HourClock(time) {
+  if (!/^([01]?\d|2[0-3]):([0-5]?\d)$/.test(time)) {
+    throw new Error("Invalid time format. Use 'hh:mm' format.");
+  }
+const [hours, minutes] = time.split(':').map(Number);
+
+  
+  let period = 'am'; 
+  let formattedHours = hours;
+
+  if (hours === 0) {
+    formattedHours = 12;
+    period = 'am'; // Midnight
+  } else if (hours === 12) {
+    period = 'pm'; // Noon
+  } else if (hours > 12) {
+    formattedHours = hours - 12;
+    period = 'pm';
+  }
+  const formattedHoursString = formattedHours.toString().padStart(2, '0');
+  const formattedMinutesString = minutes.toString().padStart(2, '0');
+
+  return `${formattedHoursString}:${formattedMinutesString} ${period}`;
+}
+
+// Examples
+console.log(formatAs12HourClock("00:15")); // "12:15 am"
+console.log(formatAs12HourClock("12:30")); // "12:30 pm"
+console.log(formatAs12HourClock("23:45")); // "11:45 pm"
+console.log(formatAs12HourClock("27:99")); // Throws an error
