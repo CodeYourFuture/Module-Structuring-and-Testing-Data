@@ -33,3 +33,30 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+______________________________________SOLUTION______________________________________________
+
+function isValidTriangle(a, b, c) {
+    // Check for positive side lengths
+    if (a <= 0 || b <= 0 || c <= 0) {
+        return false;
+    }
+    
+    // Check Triangle Inequality Theorem
+    return (a + b > c) && (a + c > b) && (b + c > a);
+}
+
+// Test cases for different scenarios
+console.assert(isValidTriangle(3, 3, 3) === true, "Test Case 1 Failed");       // Valid triangle (equilateral)
+console.assert(isValidTriangle(5, 12, 13) === true, "Test Case 2 Failed");     // Valid triangle (right triangle)
+console.assert(isValidTriangle(1, 2, 3) === false, "Test Case 3 Failed");      // Invalid triangle (sum of two sides equals the third)
+console.assert(isValidTriangle(0, 5, 7) === false, "Test Case 4 Failed");      // Invalid side length (zero side)
+console.assert(isValidTriangle(-1, 5, 7) === false, "Test Case 5 Failed");     // Invalid side length (negative side)
+console.assert(isValidTriangle(2, 2, 5) === false, "Test Case 6 Failed");      // Invalid triangle (sum of two sides less than the third)
+
+/*
+Explanation:
+Valid Side Length Check: The function checks that all sides are positive (greater than zero). If any side is zero or negative, the function returns false.
+Triangle Inequality Check: It checks that the sum of any two sides is greater than the third side. Only if all these conditions are met does it return true.
+Assertions: Each console.assert tests different scenarios (valid triangle, invalid triangle with zero or negative side lengths, and triangles violating the triangle inequality).
+*/

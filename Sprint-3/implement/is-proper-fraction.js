@@ -32,3 +32,38 @@
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+___________________________________________SOLUTION_________________________________________
+
+function isProperFraction(numerator, denominator) {
+    // Check if the denominator is zero
+    if (denominator === 0) {
+        throw new Error("Denominator cannot be zero");
+    }
+    
+    // Return true if absolute value of numerator is less than denominator
+    return Math.abs(numerator) < Math.abs(denominator);
+}
+
+// Assertions to test the function with different cases
+console.assert(isProperFraction(2, 3) === true, "Test Case 1 Failed");         // Proper fraction
+console.assert(isProperFraction(5, 2) === false, "Test Case 2 Failed");        // Improper fraction
+try {
+    isProperFraction(3, 0);  // Zero denominator
+    console.assert(false, "Test Case 3 Failed - Expected error for zero denominator");
+} catch (e) {
+    console.assert(e.message === "Denominator cannot be zero", "Test Case 3 Passed");
+}
+console.assert(isProperFraction(-4, 7) === true, "Test Case 4 Failed");        // Negative proper fraction
+console.assert(isProperFraction(3, 3) === false, "Test Case 5 Failed");        // Equal numerator and denominator
+
+/* 
+Explanation:
+1) Zero Denominator Check: If denominator is zero, it throws an error since a fraction with zero in the denominator is undefined.
+2) Proper Fraction Check: It returns true if the absolute value of the numerator is less than the absolute value of the denominator.
+3) Handling Assertions: Each console.assert tests a specific case to verify if the function handles various cases (proper, improper, zero denominator, negative fractions, equal numerator and denominator) correctly.
+*/
+
+
+
+
