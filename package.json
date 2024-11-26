@@ -1,0 +1,10 @@
+{
+    "name": "Sprint 2 exercise",
+    "description": "Sprint2 test",
+    "scripts": {
+      "test": "jest"
+    },
+    "devDependencies": {
+      "jest": "^29.5.0"
+    }
+  }
