@@ -29,3 +29,21 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+//Answer:
+function getCardValue(card) {
+    const rank = card.slice(0, -1); // Extract all except the last character
+    const validRanks = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2'];
+
+    if (!validRanks.includes(rank)) {
+        throw new Error("Invalid card rank");
+    }
+
+    if (rank === 'A') return 11;
+    if (['K', 'Q', 'J', '10'].includes(rank)) return 10;
+
+    return parseInt(rank, 10); // Convert numeric ranks to a number
+}
+
+module.exports = getCardValue;
+
