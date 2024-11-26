@@ -37,8 +37,8 @@ function passwordValidator(input) {
 
 }
 
-console.log(passwordValidator("Serna#2003"));
-console.log(passwordValidator("Serna"));
-console.log(passwordValidator("RowleyPo"));
+// console.log(passwordValidator("Serna#2003"));
+// console.log(passwordValidator("Serna"));
+// console.log(passwordValidator("RowleyPo"));
 
 module.exports = passwordValidator;

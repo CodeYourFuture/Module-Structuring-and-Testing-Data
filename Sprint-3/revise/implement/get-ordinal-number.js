@@ -1,9 +1,9 @@
 function getOrdinalNumber(num) {
-
+    //function will add the correct suffix to the appropriate number with certain conditions
     let ordinal = "";
     if (num > 0) {
         let StringNum = num.toString();
-
+        //Have to account for 11-19 which end with 'th'
         if (num % 100 === 11 || num % 100 === 12 || num % 100 === 13) {
             ordinal = "th";
         }

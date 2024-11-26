@@ -1,5 +1,7 @@
 function countChar(str, char) {
 
+    //function will take a string and character
+    //will count the number of occurences of the character using a for loop
     let count = 0;
 
 
