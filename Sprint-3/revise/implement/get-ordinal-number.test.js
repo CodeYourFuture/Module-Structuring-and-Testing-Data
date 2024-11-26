@@ -1,17 +1,3 @@
-// In this week's prep, we started implementing getOrdinalNumber
-
-// continue testing and implementing getOrdinalNumber for additional cases
-// Write your tests using Jest - remember to run your tests often for continual feedback
-
-// Import the function to test
-
-// get-ordinal-number.test.js
-
-// Import the function to test
-
-// get-ordinal-number.test.js
-
-// Import the function to test
 
 //Answer:
 
