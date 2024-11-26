@@ -15,4 +15,8 @@ What effect does calling the `alert` function have?
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+It opens a small dialog box where we can ask the user a question.
+
 What is the return value of `prompt`?
+If the user enters something and clicks "OK," it returns that input as a string.
+If the user clicks "Cancel" or closes the prompt dialog, it returns null.
