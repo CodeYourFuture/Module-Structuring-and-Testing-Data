@@ -14,17 +14,10 @@ function isProperFraction(num,den){
     
 }
 
-    console.assert(isProperFraction(1, 2) === true, 'Test failed: 1/2 should be a proper fraction');
-    console.assert(isProperFraction(-1, 3) === true, 'Test failed: -1/3 should be a proper fraction');
-    console.assert(isProperFraction(0, 5) === true, 'Test failed: 0/5 should be a proper fraction');
-
-    console.assert(isProperFraction(5, 5) === false, 'Test failed: 5/5 is not a proper fraction');
-    console.assert(isProperFraction(7, 3) === false, 'Test failed: 7/3 is not a proper fraction');
-    console.assert(isProperFraction(-6, 4) === false, 'Test failed: -6/4 is not a proper fraction');
+module.exports = isProperFraction;
 
 
-
-console.log(isProperFraction(-4,7))
+console.log(isProperFraction(3,1))
 
 // Acceptance criteria:
 
