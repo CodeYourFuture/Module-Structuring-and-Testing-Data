@@ -32,3 +32,32 @@
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+/*
+so we making a function to check if its a fraction, start like the previous two, TDD. write the tests and the basic boiler of what i know for sure then work backwards it somehow works better.
+def isProperFraction(numerator(int), denominator(int)){
+    if numerator< denominator return true
+    else false}
+
+    jest9copied from previous code and just adapted but we should work these over for more errors: 
+    describe('isProperFraction', () => {
+    it('identifies  if it is a proper fraction', () => {
+        expect(isProperFraction(0,-1)).toBe('false');
+    });
+    it('identifies  if it is a proper fraction', () => {
+        expect(isProperFraction(10,100)).toBe('true');
+    });
+    it('identifies  if it is a proper fraction', () => {
+        expect(isProperFraction(50,50.7)).toBe('true');
+    });
+    it('identifies  that this is not a fraction', () => {
+        expect(isProperFraction(-13,13)).toBe('false');  // Fixed the expected value
+    });
+    it('identifies reflex angles', () => {  
+        expect(isProperFraction(-n,E)).toBe('true');
+    });
+    it('identifies invalid angles', () => {
+        expect(isProperFraction(x,y)).toBe('true');
+    });
+});
+
+*/
