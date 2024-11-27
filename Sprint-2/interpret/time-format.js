@@ -19,13 +19,18 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-
+   // three times:totalHours,remainingMinutes and remainingSeconds
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-
+     //remainingSeconds = 61%60  =  1
+     //totalMinutes  = (61 - 1)/60  = 1
+     //remainingMinutes = 1 % 60 = 1
+     //totalHours = (1 - 1)/60 = 0
 // c) What is the return value of pad is called for the first time?
+  //00:01:01
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-
+   // remainingSeconds: 1
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+   // num.toString().padStart(2, "0"); 01  
