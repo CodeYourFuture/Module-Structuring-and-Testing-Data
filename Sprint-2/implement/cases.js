@@ -13,3 +13,24 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+// Function to convert string to UPPER_SNAKE_CASE
+function toUpperSnakeCase(inputString) {
+    // Step 1: Split the string by spaces into an array of words
+    const wordsArray = inputString.split(' ');
+  
+    // Step 2: Convert each word to uppercase
+    const upperCaseWords = wordsArray.map(word => word.toUpperCase());
+  
+    // Step 3: Join the array of words with underscores
+    const result = upperCaseWords.join('_');
+  
+    // Step 4: Return the result
+    return result;
+  }
+  
+  // Test cases
+  console.log(toUpperSnakeCase("hello there")); // Expected output: "HELLO_THERE"
+  console.log(toUpperSnakeCase("lord of the rings")); // Expected output: "LORD_OF_THE_RINGS"
+  console.log(toUpperSnakeCase("java script is awesome")); // Expected output: "JAVA_SCRIPT_IS_AWESOME"
+  
