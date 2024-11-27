@@ -14,6 +14,24 @@
 // In our function isValidTriangle which takes as parameters the lengths of three sides, we need to invalidate any triangle where the sum of any two sides is less than or equal to the length of the third side.
 // and we need to validate any triangle where the sum of any two sides is greater than the length of the third side.
 
+function isValidTriangle(a, b, c) {
+    // Check the Triangle Inequality
+    if (a + b <= c || a + c <= b || c + b <= a) {
+        return false
+    }
+    // Check for non-positive side length
+    if (a <= 0 || b <= 0 || c <= 0) {
+        return false
+    }
+    // If all checks pass, it's a valid triangle
+    return true;
+}
+
+console.log(isValidTriangle(2, 3, 4));
+console.log(isValidTriangle(0, 3, 4));
+console.log(isValidTriangle(-1, 3, 4));
+console.log(isValidTriangle(3, 3, 3));
+
 // Acceptance criteria:
 
 // scenario: invalid triangle
@@ -33,3 +51,5 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+module.exports = isValidTriangle;

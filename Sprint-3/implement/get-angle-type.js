@@ -1,4 +1,30 @@
 // Implement a function getAngleType
+function getAngleType(angle) {
+    if (angle == 90) {          // Right Angles
+        return "Right angle";
+    } else if (angle > 0 && angle < 90) {   // Acute Angles
+        return "Acute angle";
+    } else if (angle > 90 && angle < 180) {  // Obtuse Angle
+        return "Obtuse angle";
+    } else if (angle == 180) {      // Straight Angle
+        return "Straight angle";
+    } else if (angle > 180 && angle < 360) {    // Reflex Angle
+        return "Reflex angle"
+    } else {
+        return "Invalid angle";
+    }
+}
+
+
+
+// 〰️ Example usage:
+console.log(getAngleType(90));  // Right angle
+console.log(getAngleType(45));  // Acute angle
+console.log(getAngleType(135)); // Obtuse angle
+console.log(getAngleType(180)); // Straight angle
+console.log(getAngleType(270)); // Reflex angle
+console.log(getAngleType(360)); // Invalid angle
+
 
 // Acceptance criteria:
 
@@ -25,3 +51,5 @@
 // Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+
+module.exports = getAngleType;
