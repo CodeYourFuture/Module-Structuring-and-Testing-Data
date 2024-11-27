@@ -3,18 +3,16 @@
 // You will need to implement a function getCardValue
 
 function getCardValue(card) {
-  const rank = card.slice(0, -1);
-  console.log(rank);
-  validateRank(rank);
+  let rank = card.slice(0, -1);
+
   if (rank === "A") return 11;
   if (rank === "J" || rank === "Q" || rank === "K" || rank === "10") return 10;
-  return Number(rank);
-}
+  rank = Number(rank);
 
-function validateRank(rank) {
-  if (rank === "A") return;
-  if (rank === "J" || rank === "Q" || rank === "K" || rank === "10") return;
-  throw new Error("Invalid card rank.");
+  if (rank < 2 || rank > 10) {
+    throw new Error("Invalid card rank.");
+  }
+  return rank;
 }
 
 // You need to write assertions for your function to check it works in different cases
