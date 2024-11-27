@@ -13,6 +13,8 @@ Your first task is to rewrite the assertions from `./implement` using Jest synta
 You will also need to update the filenames in `./implement` so they have a `.test.js` extension and _not_ just a `.js` extension.
 Keep running `npm test` to check the new tests you've created.
 
+Note for solution hunters. I have not directly rewritten the tests in the `implement` directory. I have created a new directory called `rewrite` and placed the rewritten tests there, so you can follow the development process.
+
 ## 🔍 Investigate
 
 In this exercise, you'll need to **play computer** with the function `find`. This function makes use of while loop statement. Your task will be to step through the code to figure out what is happening when the computer executes the code.
