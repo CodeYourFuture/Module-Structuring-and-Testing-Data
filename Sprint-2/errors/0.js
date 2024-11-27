@@ -5,9 +5,9 @@
 
 
 /*  
-  we are creating a variable with (let = nameVariable) but the same time we can not assing
+  we are creating a variable with (let = nameVariable) but the same time we can not reassign
   the value in the same line.
-  instead we should call directly the (str = valueAssigned) and with this will Worker.
+  instead we should call directly the (str = valueAssigned) and with this will Work
 */
 
 
@@ -30,7 +30,7 @@ console.log(capitalize("alejandra"));
 
 /*
   In this function we are taking a parameter the string "alejadra" this
-  entry in the function and assigned in the str = takin the firs character[0].toUpperCase()
+  entry in the function and assigned in the str = taking the firs character[0].toUpperCase()
   and using the function upper... to convert this in capital letter.
   but we still need the rest of the string and we use the interpolation to concatenate 
   the rest calling the string from the position 1 with  str.slice(1).
