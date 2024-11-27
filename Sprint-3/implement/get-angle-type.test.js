@@ -1,5 +1,5 @@
 
-const getAngleType = require("./get-angle-type")
+const getAngleType = require("./get-angle-type");
 
 const currentOutput = getAngleType(90);
 const targetOutput = "Right angle";
