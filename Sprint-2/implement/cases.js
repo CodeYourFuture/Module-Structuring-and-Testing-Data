@@ -13,3 +13,22 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+//solution
+
+function toUpperSnakeCase(input) {
+    
+    const withUnderscores = input.replace(/ /g, "_");
+  
+    
+    const upperSnakeCase = withUnderscores.toUpperCase();
+  
+    
+    return upperSnakeCase;
+  }
+  
+  
+  console.log(toUpperSnakeCase("hello there")); 
+  console.log(toUpperSnakeCase("lord of the rings"));
+  
