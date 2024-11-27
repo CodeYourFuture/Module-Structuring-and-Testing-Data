@@ -16,6 +16,34 @@
 // Given a lowercase letter character and a positive integer shift,
 // When the function is called with these inputs,
 // Then it should rotate the lowercase letter by shift positions within the lowercase alphabet, wrapping around if necessary, and return the rotated lowercase letter as a string.
+let ALPHABET = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "U", "V", "w", "x", "y", "z"];
+let ALPHABET_UPPERCASE = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+function rotateCharacter(char , num){
+
+    let result = "";
+    for(let i = 0; i < ALPHABET.length; i++){
+        if(char == ALPHABET[i]){
+            if(i+num >=26){
+                let a = (i+num) % 26;
+                return ALPHABET[a];
+            }
+            result = ALPHABET[i + num]
+
+            return result
+        }
+        if(char == ALPHABET_UPPERCASE[i]){
+                if(i+num >=26){
+                    let a = (i+num) % 26;
+                    return ALPHABET_UPPERCASE[a];
+                }
+                result = ALPHABET_UPPERCASE[i + num]
+    
+                return result
+        }
+    } 
+    return char;
+}
 console.log(rotateCharacter("a", 3)); // Output: "d"
 console.log(rotateCharacter("f", 1)); // Output: "g"
 
@@ -23,6 +51,7 @@ console.log(rotateCharacter("f", 1)); // Output: "g"
 // Given an uppercase letter character and a positive integer shift,
 // When the function is called with these inputs,
 // Then it should rotate the uppercase letter by shift positions within the uppercase alphabet, wrapping around if necessary, and return the rotated uppercase letter as a string.
+
 console.log(rotateCharacter("A", 3)); // Output: "D"
 console.log(rotateCharacter("F", 1)); // Output: "G"
 

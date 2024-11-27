@@ -33,3 +33,20 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+function isValidTriangle(a, b, c){
+    if(a == 0 || b == 0 || c == 0){
+        return false
+    }
+    if(a + b <= c || a + c <= b || b + c <= a){
+        return false
+    }
+   // else if(a + b >= c || a + c >= b || b + c >= a){
+    return true
+    //}
+}
+
+
+console.log(isValidTriangle(1, 1, 1));
+
+console.assert(isValidTriangle(23, 45, 97), "its false because sum of the 23 and 45 is greater than 67");
