@@ -48,7 +48,6 @@ function validateCreditCard(cardNumber) {
   //Chexk for at least two different digits
   const uniqueDigits = new Set(cardNumber);
   if (uniqueDigits.size < 2) {
-    console.log("grater than 2");
     return false;
   }
 
