@@ -9,7 +9,7 @@ function getCardValue(card) {
   if (rank === "J" || rank === "Q" || rank === "K" || rank === "10") return 10;
   rank = Number(rank);
 
-  if (rank < 2 || rank > 10) {
+  if (rank < 2 || rank > 10 || isNaN(rank)) {
     throw new Error("Invalid card rank.");
   }
   return rank;
