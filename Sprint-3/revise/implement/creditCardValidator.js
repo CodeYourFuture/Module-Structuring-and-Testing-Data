@@ -15,4 +15,4 @@ function creditCardValidator(cardNum){
 
 module.exports = creditCardValidator;
 
-console.log(creditCardValidator("1243578569873476"));
+console.log(creditCardValidator("1243578569873479"));
