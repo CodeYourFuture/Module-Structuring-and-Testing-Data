@@ -13,5 +13,6 @@ function cardValidator(cardNum){
     );
 }
 
+module.exports = cardValidator;
 
 console.log(cardValidator("1243578569873479"));
