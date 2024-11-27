@@ -22,3 +22,17 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+
+//answers 
+
+// a) there are 6 variable declarations
+
+// b) there is one function, console.log(result); which prints the result.
+
+// c) the expression movieLength % 60, uses the % modular which   returns the remaining of a division. here 8784 is the total movieLength in seconds and 60 is total seconds in one minute, so the total expression is saying how many seconds are remaining after we divide 8784 by 60 which will be 24 seconds. 
+
+// d) line 4 calculating the  the total number of whole minutes in the variable movieLength which is in seconds.
+
+// e)  variable result represents time of the movieLength in hours:minutes:seconds. another name can be movieDuration.
+
+// f) i tried different values and the code works well.
