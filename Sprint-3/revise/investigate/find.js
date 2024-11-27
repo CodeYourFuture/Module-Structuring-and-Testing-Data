@@ -1,11 +1,13 @@
 function find(str, char) {
-  let index = 0;
+  let index = 0; // playing computer, 0
 
   while (index < str.length) {
+    // pc: 0 < 17 (length of "code your future")
     if (str[index] === char) {
-      return index;
+      // if the value of str[0] === "u"
+      return index; // return this number, but it isn't yet, it's c
     }
-    index++;
+    index++; // increment index by 1, so it's now 1, go round again until we reach the end of the string or find the character
   }
   return -1;
 }
