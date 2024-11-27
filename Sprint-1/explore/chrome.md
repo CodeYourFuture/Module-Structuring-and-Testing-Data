@@ -10,9 +10,23 @@ Let's try an example.
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
-What effect does calling the `alert` function have?
+---------- alert("hello Maria");
+---------------Hello Maria
+
+What effect does calling the `alert` function have? show a window with the alert at the top of the browser
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
+--------- prompt("What is your name?");  //maria
+--------- var myName = prompt("What is your name?");
+-------------  Maria
+
 What effect does calling the `prompt` function have?
-What is the return value of `prompt`?
+
+ //prompt will display a dialog text box to interact wit the user, this can be used to ask question and then stored in one variable. this can have two option "ok" and "cancel", if cancel is pressed nothing will run. and this will be "undefine".
+
+   
+What is the return value of `prompt`?  
+
+ //If the user enters a name and clicks "OK," the input text is stored in the variable myName.
+
