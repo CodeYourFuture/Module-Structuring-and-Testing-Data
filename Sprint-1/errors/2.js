@@ -3,3 +3,5 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+// Uncaught ReferenceError: cityOfBirth is not defined

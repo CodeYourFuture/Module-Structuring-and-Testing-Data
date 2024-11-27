@@ -7,3 +7,11 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
+
+/*
+1. Math.random(): it is a function that generates a random decimal number between 0 and 1.
+2. Math.random() * (maximum - minimum + 1) this part scales the random number to the defined range.
+3. Math.floor() this function rounds the result of the previous step down to the nearest integer.
+*/
+
+console.log(num);
