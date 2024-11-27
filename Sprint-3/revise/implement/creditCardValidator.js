@@ -13,4 +13,6 @@ function creditCardValidator(cardNum){
     );
 }
 
+module.exports = creditCardValidator;
+
 console.log(creditCardValidator("1243578569873476"));
