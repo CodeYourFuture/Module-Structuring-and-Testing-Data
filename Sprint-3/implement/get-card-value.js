@@ -29,3 +29,27 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+// Adjust the path if necessarynction
+
+function getCardValue(card) {
+  const rank = card.slice(0, -1);
+  switch (rank) {
+    case "A":
+      return 11;
+    case "J":
+    case "Q":
+    case "K":
+      return 10;
+    default:
+      const numericRank = parseInt(rank); // Convert the string to an integer
+
+      if (!isNaN(numericRank) && numericRank >= 2 && numericRank <= 10) {
+        return numericRank;
+      } else {
+        return "Invalid card rank";
+      }
+  }
+}
+
+module.exports = getCardValue;
