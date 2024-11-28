@@ -3,3 +3,9 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+const cityOfBirth = "Bolton";
+console.log(`I was born in ${cityOfBirth}`);
+
+// cons cityOfBirth was written below the console.log
+

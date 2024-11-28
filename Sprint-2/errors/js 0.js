@@ -7,3 +7,10 @@ function capitalise(str) {
   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
+ // The function now directly modifies the 'str' variable without redeclaring it
+ str = `${str[0].toUpperCase()}${str.slice(1)}`;
+ return str;
+}
+
+// Example;
+console.log(capitalise("millena"));  // Output: "Millena"
