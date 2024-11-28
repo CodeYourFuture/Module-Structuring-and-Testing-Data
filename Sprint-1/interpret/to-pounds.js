@@ -1,21 +1,27 @@
 const penceString = "399p";
+// a price in pence
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
 );
+// remove "p" from the string
 
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+//// make sure the string has at least 3 digits by adding 0 at the front if needed
+
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
 );
+//extracts the pounds part
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
-
+  .substring(paddedPenceNumberString.length - 2);
+  // extracts the last 2 digits to get pence part
+  // .padEnd() adding 0 if needed (removed it because there's no need for it)
 console.log(`£${pounds}.${pence}`);
+// display the price by combining pound + pence parts
 
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
