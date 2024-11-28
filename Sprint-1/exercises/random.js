@@ -1,7 +1,15 @@
 const minimum = 1;
 const maximum = 100;
 
-const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+// Calculate how many numbers we can pick
+const valueRange = maximum - minimum + 1;
+// Get a random number and make it fit our range
+const scaledRandomNumber = Math.random() * (valueRange);
+// Round the random number down to the nearest whole number
+const roundedDownValue = Math.floor(scaledRandomNumber);
+//Add the smallest number to the rounded number to get the final number
+const num = roundedDownValue + minimum;
+console.log(num);
 
 // In this exercise, you will need to work out what num represents?
 // Try breaking down the expression and using documentation to explain what it means
