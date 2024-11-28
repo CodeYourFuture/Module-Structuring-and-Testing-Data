@@ -30,6 +30,7 @@ function convertToPercentageFixed(decimalNumber) {
   return percentage;
 }
 
+// We also need to call the function in order to log its return value - decimalNumber only exists inside the function, we can't see it outside here - decimalNumber is not in scope.
 console.log(convertToPercentageFixed(0.5));
 console.assert(
   convertToPercentageFixed(0.5) === "50%",
