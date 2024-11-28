@@ -13,7 +13,7 @@ console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
 // This is because https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#return_value
 // There's no value after the keyword return, so the function returns undefined
 // The code stops executing at the return statement, so the a + b is never executed
-// I could fix this by removing the return statement and moving the a + b to the same line as the return statement
+// I could fix this by moving the a + b to the same line as the return statement before the ;
 
 // function sum(a, b) {
 //   return a + b;
