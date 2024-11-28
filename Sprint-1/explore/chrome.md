@@ -10,9 +10,9 @@ Let's try an example.
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
-What effect does calling the `alert` function have?
+What effect does calling the `alert` function have? //a Window with the given message appears and must be closed by the user.
 
-Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
+Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.// This will open an input window asking the user "what is your name? the entered value will be stores in the variable myName.
 
-What effect does calling the `prompt` function have?
-What is the return value of `prompt`?
+What effect does calling the `prompt` //function have?calling prompt opens a window that allows the user to input information.
+What is the return value of `prompt`?//the return value of prompt is the string entered by the user, which is assigned to variable myName.
