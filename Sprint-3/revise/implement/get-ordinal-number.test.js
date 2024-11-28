@@ -23,27 +23,27 @@ function getOrdinalNumber(digits) {
 }
 
 test("works for any number ending in 1", function () {
-  expect(getOrdinalNumber(1)).toBe("1st");
-  expect(getOrdinalNumber(11)).toBe("11th");
-  expect(getOrdinalNumber(21)).toBe("21st");
+  expect(getOrdinalNumber(1)).toEqual("1st");
+  expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(21)).toEqual("21st");
 });
 
 test("works for any number ending in 2", function () {
-  expect(getOrdinalNumber(2)).toBe("2nd");
-  expect(getOrdinalNumber(12)).toBe("12th");
-  expect(getOrdinalNumber(22)).toBe("22nd");
+  expect(getOrdinalNumber(2)).toEqual("2nd");
+  expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(22)).toEqual("22nd");
 });
 
 test("works for any number ending in 3", function () {
-  expect(getOrdinalNumber(3)).toBe("3rd");
-  expect(getOrdinalNumber(13)).toBe("13th");
-  expect(getOrdinalNumber(23)).toBe("23rd");
+  expect(getOrdinalNumber(3)).toEqual("3rd");
+  expect(getOrdinalNumber(13)).toEqual("13th");
+  expect(getOrdinalNumber(23)).toEqual("23rd");
 });
 
 test("works for any number ending in 4", function () {
-  expect(getOrdinalNumber(4)).toBe("4th");
-  expect(getOrdinalNumber(14)).toBe("14th");
-  expect(getOrdinalNumber(24)).toBe("24th");
+  expect(getOrdinalNumber(4)).toEqual("4th");
+  expect(getOrdinalNumber(14)).toEqual("14th");
+  expect(getOrdinalNumber(24)).toEqual("24th");
 });
 
 // from 4 to 20, all numbers should end in "th"

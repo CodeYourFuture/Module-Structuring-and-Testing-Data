@@ -36,26 +36,24 @@ function isValidPassword(password, passwords = []) {
   return true;
 }
 
-describe("Password Validation", () => {
-  it("should return false for passwords with fewer than 5 characters", () => {
-    expect(isValidPassword("aB1!")).toBe(false);
-  });
-  it("should return false for passwords without an uppercase letter", () => {
-    expect(isValidPassword("abcde1!")).toBe(false);
-  });
-  it("should return false for passwords without a lowercase letter", () => {
-    expect(isValidPassword("ABCDE1!")).toBe(false);
-  });
-  it("should return false for passwords without a number", () => {
-    expect(isValidPassword("abcdeA!")).toBe(false);
-  });
-  it("should return false for passwords without a non-alphanumeric symbol", () => {
-    expect(isValidPassword("abcdeA1")).toBe(false);
-  });
-  it("should return false for passwords that have been used before", () => {
-    expect(isValidPassword("abcdeA1!", ["abcdeA1!"])).toBe(false);
-  });
-  it("should return true for valid passwords", () => {
-    expect(isValidPassword("abcdeA2!")).toBe(true);
-  });
+test("should return false for passwords with fewer than 5 characters", () => {
+  expect(isValidPassword("aB1!")).toEqual(false);
+});
+test("should return false for passwords without an uppercase letter", () => {
+  expect(isValidPassword("abcde1!")).toEqual(false);
+});
+test("should return false for passwords without a lowercase letter", () => {
+  expect(isValidPassword("ABCDE1!")).toEqual(false);
+});
+test("should return false for passwords without a number", () => {
+  expect(isValidPassword("abcdeA!")).toEqual(false);
+});
+test("should return false for passwords without a non-alphanumeric symbol", () => {
+  expect(isValidPassword("abcdeA1")).toEqual(false);
+});
+test("should return false for passwords that have been used before", () => {
+  expect(isValidPassword("abcdeA1!", ["abcdeA1!"])).toEqual(false);
+});
+test("should return true for valid passwords", () => {
+  expect(isValidPassword("abcdeA2!")).toEqual(true);
 });

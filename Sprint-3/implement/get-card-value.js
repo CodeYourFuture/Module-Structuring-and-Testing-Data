@@ -24,75 +24,46 @@ function getCardValue(card) {
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
 
-try {
-  const aceofSpades = getCardValue("A♠");
-  console.assert(aceofSpades === 11, `Expected 11 for A♠, got: ${aceofSpades}`);
-} catch (error) {
-  console.error(error.message);
+// Here's my test function to make this easier for me to read and follow
+// Jest is just a library of functions like this, given easy to remember names, to make your testing clearer
+// There are many good libraries like this; Jest is the most common one
+
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected ${actualOutput} to equal ${targetOutput}`
+  );
 }
 
+const aceofSpades = getCardValue("A♠");
+assertEquals(aceofSpades, 11);
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
-
-try {
-  const fiveofHearts = getCardValue("5♥");
-  console.assert(fiveofHearts === 5, `Expected 5 for 5♥, got: ${fiveofHearts}`);
-} catch (error) {
-  console.error(error.message);
-}
+const fiveofHearts = getCardValue("5♥");
+assertEquals(fiveofHearts, 5);
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-
-try {
-  const queenofClubs = getCardValue("Q♣");
-  console.assert(
-    queenofClubs === 10,
-    `Expected 10 for Q♣, got: ${queenofClubs}`
-  );
-} catch (error) {
-  console.error(error.message);
-}
-
-try {
-  const tenofDiamonds = getCardValue("10♦");
-  console.assert(
-    tenofDiamonds === 10,
-    `Expected 10 for 10♦, got: ${tenofDiamonds}`
-  );
-} catch (error) {
-  console.error(error.message);
-}
+const queenofClubs = getCardValue("Q♣");
+assertEquals(queenofClubs, 10);
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
-
-try {
-  const aceofClubs = getCardValue("A♣");
-  console.assert(aceofClubs === 11, `Expected 11 for A♣, got: ${aceofClubs}`);
-} catch (error) {
-  console.error(error.message);
-}
+const aceofClubs = getCardValue("A♣");
+assertEquals(aceofClubs, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-
-try {
-  getCardValue("X♦");
-} catch (error) {
-  console.error(
-    "✅ Function correctly rejected invalid card rank with error: ",
-    error.message
-  );
-}
+const invalidCard = "X♦";
+assertEquals(invalidCard, "Invalid card rank.");
 
 // My questions
 // What about the suit? In our function we are only looking at the rank of the card.

@@ -20,16 +20,14 @@ function isPrime(num) {
   return true;
 }
 
-describe("Prime Number Tests 🔢", () => {
-  // Test non-prime numbers
-  it("should identify non-prime numbers correctly", () => {
-    expect(isPrime(1)).toEqual(false); // 1 is not prime!
-    expect(isPrime(4)).toEqual(false); // 4 = 2 × 2
-  });
+// Test non-prime numbers
+test("should identify non-prime numbers correctly", () => {
+  expect(isPrime(1)).toEqual(false); // 1 is not prime!
+  expect(isPrime(4)).toEqual(false); // 4 = 2 × 2
+});
 
-  // Test prime numbers
-  it("should identify prime numbers correctly", () => {
-    expect(isPrime(2)).toEqual(true); // 2 is prime
-    expect(isPrime(3)).toEqual(true); // 3 is prime
-  });
+// Test prime numbers
+test("should identify prime numbers correctly", () => {
+  expect(isPrime(2)).toEqual(true); // 2 is prime
+  expect(isPrime(3)).toEqual(true); // 3 is prime
 });
