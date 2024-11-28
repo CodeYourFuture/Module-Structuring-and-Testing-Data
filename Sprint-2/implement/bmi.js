@@ -13,3 +13,25 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function calculateBMI(weight, height){
+    return `${(weight / (height * height)).toFixed(1)}`;
+}
+
+const bmi = calculateBMI(57, 1.69);
+console.log(`Your BMI is ${bmi}`);
+
+function showBMIrange(bodyIndex){
+    if (bodyIndex <= 18.5){
+        return `Underweight`;
+    } else if (bodyIndex > 18.5 && bodyIndex <= 24.9) {
+        return `Normal weight`;
+    } else if (bodyIndex > 25 && bodyIndex <= 29.9) {
+        return `Overweight`;
+    } else {
+        return `Obesity`;
+    }
+}
+
+const bmiRange = showBMIrange(bmi);
+console.log(`Your BMI range is ${bmiRange}`);
