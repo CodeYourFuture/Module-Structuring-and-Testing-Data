@@ -16,3 +16,8 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+**\*** Answer:
+prompt function will display a input box with a text input field and two buttons, which is labeled ok and cancel and request the user to enter the name in this case.
+If the user enters their name, for example Amir and clicks Ok, then myName will store Amir.
+If the user clicks Cancel or closes the prompt, myName will store null.
