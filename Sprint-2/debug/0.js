@@ -4,7 +4,7 @@
 // This function logs out the result of multiplying a and b to the console.
 // When invoked it will log out the result of multiplying 10 and 32: 320
 // BUT it has no return statement, so it will RETURN undefined.
-// So when the function is called in the log statement, it will not return anything, the console.log statement will read
+// So when the function is called in the log statement, it will not return anything, the console.log statements will read:
 // 320
 // "The result of multiplying 10 and 32 is undefined"
 
