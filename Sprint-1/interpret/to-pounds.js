@@ -24,4 +24,9 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 1. const penceString = "399p": initializes a string variable with the value "399p"
+// 3. Removes the p at the end of "399p" and returns 399 only
+// 8. Returns the number 399
+// 9. Returns the digit 3
+// 14. Returns the digits 99
+// 18. Returns the the amount £3.99
