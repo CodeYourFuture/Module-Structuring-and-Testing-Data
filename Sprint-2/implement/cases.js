@@ -13,3 +13,11 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+const letChangeString = (text) => {
+  const UpperText = text.toUpperCase();
+  const changeSpace = UpperText.replace(/\s+/g, "_");
+  return changeSpace;
+};
+
+console.log(letChangeString("lord of the rings"));
