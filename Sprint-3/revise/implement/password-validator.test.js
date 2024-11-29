@@ -32,10 +32,41 @@ function passwordValidation (password, passwords){
 }
 
 // test case
-const previousPasswords = ["Password5!", "Secure$823", "HelloWorld#4"];
 
-console.log(passwordValidation("NewPass1!", previousPasswords)); 
-console.log(passwordValidation("Secure$123", previousPasswords)); 
-console.log(passwordValidation("short", previousPasswords));
-console.log(passwordValidation("NoNumberOrSymbol", previousPasswords)); 
-console.log(passwordValidation("Only123!", previousPasswords));
+describe("passwordValidation", () => {
+  const previousPasswords = ["Password5!", "Secure$823", "HelloWorld#4"];
+
+  test("returns true for valid new password", () => {
+    expect(passwordValidation("NewPass1!", previousPasswords)).toBe(true);
+  });
+
+  test("returns false for a reused password", () => {
+    expect(passwordValidation("Secure$823", previousPasswords)).toBe(false);
+  });
+
+  test("returns false for a password that's too short", () => {
+    expect(passwordValidation("short", previousPasswords)).toBe(false);
+  });
+
+  test("returns false for a password without a number", () => {
+    expect(passwordValidation("NoNumberOrSymbol!", previousPasswords)).toBe(
+      false
+    );
+  });
+
+  test("returns false for a password without a symbol", () => {
+    expect(passwordValidation("Only12345", previousPasswords)).toBe(false);
+  });
+
+  test("returns false for a password without uppercase letters", () => {
+    expect(passwordValidation("lowercase1!", previousPasswords)).toBe(false);
+  });
+
+  test("returns false for a password without lowercase letters", () => {
+    expect(passwordValidation("UPPERCASE1!", previousPasswords)).toBe(false);
+  });
+
+  test("returns true for a valid password with special characters", () => {
+    expect(passwordValidation("Valid1#Pass", previousPasswords)).toBe(true);
+  });
+});
