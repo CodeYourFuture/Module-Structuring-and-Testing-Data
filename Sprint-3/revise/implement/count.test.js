@@ -34,3 +34,9 @@ test("should count overlapping occurrences of char", () => {
 test("should return 0 when char is not found", () => {
   expect(countChar("abc", "z")).toEqual(0);
 });
+
+describe("No Occurrences", () => {
+  it("should return 0 when char is not found", () => {
+    expect(countChar("abc", "z")).toEqual(0);
+  });
+});
