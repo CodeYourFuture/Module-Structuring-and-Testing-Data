@@ -21,7 +21,11 @@ function passwordValidator(password, passwords){
      }
 }
 
+<<<<<<< HEAD
 module.exports = passwordValidator;
+=======
+module.exports = pass
+>>>>>>> 8b1b59c (Created a password validator function and got to work properly)
 
 let  passwords = ["Si@#M3.pro!*z4"];
 
