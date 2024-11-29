@@ -63,7 +63,16 @@ assertEquals(aceofClubs, 11);
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 const invalidCard = "X♦";
-assertEquals(invalidCard, "Invalid card rank.");
+try {
+  getCardValue(invalidCard);
+} catch (error) {
+  console.log(error.message);
+}
+// Simply returning a message would have been fine
+// But the task specifically asked for an error to be thrown
+// So here's a way to do that
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
 
 // My questions
 // What about the suit? In our function we are only looking at the rank of the card.
