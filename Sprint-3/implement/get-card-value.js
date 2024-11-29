@@ -29,3 +29,41 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(_card) {
+    // Remove the suit (emoji) from the card string
+    _card = _card.slice(0, -1);
+    
+    // Map for card values: numbers 2-9, J, Q, K, 10, A
+    const cardValues = {
+        'A': 11,
+        '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10,
+        'J': 10, 'Q': 10, 'K': 10
+    };
+
+    // Check if the card rank is valid
+    if (!(cardValues.hasOwnProperty(_card))) {
+        throw new Error("Invalid card rank"); // Throw an error for invalid card ranks
+    }
+
+    // Return the corresponding value from the cardValues map
+    return cardValues[_card];
+}
+
+// Assertions for valid inputs
+console.assert(getCardValue("A♠") === 11, "Should display 11");
+console.assert(getCardValue("10♣") === 10, "Should display 10");
+console.assert(getCardValue("9♠") === 9, "Should display 9");
+
+// Assertions for invalid inputs (Expecting errors)
+try {
+    getCardValue("12♦");
+} catch (e) {
+    console.assert(e.message === "Invalid card rank", "Should throw 'Invalid card rank' error");
+}
+
+try {
+    getCardValue("hello");
+} catch (e) {
+    console.assert(e.message === "Invalid card rank", "Should throw 'Invalid card rank' error");
+}

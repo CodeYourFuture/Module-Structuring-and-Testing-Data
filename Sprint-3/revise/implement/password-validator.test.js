@@ -14,3 +14,28 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+
+function isPasswordValid(password, previousPasswords) {
+  
+    // Regular expression to validate password
+    var regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!#$%.*&])[a-zA-Z0-9!#$%.*&]{5,}$");
+
+    // Check if password matches the regex
+    if (!regex.test(password)) {
+        return "Invalid password";
+    }
+
+    // Check if password has been used previously
+    if (previousPasswords.includes(password)) {
+        return "Password has been used before";
+    }
+
+    return "Password is valid";
+}
+
+let previousPasswords = ["Hello1!", "BakiHama*", "Death#", "HitmaN47", "uNKNW0!"];
+
+console.log(isPasswordValid("acdeA9!", previousPasswords));  // Output: Valid password
+console.log(isPasswordValid("Hello1!", previousPasswords));  // Output: Password has been used before
+console.log(isPasswordValid("NewPassword1!", previousPasswords));  // Output: Password is valid
