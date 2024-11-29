@@ -23,3 +23,24 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+function repeatString (str, count){
+    if (count === 1){
+        return str;
+    } else if (count === 0){
+        return "";
+    } else if (count < 0){
+        throw new RangeError(`Count (${count}) is negative and not valid)`);
+    }
+
+    return str.repeat(count);
+}
+
+console.log(repeatString("Prati", 1)); 
+console.log(repeatString("Prati", 0)); 
+console.log(repeatString("Prati", 5));
+try {
+  console.log(repeatString("Prati", -2));
+} catch (error) {
+  console.error(error.message); 
+}
