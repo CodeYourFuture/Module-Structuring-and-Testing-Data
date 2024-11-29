@@ -5,10 +5,12 @@ function isPrime(num){
     
     for(let i = 2; i <= Math.sqrt(num); i++ ){
         if(num % i === 0){
-            return `${num} in not prime`;
+            return `${num} is not prime`;
         }
     }
     return `${num} is prime!`
 }
 
-console.log(isPrime(5));
+module.exports = isPrime;
+
+console.log(isPrime(2));
