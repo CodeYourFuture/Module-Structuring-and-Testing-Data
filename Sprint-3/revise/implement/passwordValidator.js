@@ -1,7 +1,7 @@
 function passwordValidator(password, passwords){
 
     if(password.length < 5){
-        return "Password invalid";
+        return false;
      }
 
      if(passwords.includes(password)){
@@ -15,13 +15,13 @@ function passwordValidator(password, passwords){
      const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!#@$%&*.]).+$/;
 
      if(regex.test(password)){
-        return "Password valid";
+        return true;
      }else{
-        return "Password invalid";
+        return false;
      }
 }
 
-module.exports = pass
+module.exports = passwordValidator;
 
 let  passwords = ["Si@#M3.pro!*z4"];
 
