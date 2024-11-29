@@ -1,9 +1,10 @@
 // Predict and explain first...
 
-const num = 103;
+// const num = 103; this variable is a universal one. function needs its local variable.
 
-function getLastDigit() {
-  return num.toString().slice(-1);
+function getLastDigit(num) {
+  let lastDigit = num.toString().slice(-1);
+  return lastDigit;
 }
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
