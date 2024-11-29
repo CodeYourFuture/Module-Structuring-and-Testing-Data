@@ -14,3 +14,30 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+const passwordValidator = require("./passwordValidator");
+
+
+test('Checks if password is valid', () => {
+    const passwords =[];
+    const currentOutput = passwordValidator("Bad@11.#You%", passwords);
+    const targetOutput = true;
+
+    expect(currentOutput).toBe(targetOutput);
+});
+
+test('Checks if password is already used', () => {
+    const passwords = ["Si@#M3.pro!*z4"];
+    const currentOutput = passwordValidator("Si@#M3.pro!*z4", passwords);
+    const targetOutput = "Password is already used";
+
+    expect(currentOutput).toBe(targetOutput);
+});
+
+test('Checks if password has at least 5 characters', () => {
+    const passwords = [];
+    const currentOutput = passwordValidator("B1@#", passwords);
+    const targetOutput = false;
+
+    expect(currentOutput).toBe(targetOutput);
+});
