@@ -57,7 +57,7 @@ function rotateChar(char, shift) {
 }
 
 console.log(rotateChar("a", 3)); // Output: "d"
-console.log(rotateChar("f", 1)); // Output: "g"
+console.log(rotateChar("e", 2)); // Output: "g"
 console.log(rotateChar("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateChar("Y", 2)); // Output: "A" (preserves case, but wraps around)
 console.log(rotateChar("7", 5)); // Output: "7" (unchanged, not a letter)
