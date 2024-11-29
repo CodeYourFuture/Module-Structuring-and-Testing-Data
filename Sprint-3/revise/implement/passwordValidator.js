@@ -21,6 +21,8 @@ function passwordValidator(password, passwords){
      }
 }
 
+module.exports = pass
+
 let  passwords = ["Si@#M3.pro!*z4"];
 
 console.log(passwordValidator("Bad@11.#You%", passwords));
