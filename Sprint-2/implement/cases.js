@@ -14,17 +14,14 @@
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
 
-const convertToUpperCamelCase = input => {
-    return input.split( ' ' ).map( str => str.toUpperCase() ).join( '_' );
+function convertToSnakeCase(characters) {
+  const addUnderScores = characters.replaceAll(" ", "_");
+  return addUnderScores.toUpperCase();
 }
 
-// .split( ' ' ) splits the string at each space and adds each element to an array
-// "lord of the rings" will therefore become [ "lord", "of", "the", "rings" ]
+// these are common string methods I found to help me change the string to snake case
 
-// .map() will loop over each element in the array, and return the result of str.toUpperCase() to a new array.
-// [ "lord", "of", "the", "rings" ] will therefore become [ "LORD", "OF", "THE", "RINGS" ]
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
-// .join( '_' ) will convert the values in an array to a string, joining each element in the array with the value provided, in this case an underscore
-// [ "LORD", "OF", "THE", "RINGS" ] will therefore become "LORD_OF_THE_RINGS"
-
-console.log( convertToUpperCamelCase( "lord of the rings" ) )
+console.log(convertToSnakeCase("lord of the rings"));
