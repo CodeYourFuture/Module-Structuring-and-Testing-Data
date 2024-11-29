@@ -1,4 +1,12 @@
-# 🧭 Guide to week 2 exercises
+# 🧭 Guide to sprint 2 exercises
+
+> https://programming.codeyourfuture.io/structuring-data/sprints/2/prep/
+
+> [!TIP]
+> You should always do the prep work _before_ attempting the coursework.
+> The prep shows you how to do the coursework.
+> There is often a step by step video you can code along with too.
+> Do the prep.
 
 ## Errors
 
