@@ -44,13 +44,6 @@ assertEquals(aceofSpades, 11);
 const fiveofHearts = getCardValue("5♥");
 assertEquals(fiveofHearts, 5);
 
-try {
-  const fiveofHearts = getCardValue("5♥");
-  console.assert(fiveofHearts === 5, `Expected 5 for 5♥, got: ${fiveofHearts}`);
-} catch (error) {
-  console.error(error.message);
-}
-
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
@@ -58,25 +51,8 @@ try {
 const queenofClubs = getCardValue("Q♣");
 assertEquals(queenofClubs, 10);
 
-try {
-  const queenofClubs = getCardValue("Q♣");
-  console.assert(
-    queenofClubs === 10,
-    `Expected 10 for Q♣, got: ${queenofClubs}`
-  );
-} catch (error) {
-  console.error(error.message);
-}
-
-try {
-  const tenofDiamonds = getCardValue("10♦");
-  console.assert(
-    tenofDiamonds === 10,
-    `Expected 10 for 10♦, got: ${tenofDiamonds}`
-  );
-} catch (error) {
-  console.error(error.message);
-}
+const tenofDiamonds = getCardValue("10♦");
+assertEquals(tenofDiamonds, 10);
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
@@ -85,23 +61,12 @@ try {
 const aceofClubs = getCardValue("A♣");
 assertEquals(aceofClubs, 11);
 
-try {
-  const aceofClubs = getCardValue("A♣");
-  console.assert(aceofClubs === 11, `Expected 11 for A♣, got: ${aceofClubs}`);
-} catch (error) {
-  console.error(error.message);
-}
-
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 const invalidCard = "X♦";
-try {
-  getCardValue(invalidCard);
-} catch (error) {
-  console.log(error.message);
-}
+
 // Simply returning a message would have been fine
 // But the task specifically asked for an error to be thrown
 // So here's a way to do that
