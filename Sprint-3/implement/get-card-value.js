@@ -20,33 +20,33 @@ function getCardValue(card) {
 }
 
 try {
-    console.assert(getCardValue("2♠") === 2, "Test case 1 failed");
-    console.assert(getCardValue("9♥") === 9, "Test case 2 failed");
-    console.assert(getCardValue("10♦") === 10, "Test case 3 failed");
-    console.assert(getCardValue("J♣") === 10, "Test case 4 failed");
-    console.assert(getCardValue("Q♠") === 10, "Test case 5 failed");
-    console.assert(getCardValue("K♥") === 10, "Test case 6 failed");
-    console.assert(getCardValue("A♦") === 11, "Test case 7 failed");
+    console.assert(getCardValue("2♠") === 2, "Failed: Expected value for '2♠' is 2");
+    console.assert(getCardValue("9♥") === 9, "Failed: Expected value for '9♥' is 9");
+    console.assert(getCardValue("10♦") === 10, "Failed: Expected value for '10♦' is 10");
+    console.assert(getCardValue("J♣") === 10, "Failed: Expected value for 'J♣' is 10");
+    console.assert(getCardValue("Q♠") === 10, "Failed: Expected value for 'Q♠' is 10");
+    console.assert(getCardValue("K♥") === 10, "Failed: Expected value for 'K♥' is 10");
+    console.assert(getCardValue("A♦") === 11, "Failed: Expected value for 'A♦' is 11");
 
     try {
         getCardValue("1♠");
-        console.assert(false, "Test case 8 failed - invalid card rank should throw");
+        console.assert(false, "Failed: '1♠' should throw an error for invalid rank");
     } catch (e) {
-        console.assert(e.message === "Invalid card rank", "Test case 8 failed");
+        console.assert(e.message === "Invalid card rank", `Failed: Expected 'Invalid card rank' for '1♠', but got '${e.message}'`);
     }
 
     try {
         getCardValue("Z♣");
-        console.assert(false, "Test case 9 failed - invalid card rank should throw");
+        console.assert(false, "Failed: 'Z♣' should throw an error for invalid rank");
     } catch (e) {
-        console.assert(e.message === "Invalid card rank", "Test case 9 failed");
+        console.assert(e.message === "Invalid card rank", `Failed: Expected 'Invalid card rank' for 'Z♣', but got '${e.message}'`);
     }
 
     try {
         getCardValue("♣");
-        console.assert(false, "Test case 10 failed - invalid card format should throw");
+        console.assert(false, "Failed: '♣' should throw an error for invalid format");
     } catch (e) {
-        console.assert(e.message === "Invalid card format", "Test case 10 failed");
+        console.assert(e.message === "Invalid card format", `Failed: Expected 'Invalid card format' for '♣', but got '${e.message}'`);
     }
 
     console.log("All test cases passed!");
