@@ -62,8 +62,8 @@ test("Invalid credit card: more than 16 digits (12345678901234567)", () => {
     expect(validateCreditCard("12345678901234567")).toBe(false);
 });
 
-test("Invalid credit card: less than 16 digits (123456789012345)", () => {
-    expect(validateCreditCard("123456789012345")).toBe(false);
+test("Invalid credit card: less than 16 digits (1234567890)", () => {
+    expect(validateCreditCard("1234567890")).toBe(false);
 });
 
 test("Valid credit card: exactly 16 digits (1234567890123456)", () => {
