@@ -13,3 +13,14 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function toUpperSnakeCase(inputString) {
+  // Split the string by spaces, convert each word to uppercase, and join with underscores
+  return inputString
+    .split(" ")
+    .map((word) => word.toUpperCase())
+    .join("_");
+}
+
+console.log(toUpperSnakeCase("hello there"));
+console.log(toUpperSnakeCase("lord of the rings"));

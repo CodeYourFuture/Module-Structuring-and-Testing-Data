@@ -8,3 +8,12 @@ function square(3) {
 }
 
 
+// We get SyntaxError: Unexpected number
+// We are trying to use 3 as the function parameter, but JavaScript expects a parameter name in the function definition and we cannot pass a value directly into the function definition
+// Instead we can use num as parameter, and we can call square(3) without errors like this:
+
+function square(num) {
+    return num * num;
+}
+
+console.log(square(3));
