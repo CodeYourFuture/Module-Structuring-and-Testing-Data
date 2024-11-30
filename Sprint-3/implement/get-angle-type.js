@@ -27,17 +27,16 @@
 // Then the function should return "Reflex angle"
 
 const getAngleType = (angleInDegree) => {
-    if (angleInDegree === 90) {
+    if (angleInDegree === 90) 
       return "Right angle";
-    } else if (angleInDegree < 90) {
+    else if (angleInDegree < 90) 
       return "Acute angle";
-    } else if (angleInDegree > 90 && angleInDegree < 180) {
+    else if (angleInDegree > 90 && angleInDegree < 180) 
       return "Obtuse angle";
-    } else if (angleInDegree === 180) {
+    else if (angleInDegree === 180)
       return "Straight angle";
-    } else if (angleInDegree > 180 && angleInDegree < 360) {
+    else if (angleInDegree > 180 && angleInDegree < 360) 
       return "Reflex angle";
-    } else {
-      return "Invalid angle";  // In case angle is not in the expected range
-    }
+      return "Invalid angle";
+    
   };
