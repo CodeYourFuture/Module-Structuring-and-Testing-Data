@@ -39,44 +39,28 @@ Good luck!
 
 //.....Answer......
 
-const validateCreditCard = (cardNumber) => {
-   
-    if (cardNumber.length !== 16) 
-        return false; 
-
-    // Check if the card number contains only digits 
+function isValidCreditCard(cardNumber) {
+    if (cardNumber.length !== 16 || typeof cardNumber !== 'string') 
+        return false;
+    // check all are digits
     for (let i = 0; i < cardNumber.length; i++) {
-        if (cardNumber[i] < '0' || cardNumber[i] > '9') 
-            return false;  
-    }
-
-    // Check if there are at least two different digits
-    let hasDifferentDigits = false;
-    for (let i = 0; i < cardNumber.length; i++) {
-        for (let j = i + 1; j < cardNumber.length; j++) {
-            if (cardNumber[i] !== cardNumber[j]) {
-                hasDifferentDigits = true;
-                break;
-            }
+        const charCode = cardNumber.charCodeAt(i);
+        if (charCode < 48 || charCode > 57) { // ASCII range for '0' to '9'
+            return false;
         }
-        if (hasDifferentDigits) break;
     }
-    if (!hasDifferentDigits) 
-        return false; // Invalid: All digits are the same
-    
-
-    // Check if the last digit is even
-    const lastDigit = cardNumber[cardNumber.length - 1];
-    if (lastDigit % 2 !== 0) 
-        return false; 
-
-    // Check if the sum of the digits is greater than 16
-    let sum = 0;
-    for (let i = 0; i < cardNumber.length; i++)
-        sum += +cardNumber[i]; 
-    
-    if (sum <= 16) 
-    return false; 
+    const digits = cardNumber.split('').map(Number);
+    const uniqueDigits = [...new Set(digits)];
+    if (uniqueDigits.length < 2) 
+        return false;
+    if (digits[15] % 2 !== 0) 
+        return false;
+    const digitSum = digits.reduce((sum, digit) => sum + digit, 0);
+    if (digitSum <= 16) {
+        return false;
+    }
     return true;
-};
+}
+
+
 
