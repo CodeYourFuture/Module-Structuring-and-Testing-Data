@@ -14,9 +14,18 @@
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
 function UPPER_SNAKE_CASE(str){
-    
-    let arr=str.split(" ").map(a => a.toUpperCase());
-    
-    return arr.join('_');
+
+    let arr=str.split(" ");
+    let result="";
+    for(let i=0;i<arr.length;i++){
+        arr[i]=arr[i].toUpperCase();
+        if(i !== arr.length-1)
+            arr[i]+="_";
+        result+=arr[i];
+
+    }
+        
+    return result;
 }
 console.log(UPPER_SNAKE_CASE("hi cyf london"));
+console.log(UPPER_SNAKE_CASE("lovely"));
