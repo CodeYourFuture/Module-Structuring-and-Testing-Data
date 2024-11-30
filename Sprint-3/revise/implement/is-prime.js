@@ -1,14 +1,26 @@
 function isPrime(num) {
+    // Check if num is less than or equal to 1
     if (num <= 1) return false;
-    
-    for (let i = 2; i <= Math.sqrt(num); i++) {
+
+    // Special case for 2
+    if (num === 2) return true;
+
+    // Skip even numbers greater than 2
+    if (num % 2 === 0) return false;
+
+    // Calculate the square root of num once
+    const sqrtNum = Math.sqrt(num);
+
+    // Check divisors starting from 3, incrementing by 2 (only odd numbers)
+    for (let i = 3; i <= sqrtNum; i += 2) {
         if (num % i === 0) return false;
     }
-    
+
     return true;
 }
 
 module.exports = isPrime;
+
 
 //Feedback 
  //PASS  ./is-prime.test.js
