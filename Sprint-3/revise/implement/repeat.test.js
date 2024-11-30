@@ -23,3 +23,36 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+
+
+/**
+ * Repeats a target string a specified number of times.
+ * @param {string} str - The target string to repeat.
+ * @param {number} count - The number of times to repeat the string.
+ * @returns {string} The repeated string or an error for invalid input.
+ */
+function repeat(str, count) {
+    // Ensure the count is a non-negative integer
+    if (typeof count !== "number" || count < 0) {
+        throw new Error("Count must be a non-negative integer.");
+    }
+
+    // If count is 0, return an empty string
+    if (count === 0) {
+        return "";
+    }
+
+    // Repeat the string 'count' times
+    return str.repeat(count);
+}
+
+// Example Usage
+console.log(repeat("hello", 3));  // Output: "hellohellohello"
+console.log(repeat("test", 1));   // Output: "test"
+console.log(repeat("empty", 0));  // Output: ""
+try {
+    console.log(repeat("error", -1)); // Throws an error
+} catch (e) {
+    console.error(e.message);       // Output: "Count must be a non-negative integer."
+}
