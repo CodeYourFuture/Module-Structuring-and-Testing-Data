@@ -45,3 +45,32 @@ const getCardValue = (card) => {
     throw error; // Throw the error 
     */
 };
+
+// Test assertions
+function caseTestes() {
+    
+    console.assert(getCardValue("J❤️") === 10, "Test Case 1 Failed");
+    console.assert(getCardValue("Q♣") === 10, "Test Case 2 Failed");
+    console.assert(getCardValue("K♠") === 10, "Test Case 3 Failed");
+    console.assert(getCardValue("A♥") === 11, "Test Case 4 Failed");
+    console.assert(getCardValue("2♠") === 2, "Test Case 5 Failed");
+    console.assert(getCardValue("9♥") === 9, "Test Case 6 Failed");
+
+    try {
+        getCardValue("1♣");
+        console.assert(false, "Test Case 7 Failed"); 
+    } catch (error) {
+        console.assert(error.message === "Invalid card rank", "Test Case 7 Failed");
+    }
+
+    try {
+        getCardValue("Z♦");
+        console.assert(false, "Test Case 8 Failed"); 
+    } catch (error) {
+        console.assert(error.message === "Invalid card rank", "Test Case 8 Failed");
+    }
+
+    console.log("All test cases passed!");
+}
+
+caseTestes();
