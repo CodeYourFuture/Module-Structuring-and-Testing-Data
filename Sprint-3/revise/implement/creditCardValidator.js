@@ -28,3 +28,4 @@ console.log(validateCreditCard("a92332119c011112")); // false (invalid character
 console.log(validateCreditCard("4444444444444444")); // false (only one type of number)
 console.log(validateCreditCard("1111111111111110")); // false (sum less than 16)
 console.log(validateCreditCard("6666666666666661")); // false (odd final number)
+console.log(validateCreditCard(11111111111111111)); //true
