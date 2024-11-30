@@ -16,9 +16,27 @@ function isPrime(num) {
   return `${num} is a prime number`;
 }
 
-console.log(isPrime(1)); // Output: "1 is not a prime number"
-console.log(isPrime(2)); // Output: "2 is a prime number"
-console.log(isPrime(3)); // Output: "3 is a prime number"
-console.log(isPrime(4)); // Output: "4 is not a prime number"
-console.log(isPrime(17)); // Output: "17 is a prime number"
-console.log(isPrime(18)); // Output: "18 is not a prime number"
+console.assert(
+  isPrime(1) === "1 is not a prime number",
+  "Test failed: 1 should not be a prime number"
+);
+console.assert(
+  isPrime(2) === "2 is a prime number",
+  "Test failed: 2 should be a prime number"
+);
+console.assert(
+  isPrime(3) === "3 is a prime number",
+  "Test failed: 3 should be a prime number"
+);
+console.assert(
+  isPrime(4) === "4 is not a prime number",
+  "Test failed: 4 should not be a prime number"
+);
+console.assert(
+  isPrime(17) === "17 is a prime number",
+  "Test failed: 17 should be a prime number"
+);
+console.assert(
+  isPrime(18) === "18 is not a prime number",
+  "Test failed: 18 should not be a prime number"
+);

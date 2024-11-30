@@ -27,9 +27,27 @@ function countChar(str, char) {
   return `${char} appears ${count} times in "${str}"`;
 }
 
-console.log(countChar("laka", "a")); // a appears 2 times in "laka"
-console.log(countChar("luke", "u")); // u appears 1 times in "luke"
-console.log(countChar("heLLo", "l")); // l appears 0 times in "hello"
-console.log(countChar("banana", "a")); // a appears 3 times in "banana"
-console.log(countChar("abc", "z")); // z appears 0 times in "abc"
-console.log(countChar("Mississippi", "s")); // s appears 4 times in "Mississippi"
+console.assert(
+  countChar("laka", "a") === 2,
+  'Test failed: "a" should appear 2 times in "laka"'
+);
+console.assert(
+  countChar("luke", "u") === 1,
+  'Test failed: "u" should appear 1 time in "luke"'
+);
+console.assert(
+  countChar("heLLo", "l") === 0,
+  'Test failed: "l" should appear 0 times in "heLLo" (case-sensitive)'
+);
+console.assert(
+  countChar("banana", "a") === 3,
+  'Test failed: "a" should appear 3 times in "banana"'
+);
+console.assert(
+  countChar("abc", "z") === 0,
+  'Test failed: "z" should appear 0 times in "abc"'
+);
+console.assert(
+  countChar("Mississippi", "s") === 4,
+  'Test failed: "s" should appear 4 times in "Mississippi"'
+);

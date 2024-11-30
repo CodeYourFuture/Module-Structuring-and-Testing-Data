@@ -36,7 +36,22 @@ function repeatStr(str, count) {
   return str.repeat(count);
 }
 
-console.log(repeatStr("Luke", 0));
-console.log(repeatStr("Luke", 1));
-console.log(repeatStr("Luke", 4));
-console.log(repeatStr("Luke", -3));
+console.assert(
+  repeatStr("Luke", 0) === "",
+  'Test failed: "Luke" repeated 0 times should return an empty string'
+);
+
+console.assert(
+  repeatStr("Luke", 1) === "Luke",
+  'Test failed: "Luke" repeated 1 time should return "Luke"'
+);
+
+console.assert(
+  repeatStr("Luke", 4) === "LukeLukeLukeLuke",
+  'Test failed: "Luke" repeated 4 times should return "LukeLukeLukeLuke"'
+);
+
+console.assert(
+  repeatStr("Luke", -3) === "",
+  "Test failed: Negative repetition (-3) should return an empty string"
+);

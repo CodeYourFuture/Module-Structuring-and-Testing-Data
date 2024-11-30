@@ -65,12 +65,53 @@ function isCreditCardValid(creditCardNumber) {
   return "True";
 }
 
-console.log(isCreditCardValid("12345678901234b6")); // Invalid: Must be exactly 16 digits, all numbers
-console.log(isCreditCardValid("1111111111111111")); // Invalid: The last digit must be even
-console.log(isCreditCardValid("1234567890123455")); // Invalid: The last digit must be even
-console.log(isCreditCardValid("0000000000000000")); // Invalid: The sum of all the digits must be greater than 16
-console.log(isCreditCardValid("1234567890123452")); // True
-console.log(isCreditCardValid("2222222222222222")); // Invalid: Must have 2 at least different digits
-console.log(isCreditCardValid("8765432109876544")); // True
-console.log(isCreditCardValid(1234567890123456)); // True
-console.log(isCreditCardValid("12345678901234")); // Invalid: Must be exactly 16 digits, all numbers
+console.assert(
+  isCreditCardValid("12345678901234b6") ===
+    "Invalid: Must be exactly 16 digits, all numbers",
+  'Test failed: "12345678901234b6" should be invalid due to non-numeric character'
+);
+
+console.assert(
+  isCreditCardValid("1111111111111111") ===
+    "Invalid: The last digit must be even",
+  'Test failed: "1111111111111111" should be invalid because the last digit is not even'
+);
+
+console.assert(
+  isCreditCardValid("1234567890123455") ===
+    "Invalid: The last digit must be even",
+  'Test failed: "1234567890123455" should be invalid because the last digit is not even'
+);
+
+console.assert(
+  isCreditCardValid("0000000000000000") ===
+    "Invalid: The sum of all the digits must be greater than 16",
+  'Test failed: "0000000000000000" should be invalid because the sum is not greater than 16'
+);
+
+console.assert(
+  isCreditCardValid("1234567890123452") === true,
+  'Test failed: "1234567890123452" should be valid'
+);
+
+console.assert(
+  isCreditCardValid("2222222222222222") ===
+    "Invalid: Must have at least 2 different digits",
+  'Test failed: "2222222222222222" should be invalid due to lack of digit variation'
+);
+
+console.assert(
+  isCreditCardValid("8765432109876544") === true,
+  'Test failed: "8765432109876544" should be valid'
+);
+
+console.assert(
+  isCreditCardValid(1234567890123456) === true,
+  "Test failed: 1234567890123456 should be valid"
+);
+
+console.assert(
+  isCreditCardValid("12345678901234") ===
+    "Invalid: Must be exactly 16 digits, all numbers",
+  'Test failed: "12345678901234" should be invalid due to incorrect length'
+);
