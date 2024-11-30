@@ -34,4 +34,7 @@ function isValidPassword(password, previousPasswords) {
 
 // Sample list of previous passwords
 const previousPasswords = ["password123", "abc123", "welcome1"];
+
+// Export both the function and the previousPasswords array
 module.exports = isValidPassword;
+
