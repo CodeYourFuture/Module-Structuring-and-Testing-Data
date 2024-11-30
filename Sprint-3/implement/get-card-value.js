@@ -41,7 +41,7 @@ try {
 console.log(getCardValue("A♠"));
 console.log(getCardValue("7♥"));
 console.log(getCardValue("10♦"));
-console.log(getCardValue("1♦"));
+// console.log(getCardValue("1♦"));
 
 // Acceptance criteria:
 
