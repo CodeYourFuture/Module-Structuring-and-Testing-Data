@@ -10,8 +10,9 @@
 //......Answer......
 
 const rotateCharacter = (char, shift) => {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-    const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   const alphabet = String.fromCharCode(...Array.from({ length: 26 }, (_, i) => i + 97)); // 'abcdefghijklmnopqrstuvwxyz'
+   const ALPHABET = String.fromCharCode(...Array.from({ length: 26 }, (_, i) => i + 65)); // 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
     // Handle lower letters
     if (alphabet.includes(char)) {
         const index = (alphabet.indexOf(char) + shift) % 26;
