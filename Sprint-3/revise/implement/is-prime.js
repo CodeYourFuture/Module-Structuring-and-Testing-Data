@@ -22,6 +22,7 @@ function isPrime(num) {
 module.exports = isPrime;
 
 
+
 //Feedback 
  //PASS  ./is-prime.test.js
   //isPrime
