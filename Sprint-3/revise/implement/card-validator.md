@@ -33,3 +33,34 @@ These are the requirements your project needs to fulfill:
 - Return a boolean from the function to indicate whether the credit card number is valid.
 
 Good luck!
+
+
+
+
+//.....Answer......
+
+function isValidCreditCard(cardNumber) {
+    if (cardNumber.length !== 16 || typeof cardNumber !== 'string') 
+        return false;
+    // check all are digits
+    for (let i = 0; i < cardNumber.length; i++) {
+        const charCode = cardNumber.charCodeAt(i);
+        if (charCode < 48 || charCode > 57) { // ASCII range for '0' to '9'
+            return false;
+        }
+    }
+    const digits = cardNumber.split('').map(Number);
+    const uniqueDigits = [...new Set(digits)];
+    if (uniqueDigits.length < 2) 
+        return false;
+    if (digits[15] % 2 !== 0) 
+        return false;
+    const digitSum = digits.reduce((sum, digit) => sum + digit, 0);
+    if (digitSum <= 16) {
+        return false;
+    }
+    return true;
+}
+
+
+

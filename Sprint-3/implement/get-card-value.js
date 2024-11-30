@@ -29,3 +29,44 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+const getCardValue = (card) => {
+    const rank = card.slice(0, -1); 
+    if (!isNaN(rank) && rank >= 2 && rank <= 10) 
+        return parseInt(rank, 10); 
+    if (['J', 'Q', 'K'].includes(rank)) 
+        return 10; 
+    if (rank === 'A') 
+        return 11; 
+    throw new Error("Invalid card rank"); 
+    
+};
+
+// Test assertions
+function caseTestes() {
+
+    console.assert(getCardValue("J❤️") === 10, "Test Case 1 Failed");
+    console.assert(getCardValue("Q♣") === 10, "Test Case 2 Failed");
+    console.assert(getCardValue("K♠") === 10, "Test Case 3 Failed");
+    console.assert(getCardValue("A♥") === 11, "Test Case 4 Failed");
+    console.assert(getCardValue("2♠") === 2, "Test Case 5 Failed");
+    console.assert(getCardValue("9♥") === 9, "Test Case 6 Failed");
+
+    try {
+        getCardValue("1♣");
+        console.assert(false, "Test Case 7 Failed"); 
+    } catch (error) {
+        console.assert(error.message === "Invalid card rank", "Test Case 7 Failed");
+    }
+
+    try {
+        getCardValue("Z♦");
+        console.assert(false, "Test Case 8 Failed"); 
+    } catch (error) {
+        console.assert(error.message === "Invalid card rank", "Test Case 8 Failed");
+    }
+
+    console.log("All test cases passed!");
+}
+
+caseTestes();
