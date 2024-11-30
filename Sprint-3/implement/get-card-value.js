@@ -39,16 +39,12 @@ const getCardValue = (card) => {
     if (rank === 'A') 
         return 11; 
     throw new Error("Invalid card rank"); 
-    /*
-    const error = new Error("Invalid card rank");  //create the error
-    console.error(error); // Log the error
-    throw error; // Throw the error 
-    */
+    
 };
 
 // Test assertions
 function caseTestes() {
-    
+
     console.assert(getCardValue("J❤️") === 10, "Test Case 1 Failed");
     console.assert(getCardValue("Q♣") === 10, "Test Case 2 Failed");
     console.assert(getCardValue("K♠") === 10, "Test Case 3 Failed");
