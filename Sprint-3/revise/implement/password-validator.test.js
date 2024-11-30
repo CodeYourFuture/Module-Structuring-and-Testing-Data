@@ -40,15 +40,15 @@ function isValidPassword(password) {
       hasUppercase = true;
     }
     // Check if the password has an lowercase letter
-    else if (char >= 'a' && char <= 'z') {
+    if (char >= 'a' && char <= 'z') {
       hasLowercase = true;
     }
     // Check if the password has a number
-    else if (char >= '0' && char <= '9') {
+    if (char >= '0' && char <= '9') {
       hasNumber = true;
     }
     // Check if the password has a special character
-    else if (['!', '#', '$', '%', '.', '*', '&'].includes(char)) {
+    if (['!', '#', '$', '%', '.', '*', '&'].includes(char)) {
       hasSpecialChar = true;
     }
   }
