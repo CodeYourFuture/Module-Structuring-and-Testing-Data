@@ -43,36 +43,22 @@ console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps 
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
 
 function rotateCharacter(char, n) {
-  if (!/^[a-zA-Z]$/.test(char)) return "Unchanged, not a letter";
-
-  const charCode = char.charCodeAt();
-  const shift = n % 26; //
-
-  if (charCode >= 97 && charCode <= 122) {
-    let newCharCode = charCode + shift;
-    if (newCharCode > 122) {
-      newCharCode = newCharCode - 26;
-      return `Output: ${String.fromCharCode(
-        newCharCode
-      )} (preserves case, but wraps around)`;
-    } else {
-      return String.fromCharCode(newCharCode);
-    }
-  } else if (charCode >= 65 && charCode <= 90) {
-    let newCharCode = charCode + shift;
-
-    if (newCharCode > 90) {
-      newCharCode = newCharCode - 26;
-      return `Output: ${String.fromCharCode(
-        newCharCode
-      )} (preserves case, but wraps around)`;
-    } else {
-      return String.fromCharCode(newCharCode);
-    }
+  const shift = n % 26;
+  // Lowercase letters
+  if (/[a-z]/.test(char)) {
+    const newCharCode = ((char.charCodeAt() - 97 + shift) % 26) + 97;
+    return String.fromCharCode(newCharCode);
   }
+  // Uppercase letters
+  if (/[A-Z]/.test(char)) {
+    const newCharCode = ((char.charCodeAt() - 65 + shift) % 26) + 65;
+    return String.fromCharCode(newCharCode);
+  }
+
+  return char;
 }
 
-console.log(rotateCharacter("C", 1500));
+console.log(rotateCharacter("a", 25));
 
 //********************************************* */
 
