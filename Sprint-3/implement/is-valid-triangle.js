@@ -33,3 +33,47 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+function isValidTriangle(a, b, c) {
+  const sides = [a, b, c];
+  let i = 0;
+
+  while (i < sides.length) {
+    if (sides[i] === 0) {
+      return "False";
+    }
+    i++;
+  }
+
+  if (a + b > c && a + c > b && b + c > a) {
+    return "True";
+  }
+
+  return "False";
+}
+
+console.log(isValidTriangle(0, 3, 4)); // False (one side is zero)
+console.log(isValidTriangle(3, 4, 5)); // True (valid triangle)
+console.log(isValidTriangle(1, 10, 12)); // False (violates triangle inequality)
+console.log(isValidTriangle(5, 5, 5)); // True (equilateral triangle)
+console.log(isValidTriangle(2, 2, 4)); // False (degenerate case)
+
+console.assert(
+  isValidTriangle(0, 3, 4) === "False",
+  "Test Case 1 Failed: One side is zero"
+); // Zero side
+console.assert(
+  isValidTriangle(3, 4, 5) === "True",
+  "Test Case 2 Failed: Valid triangle"
+); // Valid triangle (3-4-5 triangle)
+console.assert(
+  isValidTriangle(1, 10, 12) === "False",
+  "Test Case 3 Failed: Triangle inequality violated"
+); // Inequality violation
+console.assert(
+  isValidTriangle(5, 5, 5) === "True",
+  "Test Case 4 Failed: Equilateral triangle"
+); // Valid equilateral triangle
+console.assert(
+  isValidTriangle(2, 2, 4) === "False",
+  "Test Case 5 Failed: Degenerate case"
+); // Degenerate triangle

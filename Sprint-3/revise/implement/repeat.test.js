@@ -23,3 +23,35 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+function repeatStr(str, count) {
+  if (count === 0) {
+    return "";
+  }
+
+  if (count < 0) {
+    return "Error: cannot repeat negative times";
+  }
+
+  return str.repeat(count);
+}
+
+console.assert(
+  repeatStr("Luke", 0) === "",
+  'Test failed: "Luke" repeated 0 times should return an empty string'
+);
+
+console.assert(
+  repeatStr("Luke", 1) === "Luke",
+  'Test failed: "Luke" repeated 1 time should return "Luke"'
+);
+
+console.assert(
+  repeatStr("Luke", 4) === "LukeLukeLukeLuke",
+  'Test failed: "Luke" repeated 4 times should return "LukeLukeLukeLuke"'
+);
+
+console.assert(
+  repeatStr("Luke", -3) === "",
+  "Test failed: Negative repetition (-3) should return an empty string"
+);
