@@ -1,3 +1,25 @@
+function countChar(str, char) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            count++;
+        }
+    }
+    return count;
+}
+
+test('counts multiple occurrences of a character', () => {
+    expect(countChar('aaaaa', 'a')).toBe(5); // Scenario: Multiple Occurrences
+});
+
+test('returns 0 when character does not occur', () => {
+    expect(countChar('hello', 'z')).toBe(0); // Scenario: No Occurrences
+});
+
+test('normal test', () => {
+    expect(countChar('hello world', 'o')).toBe(2); // Scenario: Normal test
+});
+
 // implement a function countChar that counts the number of times a character occurs in a string
 
 // Given a string str and a single character char to search for,

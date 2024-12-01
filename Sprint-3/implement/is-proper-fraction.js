@@ -1,3 +1,31 @@
+function isProperFraction(numerator, denominator) {
+    if (denominator === 0) {
+        throw new Error("Error (Denominator cannot be zero)");
+    } 
+    return Math.abs(numerator) < Math.abs(denominator);
+}
+
+// Proper Fraction check
+console.assert(isProperFraction(2, 3) === true, "true");
+
+// Improper Fraction check
+console.assert(isProperFraction(5, 2) === false, "false");
+
+// Zero Denominator check
+try {
+    isProperFraction(3, 0);
+} catch (error) {
+    console.assert(error.message === "Error (Denominator cannot be zero", "Error (Denominator cannot be zero)");
+}
+
+// Negative Fraction check
+console.assert(isProperFraction(-4, 7) === true, "true");
+
+// Equal Numerator and Denominator check
+console.assert(isProperFraction(3, 3) === false, "false");
+
+module.exports = { isProperFraction };
+
 // You wil need to implement a function isProperFraction
 // You need to write assertions for your function to check it works in different cases
 

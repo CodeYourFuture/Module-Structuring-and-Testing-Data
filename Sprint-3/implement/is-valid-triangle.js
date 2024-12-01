@@ -1,3 +1,15 @@
+function isValidTriangle(a, b, c) {
+    // Check if any side is less than or equal to zero
+    if (a <= 0 || b <= 0 || c <= 0) {
+        return false;
+    }
+    // Check the Triangle Inequality conditions
+    return a + b > c && a + c > b && b + c > a;
+}
+
+module.exports = { isValidTriangle } ;
+
+
 // Implement a function isValidTriangle
 // Terms
 // the Triangle Inequality says: the sum of any two sides is always greater than the third side.
