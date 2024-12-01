@@ -2,22 +2,9 @@ function repeat(str, count) {
     if (typeof str !== 'string') {
         throw new Error('The first argument must be a string.');
     }
-    if (typeof count !== 'number') {
+    if (typeof count !== 'number' || !Number.isInteger(count) || count < 0) {
         throw new Error('The second argument must be a number.');
     }
-
-    if (count < 0) {
-        throw new Error('Count must be a non-negative integer.');
-    }
-
-    if (count === 0) {
-        return '';
-    }
-
-    if (count === 1) {
-        return str;
-    }
-
     return str.repeat(count);
 }
 
