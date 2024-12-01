@@ -30,4 +30,4 @@ console.log(find("code your future", "z"));
 
 // c) index is used to move to the next position within the string for each iteration of the loop. Without index++, index will not change and index < str.length will always be true and therefore the creating an infinite loop.
 
-// d) str.length refers to the string "code your future", it's output is the number of character within that string there fore str.length will output 16. index < str.length means while index < 16, then repeat the loop.
+// d) str.length provides the total number of characters in the input string. The loop runs until the index reaches this length, ensuring it doesn’t check beyond the string's bounds
