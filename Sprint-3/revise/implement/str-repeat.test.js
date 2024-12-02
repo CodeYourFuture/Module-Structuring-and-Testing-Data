@@ -26,6 +26,10 @@ test("Checks if count of 0 is handled", () => {
     expect(currentOutput).toBe(targetOutput);
 });
 
+test("Throws an error if count is negative", () => {
+    expect(() => strRepeat("plan", -1)).toThrow("Count must be a non-negative integer");
+});
+
 
 
 
