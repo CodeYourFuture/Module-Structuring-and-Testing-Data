@@ -1,5 +1,12 @@
 // Implement a function repeat
 
+function strRepeat(string,integer){
+    
+    for(str of string){
+    
+}
+
+console.log("azania", 3)
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
 // Then it should:
