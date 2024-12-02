@@ -1,10 +1,14 @@
 function strRepeat(string, count){
 
-    if(count <= 0 || !Number.isInteger(count)){
+    if(count === 0){
+        return "";
+    }
+
+    if(!Number.isInteger(count)){
         throw new Error("Count must be a positive integer")
     }
     
-    let results = " ";
+    let results = "";
 
     for(let i = 0; i < count; i++){
         results += string;
@@ -14,4 +18,4 @@ function strRepeat(string, count){
 
 module.exports = strRepeat;
 
-console.log(strRepeat("plan", 1));
+console.log(strRepeat("plan", 0));
