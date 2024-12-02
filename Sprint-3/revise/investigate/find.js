@@ -3,6 +3,7 @@ function find(str, char) {
 
   while (index < str.length) {
     if (str[index] === char) {
+      console.log(str[index]);
       return index;
     }
     index++;
@@ -20,6 +21,10 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+//The index has been updated by incrementing it with index++ in each iteration of the loop.
 // b) What is the if statement used to check
+//The if statement has been used to check if the current character (str[index]) is equal to the given character (char).
 // c) Why is index++ being used?
+//The index++ has been used to increment the index by 1 after each iteration, allowing the loop to move to the next character in the string.
 // d) What is the condition index < str.length used for?
+//The condition index < str.length has been used to ensure the loop continues until the index reaches the end of the string, preventing the loop from accessing invalid indices.
