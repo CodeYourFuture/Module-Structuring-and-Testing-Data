@@ -4,7 +4,7 @@ function strRepeat(string, count){
         return "";
     }
 
-    if(!Number.isInteger(count)){
+    if(count < 0 || !Number.isInteger(count)){
         throw new Error("Count must be a positive integer")
     }
     
