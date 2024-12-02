@@ -19,11 +19,12 @@ function isValidTriangle(a, b, c) {
     if (a + b <= c || a + c <= b || c + b <= a) {
         return false
     }
-    // Check for non-positive side length
+    // Check for non-positive side lengths: A triangle cannot have sides that are zero or negative.
+    // This is a basic mathematical requirement to form a valid triangle.
     if (a <= 0 || b <= 0 || c <= 0) {
         return false
     }
-    // If all checks pass, it's a valid triangle
+    // If all checks pass, the sides form a valid triangle and we return true
     return true;
 }
 
