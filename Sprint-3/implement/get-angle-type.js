@@ -43,7 +43,7 @@ function getAngleType(angle) {
     else if (angle === 180) {
         result = "Straight angle";
     }
-    else if (angle > 180) {
+    else if (angle > 180 && angle < 360) {
         result = "Reflex angle";
     }
     else {
