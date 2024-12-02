@@ -14,4 +14,4 @@ function strRepeat(string, count){
 
 module.exports = strRepeat;
 
-console.log(strRepeat("plan", 3));
+console.log(strRepeat("plan", 1));
