@@ -20,6 +20,10 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+// 1. It updates as it iterates through the str when find() is called and will run / increment at least once while the condition is true or a character match is found.
 // b) What is the if statement used to check
+// 2. It checks if there's a character match, within the string index, and it's found on position 7.
 // c) Why is index++ being used?
+// 3. Index++ is used so that if there's a character match within the string index will increment / start to count up that position.
 // d) What is the condition index < str.length used for?
+// 4. This condition is used to check or track the index's length against the string's length through iteration.  
