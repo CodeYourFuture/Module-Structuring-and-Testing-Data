@@ -2,18 +2,18 @@ function getOrdinalNumber(num) {
     //function will add the correct suffix to the appropriate number with certain conditions
     let ordinal = "";
     if (num > 0) {
-        let StringNum = num.toString();
+        let stringNum = num.toString();
         //Have to account for 11-19 which end with 'th'
         if (num % 100 === 11 || num % 100 === 12 || num % 100 === 13) {
             ordinal = "th";
         }
-        else if (Number(StringNum[StringNum.length - 1]) === 1 || Number(num) === 1) {
+        else if (Number(stringNum[stringNum.length - 1]) === 1) {
             ordinal = "st";
         }
-        else if (Number(StringNum[StringNum.length - 1]) === 2) {
+        else if (Number(stringNum[stringNum.length - 1]) === 2) {
             ordinal = "nd";
         }
-        else if (Number(StringNum[StringNum.length - 1]) === 3) {
+        else if (Number(stringNum[stringNum.length - 1]) === 3) {
             ordinal = "rd";
         }
         else {
@@ -24,7 +24,7 @@ function getOrdinalNumber(num) {
 
 }
 
-// console.log(getOrdinalNumber(1));
+console.log(getOrdinalNumber(1));
 // console.log(getOrdinalNumber(12));
 // console.log(getOrdinalNumber(21));
 // console.log(getOrdinalNumber(33));
