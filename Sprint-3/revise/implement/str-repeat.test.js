@@ -2,6 +2,13 @@
 
 const strRepeat = require("./strRepeat");
 
+test("Checks for repeat string", () => {
+
+    const currentOutput = strRepeat("plan", 3)
+    const targetOutput = " planplanplan";
+
+    expect(currentOutput).toBe(targetOutput);
+})
 
 
 
