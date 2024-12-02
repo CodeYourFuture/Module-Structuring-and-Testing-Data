@@ -25,30 +25,22 @@
 // Function to repeat the string 'str' by 'count' times
 // Function to repeat a string 'str' for a given 'count' times
 
-function repeat(str, count) {
-    // Check if count is a positive integer
-    if (typeof count !== 'number' || count < 0 || !Number.isInteger(count)) {
-        throw new Error("Count must be a non-negative integer");
-    }
+const repeat = require('./repeat'); 
 
-    // Handle count of 0
-    if (count === 0) {
-        return '';
-    }
+describe('repeat function', () => {
+    test('Repeat string multiple times', () => {
+        expect(repeat('hello', 3)).toBe('hellohellohello');
+    });
 
-    // Handle count of 1
-    if (count === 1) {
-        return str;
-    }
+    test('Handle count of 1', () => {
+        expect(repeat('world', 1)).toBe('world');
+    });
 
-    // Return the repeated string
-    return str.repeat(count);
-}
+    test('Handle count of 0', () => {
+        expect(repeat('test', 0)).toBe('');
+    });
 
-
-// Test cases
-console.log(repeat("hello", 5));  // Expected: "hellohellohellohellohello"
-console.log(repeat("world", 0));  // Expected: ""
-console.log(repeat("!", 1));  // Expected: "!"
-console.log(repeat("test", -3));  // Expected: Error "Count must be a non-negative integer"
-console.log(repeat("test", 3.5));  // Expected: Error "Count must be a non-negative integer"
+    test('Handle negative count', () => {
+        expect(() => repeat('oops', -1)).toThrow('Count cannot be negative');
+    });
+});

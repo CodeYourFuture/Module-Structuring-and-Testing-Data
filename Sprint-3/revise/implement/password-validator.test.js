@@ -14,43 +14,42 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-function isValidPassword(password, previousPasswords) {
-  // Rule 1: The password must have at least 5 characters
-  if (password.length < 5) {
-    return false;
-  }
+const validatePassword = require('./password-validator.js');
 
-  // Rule 2: It must have at least one uppercase letter (A-Z)
-  if (!/[A-Z]/.test(password)) {
-    return false;
-  }
+describe('Password Validation', () => {
 
-  // Rule 3: It must have at least one lowercase letter (a-z)
-  if (!/[a-z]/.test(password)) {
-    return false;
-  }
+    const previousPasswords = ["Password1!", "Test123@", "MySecret$"];
 
-  // Rule 4: It must have at least one number (0-9)
-  if (!/[0-9]/.test(password)) {
-    return false;
-  }
+    test('should return false for passwords less than 5 characters', () => {
+        expect(validatePassword("1234", previousPasswords)).toBe(false);
+        expect(validatePassword("abc", previousPasswords)).toBe(false);
+    });
 
-  // Rule 5: It must have at least one non-alphanumeric symbol (e.g., !, #, $, %, etc.)
-  if (!/[\W_]/.test(password)) {
-    return false;
-  }
+    test('should return false if password does not contain an uppercase letter', () => {
+        expect(validatePassword("abcde1!", previousPasswords)).toBe(false);
+    });
 
-  // Rule 6: The password must not be in the previousPasswords array
-  if (previousPasswords.includes(password)) {
-    return false;
-  }
+    test('should return false if password does not contain a lowercase letter', () => {
+        expect(validatePassword("ABCDE1!", previousPasswords)).toBe(false);
+    });
 
-  // If all rules are met, the password is valid
-  return true; 
-}
+    test('should return false if password does not contain a digit', () => {
+        expect(validatePassword("Abcde!", previousPasswords)).toBe(false);
+    });
 
-// Example of usage:
-const previousPasswords = ["Password123!", "12345678", "helloWorld!"];
-console.log(isValidPassword("NewPassword1!", previousPasswords)); // Expected: true
-console.log(isValidPassword("password123", previousPasswords));  // Expected: false
-console.log(isValidPassword("1234", previousPasswords));        // Expected: false
+    test('should return false if password does not contain a special character', () => {
+        expect(validatePassword("Abcde1", previousPasswords)).toBe(false);
+    });
+
+    test('should return false if password matches a previously used password', () => {
+        expect(validatePassword("Password1!", previousPasswords)).toBe(false);
+        expect(validatePassword("Test123@", previousPasswords)).toBe(false);
+        expect(validatePassword("MySecret$", previousPasswords)).toBe(false);
+    });
+
+    test('should return true if password is valid and unique', () => {
+        expect(validatePassword("NewPassword1!", previousPasswords)).toBe(true);
+        expect(validatePassword("Unique123$", previousPasswords)).toBe(true);
+    });
+
+});

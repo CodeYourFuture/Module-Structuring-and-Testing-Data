@@ -4,28 +4,46 @@
 
 // Function to check if a number is prime
 
-function isPrime(num) {
-    // If the number is less than 2, it's not prime
-    if (num < 2) {
-        return false;
-    }
-    
-    // Check if num is divisible by any number between 2 and sqrt(num)
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) {
-            return false; // num is divisible by i, so it's not prime
-        }
-    }
-    return true; // num is prime
-}
+const isPrime = require('./is-prime.js');
 
+describe('isPrime', () => {
 
-// Test cases to validate the isPrime function
+    test('should return false for numbers less than or equal to 1', () => {
+        expect(isPrime(0)).toBe(false);
+        expect(isPrime(1)).toBe(false);
+    });
 
-console.log(isPrime(1));  // Should return false (1 is not prime)
-console.log(isPrime(2));  // Should return true (2 is prime)
-console.log(isPrime(3));  // Should return true (3 is prime)
-console.log(isPrime(4));  // Should return false (4 is not prime)
-console.log(isPrime(11)); // Should return true (11 is prime)
-console.log(isPrime(15)); // Should return false (15 is not prime)
-console.log(isPrime(17)); // Should return true (17 is prime)
+    test('should return true for prime numbers', () => {
+        expect(isPrime(2)).toBe(true); 
+        expect(isPrime(3)).toBe(true); 
+        expect(isPrime(5)).toBe(true); 
+        expect(isPrime(7)).toBe(true); 
+        expect(isPrime(11)).toBe(true); 
+        expect(isPrime(13)).toBe(true); 
+    });
+
+    test('should return false for non-prime numbers', () => {
+        expect(isPrime(4)).toBe(false); 
+        expect(isPrime(6)).toBe(false); 
+        expect(isPrime(8)).toBe(false); 
+        expect(isPrime(9)).toBe(false); 
+        expect(isPrime(10)).toBe(false); 
+    });
+
+    test('should return false for even numbers greater than 2', () => {
+        expect(isPrime(20)).toBe(false); 
+        expect(isPrime(100)).toBe(false); 
+        expect(isPrime(1024)).toBe(false); 
+    });
+
+    test('should return true for large prime numbers', () => {
+        expect(isPrime(29)).toBe(true); 
+        expect(isPrime(97)).toBe(true); 
+        expect(isPrime(997)).toBe(true); 
+    });
+
+    test('should return false for large non-prime numbers', () => {
+        expect(isPrime(1000000)).toBe(false); 
+        expect(isPrime(999999)).toBe(false); 
+    });
+});

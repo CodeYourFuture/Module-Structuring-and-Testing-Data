@@ -30,47 +30,17 @@
 
 
 function getCardValue(card) {
-    const cardRank = card[0]; // The first character represents the rank of the card
+    const rank = card.slice(0, -1); // Extract all except the last character
+    const validRanks = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2'];
 
-    // If the card is a number between 2 and 9
-    if (cardRank >= '2' && cardRank <= '9') {
-        return parseInt(cardRank);
-    } else if (cardRank === '1' && card[1] === '0') { // Card 10
-        return 10;
-    }
-    // Face cards J, Q, K
-    else if (cardRank === 'J' || cardRank === 'Q' || cardRank === 'K') {
-        return 10;
-    }
-    // Ace card A
-    else if (cardRank === 'A') {
-        return 11;
-    }
-    // Invalid card
-    else {
+    if (!validRanks.includes(rank)) {
         throw new Error("Invalid card rank");
     }
+
+    if (rank === 'A') return 11;
+    if (['K', 'Q', 'J', '10'].includes(rank)) return 10;
+
+    return parseInt(rank, 10); // Convert numeric ranks to a number
 }
 
 module.exports = getCardValue;
-
-
-
-if (require.main === module) {
-    try {
-        console.log(getCardValue("5") === 5 ? "Pass" : "Fail"); // Numeric card 5
-        console.log(getCardValue("9") === 9 ? "Pass" : "Fail"); // Numeric card 9
-        console.log(getCardValue("10") === 10 ? "Pass" : "Fail"); // Card 10
-        console.log(getCardValue("J") === 10 ? "Pass" : "Fail"); // Face card J
-        console.log(getCardValue("Q") === 10 ? "Pass" : "Fail"); // Face card Q
-        console.log(getCardValue("K") === 10 ? "Pass" : "Fail"); // Face card K
-        console.log(getCardValue("A") === 11 ? "Pass" : "Fail"); // Ace card A
-        console.log(getCardValue("X") === "Invalid card rank" ? "Fail" : "Pass"); // Invalid card
-    } catch (error) {
-        if (error.message === "Invalid card rank") {
-            console.log("Pass");
-        } else {
-            console.log("Fail");
-        }
-    }
-}

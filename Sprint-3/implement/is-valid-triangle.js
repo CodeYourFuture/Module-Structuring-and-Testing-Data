@@ -37,44 +37,14 @@
 //ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
 
 function isValidTriangle(a, b, c) {
-    // Check if any side is less than or equal to zero
     if (a <= 0 || b <= 0 || c <= 0) {
-        return false;
+      return false;
     }
-
-    // Check the Triangle Inequality conditions
     if (a + b > c && a + c > b && b + c > a) {
-        return true;
+      return true;
     }
-
-    // If any of the Triangle Inequality conditions fail, return false
     return false;
-}
-
-module.exports = isValidTriangle;
-
-//test code 
-if (require.main === module) {
-    try {
-        // Test for a valid triangle
-        console.log(isValidTriangle(3, 4, 5) === true ? "Pass" : "Fail"); // Should return true (valid triangle)
-
-        // Test for an invalid triangle where the sum of two sides is equal to the third side
-        console.log(isValidTriangle(1, 2, 3) === false ? "Pass" : "Fail"); // Should return false (invalid triangle)
-
-        // Test for an invalid triangle where one side is zero
-        console.log(isValidTriangle(0, 4, 5) === false ? "Pass" : "Fail"); // Should return false (side is zero)
-
-        // Test for an invalid triangle where one side is negative
-        console.log(isValidTriangle(-3, 4, 5) === false ? "Pass" : "Fail"); // Should return false (side is negative)
-
-        // Test for an invalid triangle where the sum of two sides is less than the third side
-        console.log(isValidTriangle(1, 1, 3) === false ? "Pass" : "Fail"); // Should return false (invalid triangle)
-
-        // Test for a valid triangle where all sides are positive and satisfy the Triangle Inequality
-        console.log(isValidTriangle(6, 8, 10) === true ? "Pass" : "Fail"); // Should return true (valid triangle)
-
-    } catch (error) {
-        console.error("Test failed:", error);
-    }
-}
+  }
+  
+  module.exports =  isValidTriangle; 
+  
