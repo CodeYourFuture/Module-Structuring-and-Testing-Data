@@ -8,7 +8,16 @@ test("Checks for repeat string", () => {
     const targetOutput = " planplanplan";
 
     expect(currentOutput).toBe(targetOutput);
-})
+});
+
+test("Checks if count of 1 is handled", () => {
+
+    const currentOutput = strRepeat("plan", 1)
+    const targetOutput = " plan";
+
+    expect(currentOutput).toBe(targetOutput);
+});
+
 
 
 
