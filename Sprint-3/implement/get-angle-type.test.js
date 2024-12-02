@@ -31,3 +31,7 @@ describe("getAngleType", () => {
     expect(getAngleType(-10)).toBe("Invalid angle");
   });
 });
+
+test('should return "Invalid angle" for angle 0', () => {
+  expect(getAngleType(0)).toBe("Invalid angle");
+});
