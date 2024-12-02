@@ -45,7 +45,7 @@ function getCardValue(input) {
     let value = input.slice(0, -1);
     let result = 0;
     //instead of using typeof use !isNaN to check for numbers
-    if (!isNaN(Number(value)) && Number(value) >= 2 && !isNaN(Number(value)) && Number(value) <= 10) {
+    if (/^(10|[2-9])$/.test(value)) {
         result = Number(value);
     }
     else if (value === "J" || value === "Q" || value === "K") {
@@ -60,11 +60,17 @@ function getCardValue(input) {
     return result;
 }
 
-console.log(getCardValue("5♠"));  // 5
-console.log(getCardValue("J♦"));  // 10
-console.log(getCardValue("A♣"));  // 11
-console.log(getCardValue("Q♠"));  // 10
+// console.log(getCardValue("5♠"));  // 5
+// console.log(getCardValue("J♦"));  // 10
+// console.log(getCardValue("A♣"));  // 11
+// console.log(getCardValue("Q♠"));  // 10
 // console.log(getCardValue("Z♠"));  
+
+//console.log(getCardValue("0Q♠"));
+console.log(getCardValue("010♠"));
+console.log(getCardValue("02♠"));
+console.log(getCardValue("0x02♠"));
+console.log(getCardValue("2.1♠"));
 
 
 module.exports = getCardValue;
