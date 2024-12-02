@@ -5,7 +5,7 @@ function strRepeat(string, count){
     }
 
     if(count < 0 || !Number.isInteger(count)){
-        throw new Error("Count must be a positive integer")
+        throw new Error("Count must be a non-negative integer")
     }
     
     let results = "";
