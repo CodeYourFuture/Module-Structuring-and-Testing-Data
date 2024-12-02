@@ -23,3 +23,19 @@ test('Get Reflex angle ', () => {
 test('Get Invalid angle ', () => {
   expect(getAngleType("abc")).toBe("Invalid angle");
 });
+
+test('Get Invalid angle for zero', () => {
+  expect(getAngleType(0)).toBe("Invalid angle");
+});
+
+test('Get Invalid angle for 360', () => {
+  expect(getAngleType(360)).toBe("Invalid angle");
+});
+
+test('Get Invalid angle for negative value', () => {
+  expect(getAngleType(-10)).toBe("Invalid angle");
+});
+
+test('Get Invalid angle for angle greater than 360', () => {
+  expect(getAngleType(400)).toBe("Invalid angle");
+});
