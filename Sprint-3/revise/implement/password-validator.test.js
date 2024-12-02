@@ -25,7 +25,7 @@ describe('isPasswordValid', () => {
   });
 
   test('should return false for a password that is too short', () => {
-    expect(isPasswordValid("sh1*", previousPasswords)).toBe(false);
+    expect(isPasswordValid("Sh1*", previousPasswords)).toBe(false); // A clearer and more accurate test
   });
 
   test('should return false for a password missing a number', () => {
