@@ -27,11 +27,21 @@
 // Then the function should return "Reflex angle"
 
 function getAngleType(angle){
-    if (angle === 90) return "Right angle";
-    else if (angle > 0 && angle < 90) return "Acute angle";
-    else if (angle < 180) return "Obtuse angle";
-    else if (angle === 180) return "Straight angle";
-    else if (angle < 360) return "Reflex angle";
+     if (angle <= 0 || angle >= 360) {
+        return "Invalid angle";
+    }
+    if (angle === 90) {
+        return "Right angle";
+    } else if (angle > 0 && angle < 90) {
+        return "Acute angle";
+    } else if (angle > 90 && angle < 180) {
+        return "Obtuse angle";
+    } else if (angle === 180) {
+        return "Straight angle";
+    } else if (angle > 180 && angle < 360) {
+        return "Reflex angle";
+    }
+
 }
 
 console.log("220 degree is: ",getAngleType(220));
