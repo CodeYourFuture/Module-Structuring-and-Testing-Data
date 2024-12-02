@@ -13,3 +13,13 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+
+
+function BMI(weight, height){
+   let sqrHeight = height * 2;
+    index = weight/sqrHeight;
+    return index;
+}
+
+console.log(BMI(64,1.69)); // i tested it and it works. used my weight and my partners weight. now i have google what BMI is meant for (just out of interest).

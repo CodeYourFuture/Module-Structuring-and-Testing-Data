@@ -13,4 +13,6 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
+console object
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+the . operator is for calling a function or method like assert

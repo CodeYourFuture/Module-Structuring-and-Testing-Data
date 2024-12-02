@@ -11,3 +11,14 @@ function convertToPercentage(decimalNumber) {
 }
 
 console.log(decimalNumber);
+
+// the problem is where the variable is declared and used again, will change it. and also the print statement is outside the functions block and the variable cant be used there.
+
+function convertToPercentage(decimalNumber){
+  decimalNumber = 0.5;
+  const percentage = `${decimalNumber * 100}%`;
+  console.log(decimalNumber); //now it will print correctly
+  return percentage;
+}
+
+convertToPercentage(0.67);
