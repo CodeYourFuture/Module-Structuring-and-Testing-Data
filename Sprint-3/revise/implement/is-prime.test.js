@@ -40,4 +40,13 @@ describe('isPrime function', () => {
         expect(isPrime(102)).toBe(false);
         expect(isPrime(104)).toBe(false);
     });
+
+    // New test for odd composite numbers
+    test('should return false for odd composite numbers', () => {
+        expect(isPrime(101 * 13)).toBe(false);  // 101 * 13 = 1313, composite
+        expect(isPrime(15)).toBe(false);        // 15 = 3 * 5, composite
+        expect(isPrime(21)).toBe(false);        // 21 = 3 * 7, composite
+        expect(isPrime(33)).toBe(false);        // 33 = 3 * 11, composite
+    });
+
 });
