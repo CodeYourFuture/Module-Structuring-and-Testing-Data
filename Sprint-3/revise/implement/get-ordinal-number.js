@@ -9,9 +9,14 @@ function getOrdinalNumber(num) {
     // Extract the last two digits to handle special cases (e.g., 11th, 12th, 13th).
     const value = num % 100;
 
-    // Return the number with the appropriate suffix.
-    // Use modulus to determine the correct suffix or fall back to "th".
-    return `${num}${suffixes[(value - 20) % 10] || suffixes[value] || suffixes[0]}`;
+    // For numbers like 11, 12, 13, we return "th" directly to handle the special cases.
+    if (value >= 11 && value <= 13) {
+        return `${num}th`;
+    }
+
+    // For all other numbers, apply the usual rule to add the correct suffix.
+    // This handles cases like 1st, 2nd, 3rd, etc.
+    return `${num}${suffixes[value % 10] || suffixes[0]}`;
 }
 
 console.log(getOrdinalNumber(-1));
@@ -24,6 +29,6 @@ console.log(getOrdinalNumber(0));
 console.log(getOrdinalNumber(21));
 console.log(getOrdinalNumber(101));
 console.log(getOrdinalNumber(111));
-
+console.log(getOrdinalNumber(42));
 
 module.exports = getOrdinalNumber;
