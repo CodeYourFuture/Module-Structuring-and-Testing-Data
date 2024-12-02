@@ -12,4 +12,6 @@ function strRepeat(string, count){
     return results;
 }
 
+module.exports = strRepeat;
+
 console.log(strRepeat("plan", 3));
