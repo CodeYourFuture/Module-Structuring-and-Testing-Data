@@ -10,22 +10,13 @@ function isProperFraction(numerator, denominator) {
     if (denominator === 0) {
         throw new Error("Denominator cannot be zero");
     }  
+    // Proper fraction check using absolute value:
+    // A proper fraction is when the numerator's absolute value is less than the denominator's.
     // If numerator is greater than denominator, it's not a proper fraction
-    if (numerator > denominator) {
-        return false;      
-    } 
     // If numerator is less than denominator, it's a proper fraction
-    else if (numerator < denominator) {
-        return true;
-    } 
     // If numerator is negative and less than denominator, it's a proper fraction
-    else if (numerator < 0 && denominator > 0) {
-        return true;
-    } 
     // If numerator equals denominator, it's not a proper fraction
-    else if (numerator == denominator) {
-        return false;
-    }
+    return Math.abs(numerator) < Math.abs(denominator);
 }
 
 console.log(isProperFraction(2, 3));
