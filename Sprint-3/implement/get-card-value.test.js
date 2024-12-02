@@ -47,3 +47,7 @@ test("This will check if the value for an Ace card is correctly handled", () => 
 test("This will check if invalid card ranks throw an error", () => {
     expect(() => getCardValue("Z♣")).toThrow("Invalid card rank.");
 });
+
+test('This test will check for an invalid input option which will throw an error', () => {
+    expect(() => getCardValue("010♠")).toThrow("Invalid card rank.");
+})
