@@ -5,23 +5,32 @@
 // You need to write assertions for your function to check it works in different cases
 
 function getCardValue(card) {
-    // Check if the card is a number between 2 and 9
-    if (Number(card[0]) >= 2 && Number(card[0]) <= 9) {
-        return Number(card[0]);
-    }
-    // Check if the card is "10" or a face card (J, Q, K)
-    else if (card.slice(0,2) === "10" || card[0] === "J" || card[0] === "Q" || card[0] === "K" ) {
-        return 10;
-    }
-    // Check if the card is an Ace (A)
-    else if (card[0] === "A") {
-        return 11;
-    }
-    // Handle invalid card input
-    else {
+
+    // Extract the rank of the card
+    let rank = card.slice(0, -1);
+
+    // Define a regex pattern to check for valid ranks
+    const validRanks = /^(2|3|4|5|6|7|8|9|10|J|Q|K|A)$/;
+
+    // Check if the rank matches the valid pattern
+    if (!validRanks.test(rank)) {
         throw new Error("Invalid card rank");
     }
 
+    // Handle number cards (2-10)
+    if (!isNaN(rank)) {
+        return parseInt(rank); // Convert to a number and return
+    }
+
+    // Check if the card is a face card (J, Q, K)
+    if (rank === "J" || rank === "Q" || rank === "K" ) {
+        return 10;
+    }
+
+    // Check if the card is an Ace (A)
+    if (rank === "A") {
+        return 11;
+    }
 }
 
 // Example assertions to test the function
@@ -41,7 +50,12 @@ try {
 console.log(getCardValue("A♠"));
 console.log(getCardValue("7♥"));
 console.log(getCardValue("10♦"));
-// console.log(getCardValue("1♦"));
+//console.log(getCardValue("1♦"));
+//console.log(getCardValue("20Q♠"));
+//console.log(getCardValue("02♠"));
+//console.log(getCardValue("2.1♠"));
+//console.log(getCardValue("AA♠"));
+//console.log(getCardValue("1♦"));
 
 // Acceptance criteria:
 
