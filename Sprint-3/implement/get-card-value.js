@@ -12,7 +12,7 @@ function getCardValue(cardRank){
         return "Invalid card rank";
     }
 
-    cardRank = cardRank.slice(0, 2);
+    cardRank = cardRank.slice(0, 2) === "10" ? "10" : cardRank.slice(0, 1);
     
     if(cardRank ==="A"){
         return 11;
@@ -31,7 +31,7 @@ module.exports = getCardValue;
 
 
 //testGetCardValue();
-console.log(getCardValue("2♣"));
+console.log(getCardValue("2.1♣"));
 
 // You need to write assertions for your function to check it works in different cases
 
