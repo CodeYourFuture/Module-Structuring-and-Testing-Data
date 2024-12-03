@@ -23,3 +23,16 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+/*
+so a function that looks something like 
+function repeat(str,count){
+    let str = i
+    while i <= count
+    {
+        console.log(count)    
+    }
+}
+
+lets make a file: touch repeat.js 
+*/
