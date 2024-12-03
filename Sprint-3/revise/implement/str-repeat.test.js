@@ -3,27 +3,15 @@
 const strRepeat = require("./strRepeat");
 
 test("Checks for repeat string", () => {
-
-    const currentOutput = strRepeat("plan", 3)
-    const targetOutput = "planplanplan";
-
-    expect(currentOutput).toBe(targetOutput);
+    expect(strRepeat("plan", 3)).toBe("planplanplan");
 });
 
 test("Checks if count of 1 is handled", () => {
-
-    const currentOutput = strRepeat("plan", 1)
-    const targetOutput = "plan";
-
-    expect(currentOutput).toBe(targetOutput);
+    expect(strRepeat("plan", 1)).toBe("plan");
 });
 
 test("Checks if count of 0 is handled", () => {
-
-    const currentOutput = strRepeat("plan", 0)
-    const targetOutput = "";
-
-    expect(currentOutput).toBe(targetOutput);
+    expect(strRepeat("plan", 0)).toBe("");
 });
 
 test("Throws an error if count is negative", () => {
