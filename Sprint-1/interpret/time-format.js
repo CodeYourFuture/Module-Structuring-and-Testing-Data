@@ -25,6 +25,7 @@ console.log(result);
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 //Answer: The result variable represents the formatted duration of the movie, expressed as a string in the format HH:MM:SS
+//A better name for this variabl could be : formattedDuration
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 //Answer: will work for most positive integer values of movieLength, representing the duration of a movie in seconds.
