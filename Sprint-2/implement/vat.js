@@ -12,7 +12,7 @@
 function fullPriceWithVAT(noVatValue) {
     const VAT = 1.2;
 
-    return `R${noVatValue * VAT}`;
+    return noVatValue * VAT;
 }
 
 console.log(fullPriceWithVAT(700));
