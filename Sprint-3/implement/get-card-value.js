@@ -3,12 +3,15 @@
 // You will need to implement a function getCardValue
 
 function getCardValue(cardRank){
-    
+    if(cardRank === "10"){
+        return 10;
+    }
+
     cardRank = cardRank.slice(0, 1);
     
     if(cardRank ==="A"){
         return 11;
-    }else if(cardRank === "J" || cardRank === "K" || cardRank === "Q" || cardRank === 10){
+    }else if(cardRank === "J" || cardRank === "K" || cardRank === "Q"){
         return 10;
     }
 
@@ -21,27 +24,9 @@ function getCardValue(cardRank){
 }
 module.exports = getCardValue;
 
-const assert = require("assert");
-
-function testGetCardValue(){
-    // Number cards test (2-9)
-    assert.strictEqual(getCardValue("5"), 5, "Test failed: '5' should return 5");
-    assert.strictEqual(getCardValue("9"), 9, "Test failed: '9' should return 9");
-
-    // Face cards test (J,K,Q)
-    assert.strictEqual(getCardValue("J"), 10, "Test failed: 'J' should return 10");
-    assert.strictEqual(getCardValue("K"), 10, "Test failed: 'K' should return 10");
-    assert.strictEqual(getCardValue("Q"), 10, "Test failed: 'Q' should return 10");
-
-    //Ace test (A)
-    assert.strictEqual(getCardValue("A"), 11, "Test failed: 'A' should return 11");
-
-    console.log('All tests passed!');
-}
-
 
 //testGetCardValue();
-console.log(getCardValue("A@"));
+console.log(getCardValue("A"));
 
 // You need to write assertions for your function to check it works in different cases
 
