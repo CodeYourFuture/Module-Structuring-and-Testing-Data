@@ -20,10 +20,10 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
-// 1. It updates as it iterates through the str when find() is called and will run / increment at least once while the condition is true or a character match is found.
+// 1. The index variable starts at 0. During each iteration of the while loop, if the character at str[index] is not equal to char, the index is incremented by 1 using index++. This continues until either: A match is found (str[index] === char), at which point the function returns the index, or the loop completes because index reaches str.length, indicating the character wasn’t found
 // b) What is the if statement used to check
-// 2. It checks if there's a character match, within the string index, and it's found on position 7.
+// 2. The if statement checks whether the character at the current position of the string (str[index]) matches the target character (char). If it does, the function immediately returns the current value of index.
 // c) Why is index++ being used?
-// 3. Index++ is used so that if there's a character match within the string index will increment / start to count up that position.
+// 3. index++ is used to increment the index variable so the while loop can move to the next character in the string. Without this, the loop would keep checking the same position indefinitely, resulting in an infinite loop.
 // d) What is the condition index < str.length used for?
-// 4. This condition is used to check or track the index's length against the string's length through iteration.  
+// 4. The condition index < str.length ensures that the loop continues only while index is a valid position within the string. If index reaches str.length, it means all characters in the string have been checked, and the target character wasn’t found. At this point, the function exits the loop and returns -1.
