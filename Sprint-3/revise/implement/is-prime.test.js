@@ -34,5 +34,5 @@ test('This test will check if the isPrime function is evaluating the numbers cor
 
 
 test('This test will check if the isPrime function is evaluating the numbers correctly', () => {
-    expect(() => isPrime(-9)).toThrow("This function works with positive integers only.");
+    expect(isPrime(-9)).toEqual(false);
 })

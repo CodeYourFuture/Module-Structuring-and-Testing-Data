@@ -67,10 +67,10 @@ function getCardValue(input) {
 // console.log(getCardValue("Z♠"));  
 
 //console.log(getCardValue("0Q♠"));
-console.log(getCardValue("010♠"));
-console.log(getCardValue("02♠"));
-console.log(getCardValue("0x02♠"));
-console.log(getCardValue("2.1♠"));
+// console.log(getCardValue("010♠"));
+// console.log(getCardValue("02♠"));
+// console.log(getCardValue("0x02♠"));
+// console.log(getCardValue("2.1♠"));
 
 
 module.exports = getCardValue;
