@@ -1,33 +1,23 @@
 const isProperFraction = require("./is-proper-fraction");
 
-const currentOutput = isProperFraction(1, 2);
-const targetOutput = true;
 
-test("Checks if the fraction is a Proper fraction (2/3) then return true", () => {
-    expect(currentOutput).toEqual(targetOutput);
+test("Checks if the fraction is a Proper fraction (2/3) or (-4/-7) then return true", () => {
+    expect(isProperFraction(1, 2)).toEqual(true);
+    expect(isProperFraction(-4,-7)).toEqual(true);
 });
 
-const currentOutput2 = isProperFraction(-4, 7);
-const targetOutput2 = true;
-
-test("Checks if the fraction is a Negative fraction (-1/3) then return true", () => {
-    expect(currentOutput2).toEqual(targetOutput2);
+test("Checks if the fraction is a Negative fraction (-4/7) then return true", () => {
+    expect(isProperFraction(-4, 7)).toEqual(true);
 });
-
-const currentOutput3 = isProperFraction(5, 3);
-const targetOutput3 = false;
 
 test("Checks if the fraction is an Improper fraction (5/3) then return false", () => {
-    expect(currentOutput3).toEqual(targetOutput3);
+    expect(isProperFraction(5, 3)).toEqual(false);
 });
 
-const currentOutput4 = isProperFraction(3, 3);
-const targetOutput4 = false;
-
-test("Checks if the Numerator equals to the Denominator (3/3) then return false", () => {
-    expect(currentOutput4).toEqual(targetOutput4);
+test("Checks if the Numerator === Denominator (3/3) then return false", () => {
+    expect(isProperFraction(3, 3)).toEqual(false);
 });
 
 test("Throws an error when the denominator is zero", () => {
-    expect(() => isProperFraction(3, 0)).toThrow("Denominator must be a positive number");
+    expect(() => isProperFraction(3, 0)).toThrow("Denominator must be a positive or negative number");
 });
