@@ -8,3 +8,14 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function fullPriceWithVAT(noVatValue) {
+    const VAT = 1.2;
+
+    return noVatValue * VAT;
+}
+
+console.log(fullPriceWithVAT(700));
+console.log(fullPriceWithVAT(55));
+console.log(fullPriceWithVAT(50));
+

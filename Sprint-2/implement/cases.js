@@ -13,3 +13,11 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function snakeString(string) {
+    let inputString = string.toUpperCase();
+    inputString = inputString.replaceAll(" ", "_");
+    return inputString;
+}
+
+console.log(snakeString("i'm doing some javascript exercuses today"));

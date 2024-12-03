@@ -12,6 +12,10 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
+<<<<<<< HEAD
+=======
+//5 function calls are used in total. 2 replaceAll, 2 Number, and 1 console.log.
+>>>>>>> 2c573b0 (the total number of functions called is 5.)
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
