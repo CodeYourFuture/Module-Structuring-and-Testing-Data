@@ -18,26 +18,32 @@ You must breakdown this problem in order to solve it. Find one test case first a
 const passwordValidator = require("./passwordValidator");
 
 
-test('Checks if password is valid', () => {
+test('Checks if password has at least one English uppercase letter (A-Z)', () => {
     const passwords =[];
-    const currentOutput = passwordValidator("Bad@11.#You%", passwords);
-    const targetOutput = true;
+    expect(passwordValidator("Bad@11.#YoZ%", passwords)).toBe(true);
+});
 
-    expect(currentOutput).toBe(targetOutput);
+test('Checks if password has at least one English lowercase letter (a-z)', () => {
+    const passwords =[];
+    expect(passwordValidator("Bad@11.#Yzu%", passwords)).toBe(true);
+});
+
+test('Checks if password has at least one number (0-9)', () => {
+    const passwords =[];
+    expect(passwordValidator("Ba0@1x.#Y9u%", passwords)).toBe(true);
+});
+
+test('Checks if password has at least one of the following non-alphanumeric symbols:("!", "#", "$", "%", ".", "*", "&")', () => {
+    const passwords =[];
+    expect(passwordValidator("Ba0@1x.#Y9u%", passwords)).toBe(true);
 });
 
 test('Checks if password is already used', () => {
     const passwords = ["Si@#M3.pro!*z4"];
-    const currentOutput = passwordValidator("Si@#M3.pro!*z4", passwords);
-    const targetOutput = "Password is already used";
-
-    expect(currentOutput).toBe(targetOutput);
+    expect(passwordValidator("Si@#M3.pro!*z4", passwords)).toBe("Password is already used");
 });
 
 test('Checks if password has at least 5 characters', () => {
     const passwords = [];
-    const currentOutput = passwordValidator("B1@#", passwords);
-    const targetOutput = false;
-
-    expect(currentOutput).toBe(targetOutput);
+    expect(passwordValidator("B1@a", passwords)).toBe(false);
 });
