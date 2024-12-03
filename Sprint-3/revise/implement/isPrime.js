@@ -1,9 +1,15 @@
 function isPrime(num){
-    if(num <= 1){
+    if(num === 2){
+        return `${num} is prime!`;
+    }
+
+    if(num <= 1 || num % 2 === 0){
         return `${num} is not prime`;
     }
     
-    for(let i = 2; i <= Math.sqrt(num); i++ ){
+    const limit = Math.sqrt(num)
+
+    for(let i = 3; i <= limit; i+= 2 ){
         if(num % i === 0){
             return `${num} is not prime`;
         }
@@ -13,4 +19,4 @@ function isPrime(num){
 
 module.exports = isPrime;
 
-console.log(isPrime(2));
+console.log(isPrime(23));
