@@ -25,7 +25,7 @@ test('This test will check if the password is valid according to the criteria gi
 })
 
 // short password
-const currentOutput1 = passwordValidator("S#2");
+const currentOutput1 = passwordValidator("Se&9");
 const targetOutput1 = false;
 
 test('This test will check if the password is invalid because it is too short', () => {
