@@ -15,14 +15,14 @@ function isValidTriangle(a,b,c){
 
     if ( (a + b > c) && (a + c > b) && (b + c > a)){
         return true;
-    }else if((a + b <= c) || (a + c <= b) || (b + c <= a)){
+    }else {
         return false;
     }
 }
 
 module.exports = isValidTriangle;
 
-console.log(isValidTriangle(2,2,4));
+console.log(isValidTriangle(3,2,4));
 
 // In our function isValidTriangle which takes as parameters the lengths of three sides, we need to invalidate any triangle where the sum of any two sides is less than or equal to the length of the third side.
 // and we need to validate any triangle where the sum of any two sides is greater than the length of the third side.
