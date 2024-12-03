@@ -1,39 +1,29 @@
 
 const getAngleType = require("./get-angle-type");
 
-const currentOutput = getAngleType(90);
-const targetOutput = "Right angle";
 
 test("Checks for Right Angle for when the angle is 90 degrees", () => {
-    expect(currentOutput).toEqual(targetOutput);
+    expect(getAngleType(90)).toEqual("Right angle");
 });
 
-const currentOutput2 = getAngleType(45);
-const targetOutput2 = "Acute angle";
 
-test("Checks for Acute angle for when the angle is less than 90 degrees", () => {
-    expect(currentOutput2).toEqual(targetOutput2);
+test("Checks for Acute angle, when the angle < 90 degrees", () => {
+    expect(getAngleType(45)).toEqual("Acute angle");
 });
 
-const currentOutput3 = getAngleType(145);
-const targetOutput3 = "Obtuse angle";
 
-test("Checks for Obtuse angle for when the angle is greater than 90 and less than 180 degrees", () => {
-    expect(currentOutput3).toEqual(targetOutput3);
+test("Checks for Obtuse angle, when the angle > 90 and angle < 180 degrees", () => {
+    expect(getAngleType(145)).toEqual("Obtuse angle");
 });
 
-const currentOutput4 = getAngleType(180);
-const targetOutput4 = "Straight angle";
 
-test("Checks for Straight angle for when the angle is exactly 180 degrees", () => {
-    expect(currentOutput4).toEqual(targetOutput4);
+test("Checks for Straight angle, when the angle is exactly 180 degrees", () => {
+    expect(getAngleType(180)).toEqual("Straight angle");
 });
 
-const currentOutput5 = getAngleType(192);
-const targetOutput5 = "Reflex angle";
 
-test("Checks for Reflex angle for when the angle is greater than 180 and less than 360 degrees", () => {
-    expect(currentOutput5).toEqual(targetOutput5);
+test("Expect 'Reflect angle' when 180 < angle < 360", () => {
+    expect(getAngleType(192)).toEqual("Reflex angle");
 });
 
 
