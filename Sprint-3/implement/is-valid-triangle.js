@@ -34,34 +34,16 @@
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
 
-// function isValidTriangle(a, b, c) {
-//     const EPSILON = 1e-10; // Tolerance for floating-point comparison
-
-//     if (a <= 0 || b <= 0 || c <= 0) {
-//         return false; // Sides must be positive
-//     }
-
-//     // Check the Triangle Inequality Theorem with tolerance
-//     return (
-//         a + b > c - EPSILON &&
-//         a + c > b - EPSILON &&
-//         b + c > a - EPSILON
-//     );
-// }
 function isValidTriangle(a, b, c) {
-    
-    if (a <= 0 || b <= 0 || c <= 0) {
-        return false;
-    }
-
-    
-    if ((a + b > c) && (a + c > b) && (b + c > a)) {
-        return true;
-    }
-
-    
+  if (a <= 0 || b <= 0 || c <= 0) {
     return false;
+  }
+
+  if (a + b > c && a + c > b && b + c > a) {
+    return true;
+  }
+
+  return false;
 }
 
-
-module.exports = isValidTriangle; 
+module.exports = isValidTriangle;

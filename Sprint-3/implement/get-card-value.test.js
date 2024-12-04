@@ -29,3 +29,20 @@ describe('getCardValue', () => {
         expect(() => getCardValue("2")).toThrow("Invalid card rank");
     });
 });
+test('should throw an error for numbers without suits', () => {
+        expect(() => getCardValue("5")).toThrow("Invalid card rank");
+        expect(() => getCardValue("10")).toThrow("Invalid card rank");
+    });
+
+    test('should throw an error for invalid symbols as suits', () => {
+        expect(() => getCardValue("3@")).toThrow("Invalid card rank");
+        expect(() => getCardValue("4#")).toThrow("Invalid card rank");
+        expect(() => getCardValue("9$")).toThrow("Invalid card rank");
+    });
+
+    test('should throw an error for cards with invalid combinations', () => {
+        expect(() => getCardValue("K@")).toThrow("Invalid card rank");
+        expect(() => getCardValue("A$")).toThrow("Invalid card rank");
+        expect(() => getCardValue("J#")).toThrow("Invalid card rank");
+    });
+

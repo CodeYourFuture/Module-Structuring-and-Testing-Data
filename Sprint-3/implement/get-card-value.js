@@ -31,29 +31,33 @@
 // Then it should throw an error indicating "Invalid card rank."
 
 function getCardValue(card) {
-    
-    const rank = card.slice(0, -1);
-    
-    
-    if (!isNaN(rank)) {
-        const numericValue = parseInt(rank, 10);
-        if (numericValue >= 2 && numericValue <= 10) {
-            return numericValue;
-        }
-    }
-    
-    
-    if (['J', 'Q', 'K'].includes(rank)) {
-        return 10;
-    }
-    
-    
-    if (rank === 'A') {
-        return 11;
-    }
-    
-    
+  if (card.length < 2) {
     throw new Error("Invalid card rank");
+  }
+
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+
+  const validSuits = ["♠", "♣", "♥", "♦"];
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card rank");
+  }
+
+  if (!isNaN(rank)) {
+    const numericValue = parseInt(rank, 10);
+    if (numericValue >= 2 && numericValue <= 10) {
+      return numericValue;
+    }
+  }
+
+  if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  }
+  if (rank === "A") {
+    return 11;
+  }
+
+  throw new Error("Invalid card rank");
 }
 
-module.exports = getCardValue; 
+module.exports = getCardValue;
