@@ -12,7 +12,7 @@ function passwordValidator(password, passwords){
         console.log("Updated passwords array:", passwords)
      }
 
-     const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!#@$%&*.]).+$/;
+     const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!#@$%&*.]).+$/;
 
      if(regex.test(password)){
         return true;
@@ -25,4 +25,4 @@ module.exports = passwordValidator;
 
 let  passwords = ["Si@#M3.pro!*z4"];
 
-console.log(passwordValidator("Bad@11.#You%", passwords));
+console.log(passwordValidator("#30%g", passwords));
