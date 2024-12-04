@@ -1,5 +1,26 @@
 // Implement a function repeat
 
+const strRepeat = require("./strRepeat");
+
+test("Checks for repeat string", () => {
+    expect(strRepeat("plan", 3)).toBe("planplanplan");
+});
+
+test("Checks if count of 1 is handled", () => {
+    expect(strRepeat("plan", 1)).toBe("plan");
+});
+
+test("Checks if count of 0 is handled", () => {
+    expect(strRepeat("plan", 0)).toBe("");
+});
+
+test("Throws an error if count is negative", () => {
+    expect(() => strRepeat("plan", -1)).toThrow("Count must be a non-negative integer");
+});
+
+
+
+
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
 // Then it should:

@@ -2,6 +2,30 @@
 
 // You will need to implement a function getCardValue
 
+function getCardValue(cardRank){
+
+    cardRank = cardRank.slice(0, -1);
+    
+    if(cardRank ==="A"){
+        return 11;
+    }else if(cardRank === "J" || cardRank === "K" || cardRank === "Q") {
+        return 10;
+    }
+
+    const numericalValue = parseInt(cardRank, 10);
+
+    if(numericalValue >= 2 && numericalValue <= 10 && numericalValue.toString() === cardRank){
+        return numericalValue;
+    }else {
+        return 'Invalid card rank'
+    }
+}
+module.exports = getCardValue;
+
+
+//testGetCardValue();
+console.log(getCardValue("2.1"));
+
 // You need to write assertions for your function to check it works in different cases
 
 // Acceptance criteria:

@@ -5,6 +5,22 @@
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
 
+function isProperFraction(num,den){
+    
+    if(den === 0){
+        throw new Error('Denominator must be a positive or negative number');
+    }
+        den = Math.abs(den);
+
+    return Math.abs(num) < den;
+    
+}
+
+module.exports = isProperFraction;
+
+
+console.log(isProperFraction(-4,-7))
+
 // Acceptance criteria:
 
 // Proper Fraction check:

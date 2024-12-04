@@ -6,6 +6,38 @@
 // This function is commonly used for text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
+function rotateCharacter(character, shift) {
+    let startCode;
+
+    // Checks if the character is a letter
+    if (character >= 'A' && character <= 'Z') {
+        // Uppercase letter
+        startCode = 'A'.charCodeAt(0);
+    } else if (character >= 'a' && character <= 'z') {
+        // Lowercase letter
+        startCode = 'a'.charCodeAt(0);
+    } else {
+        // Not a letter, return it unchanged
+        return character;
+    }
+
+    // Gets the character's position in the alphabet
+    const charPosition = character.charCodeAt(0) - startCode;
+
+    // Rotates the position within the alphabet (wrap around using %)
+    const newPosition = (charPosition + shift) % 26;
+
+    // Handles negative shift values to wrap correctly
+    const wrappedPosition = newPosition < 0 ? newPosition + 26 : newPosition;
+
+    // Converts the new position back to a character
+    const rotatedChar = String.fromCharCode(startCode + wrappedPosition);
+
+    return rotatedChar;
+}
+
+module.exports = rotateCharacter;
+
 // Acceptance criteria:
 
 // Given a character and a shift value,
