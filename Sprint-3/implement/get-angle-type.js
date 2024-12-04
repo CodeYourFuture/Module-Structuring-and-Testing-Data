@@ -44,5 +44,5 @@ function getAngleType (angle) {
     else {
         return "Please enter a valid angle";
     }
-
 }
+module.exports{getAngleType};
