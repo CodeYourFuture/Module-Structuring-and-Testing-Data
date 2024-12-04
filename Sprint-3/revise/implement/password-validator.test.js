@@ -47,3 +47,13 @@ test('Checks if password has at least 5 characters', () => {
     const passwords = [];
     expect(passwordValidator("B1@a", passwords)).toBe(false);
 });
+
+test('Checks if password has only a digit missing', () => {
+    const passwords = [];
+    expect(passwordValidator("BlubaRule.s@", passwords)).toBe(false);
+});
+
+test('Checks if password is missing only an alphanumeric character', () => {
+    const passwords = [];
+    expect(passwordValidator("*#$!&.^@", passwords)).toBe(false);
+});
