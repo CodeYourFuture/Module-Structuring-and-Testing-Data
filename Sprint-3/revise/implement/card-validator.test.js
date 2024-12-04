@@ -21,3 +21,11 @@ test("Checks if the number is all numbers", () => {
 test("Checks if the final digit is even", () => {
     expect(cardValidator("1243578569873479")).toEqual(false)
 });
+
+test("Checks if the number is more than 16", () => {
+    expect(cardValidator("1243578569803473479")).toEqual(false)
+});
+
+test("Checks if the number is less than 16", () => {
+    expect(cardValidator("12435783479")).toEqual(false)
+});
