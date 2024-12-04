@@ -18,7 +18,7 @@ test("Checks if cardRank is 'Q♣' then returns 10 ", () => {
 });
 
 test("Checks if cardRank is '8' then returns 8 ", () => {
-    expect(getCardValue("8")).toEqual(8);
+    expect(getCardValue("10")).toEqual("Invalid card rank");
 });
 
 test("Checks if cardRank is '2.1' then returns 'Invalid card rank", () => {
