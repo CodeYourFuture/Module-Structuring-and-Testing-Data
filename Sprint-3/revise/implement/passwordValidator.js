@@ -5,7 +5,7 @@ function passwordValidator(password, passwords){
      }
 
      if(passwords.includes(password)){
-        return "Password is already used"
+        return false;
      }else {
         passwords.push(password);
         console.log("Password added successfully!")
