@@ -40,7 +40,7 @@ test('Checks if password has at least one of the following non-alphanumeric symb
 
 test('Checks if password is already used', () => {
     const passwords = ["Si@#M3.pro!*z4"];
-    expect(passwordValidator("Si@#M3.pro!*z4", passwords)).toBe("Password is already used");
+    expect(passwordValidator("Si@#M3.pro!*z4", passwords)).toBe(false);
 });
 
 test('Checks if password has at least 5 characters', () => {
