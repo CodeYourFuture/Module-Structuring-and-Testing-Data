@@ -4,24 +4,17 @@
 
 function getCardValue(cardRank){
 
-    if(cardRank === "10"){
-        return 10;
-    }
-
-    if(/^0\d/.test(cardRank) || /\.\d/.test(cardRank)){
-        return "Invalid card rank";
-    }
-
-    cardRank = cardRank.slice(0, 2) === "10" ? "10" : cardRank.slice(0, 1);
+    cardRank = cardRank.slice(0, -1);
     
     if(cardRank ==="A"){
         return 11;
-    }else if(cardRank === "J" || cardRank === "K" || cardRank === "Q"){
+    }else if(cardRank === "J" || cardRank === "K" || cardRank === "Q") {
         return 10;
     }
 
     const numericalValue = parseInt(cardRank, 10);
-    if(numericalValue >= 2 && numericalValue <= 10){
+
+    if(numericalValue >= 2 && numericalValue <= 10 && numericalValue.toString() === cardRank){
         return numericalValue;
     }else {
         return 'Invalid card rank'
@@ -31,7 +24,7 @@ module.exports = getCardValue;
 
 
 //testGetCardValue();
-console.log(getCardValue("2.1♣"));
+console.log(getCardValue("2.1"));
 
 // You need to write assertions for your function to check it works in different cases
 
