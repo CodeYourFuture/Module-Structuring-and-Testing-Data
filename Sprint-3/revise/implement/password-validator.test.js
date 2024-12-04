@@ -57,3 +57,18 @@ test('Checks if password is missing only an alphanumeric character', () => {
     const passwords = [];
     expect(passwordValidator("*#$!&.^@", passwords)).toBe(false);
 });
+
+test('Checks if password has only alphanumeric characters', () => {
+    const passwords = [];
+    expect(passwordValidator("B23zd98dh", passwords)).toBe(false);
+});
+
+test('Checks if password is missing only alphabetic characters', () => {
+    const passwords = [];
+    expect(passwordValidator("#30%8@5$*9", passwords)).toBe(false);
+});
+
+test('Checks if password is missing at least one uppercase / lowercase letter', () => {
+    const passwords = [];
+    expect(passwordValidator("#30%rg1", passwords)).toBe(false);
+});
