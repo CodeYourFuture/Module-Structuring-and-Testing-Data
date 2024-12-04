@@ -2,7 +2,7 @@ Open a new window in Chrome,
 
 then locate the **Console** tab.
 
-Voila! You now have access to the [Chrome V8 Engine](https://www.cloudflare.com/en-gb/learning/serverless/glossary/what-is-chrome-v8/).
+Voila! You now have access to the [Chrome V8 Engine](
 Just like the Node REPL, you can input JavaScript code into the Console tab and the V8 engine will execute it.
 
 Let's try an example.
