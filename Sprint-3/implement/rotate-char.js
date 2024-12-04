@@ -11,6 +11,9 @@
 // Given a character and a shift value,
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
+//okay i think i get it. the function rotateChar must take in the first argument char and then the second argument is a int.
+// the function finds the position of the char in the alphabet then adds the int argument to it and then return the new char from the alphabet 
+
 
 // Scenario: Rotate Lowercase Letters:
 // Given a lowercase letter character and a positive integer shift,
@@ -41,3 +44,6 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+//okay i think i get it. the function rotateChar must take in the first argument char and then the second argument is a int.
+// the function finds the position of the char in the alphabet then adds the int argument to it and then return the new char from the alphabet 
