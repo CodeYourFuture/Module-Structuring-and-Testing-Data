@@ -6,6 +6,28 @@
 // This function is commonly used for text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
+function rotateCharacter(char, shift) {
+    // Step 1: Check if the character is a letter (uppercase or lowercase)
+    if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
+
+        // Starting Point for Letters: We determine the start of the alphabet ('a' or 'A')
+        let start = (char >= "a" && char <= "z") ? "a" : "A";
+
+        // Get the ASCII value of the character and subtract the start ('a' or 'A')
+        let asciiValue = char.charCodeAt(0) - start.charCodeAt(0);
+
+        // Apply the shift and wrap around using modulus 26
+        let newPosition = (asciiValue + shift) % 26;
+
+        // Convert back to the corresponding character
+        return String.fromCharCode(start.charCodeAt(0) + newPosition);
+
+    }
+
+    // Step 2: If the character is not a letter, return it unchanged
+    return char;
+}
+
 // Acceptance criteria:
 
 // Given a character and a shift value,
@@ -41,3 +63,5 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+module.exports = rotateCharacter;
