@@ -1,7 +1,7 @@
 {
-  "name": "sprint-3",
+  "name": "sprint-3-Exercises",
   "version": "1.0.0",
-  "description": "## 🔧 Implement",
+  "description": "Writing and running tests for functions",
   "main": "index.js",
   "scripts": {
     "test": "jest"
