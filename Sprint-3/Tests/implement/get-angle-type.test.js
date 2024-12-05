@@ -7,7 +7,7 @@ If the input is more than 180 but less than 360, the output should be "Reflex an
 If the input is any value outside of these parameters, the output should be "Please enter a valid angle"
 */
 
-const {getAngleType} = require('../src/get-angle-type');
+const {getAngleType} = require ('../../implement/get-angle-type');
 describe("getAngleType function", () => {
 //Typical cases
 test("should return 'Right angle' when 90 degrees", () => {
