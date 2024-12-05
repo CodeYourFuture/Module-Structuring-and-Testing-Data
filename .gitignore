@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 .vscode
 **/.DS_Store
+Sprint-2/extend/package-lock.json
+Sprint-2/extend/package.json
