@@ -1,12 +1,10 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
-
 // You will need to implement a function getCardValue
-
 // You need to write assertions for your function to check it works in different cases
-
 // Acceptance criteria:
+// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji
+// for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 
-// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
 
@@ -29,3 +27,20 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+
+function getCardValue(card) {
+    const rank = card.slice(0, -1); // Extract all except the last character
+    const validRanks = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2'];
+
+    if (!validRanks.includes(rank)) {
+        throw new Error("Invalid card rank");
+    }
+
+    if (rank === 'A') return 11;
+    if (['K', 'Q', 'J', '10'].includes(rank)) return 10;
+
+    return parseInt(rank, 10); // Convert numeric ranks to a number
+}
+
+module.exports = getCardValue;

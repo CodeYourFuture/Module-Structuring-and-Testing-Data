@@ -8,7 +8,6 @@
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
-
 // case: handle Count of 1:
 // Given a target string str and a count equal to 1,
 // When the repeat function is called with these inputs,
@@ -23,3 +22,25 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+// Function to repeat the string 'str' by 'count' times
+// Function to repeat a string 'str' for a given 'count' times
+
+const repeat = require('./repeat'); 
+
+describe('repeat function', () => {
+    test('Repeat string multiple times', () => {
+        expect(repeat('hello', 3)).toBe('hellohellohello');
+    });
+
+    test('Handle count of 1', () => {
+        expect(repeat('world', 1)).toBe('world');
+    });
+
+    test('Handle count of 0', () => {
+        expect(repeat('test', 0)).toBe('');
+    });
+
+    test('Handle negative count', () => {
+        expect(() => repeat('oops', -1)).toThrow('Count cannot be negative');
+    });
+});
