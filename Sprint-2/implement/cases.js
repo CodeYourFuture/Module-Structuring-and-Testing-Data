@@ -13,3 +13,18 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+solution: 
+
+function toUpperSnakeCase(String) {
+
+    const uppercaseString = String.toUpperCase();
+  
+    const snakeCaseString = uppercaseString.replace(/\s+/g, '_')
+  
+     return snakeCaseString;
+  }
+  
+  const input = "Hello there";
+  const output = toUpperSnakeCase(input);
+  console.log(output);

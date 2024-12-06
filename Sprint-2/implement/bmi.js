@@ -11,5 +11,16 @@
 // You will need to implement a function that calculates the BMI of someone based off their weight and height
 
 // Given someone's weight in kg and height in metres
+let weight = 80;
+let height = 1.3;
+
+function bmi() {
+  let bmi = weight / (height ** 2);
+  return bmi.toFixed(1); 
+}
+
+let result = bmi();  
+console.log(result);
+// Return the calculated BMI
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place

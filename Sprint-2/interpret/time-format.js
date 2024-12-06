@@ -19,13 +19,19 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
+I think will be called 3 times
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
+
 // b) What is the value assigned to num when pad is called for the first time?
+The value assigned to num when it is called for the first time is totalHours.
 
 // c) What is the return value of pad is called for the first time?
+ padd will return 00 becuase it was assigned num of wich num is equal to 0
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
+remaining seconds is the value.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+The return value will be 61.
