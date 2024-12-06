@@ -34,50 +34,52 @@
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 
 function isProperFraction(numerator, denominator) {
-    if(numerator < denominator  ){
-        return true
-    }else if(numerator > denominator ){
-        return false
-    }else if(numerator > 0 && denominator == 0){
-        return "Error (Denominator cannot be zero)"
-    } else if(numerator < 0 && denominator > 0){
-        return true
-    } else if( numerator === denominator ){
-        return false
-    }
+  if (denominator === 0) {
+    throw new Error("Denominator cannot be zero");
+  }
+  //A proper fraction has the numerator smaller than denominator in absolute value
+  if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  }
+
+  return false;
 }
 
-//test1
-const numerator1 = 2;
-const denominator1 = 3;
-const output1 = isProperFraction(numerator1, denominator1);
-const expectedOutput1 = true;
-console.assert( output1 === expectedOutput1, "expecting true") //passed
+//test cases with assertion to test the function
 
-//test2
-const numerator2 = 3;
-const denominator2 = 2;
-const output2 = isProperFraction(numerator2, denominator2);
-const expectedOutput2 = false;
-console.assert(output2 === expectedOutput2, "expecting false" ) //passed
+// Proper Fraction check:
+// Input: numerator = 2, denominator = 3
+console.assert(isProperFraction(2, 3) === true, "test1 failed");
 
-//test3
-const numerator3 = 10;
-const denominator3 = 0;
-const output3 = isProperFraction(numerator3, denominator3);
-const expectedOutput3 = "Error (Denominator cannot be zero)"
-console.assert( output3 === expectedOutput3, "expecting : Error (Denominator cannot be zero)") //failed
+// Improper Fraction check:
+// Input: numerator = 5, denominator = 2
+console.assert(isProperFraction(5, 2) === false, "test2 failed");
 
-//test4
-const numerator4 = -3;
-const denominator4 = 4;
-const output4 = isProperFraction(numerator4, denominator4);
-const expectedOutput4 = true;
-console.assert( numerator4 === denominator4, "expecting: true") //failed
+// Equal Numerator and Denominator check:
+// Input: numerator = 3, denominator = 3
+console.assert(isProperFraction(3, 3) === false, "test3 failed");
 
-//test5
-const numerator5 = 5;
-const denominator5 = 5;
-const output5 = isProperFraction(numerator5, denominator5);
-const expectedOutput5 = false;
-console.assert( output5===expectedOutput5,"expecting false") //passed
+// Negative improper fraction:
+// input: numerator = -5, denominator = 3
+console.assert(isProperFraction(-5, 3) === false, "test4 failed");
+
+// Proper fraction with negative numerator:
+// input: numerator = -3, denominator = 5
+console.assert(-3, 5 === true, "test5 failed");
+
+// Proper fraction with negative denominator:
+//// input: numerator = 3, denominator = -5
+console.assert(isProperFraction(3, -5) === true, "test6 failed");
+
+// Zero Denominator check:
+// Input: numerator = 3, denominator = 0
+//should throw and error
+try {
+  isProperFraction(3, 0); // This should throw an error
+  console.assert(false, "Expected an error but none was thrown."); // This will fail if no error is thrown
+} catch (error) {
+  console.assert(
+    error.message === "Denominator cannot be zero",
+    `Test failed: Expected 'Denominator cannot be zero', but got: ${error.message}`
+  );
+}
