@@ -8,6 +8,6 @@ const num = 56.5678;
 
 // Log your variables to the console to check your answers
 
-const wholeNumberPart = Math.floor(56.7891)
-const decimalPart = (34.5678 - Math.floor(34.5678)).toFixed(4)
-const roundedNum = Math.round(56.7891)
+const wholeNumberPart = Math.floor(num)
+const decimalPart = (num - Math.floor(num)).toFixed(4)
+const roundedNum = Math.round(num)
