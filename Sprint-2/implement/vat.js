@@ -8,3 +8,16 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+// Function to calculate price with VAT added
+// Function to calculate price with VAT added
+function calculatePriceWithVAT(price) {
+    return price * 1.2;
+}
+
+// Example usage
+console.log(calculatePriceWithVAT(30)); // Expected output: 36
+console.log(calculatePriceWithVAT(150)); // Expected output: 180
+console.log(calculatePriceWithVAT(75)); // Expected output: 90
+console.log(calculatePriceWithVAT(200)); // Expected output: 240
+console.log(calculatePriceWithVAT(120)); // Expected output: 144
