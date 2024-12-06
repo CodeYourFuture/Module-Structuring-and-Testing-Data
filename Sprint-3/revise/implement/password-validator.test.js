@@ -14,3 +14,9 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+const isValidPass = require('./password-validator');
+
+test("Is prime number", function(){
+  expect(isValidPass('Calohh35#')).toBe(true);
+  expect(isValidPass('alohh35#')).toBe(false);
+});
