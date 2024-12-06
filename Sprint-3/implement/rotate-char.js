@@ -41,3 +41,36 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+let lowerCaseLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+let upperCaseLetters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+
+function rotateCharacter(char, num) {
+  for (let i = 0; i < lowerCaseLetters.length; i++) {
+    for (let j = 0; j < upperCaseLetters.length; j++) {
+      if (char === lowerCaseLetters[lowerCaseLetters.length - 1]) {
+        return upperCaseLetters[num - 1]
+      }
+      else if (char === upperCaseLetters[upperCaseLetters.length - 2]) {
+        return lowerCaseLetters[num - 2];
+      }
+      if(char === lowerCaseLetters[i]) {
+        return upperCaseLetters[i + num];
+      }
+      else if (char === upperCaseLetters[j]) {
+        return lowerCaseLetters[j + num];
+      }
+      else if (char !== upperCaseLetters[j] || char !== lowerCaseLetters[i]) {
+        return char;
+      }
+    }
+  }
+}
+
+console.log(rotateCharacter("a", 3)); //Output: "d"
+console.log(rotateCharacter("f", 1)); //Output: "G"
+console.log(rotateCharacter("A", 3)); //Output: "D"
+console.log(rotateCharacter("F", 1)); //Output: "g"
+console.log(rotateCharacter("7", 5)); //Output: "7"
+console.log(rotateCharacter("z", 1)); //Output: "a"
+console.log(rotateCharacter("Y", 2)); //Output: "A"
