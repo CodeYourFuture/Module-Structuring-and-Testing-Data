@@ -16,6 +16,7 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 
 function isValidPassword(password, previousPasswords = []) {
+  //set the Default function parameters: allow named parameters to be initialized with default values if no value passed
   console.log(`password = ${password}`);
   console.log("previousPasswords =", previousPasswords);
   if (password.length < 5) {
