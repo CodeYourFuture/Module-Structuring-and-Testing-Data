@@ -29,3 +29,26 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+
+const getCardValue = (card) => {
+  const cardValue = card.slice(0, -1);
+
+  if(/^\d+$/.test(cardValue)) {
+    if (Number(cardValue) >= 2 && Number(cardValue) <= 10) {
+      return Number(cardValue);
+    }
+  }
+  else if (/^[JQK]$/.test(cardValue)) {
+    return 10;
+  }
+  else if (cardValue === 'A') {
+    return 11;
+  }
+}
+
+console.assert(getCardValue('2♠') === 2, 'The given value of 2♠ returns 2');
+console.assert(getCardValue('A♠') === 11, 'The given value of "A" returns 11');
+console.assert(getCardValue('8♠') === 8, 'The given value of 8♠ returns 8');
+console.assert(getCardValue('J♠') === 10, 'The given value of J returns 10');
+console.assert(getCardValue('Q♠') === 10, 'The given value of 2♠ returns 10');

@@ -32,3 +32,44 @@
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) {
+    return false;
+  }
+  else if (numerator < 0 && denominator > 0) {
+    return true;
+  }
+  else if(numerator < denominator) {
+    return true;
+  }
+  else if (numerator > denominator) {
+    return false;
+  }
+  else if (numerator === denominator) {
+    return false;
+  }
+}
+
+console.assert(isProperFraction(3, 0) === false, `No target output: Error (Denominator cannot be zero), Explanation: The function should throw an error when the denominator is zero, as it's not a valid fraction.`);
+
+// console.assert(isProperFraction(-4, 7), `target output: false, Explanation: The fraction  is not a proper fraction because the numerator is equal to the denominator. The function should return false.`);
+
+console.assert(isProperFraction(-4, 7) === true, `target output: false, Explanation: The fraction  is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.`);
+
+console.assert(isProperFraction(5, 2) === false, `target output: false, Explanation: The fraction  is an improper fraction, where the numerator is greater than or equal to the denominator. The function should return false.`);
+
+console.assert(isProperFraction(2, 3) === true, `target output: true, Explanation: The fraction  is a proper fraction, where the numerator is less than the denominator. The function should return true.`);
+// isProperFraction(3, 5);
+
+
+// function formatAs12HourClock(time) {
+//   return `${time} am`;
+// }
+
+const currentOutput = isProperFraction(2, 4);
+const targetOutput = true;
+console.assert(
+  currentOutput === targetOutput,
+  `current output: ${currentOutput}, target output: ${targetOutput}`
+);
