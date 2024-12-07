@@ -17,6 +17,6 @@
 function convertToSnakeCase(str){
  return str.toUpperCase().replace(" ","_");
 }
-var testStr = "hello there"
-const myString = convertToSnakeCase(testStr);
+
+const myString = convertToSnakeCase("hello there");
 console.log(myString)
