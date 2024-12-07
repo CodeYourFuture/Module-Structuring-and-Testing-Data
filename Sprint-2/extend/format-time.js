@@ -3,8 +3,9 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
+  
   if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+    return `${hours - 12} pm`;
   }
   return `${time} am`;
 }
@@ -22,3 +23,6 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+
+let myTime = formatAs12HourClock("04:69");
+console.log(myTime);
