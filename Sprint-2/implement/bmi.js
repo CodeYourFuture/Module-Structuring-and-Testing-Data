@@ -13,3 +13,19 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function calBmi(weightkg, heightM) {
+  const bmi = weightkg / (heightM * heightM);
+   return Number(bmi.toFixed(1));
+}
+
+//console.log(12.46.toFixed(1));
+
+// test1 to check the example test case
+const currentOutput1 = calBmi(70, 1.73);
+const targetOutput1 = 23.4;
+console.assert(
+  currentOutput1 === targetOutput1,
+  `current output: ${currentOutput1}, target output: ${targetOutput1}`
+);
+

@@ -13,3 +13,15 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function toUpperSnakeCase(str) {
+   const upperCase = str.toUpperCase()
+   return upperCase.replaceAll(" ", "_");
+}
+
+const sentence = 'fat dog'
+console.log(toUpperSnakeCase(sentence));
+
+const sentence1 = 'lord of the rings'
+console.log(toUpperSnakeCase(sentence1));
+
