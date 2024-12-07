@@ -30,34 +30,38 @@
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 
+function getCardValue(card) {
+  //extract the number part of the card
+  const rank = card.slice(0, -1);
 
-function getCardValue(str){
-//second criteria
-if(str > 2 && str < 9){
-    return Number(str)
-}//third criteria
-if( str==="10" || str==="J" || str==="Q" || str==="K"){
-    return Number("10")
-}//fourth criteria
-if(str = "A"){
-    return Number("11")
+  //Handle Number Cards (2-10):
+  if (rank > "2" && rank < "9") {
+    //The parseInt() function parses a string argument and returns an integer
+    return parseInt(rank);
+  }
+  //Handle Face Cards (J, Q, K):
+  if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  }
+  //Handle Ace (A):
+  if ((rank = "A")) {
+    return 11;
+  }
+  //Handle Invalid Cards:
+  throw new Error("Invalid card rank.");
 }
+
+
+// Example assertions to test the function
+try {
+    console.assert(getCardValue("2♠") === 2, "Test failed for '2♠'");
+    console.assert(getCardValue("5♠") === 5, "Test failed for '5♠'");
+    console.assert(getCardValue("10♠") === 10, "Test failed for '10♠'");
+    console.assert(getCardValue("J♠") === 10, "Test failed for 'J♠'");
+    console.assert(getCardValue("Q♠") === 10, "Test failed for 'Q♠'");
+    console.assert(getCardValue("K♠") === 10, "Test failed for 'K♠'");
+    console.assert(getCardValue("A♠") === 11, "Test failed for 'A♠'");
+    console.log("All tests passed!");
+} catch (error) {
+    console.error(error.message);
 }
-
-//test2
-const str2 = "3";
-const output2 = getCardValue(str2);
-const expectedOutput2 = 3;
-console.assert( output2 === expectedOutput2, "expecting number 3") //passed
-
-//test3
-const str3 = "10";
-const output3 = getCardValue(str3);
-const expectedOutput3 = 10;
-console.assert( output3===expectedOutput3, "expecting 10") //passed
-
-//test4
-const str4 = "A";
-const output4 = getCardValue(str4);
-const expectedOutput4 = 11
-console.assert(output4 === expectedOutput4 , "expecting 11")
