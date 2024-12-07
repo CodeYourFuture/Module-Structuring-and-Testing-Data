@@ -8,3 +8,8 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function priceIncludingVAT(price) {
+  return Math.round(price * 1.2 * 100) / 100; // Added the rounding to cover edge cases
+}
+
