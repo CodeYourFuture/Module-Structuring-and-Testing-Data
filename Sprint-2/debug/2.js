@@ -1,8 +1,10 @@
 // Predict and explain first...
+//returns 3 for every number 
+//we should pass num variable as a parameter in function rather than assigning a value to num outside of the function
 
-const num = 103;
+//const num = 103;
 
-function getLastDigit() {
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
