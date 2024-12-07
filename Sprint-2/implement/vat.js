@@ -8,3 +8,12 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function addVat(price){
+    const vat = 0.2;
+    const priceWithoutPoundSign = Number(price.substring(1));
+    return  `£${(vat * priceWithoutPoundSign) + priceWithoutPoundSign}`;
+}
+
+console.log(addVat("£50"));
+
