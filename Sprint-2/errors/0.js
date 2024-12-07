@@ -7,8 +7,7 @@
 //change the variable name inside the function body
 
 function capitalise(str) {
-  let newStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return newStr;
+  return newStr=`${str[0].toUpperCase()}${str.slice(1)}`;
 }
 
 console.log(capitalise("sprint2"))
