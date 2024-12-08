@@ -14,8 +14,8 @@
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
 
-function upperSnakeCase(str) {
+function convertToSnakecase(str) {
     return str.split(" ").join("_").toUpperCase();
 }
-console.log(upperSnakeCase("hello world"))
-console.log(upperSnakeCase("lord of the rings"))
+console.log(convertToSnakecase("hello world"))
+console.log(convertToSnakecase("lord of the rings"))
