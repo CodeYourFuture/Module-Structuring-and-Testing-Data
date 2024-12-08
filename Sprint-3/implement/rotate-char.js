@@ -41,3 +41,24 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+function rotateCharacter(char, shift) {
+    // Check if the character is a lowercase letter
+    if (char >= 'a' && char <= 'z') {
+      return String.fromCharCode(((char.charCodeAt(0) - 97 + shift) % 26 + 26) % 26 + 97);
+    }
+  
+    // Check if the character is an uppercase letter
+    if (char >= 'A' && char <= 'Z') {
+      return String.fromCharCode(((char.charCodeAt(0) - 65 + shift) % 26 + 26) % 26 + 65);
+    }
+  
+    // If the character is not a letter, return it unchanged
+    return char;
+  }
+
+  console.log(rotateCharacter("a", 3))
+  console.log(rotateCharacter("A", 3))
+  console.log(rotateCharacter("Z", -3))
+
+  module.exports = rotateCharacter
