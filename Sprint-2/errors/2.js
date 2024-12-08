@@ -1,10 +1,15 @@
 
 // Predict and explain first...
 
-// this function should square any number but instead we're going to get an error
+// The code will throw a SyntaxError because the parameter name 3 is invalid
 
-function square(3) {
+
+// this function should square any number but instead we're going to get an error.
+// Function parameters must be valid variable names, and numbers cannot be used as names.
+
+function square(num) {
     return num * num;
 }
 
+console.log(square(3))
 
