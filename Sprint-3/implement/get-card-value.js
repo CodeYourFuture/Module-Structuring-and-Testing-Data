@@ -1,6 +1,5 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
-const { error } = require("console");
 
 // You will need to implement a function getCardValue
 
@@ -50,19 +49,31 @@ function getCardValue(card) {
      // Handle Ace (A)
     else if (rank === "A") {
         return 11;
-   } else {
-    console.log("this is rank", rank)
-    
+   } else { 
         throw new Error("Invalid card rank"); 
    }
- };
+
+ }
+
+console.assert(getCardValue("J♠") === 10, 'Test Case 1 Failed: Expected 10');
+console.assert(getCardValue("9♠") === 9, 'Test Case 2 Failed: Expected 9');
+console.assert(getCardValue("10♠") === 10, 'Test Case 3 Failed: Expected 10');
+console.assert(getCardValue("A♠") === 11, 'Test Case 4 Failed: Expected 11');
+console.assert(getCardValue("K♠") === 10, 'Test Case 5 Failed: Expected 10');
+
+try {
+    getCardValue("1♠");  
+    console.assert(false, 'Test Case 6 Failed: Expected error for invalid rank');
+} catch (e) {
+    console.log("Test Case 6 Passed: Error thrown as expected");
+}
 
 
 console.log(getCardValue("J♠"))
-
 console.log(getCardValue("9♠"))
-
 console.log(getCardValue("1♠"))
+console.log(getCardValue("A♠"))
+
 
 
 module.exports = getCardValue
