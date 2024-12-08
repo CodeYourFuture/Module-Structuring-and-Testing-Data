@@ -14,3 +14,15 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+const checkPassword = require('./password-validator');
+
+test('validates if it is a strong password', () => {
+    const password = 'Strong1!';
+    expect(checkPassword(password)).toBe(true);  
+});
+
+test('invalidates  weak password', () => {
+    const password = 'weak'; 
+    expect(checkPassword(password)).toBe(false);  
+});

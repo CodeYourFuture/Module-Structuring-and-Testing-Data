@@ -23,3 +23,25 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+const repeat = require('./repeat');
+
+test('repeats a string the specified number of times', () => {
+    expect(repeat('hello', 3)).toBe('hellohellohello');
+    expect(repeat('world', 2)).toBe('worldworld');
+});
+
+test('returns the original string when count is 1', () => {
+    expect(repeat('hello', 1)).toBe('hello');
+    expect(repeat('world', 1)).toBe('world');
+});
+
+test('returns an empty string when count is 0', () => {
+    expect(repeat('hello', 0)).toBe('');
+    expect(repeat('world', 0)).toBe('');
+});
+
+//test('throws an error for negative count', () => {
+//    expect((repeat) => repeat('hello', -1)).toThrow('Count cannot be negative');
+//    expect((repeat) => repeat('world', -2)).toThrow('Count cannot be negative');
+//});

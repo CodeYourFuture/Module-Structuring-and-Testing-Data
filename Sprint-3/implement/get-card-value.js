@@ -29,3 +29,23 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+
+function getCardValue(cardString) {
+    const rank = cardString[0];
+  
+    if (rank === 'A') {
+      return 11; 
+    } else if (rank === 'J' || rank === 'Q' || rank === 'K') {
+      return 10; 
+    } else if (parseInt(rank) >= 2 && parseInt(rank) <= 9) {
+      return parseInt(rank); 
+    } else if (rank === 'AA♠' || rank === '1000♠' || return === '2.1'){
+        throw new Error("Invalid card rank."); 
+    } else {
+      throw new Error("Invalid card rank."); 
+    }
+  }
+
+  module.exports = getCardValue;
+   
