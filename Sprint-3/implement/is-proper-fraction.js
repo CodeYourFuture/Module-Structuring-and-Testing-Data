@@ -34,7 +34,7 @@
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 
 function isProperFraction(numerator, denominator){
-    if (numerator < denominator) {
+    if (Math.abs(numerator) < denominator) {
         return true
     } else if (denominator === 0) {
         throw new Error("Denominator cannot be zero")

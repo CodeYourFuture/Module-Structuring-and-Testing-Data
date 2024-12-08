@@ -9,6 +9,5 @@ test("should return true if numerator is less than the denominator", () => {
 })
 
 test("should return error if denominator is 0;", () => {
-    expect(isProperFraction(5,0)).toBeNull()
-    //.toThrow("Denominator cannot be zero")
+    expect(isProperFraction(5,0)).toThrow("Denominator cannot be zero")
 })
