@@ -52,7 +52,6 @@ function charToAscii(char, shift) {
 
     let shiftedChar = String.fromCharCode(shiftedAsciiCode);
     return shiftedChar;
-    console.log(shiftedChar); // Output: 'A'
   }
   if (/[A-Z]/.test(char)) {
     let shiftedAsciiCode =

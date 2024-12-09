@@ -34,13 +34,10 @@
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 
 function isProperFraction(numerator, denominator) {
-  if (Math.abs(numerator) < denominator) return true;
-  if (
-    (Math.abs(numerator) > denominator && denominator != 0) ||
-    numerator == denominator
-  )
-    return false;
   if (denominator == 0) return "Error";
+  if (Math.abs(numerator) < denominator) return true;
+  if (Math.abs(numerator) > denominator || numerator == denominator)
+    return false;
 }
 //console.log(isProperFraction(5, 0));
 console.assert(

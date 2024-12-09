@@ -18,7 +18,7 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 function passwordValidation(pass) {
-  let bannedPasswords = ["ydt635RERE!!", "hdud738#&sg", "bxv735#$ls0HG"];
+  let bannedPasswords = ["ydt635RERE!!", "hdud738#&sG", "bxv735#$ls0HG"];
   if (
     /[A-Z]/.test(pass) &&
     /[a-z]/.test(pass) &&
@@ -45,7 +45,7 @@ it("should not allow invalid password", () => {
   expect(passwordValidation("1`\\UYgs")).toBe("Invalid Password");
 });
 it("should not be less than 5 digits", () => {
-  expect(passwordValidation("hs3Q")).toBe("Invalid Password");
+  expect(passwordValidation("h$3Q")).toBe("Invalid Password");
   expect(passwordValidation("")).toBe("Invalid Password");
 });
 
@@ -69,6 +69,6 @@ it("should have at least one non-alphanumeric symbol", () => {
 });
 it("should not be from previous passwords", () => {
   expect(passwordValidation("ydt635RERE!!")).toBe("Invalid Password");
-  expect(passwordValidation("hdud738#&sg")).toBe("Invalid Password");
+  expect(passwordValidation("hdud738#&sG")).toBe("Invalid Password");
   expect(passwordValidation("bxv735#$ls0HG")).toBe("Invalid Password");
 });

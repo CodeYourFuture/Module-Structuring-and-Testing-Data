@@ -25,7 +25,7 @@
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 function repeat(string, integer) {
   let string1 = string;
-  if (integer == 0) return " ";
+  if (integer == 0) return "";
   if (integer < 0) return "Negative numbers as a repetition is not allowed";
 
   for (let i = 1; i < integer; i++) {
