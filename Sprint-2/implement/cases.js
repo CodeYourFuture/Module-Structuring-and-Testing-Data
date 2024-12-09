@@ -13,3 +13,20 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+
+function toUpperSnakeCase(inputString) {
+    // Convert the string to uppercase and replace spaces with underscores
+    return inputString.toUpperCase().replace(/ /gi, "_");
+}
+
+console.log(toUpperSnakeCase("hello there"));
+console.log(toUpperSnakeCase("lord of the rings"));
+
+
+// inputString.toUpperCase() converts all letters to uppercase.
+// .replace(/ /g, "_") uses a regular expression to replace all spaces in the string with underscores (_), where the /g flag ensures that all spaces are replaced (not just the first one).
+// Using .replace(/ /g, "_") with the g flag tells JavaScript to replace all spaces in the string, not just the first one.
+// /g: Replaces all occurrences of the pattern, but is case-sensitive.
+// /gi: Replaces all occurrences of the pattern and is case-insensitive.
