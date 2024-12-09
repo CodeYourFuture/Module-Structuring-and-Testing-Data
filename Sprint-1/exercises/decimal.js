@@ -11,7 +11,7 @@ const num = 56.5678;
 let wholeNumberPart = Math.round(num);
     console.log(wholeNumberPart)
 
-let decimalPart = num - Math.floor(num);
+let decimalPart = (num - Math.floor(num)).toFixed(4);
     console.log(decimalPart);
 
 let roundedNum = Math.round(num);
