@@ -13,3 +13,10 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function convertToUpperSnakeCase (str) {
+    return str.replaceAll(" ", "_").toUpperCase()
+
+}
+
+console.log(convertToUpperSnakeCase("lord of the rings"))

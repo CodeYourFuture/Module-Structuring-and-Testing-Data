@@ -13,3 +13,11 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function calBMI (weight, height) {
+    let squareHeight = height * height;
+    return Number((weight / squareHeight).toFixed(1)) ;
+
+}
+
+console.log(calBMI(61, 1.61));
