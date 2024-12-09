@@ -1,8 +1,9 @@
 // Predict and explain first...
+// the num is already declared by the constant keyword ,which is not going to change in every logging.
 
-const num = 103;
 
-function getLastDigit() {
+
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
