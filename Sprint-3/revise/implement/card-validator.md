@@ -33,3 +33,41 @@ These are the requirements your project needs to fulfill:
 - Return a boolean from the function to indicate whether the credit card number is valid.
 
 Good luck!
+
+
+function validateCreditCard(cardNumber) {
+  //Ensure the input is a string to handle all checks easily
+  if (typeof cardNumber !== "string") {
+    return false;
+  }
+
+  //Check if card number is 16 digits and contain only numbers
+  if (!/^\d{16}$/.test(cardNumber)) {
+    return false;
+  }
+
+  //Check for at least two different digits
+  const uniqueDigits = new Set(cardNumber);
+  if (uniqueDigits.size < 2) {
+    console.log("grater than 2");
+    return false;
+  }
+
+  //Ensure the last digit is even
+  const lastDigit = Number(cardNumber[cardNumber.length - 1]);
+  if (lastDigit % 2 !== 0) {
+    return false;
+  }
+
+  //Ensure the sum of the all digits is grater than 16
+  const digitArray = cardNumber.split("");
+  const digitSUm = digitArray.reduce((sum, digit) => sum + Number(digit), 0);
+  if (digitSUm <= 16) {
+    return false;
+  }
+
+  //if all rules pass! the card number is valid
+  return true;
+}
+
+console.log(validateCreditCard("9999777788880000"));
