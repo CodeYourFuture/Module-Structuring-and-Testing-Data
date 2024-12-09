@@ -21,5 +21,11 @@ console.log(find("code your future", "z"));
 
 // a) How the index variable updates during the call to find
 // b) What is the if statement used to check
+
+//The if statement is used to determine or check if the part of the string has the character that we are looking for 
 // c) Why is index++ being used?
+
+//   index++ makes sure the function looks at each character in the string one by one until it finds a match or reaches the end.
+
 // d) What is the condition index < str.length used for?
+// It checks if the current index is less than the length of the string to ensure the loop doesn't go beyond the string.

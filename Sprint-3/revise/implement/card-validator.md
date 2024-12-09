@@ -33,3 +33,20 @@ These are the requirements your project needs to fulfill:
 - Return a boolean from the function to indicate whether the credit card number is valid.
 
 Good luck!
+
+
+//Answer: Breakdown
+touch command to create file cardValidator.js
+define a function cardValidator(cardNumber16digits){}
+// this function checks if the card number entered by a user is valid.
+// a valid card number has the following parameters: 16 digits, ends in even number so use %2 if ==0 then even, if cardNumber sum > 16 card is valid.
+function ends in return boolean if card is valid(true) or invalid(false) */
+
+
+
+function cardValidator(cardNumber){
+    // this function checks if the card number entered by a user is valid.
+    // a valid card number has the following parameters: 16 digits, ends in even number so use %2 if ==0 then even, if cardNumber sum > 16 card is valid.
+    // a conditional statement to say if the cardNumber is true or false
+    return validCard //this is a true or false to show if the card is valid
+}
