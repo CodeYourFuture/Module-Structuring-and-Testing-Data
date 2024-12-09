@@ -23,3 +23,45 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+function repeat(str, count) {
+  // Handle negative count
+  if (count < 0) {
+    throw new Error('Count must be a non-negative integer');
+  }
+  
+  // Handle count of 0
+  if (count === 0) {
+    return '';
+  }
+  
+  // Handle count of 1 (return original string)
+  if (count === 1) {
+    return str;
+  }
+  
+  // Repeat the string for count > 1
+  return str.repeat(count);
+}
+
+ 
+
+  
+ test('repeats the string the specified number of times', () => {
+    expect(repeat('abc', 3)).toBe('abcabcabc');
+  });
+
+
+  test('throws an error for negative count', () => {
+    expect(() => repeat('abc', -1)).toThrow('Count must be a non-negative integer');
+  });
+
+
+   test('handles empty strings correctly', () => {
+    expect(repeat('', 5)).toBe('');
+  });
+
+  
+   test('handles empty strings correctly', () => {
+    expect(repeat('', 5)).toBe('');
+  });
