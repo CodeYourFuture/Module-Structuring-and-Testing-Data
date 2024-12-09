@@ -41,3 +41,34 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+function rotateCharacter(char, n) {
+    if (!/^[a-zA-Z]$/.test(char)) return "Unchanged, not a letter";
+    const charCode = char.charCodeAt();
+    const shift = n % 26; //
+  
+    if (charCode >= 97 && charCode <= 122) {
+      let newCharCode = charCode + shift;
+      if (newCharCode > 122) {
+        newCharCode = newCharCode - 26;
+        return `Output: ${String.fromCharCode(
+          newCharCode
+        )} (preserves case, but wraps around)`;
+      } else {
+        return String.fromCharCode(newCharCode);
+      }
+    } else if (charCode >= 65 && charCode <= 90) {
+      let newCharCode = charCode + shift;
+  
+      if (newCharCode > 90) {
+        newCharCode = newCharCode - 26;
+        return `Output: ${String.fromCharCode(
+          newCharCode
+        )} (preserves case, but wraps around)`;
+      } else {
+        return String.fromCharCode(newCharCode);
+      }
+    }
+  }
+  
+  console.log(rotateCharacter("C", 1500));
