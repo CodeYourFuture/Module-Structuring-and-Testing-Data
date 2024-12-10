@@ -29,3 +29,53 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+
+//The string input must consist of 2 characters if the emoji suit is to be included
+    if (typeof card !="string" || card.length < 2) {
+        throw new Error("Invalid card rank or card suit");
+    }
+
+//The input has to be separated into the rank and suit emoji so that they can be handled separately
+let rank = card.slice(0, -1); //If there are 2 characters in the string, this slices just the first character
+let suit = card.slice(-1); //This isolates the suit emoji
+
+//Define valid suits and face cards
+let validSuits = ["♠", "♥", "♦", "♣"]; 
+let validFaceCards = ["J", "Q", "K", "A"];
+
+//Instructing the only suit emojis that are valid. When the condition is true (the suit input is NOT in the valid array) it throws an error.
+    
+    if (!validSuits.includes(suit)) {
+        throw new Error("Invalid card rank or card suit");
+    }
+ 
+//Handling when card inputs are 2-9
+    if (rank >= "2" && rank <= "9") {
+        return parseInt(rank, 10); //parseInt parses a string and returns the first integer, 10 indicates decimal radix for numbers 0-9
+    }    
+
+//Handling when card input is 10
+    if (rank === "10") {
+        return 10;
+    }    
+
+//Handling face cards worth 10 and the Ace worth 11
+    if (validFaceCards.includes(rank)) {
+        if (rank === "A") {
+            return 11;
+        }
+        return 10; //When not the A but the other face cards J, Q, K
+    }
+
+//If none of the valid rank parameters are matched, throw an error
+    {
+        throw new Error("Invalid card rank or card suit");
+    }
+}    
+
+module.exports = {getCardValue};
+    
+
+
