@@ -35,18 +35,31 @@
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
 
 function isValidTriangle (a, b, c) {
-//Using map allows for each value in the array to be processed
+//Using map allows for each value in the array to be processed, this case, to ensure that each value is a number
     const sides = [a, b, c].map(value => {
         const number = Number(value);
             if (isNaN(number)) {
             throw new Error("Please enter numeric triangle side values");
             }
+        return number;
+        }); 
 
+//The extracted validated numbers need to be assigned using the destructuring method
+    const [sideA, sideB, sideC] = sides;       
+
+//This will handle when values are zero or negative: invalid triangle        
+        
+        if (sideA <= 0 || sideB <= 0 || sideC<= 0) {
+            return false;
+        }
+            
+//This will handle when the sum of 2 sides is not greater than the third side: invalid triangle
+        if (sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA) {
+            return false;
+        }
+
+//This will handle when the criteria have all been met for a valid triangle
+    return true;    
+    
     }
-
-
-
-    )
-
-
-}
+module.exports = {isValidTriangle};   
