@@ -29,3 +29,48 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+// function getCardValue(checkingCard, emoji) {
+//   //   const splitCard = checkingCard.split("");
+//   //   return splitCard;
+//   const emojiArray = ["❤️", "♠️", "♦️", "♣️"];
+//   const isEmojiValid = emojiArray.includes(emoji);
+//   const valueOfCard =
+//     checkingCard == "A"
+//       ? 11
+//       : checkingCard == "K" || checkingCard == "Q" || checkingCard == "J"
+//       ? 10
+//       : !isNaN(checkingCard) && checkingCard >= 2 && checkingCard <= 10
+//       ? Number(checkingCard)
+//       : false;
+//   return isEmojiValid && valueOfCard ? valueOfCard : "Invalid card rank";
+// }
+
+// console.log(getCardValue("A", "♠️"));
+function getCardValue(card) {
+  const validSuit = ["❤️", "♠️", "♦️", "♣️"];
+
+  const rank = card.slice(0, -2);
+  const suit = card.slice(-2);
+  // console.log("this is rank" + rank);
+  // console.log("this is suit" + suit);
+
+  if (!validSuit.includes(suit)) {
+    throw new Error("Invalid card suit");
+  }
+  const valueOfCard =
+    rank === "A"
+      ? 11
+      : ["K", "Q", "J", "10"].includes(rank)
+      ? 10
+      : !isNaN(rank) && rank >= 2 && rank <= 9
+      ? Number(rank)
+      : false;
+  if (!valueOfCard) {
+    throw new Error("Invalid card rank");
+  }
+  return valueOfCard;
+}
+// console.log(getCardValue("LL"));
+// console.log(getCardValue("002♦️"));
+
+module.exports = getCardValue;
