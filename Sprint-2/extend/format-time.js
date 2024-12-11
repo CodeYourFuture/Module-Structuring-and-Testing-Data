@@ -2,15 +2,17 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
-  const minutes = time.slice(time.indexOf(":") + 1, time.indexOf(":") + 3);
-  // console.log(minutes);
-  if (hours === 0) {
-    return `${hours + 12}:${minutes} am`;
+  const [hours, minutes] = time.split(":");
+  if (Number(hours) === 0) {
+    return `${Number(hours) + 12}:${minutes} am`;
   }
-  if (hours > 12) {
+  if (Number(hours) === 12) {
+    return `${hours}:${minutes} pm`;
+  }
+  if (Number(hours) > 12) {
     return `${hours - 12}:${minutes} pm`;
   }
+
   return `${time} am`;
 }
 
@@ -28,6 +30,10 @@ const testData = [
   {
     currentOutput: formatAs12HourClock("00:00"),
     targetOutput: "12:00 am",
+  },
+  {
+    currentOutput: formatAs12HourClock("12:00"),
+    targetOutput: "12:00 pm",
   },
   {
     currentOutput: formatAs12HourClock("08:15"),
@@ -53,6 +59,10 @@ const testData = [
     currentOutput: formatAs12HourClock("13:05"),
     targetOutput: "1:05 pm",
   },
+  {
+    currentOutput: formatAs12HourClock("12:05"),
+    targetOutput: "12:05 pm",
+  },
 ];
 
 // Used the map array method to iterate through the test data.
@@ -76,4 +86,3 @@ testData.map((data) =>
 //   currentOutput2 === targetOutput2,
 //   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 // );
-
