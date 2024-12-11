@@ -13,3 +13,9 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function strToUpperSnakeCase(str) {
+  const upperCaseStr = str.toUpperCase();
+  return upperCaseStr.replaceAll(" ", "_");
+  // return upperCaseStr.split(" ").join('_');    // This would also work
+}
