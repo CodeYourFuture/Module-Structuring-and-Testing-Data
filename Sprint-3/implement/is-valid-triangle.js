@@ -38,4 +38,4 @@ function isValidTriangle(a, b, c) {
   return a + b > c && b + c > a && a + c > b;
 }
 
-// Not sure if we're suppose to do assersions for this one, not indicated in the instructions
+module.exports = isValidTriangle;
