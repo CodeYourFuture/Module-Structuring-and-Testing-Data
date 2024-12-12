@@ -35,7 +35,7 @@
 
 function isProperFraction(numerator, denominator) {
   if (denominator === 0) {
-    const err = new Error("Denominator cannot be zero");
+    throw new Error("Denominator cannot be zero");
     return err;
   }
   return Math.abs(numerator) < Math.abs(denominator);
@@ -87,7 +87,7 @@ const testData = [
 
   // Additional tests added
   {
-    Name: "Negative Fraction check",
+    Name: "Negative Denominator check",
     Input: { numerator: 3, denominator: -5 },
     TargetOutput: true,
     Explanation:
@@ -102,7 +102,7 @@ const testData = [
   },
 
   {
-    Name: "Negative Improper Fraction check",
+    Name: "Negative Improper Denominator check",
     Input: { numerator: 9, denominator: -6 },
     TargetOutput: false,
     Explanation:
@@ -111,14 +111,17 @@ const testData = [
 ];
 
 // Used the map array method to iterate through the test data.
-testData.map((data) => {
-  const { Name, Input, TargetOutput, Explanation } = data;
-  const { numerator, denominator } = Input;
-  console.assert(
-    isProperFraction(numerator, denominator) === TargetOutput,
-    `${Name} \nCurrent output: ${isProperFraction(
-      numerator,
-      denominator
-    )} \nTarget output: ${TargetOutput} \n${Explanation} \n##################################################`
-  );
-});
+// testData.map((data) => {
+//   const { Name, Input, TargetOutput, Explanation } = data;
+//   const { numerator, denominator } = Input;
+//   console.assert(
+//     isProperFraction(numerator, denominator) === TargetOutput,
+//     `${Name} \nCurrent output: ${isProperFraction(
+//       numerator,
+//       denominator
+//     )} \nTarget output: ${TargetOutput} \n${Explanation} \n##################################################`
+//   );
+// });
+
+
+module.exports = isProperFraction;
