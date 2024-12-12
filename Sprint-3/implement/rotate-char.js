@@ -68,3 +68,5 @@ function rotateCharacter(char, shift) {
   }
   return char;
 }
+
+module.exports = rotateCharacter;
