@@ -45,15 +45,41 @@ console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps 
 
 //My solution
 
-//Declare the range of the variables to be able to use the .includes and wrap methods
+//Declare the range of the variables to be able to use the .includes, .indexOf and wrap methods
 
 function rotateCharacter (char, rotation) {
-    const 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const 'abcdefghijklmnopqrstuvwxyz';
+    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 
-    
-    if (uppercase.includes(char)) {
+//This handles for when the char is either null or undefined   
 
+    if (char === null || char === undefined) {
+        throw new Error("Please enter a number or character");
     }
 
+/*This checks if a lowercase input includes a character from the variable range and then adds rotation to return a lowercase output.
+The modulus operator and case.length handles wrap arounds by checking for remainder steps
+*/
+
+    if (uppercase.includes(char)) {
+        const index = (uppercase.indexOf(char) + rotation) % uppercase.length;
+        return uppercase[index];
+    }
+
+    if (lowercase.includes(char)) {
+        const index = (lowercase.indexOf(char) + rotation) % lowercase.length;
+        return lowercase[index];
+    }
+  
+
+//This will use handle returning numbers as is
+    else if (!isNaN(char)) {
+        return Math.abs(Number(char)); //This will convert any negative numbers to positive numbers
+    }
+
+//This will handle all other inputs outside of the letter and number string parameters
+    else
+    throw new Error("Please enter a number or character");
 }
+
+module.exports = {rotateCharacter};
