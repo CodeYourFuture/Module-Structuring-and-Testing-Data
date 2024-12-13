@@ -15,3 +15,24 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+//My tests
+const {countChar} = require ('./count');
+describe("countChar function", () => {
+
+//Invalid cases
+test("Please enter a valid string", () => {
+    expect(() =>countChar(null)).toThrow("Please enter a valid string"); //must have an entry
+    expect(() =>countChar(undefined)).toThrow("Please enter a valid string"); //must be an entry
+})    
+
+//Typical cases
+test("should return the character count in the string entered", () => {
+    expect(countChar("attack", "a")).toBe(2);
+    expect(countChar("looking", "o")).toBe(2);
+    expect(countChar("ha ha ha", "h")).toBe(3);
+    expect(countChar("56785678", "5")).toBe(2);
+    expect(countChar("-2828282", "2")).toBe(4);
+});
+
+});    
