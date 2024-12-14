@@ -21,7 +21,7 @@ function extract1decimal(x){
 
 function bmi(height, weight){
     if (height === 0) {
-        return Error;
+        throw new Error("Height cannot be zero.");
     }
     let bmivalue = weight/(height*height)
     return extract1decimal(bmivalue)

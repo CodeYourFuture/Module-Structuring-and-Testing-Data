@@ -3,10 +3,10 @@
 // Why will an error occur when this program runs?
 //*** Why? Because decimalnumber is the scope of the function. You cannot redeclare it again.
 // Try playing computer with the example to work out what is going on
-decimalNumber = 0.5;
+let decimalNumber = 0.5;
 
-function convertToPercentage(decimalNumber) {
-  const percentage = `${decimalNumber * 100}%`;
+function convertToPercentage(input) {
+  const percentage = `${input * 100}%`;
   return percentage;
 }
 
