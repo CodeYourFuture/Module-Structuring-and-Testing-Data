@@ -15,7 +15,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // ***Answer***: There are 3 function calls in this file. The first is Number() and second is console.log. Line 4, line 5 and line 10.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-// ***Answer***: replaceAll() is not a function. We can fix this problem by using replace() with a regular expression instead.
+// ***Answer***: replaceAll() is a function. We can fix this problem by using replace() with a regular expression instead.
 
 // c) Identify all the lines that are variable reassignment statements
 // Line 4, line 5

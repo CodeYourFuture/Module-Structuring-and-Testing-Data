@@ -27,6 +27,6 @@ console.log(result);
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 // totalMinutes is the quotient of the division of movieLength by 60.
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// result represents the time format of the movie length in hours, minutes and seconds. Maybe we can use "HHMMSS" instead.
+// result represents the time format of the movie length in hours, minutes and seconds. Maybe we can use "hoursMinutesSeconds" instead.
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // Yes, the code will work for all values of movieLength.
