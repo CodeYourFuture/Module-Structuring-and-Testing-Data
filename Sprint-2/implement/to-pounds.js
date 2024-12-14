@@ -6,6 +6,11 @@
 // You should call this function a number of times to check it works for different inputs
 function toPounds(penceString) {
 
+  if (!penceString || !penceString.endsWith("P")||isNaN(penceString)) {
+    return "Invalid input. Please provide a valid pence amount";
+  }
+
+
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1)
@@ -24,6 +29,6 @@ const pence = paddedPenceNumberString
   return (`£${pounds}.${pence}`);
 }
 
-console.log(toPounds("90P"))
+console.log(toPounds(""))
 
 
