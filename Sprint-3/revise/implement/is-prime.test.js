@@ -33,9 +33,6 @@ const nonPrimeArray = [
   474, 475, 485, 488, 498, 500,
 ];
 
-console.log(nonPrimeArray.length);
-console.log(primeArray.length);
-
 describe("isPrime Quick Tests", () => {
   test("Prime numbers return true", () => {
     primeArray.map((num) => expect(isPrime(num)).toBe(true));

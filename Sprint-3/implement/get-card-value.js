@@ -69,5 +69,3 @@ function getCardValue(card) {
 }
 
 module.exports = getCardValue;
-
-console.log(getCardValue("2♣ two of clubs".split(' ')[0]));

@@ -3,6 +3,3 @@ function countChar(str, char) {
 }
 
 module.exports = countChar;
-
-
-console.log(countChar("React is better than Angular", "u"))
