@@ -9,7 +9,7 @@
 // When I call this function with a number
 // it returns the new price with VAT added on
 function priceWithoutVAT(price){
-  priceWithVAT=price+ (price*0.2);
+  const priceWithVAT = price + (price * 0.2);
   return priceWithVAT;
 }
 console.log (priceWithoutVAT(50));
