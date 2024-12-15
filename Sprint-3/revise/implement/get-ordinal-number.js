@@ -3,6 +3,10 @@ function getOrdinalNumber (num) {
         return "Please enter a valid number";
     }
 
+    if (num === null || num === undefined) {
+        throw new Error("Please enter a valid number") //This handles null and undefined inputs   
+        } 
+
 //This will isolate the last character and last two characters to handle what to add to the end of the returned string.
 //1 will return 1st, 2 will return 2nd but 11, 12 and 13 with return 11th, 12th and 13th    
     const findLastCharacter = num % 10; //The remainder of the division is the last character
