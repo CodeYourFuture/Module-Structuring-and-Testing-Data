@@ -1,25 +1,27 @@
 //Function should return true if a number is prime and false if it is not.
 
 function isPrime(num) {
-    const number = Math.floor(Number(num)); //Ensures that input is a number and that it is an integer
+    const number = Number(num); //Ensures that input is a number
 
-    if (isNaN(number) || number === null || num === undefined) { //handles for non numbers, null and undefined inputs
+    if (isNaN(number) || num === null || num === undefined) { //handles for non numbers, null and undefined inputs
         throw new Error("Please enter a number");
     }
+    
+    const integerNumber = Math.floor(number); //After checking for invalid inputs, it converts number inputs to an integer
 
-    if (number <= 1 ) {
+    if (integerNumber <= 1 ) {
         return false; //1 is not a prime number
     }
 
-    if (number <= 3) {
+    if (integerNumber <= 3) {
         return true; //2 and 3 are prime numbers
     }
 
-    if (number % 2 === 0 || number % 3 === 0) {
+    if (integerNumber % 2 === 0 || integerNumber % 3 === 0) {
         return false; //Numbers divisible by 2 or 3 with no remainder are prime numbers 
     }
 
-    return true;
+    return true; //All other instances are prime numbers 
 
 }
 module.exports = {isPrime};
