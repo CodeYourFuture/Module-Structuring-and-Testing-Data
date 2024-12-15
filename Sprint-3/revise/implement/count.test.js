@@ -15,3 +15,37 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+// countChar function and tests in the same file
+
+// The function implementation
+function countChar(str, char) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === char) {
+        count++;
+      }
+    }
+    return count;
+  }
+  
+  // Jest Tests
+  describe('countChar Function', () => {
+    test('counts multiple occurrences of a character', () => {
+      expect(countChar('aaaaa', 'a')).toBe(5);
+      expect(countChar('banana', 'a')).toBe(3);
+    });
+  
+    test('returns 0 when character does not exist', () => {
+      expect(countChar('hello', 'z')).toBe(0);
+      expect(countChar('Hello', 'h')).toBe(0); // Case-sensitive
+    });
+  
+    test('returns 0 for an empty string', () => {
+      expect(countChar('', 'a')).toBe(0);
+    });
+  
+    test('returns 0 if the character does not appear', () => {
+      expect(countChar('aaaaa', 'b')).toBe(0);
+    });
+  });
+  
