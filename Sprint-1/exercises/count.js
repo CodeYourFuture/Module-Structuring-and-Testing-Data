@@ -7,3 +7,4 @@ count = count + 1;
 
 // answer:
 // Here in line 3, we redefine or update the variable count by setting it to add 1 to its value. So, variable count had 0 as its value, then we update it and it gets value 1.
+// Increment: Refers to increasing a variable's value, typically by 1
