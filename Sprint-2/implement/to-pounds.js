@@ -7,12 +7,12 @@
 
 
 function toPounds(penseString) {
-    const penseStringWithoutTrailing = penseString.slice(0,penseString.length -1);
-    const penseStringFormatCheck = penseStringWithoutTrailing.padStart(3, "0");
-    const pound = penseStringFormatCheck.slice(0, penseStringFormatCheck.length -2);
-    const pense = penseStringFormatCheck.slice(penseStringFormatCheck.length -2);
+    const penceStringWithoutTrailing = penceString.slice(0,penceString.length -1);
+    const penceStringFormatCheck = penceStringWithoutTrailing.padStart(3, "0");
+    const pound = penceStringFormatCheck.slice(0, penceStringFormatCheck.length -2);
+    const pence = penceStringFormatCheck.slice(penceStringFormatCheck.length -2);
 
-    return `£${pound}.${pense}`;
+    return `£${pound}.${pence}`;
 }
 
 console.log(toPounds("123456p"));
