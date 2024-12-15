@@ -23,3 +23,14 @@ console.log(find("code your future", "z"));
 // b) What is the if statement used to check
 // c) Why is index++ being used?
 // d) What is the condition index < str.length used for?
+
+/* My answer
+a) The index refers to the position of a character and will loop to check each character in the string while no character matches are found.
+b) The index will be returned when a character match is found. If no match is found, -1 will be returned.
+c) If no match is found, it will increment by 1 to check the next character.
+d) The while loop is coded to run for as long as the index is smaller than the length of the string
+meaning that it will check for matches and if no match is found, run for the length of the string.
+
+
+
+
