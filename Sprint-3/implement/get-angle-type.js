@@ -35,3 +35,20 @@ function getAngleType(angle) {
     else if (angle < 90) {
         return "Acute angle";
     }
+    // Check if the angle is greater than 90 degrees and less than 180 degrees
+    else if (angle > 90 && angle < 180) {
+        return "Obtuse angle";
+        }
+    else if (angle === 180) {
+        return "Straight angle";
+    }
+    // Check if the angle is greater than 180 degrees and less than 360 degrees
+    else if (angle > 180 && angle < 360) {
+        return "Reflex angle";
+        }
+    //check if the angle is not an angle returns an error
+    else {
+        return "Invalid angle";
+        }
+        }
+        
