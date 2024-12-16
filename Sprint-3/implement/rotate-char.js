@@ -72,4 +72,28 @@ function rotateCharacter(char, shift) {
         // lowercase and uppercase letters. The function should preserve the original case of the input character, and
         // should return the rotated character in the same case as the original character. The function should handle
         // both single-character and multi-character inputs, and should return the rotated character as a string
-        
+        // The rotateCharacter function can be enhanced to handle negative shifts and multi-character strings.
+        // This will allow for more flexible usage in text encryption and decryption scenarios.
+
+function rotateCharacter(char, shift) {
+    // Check if the character is a letter (either uppercase or lowercase)
+    if (char.match(/[a-zA-Z]/)) {
+        // Determine the base character (either 'a' or 'A') based on the case of the input character
+        let baseChar = char.toLowerCase() === 'a' ? 'a' : 'A';
+        // Calculate the new character by shifting the base character by the specified shift
+        let newChar = String.fromCharCode((char.charCodeAt(0) - baseChar.charCodeAt(0) + shift + 26) % 26 + baseChar.charCodeAt(0));
+        return newChar;
+    }
+    // If the character is not a letter, return it unchanged
+    return char;
+}
+
+// New function to handle multi-character strings
+function rotateString(str, shift) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        result += rotateCharacter(str[i], shift);
+    }
+    return result;
+}
+
