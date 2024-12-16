@@ -99,22 +99,22 @@ function rotateString(str, shift) {
 
 // Test cases for normal sjifts
 console.log(rotateCharacter("a", 3)); // Output: "d"
-console.log(rotateCharacter("f", 1)); // Output: "g"
-console.log(rotateCharacter("A", 3)); // Output: "D"
+console.log(rotateCharacter("f", 1)); // Output: "g" //failed
+console.log(rotateCharacter("A", 3)); // Output: "D" //failed
 console.log(rotateCharacter("F", 1)); // Output: "G"
 console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
-console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
+console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around) //failed
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
 
 // Test cases for multi-character strings
-console.log(rotateString("hello", 2)); // Output: "jgnnq"
-console.log(rotateString("Hello, World!", 3)); // Output: "Khoor, Zruog!"
-console.log(rotateString("Zebra 123!", 5)); // Output: "Fjwdwf 123!"
+console.log(rotateString("hello", 2)); // Output: "jgnnq" //failed
+console.log(rotateString("Hello, World!", 3)); // Output: "Khoor, Zruog!" //failed
+console.log(rotateString("Zebra 123!", 5)); // Output: "Fjwdwf 123!" //failed
 
 // Test cases for negative shifts
-console.log(rotateCharacter("d", -1)); // Output: "c"
-console.log(rotateCharacter("A", -3)); // Output: "X"
-console.log(rotateString("Hello, World!", -3)); // Output: "Ebiil, Tloia!"
+console.log(rotateCharacter("d", -1)); // Output: "c" //failed
+console.log(rotateCharacter("A", -3)); // Output: "X" //failed
+console.log(rotateString("Hello, World!", -3)); // Output: "Ebiil, Tloia!" //failed
 
 // The rotateCharacter function now supports both positive and negative shifts,
 // and the rotateString function allows for rotating entire strings while preserving non-letter characters.
