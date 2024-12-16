@@ -19,6 +19,9 @@ function passwordValidator(password, previousPasswords) { //Requires 2 inputs, p
         return false;
     }
 
+    if(previousPasswords.includes(password)) {
+        return false;
+    }
     return true; //Handles for when all conditions are met
 
 }
