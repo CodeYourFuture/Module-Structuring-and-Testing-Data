@@ -51,4 +51,25 @@ function getAngleType(angle) {
         return "Invalid angle";
         }
         }
+        // Test the function with different angles
+        console.log(getAngleType(90)); // Should print "Right angle"
+        console.log(getAngleType(45)); // Should print "Acute angle"
+        console.log(getAngleType(135)); // Should print "Obtuse angle"
+        console.log(getAngleType(180)); // Should print "Straight angle"
+        console.log(getAngleType(225)); // Should print "Reflex angle"
+        console.log(getAngleType(360)); // Should print "Reflex angle"
+        console.log(getAngleType(0)); // Should print "Invalid angle"
+        console.log(getAngleType(-45)); // Should print "Invalid angle"
+        console.log(getAngleType(45.5)); // Should print "Invalid angle"
+        console.log(getAngleType("45")); // Should print "Invalid angle"
+        console.log(getAngleType(null)); // Should print "Invalid angle"
+        console.log(getAngleType(undefined)); // Should print "Invalid angle"
+        console.log(getAngleType(true)); // Should print "Invalid angle"
+        console.log(getAngleType(false)); // Should print "Invalid angle"
+        console.log(getAngleType(NaN)); // Should print "Invalid angle"
+        console.log(getAngleType(Infinity)); // Should print "Invalid angle"
+        console.log(getAngleType(-Infinity)); // Should print "Invalid angle"
+        console.log(getAngleType("hello")); // Should print "Invalid angle"
+        console.log(getAngleType([1, 2, 3])); // Should print "Invalid
+        
         
