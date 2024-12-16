@@ -97,6 +97,14 @@ function rotateString(str, shift) {
     return result;
 }
 
+// Test cases for normal sjifts
+console.log(rotateCharacter("a", 3)); // Output: "d"
+console.log(rotateCharacter("f", 1)); // Output: "g"
+console.log(rotateCharacter("A", 3)); // Output: "D"
+console.log(rotateCharacter("F", 1)); // Output: "G"
+console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
+console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
+console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
 
 // Test cases for multi-character strings
 console.log(rotateString("hello", 2)); // Output: "jgnnq"
