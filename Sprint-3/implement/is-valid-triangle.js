@@ -45,3 +45,10 @@ function isValidTriangle(a, b, c) {
     }
     return true;
 }
+
+//Testing the functionality
+console.log(isValidTriangle(3, 3, 3)); // Expected output: true
+console.log(isValidTriangle(3, 3, 6)); // Expected output: false
+console.log(isValidTriangle(3, 0, 3)); // Expected output: false
+
+
