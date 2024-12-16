@@ -1,4 +1,7 @@
 const getAngleType = require('./get-angle-type.js');
+const isProperFraction = require('./is-proper-fraction.js');
+
+
 
 test('Given an angle in degrees, return the type of angle', () => {
   expect(getAngleType(90)).toBe("Right angle");
@@ -6,4 +9,12 @@ test('Given an angle in degrees, return the type of angle', () => {
   expect(getAngleType(160)).toBe("Obtuse angle");
   expect(getAngleType(180)).toBe("Straight angle");
   expect(getAngleType(300)).toBe("Reflex angle");
+});
+
+test('Given numerator and denominator, return the type of fraction', () => {
+  expect(isProperFraction(2, 3)).toBe(true); 
+  expect(isProperFraction(5, 3)).toBe(false);
+  expect(isProperFraction(2, 0)).toBe("error");
+  expect(isProperFraction(-4, 7)).toBe(true);
+   expect(isProperFraction(0, 0)).toBe(false);
 });
