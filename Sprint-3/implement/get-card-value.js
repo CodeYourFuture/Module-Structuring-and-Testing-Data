@@ -61,7 +61,7 @@ try {
     console.assert(getCardValue("10♥") === 10, "Test Case 3 Failed");
     console.assert(getCardValue("J♣") === 10, "Test Case 4 Failed");
     console.assert(getCardValue("Q♠") === 10, "Test Case 5 Failed");
-    console.assert(getCardValue("K♦") === 10, "Test Case 6 Failed");
+    console.assert(getCardValue("K♦") === 10, "Test Case 6 Failed"); //using 10 it should pass and 20 should fail
     console.assert(getCardValue("A♣") === 11, "Test Case 7 Failed");
     
     // Testing invalid card
