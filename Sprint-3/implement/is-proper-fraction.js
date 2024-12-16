@@ -46,7 +46,7 @@ function isProperFraction(numerator, denominator) {
 //Testing the function
 console.log(isProperFraction(2, 3)); //should return True
 console.log(isProperFraction(5, 2)); //should return False
-console.log(isProperFraction(3, 0)); //should throw an error
 console.log(isProperFraction(-4, 7)); //should return True
 console.log(isProperFraction(3, 3)); //should return False
+console.log(isProperFraction(3, 0)); //should throw an error
 
