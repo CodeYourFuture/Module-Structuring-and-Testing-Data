@@ -30,8 +30,8 @@ function getAngleType(angle) {
     // Check if the angle is exactly 90 degrees
     if (angle === 90) {
         return "Right angle";
-        }
-        // Check if the angle is less than 90 degrees
-        else if (angle < 90) {
-            return "Acute angle";
-            }
+    }
+    // Check if the angle is less than 90 degrees
+    else if (angle < 90) {
+        return "Acute angle";
+    }
