@@ -97,3 +97,18 @@ function rotateString(str, shift) {
     return result;
 }
 
+
+// Test cases for multi-character strings
+console.log(rotateString("hello", 2)); // Output: "jgnnq"
+console.log(rotateString("Hello, World!", 3)); // Output: "Khoor, Zruog!"
+console.log(rotateString("Zebra 123!", 5)); // Output: "Fjwdwf 123!"
+
+// Test cases for negative shifts
+console.log(rotateCharacter("d", -1)); // Output: "c"
+console.log(rotateCharacter("A", -3)); // Output: "X"
+console.log(rotateString("Hello, World!", -3)); // Output: "Ebiil, Tloia!"
+
+// The rotateCharacter function now supports both positive and negative shifts,
+// and the rotateString function allows for rotating entire strings while preserving non-letter characters.
+// The rotateCharacter function can be enhanced to handle negative shifts and multi-character strings.
+// This will allow for more flexible usage in text encryption and decryption scenarios.
