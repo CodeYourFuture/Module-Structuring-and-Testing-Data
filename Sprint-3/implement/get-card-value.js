@@ -37,10 +37,9 @@ function getCardValue(card) {
   const faceCards = ["K", "Q", "J"];
 
   if (allCards.includes(cardValue)) {
-    if (Number(cardValue) && Number(cardValue) >= 2 && Number(cardValue) <= 10)
-      return Number(cardValue);
     if (faceCards.includes(cardValue)) return 10;
     if (cardValue === "A") return 11;
+    return Number(cardValue);
   }
 
   return "Invalid card rank.";
