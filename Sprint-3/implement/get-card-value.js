@@ -29,3 +29,22 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+  let rank = card.slice(0, -1);
+  if (parseInt(rank) >= 2 && parseInt(rank) <= 10) {
+    return parseInt(rank);
+  }
+  switch (rank) {
+    case "J":
+    case "Q":
+    case "K":
+      return 10;
+    case "A":
+      return 11;
+    default:
+      throw new Error("Invalid card rank");
+  }
+}
+
+module.exports = getCardValue;
