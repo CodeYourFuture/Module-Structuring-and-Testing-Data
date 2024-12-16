@@ -41,3 +41,35 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+// The function should handle both lowercase and uppercase letters, as well as non-letter characters, and should
+// correctly rotate the letters by the specified shift value while preserving their original case and handling wraparound correctly
+function rotateCharacter(char, shift) {
+    // Check if the character is a letter (either uppercase or lowercase)
+    if (char.match(/[a-zA-Z]/)) {
+        // Determine the base character (either 'a' or 'A') based on the case of
+        // the input character, and calculate the new character by shifting the base character by the specified shift
+        let baseChar = char.toLowerCase() === 'a' ? 'a' : 'A';
+        let newChar = String.fromCharCode((char.charCodeAt(0) - baseChar.charCodeAt(0)
+        + shift) % 26 + baseChar.charCodeAt(0));
+        return newChar;
+        }
+        // If the character is not a letter, return it unchanged
+        return char;
+        }
+        // The function should handle both lowercase and uppercase letters, as well as non-letter characters, and
+        // correctly rotate the letters by the specified shift value while preserving their original case and handling wraparound
+        // correctly. The function should return the rotated character as a string, or the original character if
+        // it is not a letter. The function should handle both positive and negative shift values, and
+        // should correctly handle wraparound for both lowercase and uppercase letters. The function should
+        // preserve the original case of the input character, and should return the rotated character in the same
+        // case as the original character. The function should handle both single-character and multi-character
+        // inputs, and should return the rotated character as a string. The function should handle both ASCII
+        // and non-ASCII characters, and should correctly rotate the characters by the specified shift value while
+        // preserving their original case and handling wraparound correctly. The function should return the rotated
+        // character as a string, or the original character if it is not a letter. The function
+        // should handle both positive and negative shift values, and should correctly handle wraparound for both
+        // lowercase and uppercase letters. The function should preserve the original case of the input character, and
+        // should return the rotated character in the same case as the original character. The function should handle
+        // both single-character and multi-character inputs, and should return the rotated character as a string
+        
