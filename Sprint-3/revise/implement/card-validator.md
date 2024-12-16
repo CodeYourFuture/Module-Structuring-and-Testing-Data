@@ -33,3 +33,33 @@ These are the requirements your project needs to fulfill:
 - Return a boolean from the function to indicate whether the credit card number is valid.
 
 Good luck!
+......Answer.....
+
+function validateCreditCard(cardNumber) {
+    if (cardNumber.length !== 16) {
+        return false;
+    }
+
+    const digitSet = new Set(cardNumber);
+    if (digitSet.size < 2) {
+        return false;
+    }
+
+
+    const lastDigit = parseInt(cardNumber.charAt(cardNumber.length - 1), 10);
+    if (lastDigit % 2 !== 0) {
+        return false;
+    }
+
+    
+    let sum = 0;
+    for (let i = 0; i < cardNumber.length; i++) {
+        sum += parseInt(cardNumber.charAt(i), 10);
+    }
+
+    if (sum <= 16) {
+        return false;
+    }
+
+    return true;
+}
