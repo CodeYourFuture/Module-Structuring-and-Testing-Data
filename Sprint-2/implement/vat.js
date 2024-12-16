@@ -8,3 +8,8 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+function priceWithoutVAT(price){
+  const priceWithVAT = price + (price * 0.2);
+  return priceWithVAT;
+}
+console.log (priceWithoutVAT(50));

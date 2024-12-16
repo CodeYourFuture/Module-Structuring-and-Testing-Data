@@ -13,3 +13,9 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+function convertToSnakeUppercase(words) {
+
+let upperWords = words.split(" ").join('_').toUpperCase();
+return upperWords;
+}
+console.log(convertToSnakeUppercase("lord of the rings"));

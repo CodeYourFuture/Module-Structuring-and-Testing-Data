@@ -15,7 +15,18 @@
 // Scenario: Rotate Lowercase Letters:
 // Given a lowercase letter character and a positive integer shift,
 // When the function is called with these inputs,
+
 // Then it should rotate the lowercase letter by shift positions within the lowercase alphabet, wrapping around if necessary, and return the rotated lowercase letter as a string.
+function rotateCharacter(char, shift) {
+    // Check if the character is a lowercase letter
+    if (char >= "a" && char <= "z") {
+        // Calculate new character with wraparound
+        const charCode = char.charCodeAt(0);
+        const rotatedCode = ((charCode - 97 + shift) % 26) + 97; // 'a' starts at ASCII 97
+        return String.fromCharCode(rotatedCode);
+    }
+
+
 console.log(rotateCharacter("a", 3)); // Output: "d"
 console.log(rotateCharacter("f", 1)); // Output: "g"
 
@@ -23,6 +34,17 @@ console.log(rotateCharacter("f", 1)); // Output: "g"
 // Given an uppercase letter character and a positive integer shift,
 // When the function is called with these inputs,
 // Then it should rotate the uppercase letter by shift positions within the uppercase alphabet, wrapping around if necessary, and return the rotated uppercase letter as a string.
+if (char >= "A" && char <= "Z") {
+    // Calculate new character with wraparound
+    const charCode = char.charCodeAt(0);
+    const rotatedCode = ((charCode - 65 + shift) % 26) + 65; // 'A' starts at ASCII 65
+    return String.fromCharCode(rotatedCode);
+}
+
+// If it's not a letter, return the character unchanged
+return char;
+}
+
 console.log(rotateCharacter("A", 3)); // Output: "D"
 console.log(rotateCharacter("F", 1)); // Output: "G"
 

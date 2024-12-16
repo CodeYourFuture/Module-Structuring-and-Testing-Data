@@ -29,3 +29,27 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+
+function getCardValue(card) {
+    const rank = card.slice(0, -1);
+    // to exclude the last character
+
+    // Check for Number Cards (2-10)
+    if (!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 10) {
+        return Number(rank);
+    }
+
+    // Check for Face Cards (J, Q, K) or '10'
+    if (['J', 'Q', 'K'].includes(rank) || rank === '10') {
+        return 10;
+    }
+
+    // Check for Ace (A)
+    if (rank === 'A') {
+        return 11;
+    }
+
+    
+    throw new Error("Invalid card rank.");
+}
