@@ -17,6 +17,7 @@
 // The function implementation
 
 const getOrdinalNumber = require('./get-ordinal-number');
+
 describe('getOrdinalNumber', () => {
     it('should return "1st" for 1', () => {
         expect(getOrdinalNumber(1)).toBe('1st');
