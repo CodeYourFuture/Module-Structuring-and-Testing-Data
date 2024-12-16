@@ -9,9 +9,8 @@ function getOrdinalNumber(number) {
   // Helper variable
   const exceptions = [11, 12, 13];
   const lastDgit = number % 10;
-  const lastTwoDigits = number % 100;
 
-  if (number > 9 && exceptions.includes(lastTwoDigits)) {
+  if (exceptions.includes(number)) {
     return `${number}th`;
   }
 
@@ -28,4 +27,3 @@ function getOrdinalNumber(number) {
 }
 
 module.exports = getOrdinalNumber;
-

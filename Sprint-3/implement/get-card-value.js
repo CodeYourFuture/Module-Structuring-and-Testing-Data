@@ -33,7 +33,7 @@
 function getCardValue(card) {
   if (typeof card !== "string") return "Input should be a string.";
   const cardValue = card.slice(0, -1).toUpperCase();
-  const allCards = ["A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1"];
+  const allCards = ["A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2"];
   const faceCards = ["K", "Q", "J"];
 
   if (allCards.includes(cardValue)) {
