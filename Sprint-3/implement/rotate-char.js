@@ -51,7 +51,7 @@ function rotateCharacter(char, shift) {
     }
     if (lettersLowerCase.indexOf(char) + shift > 25) {
       return lettersLowerCase.charAt(
-        lettersLowerCase.indexOf(char) - 26 + shift
+        lettersLowerCase.indexOf(char) - 26 + (shift % 26)
       );
     }
   }
@@ -62,7 +62,7 @@ function rotateCharacter(char, shift) {
     }
     if (lettersUpperCase.indexOf(char) + shift > 25) {
       return lettersUpperCase.charAt(
-        lettersUpperCase.indexOf(char) - 26 + shift
+        lettersUpperCase.indexOf(char) - 26 + (shift % 26)
       );
     }
   }
@@ -70,3 +70,5 @@ function rotateCharacter(char, shift) {
 }
 
 module.exports = rotateCharacter;
+
+console.log(rotateCharacter("t", 300));

@@ -31,41 +31,19 @@
 // Then it should throw an error indicating "Invalid card rank."
 
 function getCardValue(card) {
-  if (typeof card !== "string") return "Input should be a sting.";
-  const cardValue = card
-    .toUpperCase()
-    .substring(0, card.indexOf(card.slice(-1)));
+  if (typeof card !== "string") return "Input should be a string.";
+  const cardValue = card.slice(0, -1).toUpperCase();
+  const allCards = ["A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1"];
   const faceCards = ["K", "Q", "J"];
 
-  /* If we wanted to exlude cards for not being a suite
-   const suites = ["♣", "♠", "♦", "♥"];
-   if (!suites.includes(card.slice(-1))) return "Invalid card rank.";
-  */
-  if (Number(cardValue) && Number(cardValue) >= 2 && Number(cardValue) <= 10)
-    return Number(cardValue);
-  if (faceCards.includes(cardValue)) return 10;
-  if (cardValue === "A") return 11;
+  if (allCards.includes(cardValue)) {
+    if (Number(cardValue) && Number(cardValue) >= 2 && Number(cardValue) <= 10)
+      return Number(cardValue);
+    if (faceCards.includes(cardValue)) return 10;
+    if (cardValue === "A") return 11;
+  }
 
   return "Invalid card rank.";
-
-  /* ### I'm not a fan of if/if else statements so I would have either used ternary operators or short circuiting.
-  return Number(cardValue)
-    ? Number(cardValue)
-    : faceCards.includes(cardValue)
-    ? 10
-    : cardValue === "A"
-    ? 11
-    : "Invalid card rank.";
-
-    OR
-
-    return (
-    (Number(cardValue) && Number(cardValue)) ||
-    (faceCards.includes(cardValue) && 10) ||
-    (cardValue === "A" && 11) ||
-    "Invalid card rank."
-  );
-  */
 }
 
 module.exports = getCardValue;

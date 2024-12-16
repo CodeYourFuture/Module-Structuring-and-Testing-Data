@@ -8,7 +8,7 @@ function cardValidator(ccNumber) {
 
   // Validation checks
   const isCorrectLength = ccString.length === 16; // Number must be 16 digits
-  const hasMultipleDigits = [...new Set(ccNumberArray)].length > 1; // At least two different digits
+  const hasMultipleDigits = new Set(ccNumberArray).size > 1; // At least two different digits
   const hasValidChars = digitsRegex.test(ccString); // All characters are numeric
   const endsWithEvenDigit = ccNumberArray[ccNumberArray.length - 1] % 2 === 0; // Last digit is even
   const isSumGreaterThan16 = ccNumberArray.reduce((a, c) => a + c, 0) > 16; // Sum of digits greater than 16

@@ -16,6 +16,6 @@ test('When the angle is exactly 180 degrees, the function should return "Straigh
   expect(getAngleType(180)).toBe("Straight angle");
 });
 
-test('When the angle is greater than 180 degrees and less than 360 degrees, the function should return "Reflex angle"', () => {
+test("Return Reflex angle for angles between 180 and 360 degrees", () => {
   expect(getAngleType(246)).toBe("Reflex angle");
 });

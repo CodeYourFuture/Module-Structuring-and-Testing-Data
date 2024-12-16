@@ -30,6 +30,8 @@ console.log(find("code your future", "z"));
 // c) Why is index++ being used?
     // The ++ operator is the increment.  It mean to "add 1 to", 
     // so what index++ does is add 1 to index with each iteration of the while loop.
+    // The reason for this so that each character of the string can be checked.
 
 // d) What is the condition index < str.length used for?
     //  It's to ensure that the while loop is not an infinte loop. The loop will run till this condition becomes false.
+    //  The condition checks if index is less than the str.length. Once index is no longer less than str.length, the loop will end.

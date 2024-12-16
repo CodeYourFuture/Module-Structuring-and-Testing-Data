@@ -21,3 +21,4 @@ describe("rotateCharacter Tests", () => {
     expect(rotateCharacter("Y", 2)).toBe("A");
   });
 });
+

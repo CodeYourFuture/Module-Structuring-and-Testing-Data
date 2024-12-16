@@ -7,21 +7,20 @@ function getOrdinalNumber(number) {
   const numberAsString = number.toString();
 
   // Helper variable
-  const exceptions = ["11", "12", "13"];
+  const exceptions = [11, 12, 13];
+  const lastDgit = number % 10;
+  const lastTwoDigits = number % 100;
 
-  if (
-    numberAsString.length > 1 &&
-    exceptions.includes(numberAsString.slice(numberAsString.length - 2))
-  ) {
+  if (number > 9 && exceptions.includes(lastTwoDigits)) {
     return `${number}th`;
   }
 
-  switch (numberAsString[numberAsString.length - 1]) {
-    case "1":
+  switch (lastDgit) {
+    case 1:
       return `${number}st`;
-    case "2":
+    case 2:
       return `${number}nd`;
-    case "3":
+    case 3:
       return `${number}rd`;
     default:
       return `${number}th`;
@@ -29,3 +28,4 @@ function getOrdinalNumber(number) {
 }
 
 module.exports = getOrdinalNumber;
+
