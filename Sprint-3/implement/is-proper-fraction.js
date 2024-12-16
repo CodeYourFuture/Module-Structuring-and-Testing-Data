@@ -37,16 +37,16 @@ function isProperFraction(numerator, denominator) {
     // Check if the denominator is zero and throw an error if it is
     if (denominator === 0) {
         throw new Error("Denominator cannot be zero");
-        }
-        // Check if the numerator is less than the denominator and return true if it is
-        // Otherwise, return false
-        return numerator < denominator;
-        }
+    }
+    // Check if the numerator is less than the denominator and return true if it is
+    // Otherwise, return false
+    return numerator < denominator;
+}
 
-        //Testing the function
-        console.log(isProperFraction(2,3)); //should return True
-        console.log(isProperFraction(5,2)); //should return False
-        console.log(isProperFraction(3,0)); //should throw an error
-        console.log(isProperFraction(-4,7)); //should return True
-        console.log(isProperFraction(3,3)); //should return False
+//Testing the function
+console.log(isProperFraction(2, 3)); //should return True
+console.log(isProperFraction(5, 2)); //should return False
+console.log(isProperFraction(3, 0)); //should throw an error
+console.log(isProperFraction(-4, 7)); //should return True
+console.log(isProperFraction(3, 3)); //should return False
 
