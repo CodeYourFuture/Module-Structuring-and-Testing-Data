@@ -53,3 +53,25 @@ function getCardValue(card) {
     throw new Error("Invalid card rank.");
 }
 
+
+// Assertions to test the function
+try {
+    console.assert(getCardValue("2♠") === 2, "Test Case 1 Failed");
+    console.assert(getCardValue("5♦") === 5, "Test Case 2 Failed");
+    console.assert(getCardValue("10♥") === 10, "Test Case 3 Failed");
+    console.assert(getCardValue("J♣") === 10, "Test Case 4 Failed");
+    console.assert(getCardValue("Q♠") === 10, "Test Case 5 Failed");
+    console.assert(getCardValue("K♦") === 10, "Test Case 6 Failed");
+    console.assert(getCardValue("A♣") === 11, "Test Case 7 Failed");
+    
+    // Testing invalid card
+    try {
+        getCardValue("Z♠");
+    } catch (e) {
+        console.assert(e.message === "Invalid card rank.", "Test Case 8 Failed");
+    }
+
+    console.log("All test cases passed!");
+} catch (error) {
+    console.error(error.message);
+}
