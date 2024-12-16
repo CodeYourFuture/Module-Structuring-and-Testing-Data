@@ -12,5 +12,17 @@ To be valid, a password must:
 - Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
 - Must not be any previous password in the passwords array. 
 
-You must breakdown this problem in order to solve it. Find one test case first and get that working
+You must break down this problem to solve it. Find one test case first and get that working
 */
+
+const checkPassword = require('./password-validator');
+
+test('checks if a password is valid', () => {
+    const password = 'valid!';
+    expect(checkPassword(password)).toBe(true);  
+});
+
+test('checks if a password is invalid', () => {
+    const password = 'invalid'; 
+    expect(checkPassword(password)).toBe(false);  
+});
