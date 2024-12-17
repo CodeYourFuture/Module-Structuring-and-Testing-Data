@@ -1,4 +1,5 @@
 // This is the latest solution to the problem from the prep.
+// Make sure to do the prep before you do the coursework
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
