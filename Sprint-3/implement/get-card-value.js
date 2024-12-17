@@ -51,14 +51,9 @@ let validFaceCards = ["J", "Q", "K", "A"];
         throw new Error("Invalid card rank or card suit");
     }
  
-//Handling when card inputs are 2-9
-    if (rank >= "2" && rank <= "9") {
+//Handling when card inputs are 2-10
+    if (!isNaN(rank) && rank.length<=2 && Number(rank) >= "2" && Number(rank) <= "10") {
         return parseInt(rank, 10); //parseInt parses a string and returns the first integer, 10 indicates decimal radix for numbers 0-9
-    }    
-
-//Handling when card input is 10
-    if (rank === "10") {
-        return 10;
     }    
 
 //Handling face cards worth 10 and the Ace worth 11
@@ -70,12 +65,12 @@ let validFaceCards = ["J", "Q", "K", "A"];
     }
 
 //If none of the valid rank parameters are matched, throw an error
-    {
         throw new Error("Invalid card rank or card suit");
-    }
+    
 }    
 
 module.exports = {getCardValue};
     
+
 
 

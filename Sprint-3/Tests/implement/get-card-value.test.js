@@ -29,6 +29,11 @@ test("should return 'Invalid card rank or card suit' when there are less than 2 
     expect(() =>getCardValue("4")).toThrow("Invalid card rank or card suit");
 });
 
+//Error case for when the rank is small than 2 or larger than 9
+test("should return 'Invalid card rank or card suit' when card rank inputs are out of the scope 2-9", () => {
+    expect(() =>getCardValue("23♠")).toThrow("Invalid card rank or card suit");
+});
+
 
 //Typical cases
 test("should return numerical '5' when string 5 and emoji suit is input", () => {
