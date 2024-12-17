@@ -10,13 +10,12 @@
 
 ## Setting up your code editor
 
-There are some tools that will help you to write code. One of these, [Prettier](https://prettier.io/), formats your code, making it easier for you and others to read.
+There are some tools that will help you to write code. One of these, [Prettier](https://prettier.io/), formats your code, making it easier for you and others to read. Another tool, [Jest](https://jestjs.io/), is a test runner that will turn on Test Explorer in Visual Studio Code. 
 
-### 1. Using prettier
+### 1. Using Prettier, Test Runner, and other recommended tools in Visual Studio Code
 
-- In Visual Studio open the extensions panel (see https://code.visualstudio.com/docs/editor/extension-gallery#_browse-and-install-extensions)
-- Search for `Prettier - Code formatter`
-- Click install on the top result
+- Open this repository in Visual Studio Code
+- Accept the prompt to install the recommended extensions
 
 ### 2. Enable formatting on save
 
