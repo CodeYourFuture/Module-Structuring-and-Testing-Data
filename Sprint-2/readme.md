@@ -38,4 +38,4 @@ You can also use `console.log` to check the value of different variables in the 
 
 In the prep for this sprint, we developed a function to convert 24 hour clock times to 12 hour clock times.
 
-Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find. This will also help you solve some similar kata in Codewars.
+Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find. This section is not mandatory, but it will also help you solve some similar kata in Codewars.
