@@ -1,6 +1,8 @@
 const getAngleType = require('./get-angle-type.js');
 const isProperFraction = require('./is-proper-fraction.js');
 const isValidTriangle = require('./is-valid-triangle.js');
+const getCardValue = require('./get-card-value.js');
+
 
 
 test('Given an angle in degrees, return the type of angle', () => {
@@ -22,4 +24,11 @@ test('Given length of sides validate the its a triangle', () => {
   expect(isValidTriangle(3, 3, 3)).toBe(true);
   expect(isValidTriangle(0, 3, 3)).toBe(false);
   expect(isValidTriangle(3, 1, 1)).toBe(false);  
+});
+
+test('Given the card input getCardValue returns correct number for valid ranks ', () => {
+  expect(getCardValue("5♥")).toBe(5);
+  expect(getCardValue("K♥")).toBe(10);
+  expect(getCardValue("A♥")).toBe(11);
+  expect(getCardValue("z♥")).toBe("Invalid Cards");   
 });
