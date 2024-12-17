@@ -1,5 +1,13 @@
 # 🧭 Guide to Week 1 exercises
 
+> https://programming.codeyourfuture.io/structuring-data/sprints/1/prep/
+
+> [!TIP]
+> You should always do the prep work _before_ attempting the coursework.
+> The prep shows you _how_ to do the coursework.
+> There is often a step by step video you can code along with too.
+> Do the prep.
+
 This README will guide you through the different sections for this week.
 
 ## Exercises

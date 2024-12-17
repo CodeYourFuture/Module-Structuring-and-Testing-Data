@@ -1,6 +1,12 @@
 # Coursework
 
-Like learning a musical instrument, programming requires daily practice.
+> https://programming.codeyourfuture.io/structuring-data/
+
+> [!TIP]
+> You should always do the prep work _before_ attempting the coursework.
+> The prep shows you _how_ to do the coursework.
+> There is often a step by step video you can code along with too.
+> Do the prep.
 
 ## Setting up your code editor
 
