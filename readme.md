@@ -23,3 +23,8 @@ There are some tools that will help you to write code. One of these, [Prettier](
 - In Visual Studio open the settings file (see https://code.visualstudio.com/docs/getstarted/settings#_creating-user-and-workspace-settings)
 - Search for `editor format`
 - Set `editor.formatOnSave` and `editor.formatOnPaste` to true
+
+### 3. Install the packages for this coursework
+
+- Open the terminal in Visual Studio Code
+- Run `npm install` in the root of this repository
