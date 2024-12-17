@@ -1,27 +1,24 @@
-// Implement a function getAngleType
+const getAngleType = require("./1-get-angle-type");
 
-// Acceptance criteria:
+test("should identify right angle (90°)", () => {
+  expect(getAngleType(90)).toEqual("Right angle");
+});
 
-// Given an angle in degrees,
-// When the function getAngleType is called with this angle,
-// Then it should:
+// REPLACE the comments with the tests
+// make your test descriptions as clear and readable as possible
 
-// Identify Right Angles:
-// When the angle is exactly 90 degrees,
-// Then the function should return "Right angle"
-
-// Identify Acute Angles:
+// Case 2: Identify Acute Angles:
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
 
-// Identify Obtuse Angles:
+// Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
 
-// Identify Straight Angles:
+// Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
 
-// Identify Reflex Angles:
+// Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
