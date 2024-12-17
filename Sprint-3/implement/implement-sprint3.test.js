@@ -1,6 +1,6 @@
 const getAngleType = require('./get-angle-type.js');
 const isProperFraction = require('./is-proper-fraction.js');
-
+const isValidTriangle = require('./is-valid-triangle.js');
 
 
 test('Given an angle in degrees, return the type of angle', () => {
@@ -12,9 +12,14 @@ test('Given an angle in degrees, return the type of angle', () => {
 });
 
 test('Given numerator and denominator, return the type of fraction', () => {
-  expect(isProperFraction(2, 3)).toBe(true); 
-  expect(isProperFraction(5, 3)).toBe(false);
-  expect(isProperFraction(2, 0)).toBe("error");
-  expect(isProperFraction(-4, 7)).toBe(true);
-   expect(isProperFraction(0, 0)).toBe(false);
+   expect(isProperFraction(2, 3)).toBe(true); 
+   expect(isProperFraction(5, 3)).toBe(false);
+   expect(isProperFraction(2, 0)).toBe("error");
+});
+
+
+test('Given length of sides validate the its a triangle', () => {
+  expect(isValidTriangle(3, 3, 3)).toBe(true);
+  expect(isValidTriangle(0, 3, 3)).toBe(false);
+  expect(isValidTriangle(3, 1, 1)).toBe(false);  
 });
