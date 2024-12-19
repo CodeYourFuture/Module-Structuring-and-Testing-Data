@@ -23,3 +23,19 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+function repeatStr(str, count){
+    if(count < 0){
+       throw new Error("Count cannot be negative")
+    }
+    return str.repeat(count)
+}
+
+test("Implement a function takes tow parameters str and num and repeat the str ,nums times",()=> {
+    expect(repeatStr("s",2)).toBe("ss");
+    expect(repeatStr("abc", 3)).toBe("abcabcabc");
+})
+try{
+    repeatStr("d", -2)
+}catch(e){
+    console.log(e.message)
+}

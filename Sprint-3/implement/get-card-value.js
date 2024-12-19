@@ -29,3 +29,52 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+function getCardValue(card){
+    let rank = card.slice(0,-1)
+    if(rank === "A"){
+        return 11
+    }
+    
+    if (/^[2-9]$/.test(rank)) {
+        return parseInt(rank);
+    }
+    if (rank === "10") {
+        return 10;
+    }
+    const faceCards = ["10", "J", "Q", "K"]
+     if(faceCards.includes(rank)){
+        return 10
+    }
+    throw new Error("Invalid card rank.");
+
+}
+
+
+const currentOutPut = getCardValue("A♠")
+const targetOutPut = 11
+console.assert(currentOutPut === targetOutPut,`currenOutPut:${currentOutPut},targetOutPut:${targetOutPut}`) 
+
+const currentOutPut2 = getCardValue("5♠")
+const targetOutPut2 = 5
+console.assert(currentOutPut2 === targetOutPut2,`currenOutPut:${currentOutPut2},targetOutPut:${targetOutPut2}`) 
+
+try {
+    getCardValue("1♠");
+    console.error("Test Case Failed");
+} catch (e) {
+    console.assert(e.message === "Invalid card rank", "Test Case  Failed");
+}
+
+try {
+    getCardValue("2.1♠");
+    console.error("Test Case 10 Failed");
+} catch (e) {
+    console.assert(e.message === "Invalid card rank.", "Test Case 10 Failed");
+}
+
+try {
+    getCardValue("Z♣");
+    console.error("Test Case 11 Failed");
+} catch (e) {
+    console.assert(e.message === "Invalid card rank.", "Test Case 11 Failed");
+}
