@@ -17,7 +17,7 @@
 
 
 // time.slice(0, 2): method that return the positions 0 and 1 of the string,
-// const hours = Number(time.slice(0, 2)) will convert the substring in numbes to manipulate and perfoms calculations.
+// const hours = Number(time.slice(0, 2)) will convert the substring in numbers to manipulate and performs calculations.
 
 
 function formatAs12HourClock(time) {
