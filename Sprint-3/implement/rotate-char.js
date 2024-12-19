@@ -56,3 +56,5 @@ function rotateCharacter(char,shift){
 const currentOutPut =  rotateCharacter("a",3);
 const targetOutPut = "d"
 console.assert(currentOutPut === targetOutPut,`currenOutPut:${currentOutPut},targetOutPut:${targetOutPut}`)
+console.log(rotateCharacter("b", 100));  // Output: "w"
+console.log(rotateCharacter("B", -100))

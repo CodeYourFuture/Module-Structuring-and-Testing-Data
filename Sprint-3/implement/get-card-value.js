@@ -34,18 +34,21 @@ function getCardValue(card){
     if(rank === "A"){
         return 11
     }
-     const numericValue = parseInt(rank)
-    if(numericValue >= 2 && numericValue < 10){
-        return  numericValue
+    
+    if (/^[2-9]$/.test(rank)) {
+        return parseInt(rank);
+    }
+    if (rank === "10") {
+        return 10;
     }
     const faceCards = ["10", "J", "Q", "K"]
      if(faceCards.includes(rank)){
         return 10
     }
-    return "Invalid card rank."
+    throw new Error("Invalid card rank.");
 
 }
-console.log(getCardValue("6♠"))
+
 
 const currentOutPut = getCardValue("A♠")
 const targetOutPut = 11
@@ -55,4 +58,23 @@ const currentOutPut2 = getCardValue("5♠")
 const targetOutPut2 = 5
 console.assert(currentOutPut2 === targetOutPut2,`currenOutPut:${currentOutPut2},targetOutPut:${targetOutPut2}`) 
 
+try {
+    getCardValue("1♠");
+    console.error("Test Case Failed");
+} catch (e) {
+    console.assert(e.message === "Invalid card rank", "Test Case  Failed");
+}
 
+try {
+    getCardValue("2.1♠");
+    console.error("Test Case 10 Failed");
+} catch (e) {
+    console.assert(e.message === "Invalid card rank.", "Test Case 10 Failed");
+}
+
+try {
+    getCardValue("Z♣");
+    console.error("Test Case 11 Failed");
+} catch (e) {
+    console.assert(e.message === "Invalid card rank.", "Test Case 11 Failed");
+}
