@@ -13,3 +13,10 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function bodyMassIndex (weight, height){           // defining two parameters (weight and height)
+   let BMI = weight/Math.pow(height,2);            // calculating BMI : Squaring height with Math.pow and then dividing wight by the height square
+   return BMI.toFixed(1);                          // returning BMI with 1 decimal place by toFixed method
+}
+
+console.log(bodyMassIndex(70, 1.73));  // OUTPUT : 23.4

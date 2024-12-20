@@ -8,3 +8,14 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function priceWithVAT(initialPrice){
+
+    // calculating new price with VAT : multiply initial price by 1.2
+    let newPriceWithVAT  = initialPrice * 1.2;
+
+    //return new price with VAT
+    return newPriceWithVAT;
+}
+
+console.log(priceWithVAT(50));   // OUTPUT: 60
