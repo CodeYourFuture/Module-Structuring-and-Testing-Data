@@ -5,11 +5,10 @@
 
 // You should call this function a number of times to check it works for different inputs
 
+// ============================= code from Sprint-1 ===============================
 
 
-
-
-const penceString = "399p";
+const penceString = "399";
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
@@ -28,5 +27,56 @@ const pence = paddedPenceNumberString
 
 console.log(`£${pounds}.${pence}`);
 
+// ================= Converted as reusable block of code  ========================
+
+function convertPenceToPounds(priceAmount) {
+  const numberwithoutpence = priceAmount.substring(0, priceAmount.length - 1);
+  const paddedPenceNumberString = numberwithoutpence.padStart(3, "0");
+  const pounds = paddedPenceNumberString.substring(
+    0,
+    paddedPenceNumberString.length - 2
+  );
+  const pence = paddedPenceNumberString
+    .substring(paddedPenceNumberString.length - 2)
+    .padEnd(2, "0");
+
+  return `£${pounds}.${pence}`;
+}
+
+priceAmount = "999p"
+
+console.log(convertPenceToPounds(priceAmount));
 
 
+// ==================== function handling decimal inputs  ========================
+
+priceAmounts = "5.23p";
+
+function convertPenceToPound(priceAmounts) {
+  const cleanInput = priceAmounts.substring(0, priceAmounts.length - 1);
+
+  if (cleanInput.includes(".")) {
+    const [pounds, pence] = cleanInput.split("."); //destructuring;
+    const formattedPence = pence.padEnd(2, "0");
+    return `£${pounds}.${formattedPence}`;
+  } else {
+    // Handle the integer case (e.g., "399p")
+    const paddedPenceNumberString = cleanInput.padStart(3, "0");
+    const pounds = paddedPenceNumberString.substring(
+      0,
+      paddedPenceNumberString.length - 2
+    );
+    const pence = paddedPenceNumberString
+      .substring(paddedPenceNumberString.length - 2)
+      .padEnd(2, "0");
+
+    return `£${pounds}.${pence}`;
+  }
+}
+
+console.log(convertPenceToPound(priceAmounts)); // "£5.23"
+console.log(convertPenceToPound("399p"));   // "£3.99"
+console.log(convertPenceToPound("3.99p"));  // "£3.99"
+console.log(convertPenceToPound("50p"));    // "£0.50"
+console.log(convertPenceToPound("5.5p"));   // "£5.50"
+console.log(convertPenceToPound("0.3p"));   // "£0.30"
