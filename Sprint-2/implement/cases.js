@@ -13,3 +13,16 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+function toUpperSnakeCase (str){
+
+    // Convert the string to uppercase and replace spaces with underscores
+    // str.replace(/ /gi, "_") > replace all of spaces with under score
+    //.toUpperCase() is a method that capitalize all letters
+    snakeCaseString = str.replace(/ /gi, "_").toUpperCase();
+    return snakeCaseString;
+}
+
+console.log(toUpperSnakeCase("hello there"));         //OUTPUT: "HELLO_THERE"
+console.log(toUpperSnakeCase("lord of the rings"));  //OUTPUT: "LORD_OF_THE_RINGS"
