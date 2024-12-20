@@ -27,7 +27,6 @@ function bodyMassIndex(weight, height) {
    return "Invalid input. Please enter valid weight and height.";
 }
 
-
 //Avoid .toFixed() if we need a number (as .toFixed() returns a string).
 console.log(bodyMassIndex(70, 0)); 
 
