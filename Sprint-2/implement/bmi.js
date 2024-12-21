@@ -13,3 +13,21 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+
+//    const weight = 150;           
+//     const height = 170 / 100; //tranforme centimeter to meter
+
+
+function ibmCalculator( weight, height) {
+    
+    height = height / 100;
+    let calculateIBM = weight / Math.pow(height, 2); 
+    let result = calculateIBM.toFixed(1);       //chang for decimal 
+    return result;
+}
+
+
+console.log(`Your Body Mass Index (BMI) is ${ibmCalculator(98,126)}`);
+
+
