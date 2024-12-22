@@ -8,3 +8,15 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function addPercentageToPrice(price) {
+  let vat = price * 1.2;
+  return vat;
+}
+
+let price = 675;
+console.log(`Product total price is ${addPercentageToPrice(price)}`);
+
+//let price = 30; Product total price is 36
+//let price = 45; Product total price is 54
+//let price = 45; Product total price is 810
