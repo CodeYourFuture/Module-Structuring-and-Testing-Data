@@ -1,16 +1,15 @@
 // Predict and explain first...
 
 /*
-  - If we run this code. nothing will happen because the function is not called.
+    - If we run this code. nothing will happen because the function is not called.
 
-  -once we invoke the function this will take the number and converted into string to manipulate and  take the las digit and return the new string 42  => will return 2.
+    -once we invoke the function this will take the number and converted into string to manipulate and  take the las digit and return the new string 42  => will return 2.
 
-    const num = 103;
+      const num = 103;
 
-    function getLastDigit() {
-      return num.toString().slice(-1);
-}
-
+      function getLastDigit() {
+        return num.toString().slice(-1);
+      }
 */
 
 //=========== This will  work ==============
