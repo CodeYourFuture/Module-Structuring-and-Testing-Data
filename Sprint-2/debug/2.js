@@ -18,7 +18,6 @@
 
 
 const num = 103;
-num = 24
 
 function getLastDigit(num) {
   return num.toString().slice(-1);
