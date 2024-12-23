@@ -18,4 +18,7 @@ const pence = paddedPenceNumberString
   return`£${pounds}.${pence}`
 
 }
-// console.log(toPounds());
+console.log(toPounds("123p")); // Expected: £1.23
+console.log(toPounds("3p"));   // Expected: £0.03
+console.log(toPounds("p"));    // Expected: £0.00
+console.log(toPounds("1000p")); // Expected: £10.00

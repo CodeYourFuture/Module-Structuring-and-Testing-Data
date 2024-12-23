@@ -9,7 +9,7 @@ function formatTimeDisplay(seconds) {
   const totalHours = (totalMinutes - remainingMinutes) / 60;
 
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(
-    remainingSeconds.
+    remainingSeconds
   )}`;
 }
 console.log(formatTimeDisplay(61))
