@@ -19,6 +19,7 @@
 
 
 const num = 103;
+num = 24
 
 function getLastDigit(num) {
   return num.toString().slice(-1);
@@ -45,4 +46,4 @@ function getMiddleDigit(num) {
   return str[middleIndex]; //we can access to the position 6 which contains the value '4'
 }
 
-console.log(`The middle of 105 is ${getMiddleDigit(2055564232569)}`);
+console.log(`The middle of 105 is ${getMiddleDigit(2055564232569)}`)
