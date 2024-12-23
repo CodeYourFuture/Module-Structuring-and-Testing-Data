@@ -2,5 +2,5 @@
 
 /* The value of a constant cannot change through re-assignment,
 we can use var or let insted*/
-var age = 33;
-age = +age;
+let  age = 33;
+age = age + 1;
