@@ -13,3 +13,62 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+
+// ================== Strings in UpperCase =====================
+
+function convertUpperCaseString(str) {
+  let UPPER_SNAKE_CASE = "";
+//   console.log(typeof str);
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      UPPER_SNAKE_CASE += "_";
+    } else UPPER_SNAKE_CASE += str[i].toUpperCase();;
+  }
+
+  return UPPER_SNAKE_CASE;
+}
+
+console.log(convertUpperCaseString("hola there"));
+
+// ================ First letter capitalized  ===================
+
+
+function firstLetterCapitalized1(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        if (i === 0 || str[i - 1] === " ") {
+          result += str[i].toUpperCase(); 
+        } else {
+          result += str[i]; 
+        }
+    }
+    return result;
+}
+
+console.log(firstLetterCapitalized1("first letter capitalized")); 
+
+
+// ================ Last letter capitalized  ===================
+
+let quote = 'He said, "It\'s a sunny day!"';
+
+function lastLetterCapitalized(str) {
+  let result = ""; 
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i + 1] === " " || i === str.length - 1) {
+      result += str[i].toUpperCase();
+      } else {
+      result += str[i];
+    }
+  }
+
+  return result;
+}
+
+console.log(lastLetterCapitalized(`hola there ${quote}`));
+
+
