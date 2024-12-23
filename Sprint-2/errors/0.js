@@ -5,9 +5,10 @@
 
 
 /*  
-  we are creating a variable with (let = nameVariable) but the same time we can not reassign
-  the value in the same line.
-  instead we should call directly the (str = valueAssigned) and with this will Work
+  - Occur SyntaxError because the var str has been declared in the in the parameter, so to fix this we 
+    just need to assign the new value. and remove the let.
+
+  - Then call the function 
 */
 
 
@@ -15,6 +16,8 @@
 //   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
 //   return str;
 // }
+
+// console.log(capitalize("alejandra"));
 
 
 
@@ -29,9 +32,12 @@ console.log(capitalize("alejandra"));
 
 
 /*
-  In this function we are taking a parameter the string "alejadra" this
-  entry in the function and assigned in the str = taking the firs character[0].toUpperCase()
-  and using the function upper... to convert this in capital letter.
-  but we still need the rest of the string and we use the interpolation to concatenate 
-  the rest calling the string from the position 1 with  str.slice(1).
+  In this function, we are taking a string parameter, "alejandra", as input.
+  Inside the function, we modify the string by capitalizing the first character.
+  - First, we access the first character of the string using `str[0]` and use the `toUpperCase()` method
+    to convert it to a capital letter.
+  - Then, we use `str.slice(1)` to extract the rest of the string, starting from the second character.
+  - Finally, we combine the capitalized first letter and the rest of the string using a template literal.
+
+  The result is for the input "alejandra", the output is "Alejandra".
 */
