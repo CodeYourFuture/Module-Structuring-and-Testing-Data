@@ -23,13 +23,16 @@ const pounds = paddedPenceNumberString.substring(
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .padEnd(2, "0"
+
+);
+
 
 console.log(`£${pounds}.${pence}`);
 
 // ================= Converted as reusable block of code  ========================
 
-function convertPenceToPounds(priceAmount) {
+function convertPenceToPound1(priceAmount) {
   const numberwithoutpence = priceAmount.substring(0, priceAmount.length - 1);
   const paddedPenceNumberString = numberwithoutpence.padStart(3, "0");
   const pounds = paddedPenceNumberString.substring(
@@ -45,15 +48,15 @@ function convertPenceToPounds(priceAmount) {
 
 priceAmount = "999p"
 
-console.log(convertPenceToPounds(priceAmount));
+console.log(convertPenceToPound1(priceAmount));
 
 
 // ==================== function handling decimal inputs  ========================
 
-priceAmounts = "5.23p";
+money = "0.23p";
 
-function convertPenceToPound(priceAmounts) {
-  const cleanInput = priceAmounts.substring(0, priceAmounts.length - 1);
+function convertPenceToPounds(money) {
+  const cleanInput = money.substring(0, money.length - 1);
 
   if (cleanInput.includes(".")) {
     const [pounds, pence] = cleanInput.split("."); //destructuring;
@@ -74,9 +77,9 @@ function convertPenceToPound(priceAmounts) {
   }
 }
 
-console.log(convertPenceToPound(priceAmounts)); // "£5.23"
-console.log(convertPenceToPound("399p"));   // "£3.99"
-console.log(convertPenceToPound("3.99p"));  // "£3.99"
-console.log(convertPenceToPound("50p"));    // "£0.50"
-console.log(convertPenceToPound("5.5p"));   // "£5.50"
-console.log(convertPenceToPound("0.3p"));   // "£0.30"
+console.log(convertPenceToPounds(money));    // "£0.23"
+console.log(convertPenceToPounds("399p"));   // "£3.99"
+console.log(convertPenceToPounds("3.99p"));  // "£3.99"
+console.log(convertPenceToPounds("50p"));    // "£0.50"
+console.log(convertPenceToPounds("65p"));    // £0.65
+console.log(convertPenceToPounds("0.3p"));   // "£0.30"
