@@ -59,13 +59,14 @@ function lastLetterCapitalized(str) {
   let result = ""; 
 
   for (let i = 0; i < str.length; i++) {
-    if (str[i + 1] === " " || i === str.length - 1) {
+    if (i === str.length - 1 || str[i + 1] === " " ) {
       result += str[i].toUpperCase();
-      } else {
+    } else {
       result += str[i];
     }
-  }
+    // console.log(`positions ${i}: of str  ${str[i]}`);
 
+  }
   return result;
 }
 
