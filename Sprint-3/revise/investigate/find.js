@@ -26,4 +26,4 @@ console.log(find("code your future", "z"));
 // c) Why is index++ being used?
 // to increment index by one, returns a new which is then assigned to index
 // d) What is the condition index < str.length used for?
-//the condition checks all indexes are checked. the check keeps iterating until it finds a matching value or index is less than str length
+//the condition checks all indexes are checked. prevents out of bound access and ending the loop.
