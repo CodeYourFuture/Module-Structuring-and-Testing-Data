@@ -11,7 +11,7 @@
 // Then the function should return "Right angle"
 
 // 2. Identify Acute Angles:
-// When the angle is less than 90 degrees,
+// When the angle is less than 90 degrees",
 // Then the function should return "Acute angle"
 
 // 3. Identify Obtuse Angles:
@@ -28,7 +28,6 @@
 
 
 // ============================= function getAngleType ===============================
-
 //the use of else if is to compare one of the conditions 
 
 function getAngleType(angle){
@@ -47,6 +46,8 @@ function getAngleType(angle){
     return "Invalid angle";
 } 
 
+
+
 // console.log(getAngleType(90));  // "Right angle"
 // console.log(getAngleType(45));  // "Acute angle"
 // console.log(getAngleType(135)); // "Obtuse angle"
@@ -55,14 +56,21 @@ function getAngleType(angle){
 // console.log(getAngleType(-30)); // "Invalid angle"
 
 
-// the console.assert(expression, message);
-console.assert(
-  getAngleType(90) === "Right angle",
-  "Test case failed for 90 degrees"
-);
 
-console.assert(
-  getAngleType(40) === "Acute angle",
-  "Test case failed for 45 degrees"
-);
+// ============== test with console.assert() ==================
+//these test are more simple to write and read and only return the fail message
+//  console.assert(expression, message);
+//
 
+console.assert(getAngleType(90) === "Right angle", "Test case failed for Right Angle");
+console.assert(getAngleType(40) === "Acute angle", "Test case failed for Acute Angle");
+console.assert(getAngleType(135) === "Obtuse Angle", "test case failed for Obtuse Angle");
+console.assert(getAngleType(380) === "Straight angle", "Test failed for Straight angle");
+console.assert(getAngleType(270) === "Reflex Angle", "Test case Failed for Reflex Angle");
+console.assert(getAngleType(-10) === "Invalid angle", "Test case Failed for Invalid angle");
+console.assert(getAngleType(400) === "Invalid angle", "Test case Failed for Invalid Angle");
+
+// ============== test with Jest ==================
+// These tests are more detailed because we can see what was expected and what went wrong
+
+// Right angle Test
