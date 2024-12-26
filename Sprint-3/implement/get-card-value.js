@@ -34,23 +34,22 @@ function getCardValue(card) {
     // Remove the suit from the card string
     const rank = card.slice(0, -1);
     
+    // Define valid ranks
+    const validRanks = new Set(["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]);
+    
+    // Check if the rank is valid
+    if (!validRanks.has(rank)) {
+        throw new Error("Invalid card rank.");
+    }
+    
     // Handle Number Cards (2-9)
     if (rank >= "2" && rank <= "9") {
         return parseInt(rank);
-    }
-    
-    // Handle Face Cards (10, J, Q, K)
-    if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
+    } else if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") { // Handle Face Cards (10, J, Q, K)
         return 10;
-    }
-    
-    // Handle Ace (A)
-    if (rank === "A") {
+    } else if (rank === "A") { // Handle Ace (A)
         return 11;
     }
-    
-    // Handle Invalid Cards
-    throw new Error("Invalid card rank.");
 }
 
 
@@ -63,6 +62,8 @@ try {
     console.assert(getCardValue("Q♠") === 10, "Test Case 5 Failed");
     console.assert(getCardValue("K♦") === 10, "Test Case 6 Failed"); //using 10 it should pass and 20 should fail
     console.assert(getCardValue("A♣") === 11, "Test Case 7 Failed");
+    console.log(getCardValue("23♠"));
+    console.log(getCardValue("899♠"));
     
     // Testing invalid card
     try {
