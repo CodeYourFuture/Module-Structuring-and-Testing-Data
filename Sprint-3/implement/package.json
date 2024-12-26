@@ -1,0 +1,10 @@
+{
+  "name": "sprint-3-testing-exercise",
+  "description": "An example application showing how to write tests using the jest framework",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

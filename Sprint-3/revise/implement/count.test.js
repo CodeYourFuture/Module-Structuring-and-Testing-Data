@@ -15,3 +15,28 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+function countChar(str, char){
+    // checks str is not empty
+    if (str.length > 0) {
+        let count = 0;
+        //goes through string to compare it with char
+        for (let i = 0 ; i < str.length; i++ ) {
+            if (str[i] === char) {
+            count++;
+            }  
+         } 
+    return count
+    }  return 0;
+    
+}
+console.log(countChar("", "p"));
+
+
+
+
+ test('should correctly count overlapping occurrences of char', () => {
+  expect(countChar("food", "o")).toBe(2);
+  expect(countChar("food", "p")).toBe(0);
+  expect(countChar("", "o")).toBe(0);
+});
