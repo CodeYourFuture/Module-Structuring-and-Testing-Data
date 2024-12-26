@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Grajales-K/Module-Structuring-and-Testing-Data/issues"
   },
-  "homepage": "https://github.com/Grajales-K/Module-Structuring-and-Testing-Data#readme"
+  "homepage": "https://github.com/Grajales-K/Module-Structuring-and-Testing-Data#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9"
+  }
 }
