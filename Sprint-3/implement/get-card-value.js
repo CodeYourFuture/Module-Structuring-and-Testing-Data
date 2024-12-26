@@ -33,19 +33,36 @@
 module.exports = getCardValue
 
 function getCardValue(card) {
-   const singleDigitRank = Number(card.substring(0,1));
-   // const doubleDigitRank = Number(card.substring(0,2));
-  
-        if (card.startsWith("10")){
+   const singleDigitRank = Number(card.substring(0,1)); // return the first value of string
+   const doubleDigitRank = Number(card.substring(0,2));
+   const lastCh = card.charAt(card.length - 1)
+   const validRanks = ["K", "J", "Q",]
+   const validSuits = ["♠", "♥", "♦", "♣"]
+   console.log(`single dig is ${singleDigitRank}`);
+   console.log(`last character is ${lastCh}`);
+
+//checks if length is valid
+        if (card.length > 3){
+           return "Invalid Cards"
+        }else if (card.startsWith("10") && card.length === 3 && validSuits.includes(card[2])){
             return 10;
-        } else if (singleDigitRank >= 2 && singleDigitRank <=9){
+//checks for 2 t0 9 of any valid suit e.g 2♥
+        } else if (singleDigitRank >= 2 && singleDigitRank <=9 && card.length === 2 && validSuits.includes(card[1])){
             return singleDigitRank;
-        } else if (card.startsWith("J") || card.startsWith("Q") || card.startsWith("K")){
+//checks to pass k♠ but not kk♠
+        } else if (validRanks.includes(card[0]) && validSuits.includes(card[1]) && card.length === 2) {
             return 10;
-        } else if (card.startsWith("A")){
+        } else if (card.startsWith("A") && validSuits.includes(card[1]) && card.length === 2){
             return 11
         } else return "Invalid Cards";
         
-}
-console.log(getCardValue("J♠"));
-console.log(getCardValue("Z♠"));
+}    
+//console.log(getCardValue("J♠"));
+console.log(getCardValue("A♠"));
+
+
+/*getCardValue("99Q♠");
+getCardValue("100♠");
+getCardValue("2K♠");
+getCardValue("KK♠");
+getCardValue("AA♠")*/

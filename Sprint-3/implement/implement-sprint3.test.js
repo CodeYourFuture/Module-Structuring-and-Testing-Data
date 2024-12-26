@@ -31,4 +31,9 @@ test('Given the card input getCardValue returns correct number for valid ranks '
   expect(getCardValue("K♥")).toBe(10);
   expect(getCardValue("A♥")).toBe(11);
   expect(getCardValue("z♥")).toBe("Invalid Cards");   
+  expect(getCardValue("99Q♠")).toBe("Invalid Cards"); // Invalid card format
+  expect(getCardValue("100♠")).toBe("Invalid Cards"); // Valid "10" card
+  expect(getCardValue("2K♠")).toBe("Invalid Cards");  // Invalid card format
+  expect(getCardValue("KK♠")).toBe("Invalid Cards");  // Invalid card format
+  expect(getCardValue("AA♠")).toBe("Invalid Cards");  // Invalid card format
 });
