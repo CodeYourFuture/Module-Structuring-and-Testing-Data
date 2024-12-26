@@ -24,9 +24,10 @@ function isValidLength(password) {
 function containsUpperCase(password) {
     for(let i = 0 ; i < password.length; i++){
       //console.log(password[i]);
-      if (password[i] === password[i].toUpperCase())
-         return true
-    }return false;
+       if (password[i] !== password[i].toLowerCase()) {
+            return true;
+    }
+    return false;
 }
 
 function containsLowerCase(password) {
@@ -102,4 +103,11 @@ test('if password is a valid password.', () => {
   expect(isValidPassword("Abc!")).toBe(false);    
   expect(isValidPassword("ABCD1")).toBe(false);    
   expect(isValidPassword("Dog!")).toBe(false);
+  expect(isValidPassword("Abaaa!")).toBe(false);  // No digits
 })
+
+test('Check password without an uppercase letter', () => {
+  expect(isValidPassword("1a!123")).toBe(false);
+  expect(isValidPassword("za123!")).toBe(false);  
+});
+
