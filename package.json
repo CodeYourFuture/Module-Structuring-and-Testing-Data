@@ -1,0 +1,20 @@
+{
+  "name": "module-structuring-and-testing-data",
+  "version": "1.0.0",
+  "description": "Like learning a musical instrument, programming requires daily practice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grajales-K/Module-Structuring-and-Testing-Data.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grajales-K/Module-Structuring-and-Testing-Data/issues"
+  },
+  "homepage": "https://github.com/Grajales-K/Module-Structuring-and-Testing-Data#readme"
+}

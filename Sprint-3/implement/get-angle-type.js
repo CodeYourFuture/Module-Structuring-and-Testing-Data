@@ -29,29 +29,40 @@
 
 // ============================= function getAngleType ===============================
 
-//we use else if to compare one of the conditions 
+//the use of else if is to compare one of the conditions 
 
 function getAngleType(angle){
 
     if (angle === 90) {
-      return `${angle} degrees is Right angle`;
+      return "Right angle";
     } else if (angle > 0 && angle < 90) {
-      return `${angle} degrees is Acute angle`;
+      return "Acute angle";
     } else if (angle > 90 && angle < 180) {
-      return `${angle} degrees is Obtuse Angle`;
+      return  "Obtuse Angle";
     } else if (angle === 180) {
-      return `${angle} degrees is Straight angle`;
+      return "Straight angle";
     } else if (angle > 180 && angle < 360) {
-      return `${angle} degrees is Reflex Angle`;
+      return "Reflex Angle";
     }
-    return `${angle} is an Invalid angle`;
+    return "Invalid angle";
 } 
 
-console.log(getAngleType(90));  // "Right angle"
-console.log(getAngleType(45));  // "Acute angle"
-console.log(getAngleType(135)); // "Obtuse angle"
-console.log(getAngleType(180)); // "Straight angle"
-console.log(getAngleType(270)); // "Reflex angle"
-console.log(getAngleType(-30)); // "Invalid angle"
+// console.log(getAngleType(90));  // "Right angle"
+// console.log(getAngleType(45));  // "Acute angle"
+// console.log(getAngleType(135)); // "Obtuse angle"
+// console.log(getAngleType(180)); // "Straight angle"
+// console.log(getAngleType(270)); // "Reflex angle"
+// console.log(getAngleType(-30)); // "Invalid angle"
 
+
+// the console.assert(expression, message);
+console.assert(
+  getAngleType(90) === "Right angle",
+  "Test case failed for 90 degrees"
+);
+
+console.assert(
+  getAngleType(40) === "Acute angle",
+  "Test case failed for 45 degrees"
+);
 
