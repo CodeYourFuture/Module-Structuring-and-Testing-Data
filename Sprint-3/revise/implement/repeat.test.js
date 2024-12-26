@@ -29,15 +29,48 @@ function repeat(str, count){
         return "";
     } else if (count < 0){
         return "count cant be negative";
-    } else if (count === 1){
+    } 
+    count = Math.floor(count);
+    if (count === 1){
         return str;
     } else if (count > 1) {
         let result = "";
-        for (i = 0; i < count; i++){
+        for (let i = 0; i < count; i++){
          result += str;
        } return result;
     } return "";
 }
 
 console.log(repeat("cat", 3));
+
+ test('if the function handles various cases correctly.', () => {
+    // Test for an empty string
+    expect(repeat("", 3)).toBe("");  // Empty string input, expected output is an empty string
+
+    // Test for negative count
+    expect(repeat("hello", -2)).toBe("count cant be negative");  // Negative count, expected error message
+
+    // Test when count is 1 (edge case)
+    expect(repeat("hello", 1)).toBe("hello");  // count of 1, expected output is the original string
+
+    // Test for count greater than 1
+    expect(repeat("hello", 3)).toBe("hellohellohello");  // Repeat "hello" 3 times
+    expect(repeat("abc", 2)).toBe("abcabc");            // Repeat "abc" 2 times
+
+    // Test for count 0 (edge case)
+    expect(repeat("hello", 0)).toBe("");  // count of 0, expected output is an empty string
+
+    // Test for count being a large number
+    expect(repeat("A", 1000)).toBe("A".repeat(1000));  // Repeat "A" 1000 times
+
+    // Test for string with special characters
+    expect(repeat("!@#", 2)).toBe("!@#!@#");  // Repeat special characters string
+
+    // Test for count being a non-integer (e.g., a floating point)
+    expect(repeat("abc", 2.5)).toBe("abcabc");  // Count 2.5 should behave as count of 2 (since no rounding is implemented)
+
+    // Test for non-string first parameter (type check)
+    expect(repeat(123, 3)).toBe("123123123");  // Repeat a number as string
+    expect(repeat(true, 2)).toBe("truetrue");  // Repeat boolean as string
+  });
 
