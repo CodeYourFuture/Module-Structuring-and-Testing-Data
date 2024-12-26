@@ -36,12 +36,15 @@
 module.exports = isProperFraction
 
 function isProperFraction(numerator, denominator){
-    if (denominator === numerator){
+   const absNumerator = Math.abs(numerator);
+   const absDenominator = Math.abs(denominator);
+    
+    if (absDenominator === absNumerator){
          return false
-    } else if (denominator === 0 ) { 
+    } else if (absDenominator === 0 ) { 
         return "error"
-    } else if (denominator < numerator) {
+    } else if (absDenominator < absNumerator) {
         return false
-    } else  (denominator > numerator);
+    } else  (absDenominator > absNumerator);
         return true
     } 

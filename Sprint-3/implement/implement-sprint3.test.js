@@ -17,6 +17,12 @@ test('Given numerator and denominator, return the type of fraction', () => {
    expect(isProperFraction(2, 3)).toBe(true); 
    expect(isProperFraction(5, 3)).toBe(false);
    expect(isProperFraction(2, 0)).toBe("error");
+   expect(isProperFraction(-2, 3)).toBe(true);  // Proper fraction with negative numerator
+   expect(isProperFraction(2, -3)).toBe(true);  // Proper fraction with negative denominator
+   expect(isProperFraction(0, 3)).toBe(true); // Zero numerator is a proper fraction
+   expect(isProperFraction(0, -3)).toBe(true); // Zero numerator with negative denominator
+   expect(isProperFraction(-5, 3)).toBe(false); // Improper fraction with negative numerator
+   expect(isProperFraction(5, -3)).toBe(false); // Improper fraction with negative denominator
 });
 
 
