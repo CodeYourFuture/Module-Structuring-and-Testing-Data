@@ -47,7 +47,6 @@ function getAngleType(angle){
 } 
 
 
-
 // console.log(getAngleType(90));  // "Right angle"
 // console.log(getAngleType(45));  // "Acute angle"
 // console.log(getAngleType(135)); // "Obtuse angle"
@@ -60,17 +59,55 @@ function getAngleType(angle){
 // ============== test with console.assert() ==================
 //these test are more simple to write and read and only return the fail message
 //  console.assert(expression, message);
-//
 
-console.assert(getAngleType(90) === "Right angle", "Test case failed for Right Angle");
+console.assert(getAngleType(99) === "Right angle", "Test case failed for Right Angle"); // fail AssertionError [ERR_ASSERTION]: Test case failed for Right Angle
 console.assert(getAngleType(40) === "Acute angle", "Test case failed for Acute Angle");
 console.assert(getAngleType(135) === "Obtuse Angle", "test case failed for Obtuse Angle");
-console.assert(getAngleType(380) === "Straight angle", "Test failed for Straight angle");
+console.assert(getAngleType(380) === "Straight angle", "Test failed for Straight angle"); // fail AssertionError [ERR_ASSERTION]: Test failed for Straight angle
 console.assert(getAngleType(270) === "Reflex Angle", "Test case Failed for Reflex Angle");
 console.assert(getAngleType(-10) === "Invalid angle", "Test case Failed for Invalid angle");
 console.assert(getAngleType(400) === "Invalid angle", "Test case Failed for Invalid Angle");
 
+
+
 // ============== test with Jest ==================
 // These tests are more detailed because we can see what was expected and what went wrong
+test('Should return "Right angle" for 90 degrees', () => {
+  const result = getAngleType(90); 
+  expect(result).toBe("Right angle");
+});
 
-// Right angle Test
+test('Should return "Acute angle" for angles between 0 and 90', () => {
+  const result = getAngleType(35); 
+  expect(result).toBe("Acute angle");
+});
+
+test('Should return "Obtuse Angle" for angles between 90 and 180', () => {
+  const result = getAngleType(135);
+  expect(result).toBe("Obtuse Angle");
+});
+
+test('Should return "Straight angle" for 180 degrees', () => {
+  const result = getAngleType(180);
+  expect(result).toBe("Straight angle");
+});
+
+test('Should return "Reflex Angle" for angles between 180 and 360', () => {
+  const result = getAngleType(270);
+  expect(result).toBe("Reflex Angle");
+});
+
+test('Should return "Invalid angle" for angles outside 0-360 degrees', () => {
+  expect(getAngleType(-10)).toBe("Invalid angle");
+  expect(getAngleType(400)).toBe("Invalid angle");
+});
+
+
+
+
+
+//nodemon
+// to run these test and see the changes applied in the same time use      < nodemon -x "npm test" get-angle-type.test.js >
+
+// npm
+//once you are inside of the file you want to run  < npm test --  --watch >
