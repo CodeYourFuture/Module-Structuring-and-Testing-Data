@@ -11,7 +11,9 @@
 
 
 function priceWithVAT(productPrice) {
-    return `£${productPrice * 1.2} VAT included`;
+    const priceWithVAT = (productPrice * 1.2);
+    const currencySymbol = "£"
+    return `${currencySymbol}${priceWithVAT} VAT included`;
 }
 
-console.log(priceWithVAT(1000));
+console.log(priceWithVAT(11.30));
