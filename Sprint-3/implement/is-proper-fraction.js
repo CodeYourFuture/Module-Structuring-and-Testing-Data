@@ -25,10 +25,32 @@
 // Negative Fraction check:
 // Input: numerator = -4, denominator = 7
 // target output: true
-// Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
+// Explanation: The fraction -4/7 is a proper fraction because 
+// the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+function isProperFraction(numerator, denominator) {
+  // Check for denominator being zero
+  if (denominator === 0) {
+    throw new Error("Denominator cannot be zero");
+  }
+
+  // If numerator is equal to denominator, it's not a proper fraction
+  if (numerator === denominator) {
+    return false;
+  }
+
+  // Proper fraction if the absolute value of the numerator is less than the denominator
+  return Math.abs(numerator) < denominator;
+}
+
+
+console.log(isProperFraction(3, 6)); 
+console.log(isProperFraction(-3, 6));
+console.log(isProperFraction(9, 0)); 
+console.log(isProperFraction(5, 5)); 
