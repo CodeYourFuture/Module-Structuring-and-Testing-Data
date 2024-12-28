@@ -11,12 +11,46 @@
 // Given a character and a shift value,
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
+function rotateCharacter(letter, num) {
+    // Check if the input is a letter
+    if (!/[a-zA-Z]/.test(letter)) {
+        return letter; // Return the original character if it's not a letter
+    }
+    
+    // Convert letter to uppercase
+    const upperLetter = letter.toUpperCase();
+    
+    // Base character code for 'A'
+    const baseCode = 'A'.charCodeAt(0);
+
+    // Calculate the new character code
+    const rotatedCode = (upperLetter.charCodeAt(0) - baseCode + num) % 26 + baseCode;
+
+    // Convert back to character
+    const rotatedChar = String.fromCharCode(rotatedCode);
+
+    // Preserve case
+    if (letter === letter.toLowerCase()) {
+        return rotatedChar.toLowerCase();
+    } else {
+        return rotatedChar;
+    }
+}
+
+console.log(rotateCharacter('F', 2));  // Output: H
+console.log(rotateCharacter('7', 5));  // Output: 7 (unchanged, not a letter)
+console.log(rotateCharacter("f", 1));  // Output: g
+console.log(rotateCharacter("A", 3));  // Output: D
+console.log(rotateCharacter("z", 1));  // Output: a
+
 
 // Scenario: Rotate Lowercase Letters:
 // Given a lowercase letter character and a positive integer shift,
 // When the function is called with these inputs,
-// Then it should rotate the lowercase letter by shift positions within the lowercase alphabet, wrapping around if necessary, and return the rotated lowercase letter as a string.
-console.log(rotateCharacter("a", 3)); // Output: "d"
+// Then it should rotate the lowercase letter by shift positions within the
+//  lowercase alphabet, wrapping around if necessary, and return the rotated 
+// lowercase letter as a string.
+// console.log(rotateCharacter("a", 3)); // Output: "d"
 console.log(rotateCharacter("f", 1)); // Output: "g"
 
 // Scenario: Rotate Uppercase Letters:
@@ -39,5 +73,5 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // When the rotateCharacter function is called with char and shift as inputs,
 // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
-console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
-console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+// console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
+// console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
