@@ -32,8 +32,9 @@
 
 function getCardValue(card) {
   let rank = card.slice(0, -1);
-  if (parseInt(rank) >= 2 && parseInt(rank) <= 10) {
-    return parseInt(rank);
+  const parseIntRank = parseInt(rank);
+  if (parseIntRank >= 2 && parseIntRank <= 10) {
+    return parseIntRank;
   }
   switch (rank) {
     case "J":
