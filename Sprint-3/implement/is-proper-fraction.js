@@ -43,13 +43,13 @@ function isProperFraction(numerator, denominator) {
 // ---------------------------------------- Tests: ----------------------------------------
 // -------- Proper Fraction --------
 console.assert(
-  isProperFraction(2, 3) === true,
+  isProperFraction(2, 3),
   "Test failed: 2/3 should be a proper fraction"
 );
 
 // -------- Improper Fraction --------
 console.assert(
-  isProperFraction(5, 2) === false,
+  !isProperFraction(5, 2),
   "Test failed: 5/2 should not be a proper fraction"
 );
 
@@ -66,12 +66,12 @@ try {
 
 // -------- Negative Fraction --------
 console.assert(
-  isProperFraction(-4, 7) === true,
+  isProperFraction(-4, 7),
   "Test failed: -4/7 should be a proper fraction"
 );
 
 // -------- Equal Numerator and Denominator --------
 console.assert(
-  isProperFraction(3, 3) === false,
+  !isProperFraction(3, 3),
   "Test failed: 3/3 should not be a proper fraction"
 );
