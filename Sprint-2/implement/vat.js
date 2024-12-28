@@ -8,3 +8,12 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+
+function priceWithVAT(productPrice) {
+    const priceWithVAT = (productPrice * 1.2);
+    const currencySymbol = "£"
+    return `${currencySymbol}${priceWithVAT} VAT included`;
+}
+
+console.log(priceWithVAT(11.30));

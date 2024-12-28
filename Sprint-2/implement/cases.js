@@ -13,3 +13,16 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+function toUpperSnakeCase(string) {
+    return string.split(" ").join("_").toUpperCase();
+}
+
+console.log(toUpperSnakeCase("Hello World"));
+console.assert(toUpperSnakeCase("Hello World") === "HELLO_WORLD", "Test Case 1 Failed");
+console.assert(toUpperSnakeCase("hello world") === "HELLO_WORLD", "Test Case 2 Failed");
+console.assert(toUpperSnakeCase("My name is Pooriya") === "MY_NAME_IS_POORIYA", "Test Case 3 Failed");
+console.assert(toUpperSnakeCase("singleword") === "SINGLEWORD", "Test Case 4 Failed");
+console.assert(toUpperSnakeCase("UPPER CASE") === "UPPER_CASE", "Test Case 5 Failed");
+console.assert(toUpperSnakeCase("") === "", "Test Case 6 Failed");
