@@ -6,6 +6,8 @@
 // Side b = 3
 // Side c = 3
 
+const { t } = require("tar");
+
 // This is a valid triangle, because a plus b = 6 and 6 is greater than 3
 // Another way to write this is a + b > c
 // It's also true that b + c > a
@@ -33,3 +35,49 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+
+function isValidTriangle(side1, side2, side3){
+    
+    if(side1 === 0 || side2 === 0 || side3 === 0){
+        return false;
+    }
+
+    else if(side1 + side2 > side3){
+        return true;
+    }
+    else if(side2 + side3 > side1){
+        return true;
+    }
+    else if(side1 + side3 > side2){
+        return true;
+    }
+    return false
+
+
+}
+
+console.log(isValidTriangle(3, 20, 20));
+console.log(isValidTriangle(3, 6, 10));
+console.log(isValidTriangle(9, 0, 1));
+console.log(isValidTriangle(5, 0, 1)); 
+
+
+// ========================== optimized version =======================
+
+// function isValidTriangle(side1, side2, side3) {
+//     // Check for non-positive side lengths
+//     if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+//         return false;
+//     }
+//     // Validate triangle inequality
+//     if (side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// console.log(isValidTriangle(3, 20, 20));  // false
+// console.log(isValidTriangle(3, 6, 10));   // true
+// console.log(isValidTriangle(9, 0, 1));    // false
+// console.log(isValidTriangle(5, 0, 1));    // false
