@@ -36,42 +36,48 @@
 
 // ========================= getCardValue ===========================
 
-function getCardValue (input){
+function getCardValue(input) {
   const rank = input.slice(0, -1);
+  const suit = input.slice(-1);
 
-  // console.log(rank)
-  // return rank//fist character
 
-  if (input === "10") 
+  if (input === "10"){
     return 10;
-
-  else if (rank > 1 && rank < 11) {
+  }else if (rank > 1 && rank < 11) {
     return Number(rank);
-  }
- else  if(input === "A")
-    return 11
-
-  else if (
-    input.toUpperCase() === "K" ||
-    input.toUpperCase() === "Q" ||
-    input.toUpperCase() === "J"
-  ) {
+  } 
+  else if (input === "A") 
+    return 11;
+  else if (input.toUpperCase() === "K" || input.toUpperCase() === "Q" || input.toUpperCase() === "J"){
     return 10;
   }
-  else return "Invalid card rank.";
 
+    if (suit !== "♠" && suit !== "♥" && suit !== "♣" && suit !== "♦" && input.length > 1) {
+  return "Invalid card rank.";
+  }
 }
 
 
-// // Test cases 
-console.log(getCardValue("10"));   // Output: 10
-console.log(getCardValue("10♠"));  // Output: 10
-console.log(getCardValue("5♥"));   // Output: 5
-console.log(getCardValue("A"));    // Output: 11
-console.log(getCardValue("k$"));   // output Invalid card rank.
-console.log(getCardValue("k"));    // output 10
+// ========================   Test cases console.log() =====================
+
+// console.log(getCardValue("10")); // Output: 10
+// console.log(getCardValue("10♠")); // Output: 10
+// console.log(getCardValue("5♥")); // Output: 5
+// console.log(getCardValue("A")); // Output: 11
+// console.log(getCardValue("k$")); // output Invalid card rank.
+// console.log(getCardValue("k")); // output 10
 
 
+// ========================   Test console.assert  =====================
+
+console.assert(getCardValue("10") === 10, "Test case failed for input '10'");
+console.assert(getCardValue("10♠") === 10, "Test case failed for input '10♠'");
+console.assert(getCardValue("5♥") === 5, "Test case failed for input '5♥'");
+console.assert(getCardValue("A") === 11, "Test case failed for input 'A'");
+console.assert(getCardValue("K") === 10, "Test case failed for input 'K'");
+console.assert(getCardValue("3X") === "Invalid card rank.", "Test case failed for input '3X'");
+
+console.log("All tests passed!");
 
 
 // ========================== optimized version =======================
@@ -112,5 +118,3 @@ console.log(getCardValue("k"));    // output 10
 // console.log(getCardValue("K$"));    // Output: "Invalid card suit."
 // console.log(getCardValue("K"));     // Output: 10
 // console.log(getCardValue("11♥"));   // Output: "Invalid card rank."
-
-
