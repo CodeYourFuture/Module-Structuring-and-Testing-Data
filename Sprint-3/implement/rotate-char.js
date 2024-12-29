@@ -11,6 +11,8 @@
 // Given a character and a shift value,
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
+
+
 function rotateCharacter(letter, num) {
     // Check if the input is a letter
     if (!/[a-zA-Z]/.test(letter)) {
