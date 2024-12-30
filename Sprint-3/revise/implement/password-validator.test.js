@@ -1,16 +1,34 @@
-/* 
-Password Validation
+const passwordValidation = require("./password-validator");
 
-Write a program that should check if a password is valid
-and returns a boolean
+describe("passwordValidation", () => {
+  const existingPasswords = ["previousPass1", "previousPass2", "etetet"];
 
-To be valid, a password must:
-- Have at least 5 characters.
-- Have at least one English uppercase letter (A-Z)
-- Have at least one English lowercase letter (a-z)
-- Have at least one number (0-9)
-- Have at least one non-alphanumeric symbol ("!", "#", "$", "%", ".", "*", "&")
-- Must not be any previous password in the passwords array. 
+  test("valid password with all criteria", () => {
+    expect(passwordValidation("Valid1!Test", existingPasswords)).toBe(true);
+  });
 
-You must breakdown this problem in order to solve it. Find one test case first and get that working
-*/
+  test("password too short", () => {
+    console.log(passwordValidation("Short1!", existingPasswords)); // Debug output
+    expect(passwordValidation("Smjffjf!9", existingPasswords)).toBe(true);
+  });
+
+  test("password without uppercase letter", () => {
+    expect(passwordValidation("lowercase1!", existingPasswords)).toBe(false);
+  });
+
+  test("password without lowercase letter", () => {
+    expect(passwordValidation("UPPERCASE1!", existingPasswords)).toBe(false);
+  });
+
+  test("password without number", () => {
+    expect(passwordValidation("NoNumbers!", existingPasswords)).toBe(false);
+  });
+
+  test("password without special character", () => {
+    expect(passwordValidation("Valid1Test", existingPasswords)).toBe(false);
+  });
+
+  test("password matches an existing password", () => {
+    expect(passwordValidation("previousPass1", existingPasswords)).toBe(false);
+  });
+});

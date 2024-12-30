@@ -6,8 +6,6 @@
 // Side b = 3
 // Side c = 3
 
-const { t } = require("tar");
-
 // This is a valid triangle, because a plus b = 6 and 6 is greater than 3
 // Another way to write this is a + b > c
 // It's also true that b + c > a
