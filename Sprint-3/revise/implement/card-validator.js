@@ -10,7 +10,7 @@ function cardValidator(num) {
   // console.log(`compare ${numStr[i]} con ${firstDigit} in position ${i}`);
 
     if (numStr[i] !== firstDigit) {
-      // console.log(`diferent digit found: ${numStr[i]}`);
+      // console.log(`different digit found: ${numStr[i]}`);
       return true; // Found at least two different digits
     }
   }
@@ -20,7 +20,7 @@ function cardValidator(num) {
 }
 
 console.log(cardValidator(1111111111111111)); // Output: false and stop in the first return.
-// console.log(cardValidator(1234567890123456)); // Output: true
-// console.log(cardValidator(2222222222222222)); // Output: false
-// console.log(cardValidator(3333333333333334)); // Output: true
+console.log(cardValidator(1234567890123456)); // Output: true
+console.log(cardValidator(2222222222222222)); // Output: false
+console.log(cardValidator(3333333333333334)); // Output: true
 
