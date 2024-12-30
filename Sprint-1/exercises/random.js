@@ -11,3 +11,5 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
     //  so each time you run the program, a different integer within the range [1, 100] will be generate.
 5.66;
 console.log(num);
+let x = Math.floor(Math.random()*(3 + 5 + 1))-5
+console.log(x);

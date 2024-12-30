@@ -1,5 +1,6 @@
 const cardNumber = 4533787178994213;
 const last4Digits = cardNumber.slice(4);
+// const last4Digits = cardNumber.toString().slice(-4)
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
@@ -12,3 +13,4 @@ const last4Digits = cardNumber.slice(4);
  It extracts a section of a string and returns 
 it as a new string, without modifying the original string.
 */
+console.log(last4Digits) // expected output 4213
