@@ -7,3 +7,11 @@ const num = 56.5678;
 // Create a variable called roundedNum and assign to it an expression that evaluates to 57 ( num rounded to the nearest whole number )
 
 // Log your variables to the console to check your answers
+let  wholeNumberPart = Math.floor(num);
+
+var decimalPart = (num - Math.floor(num)).toFixed(4);
+
+var roundedNum = Math.round(num);
+console.log(`Whole Number Part: ${wholeNumberPart}`); // Expected: 56
+console.log(`Decimal Part: ${decimalPart}`);          // Expected: 0.5678
+console.log(`Rounded Number: ${roundedNum}`);         // Expected: 57

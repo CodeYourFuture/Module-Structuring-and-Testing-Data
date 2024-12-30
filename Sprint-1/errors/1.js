@@ -1,4 +1,6 @@
 // trying to create an age variable and then reassign the value by 1
 
-const age = 33;
+/* The value of a constant cannot change through re-assignment,
+we can use var or let insted*/
+let  age = 33;
 age = age + 1;
