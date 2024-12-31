@@ -15,8 +15,8 @@
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
-const convertToUpperCamelCase = input => {
-    return input.split( ' ' ).map( str => str.toUpperCase() ).join( '_' );
+function convertToSnakeCase(stringInput) {
+  return stringInput.toUpperCase().split(" ").join("_");
 }
 
 // .split( ' ' ) splits the string at each space and adds each element to an array
@@ -28,4 +28,4 @@ const convertToUpperCamelCase = input => {
 // .join( '_' ) will convert the values in an array to a string, joining each element in the array with the value provided, in this case an underscore
 // [ "LORD", "OF", "THE", "RINGS" ] will therefore become "LORD_OF_THE_RINGS"
 
-console.log( convertToUpperCamelCase( "lord of the rings" ) )
+console.assert(convertToSnakeCase("lord of the rings") === "LORD_OF_THE_RINGS");

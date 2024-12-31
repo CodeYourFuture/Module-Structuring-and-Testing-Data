@@ -5,17 +5,25 @@
 
 // You should call this function a number of times to check it works for different inputs
 
-const toPounds = penceString => {
-    const penceStringWithoutTrailingP = penceString.substring( 0, penceString.length - 1 );
+function toPoundsAndPence(penceString) {
+  const penceStringWithoutTrailingP = penceString.substring(
+    0,
+    penceString.length - 1
+  );
 
-    const paddedPenceNumberString = penceStringWithoutTrailingP.padStart( 3, "0" );
-    const pounds = paddedPenceNumberString.substring( 0, paddedPenceNumberString.length - 2 );
+  const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+  const pounds = paddedPenceNumberString.substring(
+    0,
+    paddedPenceNumberString.length - 2
+  );
 
-    const pence = paddedPenceNumberString.substring( paddedPenceNumberString.length - 2 ).padEnd( 2, "0" );
+  const pence = paddedPenceNumberString
+    .substring(paddedPenceNumberString.length - 2)
+    .padEnd(2, "0");
 
-    console.log( `£${pounds}.${pence}` );
+  return `£${pounds}.${pence}`;
 }
 
-toPounds( "399p" );
-toPounds( "4321p" );
-toPounds( "896432p" );
+console.assert(toPoundsAndPence("399p") === "£3.99");
+console.assert(toPoundsAndPence("1p") === "£0.01");
+console.assert(toPoundsAndPence("896432p") === "£8964.32");

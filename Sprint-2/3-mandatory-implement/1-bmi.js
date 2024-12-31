@@ -14,9 +14,9 @@
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
 
-const calculateBodyMassIndex = ( weightInKilograms, heightInMetres ) => {
-    const bmi = weightInKilograms / ( heightInMetres * heightInMetres );
-    return Math.round( bmi * 10 ) / 10; // will round the value to 1 dp, can also use .toFixed( 1 ) but will convert value to a string
-}
+const calculateBMI = (weightInKilograms, heightInMetres) => {
+  const BMI = weightInKilograms / (heightInMetres * heightInMetres);
+  return Math.round(BMI * 10) / 10; // will round the value to 1 dp, can also use .toFixed( 1 ) but will convert value to a string
+};
 
-console.log( calculateBodyMassIndex( 70, 1.73 ) );
+console.log(calculateBMI(70, 1.73));
