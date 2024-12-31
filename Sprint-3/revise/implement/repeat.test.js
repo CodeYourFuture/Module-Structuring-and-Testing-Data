@@ -1,25 +1,32 @@
-// Implement a function repeat
+const repeatString = require("./repeat");
 
-// Given a target string str and a positive integer count,
-// When the repeat function is called with these inputs,
-// Then it should:
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected "${actualOutput}" to equal "${targetOutput}"`
+  );
+}
 
-// case: repeat String:
-// Given a target string str and a positive integer count,
-// When the repeat function is called with these inputs,
-// Then it should repeat the str count times and return a new string containing the repeated str values.
+describe("repeatString Function Tests", () => {
+  test("Repeats string 3 times", () => {
+    const result = repeatString("hello", 3);
+    assertEquals(result, "hello hello hello");
+  });
 
-// case: handle Count of 1:
-// Given a target string str and a count equal to 1,
-// When the repeat function is called with these inputs,
-// Then it should return the original str without repetition, ensuring that a count of 1 results in no repetition.
+  test("Repeats string 1 time", () => {
+    const result = repeatString("world", 1);
+    assertEquals(result, "world");
+  });
 
-// case: Handle Count of 0:
-// Given a target string str and a count equal to 0,
-// When the repeat function is called with these inputs,
-// Then it should return an empty string, ensuring that a count of 0 results in an empty output.
+  test("Repeats string 0 times", () => {
+    const result = repeatString("test", 0);
+    assertEquals(result, "");
+  });
 
-// case: Negative Count:
-// Given a target string str and a negative integer count,
-// When the repeat function is called with these inputs,
-// Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+  test("Handles negative count", () => {
+    const result = repeatString("errorTest", -2);
+    assertEquals(result, "error your number is negative");
+  });
+});
+
+console.log("All test cases executed!");
