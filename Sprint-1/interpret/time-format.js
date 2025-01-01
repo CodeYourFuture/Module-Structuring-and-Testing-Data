@@ -18,12 +18,12 @@ console.log(result);
    //one
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
-   //movieLength % 60  calculates the remainder ,that found by dividing 8784/60 
+   //movieLength % 60  calculates the remainder ,that found by the leftover of dividing 8784/60 so the remainder represents the number of leftover seconds after converting the total seconds into full minutes.
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
   //const totalMinutes = (movieLength - remainingSeconds) / 60;
         //movieLength  = 8784
         //remainingSeconds = 24 
-             // = (8784-24)/60=8760/60=146
+             //totalMinutes = (8784-24)/60=8760/60=146
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
        //`${totalHours}:${remainingMinutes}:${remainingSeconds}`
        //formats the values of totalHours, remainingMinutes, and remainingSeconds into a time-like string in the format hours:minutes:seconds.
