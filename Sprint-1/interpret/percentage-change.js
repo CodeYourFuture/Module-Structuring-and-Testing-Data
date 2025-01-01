@@ -19,9 +19,18 @@ console.log(`The percentage change is ${percentageChange}`);
     //replaceAll("," "")
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
    //line 5,the error is because of missing comma in replaceAll function
+
+// Line 4: priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+// Reason for the Error:
+
+// There is a syntax error: replaceAll("," "") is missing a comma between its arguments. It should be replaceAll(",", "").
+// Fix:  priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
+
 // c) Identify all the lines that are variable reassignment statements
-  // const priceDifference = carPrice - priceAfterOneYear;
-  // const percentageChange = (priceDifference / carPrice) * 100;
+  //carPrice = Number(carPrice.replaceAll(",", ""));
+ // priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+
+
 // d) Identify all the lines that are variable declarations
      // let carPrice = "10,000";
      // let priceAfterOneYear = "8,543";
