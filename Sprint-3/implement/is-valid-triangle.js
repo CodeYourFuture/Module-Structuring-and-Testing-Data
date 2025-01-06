@@ -1,4 +1,22 @@
 // Implement a function isValidTriangle
+
+function isValidTriangle(a, b, c){
+
+    //Check invalid value :
+    // triangle cannot have zero or negative side lengths 
+    // sum of the lengths of any two sides of a triangle must be greater than the length of the third side.
+    if (a + b <= c || a + c <= b || b + c <= a || a <= 0 || b <= 0 || c <= 0) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+console.log(isValidTriangle(2, 3, 4));  //false
+console.log(isValidTriangle(0, 3, 4));  //false
+console.log(isValidTriangle(-1, 3, 4)); //false
+console.log(isValidTriangle(3, 3, 3));  //false
 // Terms
 // the Triangle Inequality says: the sum of any two sides is always greater than the third side.
 // practical examples:
