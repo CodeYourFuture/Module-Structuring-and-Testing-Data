@@ -1,7 +1,38 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
 // You will need to implement a function getCardValue
+function getCardValue(card){
+    let rank = card.slice(0, -1);   //extracting rank of the card (without symbol)
+    // convert strings into integers with parseInt method and then compare the value for Number Cards
+    if (parseInt(rank) >= 2 && parseInt(rank) <= 10) {
+        return rank;
+    }
+    // Check for the face Cards
+    if (rank === "J" || rank === "Q" || rank === "K" ) {
+        return "10";
+    }
+    // Check for the Ace Card
+    if (rank === "A"){
+        return "11";
+    }
+    // Check for invalid Cards
+    else
+       return "Invalid card rank";
+  }
 
+console.log(getCardValue("K♠"));  // 10
+console.log(getCardValue("A♠"));  // 11
+console.log(getCardValue("7♥"));  // 7
+console.log(getCardValue("10♦"));  // 10
+
+
+console.assert(getCardValue("K♠") === "10", "Test failed for 'K♠'")
+console.assert(getCardValue("A♠") === "11", "Test failed for 'A♠'")
+console.assert(getCardValue("7♥") === "7", "Test failed for '7♥'")
+console.assert(getCardValue("10♦") === "10", "Test failed for '10♦'")
+console.assert(getCardValue("AA♠") === "Invalid card rank", "Test failed for 'AA♠'")
+console.assert(getCardValue("25Q♠")=== "Invalid card rank", "Test failed for '25Q♠'");
+console.assert(getCardValue("1♦")=== "Invalid card rank", "Test failed for '1♦'");
 // You need to write assertions for your function to check it works in different cases
 
 // Acceptance criteria:
