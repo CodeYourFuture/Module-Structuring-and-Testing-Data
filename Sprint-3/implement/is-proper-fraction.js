@@ -1,6 +1,20 @@
 // You wil need to implement a function isProperFraction
 // You need to write assertions for your function to check it works in different cases
+function isProperFraction(numerator, denominator) {
+    // Check if the denominator is zero, which is invalid
+    if (denominator === 0) {
+        throw new Error("Denominator cannot be zero");
+    }  
+    // Check absolute value(non negative) for proper fraction
+    // A proper fraction : absolute value of numerator is less than the absolute value of denominator.
+    return Math.abs(numerator) < Math.abs(denominator);
+}
 
+console.log(isProperFraction(2, 3)); // true
+console.log(isProperFraction(5, 2)); // false
+console.log(isProperFraction(-4, 7));  // true
+console.log(isProperFraction(3, 3)); // false
+console.log(isProperFraction(3, 0)); //Error (Denominator cannot be zero)
 // Terms:
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
