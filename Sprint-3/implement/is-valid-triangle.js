@@ -51,3 +51,4 @@ console.log(isValidTriangle(3, 3, 3));  //false
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+module.exports = isValidTriangle;

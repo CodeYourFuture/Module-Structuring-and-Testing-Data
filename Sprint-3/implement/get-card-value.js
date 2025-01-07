@@ -5,7 +5,7 @@ function getCardValue(card){
     let rank = card.slice(0, -1);   //extracting rank of the card (without symbol)
     // convert strings into integers with parseInt method and then compare the value for Number Cards
     if (parseInt(rank) >= 2 && parseInt(rank) <= 10) {
-        return rank;
+        return `${rank}`;
     }
     // Check for the face Cards
     if (rank === "J" || rank === "Q" || rank === "K" ) {
@@ -60,3 +60,4 @@ console.assert(getCardValue("1â™¦")=== "Invalid card rank", "Test failed for '1â
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+module.exports = getCardValue;

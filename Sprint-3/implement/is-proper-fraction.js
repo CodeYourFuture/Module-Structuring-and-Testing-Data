@@ -14,7 +14,7 @@ console.log(isProperFraction(2, 3)); // true
 console.log(isProperFraction(5, 2)); // false
 console.log(isProperFraction(-4, 7));  // true
 console.log(isProperFraction(3, 3)); // false
-console.log(isProperFraction(3, 0)); //Error (Denominator cannot be zero)
+//console.log(isProperFraction(3, 0)); //Error (Denominator cannot be zero)
 // Terms:
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
@@ -46,3 +46,4 @@ console.log(isProperFraction(3, 0)); //Error (Denominator cannot be zero)
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+module.exports = isProperFraction;

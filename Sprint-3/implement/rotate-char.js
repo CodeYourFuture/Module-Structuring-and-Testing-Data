@@ -68,3 +68,5 @@ console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps 
 console.log(rotateCharacter("Y", -2));
 console.log(rotateCharacter("d", -3));
 console.log(rotateCharacter("m", 0));
+
+module.exports = rotateCharacter;
