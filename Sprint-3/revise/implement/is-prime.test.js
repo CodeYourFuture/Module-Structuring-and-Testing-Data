@@ -5,10 +5,9 @@ function isPrime(num){
     // check num is not negative & it is smaller than 2
     // check num is equal 2, it is exception 
     // check num is even
-    if (num < 2 || num === 2 || num % 2 === 0) { 
-      
-      return `${num} is not prime `
-    };
+    if (num < 2 || (num > 2  && num % 2 === 0 )){
+      return `${num} is not prime`;
+    }
 
     // check loop from 3 to the square of the num, check only odd numbers
     for (let i = 3; i <= Math.sqrt(num); i += 2) {
@@ -23,6 +22,9 @@ function isPrime(num){
 console.log(isPrime(7));  // `7 is prime`
 console.log(isPrime(10)); // `10 is not prime`
 console.log(isPrime(1));  // `1 is not prime`
+console.log(isPrime(2));  // `2 is prime`
+console.log(isPrime(0));  // `0 is not prime`
+console.log(isPrime(4));  // `4 is not prime`
 
 //////////////////////>>>>>>>>>>>>>>> Test with jest syntax <<<<<<<<<<<<<<////////////////////////////
 
