@@ -20,13 +20,17 @@ function creditCardValidator(cardNum){
     //At the end with if statement check if only one
     // rules check is true (means invalid string) total result will be false (means card number
     // is not valid) 
-    if (isNot16Digits || isNotNumber || isNotUnique || lastDigitIsNotEven || sumDigitsIsNotValid){
-        return false;
-    }
+
+    // Based on the review I simplified this code with one return by removing if statement
+    // and put it directly in return 
+
+    return !(isNot16Digits || isNotNumber || isNotUnique || lastDigitIsNotEven || sumDigitsIsNotValid);
+    //     return false;
+    // }
     // if none of the rules is not true and means card number pass all the rules so it return true
     // that it means valid card number
-    else
-        return true;
+    // else
+    //     return true;
 }
 
 

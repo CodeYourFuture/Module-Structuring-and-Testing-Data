@@ -25,11 +25,10 @@ function passwordValidator(password){
 
     //check all of the test with && and if all of them be true then the total result is true > it means password is valid
         
-    if (hasMinLength && hasUppercase && hasLowercase && hasNumber && hasSymbol && isUnique) {
-        return true;    
-    }
+    return (hasMinLength && hasUppercase && hasLowercase && hasNumber && hasSymbol && isUnique);    
+    
     //If just one of the comparation be false it will return false > it means password is invalid
-    else return false;
+    // else return false;
 }
 
 console.log(passwordValidator("Hell06*")); //false

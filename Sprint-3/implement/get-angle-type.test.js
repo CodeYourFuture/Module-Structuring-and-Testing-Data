@@ -9,8 +9,20 @@ test('Should return "Acute angle" for angles between 0 and 90', () => {
   expect(getAngleType(35)).toEqual("Acute angle");
 });
 
+test('Should return "Acute angle" for angles between 0 and 90', () => { 
+  expect(getAngleType(1)).toEqual("Acute angle");
+});
+
 test('Should return "Obtuse Angle" for angles between 90 and 180', () => {
   expect(getAngleType(135)).toEqual("Obtuse angle");
+});
+
+test('Should return "Obtuse Angle" for angles between 90 and 180', () => {
+  expect(getAngleType(91)).toEqual("Obtuse angle");
+});
+
+test('Should return "Obtuse Angle" for angles between 90 and 180', () => {
+  expect(getAngleType(179)).toEqual("Obtuse angle");
 });
 
 test('Should return "Straight angle" for 180 degrees', () => {

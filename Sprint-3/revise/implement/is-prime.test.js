@@ -3,11 +3,12 @@
 // Then it should check if the num is prime
 function isPrime(num){
     // check num is not negative & it is smaller than 2
-    if (num < 2) { return `${num} is not prime `};
     // check num is equal 2, it is exception 
-    if (num === 2) {return `${num} is prime`};
     // check num is even
-    if (num % 2 === 0) {return `${num} is not prime`};
+    if (num < 2 || num === 2 || num % 2 === 0) { 
+      
+      return `${num} is not prime `
+    };
 
     // check loop from 3 to the square of the num, check only odd numbers
     for (let i = 3; i <= Math.sqrt(num); i += 2) {
