@@ -37,20 +37,26 @@
 
 //here I have to use a function with three parameter a,b,c
 function isValidTriangle(a,b,c){
+
+ // scenario: invalid triangle
+// Check for Valid Input:
+// Given the sides a, b, and c,
+// When any of the sides are less than or equal to zero,
+// Then it should return false because a triangle cannot have zero or negative side lengths.
+if(a <= 0 || b <= 0 || c <= 0){
+    return false;
+}
+    
+//This version first checks if any side is invalid (less than or equal to zero) and returns false immediately. If the sides are valid, it then checks if they satisfy the triangle inequality theorem.
+
+
 // Another way to write this is a + b > c
 // It's also true that b + c > a
 // It's also true that a + c > b
     if((a + b > c) && (a + c > b) && (b + c > a)){
         return true;
     }
-// scenario: invalid triangle
-// Check for Valid Input:
-// Given the sides a, b, and c,
-// When any of the sides are less than or equal to zero,
-// Then it should return false because a triangle cannot have zero or negative side lengths.
-    if(a <= 0 || b <= 0 || c <= 0){
-        return false;
-    }
+
     // if any other condition comes it return false
     return false;
 }
