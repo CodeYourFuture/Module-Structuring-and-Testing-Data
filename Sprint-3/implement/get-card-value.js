@@ -53,3 +53,7 @@ function getCardValue(card) {
     
     throw new Error("Invalid card rank.");
 }
+console.log(getCardValue("010♠"));  
+console.log(getCardValue("02♠"));  
+console.log(getCardValue("0x02♠"));  
+console.log(getCardValue("2.1♠"))
