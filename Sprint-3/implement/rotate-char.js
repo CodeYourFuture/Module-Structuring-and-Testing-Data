@@ -22,12 +22,16 @@ function rotateCharacter(char, shift) {
     if (char >= "a" && char <= "z") {
         // Calculate new character with wraparound
         const charCode = char.charCodeAt(0);
-        const rotatedCode = ((charCode - 97 + shift) % 26) + 97; // 'a' starts at ASCII 97
+        const rotatedCode = ((charCode - 97 + shift + 26) % 26) + 97;
+     
+        
+                     
+         
         return String.fromCharCode(rotatedCode);
     }
 
 
-console.log(rotateCharacter("a", 3)); // Output: "d"
+console.log(rotateCharacter("a", -7)); // Output: "d"
 console.log(rotateCharacter("f", 1)); // Output: "g"
 
 // Scenario: Rotate Uppercase Letters:
@@ -37,7 +41,7 @@ console.log(rotateCharacter("f", 1)); // Output: "g"
 if (char >= "A" && char <= "Z") {
     // Calculate new character with wraparound
     const charCode = char.charCodeAt(0);
-    const rotatedCode = ((charCode - 65 + shift) % 26) + 65; // 'A' starts at ASCII 65
+    const rotatedCode = ((charCode - 65 + shift+26) % 26) + 65; // 'A' starts at ASCII 65
     return String.fromCharCode(rotatedCode);
 }
 
@@ -45,7 +49,7 @@ if (char >= "A" && char <= "Z") {
 return char;
 }
 
-console.log(rotateCharacter("A", 3)); // Output: "D"
+console.log(rotateCharacter("A", -3)); // Output: "D"
 console.log(rotateCharacter("F", 1)); // Output: "G"
 
 // Scenario: Leave Non-Letter Characters Unchanged:
