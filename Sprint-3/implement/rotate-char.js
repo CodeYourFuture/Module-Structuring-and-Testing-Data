@@ -26,7 +26,9 @@ function rotateCharacter(letter, num) {
     const baseCode = 'A'.charCodeAt(0);
 
     // Calculate the new character code
-    const rotatedCode = (upperLetter.charCodeAt(0) - baseCode + num) % 26 + baseCode;
+    // const rotatedCode = (upperLetter.charCodeAt(0) - baseCode + num) % 26 + baseCode;
+    const rotatedCode = (upperLetter.charCodeAt(0) - baseCode + num + 26) % 26 + baseCode;
+
 
     // Convert back to character
     const rotatedChar = String.fromCharCode(rotatedCode);
@@ -44,6 +46,10 @@ console.log(rotateCharacter('7', 5));  // Output: 7 (unchanged, not a letter)
 console.log(rotateCharacter("f", 1));  // Output: g
 console.log(rotateCharacter("A", 3));  // Output: D
 console.log(rotateCharacter("z", 1));  // Output: a
+
+console.log(rotateCharacter('F', -2)); // Output: D
+console.log(rotateCharacter('a', -1)); // Output: z
+console.log(rotateCharacter('Z', -3)); // Output: W
 
 
 // Scenario: Rotate Lowercase Letters:
