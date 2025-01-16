@@ -36,26 +36,26 @@
 
 // ========================= getCardValue ===========================
 
-function getCardValue(input) {
-  const rank = input.slice(0, -1);
-  const suit = input.slice(-1);
+// function getCardValue(input) {
+//   const rank = input.slice(0, -1);
+//   const suit = input.slice(-1);
 
 
-  if (input === "10"){
-    return 10;
-  }else if (rank > 1 && rank < 11) {
-    return Number(rank);
-  } 
-  else if (input === "A") 
-    return 11;
-  else if (input.toUpperCase() === "K" || input.toUpperCase() === "Q" || input.toUpperCase() === "J"){
-    return 10;
-  }
+//   if (input === "10"){
+//     return 10;
+//   }else if (rank > 1 && rank < 11) {
+//     return Number(rank);
+//   } 
+//   else if (input === "A") 
+//     return 11;
+//   else if (input.toUpperCase() === "K" || input.toUpperCase() === "Q" || input.toUpperCase() === "J"){
+//     return 10;
+//   }
 
-    if (suit !== "♠" && suit !== "♥" && suit !== "♣" && suit !== "♦" && input.length > 1) {
-  return "Invalid card rank.";
-  }
-}
+//     if (suit !== "♠" && suit !== "♥" && suit !== "♣" && suit !== "♦" && input.length > 1) {
+//   return "Invalid card rank.";
+//   }
+// }
 
 
 // ========================   Test cases console.log() =====================
@@ -68,6 +68,43 @@ function getCardValue(input) {
 // console.log(getCardValue("k")); // output 10
 
 
+
+
+
+// ========================== optimized version =======================
+
+function getCardValue(input) {
+  // Define valid suits
+  const validSuits = ["♠", "♥", "♣", "♦"];
+  
+  // Check if the input contains a valid suit emoji
+  const suit = input.slice(-1);
+  if (!validSuits.includes(suit)) {
+    return "Invalid card rank.";
+  }
+
+  // Extract rank (all characters except the last one)
+  const rank = input.slice(0, -1);
+  
+  // Check if the rank is a valid numeric value or face card
+  if (!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 10) {
+    return Number(rank); // Handle numeric cards (2-10)
+  }
+
+  // Handle face cards (J, Q, K)
+  if (["J", "Q", "K"].includes(rank.toUpperCase())) {
+    return 10; // Face cards are worth 10
+  }
+
+  // Handle Ace (A)
+  if (rank.toUpperCase() === "A") {
+    return 11; // Ace is worth 11
+  }
+
+  // Handle invalid input (such as leading zeros, decimals, etc.)
+  return "Invalid card rank.";
+}
+
 // ========================   Test console.assert  =====================
 
 console.assert(getCardValue("10") === 10, "Test case failed for input '10'");
@@ -77,44 +114,16 @@ console.assert(getCardValue("A") === 11, "Test case failed for input 'A'");
 console.assert(getCardValue("K") === 10, "Test case failed for input 'K'");
 console.assert(getCardValue("3X") === "Invalid card rank.", "Test case failed for input '3X'");
 
+
+console.assert(getCardValue("10♠") === 10, "Test case failed for input '10♠'");
+console.assert(getCardValue("5♥") === 5, "Test case failed for input '5♥'");
+console.assert(getCardValue("A") === 11, "Test case failed for input 'A'");
+console.assert(getCardValue("K") === 10, "Test case failed for input 'K'");
+console.assert(getCardValue("3X") === "Invalid card rank.", "Test case failed for input '3X'");
+console.assert(getCardValue("010♠") === 10, "Test case failed for input '010♠'");
+console.assert(getCardValue("02♠") === 2, "Test case failed for input '02♠'");
+console.assert(getCardValue("0x02♠") === "Invalid card rank.", "Test case failed for input '0x02♠'");
+console.assert(getCardValue("3.14♠") === "Invalid card rank.", "Test case failed for input '3.14♠'");
+
 console.log("All tests passed!");
 
-
-// ========================== optimized version =======================
-
-// function getCardValue(input) {
-//   const validSuits = ["♠", "♥", "♣", "♦"];
-//   const rank = input.length > 1 && isNaN(input) ? input.slice(0, -1) : input;
-//   const suit = input.length > 1 ? input.slice(-1) : null;
-
-//   // Validate suit if present
-//   if (suit && !validSuits.includes(suit)) {
-//     return "Invalid card suit.";
-//   }
-
-//   // Handle numeric cards
-//   if (rank >= 2 && rank <= 10) {
-//     return Number(rank);
-//   }
-
-//   // Handle face cards
-//   if (["K", "Q", "J"].includes(rank.toUpperCase())) {
-//     return 10;
-//   }
-
-//   // Handle Ace
-//   if (rank.toUpperCase() === "A") {
-//     return 11;
-//   }
-
-//   return "Invalid card rank.";
-// }
-
-// // Test cases
-// console.log(getCardValue("10"));    // Output: 10
-// console.log(getCardValue("10♠"));   // Output: 10
-// console.log(getCardValue("5♥"));    // Output: 5
-// console.log(getCardValue("A"));     // Output: 11
-// console.log(getCardValue("K$"));    // Output: "Invalid card suit."
-// console.log(getCardValue("K"));     // Output: 10
-// console.log(getCardValue("11♥"));   // Output: "Invalid card rank."
