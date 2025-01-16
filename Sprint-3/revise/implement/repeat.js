@@ -24,30 +24,49 @@
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 
+// function repeatString(str, count) {
+//   let newWords = "";
+//   //if count is greater than 1 if so repeat string count times
+//   //else if count is 1 return the string
+//   //else if count is 0 return empty string
+//   //else if count is negative return error
+//     if (count > 1) {
+//     for (let i = 0; i < count; i++) {
+//       newWords += str + " ";
+//     }
+//     return newWords.trimEnd();
+//   }
+//   // Si count === 1, 
+//   else if (count === 1) {
+//     return str;
+//   }
+//   // Si count === 0, 
+//   else if (count === 0) {
+//     return "";
+//   }
+//   // Si count < 0, 
+//   else if (count < 0) {
+//     return "error your number is negative";
+//   }
+// }
+
+
 function repeatString(str, count) {
-  let newWords = "";
-  //if count is greater than 1 if so repeat string count times
-  //else if count is 1 return the string
-  //else if count is 0 return empty string
-  //else if count is negative return error
-    if (count > 1) {
+  if (count < 0) {
+    throw new Error("Count cannot be negative");
+  }
+  if (count > 1) {
+    let newWords = "";
     for (let i = 0; i < count; i++) {
       newWords += str + " ";
     }
     return newWords.trimEnd();
-  }
-  // Si count === 1, retorna el string original
-  else if (count === 1) {
+  } else if (count === 1) {
     return str;
-  }
-  // Si count === 0, retorna una cadena vacía
-  else if (count === 0) {
+  } else if (count === 0) {
     return "";
   }
-  // Si count < 0, retorna un mensaje de error
-  else if (count < 0) {
-    return "error your number is negative";
-  }
 }
+
 
 module.exports = repeatString;

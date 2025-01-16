@@ -1,32 +1,19 @@
 const repeatString = require("./repeat");
 
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    `Expected "${actualOutput}" to equal "${targetOutput}"`
-  );
-}
-
-describe("repeatString Function Tests", () => {
-  test("Repeats string 3 times", () => {
-    const result = repeatString("hello", 3);
-    assertEquals(result, "hello hello hello");
+describe("Repeat String Function", () => {
+  test("should return repeated string if count is greater than 1", () => {
+    expect(repeatString("Hello", 3)).toEqual("Hello Hello Hello");
   });
 
-  test("Repeats string 1 time", () => {
-    const result = repeatString("world", 1);
-    assertEquals(result, "world");
+  test("should return the string if count is 1", () => {
+    expect(repeatString("Hello", 1)).toEqual("Hello");
   });
 
-  test("Repeats string 0 times", () => {
-    const result = repeatString("test", 0);
-    assertEquals(result, "");
+  test("should return empty string if count is 0", () => {
+    expect(repeatString("Hello", 0)).toEqual("");
   });
 
-  test("Handles negative count", () => {
-    const result = repeatString("errorTest", -2);
-    assertEquals(result, "error your number is negative");
+  test("should return an error message if count is negative", () => {
+    expect(() => repeatString("test", -1)).toThrow("Count cannot be negative");
   });
 });
-
-console.log("All test cases executed!");

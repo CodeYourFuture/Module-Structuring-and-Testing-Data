@@ -1,4 +1,4 @@
-const passwordValidation = require("./password-validator"); // Corrected import
+const passwordValidation = require("./password-validator");
 
 describe("Password Validation", () => {
   const existingPasswords = ["previousPass1", "previousPass2", "etetet"];
