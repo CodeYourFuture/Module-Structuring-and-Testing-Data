@@ -46,11 +46,15 @@ function isProperFraction(numerator, denominator) {
   }
 
   // Proper fraction if the absolute value of the numerator is less than the denominator
-  return Math.abs(numerator) < denominator;
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
+// Test cases
+console.log(isProperFraction(3, 6));  // true
+console.log(isProperFraction(-3, 6)); // true
+console.log(isProperFraction(5, 5));  // false
+console.log(isProperFraction(-4, 7)); // true
+console.log(isProperFraction(4, -7)); // true
+console.log(isProperFraction(-4, -7)); // true
+console.log(isProperFraction(9, 0));  // Error: Denominator cannot be zero
 
-console.log(isProperFraction(3, 6)); 
-console.log(isProperFraction(-3, 6));
-console.log(isProperFraction(9, 0)); 
-console.log(isProperFraction(5, 5)); 
