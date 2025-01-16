@@ -1,18 +1,18 @@
 function find(str, char) {
-  //this var will store once find the index === to equal.
+  // Initialize a variable to store the index of the matched character
   let index = 0;
 
   // The while loop iterates through each character in the string
-  //while loop will map the string and find if there is any match character in the string.
+  // It checks if the current character matches the input character
   while (index < str.length) {
     if (str[index] === char) {
-      // If the character at the current index matches the input char, return the index
+      // If a match is found, return the index of the matching character
       return index;
     }
-    //update the value of index and continue until index is less than the str.length.
+    // Increment the index to check the next character
     index++;
   }
-  // If the loop completes and no match is found, return -1
+  // If no match is found after the loop finishes, return -1
   return -1;
 }
 
