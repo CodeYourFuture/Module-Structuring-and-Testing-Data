@@ -1,6 +1,6 @@
-const passwordValidation = require("./password-validator");
+const passwordValidation = require("./password-validator"); // Corrected import
 
-describe("passwordValidation", () => {
+describe("Password Validation", () => {
   const existingPasswords = ["previousPass1", "previousPass2", "etetet"];
 
   test("valid password with all criteria", () => {
@@ -8,8 +8,7 @@ describe("passwordValidation", () => {
   });
 
   test("password too short", () => {
-    console.log(passwordValidation("Short1!", existingPasswords)); // Debug output
-    expect(passwordValidation("Smjffjf!9", existingPasswords)).toBe(true);
+    expect(passwordValidation("Shor!", existingPasswords)).toBe(false);
   });
 
   test("password without uppercase letter", () => {
