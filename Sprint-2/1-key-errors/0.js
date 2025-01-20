@@ -5,9 +5,11 @@
 // interpret the error message and figure out why an error is occurring
 
 function capitalise(str) {
-  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
+
+// Inside the function, we already have a parameter named str. When we write let str .. we're trying to declare another variable with the same name,its incorrect.
 
 // =============> write your explanation here
 // =============> write your new code here
