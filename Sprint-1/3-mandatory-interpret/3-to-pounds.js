@@ -26,9 +26,8 @@ console.log(`£${pounds}.${pence}`);
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
 
-
 // 3-5. Method substring identifies length and Removes (p) element from the end of string.
-// 8.Method padStart identifies any symbols after 3 if they are. And change them to 0.
+// 8.Checks the length of a string and adds 0 to the beginning to make it 3 characters long. If the length is already 3 or greater than 3, it does nothing.
 // 9-11. Removes 2 symbols from the end. In our case its 99.
 // 14-16.It identifies starting index based on length -2. And to check if there sre 2 digits. If less it will add 0 in the end.
 // 18. It shows result in console log- pounds.pence.
