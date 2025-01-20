@@ -29,30 +29,25 @@
 // solution
 
 function getAngleType(angle) {
-    //to get the right amgle
+    // To get the right angle
     if (angle === 90) {
         return "Right angle";
-        //to get the acute angle
+    // To get the acute angle
     } else if (angle < 90) {
         return "Acute angle";
-        // to get the obtuse angle
-    } else if (90 < angle < 180) {
+    // To get the obtuse angle
+    } else if (angle > 90 && angle < 180) {
         return "Obtuse angle";
-        // to get the stright line, or angle
+    // To get the straight line, or angle
     } else if (angle === 180) {
         return "Straight angle";
-        // to get the reflex angle
+    // To get the reflex angle
     } else if (angle > 180 && angle < 360) {
         return "Reflex angle";
-        // else return invalid imput or angle
+    // Else return invalid input or angle
     } else {
         return "Invalid angle";
     }
 }
 
 module.exports = getAngleType;
-
-
-
-
-

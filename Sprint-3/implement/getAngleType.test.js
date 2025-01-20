@@ -1,3 +1,4 @@
+const getAngleType = require('./getAngleType');
 test('should return "Right angle" exactly for 90 degrees', function() {
     const currentInput = getAngleType (90);
     const targetInput = "Right angle";

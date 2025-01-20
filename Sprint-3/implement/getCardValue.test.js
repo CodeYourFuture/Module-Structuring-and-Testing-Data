@@ -1,3 +1,4 @@
+const getCardValue = require('./getCardValue');
 test('should return the numeric value for cards 2 to 9', function() {
     for (let card = 2; card <= 9; card++) {
         expect(getCardValue(card)).toBe(card);
