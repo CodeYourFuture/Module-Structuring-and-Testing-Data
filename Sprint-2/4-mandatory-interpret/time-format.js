@@ -3,13 +3,16 @@ function pad(num) {
 }
 
 function formatTimeDisplay(seconds) {
-  const remainingSeconds = seconds % 60;
-  const totalMinutes = (seconds - remainingSeconds) / 60;
-  const remainingMinutes = totalMinutes % 60;
+  const remainingSeconds = seconds % 60; // 1
+  const totalMinutes = (seconds - remainingSeconds) / 60; // 1
+  const remainingMinutes = totalMinutes % 60; // 1
   const totalHours = (totalMinutes - remainingMinutes) / 60;
+  console.log(totalHours);
 
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
+
+console.log(formatTimeDisplay(61));
 
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
@@ -18,17 +21,20 @@ function formatTimeDisplay(seconds) {
 
 // a) When formatTimeDisplay is called how many times will pad be called?
 // =============> write your answer here
-
+// a)3 Times
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
-
+// b)0
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
-
-// d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
+// c)"00"
+// d) What is the value assigned to num when pad is called for the last time in this program?
+// d)1
+//  Explain your answer
 // =============> write your answer here
-
+// Value of num gets assigned to const remainingSeconds which is equal to 1.
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+// "01" It takes remainingSeconds which is 1. Turns it to a string and adds 0 from the start.
 // =============> write your answer here
