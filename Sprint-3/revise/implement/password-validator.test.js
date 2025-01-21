@@ -20,7 +20,7 @@ describe('isValidPassword', () => {
     const previousPasswords = ['Password1!', 'Admin123#'];
  
       it('should return false for passwords with less than 5 characters', () => {
-        expect(isValidPassword('P1!', previousPasswords)).toBe(false);
+        expect(isValidPassword('P1a!', previousPasswords)).toBe(false);//
     });
 //- Have at least one English uppercase letter (A-Z)
 
