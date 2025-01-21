@@ -5,24 +5,29 @@
 
 function isPrimeNumber(number) {
     if (number <= 1) {
-        throw new Error('There is no negative prime number or zero as a prime number.');
+        return false; // Numbers ≤ 1 are not prime
     }
 
     if (number === 2) {
-        return true;
+        return true; // 2 is the only even prime number
     }
 
     if (number % 2 === 0) {
-        return false;
+        return false; // Even numbers greater than 2 are not prime
     }
 
-    for (let index = 3; index <= Math.sqrt(number); index += 2) {
+    // Calculate the square root of the number once
+    const sqrtNumber = Math.sqrt(number);
+
+    for (let index = 3; index <= sqrtNumber; index += 2) {
         if (number % index === 0) {
-            return false;
+            return false; 
         }
     }
 
-    return true;
+    return true; 
 }
+
+
 
 module.exports = isPrimeNumber;
