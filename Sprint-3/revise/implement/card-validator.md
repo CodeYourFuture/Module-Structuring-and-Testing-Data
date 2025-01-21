@@ -5,9 +5,28 @@ In this project you'll write a script that validates whether or not a credit car
 Here are the rules for a valid number:
 
 - Number must be 16 digits, all of them must be numbers.
+  <!-- if (!/^\d{16}$/.test(cardNumber)) {
+        return false;
+    } -->
+
+    
 - You must have at least two different digits represented (all of the digits cannot be the same).
+
+<!-- const digitSet = new Set(cardNumber);
+    if (digitSet.size < 2) {
+        return false; -->
 - The final digit must be even.
-- The sum of all the digits must be greater than 16.
+
+<!-- const lastDigit = parseInt(cardNumber.charAt(cardNumber.length - 1), 10);
+    if (lastDigit % 2 !== 0) {
+        return false;
+    } -->
+
+<!-- - The sum of all the digits must be greater than 16.
+if(cardNumber.length !==16){
+    return false
+} -->
+<!-- and I need to test using luhn algorithm too -->
 
 For example, the following credit card numbers are valid:
 
@@ -36,30 +55,41 @@ Good luck!
 ......Answer.....
 
 function validateCreditCard(cardNumber) {
+    // Check if the card number length is exactly 16 digits
     if (cardNumber.length !== 16) {
         return false;
     }
 
+    // Check if the card number has at least two different digits
     const digitSet = new Set(cardNumber);
     if (digitSet.size < 2) {
         return false;
     }
 
-
-    const lastDigit = parseInt(cardNumber.charAt(cardNumber.length - 1), 10);
-    if (lastDigit % 2 !== 0) {
-        return false;
-    }
-
-    
+    // Apply Luhn Algorithm for the validity of the card number
     let sum = 0;
+    let shouldDouble = false; // Start from the leftmost digit, no doubling initially
+
+    // Iterate through the digits from left to right
     for (let i = 0; i < cardNumber.length; i++) {
-        sum += parseInt(cardNumber.charAt(i), 10);
+        let digit = parseInt(cardNumber.charAt(i), 10);
+
+        // Double every second digit starting from the second-to-last (on right)
+        if (shouldDouble) {
+            digit *= 2;
+            if (digit > 9) {
+                digit -= 9; // If the result is greater than 9, subtract 9
+            }
+        }
+
+        // Add the processed digit to the sum
+        sum += digit;
+
+        shouldDouble = !shouldDouble;
     }
 
-    if (sum <= 16) {
-        return false;
-    }
-
-    return true;
+    return sum % 10 === 0;
 }
+
+
+
