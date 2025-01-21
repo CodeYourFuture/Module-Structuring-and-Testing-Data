@@ -40,6 +40,6 @@ describe('repeat', () => {
 
 
     it('should throw an error for negative count', () => {
-        expect(() => repeatTheString('abc', -1)).toThrow('Count cannot be negative');
+        expect(() => repeatTheString('abc', -1)).toThrow("Invalid count value: -1");
     });
 });
