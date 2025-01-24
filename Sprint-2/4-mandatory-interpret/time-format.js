@@ -31,10 +31,10 @@ console.log(formatTimeDisplay(61));
 // =============> write your answer here
 // c)"00"
 // d) What is the value assigned to num when pad is called for the last time in this program?
-// d)1
 //  Explain your answer
 // =============> write your answer here
+// d)1
 // Value of num gets assigned to const remainingSeconds which is equal to 1.
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// "01" It takes remainingSeconds which is 1. Turns it to a string and adds 0 from the start.
 // =============> write your answer here
+// e)"01" It takes remainingSeconds which is 1. Turns it to a string and adds 0 from the start.
