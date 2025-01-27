@@ -1,5 +1,7 @@
 const minimum = 1;
 const maximum = 100;
+/*First, the num variable generates a random number, which is then multiplied by the maximum value. 
+The result is rounded down using Math.floor to obtain a whole number, and finally, the minimum value is added.*/
 
 const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
@@ -8,5 +10,3 @@ console.log(num);
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
-/*First, the num variable generates a random number, which is then multiplied by the maximum value. 
-The result is rounded down using Math.floor to obtain a whole number, and finally, the minimum value is added.*/
