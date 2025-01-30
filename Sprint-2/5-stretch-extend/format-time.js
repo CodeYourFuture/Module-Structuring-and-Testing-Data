@@ -3,23 +3,30 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+  let hours = Number(time.slice(0, 2));
+  if (hours === 0) {
+    return `12:00 am`;  // Midnight edge case
+  } else if (hours === 12) {
+    return `${time} pm`; // Noon edge case
+  } else if (hours > 12) {
+    return `${String(hours - 12).padStart(2, '0')}:00 pm`;  // Convert hours to 12-hour format
   }
-  return `${time} am`;
+  return `${time} am`;  // For times between 1 AM and 11 AM
 }
 
-const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
-console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
-);
+const testCases = [
+  {input: "08:00", expected: "08:00 am"},
+  {input: "23:00", expected: "11:00 pm"},
+  {input: "00:00", expected: "12:00 am"},  // Midnight case
+  {input: "12:00", expected: "12:00 pm"},  // Noon case
+  {input: "01:00", expected: "01:00 am"},  // Morning case
+  {input: "13:00", expected: "01:00 pm"},  // Afternoon case
+];
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
-);
+testCases.forEach(({ input, expected }) => {
+  const currentOutput = formatAs12HourClock(input);
+  console.assert(
+    currentOutput === expected,
+    `For input "${input}", expected "${expected}", but got "${currentOutput}"`
+  );
+});
