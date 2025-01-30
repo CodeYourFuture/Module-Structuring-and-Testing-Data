@@ -18,7 +18,6 @@
 const sentence = "hello there";
 function toUpperSnakeCase(inputString) {
   let underScore = inputString.replaceAll(" ", "_");
-  console.log(underScore);
   return underScore.toUpperCase();
 }
 
