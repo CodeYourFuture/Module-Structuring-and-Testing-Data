@@ -3,9 +3,9 @@ function pad(num) {
 }
 
 function formatTimeDisplay(seconds) {
-  const remainingSeconds = seconds % 60; // 1
-  const totalMinutes = (seconds - remainingSeconds) / 60; // 1
-  const remainingMinutes = totalMinutes % 60; // 1
+  const remainingSeconds = seconds % 60;
+  const totalMinutes = (seconds - remainingSeconds) / 60;
+  const remainingMinutes = totalMinutes % 60;
   const totalHours = (totalMinutes - remainingMinutes) / 60;
   console.log(totalHours);
 
