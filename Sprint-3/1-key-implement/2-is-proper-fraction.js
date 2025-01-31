@@ -51,3 +51,38 @@ const equalFraction = isProperFraction(3, 3);
 
 // Stretch:
 // What other scenarios could you test for?
+
+
+function isProperFraction(numerator, denominator) {
+  return Math.abs(numerator) < Math.abs(denominator);
+}
+
+// Helper function to check if the test passes
+function assertEquals(actualOutput, targetOutput) {
+console.assert(
+  actualOutput === targetOutput,
+  `Expected ${actualOutput} to equal ${targetOutput}`
+);
+}
+
+// ======= TEST CASES =======
+
+// Edge Case 1: Negative Improper Fraction (absolute numerator > denominator)
+const negativeImproperFraction = isProperFraction(-8, 5);
+assertEquals(negativeImproperFraction, false);
+
+// Edge Case 2: Zero as numerator (should be proper since 0 is always less)
+const zeroNumerator = isProperFraction(0, 4);
+assertEquals(zeroNumerator, true);
+
+// Edge Case 3: Zero as denominator (should be invalid, possibly return `false`)
+const zeroDenominator = isProperFraction(5, 0);
+assertEquals(zeroDenominator, false); // Since division by zero is undefined
+
+// Edge Case 4: Large numerator vs denominator (should still be proper)
+const largeNumbers = isProperFraction(100, 500);
+assertEquals(largeNumbers, true);
+
+// Edge Case 5: Large improper fraction (numerator > denominator)
+const largeImproper = isProperFraction(500, 100);
+assertEquals(largeImproper, false);
