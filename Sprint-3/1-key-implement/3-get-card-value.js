@@ -49,3 +49,71 @@ const fiveofHearts = getCardValue("5♥");
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+  // Extract the rank (everything before the last character which is the suit)
+  const rank = card.slice(0, -1); 
+
+  // Handle number cards
+  if (!isNaN(rank)) return Number(rank); 
+
+  // Handle face cards
+  if (["J", "Q", "K"].includes(rank)) return 10;
+
+  // Handle Ace
+  if (rank === "A") return 11;
+
+  // Handle invalid cases
+  throw new Error("Invalid card rank");
+}
+
+// Helper function for assertions
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+      actualOutput === targetOutput,
+      `Expected ${actualOutput} to equal ${targetOutput}`
+  );
+}
+
+// ======= TEST CASES =======
+
+// Case 1: Ace (should return 11)
+const aceOfSpades = getCardValue("A♠");
+assertEquals(aceOfSpades, 11);
+
+// Case 2: Number Card (5, should return 5)
+const fiveOfHearts = getCardValue("5♥");
+assertEquals(fiveOfHearts, 5);
+
+// Case 3: Face Cards (should return 10)
+const jackOfClubs = getCardValue("J♣");
+assertEquals(jackOfClubs, 10);
+
+const queenOfDiamonds = getCardValue("Q♦");
+assertEquals(queenOfDiamonds, 10);
+
+const kingOfSpades = getCardValue("K♠");
+assertEquals(kingOfSpades, 10);
+
+// Case 4: Number 10 (should return 10)
+const tenOfHearts = getCardValue("10♥");
+assertEquals(tenOfHearts, 10);
+
+// Case 5: Invalid Card (should throw an error)
+try {
+  getCardValue("Z♠");
+} catch (error) {
+  console.log(`Caught expected error: ${error.message}`); // Should output "Invalid card rank"
+}
+
+try {
+  getCardValue("1♦");
+} catch (error) {
+  console.log(`Caught expected error: ${error.message}`); // Should output "Invalid card rank"
+}
+
+try {
+  getCardValue("♠"); // Missing rank
+} catch (error) {
+  console.log(`Caught expected error: ${error.message}`); // Should output "Invalid card rank"
+}
