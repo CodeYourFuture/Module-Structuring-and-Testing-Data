@@ -6,9 +6,9 @@
 
 //I think the code will return an undefined error, Because the num is not defined in the functions parameter.
 
-function square(3) {
+/*function square(3) {
     return num * num;
-}
+}*/
 
 // =============> write the error message here
 //SyntaxError: Unexpected number
