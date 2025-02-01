@@ -5,7 +5,7 @@
 
 // I think that the code might not bring an error but it will not produce the desired results.
 
-const num = 103;
+/*const num = 103;
 
 function getLastDigit() {
   return num.toString().slice(-1);
@@ -13,7 +13,7 @@ function getLastDigit() {
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
 console.log(`The last digit of 105 is ${getLastDigit(105)}`);
-console.log(`The last digit of 806 is ${getLastDigit(806)}`);
+console.log(`The last digit of 806 is ${getLastDigit(806)}`);*/
 
 // Now run the code and compare the output to your prediction
 // =============> write the output here
