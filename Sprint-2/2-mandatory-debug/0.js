@@ -5,11 +5,11 @@
 /* The code will will log a * b.  But the function will not return anything. The console.log outside the function will return 
 "`The result of multiplying 10 and 32 is undefined. */
 
-function multiply(a, b) {
+/*function multiply(a, b) {
   console.log(a * b);
 }
 
-console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
+console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);*/
 
 // =============> write your explanation here
 
