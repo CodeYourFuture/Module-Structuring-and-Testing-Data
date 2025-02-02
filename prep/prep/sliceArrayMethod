@@ -1,0 +1,7 @@
+// The slice() method is used to extract a portion of an array or string without modifying the original.
+//string/array.slice(start, end);
+
+const numbers = [1, 2, 3, 4, 5];
+
+const numbers2 = numbers.slice(0, 3);
+console.log(numbers2);
