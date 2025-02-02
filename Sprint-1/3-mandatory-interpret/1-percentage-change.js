@@ -20,3 +20,14 @@ console.log(`The percentage change is ${percentageChange}`);
 // d) Identify all the lines that are variable declarations
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+
+//Answer
+//a) line 4 has 2 function calls
+    // line 5 has 2 function calls
+    // line 10 has 1 function call
+    //we have a total of 5 function calls in the above code 
+
+//b) the error is happening in line 5 and it is happening because we are not separating the searchstring and the replacerstring with a comma
+//c) line 4 and 5 are variable reassignment statements
+//d) line 7 and 8 are variable declarations 
+//e) The replaceAll function is removing the comma and the number function is coverting the string into a number which we can use to do arithmetic operations
