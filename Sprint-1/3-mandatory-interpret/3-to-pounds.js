@@ -24,15 +24,15 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 1. const penceString = "399p": initializes a string variable with the value "399p"
 
 //Answer
 
-// 2. The lines 3-6 creates a new string when p is removed from pencestring 
+// 2. The lines 3-6 creates a new string when p is removed from pencestring
 //    penceString.substring(0,penceString.length - 1) is used to extract the part of the string at the first character index 0
-//    and the end from the evaluation of penceString.length - 1.  Character p which is exluded. This leaves us with 399
-//    
-// 3. The lines 8 pads penceStringWithoutTrailingP(399) making it three characters long. 
+//    and the end from the evaluation of penceString.length - 1.  Character p which is excluded. This leaves us with 399
+//
+// 3. The lines 8 pads penceStringWithoutTrailingP(399) making it three characters long.
 //    Three 0s were to be added but the string already has three characters making the result be 399
 
 // 4. The lines 9-12 gets the pound value from paddedPenceNumberString(399)

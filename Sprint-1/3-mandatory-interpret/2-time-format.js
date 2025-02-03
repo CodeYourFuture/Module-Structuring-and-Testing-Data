@@ -25,13 +25,13 @@ console.log(result);
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 
 //Answers
-// a)The above code has 6 variable declarations 
+// a)The above code has 6 variable declarations
 
 // b) There is one function call
 
 // c) we are dividing by 60 to get the remaining seconds the movie is left with.
 
-// d) we are performing a substration operation to get the a number only divisible by 60.
+// d) we are performing a subtraction operation to get the a number only divisible by 60.
 //   We then do a division operation by 60 to get the total in minutes
 
 // e) the variable result represent how long the movie is i na format hh:mm:ss, and a better name would be movieDuaration
