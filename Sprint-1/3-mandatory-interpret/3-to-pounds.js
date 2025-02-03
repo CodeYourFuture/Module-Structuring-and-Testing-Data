@@ -25,3 +25,16 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 3.const penceStringWithoutTrailingP = penceString.substring(
+//   0,
+//   penceString.length - 1
+// ); removing last character "p" from string
+// 8. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0") Making sure the number has 3 digits.
+// 9.const pounds = paddedPenceNumberString.substring(
+//   0,
+//   paddedPenceNumberString.length - 2
+// ); Removing last 2 characters, and getting our pounds value
+// 14.const pence = paddedPenceNumberString
+// .substring(paddedPenceNumberString.length - 2)
+// .padEnd(2, "0"); Leaving last 2 digits and ensure there are always 2 digits if not adding 0
+// 18.console.log(`£${pounds}.${pence}`); Print message to the console in £pounds.pence format
