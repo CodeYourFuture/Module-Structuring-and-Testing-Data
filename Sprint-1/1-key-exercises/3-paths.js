@@ -20,7 +20,9 @@ const dir = filePath.slice(1,lastSlashIndex);
 console.log(`The dir part of the ${filePath} is ${dir}`);
 
 // Created a variable, lastDotIndex to help me find the ext variable.
-
-//const ext = 
+const lastDotIndex = filePath.lastIndexOf(".");
+// Create a variable to store the ext part of the variable
+const ext = filePath.slice(lastDotIndex);
+console.log(`The ext part of the ${filePath} is ${ext} `);
 
 // https://www.google.com/search?q=slice+mdn
