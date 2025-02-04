@@ -1,25 +1,43 @@
 // This is the latest solution to the problem from the prep.
 // Make sure to do the prep before you do the coursework
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
+//// Original function to convert time to 12-hour format
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+  const minutes = time.slice(3, 5);
+  let period = "am";
+  let formattedHours = hours;
+
+  if (hours === 0) {
+    formattedHours = 12; // Midnight case
+  } else if (hours === 12) {
+    period = "pm"; // Noon case
+  } else if (hours > 12) {
+    formattedHours = hours - 12;
+    period = "pm";
   }
-  return `${time} am`;
+
+  return `${formattedHours}:${minutes} ${period}`;
 }
 
-const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
-console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
-);
+// ✅ Test cases to check correctness
+const testCases = [
+  { input: "08:00", expected: "8:00 am" },
+  { input: "23:00", expected: "11:00 pm" },
+  { input: "00:00", expected: "12:00 am" }, // Midnight case
+  { input: "12:00", expected: "12:00 pm" }, // Noon case
+  { input: "15:30", expected: "3:30 pm" }, // Random PM time
+  { input: "01:45", expected: "1:45 am" }, // Random AM time
+  { input: "22:15", expected: "10:15 pm" }, // Another PM test
+];
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
-);
+testCases.forEach(({ input, expected }) => {
+  const output = formatAs12HourClock(input);
+  console.assert(
+    output === expected,
+    `❌ Test failed for input ${input}: expected "${expected}", got "${output}"`
+  );
+});
+
+console.log("✅ All tests passed!");
