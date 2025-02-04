@@ -4,5 +4,5 @@ let age = 33;
 age = age + 1;
 console.log(age);
 
-/* const is used for variable that can be assigned only one value, I have replaced const with let, 
+/* const is used for variable that can be declared only one value, I have replaced const with let, 
 that can take multiple values */
