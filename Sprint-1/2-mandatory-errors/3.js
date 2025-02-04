@@ -12,5 +12,5 @@
 
 // The number is not is not declared to a string initially. slice method only works on strings and arrays
 const cardNumber = 4533787178994213;
-const last4Digits = `${cardNumber}`.slice(-4);
+const last4Digits = Number(`${cardNumber}`.slice(-4));
 console.log(last4Digits);
