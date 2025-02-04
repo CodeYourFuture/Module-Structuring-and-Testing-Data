@@ -26,7 +26,7 @@ console.log(`The base part of ${filePath} is ${base}`);
 //Correction
 
 const dir = filePath.slice(0, lastSlashIndex)
-console.log(dir1)
+console.log(dir)
 
 const ext = filePath.slice(lastSlashIndex + 6)
 console.log(ext)
