@@ -3,3 +3,13 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+
+/*
+1. the error is ReferenceError: Cannot access 'cityOfBirth' before initialization
+2. the variable is declared after the console.log calls it which makes the variable
+ in the temporal dead zone (TDZ).
+ fixed code should be 
+    const cityOfBirth = "Bolton";
+    console.log(`I was born in ${cityOfBirth}`);
+*/
