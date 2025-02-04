@@ -36,3 +36,9 @@ console.log(result);
 
 // e) the variable result represent how long the movie is i na format hh:mm:ss, and a better name would be movieDuaration
 // f) The code will work if I change the values of movie length because it is based on mathematical logic
+
+// Corretion
+// movieLength % 60 calculates the remaining seconds getting minutes
+// totalMinutes % 60 calculates the remaining minutes after getting hours
+// Overally % 60  allows the movieDuration to in hh:mm:ss
+
