@@ -29,5 +29,5 @@ console.log(`The percentage change is ${percentageChange}`);
 
 //b) the error is happening in line 5 and it is happening because we are not separating the searchstring and the replacerstring with a comma
 //c) line 4 and 5 are variable reassignment statements
-//d) line 7 and 8 are variable declarations 
+//d) line 1, 2, 7 and 8 are variable declarations 
 //e) The replaceAll function is removing the comma and the number function is converting the string into a number which we can use to do arithmetic operations
