@@ -9,5 +9,9 @@ let lastName = "Johnson";
 let initials = `${firstName.slice(0,-5)}${middleName.slice(0,-8 )}${lastName.slice(0,-6)}`;
 console.log(initials)
 
+//Corrections
+
+let initials1 = firstName.charAt(0) + middleName.charAt(0) + lastName.charAt(0)
+console.log(initials1)
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 

@@ -23,4 +23,6 @@ console.log(dir)
 const ext = filePath.slice(-4);
 console.log(ext)
 
+
+
 // https://www.google.com/search?q=slice+mdn
