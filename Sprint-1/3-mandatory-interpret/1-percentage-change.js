@@ -12,11 +12,19 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
+// There are 5 function calls
+// in lines 4, 5, and 10
+
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
+// The error is coming from line 5 because the arguments in replaceAll function must be separated by a comma.
+// you can simply put a comma between them to fix the problem
 
 // c) Identify all the lines that are variable reassignment statements
+// lines 7, and line 8
 
 // d) Identify all the lines that are variable declarations
+// Lines 1, and 2
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+// The expression is replacing the comma in the carPrice with an empty string.
