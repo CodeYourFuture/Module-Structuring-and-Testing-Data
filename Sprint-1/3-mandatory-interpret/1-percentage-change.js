@@ -1,9 +1,7 @@
 let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
-carPrice = Number(carPrice.replaceAll(",", ""));
-console.log(typeof(carPrice));
-console.log(carPrice);
+carPrice = Number(carPrice.replaceAll(",", "")); //console.log(typeof(carPrice)); console.log(carPrice);
 priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
