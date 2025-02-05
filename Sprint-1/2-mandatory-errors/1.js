@@ -2,3 +2,4 @@
 
 const age = 33;
 age = age + 1;
+//TypeError: Assignment to constant variable. error I got , means age is constant and I can't reassigned or redeclared  it. 
