@@ -7,7 +7,7 @@
 
 function capitalise(str) {
   let result = str[0].toUpperCase() + str.slice(1);
-  return str;
+  return result;
 }
 
 // =============> write your explanation here
