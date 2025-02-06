@@ -1,6 +1,8 @@
 function passwordValidator(password) {
-    return password.length < 5 ? false : true
+  let passwordValidation = [/.{8,}/, /[0-9]/, /[a-z]/, /[A-Z]/, /[^A-Za-z0-9]/];
+  let isValid = passwordValidation.every((regex) => regex.test(password));
+
+  return isValid;
 }
-
-
+console.log(passwordValidator("Zahra2015@"));
 module.exports = passwordValidator;
