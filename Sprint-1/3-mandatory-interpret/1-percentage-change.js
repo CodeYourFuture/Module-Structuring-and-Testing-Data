@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// 2 function calls: Numbers(), variable.replaceAll().
+// 3 function calls: Numbers(), variable.replaceAll(), and console.log
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 //On Output and Problems Console tabs, it said on line 5, a comma was missing, after comparing with the upper line that has the same function, I added a comma to separate the arguments that were passed to the function.
