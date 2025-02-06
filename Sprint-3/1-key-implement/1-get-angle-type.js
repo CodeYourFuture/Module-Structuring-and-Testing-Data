@@ -7,8 +7,14 @@
 // Write the code to pass the test
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
-function getAngleType(angle) {
-  if (angle === 90) return "Right angle";
+function getAngleType() {
+  switch (angle);
+    case (angle === 90):
+      return "Right angle";
+      break;
+    
+    
+  if (angle === 90) return 
   if (angle < 90) return "Acute angle";
   if (angle > 90 && angle < 180) return "Obtuse angle";
   if (angle === 180) return "Straight angle";
