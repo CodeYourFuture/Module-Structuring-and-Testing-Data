@@ -11,6 +11,8 @@ function isProperFraction(numerator, denominator) {
   if (numerator < denominator) return true;
   if (numerator >= denominator) return false;
 }
+console.log(isProperFraction(10, 3));
+console.log(isProperFraction(3, 10));
 
 // here's our helper again
 function assertEquals(actualOutput, targetOutput) {
