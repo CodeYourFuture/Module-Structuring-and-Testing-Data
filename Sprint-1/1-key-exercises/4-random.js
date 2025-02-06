@@ -11,6 +11,8 @@ console.log(num);
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
-//When you log several time it will so differnt value.
+
+
+//When you log several time it will so different value.
 // Math.random gives u the value with floating number like 0.38
 // But Math.floor go around give largest integer ex. if value is 6.95 it will only print 6
