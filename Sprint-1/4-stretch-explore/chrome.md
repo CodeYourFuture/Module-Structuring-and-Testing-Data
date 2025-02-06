@@ -11,8 +11,16 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
+A pop-up box will appear with the message "Hello world!"
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
+let myName = prompt("What is your name?");
+console.log(myName);
+console.log(typeof(myName));
+
 What effect does calling the `prompt` function have?
+prompt() expects a return message from the user.
+
 What is the return value of `prompt`?
+If the user enters a message then is a string or null if user click cancel button and no message has been added.
