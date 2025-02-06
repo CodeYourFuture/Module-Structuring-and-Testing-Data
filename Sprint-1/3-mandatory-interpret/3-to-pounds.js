@@ -6,6 +6,7 @@ const penceStringWithoutTrailingP = penceString.substring(
 );
 
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+console.log(paddedPenceNumberString);
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
@@ -29,7 +30,7 @@ console.log(`£${pounds}.${pence}`);
 //   0,
 //   penceString.length - 1
 // ); removing last character "p" from string
-// 8. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0") Making sure the number has 3 digits.
+// 8. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0") Making sure our variable paddedPenceNumberString has at least 3 digits.
 // 9.const pounds = paddedPenceNumberString.substring(
 //   0,
 //   paddedPenceNumberString.length - 2
