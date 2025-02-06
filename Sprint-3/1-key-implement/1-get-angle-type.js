@@ -7,21 +7,24 @@
 // Write the code to pass the test
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
-function getAngleType() {
-  switch (angle);
-    case (angle === 90):
+function getAngleType(angle) {
+  switch (true) {
+    case angle === 90:
       return "Right angle";
-      break;
-    
-    
-  if (angle === 90) return 
-  if (angle < 90) return "Acute angle";
-  if (angle > 90 && angle < 180) return "Obtuse angle";
-  if (angle === 180) return "Straight angle";
-  if (angle > 180 && angle < 360) return "Reflex angle";
-
+    case angle < 90:
+      return "Acute angle";
+    case angle > 90 && angle < 180:
+      return "Obtuse angle";
+    case angle === 180:
+      return "Straight angle";
+    case angle > 180 && angle < 360:
+      return "Reflex angle";
+    default:
+      return "Invalid angle";
+  }
   // read to the end, complete line 36, then pass your test here
 }
+console.log(getAngleType(55));
 
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
