@@ -16,3 +16,9 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+/*
+1. What effect does calling the `alert` function have? in console when i type alert("Hello World!"); and enter. I got a prompt on screen saying Hello World" and at right side bottom there is ok button. If I clicked on ok prompt disappear.
+
+2. const myName= prompt("What is your name?"); and enter then command prompt appear with a question and an input section and two button ok and cancel. in input I can give any input and hit ok. and same input which I gave will print on console as a return value. If i hit cancel it return null.
+
+*/
