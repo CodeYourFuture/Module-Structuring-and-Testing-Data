@@ -4,5 +4,5 @@ function passwordValidator(password) {
 
   return isValid;
 }
-console.log(passwordValidator("Zahra2015@"));
+console.log(passwordValidator("Hgjskdkh!"));
 module.exports = passwordValidator;
