@@ -23,3 +23,27 @@ test("password has at least 5 characters", () => {
   // Assert
   expect(result).toEqual(false);
 });
+
+test("Password is valid ", () => {
+  const password = "Hadjbsdjh12@";
+  const result = isValidPassword(password);
+  expect(result).toEqual(true);
+});
+
+test("Password doesn't have a number (0-9)", () => {
+  const password = "Hgjskdkh!";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+
+test("Pssword doesn't have a Uppercase", () => {
+  const password = ",ndgsajg25@";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+
+test("Password doesn't have a special character", () => {
+  const password = "jshdhjgd26";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
