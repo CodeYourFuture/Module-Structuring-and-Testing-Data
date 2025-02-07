@@ -9,10 +9,15 @@ Let's try an example.
 
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
+    // Alert ("Hello World!")
 
 What effect does calling the `alert` function have?
+    // an alert box pops up with the message "Hello World!"
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
+    // let myName = prompt("What is your name?")
 
 What effect does calling the `prompt` function have?
+    // a dialog box pops up with the message "What is your name?" and an input field.
 What is the return value of `prompt`?
+    // the return value will be any text entered in the input field and will be stored in variable myName
