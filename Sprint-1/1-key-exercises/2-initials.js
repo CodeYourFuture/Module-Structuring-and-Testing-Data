@@ -8,6 +8,7 @@ let lastName = "Johnson";
 let initials = `${firstName.charAt(0)}${middleName.charAt(0)}${lastName.charAt(
   0
 )}`;
+//correction to line 8
 console.log(initials);
 //string literal interpolation using character at first (0)index.
 // https://www.google.com/search?q=get+first+character+of+string+mdn
