@@ -1,5 +1,10 @@
+var myFuncCalls = 0;// added this line to count how many tomes pad is called
+
 function pad(num) {
+  myFuncCalls++; // increases by 1 whenever pad is called 
+  console.log( "I have been called " + myFuncCalls + " times" ); // prints how many times pad is 
   return num.toString().padStart(2, "0");
+  
 }
 
 function formatTimeDisplay(seconds) {
