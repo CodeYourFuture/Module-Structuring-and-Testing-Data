@@ -8,7 +8,7 @@
 
 // console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
 
-// =============> write your explanation here: The sum of 10 and 32 is undefined because a+b is written under the return statement.
+// =============> write your explanation here: The sum of 10 and 32 is undefined because a+b is written under the return statement.(return; will always return undefined. It is the same as writing return undefined)
 // Finally, correct the code to fix the problem
 //  =============> write your new code here
 function sum(a, b) {
