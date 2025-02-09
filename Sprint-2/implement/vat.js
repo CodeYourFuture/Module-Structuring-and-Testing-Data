@@ -8,3 +8,9 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+function addVAT(price) {
+  return parseFloat((price * 1.2).toFixed(2)); 
+}
+console.log(addVAT(70));   
+console.log(addVAT(108));  
+console.log(addVAT(19.99));
