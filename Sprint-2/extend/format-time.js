@@ -2,11 +2,20 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+  const [hourStr, minutes] = time.split(":");
+  let hours = Number(hourStr);
+  let period = "am";
+
+  if (hours === 0) {
+    hours = 12; // Midnight
+  } else if (hours === 12) {
+    period = "pm"; // Noon
+  } else if (hours > 12) {
+    hours -= 12;
+    period = "pm";
   }
-  return `${time} am`;
+
+  return `${hours}:${minutes} ${period}`;
 }
 
 const currentOutput = formatAs12HourClock("08:00");
