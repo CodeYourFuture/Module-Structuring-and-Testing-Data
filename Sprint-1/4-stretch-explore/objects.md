@@ -5,7 +5,7 @@ In this activity, we'll explore some additional concepts that you'll encounter i
 Open the Chrome devtools Console, type in `console.log` and then hit enter
 
 What output do you get?
-    undefined
+    ƒ log() { [native code] }
 
 Now enter just `console` in the Console, what output do you get back?
     console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}
