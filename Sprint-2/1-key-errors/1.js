@@ -5,14 +5,14 @@
 
 // Try playing computer with the example to work out what is going on
 
-//function convertToPercentage(decimalNumber) {
-//const decimalNumber = 0.5;
-//const percentage = `${decimalNumber * 100}%`;
+function convertToPercentage(decimalNumber) {
+  const decimalNumber = 0.5;
+  const percentage = `${decimalNumber * 100}%`;
 
-// return percentage;
-//}
+  return percentage;
+}
 
-//console.log(decimalNumber);
+console.log(decimalNumber);
 
 // =============> The function is named convertToPercentage with a parameter decimalNumber.
 // A redeclaration is done of decimalNumber which stores the the value 0.5 but will cause an error since we can't redeclare in javascript
@@ -21,7 +21,7 @@
 // console.log will result in an error because it is outside the function and also not defined
 
 // Finally, correct the code to fix the problem
-// =============>
+// =============> Answer:New code
 const decimalNumber = 0.5;
 
 function convertToPercentage(decimalNumber) {
