@@ -2,11 +2,10 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ,""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
-
 console.log(`The percentage change is ${percentageChange}`);
 
 // Read the code and then answer the questions below
@@ -15,10 +14,10 @@ console.log(`The percentage change is ${percentageChange}`);
 //two calls to the replaceAll function.//two calls to the  Number function.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-//The error likely occurs because carPrice and priceAfterOneYear are initially strings that contain commas (e.g., "10,000"). 
-//When we try to perform mathematical operations, JavaScript cannot process strings with commas as numbers, 
+//The error likely occurs because carPrice and priceAfterOneYear are initially strings that contain commas (e.g., "10,000").
+//When we try to perform mathematical operations, JavaScript cannot process strings with commas as numbers,
 //which leads to an error.
-//how:To fix the error, we use replaceAll(",", "") to remove the commas from the strings, and then Number(...) to convert the cleaned strings into numbers. 
+//how:To fix the error, we use replaceAll(",", "") to remove the commas from the strings, and then Number(...) to convert the cleaned strings into numbers.
 //This way, the variables carPrice and priceAfterOneYear can be used in calculations without errors
 
 // c) Identify all the lines that are variable reassignment statements
@@ -30,7 +29,6 @@ console.log(`The percentage change is ${percentageChange}`);
 //This line declares the variable priceAfterOneYear and assigns it a string value "8,543".
 //const priceDifference = carPrice - priceAfterOneYear;//This line declares the constant variable priceDifference and assigns it the result of subtracting priceAfterOneYear from carPrice.
 //const percentageChange = (priceDifference / carPrice) * 100;//This line declares the constant variable percentageChange and assigns it the result of calculating the percentage change.
-
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 //The expression Number(carPrice.replaceAll(",", "")) does two things:\
