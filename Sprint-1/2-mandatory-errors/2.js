@@ -3,3 +3,7 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+//Answer
+//ReferenceError: Cannot access 'cityOfBirth' before initialization
+// the problem is since js execute the code line by line it doesnt get
+//the variable when executing line 4 since it is defined on line 5.

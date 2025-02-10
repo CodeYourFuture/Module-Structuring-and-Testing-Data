@@ -2,3 +2,4 @@
 
 const age = 33;
 age = age + 1;
+//Answer : its result will be error since we are trying to change the value of constant variable age.
