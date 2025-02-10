@@ -4,7 +4,7 @@
 // console.log(`I was born in ${cityOfBirth}`);
 //  const cityOfBirth = "Bolton";
 
- //Answer
- //The error above is because the variable cityOfBirth is being requested to print before it is requested 
- const cityOfBirth = "Bolton";
- console.log(`I was born in ${cityOfBirth}`);
+//Answer
+//The error above is because the variable cityOfBirth is being requested to print before it is returned
+const cityOfBirth = "Bolton";
+console.log(`I was born in ${cityOfBirth}`);

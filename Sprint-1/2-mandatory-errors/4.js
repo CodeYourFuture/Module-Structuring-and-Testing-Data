@@ -12,6 +12,6 @@ console.log(hourClockTime24);
 
 //Correction
 const hourClockTime24 = "20:53";
-const hourClockTime12 = "08:53";
+const hourClockTime12 = "08:53 AM";
 console.log(hourClockTime24);
 console.log(hourClockTime12);
