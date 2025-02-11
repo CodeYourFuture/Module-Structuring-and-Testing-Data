@@ -3,13 +3,22 @@
 // =============> write your prediction here
 
 function multiply(a, b) {
-  return a * b; // Return the result of the multiplication
-}
+  console.log (a * b);
+//function multiply(a, b) }
+// console.log(a * b); 
+//}
 
-console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
+// Return the result of the multiplication
+
+
+//console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 // Output: "The result of multiplying 10 and 32 is 320"
 
-// =============> write your explanation here
+// Secondly, the multiply function doesn't return anything, so it implicitly returns undefined and shows:
+//the result of multiplying 10 and 32 is undefined 
+function multiply(a,b){
+   return a*b;
+}
 
-// Finally, correct the code to fix the problem
-//  =============> write your new code here
+console.log('the result of multiplying 10 and 32 is ${multiply(10,32)}');
+
