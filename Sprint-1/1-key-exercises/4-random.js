@@ -14,7 +14,7 @@ console.log(num);
 
  // num => represents to a new variable name we declared .
  // In line #1 we are creating a const variable named minimum and assigning a value to it which is 1.
- //In line #2 we are creating a const variable named maximum and assigning a valuento it which is 100.
+ //In line #2 we are creating a const variable named maximum and assigning a value to it which is 100.
  //Math.random() gives a random number between 1 and 100.
  //Multiply it by (maximum-minimum + 1) ,
  //Math.floor rounds down to a whole number.
