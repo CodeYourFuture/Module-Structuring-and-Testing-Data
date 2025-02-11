@@ -1,6 +1,8 @@
-const cardNumber = "4533787178994213";
-const last4Digits = cardNumber.slice(-4);
-
+const cardNumber = 4533787178994213;
+function getRemainder(num) {
+  return num % 10000;
+}
+const last4Digits = getRemainder(cardNumber)
 // code wasn't working because cardNumber was declared as a number 
 // the slice function works on string variable
 // i added the quote to value of cardNumber to turn it into a string

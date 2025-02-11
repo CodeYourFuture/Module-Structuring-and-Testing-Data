@@ -7,7 +7,7 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // the math.random() generates a random number from 0 to 1
 // the Math.random() * (maximum - minimum + 1) scales the random number to a range of (maximum - minimum + 1)
 // this helps to cover all possible values from minimum to maximum
-// the Math.floor(...) rounds up the result to make sure we get an integer value
+// the Math.floor(...) rounds down the result to make sure we get an integer value
 // the + minimum shifts the range so that we start at minimum and not at 0
 
 console.log(num)
