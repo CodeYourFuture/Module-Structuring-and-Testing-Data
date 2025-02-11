@@ -5,13 +5,17 @@
 // interpret the error message and figure out why an error is occurring
 
 
-// =============> write your explanation here
-// =============> write your new code here
+//There is a syntax error.
+//SyntaxError: Identifier 'str' has already been declared.
+//It ls impossible to use let redeclare a variable that already exists.
 
 function capitalise(str) {
   let capitalizedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return capitalizedStr;
+  str = '${str[0].toUpperCase()}${str.slice(1)};'
+   return str;
 }
 
 // Example usage:
-console.log(capitalise("hello")); // Output: "Hello"
+console.log(capitalise("loveth")); 
+console.log(capitalise("world"));
+console.log(capitalise("Code Your Future"));
