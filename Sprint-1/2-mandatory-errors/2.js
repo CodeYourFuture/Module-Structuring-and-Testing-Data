@@ -5,6 +5,6 @@
 //  const cityOfBirth = "Bolton";
 
  //Answer
- //The error above is because the variable cityOfBirth is being requested to print before it is returned 
+ //The error above is because we are tring to use cityOfBirth before it is defined 
  const cityOfBirth = "Bolton";
  console.log(`I was born in ${cityOfBirth}`);
