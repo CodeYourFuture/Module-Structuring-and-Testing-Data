@@ -12,11 +12,10 @@ function convertToPercentage(decimalNumber) {
   return percentage;
 }
 
-console.log(decimalNumber);
+console.log(conversionToupperSnakeCase(0.5));
 
 // =============> The function is named convertToPercentage with a parameter decimalNumber.
-// A redeclaration is done of decimalNumber which stores the the value 0.5 but will cause an error since we can't redeclare in javascript
-// A variable percentage is declared which will stores the evaluation of a decimal number to a percentage
+// A redeclaration is done of decimalNumber whic will cause an error
 // return will end the function and give the percentage value
 // console.log will result in an error because it is outside the function and also not defined
 
