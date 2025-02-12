@@ -1,6 +1,7 @@
 // Predict and explain first...
 
 // Predict the output of the following code:
+// we should get 3 
 // =============> Write your prediction here
 
 const num = 103;
