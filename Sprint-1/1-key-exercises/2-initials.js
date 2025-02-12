@@ -12,6 +12,6 @@ console.log(initials)
 //Corrections
 
 let initials = firstName.charAt(0) +(middleName ?  middleName.charAt(0): '' ) + lastName.charAt(0)
-console.log(initials1)
+console.log(initials)
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 
