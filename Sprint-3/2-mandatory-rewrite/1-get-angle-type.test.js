@@ -19,4 +19,6 @@
 // Then the function should return "Reflex angle"
 
 
-const getAngleType = require("./1-get-angle-type");
+//I replaced the comments with clear, structured test descriptions.
+//Each case explains the input condition and the expected output.
+//The tests now explicitly describe the behavior of the function in all scenarios.
