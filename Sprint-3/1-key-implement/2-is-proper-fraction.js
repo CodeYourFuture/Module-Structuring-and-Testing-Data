@@ -86,3 +86,11 @@ assertEquals(largeNumbers, true);
 // Edge Case 5: Large improper fraction (numerator > denominator)
 const largeImproper = isProperFraction(500, 100);
 assertEquals(largeImproper, false);
+
+function isProperFraction(numerator, denominator) {
+  // Check for invalid denominator (division by zero)
+  if (denominator === 0) return false;
+  
+  // Check if the absolute value of numerator is less than that of the denominator
+  return Math.abs(numerator) < Math.abs(denominator);
+}
