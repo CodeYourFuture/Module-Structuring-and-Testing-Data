@@ -11,7 +11,7 @@ function square(3) {
 // =============> write the error message here
 
 // =============> explain this error message here
-the error says function square(3) unexpected number . this means we can not use this number directly as a parameter without defining it.
+//the error says function square(3) unexpected number . this means we can not use this number directly as a parameter without defining it.
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
