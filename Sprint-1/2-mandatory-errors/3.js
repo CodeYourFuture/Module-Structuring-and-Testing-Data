@@ -1,5 +1,5 @@
 const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.toString().slice(-4);
+const last4Digits = parseInt(cardNumber.toString().slice(-4));
 console.log(last4Digits);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
@@ -14,3 +14,4 @@ console.log(last4Digits);
 //the error is .slice is not a function. this is because it is only used with strings and arrays not numbers.
 //so i have to change the format of the number to string by using .toString()
 //now it will give the last 4 digits of our string.
+//the last 4 digits are changed to number as suggested by mentor using by parseInt()

@@ -23,5 +23,5 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // it represent the duration of the movie in hr min and sec , "duration" is better variable naming
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-//i have checked it using many numbers but it doesnt work for float numbers and negative numbers (conceptually since their is no negative duration)
+//movie time is always positive but i have checked it using many numbers but when we see it just in correct code perispective since it doesnt work for float numbers and negative numbers (conceptually since their is no negative duration) i can say it lacks some kind of specificity
 
