@@ -113,7 +113,7 @@ try {
 }
 
 try {
-  getCardValue("♠"); // Missing rank
+  getCardValue("♠"); // Missing ran
 } catch (error) {
   console.log(`Caught expected error: ${error.message}`); // Should output "Invalid card rank"
 }
