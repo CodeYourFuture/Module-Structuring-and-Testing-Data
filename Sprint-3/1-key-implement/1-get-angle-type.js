@@ -99,5 +99,5 @@ assertEquals(threeSixty, "Invalid angle"); // 360° is not typically classified 
 const negative = getAngleType(-10);
 assertEquals(negative, "Invalid angle"); // Negative angles are invalid
 
-const largeAngle = getAngleType(400);
+const largeAngle = getAngleType(400); 
 assertEquals(largeAngle, "Invalid angle"); // Angles beyond 360° are invalid
