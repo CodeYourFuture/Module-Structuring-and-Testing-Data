@@ -7,7 +7,12 @@ function formatAs12HourClock(time) {
   if (hours > 12) {
     return `${hours - 12}:00 pm`;
   }
+  else if (hours === 12){
+    return `${hours}:00 pm`;
+  }
+  else {
   return `${time} am`;
+  }
 }
 
 const currentOutput = formatAs12HourClock("08:00");
