@@ -8,8 +8,11 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
+  return Math.abs(numerator) < Math.abs(denominator);
 }
+
+// Export the function so it can be tested
+module.exports = isProperFraction;
 
 // here's our helper again
 function assertEquals(actualOutput, targetOutput) {
