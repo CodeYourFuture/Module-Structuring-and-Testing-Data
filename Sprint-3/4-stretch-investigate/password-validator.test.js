@@ -24,3 +24,13 @@ test("password has at least 5 characters", () => {
     expect(result).toEqual(true);
 }
 );
+
+test("password has at least 5 valid characters", () => {
+    // Arrange
+    const password = "123Az@5";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+}
+);
