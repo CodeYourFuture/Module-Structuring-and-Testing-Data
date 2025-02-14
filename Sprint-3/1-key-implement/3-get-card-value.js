@@ -58,7 +58,7 @@ assertEquals(aceofHearts, 11);
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 try {
-  getCardValue("g");
+  getCardValue("🃏");
 } catch (e) {
   console.assert(
     e.message === "invalid card rank",
