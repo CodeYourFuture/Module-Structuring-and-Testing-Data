@@ -6,19 +6,27 @@
 // the first test and first case is written for you
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
+/*
+I fixed this code below ,with a better version of it.
+function isProperFraction(numerator, denominator) {
+  if (numerator < denominator) return true;
+  else if (numerator > denominator) return false; // Improper Fraction check
+  else if (numerator < 0 && denominator > numerator)
+    return true; // Negative Fraction check
+  else if (numerator === denominator) return false; //equalFraction
+  //down here are part of the Stretch goals
+  else if (numerator === 0) return true; //Proper fraction
+  else if (denominator === 0) return false; //Invalid input
+  else if (numerator < 0 && denominator < 0 && numerator > denominator)
+    return true; //Negative cancellation
+}*/
 
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
-    else if (numerator > denominator) return false; // Improper Fraction check
-    else if (numerator<0 && denominator>numerator) return true;// Negative Fraction check
-    else if (numerator===denominator) return false;//equalFraction
-    //down here are part of the Stretch goals
-    else if (numerator === 0 ) return true; //Proper fraction
-    else if (denominator === 0) return false; //Invalid input
-    else if (numerator < 0 && denominator < 0 && numerator > denominator) return true; //Negative cancellation
+    if (denominator === 0) return false; //Invalid fraction(division by zero)
+    if (Math.abs(numerator) < Math.abs(denominator)) return true; //Proper fraction check
+    return false; // Otherwise, it's an improper fraction
 }
 
-// here's our helper again
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -26,44 +34,13 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// Acceptance criteria:
-
-// Proper Fraction check:
-// Input: numerator = 2, denominator = 3
-// target output: true
-// Explanation: The fraction 2/3 is a proper fraction, where the numerator is less than the denominator. The function should return true.
-const properFraction = isProperFraction(2, 3);
-assertEquals(properFraction, true);
-
-// Improper Fraction check:
-// Input: numerator = 5, denominator = 2
-// target output: false
-// Explanation: The fraction 5/2 is an improper fraction, where the numerator is greater than or equal to the denominator. The function should return false.
-const improperFraction = isProperFraction(5, 2);
-assertEquals(improperFraction, false);
-
-// Negative Fraction check:
-// Input: numerator = -4, denominator = 7
-// target output: true
-// Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
-const negativeFraction = isProperFraction(-4, 7);
-// ====> complete with your assertion
-assertEquals(negativeFraction,true);
-
-// Equal Numerator and Denominator check:
-// Input: numerator = 3, denominator = 3
-// target output: false
-// Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
-const equalFraction = isProperFraction(3, 3);
-// ====> complete with your assertion
-assertEquals(equalFraction,false);
-
-// Stretch:
-// What other scenarios could you test for?
-//I properly commented on the function code
-const properZeroFraction = isProperFraction(0, 3);
-assertEquals(properZeroFraction, true);
-const invalidDenominatorInput = isProperFraction(1, 0);
-assertEquals(invalidDenominatorInput, false);
-const negativeFractionCanc = isProperFraction(-2, -4);
-assertEquals(negativeFractionCanc, true);
+//Test Cases
+assertEquals(isProperFraction(2, 3), true); //proper fraction
+assertEquals(isProperFraction(5, 2), false);//improper Fraction
+assertEquals(isProperFraction(-4, 7), true);// negative Proper Fraction
+assertEquals(isProperFraction(3, 3), false);// equal Numerator and Denominator
+assertEquals(isProperFraction(0, 3), true);// numerator is 0
+assertEquals(isProperFraction(1, 0), false);// denominator is 0
+assertEquals(isProperFraction(-2, -4), true);// both Numerator and Denominator are negative
+assertEquals(isProperFraction(-5, 3), false);// improper Negative Fraction
+assertEquals(isProperFraction(-7, 2), false);// numerator larger but negative
