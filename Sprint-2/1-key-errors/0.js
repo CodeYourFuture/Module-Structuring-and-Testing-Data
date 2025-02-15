@@ -13,6 +13,7 @@ function capitalise(str) {
   return str;
 }
 
+
 // =============> write your explanation here
 /* As always, you should only use the new name for the new 
 string when calling it again. 
