@@ -10,4 +10,4 @@ console.log(initials);
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 
-//text.charAt(0) means it will print first letter, if  we put 1 than it will print second letter.
+//text.charAt(0) means it will return first letter, if  we put 1 than it will return second letter.
