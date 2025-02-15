@@ -25,8 +25,6 @@
 // Finally, correct the code to fix the problem
 // =============> write your new code here
 
-
-
 const num = 103;
 
 function getLastDigit(num) {
