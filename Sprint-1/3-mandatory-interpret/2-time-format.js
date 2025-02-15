@@ -22,9 +22,12 @@ console.log(result);
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 // ans: It means movie length subtract the remaining seconds and use remainder operator like (8784-24=8760/60) which 146.
+// Also, this line interpret the expression calculates total number of complete minutes in movieLength (which is in seconds).
+//movieLength-remainingSecond
+// remainingSEcond = movieLength % 60
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// ans I think its define time of the movie length in hour, minute, and second. Better name for this variable will be "timeString".
+// anns: Better name for this variable will be "formattedMovieDuration" because it is more descriptive, clearly indicating that the value is a formatted string representing the movie's duration.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
  
