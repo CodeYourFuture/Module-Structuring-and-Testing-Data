@@ -7,14 +7,14 @@ const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
 const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(result);
+console.log(result); //.log() this is a function call
 
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
 //  6
 // b) How many function calls are there?
-//  0
+//  1
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 // It represent the remainder of movieLength divided by 60 (two operands)
