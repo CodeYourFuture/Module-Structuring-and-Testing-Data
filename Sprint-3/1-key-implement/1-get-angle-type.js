@@ -13,8 +13,8 @@ function getAngleType(angle) {
   if (angle > 90 && angle < 180) return "Obtuse angle"
   if (angle === 180) return "Straight angle"
   if (angle > 180 && angle < 360) return "Reflex angle"
-  if(angle === 360)  return "Full angle"
-  else return "please insert a valid angle (0-360)"
+  if (angle === 360)  return "Full angle"
+  return "please insert a valid angle (0-360)"
    // read to the end, complete line 36, then pass your test here
 }
 
