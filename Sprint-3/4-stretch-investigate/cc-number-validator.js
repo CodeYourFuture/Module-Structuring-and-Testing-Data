@@ -3,10 +3,10 @@ function crCardNumberValidator(cardNumber){
         cardNumber = cardNumber.toString();
     } //here i check for data type if it is number i changed it to string not to loss zero at the begining of the password since a number 
       //starting with zero is treated without the zero. then now i will check the type if it is string
-    if(typeof cardNumber !==="string"){
+    if(typeof cardNumber !== "string"){
         return false;
     }
-    if(cardNumber.length !==16){ //i am checking if my credit card length is 16 if not return false.
+    if(cardNumber.length !== 16){ //i am checking if my credit card length is 16 if not return false.
         return false;   
     }
     //here i check if cardNumber isnot a number and if its content is empty return false.
