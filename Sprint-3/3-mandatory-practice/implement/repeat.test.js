@@ -48,3 +48,9 @@ test("should repeat the string count times", () => {
     const repeatedStr = repeat(str, count);
     expect(repeatedStr).toEqual("Negative Counts are not valid");
     });
+test("should repeat the string count times", () => {
+    const str = "hello";
+    const count = 2.5;
+    const repeatedStr = repeat(str, count);
+    expect(repeatedStr).toEqual("Negative Counts are not valid");
+    });
