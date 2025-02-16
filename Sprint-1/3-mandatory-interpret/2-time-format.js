@@ -22,6 +22,8 @@ console.log(result);
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 
+// It sees how many whole minutes go into the movieLength, and tells you what was left over.
+
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
