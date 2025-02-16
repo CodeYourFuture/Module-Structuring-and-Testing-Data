@@ -28,3 +28,5 @@ console.log(`The percentage change is ${percentageChange}`);
 // 1, 2, 7, 8 are all variable declarations, and 4 and 5 are variable redeclarations.
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+
+// Type conversion: converts values from string to number, in order to be used in calculations later on in the program.
