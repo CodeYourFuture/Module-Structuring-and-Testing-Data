@@ -25,4 +25,6 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // d) Identify all the lines that are variable declarations
 
+// 1, 2, 7, 8 are all variable declarations, and 4 and 5 are variable redeclarations.
+
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
