@@ -17,11 +17,11 @@
 
 
 // =============> write your new code here
-let string="millenaandifeanyand hatef";
+let ITPJanCohort="millenaandifeanyandhatef";
 
 function capitalise(str) {
   
   return `${str[0].toUpperCase()}${str.slice(1)}`;   
    
 }
-console.log(capitalise(string));
+console.log(capitalise(ITPJanCohort));
