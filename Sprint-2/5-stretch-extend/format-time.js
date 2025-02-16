@@ -9,7 +9,7 @@ function formatAs12HourClock(time) {
   } else if (hours === 12) {
     return `${time} pm`;
   }
-  //  We added else if because we want to check if the hours are equal to 12, if they are we want to return the time with pm
+  //  added else if because we want to check if the hours are equal to 12, if they are we want to return the time with pm
   return `${time} am`;
 }
 const currentOutput = formatAs12HourClock("12:00");
