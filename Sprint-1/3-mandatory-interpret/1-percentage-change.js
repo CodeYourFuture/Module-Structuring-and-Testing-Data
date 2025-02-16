@@ -20,9 +20,9 @@ console.log(`The percentage change is ${percentageChange}`);
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // ans: It was SyntaxError: missing ) which is replaceAll(",", "")comma separate argument. 
 
-// c) Identify all the lines that are variable assignment statements
-// ans: const priceDifference = carPrice - priceAfterOneYear;
-//      const percentageChange = (priceDifference / carPrice) * 100;
+// c) Identify all the lines that are variable reassignment statements
+// ans: carPrice = Number(carPrice.replaceAll(",", "")); 
+//   priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",",""));
 
 // d) Identify all the lines that are variable declarations
 // ans: let carPrice = "10,000";
@@ -32,4 +32,4 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 // ans: The expression Number(carPrice.replaceAll(",", "")) is used to convert a formatted string representation of a number (with commas) into an actual numeric value.
-//Basically Number(carPrice.replaceAll(",","")) remove comma, remove strings and allows number to use mathematical. 
+//Basically Number(carPrice.replaceAll(",","")) remove comma, convert strings in to number. 

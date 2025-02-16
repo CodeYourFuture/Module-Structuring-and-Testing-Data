@@ -28,9 +28,7 @@ console.log(`£${pounds}.${pence}`);
 // this one initializes the penceString value with of 399 in pence.
 
 //const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1);
- //In this line, penceString is string with trailing p so to extract p substring is used  and penceString.length - 1,
- // will be p which will be extract.( penceString.length is 4(399p) penceString.length - 1 will extract end of the length which is p)
- //so out put will be 399.
+ //In this line,the last character of penceString variable will be remove and converts price string like "399p" will be 399.
 // 
 
 //const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
