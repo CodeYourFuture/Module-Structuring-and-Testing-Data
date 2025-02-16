@@ -26,6 +26,8 @@ console.log(result);
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 
+// It gets the total length of the movie in seconds, divides it by 60 to get the total length of the movie in minutes.
+
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
