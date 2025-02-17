@@ -8,8 +8,9 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) return true;
-  else if (!Number.isInteger(numerator) && !Number.isInteger(denominator));
+  if (Math.abs(numerator) < Math.abs(denominator)) return true;
+  else if (!Number.isInteger(numerator) && !Number.isInteger(denominator))
+    return false;
   else return false;
 }
 
@@ -55,5 +56,5 @@ assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
-const fractionalFraction = isProperFraction(1.2, 1.4);
+const fractionalFraction = isProperFraction(1.5, 1.4);
 assertEquals(equalFraction, false);
