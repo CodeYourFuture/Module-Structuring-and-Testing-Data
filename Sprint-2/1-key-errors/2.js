@@ -3,7 +3,11 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here: We have a syntaxError
+// =============> write your prediction of the error here: We have a SyntaxError because function parameters must be variable names, not literal values like 3.
+
+// In JavaScript, function parameters act as placeholders for values that will be passed when calling the function. Writing function square(3) is invalid syntax because 3 is a number, not a valid parameter name
+
+
 
 // function square(3) {
 //     return num * num;
