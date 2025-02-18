@@ -17,4 +17,4 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 console.log(num);
 
 //Answer (After running the code):
-//Math.random unlike my expectations doesn't produce an integer, it produced a random Floating number between 0 and 1, so we get answer in range of 1 - 101
+//Math.random unlike my expectations doesn't produce an integer, it produced a random Floating number between 0 and 1, so we get answer in range of 1 - 100
