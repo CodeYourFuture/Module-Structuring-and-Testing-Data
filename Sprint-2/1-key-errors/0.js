@@ -8,7 +8,6 @@ function capitalise(str) {
  str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
-<<<<<<< HEAD:Sprint-2/errors/0.js
 //There is a syntax error
 //SyntaxError: Identifier 'str' has already been declared.
 //It is imposable to use let redeclare a variable that already exists.
@@ -17,8 +16,3 @@ console.log(capitalise("amir"));
 console.log(capitalise("world")); 
 console.log(capitalise("code Your Future")); 
 
-=======
-
-// =============> write your explanation here
-// =============> write your new code here
->>>>>>> main:Sprint-2/1-key-errors/0.js
