@@ -8,7 +8,11 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-   if (angle === 90) return "Right angle";
+   if (angle === 90) return "Right angle"
+   if (angle < 90) return "Acute angle"
+   if (angle < 180) return "Obtuse angle"
+   if (angle === 180) return "Straight angle"
+   if (angle > 180) return "Reflex angle"
    // read to the end, complete line 36, then pass your test here
 }
 
@@ -30,19 +34,25 @@ function assertEquals(actualOutput, targetOutput) {
 // Case 1: Identify Right Angles:
 // When the angle is exactly 90 degrees,
 // Then the function should return "Right angle"
+test("should return 'Right angle' for angle 90", () => {
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+});
 
 // Case 2: Identify Acute Angles:
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
+test("should return 'Acute angle' for angle 45",() =>{
 const acute = getAngleType(45);
 assertEquals(acute, "Acute angle");
-
+});
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
+test("should return 'Obtuse angle' for angle 120",() =>{
 const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angles");
+});
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Case 4: Identify Straight Angles:
@@ -50,7 +60,15 @@ const obtuse = getAngleType(120);
 // Then the function should return "Straight angle"
 // ====> write your test here, and then add a line to pass the test in the function above
 
+test("should return 'Straight angle' for angle 180",() =>{
+const Straight = getAngleType(180);
+assertEquals(straight, "Straight angles");
+});
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 // ====> write your test here, and then add a line to pass the test in the function above
+test("should return 'Reflex angle' for angle 200",() =>{
+const obtuse = getAngleType(200);
+assertEquals(reflex, "Reflex angles");
+});
