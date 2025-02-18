@@ -27,7 +27,7 @@ console.log(result);
 
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//  Answer: the length of the movie in the following format: hr:min:sec, movieLength would be an appropriate alternative for this variable, however since we already have a variable with the same name and const type which the value cannot be changed, "displayTime" is the best name that reaches my mind.
+//  Answer: the length of the movie in the following format: hr:min:sec, movieLength would be an appropriate alternative for this variable, however since we already have a variable with the same name and const type which the value cannot be changed, "remainingDisplayTime" is the best name that reaches my mind.
 
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
