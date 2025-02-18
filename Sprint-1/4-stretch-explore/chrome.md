@@ -17,6 +17,9 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 A pop-up box will appear with the text what is your name? and input text box to let the user type their names
+If they press cancel, whether or not they have entered their name in the text box- in the console we will see the 'null' in the next line of the prompt
+If they enter their name, and press ok, in the console they can view their name.
 
 What is the return value of `prompt`?
 The input of the what is your name pop-up text
+If they enter their name, and press ok, in the console they can view their name.
