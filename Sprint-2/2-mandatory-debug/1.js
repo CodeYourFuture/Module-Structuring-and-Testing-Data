@@ -1,4 +1,5 @@
 // Predict and explain first...
+// It must be to show us sum. Amount would be 42.
 //  =============> write your prediction here
 
 /*function sum(a, b) {
