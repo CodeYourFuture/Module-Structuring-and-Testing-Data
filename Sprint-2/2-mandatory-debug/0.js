@@ -1,5 +1,8 @@
 // Predict and explain first...
+/*The multiply function uses only console.log:
 
+It prints the product a * b to the screen, but does not return that value.
+Without return, calling multiply(10, 32) returns undefined.*/
 // =============> write your prediction here
 
 /*function multiply(a, b) {
