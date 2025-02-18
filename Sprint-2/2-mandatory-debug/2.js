@@ -2,7 +2,7 @@
 // 
 // Predict the output of the following code:
 // =============> Write your prediction here
-// It shows us last digit.
+// It must be to shows us last digits. 
 /*const num = 103;
 function getLastDigit() {
   return num.toString().slice(-1);
