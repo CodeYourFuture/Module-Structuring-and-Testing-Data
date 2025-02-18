@@ -7,9 +7,26 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 
+
+// if I pass 4 , -7 to isProperFraction
+
 function isProperFraction(numerator, denominator) {
+    //this is the proper fraction check
     if (numerator < denominator) return true;
+
+    // In this line we check if the denominator is greater than numerator in value but it is negative, we return true
+    else if(numerator< Math.abs(denominator) && denominator<0) return true;
+    
+    //this is the improper fraction check, this is for positive numerator and denominator, if the numerator is greater than or equal to the denominator, we return false
+    else if (numerator >= denominator) return false;
+    
+    
+    //this is the negative fraction check, in this line we check the value of numerator, if it is negative, we take the absolute value of the numerator and compare it with the denominator
+    else if(numerator < 0 && Math.abs(numerator) < denominator) return true;
+    
+    
 }
+
 
 // here's our helper again
 function assertEquals(actualOutput, targetOutput) {
@@ -40,14 +57,25 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
+assertEquals(negativeFraction, true);
 // ====> complete with your assertion
+
+const negativeFraction2 = isProperFraction(4, -7);
+assertEquals(negativeFraction2, true);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
+assertEquals(equalFraction, false);
 // ====> complete with your assertion
+
+
+
 
 // Stretch:
 // What other scenarios could you test for?
+
+// The scenario that we have negative denominator and positive numerator, which the result of the division is less than 1 anf greater than -1, it should return true because it is proper fraction
+
