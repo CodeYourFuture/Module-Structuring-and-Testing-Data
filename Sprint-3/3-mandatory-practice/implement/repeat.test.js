@@ -10,23 +10,41 @@ const repeat = require("./repeat");
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
 test("should repeat the string count times", () => {
-    const str = "hello";
-    const count = 3;
-    const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("hellohellohello");
-    });
+  const str = "hello";
+  const count = 3;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("hellohellohello");
+});
 
 // case: handle Count of 1:
 // Given a target string str and a count equal to 1,
 // When the repeat function is called with these inputs,
 // Then it should return the original str without repetition, ensuring that a count of 1 results in no repetition.
+test("should return the original string if count equal 1", () => {
+  const str = "Java Script";
+  const count = 1;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("Java Script");
+});
 
 // case: Handle Count of 0:
 // Given a target string str and a count equal to 0,
 // When the repeat function is called with these inputs,
 // Then it should return an empty string, ensuring that a count of 0 results in an empty output.
+test("should return empty string if count equal 0", () => {
+  const str = "London";
+  const count = 0;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("");
+});
 
 // case: Negative Count:
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+test("should return an error if count is negative number", () => {
+  const str = "Cambridge";
+  const count = -1;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("Please enter positive number!");
+});
