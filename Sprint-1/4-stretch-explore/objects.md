@@ -17,4 +17,5 @@ object
 Answer the following questions:
 
 What does `console` store? some functions that can be called like "log"
-What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean? we are calling asset or log function from console which stores these functions
+What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean? 
+we are calling assert or log function from console which stores these functions. The "." tells the program to access the console object and call the function log, or assert within console object.
