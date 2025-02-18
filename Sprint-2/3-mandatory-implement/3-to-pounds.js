@@ -21,4 +21,4 @@ console.log(`${toPounds("00p")}`);
 console.log(`${toPounds("75p")}`);
 console.log(`${toPounds("758p")}`);
 console.log(`${toPounds("75680p")}`);
-console.log(`${toPounds("917568p")}`);
+console.log(`${toPounds("017568p")}`);
