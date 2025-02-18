@@ -34,18 +34,62 @@ assertEquals(aceofSpades, 11);
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
 // ====> write your test here, and then add a line to pass the test in the function above
+function getCardValue(card) {
+    if (card[0] === "A") return 11;
+    if (parseInt(card[0]) >= 2 && parseInt(card[0]) <= 9) {
+        return parseInt(card[0]); 
+    }
+}
+const fiveofHearts = getCardValue("5♥");
+assertEquals(fiveofHearts, 5); 
+
+
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+function getCardValue(card) {
+    if (card[0] === "A") return 11; 
+    if (parseInt(card[0]) >= 2 && parseInt(card[0]) <= 9) {
+        return parseInt(card[0]); 
+    }
+    if (card[0] === "J" || card[0] === "Q" || card[0] === "K") {
+        return 10; 
+    }
+}
+const jackofClubs = getCardValue("J♣");
+assertEquals(jackofClubs, 10); 
+
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const aceofSpades = getCardValue("A♠");
+assertEquals(aceofSpades, 11); // Expected output: 11
+
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+function getCardValue(card) {
+    const rank = card[0]; 
+    if (rank === "A") return 11; 
+    
+    if (parseInt(rank) >= 2 && parseInt(rank) <= 9) {
+        return parseInt(rank); 
+    }
+    
+    if (rank === "J" || rank === "Q" || rank === "K") {
+        return 10; 
+    }
+
+    throw new Error("Invalid card rank.");
+}
+try {
+    getCardValue("Z♠"); 
+} catch (e) {
+    assertEquals(e.message, "Invalid card rank."); 
+}
