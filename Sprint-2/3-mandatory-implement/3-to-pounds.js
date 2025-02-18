@@ -45,3 +45,4 @@ console.log(toPounds("399p"));
 console.log(toPounds("50p"));
 console.log(toPounds("150p"));
 console.log(toPounds("5p"));
+console.log(toPounds("3333p"));
