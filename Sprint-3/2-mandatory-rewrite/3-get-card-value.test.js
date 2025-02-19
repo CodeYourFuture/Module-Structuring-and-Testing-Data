@@ -13,8 +13,9 @@ test("should return 5 for Five of Hearts", () => {
     expect(fiveofHearts).toEqual(5);
     });
 
+    //We also can write the testing in shorter way, compare line 17 (the shorter version) with 11 (the longer version) as example.
     test("should return 10 for Ten of Diamonds", () => {
-    const tenofDiamonds = getCardValue("10♦");
+        expect(getCardValue("10♦")).toEqual(10);
     });
 
 
