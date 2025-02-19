@@ -11,6 +11,7 @@ function square(3) {
 }
 
 // =============> write the error message here
+// SyntaxError: Unexpected number. Identifier expected.
 
 // =============> explain this error message here
 
