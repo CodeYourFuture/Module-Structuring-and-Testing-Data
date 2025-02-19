@@ -2,6 +2,7 @@
 
 // Why will an error occur when this program runs?
 // =============> write your prediction here
+// Undefined, decimalNumber is not in the right scope for the console.log statement to access it.
 
 // Try playing computer with the example to work out what is going on
 
