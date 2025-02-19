@@ -1,5 +1,6 @@
 
 // Predict and explain first BEFORE you run any code...
+// Cant set a value as a parameter (error)
 
 // this function should square any number but instead we're going to get an error
 
