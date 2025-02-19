@@ -5,9 +5,9 @@
 
 // =============> write your prediction of the error here: There is going to be an error message. As there should be a variable in place of "3"
 
-//function square(3) {
-    //return num * num;
-//}
+function square(3) {
+    return num * num;
+}
 
 // =============> write the error message here: SyntaxError: Unexpected Number
 
