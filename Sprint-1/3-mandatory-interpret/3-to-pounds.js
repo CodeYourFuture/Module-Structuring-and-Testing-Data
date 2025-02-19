@@ -25,3 +25,9 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2.const penceStringWithoutTrailingP = penceString.substring( 0,penceString.length - 1) : remove the P
+// 3.paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0") :
+//  this string method confirm the paddedPenceNumberString at least 3 characters long and (0) values pads this string with another string (multiple times, if needed) until the resulting string reaches the given length.
+// 4.const pounds = paddedPenceNumberString.substring( 0,paddedPenceNumberString.length - 2) : take the first digit (3) for pounds value
+// 5.const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0"):
+// take the last two digit (99) for pence value

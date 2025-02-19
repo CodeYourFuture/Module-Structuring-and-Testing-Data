@@ -7,3 +7,6 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
+// num is random value between 1-100 
+//Math.random() is generates a random decimal between 0 and 1
+//Math.floor() rounds it down to the nearest whole number
