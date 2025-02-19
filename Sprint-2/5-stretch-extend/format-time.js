@@ -4,15 +4,15 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  const minutes = Number(time.slice(3, 5));
-  if (hours == 0) {
-    return `${hours + 12}:${minutes.toString().padStart(2, "0")} am`;
-  } else if (hours == 12) {
-    return `${hours}:${minutes.toString().padStart(2, "0")} pm`;
+  const minutes = `:${Number(time.slice(3, 5)).toString().padStart(2, "0")}`;
+  if (hours === 0) {
+    return `${hours + 12}${minutes} am`;
+  } else if (hours === 12) {
+    return `${hours}${minutes} pm`;
   } else if (hours > 12) {
-    return `${hours - 12}:${minutes.toString().padStart(2, "0")} pm`;
+    return `${hours - 12}${minutes} pm`;
   }
-  return `${hours}:${minutes.toString().padStart(2, "0")} am`;
+  return `${hours}${minutes} am`;
 }
 
 const currentOutput = formatAs12HourClock("08:07");
