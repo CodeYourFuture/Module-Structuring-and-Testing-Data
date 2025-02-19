@@ -79,3 +79,4 @@ assertEquals(equalFraction, false);
 
 // The scenario that we have negative denominator and positive numerator, which the result of the division is less than 1 anf greater than -1, it should return true because it is proper fraction
 
+module.exports = isProperFraction;
