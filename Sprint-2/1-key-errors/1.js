@@ -16,6 +16,7 @@ function convertToPercentage(decimalNumber) {
 console.log(decimalNumber);
 
 // =============> write your explanation here
+// Declaring variable with the same name causes error.
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
