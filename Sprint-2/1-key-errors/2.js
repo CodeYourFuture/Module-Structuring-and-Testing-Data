@@ -3,18 +3,26 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> The function should have a variable name and not a number.
+// Also there's no definition of num in the code 
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> SyntaxError: Unexpected number
 
-// =============> explain this error message here
+// =============> In function square(3), the number used as a parameter name is invalid because parameter names must be variable names, not numbers.
+// 
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+// =============> 
+    function square(num) {
+    return num * num;
+}
+
+console.log(square(3)); 
+
 
 
