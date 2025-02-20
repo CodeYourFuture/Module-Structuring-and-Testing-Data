@@ -1,6 +1,7 @@
 // Predict and explain first...
 
 // =============> write your prediction here
+// logs the product of 2 numbers to the console.
 
 function multiply(a, b) {
   console.log(a * b);
