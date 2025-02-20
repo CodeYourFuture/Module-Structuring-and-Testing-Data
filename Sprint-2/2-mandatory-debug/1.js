@@ -1,5 +1,6 @@
 // Predict and explain first...
 //  =============> write your prediction here
+// function returns nothing (undefined), because it is on a different line from the return statement and isn't wrapped in parentheses ().
 
 function sum(a, b) {
   return;
