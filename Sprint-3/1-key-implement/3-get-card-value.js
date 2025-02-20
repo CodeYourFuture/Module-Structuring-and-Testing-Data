@@ -9,6 +9,7 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
   let rank = card.slice(0, -1);
+
   if (rank === "A"){
      return 11;  // Ace is worth 11
   }
@@ -16,7 +17,7 @@ function getCardValue(card) {
   else if (rank >= 2 && rank <= 10 ) {
     return Number(rank); // convert number to be between 2-10
   }
-  else if ([rank = "J", "Q", "K",].includes(rank)) {
+  else if (["J", "Q", "K",].includes(rank)) {
     return 10;  // face card is worth 10
   }
   
@@ -69,3 +70,5 @@ assertEquals(kingofClub, 10);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+const invalidCard = getCardValue("k♣");
+assertEquals(invalidCard, "Invalid card rank");
