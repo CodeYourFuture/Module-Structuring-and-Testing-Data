@@ -20,7 +20,7 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // Explain why the output is the way it is
 // =============> write your explanation here
-// Answer:
+// Answer: Parameters aren't defined, so arguments being passed in arent used, so it just uses the 'num' variable referenced within the function as opposed to the arguments passed in.
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
