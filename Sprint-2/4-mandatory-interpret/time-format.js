@@ -36,3 +36,4 @@ function formatTimeDisplay(seconds) {
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
+// undefined: TypeError: num.toString(...).padStart is not a function
