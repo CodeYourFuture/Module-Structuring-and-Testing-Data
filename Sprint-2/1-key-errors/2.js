@@ -14,6 +14,7 @@ function square(3) {
 // SyntaxError: Unexpected number. Identifier expected.
 
 // =============> explain this error message here
+// The error message means a number is being used in a place where it is syntactically invalid.
 
 // Finally, correct the code to fix the problem
 
