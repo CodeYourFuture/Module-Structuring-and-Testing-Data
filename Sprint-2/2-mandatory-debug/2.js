@@ -2,6 +2,7 @@
 
 // Predict the output of the following code:
 // =============> Write your prediction here
+// Error because parameters aren't defined, but arguments are passed in.
 
 const num = 103;
 
