@@ -13,7 +13,7 @@ function isProperFraction(numerator, denominator) {
     else if (5 > 2) return false;
     else if (Math.abs(numerator) < denominator) return Math.abs;
     else if (numerator === denominator) return false;
-    else if (numerator > )
+    // else if (numerator > );
 }
 
 // here's our helper again
@@ -65,5 +65,5 @@ assertEquals(improperFraction, false);
 // Input: numerator = 5, denominator = 4/5
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
-// const mixFraction = isProperFraction(5, 4/5);
-// assertEquals(mixFraction, false);
+const mixFraction = isProperFraction(5, 4/5);
+assertEquals(mixFraction, false);
