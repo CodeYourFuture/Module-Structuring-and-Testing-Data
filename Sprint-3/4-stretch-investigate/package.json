@@ -1,0 +1,14 @@
+{
+  "name": "4-stretch-investigate",
+  "version": "1.0.0",
+  "description": "Test for card validator project",
+  "main": "card-validator-solution.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Hatef Eidi",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
