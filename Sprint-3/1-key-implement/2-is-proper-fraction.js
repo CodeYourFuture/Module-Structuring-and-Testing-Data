@@ -42,12 +42,12 @@ function isProperFraction(numerator, denominator) {
 }
 
 // **Test Case 1**: Proper Fraction (numerator < denominator)
-const properFraction = isProperFraction(2, 3);
+const properFraction1 = isProperFraction(2, 3);
 assertEquals(properFraction, true); // Expected output: true
 
 // **Test Case 2**: Improper Fraction (numerator >= denominator)
-const improperFraction = isProperFraction(5, 2);
-assertEquals(improperFraction, false); // Expected output: false
+const improperFraction1 = isProperFraction(5, 2);
+assertEquals(improperFraction1, false); // Expected output: false
 
 
 // Negative Fraction check:
@@ -60,8 +60,8 @@ function isProperFraction(numerator, denominator) {
 }
 
 // **Test Case 1**: Proper Fraction (numerator < denominator)
-const properFraction = isProperFraction(2, 3);
-assertEquals(properFraction, true); // Expected output: true
+const properFraction2 = isProperFraction(2, 3);
+assertEquals(properFraction2, true); // Expected output: true
 
 // **Test Case 2**: Improper Fraction (numerator >= denominator)
 const improperFraction = isProperFraction(5, 2);
@@ -78,7 +78,7 @@ assertEquals(negativeFraction, true); // Expected output: true
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
-const equalFraction = isProperFraction(3, 3);
+const equalFraction3 = isProperFraction(3, 3);
 // ====> complete with your assertion
 function isProperFraction(numerator, denominator) {
   if (Math.abs(numerator) < Math.abs(denominator)) return true; // Proper fraction
