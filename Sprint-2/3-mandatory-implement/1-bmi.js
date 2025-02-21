@@ -16,4 +16,6 @@
 
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
+    return weight/(height**2)
 }
+console.log(calculateBMI(60,1.65));
