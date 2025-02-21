@@ -19,3 +19,4 @@ function getCardValue(card) {
 }
 
 module.exports = getCardValue;
+
