@@ -1,21 +1,19 @@
 // Predict and explain first...
-
-<<<<<<< HEAD:Sprint-2/debug/2.js
-//const num = 103;
-=======
+//=======
 // Predict the output of the following code:
 // =============> Write your prediction here
 
-const num = 103;
->>>>>>> main:Sprint-2/2-mandatory-debug/2.js
+//const num = 103;
+//>>>>>>> main:Sprint-2/2-mandatory-debug/2.js
 
 function getLastDigit(num) {
-  return num.toString().slice(-1);
-}
+  const result = num.toString().slice(-1);
+  return Number(result);
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
 console.log(`The last digit of 105 is ${getLastDigit(105)}`);
 console.log(`The last digit of 806 is ${getLastDigit(806)}`);
+}
 
 // Now run the code and compare the output to your prediction
 // =============> write the output here
