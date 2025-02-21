@@ -13,8 +13,8 @@ console.log(capitalise("hanan"));
 // =============> write your explanation here we have to change a name of variable or parameter
 // =============> write your new code here
 
-function capitalise(str) {
-  let modifiedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
+function capitalise(originalStr) {
+  let modifiedStr = `${originalStr[0].toUpperCase()}${originalStr.slice(1)}`;
   return modifiedStr;
 }
 
