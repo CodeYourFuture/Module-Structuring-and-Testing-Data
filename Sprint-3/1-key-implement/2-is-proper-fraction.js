@@ -8,18 +8,19 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  // return (
+  // if (
   //   numerator < denominator &&
   //   Number.isInteger(numerator) &&
   //   Number.isInteger(denominator)
-  // );
-  if (
+  // )
+  //   return true;
+  // else return false;
+  //refactored code (I am using Number.Integer method to make sure that decimal integers return as false)
+  return (
     numerator < denominator &&
     Number.isInteger(numerator) &&
     Number.isInteger(denominator)
-  )
-    return true;
-  else return false;
+  );
 }
 
 // here's our helper again
@@ -65,8 +66,10 @@ assertEquals(equalFraction, false);
 // Stretch:
 // What other scenarios could you test for?
 
+//Scenario where numerator is in decimal number
 const decimalFraction = isProperFraction(1.8, 4);
 assertEquals(decimalFraction, false);
 
+//Scenario where denominator is undefined
 const nullDenominator = isProperFraction(5);
 assertEquals(nullDenominator, false);
