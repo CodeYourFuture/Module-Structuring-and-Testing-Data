@@ -12,7 +12,7 @@ function capitalise(str) {
 console.log(capitalise('cat'))
 
 // =============> write your explanation here
-// we cannot use js reserved keywords as a function name
+// we cannot use js reserved keywords as a variable name
 
 // =============> write your new code here
 // function capitalise(str) {
