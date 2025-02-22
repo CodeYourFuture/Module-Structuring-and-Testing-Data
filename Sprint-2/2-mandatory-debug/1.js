@@ -2,7 +2,7 @@
 //  =============> write your prediction here
 // we'll get a syntax error because function isn't returning anything, a+b is undefined 
 function sum(a, b) {
-  return;
+  return; // invalid code block as compiler can't read anything after return keyword
   a + b;
 }
 
