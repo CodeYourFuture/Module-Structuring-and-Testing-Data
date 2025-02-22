@@ -2,7 +2,7 @@
 
 > https://programming.codeyourfuture.io/structuring-data/
 
-> [!TIP]
+> [!TIP]k
 > You should always do the prep work _before_ attempting the coursework.
 > The prep shows you _how_ to do the coursework.
 > There is often a step by step video you can code along with too.
