@@ -1,13 +1,14 @@
 function passwordValidator(password) {
     const passwords = ["Test&1", "P@ssw0rd!", "$ample5"];
-
-    if (password.length < 5) return false;
-
     let upperCase = false;
     let lowerCase = false;
     let numberChar = false;
     const specialChar = "!£%$&*?#";
     let special = false;
+
+    if (password.length < 5) return false;
+
+    
 
     for (let char of password){
         if (char >= "A" && char <="Z") upperCase = true;
