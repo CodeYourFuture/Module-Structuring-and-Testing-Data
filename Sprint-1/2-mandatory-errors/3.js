@@ -9,7 +9,6 @@ const cardNumber = 4533787178994213;
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
 
-
 //.slice 
 const last4Digits = cardNumber.toString().slice(-4);
 console.log(last4Digits)
