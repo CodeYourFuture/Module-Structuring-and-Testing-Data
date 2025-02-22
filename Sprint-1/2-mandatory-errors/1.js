@@ -3,4 +3,4 @@
 let age = 33;
 age = age + 1;
 
-//  we cannot change consonant data type, so we need to change const to let
+//  A constant cannot change value through assignment, so we need to change const to let in order to change the value

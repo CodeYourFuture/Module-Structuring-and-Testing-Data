@@ -5,6 +5,6 @@ const cityOfBirth = "Bolton";
 console.log(`I was born in ${cityOfBirth}`);
 
 /*
-program couldn't find variable, because it was initialized after using, which is not correct
-problem was solved by moving variable initialization to the top
+program couldn't find variable, because it was declared after calling, which is not correct
+problem was solved by moving variable declaration above the calling
 */
