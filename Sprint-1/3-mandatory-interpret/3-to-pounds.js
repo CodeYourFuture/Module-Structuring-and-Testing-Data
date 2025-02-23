@@ -9,6 +9,7 @@ const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length -
 
 console.log(`£${pounds}.${pence}`);
 
+
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
 
