@@ -1,15 +1,11 @@
 function getAngleType(angle) {
   if (angle === 90) return "Right angle";
   // replace with your completed function from key-implement
-
+  else if (angle > 0 && angle < 90) return "Acute angle";
+  else if (angle > 90 && angle < 180) return "Obtuse angle";
+  else if (angle === 180) return "Straight angle";
+  else return "Reflex angle";
 }
-
-
-
-
-
-
-
 
 // Don't get bogged down in this detail
 // Jest uses CommonJS module syntax by default as it's quite old
