@@ -4,19 +4,18 @@
 // =============> Write your prediction here: 3 
 
 const num = 103;
-
 function getLastDigit() {
   return num.toString().slice(-1);
 }
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
 console.log(`The last digit of 105 is ${getLastDigit(105)}`);
-console.log(`The last digit of 806 is ${getLastDigit(806)}`);
+console.log(`The last digit of 806 is ${getLastDigit(806)}`); 
 
 // Now run the code and compare the output to your prediction
 // =============> write the output here: 3 for all console.log.
 // Explain why the output is the way it is
-// =============> write your explanation here: 3 for all of the the console.log because it won't take any argument it will always take const argument.
+// =============> write your explanation here: 3 for all of the the console.log because it won't take any argument it will always take global variable num = 103.
 // Finally, correct the code to fix the problem
 // =============> write your new code here
 
@@ -28,8 +27,12 @@ console.log(`The last digit of 42 is ${getLastDigit(42)}`);
 console.log(`The last digit of 105 is ${getLastDigit(105)}`);
 console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
+// Does the function toPounds() return the last digit of the given parameter?
+// No, it doesn't return toPounds() of the last digit of the given parameter.
+
+
 
 
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
-because of line 6.
+//because of line 6.

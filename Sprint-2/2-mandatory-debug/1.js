@@ -12,3 +12,6 @@ function sum(a, b) {
 }
 
 console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
+//Between "return value" and "function", which one is undefined?
+
+//return value will be undefined if function have not return statement it will automatically returns undefined. 
