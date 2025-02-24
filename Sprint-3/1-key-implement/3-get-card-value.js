@@ -8,10 +8,10 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (card === "A") return 11;
-    if (card === "10" || card === "J" || card ==="Q" || card=== "K") return 10;
-    if (card >= "2" && card <= "9") return Number(card);
-    return "Invalid card";
+  const rank = card.replace(/[♦♠♥♣]/g, "");
+    if (rank === "A") return 11;
+    if (rank === "10" || rank === "J" || rank ==="Q" || rank=== "K") return 10;
+    return "Invalid";
 }
     
 
@@ -51,6 +51,8 @@ assertEquals(blackOfJack, 10);
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const cardA = getCardValue("11");
+assertEquals(cardA, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
