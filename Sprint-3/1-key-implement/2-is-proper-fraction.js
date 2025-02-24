@@ -8,11 +8,13 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (Math.abs(numerator) < Math.abs(denominator)) {
-        return true;
-    } else {
+    if (!Number.isFinite(numerator) || !Number.isFinite(denominator)) {
+        throw new Error("Inputs must be finite numbers.");
+    }
+    if (denominator === 0) {
         return false;
     }
+    return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // here's our helper again
@@ -93,3 +95,9 @@ assertEquals(negativeDenominator, true);
 // target output: false (or an error, depending on how you want to handle division by zero)
 const zeroDenominator = isProperFraction(3, 0);
 assertEquals(zeroDenominator, false);
+
+// Test for decimal values:
+// Input: numerator = 3.5, denominator = 7.2
+// target output: true
+const decimalFraction = isProperFraction(3.5, 7.2);
+assertEquals(decimalFraction, true);

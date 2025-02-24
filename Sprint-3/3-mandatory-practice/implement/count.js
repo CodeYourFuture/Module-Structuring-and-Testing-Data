@@ -7,7 +7,48 @@ function countChar(stringOfCharacters, findCharacter) {
     }
   }
 
-  return count;
+  return cou
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  nt;
 }
 
 

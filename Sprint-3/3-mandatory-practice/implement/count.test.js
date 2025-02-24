@@ -11,7 +11,7 @@ test("should return 0 for a character not present in the string", () => {
   const str = "hello";
   const char = "z";
   const count = countChar(str, char);
-  expect(count).toEqual(0);
+  expect(count).toEqual(0);    
 });
 
 test("should count case-sensitive occurrences", () => {
