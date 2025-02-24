@@ -7,7 +7,8 @@ function passwordValidator(password, passwords = []) {
 
   if (!/[0-9]/.test(password)) return false;
 
-  if (!/[!#$%.*&]/.test(password)) return false;
+  const specialCharacters = ["!", "#", "$", "%", ".", "*", "&"];
+  if (!specialCharacters.some(char => password.includes(char))) return false;
 
   if (passwords.includes(password)) return false;
 
