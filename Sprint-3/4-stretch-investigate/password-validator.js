@@ -35,8 +35,8 @@ function passwordValidator(password) {
 
         // if the password is found in the passwords array
         else {
-            return 'Your password is updated successfully';
             passwords.push(password);
+            return 'Your password is updated successfully';
         }
     }
 }

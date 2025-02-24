@@ -71,12 +71,25 @@ test("Should return your password is updated", () => {
 // I tried to use a global variable to store the passwords array, but it didn't work either.
 // I also tried to use a mock function to store the passwords array, but it didn't work either.
 // I also created an external file to store the passwords array, and export it  in the test file (passwordStorage.js), which receive the validate password history, and import it in the test file, but it didn't work either.
-// test("Should return Your password has already been used", () => {
-//     const password = "bAa12#";
-//     const result = isValidPassword(password);
-//     expect(result).toEqual('Your password has already been used');
-// });
+test("Should return Your password has already been used", () => {
+    const password = "bAa12#";
+    const result = isValidPassword(password);
+    expect(result).toEqual('Your password has already been used');
+});
 
+test("Should return Your password is updated successfully", () => {
+    const password = "Hatef1#";
+    const result = isValidPassword(password);
+    expect(result).toEqual('Your password is updated successfully');
+});
+
+
+
+test("Should return Your password is updated successfully", () => {
+    const password = "Hatef1#";
+    const result = isValidPassword(password);
+    expect(result).toEqual('Your password has already been used');
+});
 
 
 
