@@ -12,6 +12,7 @@ function repeat(str, count) {
     if (count === 1) {
         return str;  // return str when count is === 1
         
+        
     }
 
     let repeatedStr = "";
