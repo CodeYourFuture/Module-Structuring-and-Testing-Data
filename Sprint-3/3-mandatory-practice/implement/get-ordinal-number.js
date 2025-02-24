@@ -1,5 +1,13 @@
+
 function getOrdinalNumber(num) {
- return "1st";
+    const suffixes = {
+        one: "st",
+        two: "nd",
+        few: "rd",
+        other: "th"
+      };
+   
 }
 
+console.log('num ->', getOrdinalNumber(59));  // "1st
 module.exports = getOrdinalNumber;
