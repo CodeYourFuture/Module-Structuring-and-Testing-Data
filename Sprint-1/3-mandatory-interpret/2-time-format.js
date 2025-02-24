@@ -41,3 +41,5 @@ so, totalMinutes represents the total number of whole minutes in the movie lengt
 A better name for this variable could be formattedTime, durationString, or formattedDuration. These names more 
 clearly indicate that the variable holds a formatted representation of time. */
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+/*This code isn’t designed to handle negative numbers or non-integer inputs. 
+These cases might produce unexpected results.*/
