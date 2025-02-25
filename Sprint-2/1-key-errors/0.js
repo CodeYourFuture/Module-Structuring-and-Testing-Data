@@ -9,7 +9,7 @@
   //return str;}
 
 // =============> write your explanation here
-  // The code will not display anyting since there is no console.log
+  // The code will not display anything since there is no console.log
   // I see that the variable has been named twice so there will be an error
 
 // =============> write your new code here

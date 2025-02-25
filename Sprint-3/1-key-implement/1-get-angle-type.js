@@ -8,18 +8,24 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-   if (angle === 90) return "Right angle";
-   // read to the end, complete line 36, then pass your test here
+  if (angle === 90) return "Right angle";
+  if (angle === 45) return "Acute angle";
+  if (angle === 120) return "Obtuse angle";
+  if (angle === 180) return "Straight angle"
+  if (angle > 180 && angle < 360) return "Reflex angle";
+  
 }
 
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
+
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
+    `Expected ${actualOutput} to equal ${targetOutput} check your code again`
   );
 }
+
 
 // Acceptance criteria:
 
@@ -43,14 +49,20 @@ assertEquals(acute, "Acute angle");
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
 const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angle");
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
 // ====> write your test here, and then add a line to pass the test in the function above
+const Straight = getAngleType(180);
+assertEquals(Straight, "Straight angle");
 
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 // ====> write your test here, and then add a line to pass the test in the function above
+const Reflex = getAngleType(300);
+assertEquals(Reflex, "Reflex angle")
+
