@@ -32,7 +32,9 @@ function getCardValue(card) {
     "8",
     "9",
   ];
-  if (!validRanks.includes(rank)) return "Invalid card rank";
+  if (!validRanks.includes(rank)) {
+    throw new Error("Invalid card rank");
+  }
 }
 
 // You need to write assertions for your function to check it works in different cases
