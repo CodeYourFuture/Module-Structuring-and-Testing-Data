@@ -19,7 +19,6 @@ so  in line 11 we are getting undefined to resolve it need to return output of t
 //  =============> write your new code here
 /*
 function multiply(a, b) {
-  console.log(a * b);
   return (a * b);
 }
 
