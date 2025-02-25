@@ -1,5 +1,9 @@
 function countChar(stringOfCharacters, findCharacter) {
-    return 5
+    const count = stringOfCharacters.split(findCharacter);
+    return  count.length-1;
 }
 
+
+
 module.exports = countChar;
+
