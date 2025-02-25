@@ -15,10 +15,16 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-   let bmi= (weight/(height * height)).toPrecision(3);
-   return bmi;
+   let bmi= (weight/(height * height));
+    
+   //if bmi is less then 10 and higher then 100 return an error message
+   if(bmi < 10 || bmi >= 100){
+   return "BMI value is out of expected range";
+   }
+   return parseFloat(bmi.toFixed(1));;// round to 1 decimal place 
 }
 
 console.log(calculateBMI(70, 1.73));
 console.log(calculateBMI(66, 1.65));
 console.log(calculateBMI(80.3, 1.79));
+console.log(calculateBMI(400, 1.5));
