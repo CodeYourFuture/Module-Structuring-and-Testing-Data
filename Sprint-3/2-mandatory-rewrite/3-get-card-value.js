@@ -24,7 +24,9 @@ function getCardValue(card) {
     "8",
     "9",
   ];
-  if (!validRanks.includes(rank)) return "Invalid card rank";
+  if (!validRanks.includes(rank)) {
+    throw new Error("Invalid card rank");
+  }
 }
 
 module.exports = getCardValue;
