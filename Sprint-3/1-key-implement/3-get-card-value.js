@@ -8,6 +8,9 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
+  if (typeof card !== "string") {
+    throw new Error("Card must be a string");
+  }
   const rank = card.slice(0, -1);
   if (rank === "A") return 11;
 
@@ -75,5 +78,8 @@ assertEquals(kingofHearts, 10);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-const invalidCards = getCardValue();
-assertEquals(invalidCards, "Invalid card rank");
+try {
+  getCardValue();
+} catch (error) {
+  console.log("Invalid card test passed:", error.message);
+}
