@@ -1,5 +1,7 @@
-const cardNumber = [4, 5, 3, 3, 7, 8, 7, 1, 7, 8, 9, 9, 4, 2, 1, 3];
-const last4Digits = cardNumber.slice(-4);
+const cardNumber = 4533787178994213;
+
+const cardNumberString = String(cardNumber); // Type conversion
+const last4Digits = cardNumberString.slice(cardNumberString.length - 4);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
@@ -10,7 +12,7 @@ const last4Digits = cardNumber.slice(-4);
 
 // Prediction: slice takes an index or index range, and I don't think you can have negative indexes, so that will be the error.
 // Outcome: says '.slice' is not a function
-// Fix: slice is an array method not a string method. convert card number into an array.
+// Fix: convert cardNumber to string for the slice method to work
 
 // Output
 console.log(last4Digits);
