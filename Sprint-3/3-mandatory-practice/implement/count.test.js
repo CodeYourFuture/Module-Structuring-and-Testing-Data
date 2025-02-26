@@ -3,7 +3,7 @@ const countChar = require("./count");
 // Given a string str and a single character char to search for,
 // When the countChar function is called with these inputs,
 // Then it should:
-
+// toBe(2)
 // Scenario: Multiple Occurrences
 // Given the input string str,
 // And a character char that may occur multiple times with overlaps within str (e.g., 'a' in 'aaaaa'),
@@ -16,9 +16,29 @@ test("should count multiple occurrences of a character", () => {
   const count = countChar(str, char);
   expect(count).toEqual(5);
 });
-
 // Scenario: No Occurrences
+
+test("should return 0 if character is not found", () => {
+  const str = "aaaaa";
+  const char = "b";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
 // Given the input string str,
+
+test("should be case-sensitive", () => {
+  expect(countChar("aAaA", "a")).toBe(2);
+  expect(countChar("aAaA", "A")).toBe(2);
+});
+
 // And a character char that does not exist within the case-sensitive str,
+
+test("should handle an empty string", () => {
+  expect(countChar("", "a")).toBe(0);
+});
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+test("should throw an error if inputs are invalid", () => {
+  expect(() => countChar(123, "a")).toThrow();
+  expect(() => countChar("hello", 5)).toThrow();
+  expect(() => countChar("hello", "ab")).toThrow();
+});
