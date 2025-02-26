@@ -25,13 +25,15 @@ function getCardValue(card) {
     nosuit === "6" ||
     nosuit === "7" ||
     nosuit === "8" ||
-    nosuit === "9"
+    nosuit === "9" ||
+    nosuit === "10"
   ) {
     return parseInt(nosuit);
   } else {
-    return "Invalid card rank.";
+    throw new Error(`Invalid card number.`);
   }
 }
+
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
@@ -76,5 +78,24 @@ assertEquals(aceOfHearts, 11);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-const invalidCard = getCardValue("1♥");
-assertEquals(invalidCard, "Invalid card rank.");
+
+try {
+  const invalidCard = getCardValue("1♥");
+  assertEquals(invalidCard, "Invalid card rank.");
+} catch (error) {
+  console.log(error.message);
+}
+
+try {
+  const invalidCard1 = getCardValue("F♥");
+  assertEquals(invalidCard, "Invalid card rank.");
+} catch (error) {
+  console.log(error.message);
+}
+
+try {
+  const invalidCard2 = getCardValue("!!!!");
+  assertEquals(invalidCard, "Invalid card rank.");
+} catch (error) {
+  console.log(error.message);
+}

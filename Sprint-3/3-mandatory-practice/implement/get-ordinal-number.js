@@ -1,9 +1,20 @@
 function getOrdinalNumber(num) {
-  if (num === 1) return "1st";
-  else if (num === 2) return "2nd";
-  else if (num === 3) return "3rd";
-  else if (num >= 4 && num <= 10) return `${num}th`;
-  else return "This function takes number from 1-10!";
+  const lastTwoDigits = num % 100;
+  const lastDigit = num % 10;
+
+  if (lastTwoDigits === 11 || lastTwoDigits === 12 || lastTwoDigits === 13) {
+    return `${num}th`;
+  }
+
+  if (lastDigit === 1) {
+    return `${num}st`;
+  } else if (lastDigit === 2) {
+    return `${num}nd`;
+  } else if (lastDigit === 3) {
+    return `${num}rd`;
+  } else {
+    return `${num}th`;
+  }
 }
 
 module.exports = getOrdinalNumber;

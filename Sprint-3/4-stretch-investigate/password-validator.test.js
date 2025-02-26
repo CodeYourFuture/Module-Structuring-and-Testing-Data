@@ -47,3 +47,9 @@ test("invalid password without symbol should return false", () => {
   // Assert
   expect(result).toEqual(false);
 });
+
+test("password with at least 5 characters and 1 uppercase, but without symbol and number should return false", () => {
+  const password = "bearA";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});

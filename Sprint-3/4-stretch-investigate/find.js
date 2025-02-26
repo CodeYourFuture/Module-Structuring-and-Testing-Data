@@ -22,4 +22,4 @@ console.log(find("code your future", "z"));
 // a) How the index variable updates during the call to find increases by 1 for each loop iteration, stop if str[index] === char
 // b) What is the if statement used to check  Character in parameter str order from [0] to the end to be equal specific character in second parameter char.
 // c) Why is index++ being used? to increment it so loop check each character in the string.
-// d) What is the condition index < str.length used for? true condition while this loop will run
+// d) What is the condition index < str.length used for? This condition checks index is still less then str.length during loop run. If condition true loop is running if false loop stopped

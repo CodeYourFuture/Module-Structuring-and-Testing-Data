@@ -13,17 +13,17 @@ test("should return '1st' for 1", () => {
 });
 
 test("should return '2nd' for 2", () => {
-  expect(getOrdinalNumber(2)).toEqual("2nd");
+  expect(getOrdinalNumber(42352)).toEqual("42352nd");
 });
 
 test("should return '10th' for 10", () => {
-  expect(getOrdinalNumber(10)).toEqual("10th");
+  expect(getOrdinalNumber(112)).toEqual("112th");
 });
 
 test("should return '8th' for 8", () => {
-  expect(getOrdinalNumber(8)).toEqual("8th");
+  expect(getOrdinalNumber(1221)).toEqual("1221st");
 });
 
-test("should return '3rd' for 3", () => {
-  expect(getOrdinalNumber(3)).toEqual("3rd");
+test("should return '13rd' for 13", () => {
+  expect(getOrdinalNumber(13)).toEqual("13th");
 });

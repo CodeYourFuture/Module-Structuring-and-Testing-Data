@@ -16,11 +16,12 @@ function getCardValue(card) {
     nosuit === "6" ||
     nosuit === "7" ||
     nosuit === "8" ||
-    nosuit === "9"
+    nosuit === "9" ||
+    nosuit === "10"
   ) {
     return parseInt(nosuit);
   } else {
-    return "Invalid card rank.";
+    throw new Error(`Invalid card rank.`);
   }
 }
 module.exports = getCardValue;
