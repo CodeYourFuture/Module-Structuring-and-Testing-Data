@@ -41,5 +41,5 @@ test("Should return false if the card number ends with an odd number", () => {
 
 //Scenario 5: Card numbers with all digits the same
 test("Should return false if the card number has all digits the same", () => {
-    expect(cardNumberValidator("4444444444444444")).toBe('All digits should be different');
+    expect(cardNumberValidator("4444444444444444")).toBe('We can not have the same numbers in the card number');
 });

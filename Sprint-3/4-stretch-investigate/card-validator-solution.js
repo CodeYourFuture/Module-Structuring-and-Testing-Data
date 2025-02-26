@@ -17,16 +17,16 @@ function cardNumberValidator(cardNumber) {
     }
     
     //Validation for sum of all the digits to be more than 16
-    else if((cardNumber.split('').reduce((acc , digit) => acc + parseInt(digit), 0)) < 17){
+    else if((eachDigit.reduce((acc , digit) => acc + parseInt(digit), 0)) < 17){
 
         return 'The sum of the digits should be more than 17'
     }
     
-
+// 12345  [1, 2, 3, 4, 5] REDUCE = 1+ 2+3 + 4 + 5 = 15
     //Validation for numbers that are the same
-    else if(cardNumber.split('').every(digit => digit === eachDigit[0]))
+    else if(eachDigit.every(digit => digit === eachDigit[0]))
         {   
-            return 'All digits should be different';
+            return 'We can not have the same numbers in the card number';
         }
 
     //Validation for the last digit to be even
