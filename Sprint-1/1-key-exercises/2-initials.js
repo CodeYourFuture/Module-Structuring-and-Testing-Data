@@ -12,7 +12,7 @@ let lastName = "Johnson";
 // Get first character of each name, store it in a string, and remove spaces with trim().
 let initials = `${firstName.charAt(0)}${middleName.charAt(0)}${lastName.charAt(
   0
-)}`.trim();
+)}`;
 
 // View output to check if 'initals' variable matches the expected output 'CKJ'.
 console.log(initials);
