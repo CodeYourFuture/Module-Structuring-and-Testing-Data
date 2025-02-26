@@ -13,7 +13,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
-// 4 function calls, in lines 4, 5, 8, and 10.
+// 5 function calls: Line 4 - Number(), replaceAll() | Line 5 - Number(), replaceAll() | Line 10 - log()
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
