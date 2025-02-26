@@ -6,7 +6,7 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2)); // convert hours to number
   const min = Number(time.slice(3)); // convert minutes to number
   
-  if (hours > 24 || min > 59) {
+  if (hours > 24 || min > 59 || (hours === 24 && min > 0)) {
     return "Invalid time"; // to handle invalid input
   }
 
@@ -31,10 +31,18 @@ function formatAs12HourClock(time) {
   return `${hours.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")} am`; // to handle am cases
 } 
 
-console.log(formatAs12HourClock("24:00"));
-console.log(formatAs12HourClock("01:00"));
-console.log(formatAs12HourClock("10:45"));
-console.log(formatAs12HourClock("12:30"));
-console.log(formatAs12HourClock("19:30"));
-console.log(formatAs12HourClock("27:15"));
 
+
+function myAssert(inputTime, expectedOutput) {
+  const actualOutput = formatAs12HourClock(inputTime);
+  if (actualOutput !== expectedOutput) {
+    throw new Error(`Assertion Failed: Expected "${expectedOutput}", but got "${actualOutput}"`);
+  } else {
+    console.log(`Test Passed for ${inputTime}`);
+  }
+}
+
+myAssert("01:23", "01:23 am");  
+
+myAssert("23:00", "11:00 pm");  
+console.log(formatAs12HourClock("23:15"));
