@@ -2,7 +2,7 @@ function cardGenerator() {
     let cardNumber = "";
     
     for (let i = 0; i < 16; i++) {
-        cardNumber += Math.floor(Math.random() * 10); // Генерируем случайное число от 0 до 9
+        cardNumber += Math.floor(Math.random() * 10); // We are generating random cards numbers
     }
 
     return cardNumber;
@@ -19,6 +19,5 @@ function cardValidator (card_number) {
 const generatedCard = cardGenerator();
 cardValidator(generatedCard)
 console.log (generatedCard)
-
 console.log (cardValidator(generatedCard))
 
