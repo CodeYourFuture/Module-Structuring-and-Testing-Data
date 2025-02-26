@@ -10,7 +10,7 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 
 
-// The num represents a random number between 1 and 100
+// The num represents a random whole number from 1 to 100
 // Math.random() generates a decimal from 0 to 1
 // (maximum - minimum + 1) sets the range. For example, 100 - 1 + 1 = 100, so the range ends up being 100
 // Math.floor() rounds a decimal down to the nearest whole number, ensuring a result between 0 and 99
