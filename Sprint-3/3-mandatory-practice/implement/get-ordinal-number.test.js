@@ -51,4 +51,4 @@ test("should return '100th' for 100", () => {
 });
 
 // Case 7: Handle invalid input.
-//  an error for negative numbers and for non-number inputs. I can make it. (: 
+//  an error for negative numbers and for non-number inputs. I can't make it. (: 
