@@ -10,6 +10,7 @@
 function getCardValue(card) {
     //extracting the rank of the card
   const rank = card.substring(0, card.length - 1);
+  // const rank = card.slice(0 , -1)
 
     if (rank === "A") return 11;
 
