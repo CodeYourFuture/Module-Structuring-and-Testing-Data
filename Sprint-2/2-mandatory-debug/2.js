@@ -35,4 +35,4 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
-/* because we should do to return new statement in another new place like num2. This program always uses only 103 and slice it. */
+/* because this program always uses only 103 and slice it. It must be a variable*/
