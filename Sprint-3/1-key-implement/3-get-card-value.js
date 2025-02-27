@@ -8,13 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+    if (card === "A") return 11;
+    if (card === "J" || card === "Q" || card === "K") return 10;
 }
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
-// if the actual output matches the target output, the test will pass
-function assertEquals(actualOutput, targetOutput) {
+// if the actual output matches the target output, the test will pass    
+function assertEquals(actualOutput, targetOutput) {         
   console.assert(
     actualOutput === targetOutput,
     `Expected ${actualOutput} to equal ${targetOutput}`
@@ -28,17 +29,20 @@ function assertEquals(actualOutput, targetOutput) {
 const aceofSpades = getCardValue("A♠");
 assertEquals(aceofSpades, 11);
 
+
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
+assertEquals(fiveofHearts, 5);
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const freeCards = getCardValue("10");
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
