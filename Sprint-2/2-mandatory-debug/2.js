@@ -24,8 +24,8 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);*/
 // =============> write your new code here
  // we deleted const num = 103;
 
-function getLastDigit(num2) {
-  return num2.toString().slice(-1);
+function getLastDigit(num) {
+  return num.toString().slice(-1);
 }
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
