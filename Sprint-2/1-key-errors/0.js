@@ -22,7 +22,8 @@ We should write every time new name for new "str".*/
 // =============> write your new code here
 function capitalise(str) {
   let str1 = `${str[0].toUpperCase()}${str.slice(1)}`;
-  consol.log(str1)
+  return str1
+  console.log(str1)
   return str1;
 }
 capitalise(baha)
