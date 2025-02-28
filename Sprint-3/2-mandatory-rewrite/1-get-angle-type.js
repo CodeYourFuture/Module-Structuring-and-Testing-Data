@@ -1,10 +1,16 @@
 function getAngleType(angle) {
   if (angle === 90) return "Right angle";
   // replace with your completed function from key-implement
-  if (angle === 45) return "Acute angle";
+  //if (angle === 45) return "Acute angle";
   if (angle > 90 && angle < 180) return "Obtuse angle";
   if (angle === 180) return "Straight angle"
   if (angle > 180 && angle < 360) return "Reflex angle";
+  if (angle >= 0 && angle <= 90) return "Acute angle"
+  
+  else {
+    return "Invalid angle"
+  }
+  
   
 
 }
@@ -21,3 +27,4 @@ function getAngleType(angle) {
 // We will upgrade our approach to ES6 modules in the next course module, so for now 
 // we have just written the CommonJS module.exports syntax for you
 module.exports = getAngleType;
+  // 
