@@ -12,18 +12,20 @@
 
 function isProperFraction(numerator, denominator) {
     //this is the proper fraction check
-    if (numerator < denominator) return true;
+
+    if (Math.abs(numerator) < denominator )return true;
 
     // In this line we check if the denominator is greater than numerator in value but it is negative, we return true
-    else if(numerator< Math.abs(denominator) && denominator<0) return true;
+    else if(numerator< Math.abs(denominator) && denominator<0 ) return true;
     
     //this is the improper fraction check, this is for positive numerator and denominator, if the numerator is greater than or equal to the denominator, we return false
-    else if (numerator >= denominator) return false;
+    else if (numerator >= denominator  ) return false;
     
     
     //this is the negative fraction check, in this line we check the value of numerator, if it is negative, we take the absolute value of the numerator and compare it with the denominator
     else if(numerator < 0 && Math.abs(numerator) < denominator) return true;
     
+    else if( denominator===0) return false;
     
 }
 
@@ -72,8 +74,13 @@ assertEquals(equalFraction, false);
 // ====> complete with your assertion
 
 
+//Special Cases where denominator is 0 
+const errorFraction = isProperFraction(4, 0);
+assertEquals(errorFraction, false);
 
-
+//Special case where denominator is 0 and numerator is negative number, tailing this test resulted in updating the first condition of isProperFraction in line 16
+const errorFunciton2 = isProperFraction(-5 , 0);
+assertEquals(errorFunciton2, false);
 // Stretch:
 // What other scenarios could you test for?
 
