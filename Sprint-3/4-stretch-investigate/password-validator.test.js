@@ -21,6 +21,12 @@ test("password has at least 5 characters", () => {
     // Act
     const result = isValidPassword(password);
     // Assert
-    expect(result).toEqual(true);
+    expect(result).toEqual(false);
 }
 );
+test("valid passwords", () => {
+    expect (isValidPassword("1Aa2345!")).toEqual(true); 
+})
+test("valid passwords", () => {
+    expect (isValidPassword("1Aa2345")).toEqual(false); 
+})
