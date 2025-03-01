@@ -9,5 +9,19 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // Then the function should return "1st"
 
 test("should return '1st' for 1", () => {
-    expect(getOrdinalNumber(1)).toEqual("1st");
-    });
+  expect(getOrdinalNumber(1)).toEqual("1st");
+});
+
+// Case 2
+test("should return '11th' for 11", () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+});
+
+// Case 3
+test("should return '3rd' for 3", () => {
+  expect(getOrdinalNumber(3)).toEqual("3rd");
+});
+//Case 4
+test("should return '13th' for 13", () => {
+  expect(getOrdinalNumber(13)).toEqual("13th");
+});
