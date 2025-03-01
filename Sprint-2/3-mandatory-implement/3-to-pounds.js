@@ -4,10 +4,9 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
-function toPounds(pence) {
-    const pounds = pence / 100;
-    return `£${pounds.toFixed(2)}`;
+function toPounds(penceStr) {
+    const pence = perceInt(penceStr.slice(0,-1), 10);
+    return `£${(pence/100).toFixed(2)}`;
 }
-console.log(toPounds(399)); // £3.99
-console.log(toPounds(500)); // £5.00
-console.log(toPounds(1234)); // £12.34
+console.log(toPounds("399p")); // £3.99
+console.log(toPounds(500)); //  TypeError: penceStr.slice is not a function
