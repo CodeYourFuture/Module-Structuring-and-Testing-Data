@@ -15,5 +15,18 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+  const bmi = weight / (height * height);
+  return bmi.toFixed(1);
+  // return the BMI of someone based off their weight and height
 }
+console.log(`Your BMI is ${calculateBMI(68, 1.6)}`);
+//Output : Your BMI is 26.6
+
+//Explanation :
+//Initially I wrote this code as below and got output
+// function calculateBMI(weight, height) {
+//     return weight / (height * height);
+//         }
+//I got the BMI calculation right and got the output : 26.562499999999996
+//But I still needed the decimal place to be limited to 1. So I looked up mdn for toFixed method and applied that to the code
+//The new code with toFixed method has given me the output I wanted
