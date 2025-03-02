@@ -30,7 +30,7 @@
 
 //Refactoring Code :
 function upperSnakeCase(str) {
-  return str.replace(" ", "_").toUpperCase();
+  return str.replaceAll(" ", "_").toUpperCase();
 }
 console.log(`converting hello there to ${upperSnakeCase("hello there")}`);
 console.log(
