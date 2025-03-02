@@ -22,8 +22,8 @@
 
 // Explain why the output is the way it is
 // =============> write your explanation here
-//I think the output is this way because we have declared num as a const variable, it should be declared as a parameter
-//So each time it will return different output that matches with input
+//I think the output is this way because toString method is taking the input from global variable namely num instead of the parameter inside a function
+//To fix the code, we can remove global variable and instead declare it as a parameter
 // Finally, correct the code to fix the problem
 // =============> write your new code here
 function getLastDigit(num) {
