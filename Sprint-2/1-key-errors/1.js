@@ -24,9 +24,9 @@
 // =============> write your new code here
 //
 function convertToPercentage(decimalNumber) {
-  decimalNumber = 0.5;
+  // decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
 }
-console.log(convertToPercentage());
+console.log(convertToPercentage(0.5));
