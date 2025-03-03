@@ -33,7 +33,9 @@ test("should identify Straight angle (180°)", () => {
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
-test("should identify Reflex angle (270°)", () => {
+test("should identify Reflex angle is in interval (180°,360°)", () => {
   expect(getAngleType(270)).toEqual("Reflex angle");
+  expect(getAngleType(359)).toEqual("Reflex angle");
+  expect(getAngleType(180.001)).toEqual("Reflex angle");
 });
 
