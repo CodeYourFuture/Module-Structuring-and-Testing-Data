@@ -6,11 +6,12 @@ test("valid credit card number", () => {
     expect(result).toBe(true);
 });
 
-test("credit card with only one digit type", () => {
+test("Expect false when credit card contains only one repeated digit", () => {
     const cardNumber = "4444444444444444";
     const result = isValidCreditCard(cardNumber);
     expect(result).toBe(false);
 });
+
 
 test("credit card with odd final digit", () => {
     const cardNumber = "6666666666666661";
