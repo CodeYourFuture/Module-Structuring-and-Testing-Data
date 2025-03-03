@@ -1,5 +1,9 @@
 const passwordValidator = require("./passwordValidator");
 
+test("Expect false when password is missing a lowercase letter and a special character", () => {
+    expect(passwordValidator("123A5")).toBe(false);
+});
+
 test("Expect false when password is too short", () => {
     expect(passwordValidator("A1!")).toBe(false);
 });
