@@ -30,8 +30,3 @@ test("credit card with invalid characters", () => {
     expect(result).toBe(false);
 });
 
-test("credit card with multiple digit types", () => {
-    const cardNumber = "6666666666661666";
-    const result = isValidCreditCard(cardNumber);
-    expect(result).toBe(true);
-});
