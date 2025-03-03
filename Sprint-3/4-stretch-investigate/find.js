@@ -33,4 +33,5 @@ it will check the current char Index  match char.if it match it will return inde
 // To increment index value .so we can check whole string and loop can continue till last char of string .
 // every time with index++ ity gave new index for next character in String.
 // d) What is the condition index < str.length used for?
-//It insure loop will stop when our index should be greater then length of string.eg: 17<16 it will stop as string length is 16.
+//It insure loop will stop when our index is equal to the length of string.eg: 16<16 
+// it will stop as string length is 16 and char is not found index will reach 16.
