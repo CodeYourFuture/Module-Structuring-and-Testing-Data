@@ -23,7 +23,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 
 /* 
-a) Function calls were made in lines 4, 5 and 10
+a) There are 3 Function calls in this file and they were made in lines 4, 5 and 10
 
 b) The error is coming from line 5
 Type of error is SyntaxError: missing ) after argument list
