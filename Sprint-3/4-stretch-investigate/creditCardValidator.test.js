@@ -22,7 +22,7 @@ test("card number with non-numeric character should return false", ()=> {
 
 // if card number have all same digit return false
 test("card number where all digit should be same should return false ", ()=> {
-    expect(validateCardNumber("1111111111111111")).toEqual(false);
+    expect(validateCardNumber("8888888888888888")).toEqual(false);
 });
 
 // if card number last digit is odd
