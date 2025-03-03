@@ -1,22 +1,9 @@
 function isProperFraction(numerator, denominator) {
-    
-    if (Math.abs(numerator) < Math.abs(denominator)) {
-        return true;
-    }
-    // add your completed function from key-implement here
-
     if (denominator === 0) {
-        return "Undefined"; 
+        throw new Error("Denominator cannot be 0"); // More appropriate than returning a string
     }
 
-   
-
-    // Case 3: Improper fraction (absolute numerator >= absolute denominator)
-    if (Math.abs(numerator) >= Math.abs(denominator)) {
-        return false;
-    }
+    return Math.abs(numerator) < Math.abs(denominator);
 }
-
-
 
 module.exports = isProperFraction;
