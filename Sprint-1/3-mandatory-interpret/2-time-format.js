@@ -24,7 +24,6 @@ console.log(result);
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 
-
 /* 
 a) There are 6 variable declarations in the program: lines 1, 3, 4, 6, 7 and 9
 
@@ -44,7 +43,7 @@ While the expression: / 60, converts seconds to minutes
 which is 8760 / 60 = 146 (and this means 146 full minutes)
 
 e) The variable result creates a time string which represents the movie duration in HH:MM:SS format
-A better name would be time
+A better name would be MovieDuration
 
 f) Yes, the code works for all values of movie length.
 It converts the length of movie in seconds to hours, minutes and seconds
