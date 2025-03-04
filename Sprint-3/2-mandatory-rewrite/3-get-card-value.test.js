@@ -33,5 +33,8 @@ test("should return 11 for handleAce", () => {
 test("should throw an error for invalid card input", () => {
     expect(() => getCardValue(" ")).toThrow("Invalid card rank.");
     expect(() => getCardValue("X♠")).toThrow("Invalid card rank.");
+    expect(() => getCardValue("02♠")).toThrow("Invalid card rank.");
+    expect(() => getCardValue("0x02♠")).toThrow("Invalid card rank.");
+    expect(() => getCardValue("2.1♠")).toThrow("Invalid card rank.");
   });
   
