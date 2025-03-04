@@ -14,13 +14,46 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+const passwordValidator = require("./password-validator");
+
+test("Valid password, meets all requirements", () => {
+  const passwords = [];
+  const password ="Test1!";
+  const result = passwordValidator(password, passwords);
+  expect(result).toBe(true);
+});
+
+test(" Invalid password, has no English uppercase letter (A-Z)", () => {
+  const passwords = [];
+  const password = "test2!";
+  const result = passwordValidator(password, passwords);
+  expect(result).toBe(false);
+});
+
+test("Invalid password has no English lowercase letter (a-z)", () => {
+  const passwords = [];
+  const password = "TEST3!";
+  const result = passwordValidator(password, passwords);
+  expect(result).toBe(false);
+});
+
+test("Invalid password has no number (0-9)", () => {
+  const passwords = [];
+  const password = "Test!";
+  const result = passwordValidator(password, passwords);
+  expect(result).toBe(false);
+});
+
+test("Invalid password has no non-alphanumeric symbols", () => {
+  const passwords = [];
+  const password = "Test5";
+  const result = passwordValidator(password, passwords);
+  expect(result).toBe(false);
+});
+
+test("password must not be any previous password in the passwords array", () => {
+  const passwords = ["Test5!"];
+  const password = "Test6!";  
+  const result = passwordValidator(password, passwords);
+  expect(result).toBe(true);
+});
