@@ -10,8 +10,8 @@
 function getCardValue(card) {
     rank=card.slice(0,-1)
     if (rank === "A") return 11;
-    if (["2", "3","4","5","7","8", "9"].includes(rank)) return Number(rank);
-    if (["10", "J", "Q", "k"].includes(rank)) return 10;
+    if (["2", "3","4","5","7","8", "9","10"].includes(rank)) return Number(rank);
+    if ([ "J", "Q", "k"].includes(rank)) return 10;
     throw new Error("Invalid card rank.");
     
    
@@ -53,7 +53,6 @@ assertEquals(queenofHearts, 10);
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
-const invalidity = getCardValue("M♥");
 
 try {
   getCardValue("M♥");
