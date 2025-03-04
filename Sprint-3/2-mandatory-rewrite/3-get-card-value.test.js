@@ -16,12 +16,10 @@ test("should return correct value for number cards 2-10", () => {
 
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return 10 for Face Cards(J, Q, K)", () => {
-    const faceCardsJack = getCardValue("J♠");
-    const faceCardsQueen = getCardValue("Q♠");
-    const faceCardsKing = getCardValue("K♠");
-    expect(faceCardsJack).toEqual(10);
-    expect(faceCardsQueen).toEqual(10);
-    expect(faceCardsKing).toEqual(10);
+    expect(getCardValue("J♠")).toEqual(10);
+    expect(getCardValue("Q♠")).toEqual(10);
+    expect(getCardValue("K♠")).toEqual(10);
+    
     });
 
 
