@@ -17,6 +17,7 @@ test("should count multiple occurrences of a character", () => {
   expect(count).toEqual(5);
 });
 
+console.log(countChar('cccaaaaa', 'c'))
 // Scenario: No Occurrences
 // Given the input string str,
 // And a character char that does not exist within the case-sensitive str,
