@@ -11,11 +11,11 @@ const repeat = require("./repeat");
 
 test("should repeat the string count times", () => {
     const str = "hello";
-    const count = 3;
+    const count = 2;
     const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("hellohellohello");
+    expect(repeatedStr).toEqual("hellohello");
     });
-
+    console.log(repeat("hello", 2))
 // case: handle Count of 1:
 // Given a target string str and a count equal to 1,
 // When the repeat function is called with these inputs,
