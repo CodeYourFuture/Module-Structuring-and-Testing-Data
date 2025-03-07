@@ -15,6 +15,6 @@ test("should return true for a negative fraction", () => {
 });
 
 // Case 4: Identify Equal Numerator and Denominator:
-test("should return true for an equal numerator and demnomiator fraction", () => {
-  expect(isProperFraction(3, 3)).toEqual(true);
+test("should return false for an equal numerator and demnomiator fraction", () => {
+  expect(isProperFraction(3, 3)).toEqual(false);
 });
