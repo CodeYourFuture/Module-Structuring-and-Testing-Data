@@ -21,8 +21,7 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
-// Then it should return the numerical card value
-const aceofSpades = getCardValue("A♠");
+// Then it should return the numerical card valueconst aceofSpades = getCardValue("A♠");
 assertEquals(aceofSpades, 11);
 
 // Handle Number Cards (2-10):
