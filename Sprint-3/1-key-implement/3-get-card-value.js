@@ -7,9 +7,6 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
-function getCardValue(card) {
-    if (rank === "A") return 11;
-}
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
@@ -49,3 +46,39 @@ const fiveofHearts = getCardValue("5♥");
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+  const rank = card.slice(0, -1); // Extract the rank (everything except the suit emoji)
+
+  if (rank === "A") return 11;
+  if (rank === "J" || rank === "Q" || rank === "K" || rank === "10") return 10;
+  if (parseInt(rank) >= 2 && parseInt(rank) <= 9) return parseInt(rank);
+  
+  throw new Error("Invalid card rank");
+}
+
+
+// Test for Ace
+const aceofSpades = getCardValue("A♠");
+assertEquals(aceofSpades, 11);
+
+// Test for number cards
+const fiveofHearts = getCardValue("5♥");
+assertEquals(fiveofHearts, 5);
+
+// Test for face cards (J, Q, K)
+const jackOfSpades = getCardValue("J♠");
+assertEquals(jackOfSpades, 10);
+
+const queenOfSpades = getCardValue("Q♠");
+assertEquals(queenOfSpades, 10);
+
+const kingOfSpades = getCardValue("K♠");
+assertEquals(kingOfSpades, 10);
+
+// Test for invalid card
+try {
+  getCardValue("X♠");
+} catch (error) {
+  assertEquals(error.message, "Invalid card rank");
+}
