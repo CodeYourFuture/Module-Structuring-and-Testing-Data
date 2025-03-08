@@ -56,6 +56,5 @@ assertEquals(straight, "Straight angle");
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
-const reflex = getAngleType(270);
-assertEquals(reflex, "Reflex angle");
+assertEquals(getAngleType(270), "Reflex angle");
 console.log("\nAll tests completed.");
