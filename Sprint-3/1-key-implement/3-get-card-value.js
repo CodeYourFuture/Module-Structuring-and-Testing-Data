@@ -9,9 +9,11 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
   const rank = card.slice(0, -1);
+
   if (rank === "A") return 11;
   if (["K", "Q", "J", "10"].includes(rank)) return 10;
-  if (!isNaN(rank) && rank >= 2 && rank <= 9) return Number(rank);
+  if (/^[2-9]$/.test(rank)) return Number(rank); // Ensure it's a single digit 2-9
+
   throw new Error("Invalid card rank");
 }
 
@@ -71,6 +73,30 @@ try {
 
 try {
   getCardValue("Z♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("010♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("02♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("0x02♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("2.1♠");
 } catch (error) {
   console.log("Caught expected error:", error.message);
 }
