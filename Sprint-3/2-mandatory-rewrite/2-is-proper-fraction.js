@@ -1,13 +1,17 @@
 function isProperFraction(numerator, denominator) {
-    // Handle cases where the denominator is zero or less
-    if (denominator <= 0) {
-        throw new Error('Denominator must be greater than zero');
+    // Handle case where the denominator is zero
+    if (denominator === 0) {
+      throw new Error('Denominator cannot be zero');
     }
   
-    // Proper fraction if absolute value of numerator is less than denominator
-    return Math.abs(numerator) < Math.abs(denominator);
+    // A proper fraction is one where the absolute value of the numerator is less than the denominator
+    if (Math.abs(numerator) < Math.abs(denominator)) {
+      return true;
+    }
+  
+    // Otherwise, it's an improper fraction
+    return false;
   }
   
-
-
-module.exports = isProperFraction;
+  module.exports = isProperFraction;
+  

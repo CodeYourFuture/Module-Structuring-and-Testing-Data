@@ -1,23 +1,33 @@
 const isProperFraction = require("./2-is-proper-fraction");
 
+
 test("should return true for a proper fraction", () => {
   expect(isProperFraction(2, 3)).toEqual(true);
 });
 
-// Case 2: Identify Improper Fractions:
 test("should return false for an improper fraction", () => {
   expect(isProperFraction(5, 3)).toEqual(false);
   expect(isProperFraction(6, 6)).toEqual(false);  // Equal numerator and denominator
 });
 
-// Case 3: Identify Negative Fractions:
 test("should return true for a negative proper fraction", () => {
-  expect(isProperFraction(-2, 3)).toEqual(true);
- 
+  expect(isProperFraction(-2, 3)).toEqual(true);c
 });
 
-test("should return false for a negative improper fraction", () => {
-  expect(isProperFraction(-5, 3)).toEqual(false);
-  expect(isProperFraction(5, -3)).toEqual(false);
+
+
+test("should return false for equal numerator and denominator (improper fraction)", () => {
+  expect(isProperFraction(5, 5)).toEqual(false);  // This is an improper fraction
+  expect(isProperFraction(-5, -5)).toEqual(false); // This is an improper fraction too
 });
-// Case 4: Identify Equal Numerator and Denominator:
+
+test("should return false for a fraction with zero denominator", () => {
+  expect(() => isProperFraction(2, 0)).toThrow("Denominator cannot be zero");
+});
+
+test("should return true for a fraction with zero numerator", () => {
+  expect(isProperFraction(0, 3)).toEqual(true);  // 0/3 is a valid proper fraction
+});
+
+
+
