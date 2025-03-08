@@ -12,7 +12,6 @@ function getCardValue(card) {
   if (rank === "A") return 11;
   else if (rank === "J" || rank === "Q" || rank === "K") return 10;
   else if (
-    !isNaN(rank) &&
     Number.isInteger(+(rank)) &&
     Number(rank) < 10 &&
     Number(rank) > 1 
