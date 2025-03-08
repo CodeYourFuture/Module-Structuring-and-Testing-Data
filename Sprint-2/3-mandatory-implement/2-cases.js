@@ -14,3 +14,27 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toUpperSnakeCase(inputString) {
+    return inputString.toUpperCase().replace(/ /g, '_');
+}
+
+function welcomeMessage() {
+    let welcome = "hello there";
+    console.log(toUpperSnakeCase(welcome));
+} 
+
+
+function movieTitle() {
+    let movie = "lord of the rings";
+    console.log(toUpperSnakeCase(movie));
+}
+
+
+function unrelatedFunction() {
+    console.log("This function does something else.")
+}
+
+welcomeMessage();
+movieTitle();
+unrelatedFunction();
