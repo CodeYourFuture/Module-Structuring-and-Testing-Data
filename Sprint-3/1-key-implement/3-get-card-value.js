@@ -14,12 +14,12 @@ function getCardValue(card) {
   const rank = card.charAt(0);
   if (rank === "A") {
     return 11;
-  } else if (rank === "K") {
+  } else if (rank === "K" || rank === "Q" || rank === "J") {
     return 10;
-  } else if (rank === "Q") {
-    return 10;
-  } else if (rank === "J") {
-    return 10;
+    // } else if (rank === "Q") {
+    //   return 10;
+    // } else if (rank === "J") {
+    //   return 10;
   } else if (rank === "2") {
     return 2;
   } else if (rank === "3") {
