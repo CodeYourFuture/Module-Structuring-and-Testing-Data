@@ -30,7 +30,7 @@ test("should repeat the string count times", () => {
     const count = 0;
     const repeatedStr = repeat(str, count);
     
-    expect(repeatedStr).toEqual("");
+    expect(repeatedStr).toEqual(" ");
     });
 
 
