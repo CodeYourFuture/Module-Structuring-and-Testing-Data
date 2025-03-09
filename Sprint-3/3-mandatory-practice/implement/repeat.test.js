@@ -29,8 +29,8 @@ test("should repeat the string count times", () => {
     const str = "hello";
     const count = 0;
     const repeatedStr = repeat(str, count);
-    console.log(repeat("hello",0))
-   // expect(repeatedStr).toEqual("");
+    
+    expect(repeatedStr).toEqual("");
     });
 
 
