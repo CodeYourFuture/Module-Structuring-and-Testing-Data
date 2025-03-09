@@ -23,6 +23,8 @@ test("should return 0 if character is not found", () => {
   const char = "b";
   const count = countChar(str, char);
   expect(count).toEqual(0);
+});
+
 // Given the input string str,
 
 test("should be case-sensitive", () => {
