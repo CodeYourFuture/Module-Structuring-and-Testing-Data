@@ -1,9 +1,15 @@
 function getCardValue(card) {
-    // replace with your code from key-implement
-        if (!isNaN(card)) {
-            return parseInt(card);
+    // replace with your code from key-implementif 
+        if (typeof card !== "string" || card.length < 1) {
+            throw new Error("Invalid card value");
         }
-        switch (card) {
+        const cardRank = card.replace(/[♠♣♦♥]/g, '');
+    
+        if (!isNaN(cardRank)) {
+            return parseInt(cardRank); 
+        }
+        
+        switch (cardRank) {
             case 'J':
             case 'Q':
             case 'K':

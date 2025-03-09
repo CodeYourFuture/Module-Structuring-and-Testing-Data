@@ -28,5 +28,12 @@ test("should return 11 for Ace of Spades", () => {
 });
 // Case 5: Handle Invalid Cards:
 test("should throw an error for empty string", () => {
+    expect(() => getCardValue("1")).toThrow("Invalid card value");
+});
+test("should throw an error for invalid card", () => {
+    expect(() => getCardValue("X")).toThrow("Invalid card value");
+});
+
+test("should throw an error for empty string", () => {
     expect(() => getCardValue("")).toThrow("Invalid card value");
 });
