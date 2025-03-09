@@ -44,8 +44,8 @@ assertEquals(fiveOfHearts, 5);
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-const blackOFJacks =getCardValue("10");
-assertEquals(blackOfJack, 10);
+const blackOfJacks =getCardValue("10");
+assertEquals(blackOfJacks, 10);
 
 // Handle C(A):
 // Given a card with a rank of "A",

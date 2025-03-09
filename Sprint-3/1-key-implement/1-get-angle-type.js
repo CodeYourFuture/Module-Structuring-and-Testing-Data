@@ -51,7 +51,7 @@ assertEquals(acute, "Acute angle");
 // Then the function should return "Obtuse angle"
 test("should return 'Obtuse angle' for angle 120",() =>{
 const obtuse = getAngleType(120);
-assertEquals(obtuse, "Obtuse angles");
+assertEquals(obtuse, "Obtuse angle");
 });
 // ====> write your test here, and then add a line to pass the test in the function above
 
@@ -61,14 +61,14 @@ assertEquals(obtuse, "Obtuse angles");
 // ====> write your test here, and then add a line to pass the test in the function above
 
 test("should return 'Straight angle' for angle 180",() =>{
-const Straight = getAngleType(180);
-assertEquals(straight, "Straight angles");
+const straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
 });
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 // ====> write your test here, and then add a line to pass the test in the function above
 test("should return 'Reflex angle' for angle 200",() =>{
-const obtuse = getAngleType(200);
-assertEquals(reflex, "Reflex angles");
+const reflex = getAngleType(200);
+assertEquals(reflex, "Reflex angle");
 });
