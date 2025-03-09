@@ -5,7 +5,21 @@ test("should return true for a proper fraction", () => {
 });
 
 // Case 2: Identify Improper Fractions:
+test("should return false for an improper fraction", () => {
+  expect(isProperFraction(4, 3)).toEqual(false);
+  expect(isProperFraction(5, 2)).toEqual(false);
+});
 
 // Case 3: Identify Negative Fractions:
+test("should handle negative numerators and denominators", () => {
+  expect(isProperFraction(-1, 2)).toEqual(true);
+  expect(isProperFraction(1, -2)).toEqual(true);
+  expect(isProperFraction(-3, -2)).toEqual(false);
+  expect(isProperFraction(-2, -3)).toEqual(true);
+});
 
 // Case 4: Identify Equal Numerator and Denominator:
+test("should return false for equal numerator and denominator", () => {
+  expect(isProperFraction(3, 3)).toEqual(false);
+  expect(isProperFraction(1, 1)).toEqual(false);
+});
