@@ -8,8 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  if (card.startsWith("10")) {
-    // Check for "10" before extracting first character
+  if (card === "10" || /^10[♠♥♦♣]$/.test(card)) {
     return 10;
   }
   const rank = card.charAt(0);
@@ -21,8 +20,6 @@ function getCardValue(card) {
     return 10;
   } else if (rank === "J") {
     return 10;
-  } else if (rank === "1") {
-    return 1;
   } else if (rank === "2") {
     return 2;
   } else if (rank === "3") {
