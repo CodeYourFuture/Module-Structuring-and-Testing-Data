@@ -7,9 +7,21 @@ test("should return 11 for Ace of Spades", () => {
 
 // Case 2: Handle Number Cards (2-10):
 
-test("should return 2 for 2 of Hearts", () => {
+/*test("should return 2 for 2 of Hearts", () => {
     expect(getCardValue("2♥")).toEqual(2);
+});*/
+test("should return the number of number cards", () => {
+    for (let value = 2; value <= 10; value++) {
+        ["♥", "♦", "♣", "♠"].forEach(suit => {
+        const card = '${value}${suit}';
+    expect(getCardValue(card)).toEqual(value);
+        });
+    } 
 });
+
+
+
+
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return 10 for Jack of Diamonds", () => {
     expect(getCardValue("J♦")).toEqual(10);
