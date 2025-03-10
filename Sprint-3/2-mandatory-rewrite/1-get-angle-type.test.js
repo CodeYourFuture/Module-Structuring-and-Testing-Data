@@ -30,4 +30,6 @@ test("should identify straight angle (180°)", () => {
 // Then the function should return "Reflex angle"
 test("should identify reflex angle (180° < angle < 360°)", () => {
   expect(getAngleType(200)).toEqual("Reflex angle");
+  expect(getAngleType(359)).toEqual("Reflex angle");  
+  expect(getAngleType(181)).toEqual("Reflex angle");  
 });
