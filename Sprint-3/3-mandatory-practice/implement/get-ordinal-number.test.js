@@ -57,4 +57,10 @@ test("should return '100th' for 100", () => {
 });
 
 // Case 7: Handle invalid input.
-//  an error for negative numbers and for non-number inputs. I can't make it. (: 
+    test("getOrdinalNumber - Invalid Inputs", () => {
+        expect(getOrdinalNumber("ten")).toBe("Invalid input: Please provide a positive integer.");
+        expect(getOrdinalNumber("100")).toBe("Invalid input: Please provide a positive integer.");
+        expect(getOrdinalNumber(null)).toBe("Invalid input: Please provide a positive integer.");
+        expect(getOrdinalNumber(3.5)).toBe("Invalid input: Please provide a positive integer.");
+        expect(getOrdinalNumber(-10)).toBe("Invalid input: Please provide a positive integer.");
+    });
