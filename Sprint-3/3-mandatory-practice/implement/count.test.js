@@ -11,10 +11,10 @@ const countChar = require("./count");
 // Then it should correctly count overlapping occurrences of char (e.g., 'a' appears five times in 'aaaaa').
 
 test("should count multiple occurrences of a character", () => {
-  const str = "Baha";
+  const str = "aaaaa";
   const char = "a";
   const count = countChar(str, char);
-  expect(count).toEqual(2);
+  expect(count).toEqual(5);
 });
 
 // Scenario: No Occurrences
