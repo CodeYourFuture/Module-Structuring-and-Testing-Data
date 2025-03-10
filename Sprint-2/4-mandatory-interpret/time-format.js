@@ -26,7 +26,7 @@ console.log(formatTimeDisplay(61));
 // =============> 0
 
 // c) What is the return value of pad is called for the first time?
-// =============> Totalhours (pad(totalHours)})  The first call to pad(num) is for totalHours = 0.
+// =============> Totalhours (pad(totalHours)})  The first call to pad(num) is for totalHours = 00.
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> 01, the last pad call is for variable remaining seconds whose value is set for remainder of seconds which is parameter seconds.
