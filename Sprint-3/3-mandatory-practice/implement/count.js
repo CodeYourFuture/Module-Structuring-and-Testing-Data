@@ -1,6 +1,4 @@
 function countChar(str, char) {
-  console.log(`str: '${str}', char: '${char}', char length: ${char.length}`);
-
   if (typeof str !== "string") {
     throw new Error("Invalid input: str must be a string");
   }
