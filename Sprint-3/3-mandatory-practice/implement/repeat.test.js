@@ -36,5 +36,5 @@ test("should return an empty string when count is 0", () => {
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 test("should throw an error for negative count", () => {
-  expect(repeat("hello", -1)).toEqual("Count cannot be negative");
+  expect(() => repeat("hello", -1)).toThrow("Count cannot be negative");
 });
