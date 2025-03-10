@@ -34,6 +34,14 @@ test("should return 10 for Queen of Clubs", () => {
 test("should return 10 for King of Spades", () => {
     expect(getCardValue("K♠")).toEqual(10);
 });
+test("should return 10 for J, Q, K", () => {  
+    expect(getCardValue("J♦")).toEqual(10);  
+    expect(getCardValue("Q♣")).toEqual(10);  
+    expect(getCardValue("K♠")).toEqual(10);  
+});
+
+
+
 // Case 4: Handle Ace (A):
 test("should return 11 for Ace of Spades", () => {
     expect(getCardValue("A♠")).toEqual(11);
