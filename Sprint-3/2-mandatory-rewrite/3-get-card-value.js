@@ -4,8 +4,8 @@ function getCardValue(card) {
             throw new Error("Invalid card value");
         }
         const cardRank = card.replace(/[♠♣♦♥]/g, '');
-    
-        if (!isNaN(cardRank)) {
+
+       /* if (!isNaN(cardRank)) {
             return parseInt(cardRank); 
         }
         
@@ -19,5 +19,15 @@ function getCardValue(card) {
             default:
                 throw new Error("Invalid card value"); 
         }
-    }
+    }*/
+
+        // new code:
+            const validRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+            if (!validRanks.includes(cardRank)) {
+                throw new Error("Invalid card value");
+            };
+            if (cardRank === "A") return 11;
+            if (["J", "Q", "K"].includes(cardRank)) return 10;
+               return Number(cardRank);
+            };
     module.exports = getCardValue;

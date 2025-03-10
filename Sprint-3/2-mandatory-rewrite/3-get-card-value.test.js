@@ -37,3 +37,19 @@ test("should throw an error for invalid card", () => {
 test("should throw an error for empty string", () => {
     expect(() => getCardValue("")).toThrow("Invalid card value");
 });
+
+test("should throw an error for invalid card", () => {
+    expect(() => getCardValue("1234♠")).toThrow("Invalid card value");
+});
+test("should throw an error for invalid card", () => {
+    expect(() => getCardValue("010♠")).toThrow("Invalid card value");
+});
+test("should throw an error for invalid card", () => {
+    expect(() => getCardValue("02♠")).toThrow("Invalid card value");
+});
+test("should throw an error for invalid card", () => {
+    expect(() => getCardValue("0x02♠")).toThrow("Invalid card value");
+});
+test("should throw an error for invalid card", () => {
+    expect(() => getCardValue("2.1♠")).toThrow("Invalid card value");
+});
