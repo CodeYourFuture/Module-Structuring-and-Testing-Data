@@ -26,13 +26,19 @@ test("should return '4th' for 4", () => {
 });
 
 // Case 5: Check for numbers ending in 11, 12, 13 (special cases)
-test("should return '11th' for 11", () => {
+/*test("should return '11th' for 11", () => {
     expect(getOrdinalNumber(11)).toEqual("11th");
 });
 test("should return '12th' for 12", () => {
     expect(getOrdinalNumber(12)).toEqual("12th");
 });
 test("should return '13th' for 13", () => {
+    expect(getOrdinalNumber(13)).toEqual("13th");
+});
+*/
+test("should return '11th' for 11,'12th' for 12,'13th' for 13", () => {
+    expect(getOrdinalNumber(11)).toEqual("11th");
+    expect(getOrdinalNumber(12)).toEqual("12th");
     expect(getOrdinalNumber(13)).toEqual("13th");
 });
 
