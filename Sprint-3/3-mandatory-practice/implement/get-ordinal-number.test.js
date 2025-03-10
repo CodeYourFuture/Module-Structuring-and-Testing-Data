@@ -23,10 +23,6 @@ test("should return '63rd' for 63", () => {
   expect(getOrdinalNumber(63)).toBe("63rd");
 });
 
-test("should return '63d' for 63", () => {
-  expect(getOrdinalNumber(63)).toBe("63rd");
-});
-
 test("should return '13th' for 13 (special case)", () => {
   expect(getOrdinalNumber(13)).toBe("13th");
 });
