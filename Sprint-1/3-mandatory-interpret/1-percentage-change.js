@@ -13,7 +13,18 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 //ans- There are 5 function calls:
-//carPrice = Number(carPrice.replaceAll(",", ""));
+//replaceAll() is called two times, once in carPrice and another in PriceAfterOneYear, in line 4 and 5.
+//Line 3: carPrice.replaceAll(",", "")
+//Line 4: priceAfterOneYear.replaceAll(",", "")
+
+// Number() is also called twice to convert in to the string, after replaceAll() is done into the numbers, in line 4 and 5.
+//Line 3: Number(carPrice.replaceAll(",", ""))
+//Line 4: Number(priceAfterOneYear.replaceAll(",", ""))
+
+// console.log() is called to print the percentage change in line 10.
+//Line 10: console.log(`The percentage change is ${percentageChange}`);
+
+
 //priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 //console.log(`The percentage change is ${percentageChange}`);
 
