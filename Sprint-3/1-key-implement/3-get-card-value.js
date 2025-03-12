@@ -51,9 +51,6 @@ function assertEquals(actualOutput, targetOutput) {
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
-const aceofSpades = getCardValue("A♠");
-assertEquals(aceofSpades, 11);
-
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
 // When the function is called with such a card,
@@ -73,15 +70,17 @@ assertEquals(kingofHearts, 10);
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
-//const aceofSpades = getCardValue("A♠");
-//assertEquals(aceofSpades, 11);
+const aceofSpades = getCardValue("A♠");
+assertEquals(aceofSpades, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
 try {
-  getCardValue();
+  getCardValue("B♥");
 } catch (error) {
   console.log("Invalid card test passed:", error.message);
 }
+// When the function is called with "B♥" which is an invalid card, it throws an error with an error message
