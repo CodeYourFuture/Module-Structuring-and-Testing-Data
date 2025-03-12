@@ -1,5 +1,8 @@
 function cardValidator(cardNum) {
-    const cardStr = cardNum.toString(); // convert number to string to check its length and digits
+    const cardStr = cardNum.toString(); // convert cardNum to string 
+  if (!/^\d+$/.test(cardStr)) {
+      return false; // return false if card number contains non-digit characters
+    } 
   if (cardStr.length !== 16) {
     return false; // 16 characters length requirement
   }

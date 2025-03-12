@@ -42,10 +42,8 @@ test("should return an empty string, ensuring that a count of 0 results in an em
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
-test("should throw an error or return an appropriate error message", () => {
-  const str = "hello";
+test("should throw an error for negative numbers", () => {
   const count = -5;
-  expect("Error: negative numbers are not allowed").toEqual(
-    "Error: negative numbers are not allowed"
-  );
+  expect(() => checkForNegativeNumber(count)).toThrow();
 });
+

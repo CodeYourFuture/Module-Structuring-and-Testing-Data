@@ -9,20 +9,30 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
   let rank = card.slice(0, -1); // Extract the rank by removing the suit
-    if (rank === "A") return 11;
-    else if (rank >= 2 && rank <= 9) return Number(rank);
-    else if (["K", "Q", "J", "10"].includes(rank)) return 10;
-    else return "Invalid Card Rank";
+  if (/[^0-9A-K]/.test(rank)) {
+    throw new Error("Invalid Card Rank");
+  } 
+  if (rank === "A") return 11;
+  else if (rank === "10") return 10;
+  else if (rank >= 2 && rank <= 9) return Number(rank);
+  else if (["K", "Q", "J"].includes(rank)) return 10;
+  else return "Invalid Card Rank";
 }
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
 function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
+  try {
+    if (typeof targetOutput === "number") {
+      console.assert(actualOutput === targetOutput, `Expected ${actualOutput} to equal ${targetOutput}`);
+    } else {
+      // If we expect an error, we check if one was thrown
+      throw new Error("Expected error but none was thrown");
+    }
+  } catch (e) {
+    console.assert(e.message === targetOutput, `Expected error message '${targetOutput}' but got '${e.message}'`);
+  }
 }
 // Acceptance criteria:
 
@@ -60,7 +70,14 @@ assertEquals(aceofHearts, 11);
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
-// Then it should throw an error indicating "Invalid card rank."
-const joker = getCardValue("1🃏");
-assertEquals(joker, "Invalid Card Rank" );
+// Then it should throw an error indicating "Invalid card rank.
+try {
+  const joker = getCardValue("1🃏");
+  assertEquals(joker, "Invalid Card Rank"); // This will no longer be hit since error is thrown
+} catch (e) {
+  assertEquals(e.message, "Invalid Card Rank");
+}
 
+
+const tenofSpades = getCardValue("010♠");
+assertEquals(tenofSpades, 10);

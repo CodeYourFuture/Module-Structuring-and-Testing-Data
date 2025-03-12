@@ -57,3 +57,11 @@ test("password must not be any previous password in the passwords array", () => 
   const result = passwordValidator(password, passwords);
   expect(result).toBe(true);
 });
+
+// Test case to check if the function correctly returns false for duplicate passwords
+test("should return false if the password already exists in the passwords array", () => {
+  const passwords = ["Test1!", "Password123$", "HelloWorld5&"];
+  const password = "Test1!";
+  const result = passwordValidator(password, passwords);
+  expect(result).toBe(false); 
+});

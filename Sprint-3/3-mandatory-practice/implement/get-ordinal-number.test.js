@@ -13,7 +13,9 @@ test("should return '1st' for 1", () => {
 });
 
 test("should return '2nd' for 2", () => {
-  expect(getOrdinalNumber(2)).toEqual("2nd"); // test to handle case like 1, 11, 111
+  expect(getOrdinalNumber(2)).toEqual("2nd"); // test to handle case like 1, 11, 111 
+  expect(getOrdinalNumber(22)).toEqual("22nd");  
+  expect(getOrdinalNumber(992)).toEqual("992nd");
 });
 test("should return '11th' for 11", () => {
   expect(getOrdinalNumber(11)).toEqual("11th"); //test to handle 11th special case
