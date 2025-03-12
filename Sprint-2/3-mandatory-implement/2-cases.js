@@ -16,7 +16,8 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function upperCase(input) {
-  return input.toUpperCase();
+  const upperCaseInput = input.toUpperCase()
+  return upperCaseInput.replaceAll(" ", "_");
 }
 
 console.log(upperCase("hello there"));
