@@ -1,5 +1,5 @@
 // Predict and explain first...
-//  =============> write your prediction here //the function is no working
+//  =============> write your prediction here //The function sum(a, b) will return undefined.
 
 function sum(a, b) {
   return;

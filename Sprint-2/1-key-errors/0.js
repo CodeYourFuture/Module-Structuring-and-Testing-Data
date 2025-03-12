@@ -15,7 +15,7 @@ function capitalise(str) {
 //str already claimed in function (link 9), It can't reclaim str in link 10 by using let in function
 // =============> write your new code here
 
-function capitalise(str){
+function capitalise(str) {
   str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str
 }
