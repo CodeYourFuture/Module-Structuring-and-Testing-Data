@@ -4,8 +4,7 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  let minutes = time.slice(3, 5);
-  minutes = minutes.padStart(2, '0');
+  let minutes = (time.slice(3, 5)).padStart(2, '0');
   if (hours > 12) {
     return `${hours - 12}:${minutes} pm`;
   }
