@@ -7,11 +7,11 @@ let lastName = "Johnson";
 
 // declaring variables for each name and take out fist character
 
-let fname_initials = `${firstName.charAt(0)}`;
-let midname_initials = `${middleName.charAt(0)}`;
-let lastname_initials= `${lastName.charAt(0)}`;
+let fnameInitial = firstName.charAt(0);
+let midnameInitial = middleName.charAt(0);
+let lastnameInitial= lastName.charAt(0);
 
-console.log("The letters are ",fname_initials,midname_initials,lastname_initials);
+console.log("The letters are ",fnameInitials,midnameInitials,lastnameInitials);
 
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
