@@ -15,7 +15,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
-store data for a while 
+It stores data temporarily on the browser's memory when it is open and disappear when refresh the browser . 
 
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 // (.) is for accessing the object's method
