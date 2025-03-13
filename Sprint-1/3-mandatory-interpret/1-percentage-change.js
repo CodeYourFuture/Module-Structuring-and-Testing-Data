@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-        // 2 functions calls are there . Line 7 and 8
+        // 2 functions calls are there . Line 4 and 5 Number function.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
         //Error at Line 5. There are is cause of missing (,) in replace method . It can be fixed by putting (,) between arguments  at replace method() 
