@@ -7,6 +7,7 @@
 
 function toPounds(penceString)
 {
+
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
@@ -30,5 +31,5 @@ const pence = paddedPenceNumberString
 }
 
 
-change =  toPounds("499p");
+change =  toPounds("399p");
 console.log(`The result is ${change}`);
