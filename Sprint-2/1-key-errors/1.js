@@ -6,23 +6,22 @@
 
 // Try playing computer with the example to work out what is going on
 
-function convertToPercentage(decimalNumber) {
+//function convertToPercentage(decimalNumber) {
   //const decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
 
+  //return decimalNumber;
+//}
+
+
+// =============> write your explanation here
+//Ans : The same variable from function is assign again in the function body .
+
+// Finally, correct the code to fix the problem
+// =============> 
+  function convertToPercentage(decimalNumber) 
+  {
+  const percentage = `${decimalNumber * 100}%`;
   return percentage;
 }
 let number = convertToPercentage(0.5);
 console.log(`The result is ${number}`);
-
-// =============> write your explanation here
-
-// Finally, correct the code to fix the problem
-// =============> 
-  //function convertToPercentage(decimalNumber) 
-  // {
-  //const percentage = `${decimalNumber * 100}%`;
-  //return percentage;
-//}
-//let number = convertToPercentage(0.5);
-// console.log(`The result is ${number}`);
