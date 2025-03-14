@@ -2,7 +2,8 @@
 
 // Why will an error occur when this program runs?
 // =============> write your prediction here
-
+//// The variable decimalNmber has been declared twice once as a parameter for convertToPercentage
+// function and the second time inside the function
 // Try playing computer with the example to work out what is going on
 /* 
 function convertToPercentage(decimalNumber) {
