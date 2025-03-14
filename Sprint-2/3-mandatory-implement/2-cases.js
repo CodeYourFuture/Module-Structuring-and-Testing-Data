@@ -13,13 +13,4 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
-// This might help 
-
-
-function UpperSnake (words){
-upper = words.toUpperCase().replaceAll(" ","_");
-return upper;
-}
-
-uppercase = UpperSnake("Ricardo Sarawone");
-console.log(`The uppercase is ${uppercase}`);
+// This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase

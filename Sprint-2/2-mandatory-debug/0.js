@@ -1,19 +1,14 @@
 // Predict and explain first...
 
-// =============> no return in function so it will show error
+// =============> write your prediction here
 
 function multiply(a, b) {
   console.log(a * b);
-  return a*b;
 }
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
-// =============> it shows as undefined
+// =============> write your explanation here
 
 // Finally, correct the code to fix the problem
-//  =============> function multiply(a, b) {
-  //console.log(a * b);
-  //return a*b;
-// } 
-
+//  =============> write your new code here

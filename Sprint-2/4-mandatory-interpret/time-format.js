@@ -1,5 +1,4 @@
 function pad(num) {
-
   return num.toString().padStart(2, "0");
 }
 
@@ -12,26 +11,24 @@ function formatTimeDisplay(seconds) {
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
 
-duration = formatTimeDisplay(61);
-console.log (`The result is ${duration}`);
-
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
 
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> 1
+// =============> write your answer here
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> 0
+// =============> write your answer here
+
 // c) What is the return value of pad is called for the first time?
-// =============> got an error TypeError: num.toString(...).padStart is not a function at the Visualiser
+// =============> write your answer here
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> got an error TypeError: num.toString(...).padStart is not a function at the Visualiser
+// =============> write your answer here
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> got an error TypeError: num.toString(...).padStart is not a function at the Visualiser
+// =============> write your answer here
