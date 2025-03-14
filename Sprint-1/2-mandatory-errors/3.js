@@ -1,9 +1,5 @@
-const cardNumber = "4533787178994213";  // adding double code to solve the error
+const cardNumber = 4533787178994213;
 const last4Digits = cardNumber.slice(-4);
-
-console.log(`The last 4 digits are ${last4Digits}`);
-
-// The error is cause of function call on the wrong object (integer)
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
