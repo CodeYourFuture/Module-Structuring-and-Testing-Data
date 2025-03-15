@@ -21,17 +21,17 @@ console.log (`The result is ${duration}`);
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> 1
+// =============> 3
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> 0
 // c) What is the return value of pad is called for the first time?
-// =============> got an error TypeError: num.toString(...).padStart is not a function at the Visualiser
+// =============> '00'
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> got an error TypeError: num.toString(...).padStart is not a function at the Visualiser
+// =============> 1
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> got an error TypeError: num.toString(...).padStart is not a function at the Visualiser
+// =============> '01"
