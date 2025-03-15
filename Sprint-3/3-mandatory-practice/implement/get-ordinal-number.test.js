@@ -21,3 +21,10 @@ test("should return '13th' for 13", () => {
     });
 
 
+//Reasonable tests, and they pass! 
+// We might benefit from a couple more assertions here just to be sure, for example trying the number 23.
+
+test("should return '23rd' for 23", () => {
+    expect(getOrdinalNumber(23)).toEqual('23rd')
+});
+console.log(getOrdinalNumber(23));
