@@ -8,7 +8,11 @@
 // Given a string input like "hello there"
 // When we call this function with the input string
 // it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
+function upper_snake_case(words) {
+  return words.replaceAll(" ", "_").toUpperCase();
+}
 
+console.log(upper_snake_case("Hello my name is mansoor"));
 // Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
 
 // You will need to come up with an appropriate name for the function
