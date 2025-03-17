@@ -65,3 +65,12 @@ console.log(`the result is ${value} `);
 
 value = getOrdinalNumber(20)
 console.log(`the result is ${value} `);
+
+value = getOrdinalNumber(101)
+console.log(`the result is ${value} `);
+
+value = getOrdinalNumber(102)
+console.log(`the result is ${value} `);
+
+value = getOrdinalNumber(103)
+console.log(`the result is ${value} `);
