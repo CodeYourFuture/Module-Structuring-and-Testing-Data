@@ -20,13 +20,13 @@ const pounds = paddedPenceNumberString.substring(
   paddedPenceNumberString.length - 2
 );
 
-console.log (`The result is ${paddedPenceNumberString}`);
+
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
   .padEnd(2, "0");
 
-  result = pounds + "." + pence;
+  result = '£' + pounds + "." + pence;
   return result;
 }
 
