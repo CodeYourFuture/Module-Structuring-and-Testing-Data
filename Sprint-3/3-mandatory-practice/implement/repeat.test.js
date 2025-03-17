@@ -45,9 +45,6 @@ test("should return the empty string with no repeat", () => {
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 
 test("should return the error message 'Negative count are not valid'", () => {
-    const str = "hello";
-    const count = -1;
-    const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("Negative count are not valid");
+    expect(()=> repeat("hello",-1)).toThrow('Negative count are not valid')
     });
 
