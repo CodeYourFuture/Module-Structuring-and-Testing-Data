@@ -49,6 +49,13 @@ assertEquals(properFraction, true);
 const improperFraction = isProperFraction(5, 2);
 assertEquals(improperFraction, false);
 
+const improperFraction1 = isProperFraction(-5, -2);
+assertEquals(improperFraction1, false);
+
+
+const improperFraction2 = isProperFraction(-5, 2);
+assertEquals(improperFraction2, false);
+
 // Negative Fraction check:
 // Input: numerator = -4, denominator = 7
 // target output: true
@@ -74,3 +81,6 @@ assertEquals(equalFraction,false);
 // Explanation : if both numerator and denominator are negative, it will be equal to positive fraction 
  const negative = isProperFraction(-3,-4);
  assertEquals(negative,true);
+ const negative1 = isProperFraction(-5,-4);
+ assertEquals(negative1,false);
+
