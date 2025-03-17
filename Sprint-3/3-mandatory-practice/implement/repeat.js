@@ -16,7 +16,7 @@ else if (count == 0)
 // if count is less then zero show error message
  else if (count<0)
  {
-    return "Negative count are not valid";
+    throw new Error("Negative count are not valid");
  }
   
 
