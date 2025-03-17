@@ -36,11 +36,15 @@ function getCardValue(card) {
 
 else if (cards.length ==1 && faceCards.includes(cards)=== false) // if input length is 1 & not include in rank1 
 {
-  value = Number(cards);                       // convert the input into number and return the value
+  value = Number(cards);
+  if (value == 0 || faceCards.includes(cards)=== false)
+    {
+      return 'The card is invalid';
+    }                       // convert the input into number and return the value
   return value;  
 }
   
-else if (cards.length ==2 && cards != "10") // if input length is 2 and not equal to 10 return invalid
+else if (cards.length >=2 && cards != "10") // if input length is 2 and not equal to 10 return invalid
 {
   return `The card is invalid`;
 }
@@ -105,4 +109,13 @@ console.log(`The result is ${Ace}`);
 // Then it should throw an error indicating "Invalid card rank."
 
 const invalidNumber = getCardValue("15♠");
-console.log(`${invalidNumber}`);
+console.log("15 space is",`${invalidNumber}`);
+
+const invalidNumber1 = getCardValue("0♠");
+console.log(`${invalidNumber1}`);
+
+const invalidNumber2 = getCardValue("B♠");
+console.log(`${invalidNumber2}`);
+
+const invalidNumber3 = getCardValue("123♠");
+console.log(`${invalidNumber3}`);
