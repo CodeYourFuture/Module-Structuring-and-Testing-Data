@@ -11,6 +11,8 @@ let fnameInitial = firstName.charAt(0);
 let midnameInitial = middleName.charAt(0);
 let lastnameInitial= lastName.charAt(0);
 
+let initials = fnameInitial + midnameInitial + lastnameInitial;
+
 console.log("The letters are ",fnameInitial,midnameInitial,lastnameInitial);
 
 
