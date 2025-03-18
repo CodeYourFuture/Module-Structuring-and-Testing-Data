@@ -10,35 +10,35 @@
 
 function getCardValue(card) {
 
-  let cards = card.slice(0,-1); // drop one last letter from string 
+  let ranks = card.slice(0,-1); // drop one last letter from string 
 
   const faceCards = ["J","Q","K"];          // array for J,Q,K
   const numberCards = ["2","3","4","5","6","7","8","9",];   // array for 2-9 card
   
-  if (cards === "A")  // if the input is A return 11
+  if (ranks === "A")  // if the input is A return 11
     {
       return 11;
     }
-  else if (card == "Ace")  // if the input is Ace return 11
+  else if (card === "Ace")  // if the input is Ace return 11
       {
         return 11; 
       }
 
-  else  if (cards.length ==1 && faceCards.includes(cards) ) // input length is 1 and input is in rank 1 return 10;
+  else  if (ranks.length ==1 && faceCards.includes(ranks) ) // input length is 1 and input is in rank 1 return 10;
   {
      return 10;
   }
 
-  else if (cards === "10") // if input is 10 return 10;
+  else if (ranks === "10") // if input is 10 return 10;
     {
       return 10;
     }            
   
 
-else if ( numberCards.includes(cards)=== true  ) // if  the input is within 2-9
+else if ( numberCards.includes(ranks)=== true  ) // if  the input is within 2-9
 {
 
-  return cards;  
+  return ranks;  
 }
 else 
   
