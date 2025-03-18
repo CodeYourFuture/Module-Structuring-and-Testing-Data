@@ -31,10 +31,8 @@ function movieTitle() {
 }
 
 
-function unrelatedFunction() {
-    console.log("This function does something else.")
-}
+
 
 welcomeMessage();
 movieTitle();
-unrelatedFunction();
+
