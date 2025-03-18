@@ -38,16 +38,16 @@ test("should be case-sensitive", () => {
 });
  
 
-test("should count spaces as characters"), () => {
+test("should count spaces as characters", () => {
   const str = "Millena Mesfin";
   const char = " ";
   const count = countChar(str, char);
   expect(count).toEqual(1);
-}
+});
 
-test("should return 0 for an empty string"), () => {
+test("should return 0 for an empty string", () => {
   const str = "";
   const char = "m";
   const count = countChar(str, char);
   expect(count).toEqual(0);
-}
+});

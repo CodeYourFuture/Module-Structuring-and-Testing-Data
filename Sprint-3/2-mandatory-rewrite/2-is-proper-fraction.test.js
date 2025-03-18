@@ -6,12 +6,12 @@ test("should return true for a proper fraction", () => {
 });
 
 // Case 2: Identify Improper Fractions:
-test("should return true for an Improper fraction", () => {
-  expect(isImproperFraction(6, 3)).toEqual(true);
+test("should return false for an Improper fraction", () => {
+  expect(isProperFraction(6, 3)).toEqual(false);
 });
 
-test("should return true for a negative improper fraction", () => {
-  expect(isImproperFraction(-7, 4)).toEqual(true);
+test("should return false for a negative improper fraction", () => {
+  expect(isProperFraction(-7, 4)).toEqual(false);
 });
 
 // Case 3: Identify Negative Fractions:
