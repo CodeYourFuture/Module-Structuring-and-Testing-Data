@@ -11,7 +11,7 @@ let fnameInitial = firstName.charAt(0);
 let midnameInitial = middleName.charAt(0);
 let lastnameInitial= lastName.charAt(0);
 
-console.log("The letters are ",fnameInitials,midnameInitials,lastnameInitials);
+console.log("The letters are ",fnameInitial,midnameInitial,lastnameInitial);
 
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
