@@ -3,15 +3,14 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
-
-function square(3) {
+// =============> There seem to be  no error in the function itself. 
+function square(num) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> . The function square(num) is correctly defined and will work as expected when called with a valid number.
 
-// =============> explain this error message here
+// =============> I ran the code, and no errors occurred. The function square(num) is correctly defined
 
 // Finally, correct the code to fix the problem
 
