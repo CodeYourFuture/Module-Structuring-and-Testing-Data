@@ -7,7 +7,7 @@ function countChar(stringOfCharacters, findCharacter) {
     }
     else 
     {
-        return 'The finding character should not more than one character'
+        return 'The character to count must be single character'
     }
 }
 
