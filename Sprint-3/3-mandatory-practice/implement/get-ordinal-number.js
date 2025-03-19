@@ -1,23 +1,27 @@
 function getOrdinalNumber(num) {
 
 
-// if number is 1 or end with 1 And not equal to 11 return with st
-if (num ==1 || num%10 ==1 && num !=111){ 
 
- return `${num}st`;
-}
 
 // if the last two digit end with 11,12,13 return th
-else if (num%100 ==11 || num%100 ==12 || num%100 ==13) 
-{
-    return `${num}th`;
-}
+if (num%100 ==11 || num%100 ==12 || num%100 ==13) 
+    {
+        return `${num}th`;
+    }
+
+ // if number is 1 or end with 1 And not equal to 11 return with st
+else if (num ==1 || num%10 ==1 && num !=11)
+    { 
+
+ return `${num}st`;
+    }
 
 // if num is equal to 2 or end with 2 and not equal to 12 then return nd
-else if(num == 2 || num%10 == 2 && num != 12){
+else if(num == 2 || num%10 == 2 && num != 12)
+    {
 
     return `${num}nd`;
-}
+    }
 
 // if num is equal to 3 or end with 3 and not equal to 13 then return rd
 else if (num ==3 || num%10 ==3 && num !=13){
