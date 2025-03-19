@@ -38,7 +38,7 @@ function getCardValue(card) {
 else if ( numberCards.includes(ranks)=== true  ) // if  the input is within 2-9
 {
 
-  return ranks;  
+  return Number (ranks);  
 }
 else 
   
@@ -72,11 +72,11 @@ console.log(`A is equal to ${aceofSpades}`);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
-assertEquals(fiveofHearts,"5");
+assertEquals(fiveofHearts,5);
 console.log(`The result is ${fiveofHearts}`);
 
 const twofHearts = getCardValue("2♥");
-assertEquals(twofHearts,"2");
+assertEquals(twofHearts,2);
 console.log(`The result is ${twofHearts}`);
 // ====> write your test here, and then add a line to pass the test in the function above
 
