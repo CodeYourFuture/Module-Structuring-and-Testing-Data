@@ -11,7 +11,7 @@ function repeat(str,count) {
 // if count is equal to zero return empty string 
 else if (count == 0)
     {
-        return "";
+        return " ";
     }
 // if count is less then zero show error message
  else if (count<0)
@@ -36,5 +36,3 @@ console.log(`${case1}`);
 //case1 = repeat("sarawone",-1)
 //console.log(`${case1}`);
 
-case1 = repeat("a",-1)
-console.log(`${case1}`);
