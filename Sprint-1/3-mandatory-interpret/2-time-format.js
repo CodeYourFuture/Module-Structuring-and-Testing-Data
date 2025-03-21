@@ -12,7 +12,7 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
-// Answer: there a six
+// Answer: there a six, there is movieLength, remainingSeconds, totalMinutes, remaingMinutes, totalHours and results and they are declared by the const keyword
 
 // b) How many function calls are there?
 // Answer: there are no functions in this code
