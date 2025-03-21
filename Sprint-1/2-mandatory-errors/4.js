@@ -1,2 +1,2 @@
-const HourClockTime12 = "20:53";
-const hourClockTime24 = "08:53";
+const HourClockTime24 = "20:53";
+const hourClockTime12 = "08:53";
