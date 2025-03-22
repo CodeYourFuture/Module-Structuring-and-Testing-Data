@@ -33,3 +33,8 @@ test("should return false for a equal numerator and denominator", () => {
 test ("should return false for a zero denominator", () => {
   expect(isProperFraction(3,0)).toEqual(false);
 });
+
+test ("should return true when numerator and denominator are negative, and numerator is larger then denominator, otherwise return false", () => {
+  expect(isProperFraction(-3, -4)).toEqual(true);
+  expect(isProperFraction(-4, -3)).toEqual(false);
+});
