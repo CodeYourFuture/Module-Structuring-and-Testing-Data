@@ -17,6 +17,7 @@ test("should return false for a improper fraction", () => {
 // assertEquals(properFraction, true);
 test("should return true for a negative fraction", () => {
   expect(isProperFraction(-4,7)).toEqual(true);
+  expect(isProperFraction(4,-7)).toEqual(true);
 });
 
 
