@@ -13,7 +13,7 @@ const countChar = require("./count");
 test("should count multiple occurrences of a character", () => {
   const str = "aaaaa";
   const char = "a";
-  const count = countChar(str, char);
+  let count = countChar(str, char);
   expect(count).toEqual(5);
 });
 
@@ -22,3 +22,25 @@ test("should count multiple occurrences of a character", () => {
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+test("should count multiple occurrences of l character", () => {
+  const str = "hello";
+  const char = "l";
+  let count = countChar(str, char);
+  expect(count).toEqual(2);
+});
+
+test("should return 0 if because of case-sensitivity",() =>{
+  const str = "Car";
+  const char = "c";
+  const count = countChar(str,char);
+  expect(count).toEqual(0);
+});
+
+
+test("should return 0 if character does not appears",() =>{
+  const str = "apple";
+  const char = "c";
+  const count = countChar(str,char);
+  expect(count).toEqual(0);
+});
