@@ -8,24 +8,23 @@ function formatTimeDisplay(seconds) {
   const remainingMinutes = totalMinutes % 60;
   const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-  return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(
-    remainingSeconds
-  )}`;
+  return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
-
+console.log(formatTimeDisplay(61));
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
 
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-
+// 3 times
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-
+//first time the value will be 0
 // c) What is the return value of pad is called for the first time?
-
+//00
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-
+//the value will be 1. It's because 61 % 60 leaves with just 1 second left over.
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+// it will be 01. That is because padStart adds an zero to the given string to meet the desired length.
