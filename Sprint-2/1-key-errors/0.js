@@ -8,14 +8,9 @@
 
 // Answer : this was the error SyntaxError: Identifier 'str' has already been declared
 
-function capitalise(str) {
- let str = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
-};
-
 
 // =============> write your explanation here
-// variable let was declared twice in the code so it was 
+// variable let was redeclared in the code so it was causing "Identifier 'str' has already been declared" error so will remove the let keyword 
 // =============> write your new code here
 
 function capitalise(str) {
