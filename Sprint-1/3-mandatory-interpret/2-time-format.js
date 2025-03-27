@@ -28,3 +28,4 @@ console.log(result);
 // It assign the value in result as the total hours, Remaining Minutes and Remaining Seconds.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+// I changed the movieLength variable with different values and it worked for all.  
