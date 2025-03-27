@@ -2,6 +2,7 @@ const minimum = 1;
 const maximum = 100;
 
 const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+console.log(num);
 
 // In this exercise, you will need to work out what num represents?
 // Try breaking down the expression and using documentation to explain what it means
@@ -9,3 +10,4 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
 // The num is taking the random values while using the Math.random() method between maximum and minimum.
+// This is a documentation I used in my solution   https://www.w3schools.com/js/js_random.asp
