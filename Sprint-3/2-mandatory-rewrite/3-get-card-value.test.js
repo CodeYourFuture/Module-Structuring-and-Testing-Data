@@ -27,7 +27,7 @@ test("should return 11 for Ace Cards", () => {
     });
 
 // Case 5: Handle Invalid Cards:
-test.only("should return Invalid for Invalid Cards", () => {
+test("should return Invalid for Invalid Cards", () => {
     expect(getCardValue("ABC♠")).toEqual("Invalid card rank");
     expect(getCardValue("100♠")).toEqual("Invalid card rank");
     expect(getCardValue("2.1♠")).toEqual("Invalid card rank");
