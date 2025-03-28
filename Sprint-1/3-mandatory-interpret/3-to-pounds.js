@@ -25,3 +25,9 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 3. const penceStringWithoutTrailingP declared and assighed value - substring of penceString that's
+//  starts with 0 and end withouts last chracter
+// 8. const paddedPenceNumberString declared and assighed value - If string penceStringWithoutTrailingP shorter than
+// 3 characters,  it add 0 to the starts.
+// 14. const pence declared and assighed value - substring from variable paddedPenceNumberString ( last two characters)
+// If string pence shorter than 2 characters,  it add 0 to the end.
