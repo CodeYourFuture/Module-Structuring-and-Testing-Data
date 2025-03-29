@@ -15,7 +15,7 @@ console.log(result);
 // a) How many variable declarations are there in this program?
 // 6
 // b) How many function calls are there?
-// 0
+// 1
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 // it calculates whats the reminder of dividing total minutes by 60
