@@ -8,10 +8,10 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (Math.abs(numerator) < Math.abs(denominator)) 
+    if (numerator === 0 || denominator === 0) return false;  
+    else if (Math.abs(numerator) < Math.abs(denominator)) 
       return true;
-    else if (Math.abs(numerator) > Math.abs(denominator)) return false;
-    else if(Math.abs(numerator) === Math.abs(denominator)) return false;
+    else if (Math.abs(numerator) >= Math.abs(denominator)) return false;
 
 }
 
@@ -58,7 +58,7 @@ assertEquals(equalFraction, false);
 // Stretch:
 // What other scenarios could you test for?
 const numeratorZero = isProperFraction(0, 3);
-assertEquals( numeratorZero, true);
+assertEquals( numeratorZero, false);
 
 const denominatorZero = isProperFraction(5, 0);
 assertEquals(denominatorZero, false);
