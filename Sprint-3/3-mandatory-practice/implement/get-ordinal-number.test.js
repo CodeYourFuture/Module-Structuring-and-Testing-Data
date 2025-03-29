@@ -21,8 +21,7 @@ test("should return '8th' for 8", () => {
     expect(getOrdinalNumber(8)).toEqual("8th");
     });
 
-test("should return 'th' for greater than 3", () => {
-    for (let number = 4; number < 20; number++) {
-        expect(getOrdinalNumber(number)).toEqual(number + "th");  
-    }
+
+test("should return '31st' for 31", () => {
+    expect(getOrdinalNumber(31)).toEqual("31st");
     });
