@@ -44,3 +44,10 @@ test("should return 0 if character does not appears",() =>{
   const count = countChar(str,char);
   expect(count).toEqual(0);
 });
+
+test("should return 0 if character is empty string",() =>{
+  const str = "apple";
+  const char = "";
+  const count = countChar(str,char);
+  expect(count).toEqual(0);
+});
