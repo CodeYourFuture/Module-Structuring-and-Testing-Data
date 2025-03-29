@@ -9,8 +9,8 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
     let rank = card.slice(0, -1);
-    if (rank === "A") return 11;
-    if (["J", "Q", "K", "10"].includes(rank)) return 10;
+    if (rank.toUpperCase() === "A") return 11;
+    if (["J", "Q", "K", "10"].includes(rank.toUpperCase())) return 10;
     let number = parseInt(rank);
     if (number >= 2 && number <= 9) return number;
     throw new Error("Invalid card rank.");
