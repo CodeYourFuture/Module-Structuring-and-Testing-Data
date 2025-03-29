@@ -11,7 +11,8 @@ function initials(character) {
   
   console.log(`The first character of each string is ${initials(firstName)}${initials(middleName)}${initials(lastName)}`);
 
-
+  let initials = ${firstName[0]}${middleName[0]}${lastName[0]};
+  console.log(The first character of each string is ${initials});
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 

@@ -13,6 +13,16 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 // I see just one function call - console.log (line 10)
+// Function Calls:
+// Line 4: carPrice.replaceAll(",", "")
+
+// Line 4: Number(carPrice.replaceAll(",", ""))
+
+// Line 5: priceAfterOneYear.replaceAll(",", "")
+
+// Line 5: Number(priceAfterOneYear.replaceAll(",", ""))
+
+// Line 10: console.log(`The percentage change is ${percentageChange}`)
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // line 5
