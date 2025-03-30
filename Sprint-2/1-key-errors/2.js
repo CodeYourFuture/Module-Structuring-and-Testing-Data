@@ -3,24 +3,18 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here - Undefine error.As we don't have parameter num.  
+// =============> write your prediction of the error here
 
 function square(3) {
     return num * num;
 }
 
+// =============> write the error message here
 
-
-// =============> write the error message here - Syntax Error. 
-
-// =============> explain this error message here - mistake in the function name, as parameter can't start with the number. 
+// =============> explain this error message here
 
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here
 
-function square(num) {
-    return num * num;
-}
-console.log(square(3))
 

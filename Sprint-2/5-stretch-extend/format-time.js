@@ -23,15 +23,3 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
-
-//We can have a problem with number 12
-function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2)); // Extracts the hour part from the input time
-  if (hours === 12) {
-    return `${time} pm`; // Special case for 12:00 (12 noon)
-  }
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`; // For hours > 12, convert to 12-hour format and append "pm"
-  }
-  return `${time} am`; // For hours <= 12, simply append "am"
-}

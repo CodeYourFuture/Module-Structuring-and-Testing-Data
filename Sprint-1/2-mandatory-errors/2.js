@@ -3,8 +3,3 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
-
-// need to change lines, console.log need be in the end
-
-const cityOfBirth = "Bolton";
-console.log(`I was born in ${cityOfBirth}`);
