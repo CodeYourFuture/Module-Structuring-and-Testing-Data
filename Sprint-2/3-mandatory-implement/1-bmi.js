@@ -18,7 +18,7 @@ function calculateBMI(weight, height) {
     let squaringHeight = height * height;
     let BMI = weight / squaringHeight;
 
-    return BMItoFixed(1); 
+    return BMI.toFixed(1); 
 
     // return the BMI of someone based off their weight and height
 }

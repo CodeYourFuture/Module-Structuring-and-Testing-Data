@@ -8,7 +8,7 @@ function sum1(a, b) {
 
 console.log(`The sum of 10 and 32 is ${sum1(10, 32)}`);
 
-// =============> write your explanation here - undefined as we don't have parameter return
+// =============> write your explanation here - undefined as we don't have parameter return. The function returns undefined because of an issue with the return statement. 
 
 // Finally, correct the code to fix the problem
 //  =============> write your new code here

@@ -9,6 +9,12 @@ function square(3) {
     return num * num;
 }
 
+function squareValue() {
+    let num = 3;  
+    return num * num;
+}
+
+console.log(squareValue());
 
 
 // =============> write the error message here - Syntax Error. 

@@ -3,15 +3,15 @@
 // Predict the output of the following code:
 // =============> Write your prediction here - if slice -1 from the number, then 42 slice will be 4,2
 
-const num = 103;
+// const num = 103;
 
-function getLastDigit() {
-  return num.toString().slice(-1);
-}
+// function getLastDigit() {
+//   return num.toString().slice(-1);
+// }
 
-console.log(`The last digit of 42 is ${getLastDigit(42)}`);
-console.log(`The last digit of 105 is ${getLastDigit(105)}`);
-console.log(`The last digit of 806 is ${getLastDigit(806)}`);
+// console.log(`The last digit of 42 is ${getLastDigit(42)}`);
+// console.log(`The last digit of 105 is ${getLastDigit(105)}`);
+// console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // Now run the code and compare the output to your prediction 
 // - 3 - slice (-1) takes from const number and not from getLastDigit
@@ -20,7 +20,7 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 // Finally, correct the code to fix the problem
 // =============> write your new code here
 
-const num = 103;
+
 
 function getLastDigit(num2) {
   return num2.toString().slice(-1);
