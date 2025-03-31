@@ -20,3 +20,8 @@ console.log(`The percentage change is ${percentageChange}`);
 // d) Identify all the lines that are variable declarations
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+
+//There are two function calls in the file. They are:
+
+//a. carPrice.replaceAll(",", "") – This calls the replaceAll() method to remove commas from the carPrice string.
+//priceAfterOneYear.replaceAll(",", "") – This also calls the replaceAll() method to remove commas from the priceAfterOneYear string.
