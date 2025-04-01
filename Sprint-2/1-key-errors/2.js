@@ -16,4 +16,4 @@ function square(num) {
 
 // =============> write your new code here
 
-
+//There seem to be no error in the function itself. 

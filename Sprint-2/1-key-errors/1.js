@@ -26,3 +26,13 @@ console.log(decimalNumber);
 const result = convertToPercentage(0.5);
 console.log(result);
 //The code above fixes the issue by removing the redeclaration of decimalNumber inside the function and moving the console.log(decimalNumber); outside the function. This way, the function can access the decimalNumber parameter passed to it and return the correct result. The console.log() statement will then print the result to the console.
+
+//CORRECTED CODE 
+function convertToPercentage(decimalNumber) {
+  const percentage = `${decimalNumber * 100}%`;
+  return percentage;
+}
+
+const result = convertToPercentage(0.5);
+
+console.log(result); // Outputs: "50%"

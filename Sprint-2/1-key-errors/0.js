@@ -9,5 +9,3 @@ function capitalise(str) {
   return str;
 }
 capitalise("elfredah")
-// =============> write your explanation here
-// =============> write your new code here

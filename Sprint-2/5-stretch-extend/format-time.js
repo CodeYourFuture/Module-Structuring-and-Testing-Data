@@ -24,7 +24,8 @@ console.assert(
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
 
-//=========>function formatAs12HourClock(time) {
+//=========> SOLUTIONS BELOW
+function formatAs12HourClock(time) {
   let hours = Number(time.slice(0, 2));
   let minutes = time.slice(3, 5);
   let period = hours >= 12 ? "pm" : "am";
