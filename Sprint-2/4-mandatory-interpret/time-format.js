@@ -23,7 +23,7 @@ console.log(formatTimeDisplay(61));
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here: 00:01:01
+// =============> write your answer here: 61
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here: '00' - string of full hours
