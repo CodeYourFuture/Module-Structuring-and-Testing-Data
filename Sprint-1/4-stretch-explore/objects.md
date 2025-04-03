@@ -16,7 +16,9 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store? 
-    // Console store object;
+    // Console store object, wich has methods to display different messages in console;
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
-    //'.' - allows us to use functions of console object.
-    // `console.log` and `console.assert` are calling of these functions 
+    //'.' - allows us to use functions and properties of console object.
+    // `log` and `assert` are these functions 
+    // `console.log` to display console messages
+    // `console.assert`to write an error message to the console in case of assertion failed
