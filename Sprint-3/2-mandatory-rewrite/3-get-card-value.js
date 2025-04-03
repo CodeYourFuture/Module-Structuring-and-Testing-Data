@@ -1,9 +1,13 @@
 function getCardValue(card) {
   let rank;
-  if (card === "10"){
-    rank = card;
+  if (card === "10♠"){
+    rank = "10";
   } else {
-    rank = card.charAt(0);
+    if ((card.substring(0, card.length - 1)).length > 1 ){
+      throw new Error("Invalid card rank");
+    } else {
+      rank = card.charAt(0);
+    }
   }
   if (rank === "A") {
     return 11;
@@ -15,4 +19,12 @@ function getCardValue(card) {
     throw new Error("Invalid card rank");
   }
 }
+
+//getCardValue("2.000♠");
+//getCardValue("02♠");
+//getCardValue("0x02♠");
+//getCardValue("+2♠");
+//getCardValue("AA♠");
+//getCardValue("2.1♠");
+//Every example gave error as expected
 module.exports = getCardValue;
