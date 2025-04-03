@@ -20,4 +20,8 @@ test("should return 11 for A♣", () => {
 });
 test('should throw "Invalid card rank" for X♠', () => {
     expect(() => getCardValue("X♠")).toThrow("Invalid card rank");
+    expect(() => getCardValue("010♠")).toThrow("Invalid card rank");
+    expect(() => getCardValue("02♠")).toThrow("Invalid card rank");
+    expect(() => getCardValue("0x02♠")).toThrow("Invalid card rank");
+    expect(() => getCardValue("2.1♠")).toThrow("Invalid card rank");
 });
