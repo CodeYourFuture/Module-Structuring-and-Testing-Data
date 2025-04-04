@@ -1,11 +1,10 @@
-const isValidNumber = (cardNum) => {
-    const StrCardNum = cardNum.toString();
-    if (StrCardNum.length !== 16 || !/^\d+$/.test(StrCardNum)) {
+const isValidNumber = (cardNumber) => {
+    if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
         return false;
     }
     let allSame = true;
     for (let i = 1; i < 16; i++) {
-        if (StrCardNum[0] !== StrCardNum[i]) {
+        if (cardNumber[0] !== cardNumber[i]) {
             allSame = false;
             break;
         }
@@ -13,11 +12,12 @@ const isValidNumber = (cardNum) => {
     if (allSame) {
         return false;
     }
-    if (cardNum % 2 !== 0) {
+    let lastDigit = cardNumber.slice(-1);
+    if (["1", "3", "5", "7", "9"].includes(lastDigit)){
         return false;
     }
     let sum = 0;
-    digitsArray = StrCardNum.split('');
+    digitsArray = cardNumber.split('');
     for (let i = 0; i < 16; i++) {
         sum += digitsArray[i];
     }
