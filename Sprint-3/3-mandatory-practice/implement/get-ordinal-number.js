@@ -1,9 +1,9 @@
-function getOrdinalNumber(num) {
+function getOrdinalNumber(number) {
 
     if (number < 1) return number; 
 
     let suffix = "th"; 
-    if (number % 100 !== 11 && number % 100 !== 12 && number % 100 !== 13) {   //% 100 остаток от деления 
+    if (number % 100 !== 11 && number % 100 !== 12 && number % 100 !== 13) {  
         if (number % 10 === 1) suffix = "st";
         else if (number % 10 === 2) suffix = "nd";
         else if (number % 10 === 3) suffix = "rd";

@@ -1,6 +1,9 @@
-function repeat(word) {
-    return word.repeat(3); 
-}
+function repeat(word, count) {
+    if (count < 0) {
+      throw new Error("Count cannot be negative");
+    }
+    return word.repeat(count);
+  }
 
 console.log (repeat ("hello"))
 

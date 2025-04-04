@@ -1,5 +1,6 @@
-function passwordValidator(password, passwords) {
-    password.length < 5;
+function passwordValidator(password, passwords = []) {
+    if (password.length < 5) return false;
+
     const uppercase = /[A-Z]/;     
     const lowercase = /[a-z]/;     
     const number = /[0-9]/;        

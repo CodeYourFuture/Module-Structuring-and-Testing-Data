@@ -8,8 +8,14 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-test("should return '3rd' for 3", () => {
+
+
+test("should return '3rd' for 3 and more", () => {
     expect(getOrdinalNumber(3)).toEqual("3rd");
+    expect(getOrdinalNumber(3)).toEqual("3rd");  
+    expect(getOrdinalNumber(23)).toEqual("23rd");  
+    expect(getOrdinalNumber(53)).toEqual("53rd");  
+    expect(getOrdinalNumber(103)).toEqual("103rd");
 });
 
 test("should return '2nd' for 2", () => {

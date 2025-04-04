@@ -7,11 +7,18 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 
-function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
-    else return false;
-     
+function isProperFractionFix(numerator, denominator) {
+  if (denominator === 0) return false; 
+  return Math.abs(numerator) < Math.abs(denominator);
 }
+
+// function isProperFraction(numerator, denominator) {
+//     if (numerator < denominator) return true;
+//     else return false;
+
+    
+     
+// }
 
 // here's our helper again
 function assertEquals(actualOutput, targetOutput) {
@@ -53,4 +60,9 @@ assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for? - we can text non-integers
+const wtoNegativeFraction = isProperFractionFix(-3, -2);
+assertEquals(equalFraction, false);
+
+
+
 
