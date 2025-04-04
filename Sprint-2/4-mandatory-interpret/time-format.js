@@ -18,7 +18,7 @@ console.log(formatTimeDisplay(61));
 
 // a) When formatTimeDisplay is called how many times will pad be called?
 // =============> write your answer here
-//pad will be called three times
+//pad will be called three timesgit
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
