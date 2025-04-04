@@ -10,3 +10,7 @@ console.log(num);
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 // Math.floor() method always rounds down and returns the largest integer less than or equal to a given number
 // Math.random() method returns a floating-point pseudo-random number in the range 0 to less than 1 
+// Further information based on review: 
+// what is the use of (maximum-minimum+1) at line 4 => This is to ensure that we get a range of value between maximum and minimum
+// what is the use of + minimum at line 4 => To make sure we do not get a number below the minimum
+// what is the possible range of value of num => num ranges from 1-100

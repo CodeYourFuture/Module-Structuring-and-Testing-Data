@@ -19,10 +19,14 @@ console.log(result);
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators 
 // % is the module operator, which calculated the remainder of the division of movieLength by 60
+// Further information based on feedback: This expresss represents the seconds left over when all the full minutes of the movie has been subtracted from total time.
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean? Computes the the difference between movielength and remaining minutes. And divides this by 60.
 
-// e) What do you think the variable result represents? Can you think of a better name for this variable? It gived the time of the movie in hours, minutes and seconds.
+// e) What do you think the variable result represents? Can you think of a better name for this variable? It gives the time of the movie in hours, minutes and seconds
+// Further Information based on feedback => variable counld be moviedurationHMS
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer. It does work for all number inputs.
 // f) For example, movieLength of 100 gives 0:-1:-40 and movieLength of 8784 gives 2:26:24
+
+//Further information based on feedback: This is a mistake, it should be 0:1:40
