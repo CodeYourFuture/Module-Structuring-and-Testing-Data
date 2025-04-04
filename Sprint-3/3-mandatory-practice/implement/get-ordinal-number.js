@@ -1,18 +1,18 @@
 function getOrdinalNumber(num) {
-    if (num === 11 || num === 12 || num === 13) {
-        return `${num}th`;
-      }
-      const lastDigit = num % 10;
-      if (lastDigit === 1) {
-        return `${num}st`;
-      }
-      if (lastDigit === 2) {
-        return `${num}nd`;
-      }
-      if (lastDigit === 3) {
-        return `${num}rd`;
-      }
-      return `${num}th`;
+  const lastDigit = num % 10;
+  const lastTwoDigits = num % 100;
+
+  if (lastDigit === 1 && lastTwoDigits !== 11) {
+    return `${num}st`;
+  }
+  if (lastDigit === 2 && lastTwoDigits !== 12) {
+    return `${num}nd`;
+  }
+  if (lastDigit === 3 && lastTwoDigits !== 13) {
+    return `${num}rd`;
+  }
+  return `${num}th`;
     }
+    console.log(getOrdinalNumber(111))
 
 module.exports = getOrdinalNumber;
