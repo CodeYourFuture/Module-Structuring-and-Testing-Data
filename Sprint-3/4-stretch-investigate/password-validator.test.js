@@ -30,3 +30,21 @@ test("valid passwords", () => {
 test("valid passwords", () => {
     expect (isValidPassword("1Aa2345")).toEqual(false); 
 })
+test("Fails only on length", () => {
+    expect(isValidPassword("1A!")).toEqual(false);
+})
+test("Fails only on uppercase", () => {
+    expect(isValidPassword("pa$$1!")).toEqual(false);
+})
+test("Fails only on lowercase", () => {
+    expect(isValidPassword("PA$$1!")).toEqual(false);
+})
+test("Fails only on digit", () => {
+    expect(isValidPassword("Passw!")).toEqual(false);
+})
+test("Fails only on symbol", () => {
+    expect(isValidPassword("Pass12")).toEqual(false);
+})
+test("Fails only on duplicate", () => {
+    expect(isValidPassword("Pass1!", ["Pass1!"])).toEqual(false);
+})

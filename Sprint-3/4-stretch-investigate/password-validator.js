@@ -1,4 +1,4 @@
-function passwordValidator(password) {
+function passwordValidator(password, passwords = []) {
     if (password.length < 5) {
         return false;
     }
@@ -12,6 +12,9 @@ function passwordValidator(password) {
         return false;
     }
     if (!/[!#$%.&*]/.test(password)) {
+        return false;
+    }
+    if (passwords.includes(password)) {
         return false;
     }
     return true;
