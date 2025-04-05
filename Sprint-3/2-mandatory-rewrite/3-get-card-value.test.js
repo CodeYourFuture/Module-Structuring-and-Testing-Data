@@ -24,6 +24,14 @@ expect(handleAce).toEqual(11);
 });
 
 // // Case 5: Handle Invalid Cards:
+// test("Handle Ace (A)", () => {
+//     const handleAce = getCardValue("29♠");
+//     expect(handleAce).toEqual("Invalid");
+//     });
+
+//Case 5: Handle Invalid Cards:
 test("Handle Invalid Cards", () => {
-    expect(() => getCardValue("Z♥")).toThrow("Invalid");
-  });
+   expect(() => getCardValue("Z♥")).toThrow("Invalid");
+   expect(() => getCardValue("29♠")).toThrow("Invalid");
+   expect(() => getCardValue("2.1♠")).toThrow("Invalid");
+ });

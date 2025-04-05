@@ -4,8 +4,8 @@ test("should return true for a proper fraction", () => {
   expect(isProperFraction(2, 3)).toEqual(true);
   expect(isProperFraction(5, 2)).toEqual(false);  
   expect(isProperFraction(5, -2)).toEqual(false);  
-  expect(isProperFraction(-5, 2)).toEqual(true);    
-  expect(isProperFraction(-5, -2)).toEqual(true);  
+  expect(isProperFraction(-5, 2)).toEqual(false);    
+  expect(isProperFraction(-5, -2)).toEqual(false);  
 }); 
 
 
