@@ -10,8 +10,7 @@ const getOrdinalNumber = require("./get-ordinal-number");
 
 
 
-test("should return all mentioned test bellow", () => {
-    expect(getOrdinalNumber(3)).toEqual("3rd");
+test("getOrdinalNumber handles numbers ending with a right suffix", () => {
     expect(getOrdinalNumber(3)).toEqual("3rd");  
     expect(getOrdinalNumber(23)).toEqual("23rd");  
     expect(getOrdinalNumber(53)).toEqual("53rd");  
