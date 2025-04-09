@@ -14,30 +14,46 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-//const isValidPassword = require("./password-validator");
-
-
-function passwordValidator(password) {
-    if ( password.length < 5 ) {
-        return false;
-    } else if (password.search[/A-Z/i] < 0){
-        return false;
-    } else if (password.search[/a-z/i] < 0){
-        return false;
-    } else if (password.search[/0-9/] < 0 ){
-        return false;
-    } else if (password.search[/!@#$%&*_?-/] < 0){
-        return false;
-    } else {
-        return true;
-    }
-}
+const passwordValidator = require("./password-validator");
 
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
     // Act
-    const result = isValidPassword(password);
+    const result = passwordValidator('aA3!5');
+    // Assert
+    expect(result).toEqual(true);
+});
+
+test("password has at least 5 characters", () => {
+    // Act
+    const result = passwordValidator('aA3!');
     // Assert
     expect(result).toEqual(false);
+});
+
+test("password has to have at least one English uppercase letter (A-Z)", () => {
+    // Act
+    const result = passwordValidator('11111');
+    // Assert
+    expect(result).toEqual(false);
+});
+
+test("password has to have at least one English lowercase letter (a-z)", () => {
+    // Act
+    const result = passwordValidator('AA345');
+    // Assert
+    expect(result).toEqual(false);
+});
+
+test("password has to have at least one number (0-9)", () => {
+    // Act
+    const result = passwordValidator('AAaaa');
+    // Assert
+    expect(result).toEqual(false);
+});
+
+test("password has to have at least one of the following non-alphanumeric symbols: !#$%.*&", () => {
+    // Act
+    const result = passwordValidator('AA!1aaa');
+    // Assert
+    expect(result).toEqual(true);
 });
