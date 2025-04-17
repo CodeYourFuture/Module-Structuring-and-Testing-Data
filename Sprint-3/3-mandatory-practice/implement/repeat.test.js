@@ -45,10 +45,7 @@ test("should check if result of repeat() function is 0", () => {
 test("check if error massage appear", () => {
     const str = "hello";
     const count = -1;
-    try {
-        const repeatedStr = repeat(str, count);
-        expect(repeatedStr).toEqual("");
-    } catch (error) {
-        console.error(error);
-    }
+    expect(() => {
+        repeat(str, count);
+    }).toThrow("Negative counts are not valid.");
 });

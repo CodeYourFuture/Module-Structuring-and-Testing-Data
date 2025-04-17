@@ -17,22 +17,13 @@ You must breakdown this problem in order to solve it. Find one test case first a
 const passwordValidator = require("./password-validator");
 
 test("password has at least 5 characters", () => {
-    // Act
-    const result = passwordValidator('aA3!5');
-    // Assert
-    expect(result).toEqual(true);
-});
-
-test("password has at least 5 characters", () => {
-    // Act
-    const result = passwordValidator('aA3!');
-    // Assert
-    expect(result).toEqual(false);
+    expect(passwordValidator('aA3!5')).toEqual(true);
+    expect(passwordValidator('aA3!')).toEqual(false);
 });
 
 test("password has to have at least one English uppercase letter (A-Z)", () => {
     // Act
-    const result = passwordValidator('11111');
+    const result = passwordValidator('1a1!1');
     // Assert
     expect(result).toEqual(false);
 });

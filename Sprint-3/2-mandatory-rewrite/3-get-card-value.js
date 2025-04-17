@@ -1,6 +1,7 @@
 function getCardValue(card) {
   let rank;
-  if (card === "10♠"){
+  
+  if (card.length === 3 &&  card.substring(0, card.length - 1) === "10"){
     rank = "10";
   } else {
     if ((card.substring(0, card.length - 1)).length > 1 ){
@@ -9,6 +10,7 @@ function getCardValue(card) {
       rank = card.charAt(0);
     }
   }
+  
   if (rank === "A") {
     return 11;
   } else if  (Number(rank) >= 2 && Number(rank) <= 9) {
@@ -16,7 +18,7 @@ function getCardValue(card) {
   } else if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
     return 10;
   } else {
-    throw new Error("Invalid card rank");
+    throw new Error("Invalid card rank.");
   }
 }
 

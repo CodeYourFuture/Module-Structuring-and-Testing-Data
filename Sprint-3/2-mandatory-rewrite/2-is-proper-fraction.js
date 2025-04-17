@@ -3,11 +3,8 @@ function isProperFraction(numerator, denominator) {
     denominator = Math.abs(denominator);
     if (numerator < denominator) {
         return true;
-    } else if ( numerator >= denominator) {
-        return false;
     }
+    return false;
 }
-
-console.log(isProperFraction(-3, 2));
 
 module.exports = isProperFraction;
