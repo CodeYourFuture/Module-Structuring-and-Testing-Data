@@ -17,12 +17,7 @@ console.log(`The base part of ${filePath} is ${base}`);
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-
-// dir: The part of the path before the last slash (/), which represents the directory.
-// base: The file name with the extension, which is everything after the last slash (/).
-// ext: The file extension, which is the part after the last period (.) in the base file name.
-
-const dir = filePath.slice(0, lastSlashIndex);
-const ext = base.theLastIndexOf('.');
+const dir = ;
+const ext = ;
 
 // https://www.google.com/search?q=slice+mdn
