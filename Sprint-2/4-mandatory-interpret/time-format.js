@@ -23,17 +23,16 @@ function formatTimeDisplay(seconds) {
 
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
-// 61
+// 60
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
-// num 0
+// 00
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-// TypeError: num.toString(...).padStart is not a function an error shows
-
+// 1
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-// TypeError: num.toString(...).padStart is not a function an error shows
+// 01

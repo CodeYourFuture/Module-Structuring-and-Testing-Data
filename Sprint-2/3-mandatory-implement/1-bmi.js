@@ -15,10 +15,10 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, heightM) {
-    let heightCM = heightM/100
-    return parseFloat((weight / (heightCM*heightCM))).toFixed(1); 
+  let heightCM = heightM / 100;
+  return parseFloat(weight / (heightCM * heightCM)).toFixed(1);
 }
 
 // const calculateBMI = (weight, height) => parseFloat(weight / (height*height)).toFixed(1)
 
-console.log(calculateBMI(59, 167))
+console.log(calculateBMI(59, 167));
