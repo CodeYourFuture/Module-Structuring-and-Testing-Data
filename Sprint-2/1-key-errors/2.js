@@ -12,7 +12,7 @@
 // =============> write the error message here
 // SyntaxError: Unexpected number
 // =============> explain this error message here
-//the function expected a parameter
+//the function expected a parameter but instead a number was passed
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here

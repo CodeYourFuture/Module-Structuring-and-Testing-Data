@@ -16,6 +16,6 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 const convertToUpper = (word) =>
-  input.replace(/ /g, "_").console.log(convertToUpper("kaska"));
+  word.replace(/ /g, "_").console.log(convertToUpper("kaska"));
 
 console.log(convertToUpper("hello hi hi"));
