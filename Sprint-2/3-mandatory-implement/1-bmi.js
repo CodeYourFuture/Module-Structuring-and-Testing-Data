@@ -16,4 +16,8 @@
 
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
+    const BM = weight/(height**2) // These are modifications based on review.
+    const BMI = BM.toFixed(1);  //Theses are modifications based on review.
+    return BMI
 }
+console.log(calculateBMI(60,1.65));
