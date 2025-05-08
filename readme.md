@@ -10,7 +10,7 @@
 
 ## Setting up your code editor
 
-There are some tools that will help you to write code. One of these, [Prettier](https://prettier.io/), formats your code, making it easier for you and others to read. Another tool, [Jest](https://jestjs.io/), is a test runner that will turn on Test Explorer in Visual Studio Code. 
+There are some tools that will help you to write code. One of these, [Prettier](https://prettier.io/), formats your code, making it easier for you and others to read. Another tool, [Jest](https://jestjs.io/), is a test runner that will turn on Test Explorer in Visual Studio Code.
 
 ### 1. Using Prettier, Test Runner, and other recommended tools in Visual Studio Code
 
