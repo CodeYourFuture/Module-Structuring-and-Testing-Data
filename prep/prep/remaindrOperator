@@ -1,0 +1,7 @@
+// %(remainder) operator gives you the remainder value after divison of two numbers.
+//let remainder = dividend % divisor;
+//dividend is number being divided 
+// divisor number didvind the dividend
+
+const minutesRemaining = 15 % 7
+console.log(minutesRemaining)
