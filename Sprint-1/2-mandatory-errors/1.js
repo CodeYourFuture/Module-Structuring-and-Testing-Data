@@ -2,3 +2,7 @@
 
 const age = 33;
 age = age + 1;
+
+/*
+to define a variable with reassign feature you should use `let` instead of `const` 
+*/
