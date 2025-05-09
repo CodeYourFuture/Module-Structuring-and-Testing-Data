@@ -8,7 +8,13 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+  const rank = card.slice(0, -1);
+
+  if (rank === "A") return 11;
+  if (["K", "Q", "J", "10"].includes(rank)) return 10;
+  if (/^[2-9]$/.test(rank)) return Number(rank); // Ensure it's a single digit 2-9
+
+  throw new Error("Invalid card rank");
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -34,12 +40,22 @@ assertEquals(aceofSpades, 11);
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
 // ====> write your test here, and then add a line to pass the test in the function above
-
+assertEquals(fiveofHearts, 5);
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const kingofDiamonds = getCardValue("K♦");
+assertEquals(kingofDiamonds, 10);
 
+const queenofClubs = getCardValue("Q♣");
+assertEquals(queenofClubs, 10);
+
+const jackofSpades = getCardValue("J♠");
+assertEquals(jackofSpades, 10);
+
+const tenofHearts = getCardValue("10♥");
+assertEquals(tenofHearts, 10);
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
@@ -49,3 +65,38 @@ const fiveofHearts = getCardValue("5♥");
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+try {
+  getCardValue("1♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("Z♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("010♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("02♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("0x02♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
+
+try {
+  getCardValue("2.1♠");
+} catch (error) {
+  console.log("Caught expected error:", error.message);
+}
