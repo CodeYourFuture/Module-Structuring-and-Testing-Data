@@ -4,7 +4,7 @@
 // │          dir        │    base    │
 // ├──────┬              ├──────┬─────┤
 // │ root │              │ name │ ext │
-// "  /    home/user/dir / file  .txt "
+//   /    home/user/dir / file  .txt 
 // └──────┴──────────────┴──────┴─────┘
 
 // (All spaces in the "" line should be ignored. They are purely for formatting.)
@@ -17,7 +17,11 @@ console.log(`The base part of ${filePath} is ${base}`);
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-const dir = ;
-const ext = ;
+const dir = filePath.slice(0, lastSlashIndex);
+console.log(`The dr part of ${filePath} is ${dir}`);
+const lastDotIndex = base.lastIndexOf(".");
+const ext = base.slice(lastDotIndex);
+console.log(`The ext part of ${filePath} is ${ext}`);
 
 // https://www.google.com/search?q=slice+mdn
+//Using like lastIndex, lastSlashIndex, slice and LastDotIndex help to separate full file to other components in javascript.
