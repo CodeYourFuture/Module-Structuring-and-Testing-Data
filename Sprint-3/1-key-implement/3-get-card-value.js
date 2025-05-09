@@ -33,7 +33,11 @@ assertEquals(aceofSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
-// ====> write your test here, and then add a line to pass the test in the function above
+// ====> function getCardValue(card) {
+ // const rank = card[0]; // Extracts the first character (rank) from the card string
+ // if (!isNaN(rank)) return Number(rank); 
+//}
+
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
