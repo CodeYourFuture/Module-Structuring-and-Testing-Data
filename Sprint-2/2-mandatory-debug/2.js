@@ -1,8 +1,20 @@
 // Predict and explain first...
-
+/*
+The function `getLastDigit` uses the global variable `num`, which is initialized to 103. It converts 
+this global variable to a string and then extracts the last character ('3'). 
+ 
+ */
+// The code will produce:
+/* The last digit of 42 is 3
+ The last digit of 105 is 3
+ The last digit of 806 is 3
+ */
 // Predict the output of the following code:
 // =============> Write your prediction here
-
+/* The last digit of 42 is 3
+ The last digit of 105 is 3
+ The last digit of 806 is 3
+ */
 const num = 103;
 
 function getLastDigit() {
@@ -17,8 +29,22 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 // =============> write the output here
 // Explain why the output is the way it is
 // =============> write your explanation here
+/*The function does not use 
+any arguments, so regardless of the argument passed to the function when it is called, it always returns 
+the last digit of 103, 
+which is 3
+*/
 // Finally, correct the code to fix the problem
 // =============> write your new code here
+function getLastDigit() {
+  return num.toString().slice(-1);
+}
 
+console.log(`The last digit of 42 is ${getLastDigit(42)}`);
+console.log(`The last digit of 105 is ${getLastDigit(105)}`);
+console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
+/*
+this function uses global variable num .i removed global variable . Now is ok
+*/
