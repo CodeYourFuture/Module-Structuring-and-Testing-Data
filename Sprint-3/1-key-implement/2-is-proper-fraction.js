@@ -8,10 +8,10 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
+    return numerator < denominator; // Returns true if proper fraction, false otherwise
 }
 
-// here's our helper again
+// Helper function remains the same
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -25,6 +25,10 @@ function assertEquals(actualOutput, targetOutput) {
 // Input: numerator = 2, denominator = 3
 // target output: true
 // Explanation: The fraction 2/3 is a proper fraction, where the numerator is less than the denominator. The function should return true.
+function isProperFraction(numerator, denominator) {
+  if (numerator < denominator) return true; 
+}
+
 const properFraction = isProperFraction(2, 3);
 assertEquals(properFraction, true);
 
@@ -32,22 +36,71 @@ assertEquals(properFraction, true);
 // Input: numerator = 5, denominator = 2
 // target output: false
 // Explanation: The fraction 5/2 is an improper fraction, where the numerator is greater than or equal to the denominator. The function should return false.
-const improperFraction = isProperFraction(5, 2);
-assertEquals(improperFraction, false);
+function isProperFraction(numerator, denominator) {
+  if (numerator < denominator) return true; // Proper fraction
+  return false; // Improper fraction
+}
+
+// **Test Case 1**: Proper Fraction (numerator < denominator)
+const properFraction1 = isProperFraction(2, 3);
+assertEquals(properFraction, true); // Expected output: true
+
+// **Test Case 2**: Improper Fraction (numerator >= denominator)
+const improperFraction1 = isProperFraction(5, 2);
+assertEquals(improperFraction1, false); // Expected output: false
+
 
 // Negative Fraction check:
 // Input: numerator = -4, denominator = 7
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
+function isProperFraction(numerator, denominator) {
+  if (Math.abs(numerator) < Math.abs(denominator)) return true; // Proper fraction
+  return false; // Improper fraction
+}
+
+// **Test Case 1**: Proper Fraction (numerator < denominator)
+const properFraction2 = isProperFraction(2, 3);
+assertEquals(properFraction2, true); // Expected output: true
+
+// **Test Case 2**: Improper Fraction (numerator >= denominator)
+const improperFraction = isProperFraction(5, 2);
+assertEquals(improperFraction, false); // Expected output: false
+
+// **Test Case 3**: Negative Proper Fraction
 const negativeFraction = isProperFraction(-4, 7);
+assertEquals(negativeFraction, true); // Expected output: true
+
+
 // ====> complete with your assertion
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
-const equalFraction = isProperFraction(3, 3);
+const equalFraction3 = isProperFraction(3, 3);
 // ====> complete with your assertion
+function isProperFraction(numerator, denominator) {
+  if (Math.abs(numerator) < Math.abs(denominator)) return true; // Proper fraction
+  return false; // Improper fraction
+}
+
+const equalFraction = isProperFraction(3, 3);
+assertEquals(equalFraction, false); // Expected output: false
+
 
 // Stretch:
 // What other scenarios could you test for?
+//Zero numerator (e.g., 0/5) is a proper fraction.
+//Zero denominator is invalid.
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) return "Invalid"; // Division by zero
+  if (Math.abs(numerator) < Math.abs(denominator)) return true; // Proper fraction
+  return false; // Improper fraction
+}
+const zeroNumerator = isProperFraction(0, 5);
+assertEquals(zeroNumerator, true); 
+
+const zeroDenominator = isProperFraction(4, 0);
+assertEquals(zeroDenominator, "Invalid");
+

@@ -1,26 +1,36 @@
-/* 
-Password Validation
+const passwordValidator = require("./passwordValidator");
 
-Write a program that should check if a password is valid
-and returns a boolean
+test("Expect false when password is missing a lowercase letter and a special character", () => {
+    expect(passwordValidator("123A5")).toBe(false);
+});
 
-To be valid, a password must:
-- Have at least 5 characters.
-- Have at least one English uppercase letter (A-Z)
-- Have at least one English lowercase letter (a-z)
-- Have at least one number (0-9)
-- Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
-- Must not be any previous password in the passwords array. 
+test("Expect false when password is too short", () => {
+    expect(passwordValidator("A1!")).toBe(false);
+});
 
-You must breakdown this problem in order to solve it. Find one test case first and get that working
-*/
-const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+test("Expect false when password has no uppercase letter", () => {
+    expect(passwordValidator("password1!")).toBe(false);
+});
+
+test("Expect false when password has no lowercase letter", () => {
+    expect(passwordValidator("PASSWORD1!")).toBe(false);
+});
+
+test("Expect false when password has no number", () => {
+    expect(passwordValidator("Password!")).toBe(false);
+});
+
+test("Expect false when password has no special character", () => {
+    expect(passwordValidator("Password1")).toBe(false);
+});
+
+test("Expect false when password is in the blacklist", () => {
+    expect(passwordValidator("previousPassword1")).toBe(false);
+    expect(passwordValidator("anotherOldPassword")).toBe(false);
+});
+
+// ✅ Clear valid case to ensure special symbols are not the issue
+test("Expect true for a valid password", () => {
+    expect(passwordValidator("Valid1!")).toBe(true);
+    expect(passwordValidator("S3cureP@ss")).toBe(true);
+});
