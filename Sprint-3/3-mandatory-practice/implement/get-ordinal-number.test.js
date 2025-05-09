@@ -8,6 +8,22 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
+
+
+test("getOrdinalNumber handles numbers ending with a right suffix", () => {
+    expect(getOrdinalNumber(3)).toEqual("3rd");  
+    expect(getOrdinalNumber(23)).toEqual("23rd");  
+    expect(getOrdinalNumber(53)).toEqual("53rd");  
+    expect(getOrdinalNumber(103)).toEqual("103rd");
+});
+
+test("should return '2nd' for 2", () => {
+    expect(getOrdinalNumber(2)).toEqual("2nd");
+});
+
 test("should return '1st' for 1", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
     });
+
+
+
