@@ -5,9 +5,14 @@
 
 // =============> write your prediction of the error here
 
-function square(3) {
+function square(num) {
     return num * num;
 }
+
+// Example usage:
+console.log(square(3)); // Output: 9
+console.log(square(5)); // Output: 25
+
 
 // =============> write the error message here
 

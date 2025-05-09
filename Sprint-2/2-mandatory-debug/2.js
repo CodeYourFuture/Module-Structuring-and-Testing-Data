@@ -3,15 +3,13 @@
 // Predict the output of the following code:
 // =============> Write your prediction here
 
-const num = 103;
-
-function getLastDigit() {
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
-console.log(`The last digit of 42 is ${getLastDigit(42)}`);
-console.log(`The last digit of 105 is ${getLastDigit(105)}`);
-console.log(`The last digit of 806 is ${getLastDigit(806)}`);
+console.log(`The last digit of 42 is ${getLastDigit(42)}`);  // Output: "The last digit of 42 is 2"
+console.log(`The last digit of 105 is ${getLastDigit(105)}`);  // Output: "The last digit of 105 is 5"
+console.log(`The last digit of 806 is ${getLastDigit(806)}`);  // Output: "The last digit of 806 is 6"
 
 // Now run the code and compare the output to your prediction
 // =============> write the output here
