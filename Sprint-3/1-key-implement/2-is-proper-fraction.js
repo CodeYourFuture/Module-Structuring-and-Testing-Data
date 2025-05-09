@@ -8,7 +8,21 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
+  let num1 = Math.abs(numerator);
+  let num2 = Math.abs (denominator);
+    if (num1 < num2) 
+      {
+        return true;
+      }
+    // else if (numerator<0 && denominator<0)
+     //   {
+     //     return true;
+      //  } 
+     else 
+     {
+        return false;
+     }
+
 }
 
 // here's our helper again
@@ -35,11 +49,19 @@ assertEquals(properFraction, true);
 const improperFraction = isProperFraction(5, 2);
 assertEquals(improperFraction, false);
 
+const improperFraction1 = isProperFraction(-5, -2);
+assertEquals(improperFraction1, false);
+
+
+const improperFraction2 = isProperFraction(-5, 2);
+assertEquals(improperFraction2, false);
+
 // Negative Fraction check:
 // Input: numerator = -4, denominator = 7
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
+assertEquals(negativeFraction,true);
 // ====> complete with your assertion
 
 // Equal Numerator and Denominator check:
@@ -47,7 +69,18 @@ const negativeFraction = isProperFraction(-4, 7);
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
+assertEquals(equalFraction,false);
 // ====> complete with your assertion
 
 // Stretch:
 // What other scenarios could you test for?
+
+// both Numerator and denominator are negative 
+//Input : numerator = -3 , denominator = -4
+// target out : true 
+// Explanation : if both numerator and denominator are negative, it will be equal to positive fraction 
+ const negative = isProperFraction(-3,-4);
+ assertEquals(negative,true);
+ const negative1 = isProperFraction(-5,-4);
+ assertEquals(negative1,false);
+
