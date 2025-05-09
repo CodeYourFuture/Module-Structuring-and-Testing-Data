@@ -11,8 +11,10 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
-
+    // Th effect have is undefined.
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+    // ask for input.
 What is the return value of `prompt`?
+    // the value been entered.
