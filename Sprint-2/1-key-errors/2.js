@@ -5,15 +5,20 @@
 
 // =============> write your prediction of the error here
 
-function square(3) {
+// =============> write the error message here
+// SyntaxError: Unexpected number
+
+// =============> explain this error message here
+// we can’t use a number as a function parameter.
+
+// Finally, correct the code to fix the problem
+
+function square(num) {
     return num * num;
 }
 
-// =============> write the error message here
+console.log(square(3));
 
-// =============> explain this error message here
-
-// Finally, correct the code to fix the problem
 
 // =============> write your new code here
 
