@@ -3,3 +3,6 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+// the variable 'cityOfBirth' had to be declared first before doing the console log.
+// This is because the JAvascript reads from top to bottom
