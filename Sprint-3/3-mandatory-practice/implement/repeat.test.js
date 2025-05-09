@@ -16,6 +16,13 @@ test("should repeat the string count times", () => {
     expect(repeatedStr).toEqual("hellohellohello");
     });
 
+test("should repeat the string count times", () => {
+    const str = "hi";
+    const count = 3;
+    const repeatedStr = repeat(str, count);
+    expect(repeatedStr).toEqual("hihihi");
+    });
+
 // case: handle Count of 1:
 // Given a target string str and a count equal to 1,
 // When the repeat function is called with these inputs,
