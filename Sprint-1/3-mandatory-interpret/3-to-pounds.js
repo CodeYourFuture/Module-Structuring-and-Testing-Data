@@ -25,3 +25,7 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+//2 penceStringWithoutTrailingP uses substring method to return the value before the p
+//3 padStart method is used to add 0 until the string has the length of 3
+//4 substring method is used to return the string value without the final 2 
+//5 pence adds 00 at the end to achieve the length of 2
