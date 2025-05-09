@@ -1,4 +1,3 @@
-const getOrdinalNumber = require("./get-ordinal-number");
 // In this week's prep, we started implementing getOrdinalNumber
 
 // continue testing and implementing getOrdinalNumber for additional cases
@@ -11,3 +10,25 @@ const getOrdinalNumber = require("./get-ordinal-number");
 test("should return '1st' for 1", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
     });
+
+
+    function getOrdinalNumber(num) {
+        // Handle special cases for 11, 12, and 13
+        if (num % 100 >= 11 && num % 100 <= 13) return `${num}th`;
+      
+        // Determine the suffix based on the last digit
+        const lastDigit = num % 10;
+        switch (lastDigit) {
+          case 1:
+            return `${num}st`;
+          case 2:
+            return `${num}nd`;
+          case 3:
+            return `${num}rd`;
+          default:
+            return `${num}th`;
+        }
+      }
+      
+      module.exports = getOrdinalNumber;
+      

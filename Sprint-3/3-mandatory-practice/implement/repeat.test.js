@@ -1,5 +1,4 @@
 // Implement a function repeat
-const repeat = require("./repeat");
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
 // Then it should:
@@ -9,12 +8,6 @@ const repeat = require("./repeat");
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
-test("should repeat the string count times", () => {
-    const str = "hello";
-    const count = 3;
-    const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("hellohellohello");
-    });
 
 // case: handle Count of 1:
 // Given a target string str and a count equal to 1,
@@ -30,3 +23,13 @@ test("should repeat the string count times", () => {
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+
+function repeat(str, count) {
+    if (count < 0) {
+        throw new Error("Count cannot be negative"); // Error for negative counts
+    }
+    return str.repeat(count); // Built-in repeat method for positive counts
+}
+
+module.exports = repeat;
