@@ -11,3 +11,35 @@ const getOrdinalNumber = require("./get-ordinal-number");
 test("should return '1st' for 1", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
     });
+
+test("Should return '22nd' for 22", () => {
+    expect(getOrdinalNumber(22)).toEqual("22nd");
+    });
+
+test("Should return '11th' for 11", () => {
+    expect(getOrdinalNumber(11)).toEqual("11th");
+    });
+
+test("Should return '100th' for 100", () => {
+    expect(getOrdinalNumber(100)).toEqual("100th");
+    });
+
+test("Should return '113th' for 113", () => {
+    expect(getOrdinalNumber(113)).toEqual("113th");
+    });
+
+test("Should return '13th' for 13", () => {
+    expect(getOrdinalNumber(13)).toEqual("13th");
+    });
+
+test("Should return '208th' for 208", () => {
+    expect(getOrdinalNumber(208)).toEqual("208th");
+    });
+
+test("Should return '121st' for 121", () => {
+    expect(getOrdinalNumber(121)).toEqual("121st");
+    });
+
+test("Should return '2nd' for 2", () => {
+    expect(getOrdinalNumber(2)).toEqual("2nd");
+    });
