@@ -39,7 +39,12 @@ console.log(`£${pounds}.${pence}`);
    //  Extracts the pounds from the padded string.so it takes all digits except the last two. 
    //For "399", this gives "3" → meaning 3 pounds.
 
-// 5-const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0"); 
+//5- const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0"); 
     // Extracts the last two digits for pence and pads them if necessary. 
     // substring(length - 2) takes the final 2 characters.
     // padEnd(2, "0") ensures the pence string is exactly 2 digits. transfer to two-digit formatting for pence 5 => "05".
+
+
+//6-  console.log(`£${pounds}.${pence}`);
+    //this log the final formatted string in pounds and pence using a template literal.
+    // For "399p", output is: £3.99
