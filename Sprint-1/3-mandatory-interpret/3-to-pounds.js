@@ -24,4 +24,21 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 1. const penceString = "399p": initializes a string variable with the value "399p"
+// 2.const penceStringWithoutTrailingP = penceString.substring(
+//   0,
+//   penceString.length - 1): remover the trailing P form the amount
+
+// 3.const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"):to add zeroes to the end if the length is not 3
+
+// 4.const pounds = paddedPenceNumberString.substring(
+//   0,
+//   paddedPenceNumberString.length - 2) : remove the last two digits to make this amount as pound
+
+// 5.const pence = paddedPenceNumberString
+// .substring(paddedPenceNumberString.length - 2)
+// .padEnd(2, "0") : take the last tow digits as pence
+
+// 6.console.log(`£${pounds}.${pence}`) : print the amount with £ in the console
+
+
