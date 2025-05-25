@@ -12,8 +12,10 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
+// 6 variables (movieLength, remainingSeconds ,totalMinutes ,remainingMinutes, totalHours, result)
 
 // b) How many function calls are there?
+// Only one (console.log)
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
