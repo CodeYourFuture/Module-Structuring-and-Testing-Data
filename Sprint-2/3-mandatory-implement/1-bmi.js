@@ -16,4 +16,19 @@
 
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
+    if(typeof weight !== 'number' || typeof height !== 'number' ){
+        return 'Error: Weight and height must be numbers';
+    } 
+    
+    if(weight <= 0 || height <= 0){
+        return 'Error: Weight and height must be greater than zero';
+    }
+      const bmi = weight / (height * height);
+        return parseFloat(bmi.toFixed(1));
+
 }
+console.log(`BMI for 50kg and 1.60m is: ${calculateBMI(50, 1.6)}`);  
+console.log(`BMI for 90kg and 1.80m is: ${calculateBMI(90, 1.8)}`); 
+console.log(`BMI for 0kg and 1.80m is: ${calculateBMI(0, 1.8)}`);  
+console.log(`BMI for twelve kg and 0m is: ${calculateBMI("twelve", 0)}`)
+console.log(`BMI for 100kg and thirty m is: ${calculateBMI(100,"thirty")}`)
