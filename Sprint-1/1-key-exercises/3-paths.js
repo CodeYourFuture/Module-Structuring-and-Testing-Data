@@ -15,9 +15,13 @@ const base = filePath.slice(lastSlashIndex + 1);
 console.log(`The base part of ${filePath} is ${base}`);
 
 // Create a variable to store the dir part of the filePath variable
-// Create a variable to store the ext part of the variable
+// pseudocode:  get the string from the start up to, but not including, the last "/"
+const dir = filePath.slice(0, lastSlashIndex);
+console.log(`The dir part of ${filePath} is ${dir}`);
 
-const dir = ;
-const ext = ;
+// Create a variable to store the ext part of the variable
+// pseudocode: get the index of the last "." then get the string from that index to the end of the string (since we know the filename has a "." extension)
+const ext = filePath.slice(filePath.lastIndexOf("."));
+console.log(`The ext part of ${filePath} is ${ext}`);
 
 // https://www.google.com/search?q=slice+mdn
