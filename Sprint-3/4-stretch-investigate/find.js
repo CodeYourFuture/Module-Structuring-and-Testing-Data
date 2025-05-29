@@ -12,6 +12,7 @@ function find(str, char) {
 
 console.log(find("code your future", "u"));
 console.log(find("code your future", "z"));
+console.log(find("shreef", "s"));
 
 // The while loop statement allows us to do iteration - the repetition of a certain number of tasks according to some condition
 // See the docs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while

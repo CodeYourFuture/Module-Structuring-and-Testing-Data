@@ -21,6 +21,33 @@ test("password has at least 5 characters", () => {
     // Act
     const result = isValidPassword(password);
     // Assert
-    expect(result).toEqual(true);
+    expect(result).toBe(false);
+}
+);
+test("password Must not be any previous password in the passwords array", () => {
+    // Arrange
+    const password = "Hdsd&88";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toBe(false);
+}
+);
+test("Given valid password should return true", () => {
+    // Arrange
+    const password = "Hdsd#77";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toBe(true);
+}
+);
+test("Has less than 5 characters should return false", () => {
+    // Arrange
+    const password = "Hd#7";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toBe(false);
 }
 );
