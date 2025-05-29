@@ -21,7 +21,7 @@ console.log(`The dir part of ${filePath} is ${dir}`);
 
 // Create a variable to store the ext part of the variable
 // pseudocode: get the index of the last "." then get the string from that index to the end of the string (since we know the filename has a "." extension)
-const ext = base.lastIndexOf(".");
+const ext = base.slice(base.lastIndexOf(".") + 1);
 console.log(`The ext part of ${filePath} is ${ext}`);
 
 // https://www.google.com/search?q=slice+mdn
