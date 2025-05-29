@@ -9,11 +9,11 @@
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
 /*
-The error in the above code happens because `cardNumber` is a number, and the `slice()` method is not available for numbers, it is a string method, and it can only be used on strings or arrays. 
+I predict that the error in the above code happens because `cardNumber` is a number, and the `slice()` method is not available for numbers, it is a string method, and it can only be used on strings or arrays (a type of global 'object' used to store data. Arrays can store multiple values in a single variable). 
 */
 
 /*
-Running the code provides a TypeError at line 2 character 32, which indicates that the issue is with the type of the variable being used (i.e. number, string, boolean, float, etc.). The error also points to the "slice" method which correlates with the fact that the "slice" method is not available for numbers.
+Running the code provides a TypeError at line 2 character 32, which indicates that the issue is with the type of the variable being used (i.e. number, string, boolean, float, etc.). The error also points to the "slice" method and notes that 'cardNumber.slice is not a function' which correlates with the fact that the "slice" method is not available for numbers.
 */
 
 const cardNumber = 4533787178994213;
