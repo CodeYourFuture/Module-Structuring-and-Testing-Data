@@ -14,8 +14,8 @@ console.log(`The percentage change is ${percentageChange}`);
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
 /*
-There are 3 function calls in this file:
-Line 4 and 5 - Number() and replaceAll() (although replaceAll() is technically a method (is a property of a string object) it is still a function call)
+There are 3 distinct function calls in this file (although some are called twice):
+Line 4 and 5 - Number() and replaceAll() (although replaceAll() is technically a method (is a property of a string object) it is still a function call. The difference between a standard function and a method is that a function is a standalone block of reusable code that doesn't belong to an object, while a method is usually called on or with an object (an object is a data structure that allows you to group related data and functionality together).)
 line 10 - console.log() (although log() is technically a method (is a property of the console object) it is still a function call)
 */
 
