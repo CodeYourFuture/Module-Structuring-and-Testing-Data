@@ -6,7 +6,7 @@ count = count + 1;
 // Describe what line 3 is doing, in particular focus on what = is doing
 
 /* 
-  📝 Solution:
+    Solution:
   Line 3 updates the value of the variable `count` by adding 1 to its current value.
 
   ➤ `count + 1` → This evaluates to `0 + 1`, which is `1`.
