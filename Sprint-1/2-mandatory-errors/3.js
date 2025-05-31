@@ -11,5 +11,5 @@
 // console.log(last4Digits) => TypeError: cardNumber.slice is not a function at Object.
 
 const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.toString().slice(-4);
-// console.log(last4Digits) =>  4213
+const last4Digits = cardNumber % 10000;
+//  console.log(last4Digits)   //4213 
