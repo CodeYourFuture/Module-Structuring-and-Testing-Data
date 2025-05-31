@@ -17,7 +17,17 @@ console.log(`The base part of ${filePath} is ${base}`);
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-const dir = ;
-const ext = ;
+const dir = filePath.slice(0, lastSlashIndex);
+const ext = base.slice(base.lastIndexOf("."));
+
+console.log(`The dir part of ${filePath} is ${dir}`);
+console.log(`The ext part of ${filePath} is ${ext}`);
+
+//Results are:
+// [Running] node "d:\CYF\Module-Structuring-and-Testing-Data\Sprint-1\1-key-exercises\3-paths.js"
+// The base part of /Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt is file.txt
+// The dir part of /Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt is /Users/mitch/cyf/Module-JS1/week-1/interpret
+// The ext part of /Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt is .txt
+
 
 // https://www.google.com/search?q=slice+mdn
