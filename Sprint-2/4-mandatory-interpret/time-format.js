@@ -17,18 +17,20 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// =============> 3 Times (once for hours, once for minutes, once for seconds)
+
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
+console.log(formatTimeDisplay(61))
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// =============> 0
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// =============> "00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> When pad is called for the last time, the value 1 is passed to it as the argument. This happens when the formatTimeDisplay function works out the remaining seconds. The function first turns the number into a string, then adds a zero at the start to make sure it’s two digits long.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> The return value is "01" — because the number 1 gets turned into the string "1" and then a zero is added at the front.
