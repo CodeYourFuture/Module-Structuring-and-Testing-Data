@@ -6,6 +6,9 @@ let lastName = "Johnson";
 // This should produce the string "CKJ", but you must not write the characters C, K, or J in the code of your solution.
 
 let initials = ``;
+initials = firstName[0] + middleName[0] + lastName[0];
+// The above code uses the bracket notation to access the first character of each string.
+console.log(initials); // Output: CKJ
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 
