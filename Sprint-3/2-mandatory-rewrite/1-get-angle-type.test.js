@@ -1,24 +1,34 @@
 const getAngleType = require("./1-get-angle-type");
+describe("getAngleType",()=>{
+  test("should identify zero angle (0°)", () => {
+  expect(getAngleType(0)).toEqual("Zero angle");
+});
 
-test("should identify right angle (90°)", () => {
+  test("should identify right angle (90°)", () => {
   expect(getAngleType(90)).toEqual("Right angle");
 });
 
-// REPLACE the comments with the tests
-// make your test descriptions as clear and readable as possible
+test("should identify acute angle (12°)", () => {
+  expect(getAngleType(12)).toEqual("Acute angle");
+});
 
-// Case 2: Identify Acute Angles:
-// When the angle is less than 90 degrees,
-// Then the function should return "Acute angle"
+test("should identify obtuse angle (120°)", () => {
+  expect(getAngleType(120)).toEqual("Obtuse angle");
+});
 
-// Case 3: Identify Obtuse Angles:
-// When the angle is greater than 90 degrees and less than 180 degrees,
-// Then the function should return "Obtuse angle"
+ test("should identify straight angle (180°)", () => {
+  expect(getAngleType(180)).toEqual("Straight angle");
+});
 
-// Case 4: Identify Straight Angles:
-// When the angle is exactly 180 degrees,
-// Then the function should return "Straight angle"
+ test("should identify reflex angle (181°)", () => {
+  expect(getAngleType(181)).toEqual("Reflex angle");
+});
 
-// Case 5: Identify Reflex Angles:
-// When the angle is greater than 180 degrees and less than 360 degrees,
-// Then the function should return "Reflex angle"
+ test("should return Invalid angle if the angle is not a number", () => {
+  expect(getAngleType("Rahwa")).toEqual("Invalid angle");
+});
+
+test("should return Invalid angle if the angle is not between 0 and 360 degree", () => {
+  expect(getAngleType(600)).toEqual("Invalid angle");
+});
+})
