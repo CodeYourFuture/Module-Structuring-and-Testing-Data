@@ -1,6 +1,6 @@
-// This is the latest solution to the problem from the prep.
-// Make sure to do the prep before you do the coursework
-// Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
+// THIS IS THE LATEST SOLUTION TO THE PROBLEM FROM THE PREP.
+// MAKE SURE TO DO THE PREP BEFORE YOU DO THE COURSEWORK
+// YOUR TASK IS TO WRITE TESTS FOR AS MANY DIFFERENT GROUPS OF INPUT DATA OR EDGE CASES AS YOU CAN, AND FIX ANY BUGS YOU FIND.
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
@@ -10,16 +10,43 @@ function formatAs12HourClock(time) {
   return `${time} am`;
 }
 
-const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
+// CASE 1 check it works for am
+const output = formatAs12HourClock("08:00");
+const target = "08:00 am";
 console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
+  output === target,
+  `Case 1: output: ${output}, target output: ${target}`
 );
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
+// CASE 2 check it works for pm
+const output2 = formatAs12HourClock("23:00");
+const target2 = "11:00 pm";
 console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
+  output2 === target2,
+  `Case 2 output: ${output2}, target output: ${target2}`
+);
+
+// CASE 3 check edge case: 00:00
+const output3 = formatAs12HourClock("00:00");
+const target3 = "12:00 am";
+console.assert(
+  output3 === target3,
+  `Case 3 output: ${output3}, target output: ${target3}`
+);
+
+
+// CASE 4 check edge case: 24:00
+const output4 = formatAs12HourClock("24:00");
+const target4 = target3 //24:00 on Tuesday is the same as 00:00 on Wednesday
+console.assert(
+  output4 === target4,
+  `Case 4 output: ${output4}, target output: ${target4}`
+);
+
+// CASE 5 check edge case: 12:00pm
+const output5 = formatAs12HourClock("12:00");
+const target5 = "12:00 pm";
+console.assert(
+  output5 === target5,
+  `Case 5 output: ${output5}, target output: ${target5}`
 );
