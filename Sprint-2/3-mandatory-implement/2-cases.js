@@ -1,9 +1,9 @@
-// A set of words can be grouped together in different cases.
+// A SET OF WORDS CAN BE GROUPED TOGETHER IN DIFFERENT CASES.
 
-// For example, "hello there" in snake case would be written "hello_there"
+// FOR EXAMPLE, "HELLO THERE" IN SNAKE CASE WOULD BE WRITTEN "HELLO_THERE"
 // UPPER_SNAKE_CASE means taking a string and writing it in all caps with underscores instead of spaces.
 
-// Implement a function that:
+// IMPLEMENT A FUNCTION THAT:
 
 // Given a string input like "hello there"
 // When we call this function with the input string
@@ -14,3 +14,10 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toSnakeCase(str) {
+    return (str.toUpperCase()).replaceAll(" ", "_");
+}
+
+myString = "I like beans";  // string to change to snake case
+console.log(toSnakeCase(myString)); //calls toSnakeCase to print the string in snake case
