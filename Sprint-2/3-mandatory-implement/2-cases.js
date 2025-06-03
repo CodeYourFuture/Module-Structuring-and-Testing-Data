@@ -16,8 +16,13 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function toSnakeCase(str) {
-    return (str.toUpperCase()).replaceAll(" ", "_");
+    str = str.trim(); //remove any leading or trailing whitespace
+    str = str.replace(/\s+/g," ") //replace any multiple-spaces with single spaces
+    return (str.toLowerCase()).replaceAll(" ", "_");
 }
 
 myString = "I like beans";  // string to change to snake case
 console.log(toSnakeCase(myString)); //calls toSnakeCase to print the string in snake case
+
+myString2 = "I    like  beans";
+console.log(toSnakeCase(myString2));
