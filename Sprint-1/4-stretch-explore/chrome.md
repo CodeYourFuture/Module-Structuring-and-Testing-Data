@@ -16,3 +16,19 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+Answers:
+When invoking the function alert with an input string of "Hello world!", we get a popup message that displays: Hello world!
+
+When invoking the function prompt like this:
+let myName = prompt("What is your name?");
+we get a popup box with an input field, as well as OK and Cancel buttons.
+
+The prompt function pauses code execution until the user responds.
+
+It returns the user's input as a string.
+If the user clicks Cancel, it returns null.
+
+
+
+
