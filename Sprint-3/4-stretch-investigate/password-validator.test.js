@@ -15,39 +15,36 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toBe(false);
-}
-);
-test("password Must not be any previous password in the passwords array", () => {
-    // Arrange
-    const password = "Hdsd&88";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toBe(false);
-}
-);
-test("Given valid password should return true", () => {
-    // Arrange
-    const password = "Hdsd#77";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toBe(true);
-}
-);
-test("Has less than 5 characters should return false", () => {
-    // Arrange
-    const password = "Hd#7";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toBe(false);
-}
-);
+
+test("password must have at least 5 characters", () => {
+  expect(isValidPassword("Hd#7")).toBe(false); 
+});
+
+test("password must have at least one uppercase letter", () => {
+  expect(isValidPassword("password1!")).toBe(false); 
+});
+
+test("password must have at least one lowercase letter", () => {
+  expect(isValidPassword("PASSWORD1!")).toBe(false); 
+});
+
+test("password must have at least one number", () => {
+  expect(isValidPassword("Password!")).toBe(false); 
+});
+
+test("password must have at least one special character", () => {
+  expect(isValidPassword("Password1")).toBe(false); 
+});
+
+test("password must only use valid special characters", () => {
+  expect(isValidPassword("Mill3@")).toBe(false); 
+});
+
+test("should return false for previously used password", () => {
+  isValidPassword("Hdsd#77"); 
+  expect(isValidPassword("Hdsd#77")).toBe(false); 
+});
+
+test("valid password should return true", () => {
+  expect(isValidPassword("A1bc*7")).toBe(true); 
+});

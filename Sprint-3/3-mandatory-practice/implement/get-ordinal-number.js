@@ -1,4 +1,7 @@
 function getOrdinalNumber(num) {
+  if (num < 1 || !Number.isInteger(num)) {
+    throw new Error("Input must be a positive integer");
+  }
     const lastTwo = num % 100;
     const lastOne = num % 10;
   

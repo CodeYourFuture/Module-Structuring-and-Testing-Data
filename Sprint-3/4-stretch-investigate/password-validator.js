@@ -1,30 +1,20 @@
-const previousPassword = ["Alds.33", "Hdsd&88"];
+let previousPassword = [];
+
 function passwordValidator(password) {
-  if (password.length < 5) {
-    return false;
-  }
-  const hasUpperCase = /[A-Z]/.test(password);
-  if (!hasUpperCase) {
-    return false;
-  }
-  const hasLowerCase = /[a-z]/.test(password);
-  if (!hasLowerCase) {
-    return false;
-  }
-  const hasNumber = /[0-9]/.test(password);
+  if (password.length < 5) return false;
 
-  if (!hasNumber) {
-    return false;
-  }
-  const hasSpecialSymbol = /[!#$%.*&]/.test(password);
-  if (!hasSpecialSymbol) {
-    return false;
-  }
-  if (previousPassword.includes(password)) {
-    return false;
-  }
+  if (!/[A-Z]/.test(password)) return false;        
+  if (!/[a-z]/.test(password)) return false;         
+  if (!/[0-9]/.test(password)) return false;         
 
+  const specialCharacters = ["!", "#", "$", "%", ".", "*", "&"];
+  if (!specialCharacters.some(char => password.includes(char))) return false;
+
+  if (previousPassword.includes(password)) return false;
+
+  previousPassword.push(password);                   
   return true;
 }
+
 
 module.exports = passwordValidator;

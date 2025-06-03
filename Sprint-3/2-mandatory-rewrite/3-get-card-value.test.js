@@ -1,7 +1,7 @@
 const getCardValue = require("./3-get-card-value");
 
 test("should return 11 for Ace of Spades", () => {
-    const aceofSpades = getCardValue("A♠");
+    
     expect(aceofSpades).toEqual(11);
     });
 
@@ -25,7 +25,5 @@ test("should return Invalid card rank for Invalid Cards ",()=>{
     const NumberCards = getCardValue("n♠");
     expect(NumberCards).toEqual("Invalid card rank")
 })
-
-
 
 
