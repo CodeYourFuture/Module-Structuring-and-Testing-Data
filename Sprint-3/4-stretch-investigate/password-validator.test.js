@@ -16,60 +16,35 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 const isValidPassword = require("./password-validator");
 
-// test("password has at least 5 characters", () => {
-//     // Arrange
-//     const password = "12345";
-//     // Act
-//    const result = isValidPassword(password);
-//     // Assert
-//     expect(result).toBe(true);
-// }
-// );
-test("password has a unknown character", () => {
-  const password = "Mill3@";
-  const result = isValidPassword(password);
-  expect(result).toBe(false);
-
-})
-
-
- test("password has at least 5 characters", () => {
-  expect(isValidPassword("12345")).toBe(false);// Fails because no letters or special chars
-  expect(isValidPassword("1234")).toBe(false); // Fails because the password is less than 5 characters.
+test("password must have at least 5 characters", () => {
+  expect(isValidPassword("Hd#7")).toBe(false); 
 });
 
-test("password has at least one uppercase letter", () => {
-  expect(isValidPassword("password1!")).toBe(false); // No uppercase letter
+test("password must have at least one uppercase letter", () => {
+  expect(isValidPassword("password1!")).toBe(false); 
 });
 
-test("password has at least one lowercase letter", () => {
-  expect(isValidPassword("PASSWORD1!")).toBe(false); // No lowercase letter
+test("password must have at least one lowercase letter", () => {
+  expect(isValidPassword("PASSWORD1!")).toBe(false); 
 });
 
-test("password has at least one number", () => {
-  expect(isValidPassword("Password!")).toBe(false); // No number
+test("password must have at least one number", () => {
+  expect(isValidPassword("Password!")).toBe(false); 
 });
 
-test("password has at least one special character", () => {
-  expect(isValidPassword("Password1")).toBe(false); // No special character
+test("password must have at least one special character", () => {
+  expect(isValidPassword("Password1")).toBe(false); 
 });
 
-
-
-test("valid password", () => {
-  expect(isValidPassword("Valid1!")).toBe(true); // Meets all conditions
+test("password must only use valid special characters", () => {
+  expect(isValidPassword("Mill3@")).toBe(false); 
 });
 
-test("password should not be a previously used password", () => {
-  expect(isValidPassword("Valid1!")).toBe(false); // Used before
+test("should return false for previously used password", () => {
+  isValidPassword("Hdsd#77"); 
+  expect(isValidPassword("Hdsd#77")).toBe(false); 
 });
 
-
-
-// test("valid password", () => {
-//   expect(isValidPassword("Mil2!")).toBe(true); // Meets all conditions
-// });
-
-// test("password should not be a previously used password", () => {
-//   expect(isValidPassword("Mil2!")).toBe(false); // Used before
-// });
+test("valid password should return true", () => {
+  expect(isValidPassword("A1bc*7")).toBe(true); 
+});

@@ -1,14 +1,25 @@
 function getOrdinalNumber(num) {
-    if (num < 1 || !Number.isInteger(num)) throw new Error("Input must be a positive integer");
-
-    const specialCases = [11, 12, 13];
-    const suffixes = ["th", "st", "nd", "rd"];
-    const lastDigit = num % 10;
-    const lastTwoDigits = num % 100;
-  
-    return num + (specialCases.includes(lastTwoDigits) ? "th" : suffixes[lastDigit] || "th");
+  if (num < 1 || !Number.isInteger(num)) {
+    throw new Error("Input must be a positive integer");
   }
+    const lastTwo = num % 100;
+    const lastOne = num % 10;
   
-
+    if (lastTwo >= 11 && lastTwo <= 13) {
+      return num + "th";
+    }
+  
+    if (lastOne === 1) {
+      return num + "st";
+    } else if (lastOne === 2) {
+      return num + "nd";
+    } else if (lastOne === 3) {
+      return num + "rd";
+    } else {
+      return num + "th";
+    }
+  }
+      
 
 module.exports = getOrdinalNumber;
+

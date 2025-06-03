@@ -1,12 +1,26 @@
 function getCardValue(card) {
-    // replace with your code from key-implement
-    return 11;
+  if (!card || typeof card !== "string") {
+    return "Invalid card format";
+  }
 
+ 
+  const rank = card.length === 1 ? card : card.slice(0, -1);
+
+  if (rank === "A") {
+    return 11;
+  }
+
+  if (["K", "Q", "J", "10"].includes(rank)) {
+    return 10;
+  }
+
+  const number = parseInt(rank);
+  if (!isNaN(number) && number >= 2 && number <= 9) {
+    return number;
+  }
+
+  return "Invalid card rank";
 }
-const rank = card.slice(0, -1);
-    if (rank === "A") return 11;
-     (["K", "Q", "J", "10"].includes(rank)) return 10;
-     (!isNaN(rank) && rank >= 2 && rank <= 9) return Number(rank);
-    throw new Error("Invalid card rank");
-  
+
+ 
 module.exports = getCardValue;
