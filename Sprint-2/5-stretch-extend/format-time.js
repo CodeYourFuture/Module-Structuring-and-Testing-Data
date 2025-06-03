@@ -14,36 +14,33 @@ function formatAs12HourClock(time) {
     return;
   }
 
+  let suffix = ""
   let hours = Number(time.slice(0,2)); //convert to number to enable comparisons in if statement
   const mins = time.slice(3);
 
-  if (hours==0) {
-    hours += 12;
-    return `${hours}:${mins} am`
-  }  
-  else if (hours<12) {
-    hours = pad(hours);
-    return `${hours}:${mins} am`;
+  if (hours==0) { // if time entered was 00:MM, then it's midnight and the time has just flipped to am
+    hours = 12;  // in 12 hours clock, 00 is not allowed, so add 12 => 12:00 am for midnight
+    suffix = "am"
   }
-  else if (hours==12) {
-    return `${hours}:${mins} pm`
+  else if (hours<12) { // hours 1 through 11 are am hours
+    suffix = "am"
   }
-  else {
-    hours=hours-12;
-    return `${hours}:${mins} pm`;
+  else if (hours==12) { // at midday, the time flips to pm
+    suffix = "pm"
+  }
+  else {  // hours > 12 => time is in the afternoon/night
+    hours=hours-12; 
+    suffix = "pm"
   }
 
+  return `${pad(hours)}:${mins} ${suffix}`
 
-  // const hours = Number(time.slice(0, 2)); // returns first two characters of string
-  // if (hours > 12) {
-  //   return `${hours - 12}:00 pm`;
-  // }
-  // return `${time} am`;
 }
 
 // CASE 1 check it works for am
 const output = formatAs12HourClock("08:00");
 const target = "08:00 am";
+console.log(output);
 console.assert(
   output === target,
   `Case 1: output: ${output}, target output: ${target}`
@@ -52,6 +49,7 @@ console.assert(
 // CASE 2 check it works for pm
 const output2 = formatAs12HourClock("23:00");
 const target2 = "11:00 pm";
+console.log(output2);
 console.assert(
   output2 === target2,
   `Case 2 output: ${output2}, target output: ${target2}`
@@ -60,6 +58,7 @@ console.assert(
 // CASE 3 check edge case: midnight, 00:00
 const output3 = formatAs12HourClock("00:00");
 const target3 = "12:00 am";
+console.log(output3);
 console.assert(
   output3 === target3,
   `Case 3 output: ${output3}, target output: ${target3}`
@@ -73,6 +72,7 @@ console.assert(
 // CASE 5 check edge case: midday, 12:00pm
 const output5 = formatAs12HourClock("12:00");
 const target5 = "12:00 pm";
+console.log(output5);
 console.assert(
   output5 === target5,
   `Case 5 output: ${output5}, target output: ${target5}`
@@ -85,6 +85,7 @@ console.assert(
 // CASE 7 check minutes handled
 const output7 = formatAs12HourClock("11:11");
 const target7 = "11:11 am";
+console.log(output7);
 console.assert(
   output7 === target7,
   `Case 7 output: ${output7}, target output: ${target7}`
