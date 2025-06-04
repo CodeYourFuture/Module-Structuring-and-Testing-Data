@@ -4,6 +4,5 @@
 
 //Variable name can not start with a number
 
-const twelveHourClockTime = "20;53"
-const twentyfourHoueClockTime = "08:53"
-console.log(twelveHourClockTime,twentyfourHoueClockTime)
+const twelveHourClockTime = "8:53 PM"
+const twentyfourHourClockTime = "20:53"
