@@ -139,3 +139,9 @@ for (const [current, target] of testCases) {
     `current output: ${current}, target output: ${target}`
   );
 }
+
+// The assertions logged as:
+// Assertion failed: current output: 12:00, target output: 12:00 am
+// Assertion failed: current output: 3:45, target output: Invalid time input
+// Assertion failed: current output: :20, target output: Invalid time input
+// Assertion failed: current output: :, target output: Invalid time input
