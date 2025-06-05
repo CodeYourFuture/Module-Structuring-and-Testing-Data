@@ -25,9 +25,11 @@ console.log(formatTimeDisplay(61)); // ==> 00:01:01
 
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> 1
+// oops, that's wrong, it's 0. totalHours will have a value of zero when passed in.
 
 // c) What is the return value of pad is called for the first time?
 // =============> 01
+// also wrong, it's 00. follows from above.
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> 1
