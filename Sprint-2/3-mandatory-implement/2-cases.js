@@ -18,7 +18,7 @@
 function toSnakeCase(str) {
     str = str.trim(); //remove any leading or trailing whitespace
     str = str.replace(/\s+/g," ") //replace any multiple-spaces with single spaces
-    return (str.toLowerCase()).replaceAll(" ", "_");
+    return (str.toUpperCase()).replaceAll(" ", "_");
 }
 
 myString = "I like beans";  // string to change to snake case
