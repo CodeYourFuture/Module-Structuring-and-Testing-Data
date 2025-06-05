@@ -20,6 +20,10 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+//the value increase by 1
 // b) What is the if statement used to check
+// when index reaches desired char return it
 // c) Why is index++ being used?
+//idex++ is being used to add 1 to the value of index
 // d) What is the condition index < str.length used for?
+//this ensures the index does not go beyond the length of the string
