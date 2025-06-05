@@ -9,10 +9,25 @@ Let's try an example.
 
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
+alert("Hello World!")
 
 What effect does calling the `alert` function have?
+1. Displays a Modal Dialog Box: chrome://new-tab-page-says
+Hello World!
+2. Pauses Script Execution
+3. No Return Value
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
+let myName = prompt("What is your name?");
 
-What effect does calling the `prompt` function have?
+What effect do2es calling the `prompt` function have?
+1. Displays a Modal Dialog Box with an Input Field
+2. Pauses Script Execution
+3. Returns User Input
+4. Blocks User Interaction with the Page
+5. Browser-Dependent Appearance
+
 What is the return value of `prompt`?
+undefined
+
+
