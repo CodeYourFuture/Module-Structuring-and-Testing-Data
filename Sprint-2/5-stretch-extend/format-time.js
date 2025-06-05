@@ -10,6 +10,7 @@ function pad(num) {
 function formatAs12HourClock(time) {
 
   if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(time)) { //if string DOESN'T look like HH:MM, min 00:00/max 23:59
+
     console.log(`You entered "${time}". formatAs12HourClock only works for times written HH:MM. min 00:00, max 23:59.`);
     return;
   }
@@ -20,20 +21,20 @@ function formatAs12HourClock(time) {
 
   if (hours==0) { // if time entered was 00:MM, then it's midnight and the time has just flipped to am
     hours = 12;  // in 12 hours clock, 00 is not allowed, so add 12 => 12:00 am for midnight
-    suffix = "am"
+    suffix = "am";
   }
   else if (hours<12) { // hours 1 through 11 are am hours
-    suffix = "am"
+    suffix = "am";
   }
   else if (hours==12) { // at midday, the time flips to pm
-    suffix = "pm"
+    suffix = "pm";
   }
   else {  // hours > 12 => time is in the afternoon/night
     hours=hours-12; 
-    suffix = "pm"
+    suffix = "pm";
   }
 
-  return `${pad(hours)}:${mins} ${suffix}`
+  return `${pad(hours)}:${mins} ${suffix}`;
 
 }
 
