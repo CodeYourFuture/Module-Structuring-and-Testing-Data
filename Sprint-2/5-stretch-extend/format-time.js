@@ -37,56 +37,86 @@ function formatAs12HourClock(time) {
 
 }
 
-// CASE 1 check it works for am
-const output = formatAs12HourClock("08:00");
-const target = "08:00 am";
-console.log(output);
-console.assert(
-  output === target,
-  `Case 1: output: ${output}, target output: ${target}`
-);
+// Test cases
 
-// CASE 2 check it works for pm
-const output2 = formatAs12HourClock("23:00");
-const target2 = "11:00 pm";
-console.log(output2);
-console.assert(
-  output2 === target2,
-  `Case 2 output: ${output2}, target output: ${target2}`
-);
+const testStrings = {
+  //object with key as input and item as expected output
+  "08:00":"08:00 am",    //check am
+  "23:00": "11:00 pm",  //check pm
+  "00:00":"12:00 am",   //midnight edge case
+  "12:00":"12:00 pm",   //midday edge case
+  "11:11":"11:11 am"   //check minutes handled
+}
 
-// CASE 3 check edge case: midnight, 00:00
-const output3 = formatAs12HourClock("00:00");
-const target3 = "12:00 am";
-console.log(output3);
-console.assert(
-  output3 === target3,
-  `Case 3 output: ${output3}, target output: ${target3}`
-);
+// NOTES FOR ME ABOUT THE FOR...OF TESTING THINGY
+// for...of iterates over the values in something
+// objects aren't iterable. Object.entries() returns an array of the entries in an object
+// so here that's like [["08:00", "08:00am"], ["23:00", "11:00 pm"].....]
+// [input,expectedOutput] unpacks each value that Object.entries(..) returns into a separate variable
+// ie on the first run, Object.entries would return ["08:00", "08:00 am"], which would get unpacked to input = "08:00" and expectedOutput = "08:00 am"
 
+for (const [input, expectedOutput] of Object.entries(testStrings)) {
+  const currentOutput = formatAs12HourClock(input);
+  console.assert(
+    expectedOutput === currentOutput,
+    `desired output: ${expectedOutput}, actual output: ${currentOutput}`
+  )
+}
 
 // CASE 4 check edge case: 24:00
-// const output4 = formatAs12HourClock("24:00");
+const output4 = formatAs12HourClock("24:00");
 //does log an error message
 
-// CASE 5 check edge case: midday, 12:00pm
-const output5 = formatAs12HourClock("12:00");
-const target5 = "12:00 pm";
-console.log(output5);
-console.assert(
-  output5 === target5,
-  `Case 5 output: ${output5}, target output: ${target5}`
-);
-
 // CASE 6 check letters entered
-// const output6 = formatAs12HourClock("abcdefg");
+const output6 = formatAs12HourClock("abcdefg");
 // does log an error message
 
-// CASE 7 check minutes handled
-const output7 = formatAs12HourClock("11:11");
-const target7 = "11:11 am";
-console.log(output7);
-console.assert(
-  output7 === target7,
-  `Case 7 output: ${output7}, target output: ${target7}`
-);
+// before putting test cases in an object they looked like this:
+// CASE 1 check it works for am
+// const output = formatAs12HourClock("08:00");
+// const target = "08:00 am";
+// console.log(output);
+// console.assert(
+//   output === target,
+//   `Case 1: output: ${output}, target output: ${target}`
+// );
+
+// // CASE 2 check it works for pm
+// const output2 = formatAs12HourClock("23:00");
+// const target2 = "11:00 pm";
+// console.log(output2);
+// console.assert(
+//   output2 === target2,
+//   `Case 2 output: ${output2}, target output: ${target2}`
+// );
+
+// // CASE 3 check edge case: midnight, 00:00
+// const output3 = formatAs12HourClock("00:00");
+// const target3 = "12:00 am";
+// console.log(output3);
+// console.assert(
+//   output3 === target3,
+//   `Case 3 output: ${output3}, target output: ${target3}`
+// );
+
+
+
+
+// // CASE 5 check edge case: midday, 12:00pm
+// const output5 = formatAs12HourClock("12:00");
+// const target5 = "12:00 pm";
+// console.log(output5);
+// console.assert(
+//   output5 === target5,
+//   `Case 5 output: ${output5}, target output: ${target5}`
+// );
+
+
+// // CASE 7 check minutes handled
+// const output7 = formatAs12HourClock("11:11");
+// const target7 = "11:11 am";
+// console.log(output7);
+// console.assert(
+//   output7 === target7,
+//   `Case 7 output: ${output7}, target output: ${target7}`
+// );
