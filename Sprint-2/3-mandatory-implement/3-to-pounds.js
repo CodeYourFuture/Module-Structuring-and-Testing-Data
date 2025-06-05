@@ -25,6 +25,7 @@ console.log(penceToPounds('963')); //expect £9.63
 console.log(penceToPounds('183000p')) //expect £1830.00
 console.log(penceToPounds('000762')); //expect £7.62
 console.log(penceToPounds('63')); //expect £0.63
+console.log(penceToPounds('3')); //expect £0.03
 console.log(penceToPounds('abcdefg')) //further input validation would be needed
 
 // changelist:
