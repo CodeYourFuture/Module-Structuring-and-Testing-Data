@@ -26,4 +26,6 @@ function sum(a,b) {
 num1 = 10;
 num2 = 32;
 
-console.log(`The sum of ${num1} and ${num2} is ${sum(num1,num2)}!`);
+total = sum(num1,num2);
+
+console.log(`The sum of ${num1} and ${num2} is ${total}!`);
