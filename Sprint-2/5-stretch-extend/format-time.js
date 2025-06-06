@@ -16,56 +16,65 @@ The code above only handles a few cases of times and has several bugs according 
 
 function formatAs12HourClock(time) {
   /*
-  The !time condition checks for 'falsy' values such as null, undefined, "", 0, NaN, false.
-  The typeof time !== "string" condition ensures the input is actually a string in the first place.
+  The validation statement checks if the initial input in to the formatAs12HourClock function is missing a string or not in the very first place, if the input is not a string it returns the invalid time input message and the function will not run.
+  The !time condition checks for 'falsy' values that might be input such as null, undefined, "", 0, NaN, false.
+  The typeof time !== "string" condition checks if the input is not a string. It will be true if time input is a number or a boolean, or an object for example). It ensures that the input must be a string in the first place.
   */
   if (!time || typeof time !== "string") {
     return "Invalid time input";
   }
   /*
-  Next, split the input string into the expected hour and minute parts "HH:MM" and store them to the variables names splitHours and splitMinutes for reliability, before we convert to a number, i.e if the input was 1:30 and we relied on the slice(0, 2) method it would give us "1:30", the format would be H:MM which breaks the slice logic.
-  */
+  Once we have a valid string in the input, we split the input string into the hour and minute parts by splitting at the ":" and storing them to the variables splitHours and splitMinutes. This is more reliable than using slice straight away because inputs like "1:30" (or any single digit hour) would not work correctly with slice(0, 2) ("1:30" would be sliced at "1:")so using split() ensures we always get the correct hour and minute format "HH" and "MM", even if the hour or minute is a single digit.
+*/
   const [splitHours, splitMinutes] = time.split(":");
 
   /* 
-  The variable hours( will always be two digits as it pads with "0" if less than 2 characters and then converts to a number in order to do some numeric comparisons later (like checking for cases where it is midnight, noon, etc)
+  If the total characters in splitHours value is less than 2, then it is padded with "0". The value is then converted to a number in order to do some numeric comparisons later (like checking for cases where it is midnight, noon, etc) and assigned tot he variable called hours
   */
   const hours = Number(splitHours.padStart(2, "0"));
 
   /*
-  Checks if there is a minutes part to the input (for example some inputs may be just the hours only and miss the minutes or minutes may only be a single digit) and if so, pads the minutes to 2 digits from the left(e.g no minutes inputted becomes "00" and single minutes inputted such as "5", becomes "05")
+  Checks if there is a minutes part to the input (for example some inputs may be just the hours only and miss the minutes, or , the minutes may only be a single number). If the minutes are missing from the initial input in the function, it uses "00" as the minutes value. If there is only a single character in the input  then it pads it with "0" to the left to make sure there are always 2 digits for formatting (i.e. "11:5" becomes "11:05",).
   */
   const minutes = splitMinutes ? splitMinutes.padStart(2, "0") : "00";
 
-  // Next we need to implement the conversion logic.
-  // Handle invalid hours and minutes
+  //
+  // Handle invalid hours and minutes inputs before handling the formatting
   if (
-    isNaN(hours) || //hours is in an invalid format eg "ab:25"
-    isNaN(Number(minutes)) || //minutes is in an invalid format eg "14:xy"
-    hours < 0 || // negative hours don't exist in our 24 hour clock system
-    hours > 23 || //hours greater than 23 don't exist in our 24 hour clock system
-    Number(minutes) < 0 || //negative minutes don't exist in our 24 hour clock system
-    Number(minutes) > 59 //minutes greater than 59 don't exist in our 24 hour clock
+    isNaN(hours) || //checks if the value of the variable hours is "Not a Number". If this evaluates to true meaning hours is NOT a valid number (i.e. the input for hours was something like "Ab" for example) then we would return the 'invalid time input' message.
+    isNaN(Number(minutes)) || //as the value of minutes is a string type, Number() tries to convert that string to a number, for example if minutes is "05" the number of minutes becomes 5, if the value of the variable minutes is "xy", then Number(minutes) becomes NaN. Therefore when isNaN is true (the value of minutes is "xy") then we would get the 'invalid time input' message returned.
+    hours < 0 || // checks if the value of the variable hours is less than 0; negative hours don't exist in our 24 hour clock system
+    hours > 23 || //checks if the value of the variable hours is more than 23;hours greater than 23 don't exist in our 24 hour clock system
+    Number(minutes) < 0 || //converts the value of the variable minutes to a number and checks if they are less than 0; negative minutes don't exist in our 24 hour clock system
+    Number(minutes) > 59 //converts the value os the minutes variable to a number then checks if minutes are greater than 59 - which doesn't exist in our 24 hour clock
   ) {
     return "Invalid time input";
   }
 
-  // Handle midnight
+  /*
+   Handles midnight - If the hour is 0 (which means midnight in 24-hour time), we display it as 12 in 12-hour format and use "am" to indicate midnight. I.e. "00:00" becomes "12:00 am" and "00:15" becomes "12:15 am".
+   */
   if (hours === 0) {
     return `12:${minutes} am`;
   }
 
-  // Handle noon
+  /* 
+  Handles noon - If the hour is 12 (which means noon in 24-hour time), we display it as 12 in 12-hour format and use "pm" to indicate midnight. I.e. "12:00" becomes "12:00 pm" and "12:15" becomes "12:15 pm".
+  */
   if (hours === 12) {
     return `12:${minutes} pm`;
   }
 
-  // Handle afternoon/evening (13–23)
+  /* 
+  Handles afternoon/evening (13–23) - If the hour is greater than 12 (which means afternoon or evening in 24-hour time), we subtract 12 from the hour to convert it to 12-hour format and use "pm". I.e. "14:59" becomes "02:59 pm" and "23:15" becomes "11:15 pm".
+  */
   if (hours > 12) {
     return `${String(hours - 12).padStart(2, "0")}:${minutes} pm`;
   }
 
-  // handle morning (1–11)
+  /* 
+  Handles morning (the rest of the available numbers, 1–11) - If the hour is between 1 and 11 (which means early hours/morning in 24-hour time), we keep the hours as they are (with padding if the total characters for hours is less than 2) and use "am". I.e. "03:05" becomes "03:05 am" and "08:15" becomes "08:15 am".
+  */
   return `${splitHours.padStart(2, "0")}:${minutes} am`;
 }
 
@@ -140,7 +149,7 @@ for (const [current, target] of testCases) {
   );
 }
 
-// The assertions logged as:
+// The failed assertions logged as:
 // Assertion failed: current output: 12:00, target output: 12:00 am
 // Assertion failed: current output: 3:45, target output: Invalid time input
 // Assertion failed: current output: :20, target output: Invalid time input
