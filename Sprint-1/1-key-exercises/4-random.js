@@ -7,3 +7,13 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
+
+
+// Math.random() generates a floating-point number between 0 (inclusive) and 1 (exclusive), like 0.5678.
+
+// Multiplying by (maximum - minimum + 1) scales it to a range of values from 0 to 100 in this case.
+
+// Math.floor(...) rounds the result down to the nearest whole number.
+
+// Adding minimum ensures the number is within the correct inclusive range.
+
