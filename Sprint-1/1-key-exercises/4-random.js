@@ -26,4 +26,3 @@ console.log(num)
 // We can conclude that num is a random whole number that falls between the range of minimum 1 - maximum 100
 
 
-node Sprint-1/1-key-exercises/4-random.js
