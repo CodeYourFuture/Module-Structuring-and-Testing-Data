@@ -10,16 +10,22 @@ function formatAs12HourClock(time) {
   return `${time} am`;
 }
 
-const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
-console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
-);
+const testCases = [
+  { currentOutput: "00:00", targetOutput: "12:00 am" },
+  { currentOutput: "01:15", targetOutput: "01:15 am" },
+  { currentOutput: "08:00", targetOutput: "08:00 am" },
+  { currentOutput: "12:00", targetOutput: "12:00 pm" },
+  { currentOutput: "15:30", targetOutput: "03:30 pm" },
+  { currentOutput: "23:00", targetOutput: "11:00 pm" },
+  { currentOutput: "23:59", targetOutput: "11:59 pm" },
+];
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
-);
+testCases.forEach(({ currentOutput, targetOutput }, index) => {
+  const output = formatAs12HourClock(currentOutput);
+  console.assert(
+    output === targetOutput,
+    `Test ${
+      index + 1
+    } failed: current output: ${currentOutput}, output: ${output}, targetOutput: ${targetOutput}`
+  );
+});
