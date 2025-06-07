@@ -8,5 +8,6 @@ const last4Digits = cardNumber.slice(-4);
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
-//prediction - slice is for string not integer
+//prediction - slice() is a string method
 
+console.log(last4Digits);
