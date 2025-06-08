@@ -29,3 +29,67 @@ print("Name:", name)
 print("Age:", age)
 print("Height:", height)
 print("Is student:", is_student)
+
+# Create a list variable
+hobbies = ["reading", "cycling", "hiking"]
+# Print list variable
+print("\nHobbies:", hobbies)        
+# Add a new hobby
+hobbies.append("painting")
+# Print updated list variable
+print("Updated Hobbies:", hobbies)  
+# Create a dictionary variable
+profile = {
+    "name": name,
+    "age": age,
+    "height": height,
+    "is_student": is_student,
+    "hobbies": hobbies
+}   
+# Print dictionary variable
+print("\nProfile:", profile)
+# Update dictionary variable
+profile["age"] = profile["age"] + 1
+# write a summary of the declaration and statement of variables
+## Summary of Variable Declaration and Statement
+# In Python, variables are declared by assigning a value to a name. 
+# The type of the variable is determined by the value assigned.
+# Variables can be of different types such as integers, floats, strings, and booleans.
+# Variables can also be updated by reassigning a new value to them.
+
+    let versionNumber = "2.0.0"; // declaration
+versionNumber = "2.0.1"; // statement
+
+# The let keyword allows us to create new variables like the const keyword.
+
+#Math.round(10.3) is a call expression; read this as:
+
+#apply the set of instructions for Math.round to the number 10.3.”
+
+#If we type Math.round(10.3) then we get the result 10. So we say that Math.round(10.3) returns 10."
+
+# Example of using Functions in JavaScript;
+Math.round(4.7); // 5
+
+// Example of using declarations in JavaScript;
+
+
+
+#> versionNumber = "2.0.1";
+'2.0.1'
+> Math.round
+[Function: round]
+> Math.round(0.3)
+0
+> const roundValue = Math.round(10.3);
+undefined
+>
+> roundValue
+10
+> const roundValueInString = `10.3 round to ${Math.round
+(10.3)}`;
+undefined
+> roundValueInString
+'10.3 round to 10'
+> roundValueInString
+'10.3 round to 10'
