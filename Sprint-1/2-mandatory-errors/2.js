@@ -3,3 +3,6 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+// That is because the console.log is going first than variable which even doesn't exist.
+// Causes a ReferenceError.
