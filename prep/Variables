@@ -1,0 +1,31 @@
+# variables_practice.py
+
+# Integer variable
+age = 25
+
+# Float variable
+height = 1.75
+
+# String variable
+name = "Alice"
+
+# Boolean variable
+is_student = True
+
+# Print variables
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Is student:", is_student)
+
+# Update variables
+age = age + 1
+height = height + 0.05
+name = name + " Smith"
+is_student = False
+
+print("\nUpdated values:")
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Is student:", is_student)
