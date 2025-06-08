@@ -16,8 +16,7 @@ const base = filePath.slice(lastSlashIndex + 1);
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-// Get base (e.g., "file.txt")
-const lastSlashIndex = filePath.lastIndexOf("/");
+const lastDotIndex = base.lastIndexOf(".");
 
 // Get dir (everything before "file.txt")
 const dir = filePath.slice(0, lastSlashIndex);
