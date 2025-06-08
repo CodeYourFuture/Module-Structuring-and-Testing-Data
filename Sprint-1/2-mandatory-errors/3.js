@@ -27,4 +27,3 @@ console.log(cardNumber.slice(-4));
 // The output should be 4213
 
 
-
