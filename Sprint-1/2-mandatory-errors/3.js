@@ -1,9 +1,9 @@
-const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.slice(-4);
+// const cardNumber = 4533787178994213;
+// const last4Digits = cardNumber.slice(-4);
 // prediction: The code will not work because the `slice` method is being called on a number and has not yet been converted into a string.
 
-//this code will throw an error.
-console.log(last4Digits);
+// this code will throw an error.
+// console.log(last4Digits);
 // The error i was given: cardNumber.slice is not a function
 // Explanation: The error occurs because cardNumber is a number, and the slice method is for a string method.
 
