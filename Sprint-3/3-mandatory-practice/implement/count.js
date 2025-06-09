@@ -1,6 +1,7 @@
 function countChar(stringOfCharacters, findCharacter) {
-    //return 5
-    return stringOfCharacters.split(findCharacter).length - 1;
+// Count how many times findCharacter appears in stringOfCharacters
+return stringOfCharacters.split(findCharacter).length - 1;
+
 }
 
 module.exports = countChar;
