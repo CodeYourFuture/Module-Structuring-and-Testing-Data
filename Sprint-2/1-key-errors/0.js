@@ -7,11 +7,11 @@
 // interpret the error message and figure out why an error is occurring
 // after trying to run the code it produced a "SyntaxError: Identifier 'str' has already been declared"
 
-function capitalise(str) {
+/* function capitalise(str) {
   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
-console.log(capitalise("hello"));
+console.log(capitalise("hello")); */
 // =============> write your explanation here
 // this is because the variable str is declared twice, once in the function parameters and again inside the function body with "let str"
 // str is declared as a parameter, so we don't need to declare it again with let you can just use it directly.
