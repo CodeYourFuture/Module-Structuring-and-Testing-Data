@@ -7,3 +7,10 @@ const last4Digits = cardNumber.slice(-4);
 // Then run the code and see what error it gives.
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
+
+/*Error
+Uncaught TypeError: cardNumber.slice is not a function*/
+
+// We need to convert the number to a string first using
+// .toString(), then use .slice(-4) to get the last 4 digits.
+//The Code will throw an error because .slice() only works on strings, not on numbers.
