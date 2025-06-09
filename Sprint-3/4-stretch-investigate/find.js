@@ -5,22 +5,34 @@
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
-// b) What is the if statement used to check
-// c) Why is index++ being used?
-// d) What is the condition index < str.length used for?
+// Index starts at 0 and increments (index++) in each loop iteration.
 
+
+// b) What is the if statement used to check
+// It checks if the current character is the one we are searching for.
+
+
+// c) Why is index++ being used?
+//It moves the the index forward to the next character in str so the loop doesn't get stuck.
+
+// d) What is the condition index < str.length used for?
 // Function to find the index of the first occurrence of a character in a string
 function find(str, char) {
   let index = 0;
 
-  while (index < str.length) { // d) Loop continues while index is less than the string length
-    if (str[index] === char) { // b) Checks if the current character matches the target character
-      return index;            // If match found, return the index
+  // It makes sure that the loop only runs within the string’s length
+  while (index < str.length) {
+    // Checks if the current character matches the target character
+    if (str[index] === char) {
+      return index;  // If match found, return the index
     }
-    index++;                   // c) Move to the next character
+    index++;  // Move to the next character
   }
-  return -1;                   // If not found, return -1
+
+  // If the character was not found, return -1
+  return -1;
 }
 
 console.log(find("code your future", "u")); // Output: 7
 console.log(find("code your future", "z")); // Output: -1
+

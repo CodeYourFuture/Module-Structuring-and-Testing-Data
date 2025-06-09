@@ -46,3 +46,4 @@ test("should throw error when count is negative", () => {
   const count = -1;
   expect(() => repeat(str, count)).toThrow("Count must be non-negative");
 });
+
