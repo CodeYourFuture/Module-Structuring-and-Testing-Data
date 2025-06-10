@@ -47,4 +47,4 @@ When the code run, outputs are expected so there is no issue.
 The last digit of 42 is 2
 The last digit of 105 is 5
 The last digit of 806 is 6
-*//
+*/
