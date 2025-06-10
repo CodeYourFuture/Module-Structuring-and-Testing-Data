@@ -1,11 +1,15 @@
 // Predict and explain first...
 
 // Predict the output of the following code:
+
+// Will be an error because we are not passing a parameter in the function getLastDigit
+// the value of num is taking always the value 103, it declarate at the beginning of the program 
+
 // =============> Write your prediction here
 
-const num = 103;
+// const num = 103;
 
-function getLastDigit() {
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
