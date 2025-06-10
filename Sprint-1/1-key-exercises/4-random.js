@@ -20,14 +20,14 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 // The formula works as follows:
 
-//	•We use the formula (maximum - minimum + 1) to calculate the size of the desired range.
+//	  •We use the formula (maximum - minimum + 1) to calculate the size of the desired range.
 //    In the example above, maximum = 100 and minimum = 1.
 //    So: 100 - 1 = 99, then 99 + 1 = 100.
-//	•Math.random() generates a decimal number between 0 (inclusive) and 1 (exclusive).
+//	  •Math.random() generates a decimal number between 0 (inclusive) and 1 (exclusive).
 //    For example: 0.0001, 0.5342, 0.9999.
-// 	•We multiply the result of Math.random() by (maximum - minimum + 1) to scale it to the desired range.
+// 	  •We multiply the result of Math.random() by (maximum - minimum + 1) to scale it to the desired range.
 //    Example: 0.9999 * 100 = 99.99.
-// 	•We then use Math.floor() to round the result down to the nearest whole number.
+// 	  •We then use Math.floor() to round the result down to the nearest whole number.
 //    Example: Math.floor(99.99) = 99.
-// 	•Finally, we add the minimum value to shift the result into the correct range.
+// 	  •Finally, we add the minimum value to shift the result into the correct range.
 //    Example: 99 + 1 = 100.
