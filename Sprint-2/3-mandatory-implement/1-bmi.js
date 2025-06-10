@@ -16,4 +16,7 @@
 
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
+    const bmi = weight / (height * height); // Calculate BMI
+    return parseFloat(bmi.toFixed(1)); // Return BMI rounded to 1 decimal place
 }
+console.log(`The BMI for a person weighing 70kg and 1.73m tall is ${calculateBMI(78, 1.73)}`); // Output: The BMI for a person weighing 70kg and 1.73m tall is 23.4
