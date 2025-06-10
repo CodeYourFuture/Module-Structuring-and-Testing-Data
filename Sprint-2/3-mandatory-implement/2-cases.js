@@ -14,3 +14,13 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toUpperSnakeCase(str) {
+    return str
+      .trim()                    // Remove leading/trailing whitespace
+      .toUpperCase()             // Convert to uppercase
+      .replace(/\s+/g, '_');     // Replace spaces with underscores
+  }
+
+  console.log(toUpperSnakeCase('hello world'));
+  console.log(toUpperSnakeCase('lord of the rings'));
