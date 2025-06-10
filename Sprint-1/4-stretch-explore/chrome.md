@@ -12,7 +12,16 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
+My answer: it opens a popup alert-box chrome://new-tab-page-says in the browser with a message Hello world!, and it is not going to be disappear until press buttons "ok" or "cancel".
+
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
+My answer: let myName = prompt("What is your name?")
+
 What effect does calling the `prompt` function have?
+
+My answer: it invokes the popup box chrome:// new-page-says and an input field for user to enter his name. User prompt to enter his name and press "ok" or "cancel", then box disappear.
+
 What is the return value of `prompt`?
+
+My answer: return some string typed by user or Null if the user press button "cancel".
