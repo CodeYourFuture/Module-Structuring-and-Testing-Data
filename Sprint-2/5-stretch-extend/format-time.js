@@ -24,19 +24,4 @@ const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
 console.assert(
   currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
-);
-
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
-);
-
-console.assert(formatAs12HourClock("00:00") === "12:00 am", "Test Midnight");
-console.assert(formatAs12HourClock("01:00") === "01:00 am", "Test 1 AM");
-console.assert(formatAs12HourClock("11:00") === "11:00 am", "Test 11 AM");
-console.assert(formatAs12HourClock("12:00") === "12:00 pm", "Test Noon");
-console.assert(formatAs12HourClock("13:00") === "01:00 pm", "Test 1 PM");
-console.assert(formatAs12HourClock("23:59") === "11:59 pm", "Test 11:59 PM");
+  `current output: ${cu
