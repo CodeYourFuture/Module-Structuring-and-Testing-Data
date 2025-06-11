@@ -10,6 +10,6 @@ let initials = ``;
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 
 // Get the first character of each name using [0]
-let initials = firstName[0] + middleName[0] + lastName[0];
+let initials = `${firstName.charAt(0)}${middleName.charAt(0)}${lastName.charAt(0)}`;
 
 console.log(initials);  // Output: CKJ
