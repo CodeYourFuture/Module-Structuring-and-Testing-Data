@@ -7,6 +7,9 @@ count = count + 1;
 
 
 //The answers:
-//In line 1, the declared value is set to 0. In line 3, the value is redefined and set to count + 1. So the initial count value was 0, and the new value is 0 + 1. 
-//In programming terms, the value of count increments by 1. 
-//The equal sign is an assignment operation. It assigns the value on the right side of the = to the variable on the left side. 
+//  In line 1, the variable `count` is declared and initialised with the value `0`.  
+//  In line 3, the value of `count` is updated by assigning it the result of `count + 1`. Since the initial value was `0`, the new value becomes `0 + 1`, which is `1`.  
+
+//  In programming terms, this means the variable `count` is incremented by `1`.  
+
+//  The equals sign (`=`) is the assignment operator. It assigns the value on the right side of the `=` to the variable on the left side.
