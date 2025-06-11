@@ -3,13 +3,13 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> write your prediction of the error here: num is undefined
 
-function square(3) {
+/*function square(3) {
     return num * num;
-}
+}*/
 
-// =============> write the error message here
+// =============> write the error message here SyntaxError: Unexpected number
 
 // =============> explain this error message here
 
@@ -17,4 +17,6 @@ function square(3) {
 
 // =============> write your new code here
 
-
+function square(num) {
+    return num * num;
+}
