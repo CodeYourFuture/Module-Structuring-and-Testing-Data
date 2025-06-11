@@ -32,7 +32,7 @@ console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}
 
 **Try also entering `typeof console`**  
 I got:  
-“object”
+"object"
 
 ---
 
