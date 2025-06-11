@@ -12,10 +12,11 @@ const last4Digits = cardNumber.slice(-4);
 
 // Answers:
 
-/// The code isn't working because the variable `cardNumber` is just a number, not a string or an array.
-// The `slice` method only works on strings or arrays.
-// So if we call `const last4Digits = cardNumber.slice(-4);`, it gives an error because `.slice` is not a function for numbers.
-// Yes, I predicted the error because the variable `cardNumber` is not assigned a string.
+//  The code isn’t working because the variable cardNumber is a number, not a string or an array. 
+//  The slice method only works on strings or arrays. 
+//  Therefore, calling const last4Digits = cardNumber.slice(-4); causes an error because .slice is not a function available for numbers.
+
+//  I predicted this error because the variable cardNumber was not assigned as a string.
 
 const last4Digits = cardNumber.toString().slice(-4);
 
