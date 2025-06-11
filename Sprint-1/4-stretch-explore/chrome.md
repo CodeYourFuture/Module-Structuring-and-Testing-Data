@@ -18,24 +18,31 @@ What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
 
 
-What I Did in the Chrome Console
-	1.	I opened a new page in Google Chrome.
-	2.	I right-clicked on the page and selected Inspect.
-	3.	In the Developer Tools window, I clicked on the Console tab.
-	4.	I typed the function alert("Hello world!"); and pressed Enter.
-	5.	A pop-up appeared displaying the message “Hello world!”. I clicked OK to          close it.
-	6.	Next, I typed const myName = prompt("What is your name?"); and pressed            Enter.
-	7.	A dialogue box appeared with the message “What is your name?” and a text            input field.
-	8.	I entered my name, Sed, into the input box and clicked OK.
-	9.	The browser stored my input in the variable myName.
-	10.	Then, I typed console.log("You entered:", myName); and pressed Enter.
-	11.	The console displayed: You entered: Sed
+## What I Did in the Chrome Console
 
-What effect does calling the `prompt` function have?
-  It displays a dialog box that prompts the user to enter information.
-  If the result is assigned (e.g., const myName = prompt("What is your name?")),
-  the user’s input is stored in the variable (in this case, myName).
+1. I opened a new page in Google Chrome.  
+2. I right-clicked on the page and selected **Inspect**.  
+3. In the Developer Tools window, I clicked on the **Console** tab.  
+4. I typed the function `alert("Hello world!");` and pressed **Enter**.  
+5. A pop-up appeared displaying the message **"Hello world!"**. I clicked **OK** to close it.  
+6. Next, I typed `const myName = prompt("What is your name?");` and pressed **Enter**.  
+7. A dialog box appeared with the message **"What is your name?"** and a text input field.  
+8. I entered my name, **Sed**, into the input box and clicked **OK**.  
+9. The browser stored my input in the variable `myName`.  
+10. Then, I typed `console.log("You entered:", myName);` and pressed **Enter**.  
+11. The console displayed: `You entered: Sed`
 
-What is the return value of `prompt`?
-  The value entered by the user is returned as a string.
-  If the user clicks Cancel, the return value is null.
+---
+
+## What Effect Does Calling the `prompt()` Function Have?
+
+It displays a dialog box that prompts the user to enter information.  
+If the result is assigned (e.g., `const myName = prompt("What is your name?");`),  
+the user's input is stored in the variable (in this case, `myName`).
+
+---
+
+## What Is the Return Value of `prompt()`?
+
+The value entered by the user is returned as a **string**.  
+If the user clicks **Cancel**, the return value is **`null`**.
