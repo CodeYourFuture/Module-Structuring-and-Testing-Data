@@ -39,8 +39,8 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // c) Identify all the lines that are variable reassignment statements
 
-//  •	Line 4 — reassignment of carPrice
-//	•	Line 5 — reassignment of priceAfterOneYear
+//    •	Line 4 — reassignment of carPrice
+//    •	Line 5 — reassignment of priceAfterOneYear
 
 //⸻
 
