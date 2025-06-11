@@ -11,7 +11,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // Read the code and then answer the questions below
 
-//⸻
+//-----------------------------------------------------------------------------------------------
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
@@ -27,22 +27,21 @@ console.log(`The percentage change is ${percentageChange}`);
 
 //	•	Line 10 — console.log()
 
-// ⸻
-
+//-----------------------------------------------------------------------------------------------
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
 //    There is a syntax error on line 5. 
 //    The two strings inside the replaceAll method are missing a comma separator, causing them to be concatenated incorrectly. 
 //    Adding the missing comma between the two arguments will fix the problem.
 
-//⸻
+//-----------------------------------------------------------------------------------------------
 
 // c) Identify all the lines that are variable reassignment statements
 
 //    •	Line 4 — reassignment of carPrice
 //    •	Line 5 — reassignment of priceAfterOneYear
 
-//⸻
+//-----------------------------------------------------------------------------------------------
 
 // d) Identify all the lines that are variable declarations
 
@@ -51,8 +50,7 @@ console.log(`The percentage change is ${percentageChange}`);
     // Line 7 - const    (const priceDifference = carPrice - priceAfterOneYear;)
     // Line 8 - const    (const percentageChange = (priceDifference / carPrice) * 100;)
 
-//⸻
-
+//-----------------------------------------------------------------------------------------------
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
     
 //    The value of carPrice is initially a string that includes commas, for example "10,000". 
