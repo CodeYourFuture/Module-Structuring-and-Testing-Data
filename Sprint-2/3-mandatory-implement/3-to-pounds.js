@@ -4,3 +4,20 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
+
+function toPounds(number){
+    if(number.toString().slice(-1) !== 'p'){
+        number = (number.toString() + 'p');
+    } 
+    const penceString = number;    
+    const penceStringWithoutTrailingP = penceString.substring(0,penceString.length - 1);
+    const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+    const pounds = paddedPenceNumberString.substring(0,paddedPenceNumberString.length - 2);
+    const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
+return `£${pounds}.${pence}`
+}
+console.assert(toPounds('399')==='£3.99','Test fail with; 399');
+console.assert(toPounds('399p')==='£3.99','Test fail with; 399p');
+console.assert(toPounds(40)==='£0.40','Test fail with; 40');
+console.assert(toPounds('1')==='£0.01','Test fail with; 1');
+console.assert(toPounds('34947p')==='£349.47','Test fail with; 34947p');
