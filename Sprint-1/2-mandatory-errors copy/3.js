@@ -1,11 +1,5 @@
-const cardNumber = "4533787178994213";
+const cardNumber = 4533787178994213;
 const last4Digits = cardNumber.slice(-4);
-console.log(last4Digits);
-
-// pre run - Prediction: The code won't work because `cardNumber` has not been defined as a sliceable type.
-// post run - TypeError: cardNumber.slice is not a function
-// I didn’t predict the syntax error in the first line.
-
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
