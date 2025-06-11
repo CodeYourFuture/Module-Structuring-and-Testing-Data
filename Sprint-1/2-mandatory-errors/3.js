@@ -12,8 +12,9 @@ const last4Digits = cardNumber.slice(-4);
 //It will throw an error because cardNumber is a number, not a string — and .slice() is a method for strings and arrays, not numbers.
 
 const cardNumber = 4533787178994213;
+//convert number to string before using slice
 const last4Digits = cardNumber.toString().slice(-4);
-
+//log the last 4 digits
 console.log(last4Digits);
 
 //outcome 4213
