@@ -11,6 +11,8 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // Read the code and then answer the questions below
 
+//⸻
+
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
 //   There are 5 function calls:
@@ -48,6 +50,8 @@ console.log(`The percentage change is ${percentageChange}`);
     // Line 2 - let    (let priceAfterOneYear = "8,543";)
     // Line 7 - const    (const priceDifference = carPrice - priceAfterOneYear;)
     // Line 8 - const    (const percentageChange = (priceDifference / carPrice) * 100;)
+
+//⸻
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
     
