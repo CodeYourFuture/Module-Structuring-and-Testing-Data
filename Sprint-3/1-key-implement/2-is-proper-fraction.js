@@ -1,5 +1,5 @@
 function isProperFraction(numerator, denominator) {
-    return (numerator<denominator);
+    return (Math.abs(numerator)<denominator);
 }
 
 function assertEquals(actualOutput, targetOutput) {
@@ -40,4 +40,9 @@ const equalFraction = isProperFraction(3, 3);
 assertEquals(equalFraction, false);
 
 // Stretch:
-// What other scenarios could you test for?
+// Negative improper fraction
+// target output: false
+// The fraction -5/2 is an improper fraction because written as a decimal, it would be larger than 1. Alternatively, the absolute value of the numerator is larger than the denominator.
+
+const negativeImproper = isProperFraction(-5,2);
+assertEquals(negativeImproper, false);
