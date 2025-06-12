@@ -3,7 +3,7 @@
 
 
 // Why will an error occur when this program runs?
-Because decimalNumber is declared as a parameter and inside a function using Const
+//Because decimalNumber is declared as a parameter and inside a function using Const
 // =============> write your prediction here
 
 // Try playing computer with the example to work out what is going on
