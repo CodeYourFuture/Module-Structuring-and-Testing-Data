@@ -3,27 +3,17 @@ const penceString = "399p";
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
-); // Expected output: "399"
+);
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); // Expected output: "399"
-
-console.log(penceStringWithoutTrailingP)
-console.log(paddedPenceNumberString)
-
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); 
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
-); // Expected output: "3"
-
-console.log(pounds)
-
+);
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
   .padEnd(2, "0");
-
-console.log(pence);
-
 
 console.log(`£${pounds}.${pence}`);
 
