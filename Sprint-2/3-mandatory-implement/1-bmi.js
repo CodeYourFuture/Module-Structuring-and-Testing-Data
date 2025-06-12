@@ -17,3 +17,39 @@
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
 }
+
+// Answer:
+
+// BMI is calculated as weight divided by height squared:
+// BMI = weight / (height * height)
+
+// First, we create a variable to store the BMI value:
+const bmi = weight / (height * height);
+
+// To format the result to 1 decimal place, we use the .toFixed(1) method.
+// This converts the number to a string rounded to one decimal place:
+// bmi.toFixed(1)
+
+// Since .toFixed() returns a string, we convert it back to a number
+// using parseFloat so we can use the result in further arithmetic operations.
+
+// We can define the function as follows:
+
+function calculateBMI(weight, height) {
+    const bmi = weight / (height * height);
+    return parseFloat(bmi.toFixed(1));
+}
+
+// What we will enter:
+function calculateBMI(70, 1.73) {
+    const bmi = 70 / (1.73 * 1.73);
+    return parseFloat(bmi.toFixed(1));
+
+
+// The results: 
+
+//    Weight = 70 kg, height = 1.73 m.
+//    	•	BMI = 70 ÷ (1.73 × 1.73) = 70 ÷ 2.9929 ≈ 23.41
+//    	•	Rounded to 1 decimal = 23.4
+//    	•	The function returns 23.4
+
