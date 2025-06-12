@@ -15,8 +15,7 @@ console.log(result);
         // 6
 
 // b) How many function calls are there?
-        // 4, console.log() once and 3 template literal evaluations 
-        // I double checked that with Claude... is ${} really a function?! :O
+        // 1, console.log()
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
