@@ -11,12 +11,15 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
-A pop up dialog box appears with the 'Hello world!' message and an 'OK' button.
+
+- A pop up dialog box appears with the 'Hello world!' message and an 'OK' button.
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in a variable called `myName`.
 
 What effect does calling the `prompt` function have?
-The browser displays a message in the popup box asking "What is your name?", there is a text input field as well as 'OK' and 'Cancel' buttons.
+
+- The browser displays a message in the popup box asking "What is your name?", there is a text input field as well as 'OK' and 'Cancel' buttons.
 
 What is the return value of `prompt`? 
-'undefined' but when I type 'name', my input is returned.
+
+- 'undefined' but when I type 'name', my input is returned.
