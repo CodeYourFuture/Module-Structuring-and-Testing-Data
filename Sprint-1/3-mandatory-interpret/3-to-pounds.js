@@ -25,3 +25,8 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+// 2. The variable penceStringWithoutTrailingP This remove the last letter in the string
+// 3. Const pence makes sure the number is atleast 3 digits.
+// 4. const pounds extracts the pound part and neglects the last 2
+// 5.console.log(£${pounds}.${pence}) Prints the final result in currency format, e.g., £3.99.
