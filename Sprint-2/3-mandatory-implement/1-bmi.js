@@ -14,16 +14,16 @@
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
 
-function calculateBMI(weight, height) {
+function calculateBMI(weightKg, heightCm) {
     // return the BMI of someone based off their weight and height
-    if(typeof weight !== 'number' || typeof height !== 'number' ){
+    if(typeof weightKg !== 'number' || typeof heightCm !== 'number' ){
         return 'Error: Weight and height must be numbers';
     } 
     
-    if(weight <= 0 || height <= 0){
+    if(weightKg <= 0 || heightCm <= 0){
         return 'Error: Weight and height must be greater than zero';
     }
-      const bmi = weight / (height * height);
+      const bmi = weightKg / (heightCm * heightCm);
         return parseFloat(bmi.toFixed(1));
 
 }
