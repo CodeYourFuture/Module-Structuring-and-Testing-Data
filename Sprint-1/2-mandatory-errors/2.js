@@ -5,4 +5,4 @@ const cityOfBirth = "Bolton";
 console.log(`I was born in ${cityOfBirth}`);
 
 
-Before the variable(cityofbirth) was used before declared
+//Before the variable(cityofbirth) was used before declared
