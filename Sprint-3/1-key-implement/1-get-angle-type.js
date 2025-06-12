@@ -1,27 +1,16 @@
 function getAngleType(angle) {
   let angleType = "" 
   
-  if (angle < 90) {
-    angleType = "Acute angle";
-  }
+  if (angle < 90) {return "Acute angle";}
   
-  else if (angle === 90) {
-    angleType = "Right angle";
+  if (angle === 90) {return "Right angle";}
+
+  if (angle < 180) {return "Obtuse angle";
   }
 
-  else if (angle < 180) {
-    angleType = "Obtuse angle";
-  }
+  if (angle === 180) {return "Straight angle";}
 
-  else if (angle === 180) {
-    angleType = "Straight angle";
-  }
-
-  else if (angle > 180 && angle < 360) {
-    angleType = "Reflex angle";
-  }
-
-   return angleType;
+  return "Reflex angle";
 }
 
 function assertEquals(actualOutput, targetOutput) {
