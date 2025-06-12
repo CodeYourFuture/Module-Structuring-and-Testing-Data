@@ -9,7 +9,6 @@ const toPounds =(penceString)=>{
      const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1);
   
     const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
-       console.log(paddedPenceNumberString)
   const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2);
   const pence = paddedPenceNumberString
     .substring(paddedPenceNumberString.length - 2)
