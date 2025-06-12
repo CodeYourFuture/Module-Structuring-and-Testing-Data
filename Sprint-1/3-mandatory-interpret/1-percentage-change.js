@@ -20,3 +20,39 @@ console.log(`The percentage change is ${percentageChange}`);
 // d) Identify all the lines that are variable declarations
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+
+
+//a) 5 total function calls
+//1. carPrice.replaceAll(",", "") line 4
+
+
+//2. Number(carPrice.replaceALL(",","")) 
+
+//3. priceAfterOneYear.replaceAll("," "")  (this is broken )
+
+//4. Number(priceAfterOneYear.replaceALL9",","")) 
+//5. console.log(`The percentage change is ${percentageChange}`);
+
+console.log(...)
+
+b)This line has a syntax error: there's an extra quote in replaceAll("," "")
+It should be: replaceAll(",", "")
+
+c) carPrice = Number(carPrice.replaceAll(",", ""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
+ These 2 lines are reassignments — the values are being updated after declaration.
+
+ d)This is a nested expression that does two things:
+
+ carPrice.replaceAll(",", ""):
+ 
+ Replaces all commas with empty strings.
+ 
+ Example: "10,000" → "10000" (makes it usable as a number)
+ 
+ Number(...):
+ 
+ Converts the resulting string "10000" into the actual number 10000
+ 
+ 
+

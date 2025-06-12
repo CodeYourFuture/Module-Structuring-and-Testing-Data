@@ -21,3 +21,10 @@ const dir = ;
 const ext = ;
 
 // https://www.google.com/search?q=slice+mdn
+
+const dir = filePath.slice(0, lastSlashIndex);
+console.log(`The dir part of ${filePath} is ${dir}`);
+
+const lastDotIndex = base.lastIndexOf(".");
+const ext = base.slice(lastDotIndex);
+console.log(`The ext part of ${base} is ${ext}`);
