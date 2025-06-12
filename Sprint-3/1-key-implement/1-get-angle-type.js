@@ -1,19 +1,17 @@
-// Implement a function getAngleType
-// Build up your function case by case, writing tests as you go
-// The first test and case is written for you. The next case has a test, but no code.
-// Execute this script in your terminal
-// node 1-get-angle-type.js
-// The assertion error will tell you what the expected output is
-// Write the code to pass the test
-// Then, write the next test! :) Go through this process until all the cases are implemented
-
 function getAngleType(angle) {
-   if (angle === 90) return "Right angle";
-   // read to the end, complete line 36, then pass your test here
+  let angleType = "" 
+  
+  if (angle === 90) {
+    angleType = "Right angle";
+   }
+
+   else if (angle < 90) {
+    angleType = "Acute angle";
+   }
+
+   return angleType;
 }
 
-// we're going to use this helper function to make our assertions easier to read
-// if the actual output matches the target output, the test will pass
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
