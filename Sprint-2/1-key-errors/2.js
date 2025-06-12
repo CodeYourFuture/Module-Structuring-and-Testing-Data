@@ -3,18 +3,22 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> we will get an error message
 
-function square(3) {
-    return num * num;
-}
+// function square(3) {
+//     return num * num;
+// }
 
-// =============> write the error message here
+// =============> Unexpected number
 
-// =============> explain this error message here
+// =============> a number was used to name a parameter and also cannot start the name with a number moreover the retun was named different
 
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here
 
 
+function square(num) {
+    return num * num;
+}
+console.log(square(3))
