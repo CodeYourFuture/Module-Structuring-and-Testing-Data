@@ -44,9 +44,13 @@ function calculateBMI(weight, height) {
 function calculateBMI(70, 1.73) {
     const bmi = 70 / (1.73 * 1.73);
     return parseFloat(bmi.toFixed(1));
-
+}
+console.log(`The BMI for a weight of 70kg and height of 1.73m is ${calculateBMI(70, 1.73)}`);
 
 // The results: 
+
+// The BMI for a weight of 70kg and height of 1.73m is 23.4
+
 
 //    Weight = 70 kg, height = 1.73 m.
 //    	•	BMI = 70 ÷ (1.73 × 1.73) = 70 ÷ 2.9929 ≈ 23.41
