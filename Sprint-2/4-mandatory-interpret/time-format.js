@@ -1,5 +1,5 @@
 function pad(num) {
-  return num.padStart(2, "0");
+  return num.toString().padStart(2, "0");
 }
 
 function formatTimeDisplay(seconds) {
