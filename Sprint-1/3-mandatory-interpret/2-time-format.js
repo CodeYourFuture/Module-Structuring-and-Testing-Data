@@ -12,7 +12,7 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
-// - 5 declarations
+// - 6 declarations
 // b) How many function calls are there?
 //  - One function called
 // c) Using documentation, explain what the expression movieLength % 60 represents
@@ -20,6 +20,8 @@ console.log(result);
 //  - it represents remainder left over after division by 60
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 //  - Here number of full minutes of the movie length is calculated
+//  - "(movieLength - remainingSeconds)" gives number of seconds that --> 
+//  --> can be divided by 60 without remainder, result of such division gives all full minutes of movie
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 //  - It is length of the movie with hours, minutes and seconds format
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer

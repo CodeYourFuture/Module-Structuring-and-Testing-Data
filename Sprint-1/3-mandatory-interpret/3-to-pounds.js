@@ -12,8 +12,7 @@ const pounds = paddedPenceNumberString.substring(
 );
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2);
 
 console.log(`£${pounds}.${pence}`);
 
@@ -26,11 +25,13 @@ console.log(`£${pounds}.${pence}`);
 // To begin, we can start with
 // 1. const penceString = "399p": initializes a string variable with the value "399p"
 // 3. const penceStringWithoutTrailingP declared with assigned value 
-// - substring of penceString that's starts with 0 and end withouts last character
+// - substring of penceString that's starts from the beginning of penceString -->
+// --> but ends without last character
 
 // 8. const paddedPenceNumberString declared and assigned value - 
 // If string penceStringWithoutTrailingP shorter than 3 characters,  it add 0 to the start.
 
 // 14. const pence declared and assigned value = 
 // substring from variable paddedPenceNumberString ( last two characters)
-// If string pence shorter than 2 characters,  it add 0 to the end.
+// function padEnd is not needed, because string parsed in line 2 always has length 2 -->
+// --> because padStart() where used in line 8

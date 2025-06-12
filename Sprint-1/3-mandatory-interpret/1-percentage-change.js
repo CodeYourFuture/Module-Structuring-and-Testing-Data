@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-//  - functions was called 3 times
+//  - functions was called 5 times
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 //  - Error in line 5. Caused by forgotten coma after first argument in function ".replaceAll"
 // c) Identify all the lines that are variable reassignment statements

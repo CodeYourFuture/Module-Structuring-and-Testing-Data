@@ -19,4 +19,5 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
     - Popup with input appears.
 What is the return value of `prompt`?
-    - Value entered, if nothing was entered function returns null
+    - Value entered, if nothing was entered function returns empty string ''
+    - With or without value entered, if cancel pressed function returns null
