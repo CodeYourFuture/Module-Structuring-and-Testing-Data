@@ -18,7 +18,7 @@ function formatAs12HourClock(time) {
   } else if (hours === 12) {
     return `12:${minutes} pm`;
   } else if (hours > 12) {
-    return `${hours-12}:${minutes} pm`
+    return `${(hours-12).toString().padStart(2,"0")}:${minutes} pm`
   } else {
     return `${hours.toString().padStart(2, "0")}:${minutes} am`;
   }
@@ -51,3 +51,11 @@ console.assert(
   currentOutput4 === targetOutput4,
   `current output: ${currentOutput4}, target output: ${targetOutput4}`
 );
+
+const currentOutput5 = formatAs12HourClock("13:59");
+const targetOutput5 = "01:59 pm";
+console.assert(
+  currentOutput5 === targetOutput5,
+  `current output: ${currentOutput5}, target output: ${targetOutput5}`
+);
+
