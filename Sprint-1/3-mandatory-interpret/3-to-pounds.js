@@ -24,4 +24,16 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 1. const penceString = "399p": initializes a string variable with the value "399p"
+// 2. const penceStringWithoutTrailingP = penceString.substring( 0,penceString.length - 1);
+//    removes the p from the string variable value
+// 3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+//    the string value stored penceStringWithoutTrailingP is to be at least 3 characters long and if its to short to fill it with zeros from the start
+//    then store it in a new string variable called  paddedPenceNumberString
+// 4. const pounds = paddedPenceNumberString.substring(0,paddedPenceNumberString.length - 2);
+//    taking the string value (paddedPenceNumberString) and extracting the 1st character which would be 3
+//    then stores it in a new variable called pounds
+// 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
+//    (paddedPenceNumberString.length - 2) removing to characters from the string =  paddedPenceNumberString.substring(1)
+//    which extracts characters from index 1 to end then padEnd ensuring its 2 characters long with 0 at end if needed
+// 6. console.log(`£${pounds}.${pence}`); logs the final string by using a template literal
