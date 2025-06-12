@@ -16,19 +16,29 @@ function formatTimeDisplay(seconds) {
 
 // Questions
 
+return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
+}
+console.log(formatTimeDisplay(61));
+
+
+
 // a) When formatTimeDisplay is called how many times will pad be called?
 // =============> write your answer here
+// 3 times
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
+
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
+//Its assigned num 0 when called for the first time.
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
-
+// The return value will be "00"
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-
+//It is 1
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
+// The return value is "01"
