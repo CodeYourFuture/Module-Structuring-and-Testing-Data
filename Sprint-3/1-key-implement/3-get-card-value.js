@@ -1,19 +1,24 @@
 function getCardValue(card) {
+  
 
 
+  // get rank from card
+  const rank = card.replace(/[^0-9A-Z]+/gi,""); // use replace to remove (,"") everything that is not an alphanumeric character (case insensitive) with
 
-    // get rank from card
-    let rank = card.replace(/[^0-9A-Z]+/gi,""); // use replace to remove (,"") everything that is not an alphanumeric character (case insensitive) with 
+  const suit = card.replace(/[0-9a-z]+/gi,""); //use replace to remove any alphanumeric character, suit should then just have the emoji
+  /* 
+  
+  */
     
-    //if the rank is already a number, that is its value so just return that
-    // try to change rank into a Number, then if the result is an integer, return integer
-    // '9' => 9 => true, 'ABC' => NaN => false
-    if (Number.isInteger(Number(rank))) {
-      return Number(rank);
-    }
+  //if the rank is already a number, that is its value so just return that
+  // try to change rank into a Number, then if the result is an integer, return integer
+  // '9' => 9 => true, 'ABC' => NaN => false
+  if (Number.isInteger(Number(rank))) {
+    return Number(rank);
+  }
 
-    // if rank is Ace, then return 11
-    if (rank === 'A') {return 11};
+  // if rank is Ace, then return 11
+  if (rank === 'A') {return 11};
 
     // otherwise (if input correctly), rank is J Q or K, so return 10
     return 10;
