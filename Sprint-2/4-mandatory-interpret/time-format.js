@@ -24,13 +24,13 @@ console.log(formatTimeDisplay(61));
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// The value is 0
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// The value is 00
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// The value assigned last time we called Pad is 1, but the return is 01
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// The value is returned is 01
