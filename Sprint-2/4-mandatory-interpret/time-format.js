@@ -11,13 +11,15 @@ function formatTimeDisplay(seconds) {
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
 
+console.log(formatTimeDisplay(61));
+
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
 
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// Pad function is called 3 times 
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
