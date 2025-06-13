@@ -20,8 +20,8 @@ function capitalise(str) {
 // =============> write your new code here
 
 function capitalise(str) {
-  str = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
+  let capitalStr = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return capitalStr;
 }
 
 //Check function output:

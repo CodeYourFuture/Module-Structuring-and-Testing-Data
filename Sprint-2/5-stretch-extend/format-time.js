@@ -6,9 +6,9 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(-2);
   if (hours > 12) {
-    return `${(hours - 12).toString().padStart(2, "0")}:00 pm`;
+    return `${(hours - 12).toString().padStart(2, "0")}:${minutes} pm`;
   } else if (hours < 12) {
-    return `${(hours).toString().padStart(2, "0")}:${(minutes).toString().padStart(2, "0")} am`;
+    return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")} am`;
   } else if (hours == 12) {
     return `12:00 pm`;
   }
@@ -52,4 +52,12 @@ const targetOutput5 = "12:00 pm";
 console.assert(
   currentOutput5 === targetOutput5,
   `current output: ${currentOutput5}, target output: ${targetOutput5}`
+);
+
+// hours > 12 and minutes > 0
+const currentOutput6 = formatAs12HourClock("13:15");
+const targetOutput6 = "01:15 pm";
+console.assert(
+  currentOutput6 === targetOutput6,
+  `current output: ${currentOutput6}, target output: ${targetOutput6}`
 );
