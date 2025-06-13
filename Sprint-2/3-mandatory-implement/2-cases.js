@@ -14,3 +14,13 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+// create a function called upperSnakeCase that takes a string of 2 or more words as a parameter
+//returns the string in upper snake case e.g "hello ike" = HELLO_IKE
+
+function upperSnakeCase(str){
+  let capitalizedSnakeCase = str.toUpperCase().replaceAll(" ","_");
+  return capitalizedSnakeCase
+}
+
+
