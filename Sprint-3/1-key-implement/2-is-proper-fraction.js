@@ -42,15 +42,6 @@ assertEquals(properFraction, true);
 const improperFraction = isProperFraction(5, 2);
 assertEquals(improperFraction, false);
 
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    (actualOutput = isProperFraction(5, 2)),
-    (targetOutput = false),
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
-
 // Negative Fraction check:
 // Input: numerator = -4, denominator = 7
 // target output: true
@@ -58,16 +49,6 @@ function assertEquals(actualOutput, targetOutput) {
 const negativeFraction = isProperFraction(-4, 7);
 assertEquals(properFraction, true);
 
-// ====> complete with your assertion
-
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    (actualOutput = isProperFraction(-4, 7)),
-    (targetOutput = true),
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
 // Negative Fraction check:
 // Input: numerator = -14, denominator = 7
 // target output: false
@@ -75,15 +56,6 @@ function assertEquals(actualOutput, targetOutput) {
 
 const negativeFraction1 = isProperFraction(-14, 7);
 assertEquals(improperFraction, false);
-
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    (actualOutput = isProperFraction(-14, 7)),
-    (targetOutput = false),
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
 
 // Negative Fraction check:
 // Input: numerator = 4, denominator = -7
@@ -93,31 +65,12 @@ function assertEquals(actualOutput, targetOutput) {
 const negativeFraction2 = isProperFraction(4, -7);
 assertEquals(properFraction, true);
 
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    (actualOutput = isProperFraction(4, -7)),
-    (targetOutput = true),
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
-
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
 assertEquals(improperFraction, false);
-// ====> complete with your assertion
-
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    (actualOutput = isProperFraction(3, 3)),
-    (targetOutput = false),
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
 
 // Stretch:
 // What other scenarios could you test for?
@@ -129,17 +82,6 @@ function assertEquals(actualOutput, targetOutput) {
 const zeroFraction = isProperFraction(0, 7);
 assertEquals(properFraction, true);
 
-// ====> complete with your assertion
-
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    (actualOutput = isProperFraction(0, 7)),
-    (targetOutput = true),
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
-
 // Zero Fraction check:
 // Input: numerator = 7, denominator = 0
 // target output: false
@@ -147,14 +89,3 @@ function assertEquals(actualOutput, targetOutput) {
 
 const zeroFraction2 = isProperFraction(7, 0);
 assertEquals(improperFraction, false);
-
-// ====> complete with your assertion
-
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    (actualOutput = isProperFraction(7, 0)),
-    (targetOutput = false),
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
