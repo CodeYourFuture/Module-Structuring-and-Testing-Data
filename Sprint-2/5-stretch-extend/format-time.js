@@ -28,6 +28,19 @@ function formatAs12HourClock(time) {
 */
   const [splitHours, splitMinutes] = time.split(":");
 
+  /*
+Next we need to check if the splitHours and splitMinutes variables are valid. We check that both hour and minute parts are present, and that the hour part is exactly 2 digits long. This is important because we want to ensure that the input is in the correct format before proceeding with the conversion and not an input like "3:45", ":20", and ":".
+*/
+
+  if (
+    !splitHours ||
+    !splitMinutes ||
+    splitHours.length !== 2 || // if hours is not exactly 2 digits
+    splitMinutes.length !== 2 // if minutes is not exactly 2 digits
+  ) {
+    return "Invalid time input";
+  }
+
   /* 
   If the total characters in splitHours value is less than 2, then it is padded with "0". The value is then converted to a number in order to do some numeric comparisons later (like checking for cases where it is midnight, noon, etc) and assigned tot he variable called hours
   */
@@ -126,7 +139,6 @@ const testCases = [
   ["23:59", "11:59 pm"],
 
   // invalid cases that are unusual or extreme
-  ["12:00", "12:00 am"],
   ["24:00", "Invalid time input"],
   ["11:60", "Invalid time input"],
   ["3:45", "Invalid time input"],
@@ -148,9 +160,3 @@ for (const [current, target] of testCases) {
     `current output: ${current}, target output: ${target}`
   );
 }
-
-// The failed assertions logged as:
-// Assertion failed: current output: 12:00, target output: 12:00 am
-// Assertion failed: current output: 3:45, target output: Invalid time input
-// Assertion failed: current output: :20, target output: Invalid time input
-// Assertion failed: current output: :, target output: Invalid time input
