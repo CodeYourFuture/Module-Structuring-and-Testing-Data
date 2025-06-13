@@ -68,3 +68,4 @@ test("password must not be used before", () => {
     const result = isValidPassword(password, previousPasswords);
     expect(result).toEqual(true);
 });
+
