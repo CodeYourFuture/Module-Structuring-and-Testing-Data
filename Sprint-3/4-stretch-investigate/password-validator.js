@@ -1,33 +1,25 @@
-let bannedPassword = [];
-function passwordValidator(password) {
-    //return password.length < 5 ? false : true
-   // let bannedPassword = ["Password123","Mill3*","M56!h"];
-    if (password.length < 5) return false;
+function passwordValidator(password, previousPasswords = []) {
+  // Has at least 5 characters.
+  const hasMinLength = password.length >= 5;
+  // Has at least one English uppercase letter (A-Z)
+  const hasUppercase = /[A-Z]/.test(password);
+  // Has at least one English lowercase letter (a-z)
+  const hasLowercase = /[a-z]/.test(password);
+  // Has at least one number (0-9)
+  const hasNumber = /[0-9]/.test(password);
+  // Has at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
+  const hasSymbol = /[!#$%.*&]/.test(password);
+  // Must not be any previous password in the passwords array
+  const isNotUsedBefore = !previousPasswords.includes(password);
 
-    // Check for at least one uppercase letter
-    if (!/[A-Z]/.test(password)) return false;
-  
-    // Check for at least one lowercase letter
-    if (!/[a-z]/.test(password)) return false;
-  
-    // Check for at least one number
-    if (!/[0-9]/.test(password)) return false;
-    //checks for at least the password have one of these special characters.
-    
-    const specialCharacters = ["!", "#", "$", "%", ".", "*", "&"];
-    if (!specialCharacters.some(char => password.includes(char))) return false;
-    // Check if the password was used before
-   
+  return (
+    hasMinLength &&
+    hasUppercase &&
+    hasLowercase &&
+    hasNumber &&
+    hasSymbol &&
+    isNotUsedBefore
+  );
+}
 
-    if (bannedPassword.includes(password)) return false;
-
-    bannedPassword.push(password);
-
-
-    return true;
-  }
-   
-
-
-
-module.exports = passwordValidator;
+  module.exports = passwordValidator;

@@ -24,4 +24,3 @@ test("should return true for a negative proper fraction", () => {
 test("should return false for equal numerator and denominator", () => {
   expect(isEqualNumeratorAndDenominator(5, 5)).toEqual(false);
 });
-
