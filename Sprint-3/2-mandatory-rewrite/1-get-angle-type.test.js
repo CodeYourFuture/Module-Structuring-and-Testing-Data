@@ -17,7 +17,7 @@ test("should identify acute angle (<90°)", () => {
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
-test("should identify obtuse angle (<90°)", () => {
+test("should identify obtuse angle (>90° && <180°)", () => {
   expect(getAngleType(120)).toEqual("Obtuse angle");
 });
 
