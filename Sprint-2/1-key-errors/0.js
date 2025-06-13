@@ -17,7 +17,6 @@ After researching the error, I found that the variable named str is being decalr
 */
 
 function capitalise(str) {
-  let capitalisedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return capitalisedStr;
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 console.log(capitalise("congratulations!")); // Output: Hello
