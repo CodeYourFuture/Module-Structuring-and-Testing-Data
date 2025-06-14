@@ -13,8 +13,9 @@ const pounds = paddedPenceNumberString.substring(
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
-
+  //.padEnd(2, "0");
+  // PadEnd is not needed in this case, as the pence value is always two digits.
+  // If you want to ensure that the pence value is always two digits, you can use padEnd.
 console.log(`£${pounds}.${pence}`);
 
 // This program takes a string representing a price in pence
@@ -41,3 +42,4 @@ console.log(`£${pounds}.${pence}`);
 // The rationale behind each step is to ensure that the final output is correctly formatted, with leading and trailing zeros as necessary,
 // and to separate the pounds and pence components for clarity in the output.
 // The program effectively handles the conversion and formatting of the price, ensuring that it adheres to the expected currency format.
+
