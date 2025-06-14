@@ -9,8 +9,8 @@
 
 function isProperFraction(numerator, denominator) {
   if (denominator === 0) return false;
-  if (numerator === 0) return true;
-  if (Math.abs(numerator) < Math.abs(denominator)) return true;
+  else if (numerator === 0) return true;
+  else if (Math.abs(numerator) < Math.abs(denominator)) return true;
   else {
     return false;
   }
@@ -20,8 +20,6 @@ function isProperFraction(numerator, denominator) {
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
-    (actualOutput = isProperFraction(2, 3)),
-    (targetOutput = true),
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
