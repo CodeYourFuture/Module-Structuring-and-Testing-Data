@@ -14,13 +14,36 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-const isValidPassword = require("./password-validator");
+const passwordValidator = require("./password-validator");
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
+    expect(passwordValidator('q2e!Q')).toEqual(true);
+    expect(passwordValidator('2e!Q')).toEqual(false);
+});
+
+test("password has to have at least one English uppercase letter (A-Z)", () => {
     // Act
-    const result = isValidPassword(password);
+    const result = passwordValidator('q2e!q');
     // Assert
-    expect(result).toEqual(true);
-}
-);
+    expect(result).toEqual(false);
+});
+
+test("password has to have at least one English lowercase letter (a-z)", () => {
+    // Act
+    const result = passwordValidator('Q2E!Q');
+    // Assert
+    expect(result).toEqual(false);
+});
+
+test("password has to have at least one number (0-9)", () => {
+    // Act
+    const result = passwordValidator('qwe!Q');
+    // Assert
+    expect(result).toEqual(false);
+});
+
+test("password has to have at least one of the following non-alphanumeric symbols: !#$%.*&", () => {
+    // Act
+    const result = passwordValidator('qweiQ');
+    // Assert
+    expect(result).toEqual(false);
+});
