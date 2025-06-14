@@ -18,4 +18,9 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 I get a popup prompt asking me to put in my name, the consol there throws a underfined.
 
 What effect does calling the `prompt` function have? calling the prompt function will show the user a popup in the browser asking the user for information.
-What is the return value of `prompt`? I did not see the expected value that was collected via the prompt I got a underfined  in the console. 
+What is the return value of `prompt`? 
+
+The prompt() function: Displays a dialog box that asks the user to input something.
+
+Returns: A string: the text the user has entered.
+and null: if the user clicks "Cancel" or closes the prompt dialog.
