@@ -16,4 +16,13 @@
 
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
+    let bmi = (weight/(height * height));
+
+    // round to 1 decimal place
+    bmi = (Math.round((bmi*10)))/10;
+
+    // return the calculated bmi
+    return bmi;
 }
+
+console.log(calculateBMI(70,1.73));
