@@ -2,8 +2,6 @@
 // I predict the program will throw a SyntaxError or behave incorrectly because
 // the variable `str` is declared twice: once as a function parameter and again inside the function.
 
-
-
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
 
