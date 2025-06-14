@@ -25,3 +25,10 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+In line 3 the function is subtracting the last string character from the string so its now 399 not 399p
+In line 8 the .padStart is making sure that there is always 3 digits 
+In line 9 they are subtracting the last two characters of the string so its not 399 anymore, only 3
+In line 14 substring is making sure there is always 2 characters and pad.End reinforcing that there only is two 
+characters
+console.log is now showing the final results of how much pounds and pence there is.
+
