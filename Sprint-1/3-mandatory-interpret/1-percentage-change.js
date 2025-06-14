@@ -17,6 +17,7 @@ console.log(`The percentage change is ${percentageChange}`);
     // - Line 5: priceAfterOneYear.replaceAll(",", "")
     // - Line 7: Number(carPrice.replaceAll(",", ""))
     // - Line 8: Number(priceAfterOneYear.replaceAll(",", ""))
+    // - Line 10: console.log(`The percentage change is ${percentageChange}`)
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?=>
     // The error occurs on line 5 because there is a syntax error in the replaceAll function call. The second argument should be an empty string, 
