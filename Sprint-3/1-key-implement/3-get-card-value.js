@@ -1,7 +1,14 @@
 function getCardValue(card) {
   
-
-
+  // validation: 
+  // A,1-9,J,Q,K then hearts, spades, clubs, diamonds emoji
+  /*
+  if card is NOT in ([0-9,A,J,Q,K][heart, spade, club, diamond]):
+    console.error('Invalid card rank')
+  else
+    rest of code
+   */
+  
   // get rank from card
   const rank = card.replace(/[^0-9A-Z]+/gi,""); // use replace to remove (,"") everything that is not an alphanumeric character (case insensitive) with
 
