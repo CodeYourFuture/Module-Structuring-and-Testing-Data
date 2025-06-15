@@ -11,7 +11,7 @@ console.log(num);
 
 // ANSWER
 // ---------------------------------------------
-// the script:
+// the script generates a random number between minimum and maximum by:
 // 1. declares two numbers, minimum and maximum
 // then it calculates:
 // 2. a random number between 0 - 1
