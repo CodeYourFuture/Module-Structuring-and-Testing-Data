@@ -2,6 +2,8 @@
 
 // Why will an error occur when this program runs?
 // =============> write your prediction here
+// the var decimalNumber is being declared again
+// the console.log isn't using the function convertToPercentage
 
 // Try playing computer with the example to work out what is going on
 
@@ -18,3 +20,11 @@ console.log(decimalNumber);
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
+
+function convertToPercentage(decimalNumber) {
+  const percentage = `${decimalNumber * 100}%`;
+
+  return percentage;
+}
+
+console.log(convertToPercentage(0.5));
