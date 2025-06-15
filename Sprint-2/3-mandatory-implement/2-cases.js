@@ -10,7 +10,6 @@
 // it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
 
 // Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
-
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
