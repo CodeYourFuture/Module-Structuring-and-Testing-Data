@@ -1,4 +1,4 @@
-// Below are the steps for how BMI is calculated
+// Below are the steps for how BMI(Body Mass Index) is calculated
 
 // The BMI calculation divides an adult's weight in kilograms (kg) by their height in metres (m) squared.
 
@@ -15,5 +15,8 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+    squaredHeight = height * height;
+    BodyMassIndex = (weight / squaredHeight).toFixed(1);
+    return BodyMassIndex;
 }
+console.log(calculateBMI(70, 1.73));
