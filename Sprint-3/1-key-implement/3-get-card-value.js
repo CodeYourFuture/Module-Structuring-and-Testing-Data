@@ -8,7 +8,22 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+  let rank = card.charAt(0);
+  console.log(rank);
+
+  if (rank === "A") {
+    return 11;
+  } else if (!isNaN(rank)) {
+    // Convert rank to number
+    let numericRank = Number(rank);
+    if (numericRank >= 2 && numericRank <= 10) {
+      return numericRank;
+    }
+  } else if (rank === 'J' || rank === 'Q' || rank === 'K') {
+    return 10;
+  }
+
+  return 'Invalid card rank.';
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -33,19 +48,30 @@ assertEquals(aceofSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
-// ====> write your test here, and then add a line to pass the test in the function above
+assertEquals(fiveofHearts, 5);
 
+
+const sevenofHearts = getCardValue("7♥");
+assertEquals(sevenofHearts, 7);
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const qofHearts = getCardValue("Q♥");
+assertEquals(qofHearts, 10);
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const aceofHeart = getCardValue("A♥");
+assertEquals(aceofHeart, 11);
+
+
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+const invalid = getCardValue("-1");
+assertEquals(invalid, 'Invalid card rank.');
