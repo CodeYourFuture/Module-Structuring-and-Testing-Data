@@ -15,5 +15,9 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+  const squaringHeight = height * height;
+  const yourBmi = weight / squaringHeight;
+  return yourBmi;
 }
+console.log("Your BMI is :" + calculateBMI(54, 1.54).toFixed(1));
+//toFixed() is a method that rounds a number to a specified number of decimal places and returns it as a string.
