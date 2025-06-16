@@ -56,7 +56,7 @@ assertEquals(equalFraction, false);
 // What other scenarios could you test for?
 /* if both numerator and denominator are negative.
 nominator =-3 
-denominator = -9)
+denominator = -9
 -3/-9 are both converted to 3/9 using the Math.abs
 const negFraction = isProperFraction(-3 , -9);
 assertEquals(negFraction, true);
@@ -66,4 +66,4 @@ if numerator = 0
 denominator = 7
 the 0 is less than 7 so the test is true 
 const zeroFraction = isProperFraction(0, 7);
-assertEquals(zeroFraction, true);
+assertEquals(zeroFraction, true);*/
