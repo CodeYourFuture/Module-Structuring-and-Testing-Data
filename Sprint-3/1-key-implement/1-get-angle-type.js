@@ -8,15 +8,25 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-   if (angle === 90) return "Right angle";
+  const numberAngle = Number(angle)
+  if (isNaN(numberAngle) || numberAngle < 0 || numberAngle >= 360) {
+      return "Invalid angle";
+  }
+  switch(true){
+  case numberAngle === 90:
+    return "Right angle";
    // read to the end, complete line 36, then pass your test here
-   if (angle ===0) return "Zero angle"
-    if(angle > 0 && angle < 90) return "Acute angle"
-   if(angle > 90 && angle < 180) return "Obtuse angle"
-   if(angle === 180) return "Straight angle"
-   if(angle > 180 && angle < 360) return "Reflex Angles"
-   if (typeof angle !== 'number' || angle < 0 || angle >= 360) return "Invalid angle";
-
+  case numberAngle ===0:
+   return "Zero angle"
+  case numberAngle > 0 && numberAngle < 90:
+   return "Acute angle"
+  case numberAngle > 90 && numberAngle < 180:
+   return "Obtuse angle"
+  case numberAngle === 180:
+   return "Straight angle"
+  case numberAngle > 180 && numberAngle < 360:
+   return "Reflex Angles"
+}
 }
   
 

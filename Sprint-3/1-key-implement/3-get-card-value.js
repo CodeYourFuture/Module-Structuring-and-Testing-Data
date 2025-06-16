@@ -8,16 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank = card.slice(0,-1)
+  const rank = card.slice(0, -1);
+  const faceCards = { A: 11, K: 10, Q: 10, J: 10 };
 
-    if(rank === "A") return 11;
-    if (["J","Q","K"].includes(rank))  return 10;
-    if(!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 10 ) return Number(rank);
-      return "Invalid card rank"
-    
-      
-   
+  if (faceCards[rank]) return faceCards[rank];
+  const num = Number(rank);
+  return num >= 2 && num <= 10 ? num : "Invalid card rank";
 }
+
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read

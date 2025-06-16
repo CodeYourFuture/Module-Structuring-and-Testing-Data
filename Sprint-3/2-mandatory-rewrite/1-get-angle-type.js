@@ -1,12 +1,19 @@
 function getAngleType(angle) {
-   if (angle === 90) return "Right angle";
-   if (angle ===0) return "Zero angle"
-    if(angle > 0 && angle < 90) return "Acute angle"
-   if(angle > 90 && angle < 180) return "Obtuse angle"
-   if(angle === 180) return "Straight angle"
-   if(angle > 180 && angle < 360) return "Reflex angle"
    if (typeof angle !== 'number' || angle < 0 || angle >= 360) return "Invalid angle";
-
+switch(true){
+   case  angle ===0 :
+       return "Zero angle"
+   case  angle === 90 :
+       return "Right angle";
+    case angle > 0 && angle < 90 :
+       return "Acute angle"
+   case angle > 90 && angle < 180 :
+       return "Obtuse angle"
+   case angle === 180 :
+       return "Straight angle"
+   case angle > 180 && angle < 360 :
+       return "Reflex angle"
+}
 }
 
 
