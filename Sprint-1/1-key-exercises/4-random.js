@@ -10,7 +10,8 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 console.log(num)
 //num represent a random integer between 1 and 100
-//1. Math.random() generates a random decimal number between  0  and 1
+//1. Math.random() returns a number [0, 1), greater than or equal to 0, but strictly less than 1.
+
 
 //2. maximum - minimum + 1 calculates the  numbers we want to generate.
 // In this case, 100 - 1 + 1 = 100, so the range is 100.
