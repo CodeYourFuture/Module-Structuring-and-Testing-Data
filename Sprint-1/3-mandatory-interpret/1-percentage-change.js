@@ -20,7 +20,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 //The error is on line 5:priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
-//The function call replaceAll(",", "") is incorrect because there is an extra double quote inside replaceAll(), making it invalid syntax.
+//The function call replaceAll(",", "") is incorrect - the error is due to a missing comma between arguments in the replaceAll() method.
 //The correct syntax is:priceAfterOneYear.replaceAll(",", "")
 
 // c) Identify all the lines that are variable reassignment statements
