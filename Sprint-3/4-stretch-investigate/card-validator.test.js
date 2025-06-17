@@ -50,7 +50,7 @@ describe("cardValidator Tests", () => {
       },
 
       {
-        input: 7777777777777777,
+        input: 6666666666666666,
         expected: false,
         description: "Only one number used",
       },

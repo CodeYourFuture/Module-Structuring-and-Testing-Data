@@ -19,7 +19,7 @@ test("When the angle is less than 90 degrees, should identify acute angle", () =
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
 
-test("When the angle is greater than 90 degrees and less than 180 degrees, should identify obtuse angle", () => {
+test("When the angle is between 90 degrees and 180 degrees, should identify obtuse angle", () => {
   expect(getAngleType(147)).toEqual("Obtuse angle");
 });
 
@@ -35,6 +35,6 @@ test("When the angle is exactly 180 degrees, should identify straight angle", ()
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 
-test("When the angle is greater than 180 degrees and less than 360 degrees, should identify reflex angle", () => {
+test("When the angle is between 180 degrees and 360 degrees, should identify reflex angle", () => {
   expect(getAngleType(246)).toEqual("Reflex angle");
 });

@@ -1,23 +1,28 @@
 function getCardValue(card) {
+  if (typeof card !== "string") return "Input should be a string.";
+  
+  const allCards = ["A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2"];
   const faceCards = ["K", "Q", "J"];
-  if (typeof card !== "string") {
-    throw new Error("Input should be a string.");
+
+  // If card entered without suit
+  if (allCards.includes(card.toUpperCase()) && card.length <= 2) {
+    if (card === "A") return 11;
+    if (faceCards.includes(card.toUpperCase())) return 10;
+    return Number(card)
   }
 
-  let cardRank;
-
-  card.length < 2
-    ? (cardRank = card)
-    : (cardRank = card.slice(0, -1).toUpperCase());
-
-  if (faceCards.includes(cardRank)) return 10;
-  if (cardRank === "A") return 11;
-
-  const cardValue = Number(cardRank);
-  if (isNaN(cardValue)) {
-    throw new Error(`Invalid card rank`);
+// If card entered with suit
+const cardValue = card.slice(0, -1).toUpperCase();
+  if (allCards.includes(cardValue)) {
+    if (faceCards.includes(cardValue)) return 10;
+    if (cardValue === "A") return 11;
+    return Number(cardValue);
   }
 
-  return cardValue;
+  return "Error: Invalid card rank";
 }
+
+
 module.exports = getCardValue;
+
+console.log(getCardValue("120"))
