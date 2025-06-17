@@ -5,8 +5,7 @@ function countChar(stringOfCharacters, findCharacter) {
             count++;
         }
     }
-    console.log(`The character "${findCharacter}" appears ${count} times in the string.`);
-    return count
+    return  count;
 }
 
 
