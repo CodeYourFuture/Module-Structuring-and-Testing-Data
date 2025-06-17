@@ -10,6 +10,6 @@ console.log(last4Digits);
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
 // The method .slice() is used for strings and arrays. As cardNumber is a number, it will not work.
-// When running the code, it gives the error:”cardNumber.slice is not a function”
+// When running the code, it gives the error: ”cardNumber.slice is not a function”
 // It gives this error because the string method .slice() cannot be used with numbers, so Javascript does not recognise cardNumber.slice as a valid function.
-//To resolve the error, we need to convert cardNumber to a string by using the method .toString() and then use the .slice() method
+// To resolve the error, we need to convert cardNumber to a string by using the method .toString() and then use the .slice() method.

@@ -9,9 +9,9 @@ console.log(num);
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
-// Math.random() generates a random decimal number between 0 and 1
-// (Math.random() * (maximum - minimum + 1) is defining by which number the random decimal number will be multiplied
+// 1. Math.random() generates a random decimal number between 0 and 1
+// 2. (Math.random() * (maximum - minimum + 1) is defining by which number the random decimal number will be multiplied
 // In this case minimum=1 and maximum=100 so the Math.random will be multiplied by 100
-// Math.floor rounds down the number to the nearest whole number
-// + minimum shifts the entire range up by minimum
+// 3. Math.floor rounds down the number to the nearest whole number
+// 4. + minimum shifts the entire range up by minimum
 // num represents a random integer between 1 and 100, inclusive.
