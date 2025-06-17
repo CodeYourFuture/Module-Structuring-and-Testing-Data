@@ -9,3 +9,4 @@ count = count + 1;
 //The left-hand side (count) is the variable being assigned a value,while = is the assignment operation.
 //The = operator assigns the new value (1) to the count variable, replacing the old value (0).
 //Now, count stores 1
+// the line 3 operation is called "increment"(+)
