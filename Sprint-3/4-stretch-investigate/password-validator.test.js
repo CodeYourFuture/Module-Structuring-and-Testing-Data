@@ -16,11 +16,66 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 const isValidPassword = require("./password-validator");
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+  // Arrange
+  const password = "Pass1!";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(true);
+});
+
+test("password has at least one uppercase letter", () => {
+  // Arrange
+  const password = "Password1!";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(true);
+});
+
+test("password has at least one lowercase letter", () => {
+  // Arrange
+  const password = "PASSWORD1!";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
+});
+
+test("password has at least one number", () => {
+  // Arrange
+  const password = "Password!";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
+});
+
+test("password has at least one special character", () => {
+  // Arrange
+  const password = "Password1";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
+});
+
+test("password is not in the previous passwords array", () => {
+  // Arrange
+  const password = "Password1!";
+  const previousPasswords = ["OldPassword1!", "AnotherPassword2!"];
+  // Act
+  const result = isValidPassword(password, previousPasswords);
+  // Assert
+  expect(result).toEqual(true);
+});
+
+test("password is in the previous passwords array", () => {
+  // Arrange
+  const password = "OldPassword1!";
+  const previousPasswords = ["OldPassword1!", "AnotherPassword2!"];
+  // Act
+  const result = isValidPassword(password, previousPasswords);
+  // Assert
+  expect(result).toEqual(false);
+});
