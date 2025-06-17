@@ -40,6 +40,36 @@ describe("passwordValidator Tests", () => {
   });
 
   describe("Invalid Password Tests", () => {
+    test("Does not have at least 5 characters", () => {
+      const password = "P#s5";
+      const result = isValidPassword(password);
+      expect(result).toEqual(false);
+    });
+
+    test("Does not have at least one English uppercase letter (A-Z)", () => {
+      const password = "p#ss4";
+      const result = isValidPassword(password);
+      expect(result).toEqual(false);
+    });
+
+    test("Does not have at least one English lowercase letter (a-z)", () => {
+      const password = "P#SS6";
+      const result = isValidPassword(password);
+      expect(result).toEqual(false);
+    });
+
+    test("Does not have at least one number (0-9)", () => {
+      const password = "P#ssW";
+      const result = isValidPassword(password);
+      expect(result).toEqual(false);
+    });
+
+    test("Does not have at least one non-alphanumeric symbol: ('!', '#', '$', '%', '.', '*', '&')", () => {
+      const password = "Pass2";
+      const result = isValidPassword(password);
+      expect(result).toEqual(false);
+    });
+
     test("Passwords that does not match all the criteria, no previous passwords", () => {
       const password = "pass";
       const result = isValidPassword(password);
@@ -53,23 +83,9 @@ describe("passwordValidator Tests", () => {
       expect(result).toEqual(false);
     });
 
-    test("Passwords that does not match all the criteria, 2 previous passwords that don't match", () => {
-      const password = "password123";
-      const prevPW = ["oldAge3$", "bR!ck23"];
-      const result = isValidPassword(password, prevPW);
-      expect(result).toEqual(false);
-    });
-
     test("Passwords has correct format and 1 previous passwords matches", () => {
       const password = "oldAge3$";
       const prevPW = ["oldAge3$"];
-      const result = isValidPassword(password, prevPW);
-      expect(result).toEqual(false);
-    });
-
-    test("Passwords has correct format and 1 of 2 previous passwords match", () => {
-      const password = "Password12#";
-      const prevPW = ["P@ssword12#", "Password12#"];
       const result = isValidPassword(password, prevPW);
       expect(result).toEqual(false);
     });
