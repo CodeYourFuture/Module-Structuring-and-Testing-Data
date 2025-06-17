@@ -21,17 +21,31 @@ test("should return 11 for Ace of Spades", () => {
   expect(aceCard).toEqual(11);
 });
 // Case 5: Handle Invalid Cards - using an array for the inputs :
-test("should throw an error for invalid card ranks", () => {
-  const invalidCardInput = [
+// test("should throw an error for invalid card ranks", () => {
+//   const invalidCardInput = [
+//     "G♥", // random rank letter
+//     "1♠", // 1 is not a valid card
+//     "11♦", // 11 is not a valid card
+//     "62♣", //random rank number
+//     "", //empty string
+//     "NaN♠", //NaN as rank
+//     "undefined♣", //undefined as rank
+//     "null♦", // null as rank
+//   ];
+
+  // I have learned that we can use Jest's .each() for clearer test output, better reporting, parallel execution (improves test performance) and less boilerplate code. in the description of the test we can use placeholders such as %s (string value) and %d (number , or digit, value) as placeholders for the actual test cases inputs, meaning that when the error message appears we can immediately know which case it refers to. E.g if the current input is "G♥", the test name will be: should throw an error for invalid card rank: G♥"
+  test.each([
     "G♥", // random rank letter
     "1♠", // 1 is not a valid card
     "11♦", // 11 is not a valid card
-    "62♣", //random rank number
-    "", //empty string
-    "NaN♠", //NaN as rank
-    "undefined♣", //undefined as rank
+    "62♣", // random rank number
+    "", // empty string
+    "NaN♠", // NaN as rank
+    "undefined♣", // undefined as rank
     "null♦", // null as rank
-  ];
+  ])("should throw an error for invalid card rank: %s", (input) => {
+    expect(() => getCardValue(input)).toThrow("Invalid card rank");
+  });
 
   for (const input of invalidCardInput) {
     expect(() => getCardValue(input)).toThrow("Invalid card rank");
