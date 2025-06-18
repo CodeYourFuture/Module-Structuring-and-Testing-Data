@@ -12,6 +12,7 @@ function getAngleType(angle) {
    if (angle < 90) return "Acute angle";
    if ((angle > 90) && (angle < 180)) return "Obtuse angle";
    if (angle === 180) return "Straight angle";
+   if ((angle > 180) && (angle < 360)) return "Reflex angle";
    // read to the end, complete line 36, then pass your test here
 }
 
@@ -60,3 +61,5 @@ assertEquals(straight, "Straight angle");
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 // ====> write your test here, and then add a line to pass the test in the function above
+const reflex = getAngleType(270);
+assertEquals(reflex, "Reflex angle");
