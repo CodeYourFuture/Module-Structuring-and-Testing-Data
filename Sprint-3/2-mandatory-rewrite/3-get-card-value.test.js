@@ -6,6 +6,13 @@ test("should return 11 for Ace of Spades", () => {
     });
 
 // Case 2: Handle Number Cards (2-10):
+
+test("should return Numerical card for cards (2-10)", () => {
+   
+    expect(6).toEqual("Numerical card"); 
+});
+
+
 // Case 3: Handle Face Cards (J, Q, K):
 // Case 4: Handle Ace (A):
 // Case 5: Handle Invalid Cards:

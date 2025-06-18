@@ -1,5 +1,5 @@
 function getCardValue(card) {
-    // replace with your code from key-implement
-    return 11;
+    if (card === "Ace of Spades") return 11;
+    if (card === "Numerical card") return 2-10;
 }
 module.exports = getCardValue;
