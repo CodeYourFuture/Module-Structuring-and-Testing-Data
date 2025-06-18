@@ -18,6 +18,22 @@ Answer the following questions:
 What does `console` store?
 'object'
 
+The console object stores functions (methods) such as:
+
+console.log() – for general output
+
+console.error() – for error messages
+
+console.warn() – for warnings
+
+console.table() – for formatted table output
+
+console.time() and console.timeEnd() – for timing operations
+
+console.group() and console.groupEnd() – for grouping logs
+
+These methods don't store data themselves, but they give you tools to output and inspect data during runtime.
+
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 This syntax accesses a property or method on the console object.
 
