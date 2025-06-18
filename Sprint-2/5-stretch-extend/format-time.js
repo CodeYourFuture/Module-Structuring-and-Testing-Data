@@ -6,13 +6,19 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(-2);
   if (hours > 12) {
-    return `${(hours - 12).toString().padStart(2, "0")}:${minutes} pm`;
+    return `${timeUnitsToString(hours - 12)}:${timeUnitsToString(minutes)} pm`;
   } else if (hours < 12) {
-    return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")} am`;
-  } else if (hours == 12) {
+    return `${timeUnitsToString(hours)}:${timeUnitsToString(minutes)} am`;
+  } else if (hours == 12 & minutes == 0) {
     return `12:00 pm`;
+  } else if (hours == 12 & minutes > 0) {
+    return `00:${timeUnitsToString(minutes)} pm`;
   }
   return `${time} am`;
+}
+
+function timeUnitsToString(timeUnits) {
+  return timeUnits.toString().padStart(2, "0");
 }
 
 const currentOutput1 = formatAs12HourClock("08:00");
@@ -60,4 +66,12 @@ const targetOutput6 = "01:15 pm";
 console.assert(
   currentOutput6 === targetOutput6,
   `current output: ${currentOutput6}, target output: ${targetOutput6}`
+);
+
+// hours = 12 and minutes > 0
+const currentOutput7 = formatAs12HourClock("12:15");
+const targetOutput7 = "00:15 pm";
+console.assert(
+  currentOutput7 === targetOutput7,
+  `current output: ${currentOutput7}, target output: ${targetOutput7}`
 );
