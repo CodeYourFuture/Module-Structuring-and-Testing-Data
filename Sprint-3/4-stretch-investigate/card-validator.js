@@ -61,27 +61,27 @@ function isSumGreaterThanSixteen(cardNumber) {
 function isValidCardNumber(cardNumber) {
   //if the card number input is not a "string" type.
   if (!isString(cardNumber)) {
-    return "Card number must be a string";
+    throw new Error("Card number must be a string");
   }
   //if the card number is not exactly 16 digits
   if (!isSixteenDigits(cardNumber)) {
-    return "Card number must be exactly 16 digits";
+    throw new Error("Card number must be exactly 16 digits");
   }
   //if all characters in the card number are not digits
   if (!isAllDigits(cardNumber)) {
-    return "Card number must contain only digits";
+    throw new Error("Card number must contain only digits");
   }
   //if the card number only has one recurring type of digit
   if (!hasAtLeastTwoDifferentDigits(cardNumber)) {
-    return "Card number must contain at least two unique digits";
+    throw new Error("Card number must contain at least two unique digits");
   }
   //if the last digit is not even
   if (!isLastDigitEven(cardNumber)) {
-    return "The last digit must be an even number";
+    throw new Error("The last digit must be an even number");
   }
   //if the sum of all digits is less than 16
   if (!isSumGreaterThanSixteen(cardNumber)) {
-    return "The sum of all digits must be greater than 16";
+    throw new Error("The sum of all digits must be greater than 16");
   }
   // If all checks pass, return true
   return true;
