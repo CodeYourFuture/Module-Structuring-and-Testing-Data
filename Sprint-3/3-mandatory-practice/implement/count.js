@@ -12,7 +12,7 @@ module.exports = countChar;
 
 
 
-// const str = "the rain in spain";
-// const char = "u";
-// const count = countChar(str, char);
-// console.log(count);
+const str = "the rain in spain";
+const char = "u";
+const count = countChar(str, char);
+console.log(count);
