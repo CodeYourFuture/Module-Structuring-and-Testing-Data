@@ -9,6 +9,7 @@
 
 function getAngleType(angle) {
    if (angle === 90) return "Right angle";
+   if (angle < 90) return "Acute angle";
    // read to the end, complete line 36, then pass your test here
 }
 
