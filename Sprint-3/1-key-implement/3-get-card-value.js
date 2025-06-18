@@ -1,34 +1,35 @@
 function getCardValue(card) {
   
-  
-  // get rank from card
-  const rank = card.replace(/[^0-9A-Z]+/gi,""); // use replace to remove (,"") everything that is not an alphanumeric character (case insensitive) with
+  if (card.length != 2) {
+    console.error('Invalid card');
+    return;
+  }
 
-  const suit = card.replace(/[0-9a-z]+/gi,""); //use replace to remove any alphanumeric character, suit should then just have the emoji
-  
+  //get rank and suit from card string
+  const rank = card.slice(0,-1);
+  const suit = card.slice(1);
+
+
+  // make array of number ranks only 0,1,..,10
   const numberRanks = [...Array.from({length:11}, (_,i) => i.toString())];
-  console.log(numberRanks);
 
+  // make array of all existing ranks, numbers and face cards 
   const allRanks = [...numberRanks,"A","J","Q","K"];
-  console.log(allRanks);
 
-  if (["♠️","♥️","♦️","♣️"].includes(suit) && allRanks.includes(rank)) {
 
-    //if the rank is already a number, that is its value so just return that
-    // try to change rank into a Number, then if the result is an integer, return integer
-    // '9' => 9 => true, 'ABC' => NaN => false
-    if (Number.isInteger(Number(rank))) {
-    return Number(rank);
-    }
+  if (["♠","♥","♦","♣"].includes(suit) && allRanks.includes(rank)) {
+
+    //if the rank is a number, that is its value so just return that
+      if (numberRanks.includes(rank)) {return Number(rank)};
 
     // if rank is Ace, then return 11
     if (rank === 'A') {return 11};
 
-    // otherwise (if input correctly), rank is J Q or K, so return 10
+    // otherwise, rank is J Q or K, so return 10
     return 10;
   }
 
-  else {console.error('Invalid card'); return};
+  else {console.error('Invalid card'); return;}
 }
 
 
@@ -64,4 +65,6 @@ assertEquals(jackOfSpades, 10);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-invalidRank = "D💩";
+const invalidRank = "D💩";
+getCardValue(invalidRank);
+
