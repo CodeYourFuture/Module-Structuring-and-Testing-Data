@@ -16,4 +16,4 @@ function capitalise(str) {
   let capString = `${str[0].toUpperCase()}${str.slice(1)}`;
   return capString;
 }
-console.log(capitalise("shannon");
+console.log(capitalise("shannon"));
