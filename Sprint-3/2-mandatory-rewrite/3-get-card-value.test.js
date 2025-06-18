@@ -21,7 +21,21 @@ test("should return 10 for any valid face card", () => {
 // Case 4: Handle Ace (A):
 // this is the same test as  in case 1 above, no?
 
-// Case 5: Handle Invalid Cards:
+// Case 5: Handle Invalid Card of length 2:
 test("should throw error for any invalid cards entered", () => {
-    //how do you test that a console.error was logged?!
+    const invalidCard = "D🕯";
+    expect(() => getCardValue(invalidCard)).toThrow();
 });
+
+// Case 6: Handle Invalid Card of length >2:
+test("should throw error for any invalid cards entered", () => {
+    const invalidCard2 = "AD🕯";
+    expect(() => getCardValue(invalidCard)).toThrow();
+});
+
+
+// Case 7: Trim spaces:
+test("should return correct rank if string is padded with any spaces", () => {
+    const spacesInCard = getCardValue("  A ♠   ");
+    expect(spacesInCard).toEqual(11);
+})
