@@ -1,3 +1,4 @@
+
 /* 
 Password Validation
 
@@ -24,3 +25,43 @@ test("password has at least 5 characters", () => {
     expect(result).toEqual(true);
 }
 );
+test("password has at least one uppercase letter", () => {
+    // Arrange
+    const password = "Password1";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+});
+test("password has at least one lowercase letter", () => {
+    // Arrange
+    const password ="password1"
+    const result =isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+});
+test("password has at least one number" ,() => {
+    // Arrange
+    const password = "password9";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+});
+test("test has one of the special characters",() => {
+    // Arrange
+    const password = "Pass5*&";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+});
+test("password is not from the previous passwords array", () => {
+    // Arrange
+    const previousPasswords = ["12345", "Password1", "password1", "12345678"];
+    const password = "NewPassword1";
+    // Act
+    const result = isValidPassword(password, previousPasswords);
+    // Assert
+    expect(result).toEqual(true);
+});
