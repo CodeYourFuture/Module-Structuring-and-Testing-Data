@@ -24,6 +24,12 @@ Shows the message: "What is your name?" Includes a text input field
 
 Has OK and Cancel buttons
 
+The prompt blocks interaction with the page until it is dismissed.
+
+Most browsers style the prompt natively, so it cannot be customized with CSS or HTML.
+
+Overuse is discouraged in modern UI design in favor of custom modals or forms.
+
 
 What is the return value of `prompt`?
 The prompt() function returns:
