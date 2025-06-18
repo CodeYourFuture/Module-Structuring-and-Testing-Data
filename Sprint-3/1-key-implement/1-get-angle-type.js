@@ -10,6 +10,7 @@
 function getAngleType(angle) {
    if (angle === 90) return "Right angle";
    if (angle < 90) return "Acute angle";
+   if ((angle > 90) && (angle < 180)) return "Obtuse angle";
    // read to the end, complete line 36, then pass your test here
 }
 
@@ -44,6 +45,7 @@ assertEquals(acute, "Acute angle");
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
 const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angle");
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Case 4: Identify Straight Angles:
