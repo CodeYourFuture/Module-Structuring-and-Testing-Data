@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1750322537786" clover="3.2.0">
+  <project timestamp="1750322537786" name="All files">
+    <metrics statements="21" coveredstatements="21" conditionals="22" coveredconditionals="19" methods="8" coveredmethods="8" elements="51" coveredelements="48" complexity="0" loc="21" ncloc="21" packages="4" files="8" classes="8"/>
+    <package name="Sprint-3">
+      <metrics statements="7" coveredstatements="7" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
+      <file name="angle.js" path="C:\CYF May\Module-Structuring-and-Testing-Data\Module-Structuring-and-Testing-Data\Sprint-3\angle.js">
+        <metrics statements="7" coveredstatements="7" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
+        <line num="2" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="4" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Sprint-3.2-mandatory-rewrite">
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="1-get-angle-type.js" path="C:\CYF May\Module-Structuring-and-Testing-Data\Module-Structuring-and-Testing-Data\Sprint-3\2-mandatory-rewrite\1-get-angle-type.js">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="2-is-proper-fraction.js" path="C:\CYF May\Module-Structuring-and-Testing-Data\Module-Structuring-and-Testing-Data\Sprint-3\2-mandatory-rewrite\2-is-proper-fraction.js">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="3-get-card-value.js" path="C:\CYF May\Module-Structuring-and-Testing-Data\Module-Structuring-and-Testing-Data\Sprint-3\2-mandatory-rewrite\3-get-card-value.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Sprint-3.3-mandatory-practice.implement">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="count.js" path="C:\CYF May\Module-Structuring-and-Testing-Data\Module-Structuring-and-Testing-Data\Sprint-3\3-mandatory-practice\implement\count.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="get-ordinal-number.js" path="C:\CYF May\Module-Structuring-and-Testing-Data\Module-Structuring-and-Testing-Data\Sprint-3\3-mandatory-practice\implement\get-ordinal-number.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="repeat.js" path="C:\CYF May\Module-Structuring-and-Testing-Data\Module-Structuring-and-Testing-Data\Sprint-3\3-mandatory-practice\implement\repeat.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Sprint-3.4-stretch-investigate">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="password-validator.js" path="C:\CYF May\Module-Structuring-and-Testing-Data\Module-Structuring-and-Testing-Data\Sprint-3\4-stretch-investigate\password-validator.js">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
