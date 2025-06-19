@@ -9,22 +9,13 @@
 
 // (All spaces in the "" line should be ignored. They are purely for formatting.)
 
-const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
 const lastSlashIndex = filePath.lastIndexOf("/");
-const base = filePath.slice(lastSlashIndex + 1);
-console.log(`The base part of ${filePath} is ${base}`);
+const lastDotIndex = filePath.lastIndexOf(".");
 
+const base = filePath.slice(lastSlashIndex + 1);   // file.txt
+const dir = filePath.slice(0, lastSlashIndex);     // /Users/mitch/cyf/Module-JS1/week-1/interpret
+const ext = filePath.slice(lastDotIndex);          // .txt
 
-// Create a variable to store the dir part of the filePath variable
-const dir = filePath.slice(0 ,lastSlashIndex + 1);
-console.log(`The div part of ${filePath} is ${dir}`);
-
-
-// Create a variable to store the ext part of the variable
-const lastDoteIndex = filePath.lastIndexOf(".");
-const ext = filePath.slice(lastDoteIndex);
-console.log(`The ext part of ${filePath} is ${ext}`);
-
-// https://www.google.com/search?q=slice+mdn
-
-console.log(lastSlashIndex);
+console.log(`Base part of path: ${base}`);
+console.log(`Dir part of path: ${dir}`);
+console.log(`Ext part of path: ${ext}`);
