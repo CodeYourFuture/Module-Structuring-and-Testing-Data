@@ -6,7 +6,7 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+const formattedTime = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(totalMinutes);
 
 // For the piece of code above, read the code and then answer the following questions
@@ -31,7 +31,7 @@ console.log(totalMinutes);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // The variable `result` represents the movie's length in a time format: `HH:MM:SS`. 
 // string format 
-
+// better name can be `formattedTime` or `HHMMSS`
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // Yes, the code works for all non-negative values of `movieLength`, including 0.
 // However, for values less than 60, it will return 0 hours and 0 minutes
