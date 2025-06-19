@@ -8,3 +8,4 @@ count = count + 1;
 // line 3 is updating the value of the count variable by adding 1 to its current value. 
 // The `=` operator is used for assignment.
 // `+ 1` adds 1 to the current value of count.
+// The one-word programming term describes the operation on line 3 is increment ?
