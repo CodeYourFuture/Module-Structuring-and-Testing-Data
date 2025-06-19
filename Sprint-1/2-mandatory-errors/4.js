@@ -23,5 +23,5 @@ const 24hourClockTime = "08:53"; //08:53 is 12-hour (AM), or 24-hour (morning)
 //Fix (correct labelling)
 const hour24ClockTime = "20:53"; // 8:53 PM
 const hour12ClockTime = "08:53 AM"; // 8:53 AM
-"The two lines of code I showed earlier are now valid.
+//The two lines of code I showed earlier are now valid.
 
