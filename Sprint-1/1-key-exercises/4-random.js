@@ -11,6 +11,8 @@ console.log(num)
 
 // (maximum - minimum + 1) this part of the code calculates the range of possible numbers, including both the minimum and maximum values.
 // Math.random() generates a random floating-point number between 0 (inclusive) and 1 (exclusive).
+//T he Math.random() it returns a random number in the interval [0, 1),because a square bracket means the number next to it is inclusive,
+// instead a parenthesis means the number next to it is exclusive.
 // Math.floor() rounds down the result to the nearest whole number.
 // ..+ minimum) in this part of code we add the minimum in this case 1 to the MATH.floor result like that the we ensure it fall within the range.
 // num variable will hold a random integer between 1 and 100 inclusive both.
