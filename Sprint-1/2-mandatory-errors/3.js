@@ -13,6 +13,6 @@
 //console.log(last4Digits);
 
 // To updates the expression 
-const newCardNumber = "4533787178994213";
-const newLast4Digits = newCardNumber.slice(-4);
-console.log(newLast4Digits);
+const cardNumber = 4533787178994213;
+const last4Digits = cardNumber.toString().slice(-4);
+console.log(last4Digits);
