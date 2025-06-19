@@ -17,7 +17,7 @@ console.log(num); // the output of the code in the terminal is 92.
 //https://javascript.info/variables
 /*Math.floor(Math.random) is an operation that is used in javascript to round numbers. e.g 3.1 becomes 3
 https://javascript.info/number
-Math.random() gives decimal between 0, 1
+Math.random() gives decimal between [0, 1)
 The results are multiplied by maximum - minimum + 1 this will give values that range between 0 and 99.999
 Math.floor rounds the result to a whole number between 0 to 99
 + minimum shifts to the number between 1 -100
