@@ -36,8 +36,12 @@ console.log(`The percentage change is ${percentageChange}`);
 // b) I ran the code in the terminal and it appears that there is error in line 5 a comma is missing.
 // The output of the code is NaN. To fix the error from Number(PriceAfterOneYear.replaceAll("," "")); 
 // a comma needs to be added in the code and it should be like this priceAfterOneYear.replaceAll(",", ""));
-// The comma helps to replace the Number from string to a number and it ommits the comma from the number.
-// The 10,000 is replaced by 10000 without a comma.
+// There is a syntax error in line 5 because a comma is missing between the two arguments in .replaceAll("," "").
+// To fix the error the comma should be added between the two arguments like that:
+//  replaceAll(",", "").
+//This argument "," in JavaScript is  used to replace all commas string into an empty string "".
+// Then convert the string from 10,000 to 10000 and 8,543 to 8543 into a number using the Number function.
+
 
 // c) The variable reassignment are in line 4 and 5 
 carPrice = Number(carPrice.replaceAll(",", ""));
@@ -55,5 +59,7 @@ const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
 // const declares the constant percentageChange.
 
-// e) this line of code is replacing the value of 10,000 to 10000 by replacing the number 
-// from a string to a number and ommiting the comma in the number.
+// e) This line of code transforms the string "10,000" by removing the comma (,) using .replaceAll(",", ""), 
+// resulting in "10000", and then converts that string into a number with Number(). 
+// This helps to perform numerical operations on values that were originally formatted as strings.
+//
