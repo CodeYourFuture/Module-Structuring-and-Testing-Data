@@ -8,7 +8,12 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+    const rank = card.slice(0, -1)
+
+    if (rank === "A" || rank == "A") return 11;
+    if (rank >= "2" && rank <= "9") return Number(rank);
+    if (rank === "10" || rank ==="Q"|| rank === "J" || rank === "K") return 10; 
+    return "Invalid card rank";
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -32,8 +37,8 @@ assertEquals(aceofSpades, 11);
 // Given a card with a rank between "2" and "9",
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
-const fiveofHearts = getCardValue("5♥");
-// ====> write your test here, and then add a line to pass the test in the function above
+const fiveofHearts = getCardValue("8♥");
+assertEquals(fiveofHearts, "8");
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
@@ -48,4 +53,7 @@ const fiveofHearts = getCardValue("5♥");
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
-// Then it should throw an error indicating "Invalid card rank."
+// Then it should throw an error indicating "Invalid card rank.assertEquals(getCardValue("Q♣"), 10);  // face card
+assertEquals(getCardValue("10♦"), 10); // 10
+assertEquals(getCardValue("9♠"), 9);   // number card
+assertEquals(getCardValue("B♦"), "Invalid card rank"); // invalid
