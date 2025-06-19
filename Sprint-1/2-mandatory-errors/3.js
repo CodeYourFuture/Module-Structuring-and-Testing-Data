@@ -1,5 +1,5 @@
 const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.slice(-4);
+
 
 
 // The last4Digits variable should store the last 4 digits of cardNumber
@@ -22,7 +22,7 @@ Numbers in Javascript do not have the .slice() method.*/
 // To correct the code the .toString() method is added to the code to convert the number to a string.
 
 const last4Digits = cardNumber.toString().slice(-4);
-console.log(cardNumber.slice(-4));
+console.log(last4Digits);
 
 // The output should be 4213
 
