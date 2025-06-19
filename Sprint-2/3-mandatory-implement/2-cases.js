@@ -18,7 +18,7 @@
 function toUpperSnakeCase(inputString) {
 
     // Convert the input string to uppercase and replace spaces with underscores
-    return inputString.toUpperCase().replace(/ /, '_');
+    return inputString.toUpperCase().replace(/\s+/g, '_');
 }   
 // Example usage:
 console.log(toUpperSnakeCase("hello there")); // Should output: "HELLO_THERE"
