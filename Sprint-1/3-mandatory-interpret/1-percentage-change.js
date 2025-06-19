@@ -20,7 +20,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // To fix the error we need to add a comma in the replaceAll method call.
 
 // c) Identify all the lines that are variable reassignment statements
-// The variable reassignment statements are: carPrice , priceAfterOneYear, priceDifference, percentageChange.
+// The variable reassignment statements are: carPrice , priceAfterOneYear.
 
 // d) Identify all the lines that are variable declarations
 // The variable declarations are: let carPrice, let priceAfterOneYear, const priceDifference, const percentageChange.
