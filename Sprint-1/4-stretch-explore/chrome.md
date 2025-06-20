@@ -19,4 +19,4 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 //prompt expect input from the user by showing a small window with space for input to be submitted once called.
 What is the return value of `prompt`?
-//undefined
+//a string - the name entered my the user.
