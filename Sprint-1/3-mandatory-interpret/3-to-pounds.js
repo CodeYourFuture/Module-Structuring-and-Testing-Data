@@ -6,6 +6,7 @@ const penceStringWithoutTrailingP = penceString.substring(
 );
 
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
@@ -13,7 +14,7 @@ const pounds = paddedPenceNumberString.substring(
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  // .padEnd(2, "0");
 
 console.log(`£${pounds}.${pence}`);
 
@@ -35,7 +36,7 @@ console.log(`£${pounds}.${pence}`);
 // if we're going to use the string indices as an indication of where the £££ and p are stored, we can't have a character that isn't part of the number changing the length of the string
 
 // const penceStringWithoutTrailingP = penceString.substring(0,penceString.length - 1);
-// .substring(a,b) extracts characters from a string, starting at position a and ending at position b
+// .substring(a,b) extracts characters from a string, starting at & including position a, and ending at without including position b.
 
 // **line 8:**
 //adds 0s at the beginning of penceStringWithoutTrailingP until its length is 3 => paddedPenceNumberString doesn't get changed and remains = 399, because its length is already 3
