@@ -1,5 +1,6 @@
 function repeat(times = 1) {
     return "hello".repeat(times); // Repeat the string "hello" the specified number of times
+    
 }
 
 // Given a number times,
