@@ -1,5 +1,4 @@
 function getAngleType(angle) {
-  let angleType = "" 
   
   if (angle < 90) {return "Acute angle";}
   
