@@ -6,6 +6,7 @@ function getOrdinalNumber(num) {
     return num + "th"; // Applying ordinal number logic for special cases: 11th, 12th, 13th
     }
 
+    if (num === 0) return "0th"; // Handle zero as a special case - although rarely used, "0th" is a valid ordinal number in programming in reference to indexing because the "zeroth element" is the first item in an array.
     if (endsIn === 1) return num + "st";
     if (endsIn === 2) return num + "nd";
     if (endsIn === 3) return num + "rd"; 
