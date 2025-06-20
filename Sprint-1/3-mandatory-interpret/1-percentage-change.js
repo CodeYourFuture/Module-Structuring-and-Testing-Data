@@ -32,6 +32,5 @@ c) line 4 & line 5
 
 d) lines 1, 2, 7 & 8
 
-e) The last expression gets rid of all the commas present in the declared variables in line 1 & 2. or in other words, replaces them commas with
-no space between the characters separated by the commas. 
+e) Firstly, it replaces all commas in the string and eventually converts the new string into a number. 
 */
