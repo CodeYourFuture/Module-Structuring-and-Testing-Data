@@ -3,5 +3,5 @@
 
 // to avoid the syntax error after running the above lines of code do as below:
 
-const ClockTime12Hour = "20:53";
-const ClockTime24hour = "08:53";
+const clockTime24Hour = "20:53";
+const clockTime12Hour = "08:53";
