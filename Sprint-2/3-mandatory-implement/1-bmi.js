@@ -19,4 +19,4 @@ function calculateBMI(weight, height) {
     return parseFloat(bmi.toFixed(1));
    // return the BMI of someone based off their weight and height
 }
-console.log(calculateBMI(84, 1.81));
+console.log(calculateBMI(80, 1.81));
