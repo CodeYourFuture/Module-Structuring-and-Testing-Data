@@ -32,5 +32,5 @@ c) line 4 & line 5
 
 d) lines 1, 2, 7 & 8
 
-e) Firstly, it replaces all commas in the string and eventually converts the new string into a number. 
+e) Firstly, it removes all commas in the string and eventually converts the new string into a number. 
 */
