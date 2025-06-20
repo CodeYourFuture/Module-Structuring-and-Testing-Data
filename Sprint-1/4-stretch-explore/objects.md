@@ -16,7 +16,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
-//console doesn't store. it displays.
+//it stores different logging, debugging, warning/errors and information properties.
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 //console.log log or display values to the console. Console.assert, check if a condition is true and in this case no output. Otherwise, an
 // error message shows. As for the `,`, it's called the dot notation and it's used to access properties and methods of an object.
