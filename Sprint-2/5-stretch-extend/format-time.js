@@ -9,10 +9,8 @@ function formatAs12HourClock(time) {
     return `${timeUnitsToString(hours - 12)}:${timeUnitsToString(minutes)} pm`;
   } else if (hours < 12) {
     return `${timeUnitsToString(hours)}:${timeUnitsToString(minutes)} am`;
-  } else if (hours == 12 & minutes == 0) {
-    return `12:00 pm`;
-  } else if (hours == 12 & minutes > 0) {
-    return `00:${timeUnitsToString(minutes)} pm`;
+  } else if (hours == 12) {
+    return `12:${timeUnitsToString(minutes)} pm`;
   }
   return `${time} am`;
 }
@@ -70,7 +68,7 @@ console.assert(
 
 // hours = 12 and minutes > 0
 const currentOutput7 = formatAs12HourClock("12:15");
-const targetOutput7 = "00:15 pm";
+const targetOutput7 = "12:15 pm";
 console.assert(
   currentOutput7 === targetOutput7,
   `current output: ${currentOutput7}, target output: ${targetOutput7}`
