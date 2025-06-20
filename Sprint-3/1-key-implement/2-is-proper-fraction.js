@@ -8,7 +8,9 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
+  if (Math.abs(numerator) < Math.abs(denominator))
+    return true; // added absolute value to catch negative numbers
+  else return false; // everything else is not proper
 }
 
 // here's our helper again
@@ -51,3 +53,4 @@ const equalFraction = isProperFraction(3, 3);
 
 // Stretch:
 // What other scenarios could you test for?
+// can test for 0 nom and 0 denom. Can solve by adding && nom > 0 && denom > 0 in if to check.
