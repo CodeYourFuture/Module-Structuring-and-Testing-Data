@@ -25,7 +25,7 @@ function formatTimeDisplay(seconds) {
 // 0
 
 // c) What is the return value of pad is called for the first time?
-// 00
+// "00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // 1. num is assigned the value of remaining seconds.
