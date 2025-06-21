@@ -22,8 +22,8 @@ function convertToPounds(penceString) {
     .padEnd(2, "0");
 
   const convertAmount = "£" + pounds + "." + pence;
-  console.log(convertAmount);
+  return convertAmount;
 }
 
-convertToPounds("399p");
-convertToPounds("450p");
+let convertedAmount = convertToPounds("450p");
+console.log(convertedAmount);
