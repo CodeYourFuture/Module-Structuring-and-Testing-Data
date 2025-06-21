@@ -29,7 +29,7 @@ console.log(result);
 // b) How many function calls are there?
 
 // There is 1 function call:
-// console.log() [line 9]
+// console.log() 
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
@@ -53,5 +53,5 @@ console.log(result);
 // 1. The code correctly converts movieLength into hours, minutes, and seconds for positive values.
 // 2. It doesn’t handle zero or negative values properly—these cases need extra checks.
 // 3. Minutes and seconds may appear without leading zeros.
-// 4. To improve add validation to handle zero or negative inputs gracefully.
+
 
