@@ -19,8 +19,9 @@ function calculateBMI(weight, height) {
   const heightSquare = height * height;
   const BMI = weight / heightSquare;
   const scaledBMI = BMI.toFixed(1);
-  return scaledBMI;
+  return Number(scaledBMI);
 }
 
 result = calculateBMI(80, 1.89);
 console.log(result);
+//console.log(typeof calculateBMI());
