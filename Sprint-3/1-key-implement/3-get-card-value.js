@@ -37,8 +37,8 @@ assertEquals(aceofSpades, 11);
 // Given a card with a rank between "2" and "9",
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
-const fiveofHearts = getCardValue("8♥");
-assertEquals(fiveofHearts, "8");
+const fiveofHearts = getCardValue("3♥");
+assertEquals(fiveofHearts, 3);
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
