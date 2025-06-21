@@ -29,13 +29,11 @@ console.log(decimalNumber);*/
 // Finally, correct the code to fix the problem
 // =============> write your new code here
 
-const decimalNumber = 0.5;
-
-function convertToPercentage() {
+function convertToPercentage(decimalNumber) {
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
 }
 
-result = convertToPercentage();
+result = convertToPercentage(0.6);
 console.log(result);
