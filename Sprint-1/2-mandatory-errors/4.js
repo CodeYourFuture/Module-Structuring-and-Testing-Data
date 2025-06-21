@@ -1,4 +1,4 @@
-const HourClockTime = "20:53";
+const hourClockTime = "20:53";
 const hourClockTime = "08:53";
 
 // Mistake is that the variables' name start with number.

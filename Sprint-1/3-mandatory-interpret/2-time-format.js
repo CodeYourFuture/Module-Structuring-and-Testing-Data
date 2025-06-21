@@ -28,7 +28,7 @@ console.log(result);
 // TotalMinutes means movie length in seconds minus remaining seconds and transforms it into minutes.
 
 // e) What do you think the variable result represents? It represent time in the format: HH.MM.SS
-// The variable Result has a too general name. I would rename it. Foe example, FormattingTime
+// The variable Result has a too general name. I would rename it. Foe example, FormattedTime
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // It works well for integers. Doesn't work for negative numbers and strings. Unless we convert them. for 0 it gives 0:0:0
