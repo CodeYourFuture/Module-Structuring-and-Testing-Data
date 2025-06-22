@@ -14,7 +14,7 @@ let initials=
 console.log(initials);
 
 
-//I declared the variable called initials rhen I used [0] to store the first character of each string
+//I declared the variable called initials then I used [0] to store the first character of each string
 
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
