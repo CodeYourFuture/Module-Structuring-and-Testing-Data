@@ -14,64 +14,31 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
 const isValidPassword = require("./password-validator");
+
+const previousPasswords = ["Passw0rd!", "123Abc!", "Letmein!", "Pass12"];
+
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "Pass1!";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+  expect(isValidPassword("A1a!1!")).toBe(true);
+});
 
 test("password has at least one English uppercase letter (A-Z)", () => {
-    // Arrange
-    const password = "letm3in!";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(false);
-}
-);
+  expect(isValidPassword("letm3in!")).toBe(false);
+});
 
 test("password has at least one English lowercase letter (a-z)", () => {
-    // Arrange
-    const password = "PaSS1!";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+  expect(isValidPassword("PaSS1!")).toBe(true);
+});
 
 test("password has at least one number (0-9)", () => {
-    // Arrange
-    const password = "Passw0rd";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(false);
-}
-);
+  expect(isValidPassword("passIng")).toBe(false);
+});
 
 test("password has at least one non-alphanumeric symbol (!#$%.*&)", () => {
-    // Arrange
-    const password = "L£tmein1";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(false);
-}
-);
+  expect(isValidPassword("L£tmein1")).toBe(false);
+});
 
-test("Must not be any previous password", () => {
-    // Arrange
-    const password = "Passw0rd!";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(false);
-}
-);
-
+test("password is not one of the previous passwords", () => {
+  expect(isValidPassword("Passw0rd!", previousPasswords)).toBe(false);
+});

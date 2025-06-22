@@ -1,6 +1,4 @@
-const previousPasswords = ["Letmein!", "Pass12", "Passw0rd!"];
-
-function passwordValidator(password) {
+function passwordValidator(password, previousPasswords = []) {
     // Checks whether the password variable is a string
     if (typeof password !== 'string') return false;
 
@@ -16,7 +14,7 @@ function passwordValidator(password) {
     // Check for at least one number 0-9
     if (!/[0-9]/.test(password)) return false;
 
-    // Check for at least one non-alphanumeric symbol: ("!", "#", "$", "%", ".", "*", "&") using regex
+    // Check for at least one allowed special character: ! # $ % . * &
     if (!/[!#$%.*&]/.test(password)) return false;
 
     // Check that password is not in previousPasswords array 
@@ -26,4 +24,13 @@ function passwordValidator(password) {
     return true;
 }
 
+const previous = ["Letmein!", "Pass12", "Passw0rd!"];
+
+/*
+console.log(passwordValidator("A1a!1"));                  // should return true
+console.log(passwordValidator("PaSS1!"));                 // true
+console.log(passwordValidator("Pass12"));                 // false
+console.log(passwordValidator("L£tmein1"));               // false (symbol not allowed)
+console.log(passwordValidator("Passw0rd!", previous));    // false (in previousPasswords)
+*/
 module.exports = passwordValidator;
