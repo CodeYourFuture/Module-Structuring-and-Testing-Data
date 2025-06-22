@@ -20,3 +20,13 @@ A; This opens a dialog box prompting the user for input.
 What is the return value of `prompt`?
 A; It returns the text the user types in, and stores it in the variable `myName`.
 For example, if I typed "Alice", then `myName` would be "Alice".
+How can we check whether the user clicked "OK" or "Cancel"?
+A: If the user clicks "OK", prompt() returns the input string (even an empty string "" if nothing is typed).
+If the user clicks "Cancel", prompt() returns null.
+
+Example:
+if (myName = null) {
+  console.log("User cancelled the prompt.");
+} else {
+  console.log("User entered:", myName);
+}
