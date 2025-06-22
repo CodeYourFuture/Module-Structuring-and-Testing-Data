@@ -5,5 +5,5 @@
 //first character of variable name can't be numbers
 
 //fix:
-const tewntyfourHourClockTime = "20:53";
+const twentyfourHourClockTime = "20:53";
 const twelveHourClockTime = "08:53";
