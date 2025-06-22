@@ -1,13 +1,22 @@
-let cardNumber = "4533787178994213";
-const last4Digits = cardNumber.slice(-4);
+// result as a string
+let cardNumber = 4533787178994213;
+const last4Digits = cardNumber.toString().slice(-4);
+console.log(last4Digits); // Output: "4213"
 
-// The last4Digits variable should store the last 4 digits of cardNumber
-// However, the code isn't working
-// Before running the code, make and explain a prediction about why the code won't work
-// Then run the code and see what error it gives.
-// Consider: Why does it give this error? Is this what I predicted? If not, what's different?
-// Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
-//prediction - slice() is a string method
+// result as a number
+const last4DigitsNum = Number(cardNumber.toString().slice(-4));
+console.log(last4DigitsNum); // Output: 4213
 
-console.log(last4Digits);
+
+// the function your asked return string
+function last4DigitsStr(cardNumber) {
+  const last4Digs= cardNumber.toString().slice(-4);
+  return last4Digs;
+}
+
+// the function your asked return number
+function last4DigitsNum(number) {
+  const last4Digs= Number(number.toString().slice(-4));
+  return last4Digs;
+}
