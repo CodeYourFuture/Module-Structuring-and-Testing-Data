@@ -3,19 +3,37 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  const hours = String(time.substring(0, 2).padStart(2, "0"));
-  const min = String(time.substring(3).padStart(2, "0"));
+  if (typeof time !== "string" || !/^\d{1,2}:\d{2}$/.test(time)) {
+    return "Invalid time format";
+  }
+  const hours = Number(time.substring(0, 2));
+  const min = Number(time.substring(3, 5));
 
-  if (Number(hours) > 12) {
-    return `${Number(hours) - 12}:${min} pm`;
-  } else if (Number(hours) === 12) {
-    return `${Number(hours)}:${min} pm`;
-  } else if (Number(hours) === 0) {
-    return `12:${min} am`;
+  if (
+    isNaN(hours) ||
+    isNaN(min) ||
+    hours < 0 ||
+    min < 0 ||
+    hours > 23 ||
+    min > 59
+  ) {
+    return "Invalid time format";
+  }
+
+  const chang_min = String(min).padStart(2, "0");
+
+  if (hours > 12) {
+    return `${String(hours - 12).padStart(2, "0")}:${chang_min} pm`;
+  } else if (hours === 12) {
+    return `${hours}:${chang_min} pm`;
+  } else if (hours === 0) {
+    return `12:${chang_min} am`;
   } else {
-    return `${String(hours)}:${min} am`;
+    return `${String(hours).padStart(2, "0")}:${chang_min} am`;
   }
 }
+
+// console.log(formatAs12HourClock(`23:59`));
 
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
@@ -38,13 +56,13 @@ console.assert(
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
 
-const currentOutput3 = formatAs12HourClock("24:05");
-const targetOutput3 = "12:05 pm";
+const currentOutput3 = formatAs12HourClock("24:15");
+const targetOutput3 = "Invalid time format";
 console.assert(
   currentOutput3 === targetOutput3,
   `current output: ${currentOutput3}, target output: ${targetOutput3}`
 );
 
-console.log(formatAs12HourClock("18:00"));
+// console.log(formatAs12HourClock("18:00"));
 
 // 23:59, 12:01 and 24:01,18:00,
