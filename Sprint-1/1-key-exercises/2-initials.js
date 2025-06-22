@@ -20,11 +20,16 @@ let initials = [firstName, middleName, lastName].map(name => name.charAt(0)).joi
 
 /* 
 There are more efficient ways of implementing the solution, however these concepts haven't been covered yet
-In these scenarios the slice and charAt have been implemented through a map
+In these scenarios the slice and charAt have been implemented through an array and map
 
 let initials = [firstName, middleName, lastName].map(name => name.slice(0,1)).join('')
 let initials = [firstName, middleName, lastName].map(name => name.charAt(0)).join('')
 
+
+Direct use of `charAt`, `slice`, or indexing is simple and readable for a fixed number of names but becomes repetitive and less scalable. 
+Using an array with `map` is concise, scalable, and handles missing names well, making it best for variable-length inputs. 
+Template literals or concatenation with `||` are concise and handle missing names, but are still repetitive for many name parts. 
+For flexibility, the array + map approach is generally preferred.
 */
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
