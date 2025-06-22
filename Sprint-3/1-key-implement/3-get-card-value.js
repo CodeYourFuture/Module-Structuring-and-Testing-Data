@@ -59,7 +59,7 @@ assertEquals(facecards, 10)
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
 
-const ace = getCardValue("A")
+const ace = getCardValue("A♥")
 assertEquals(ace, 11)
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
