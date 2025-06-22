@@ -18,4 +18,4 @@
 function allCapsNoSpace(textInput) {
     return textInput.toUpperCase().replace(/ /g, '_');
 };
-console.log(allCapsNoSpace("joshua on to one"));
+console.log(allCapsNoSpace("take the spaces away from this line"));
