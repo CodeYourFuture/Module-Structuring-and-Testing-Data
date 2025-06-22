@@ -17,7 +17,6 @@ console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 //  =============> write your new code here
 function multiply(a, b) {
   const result = a * b;
-  console.log(result); 
   return result; 
 }
 
