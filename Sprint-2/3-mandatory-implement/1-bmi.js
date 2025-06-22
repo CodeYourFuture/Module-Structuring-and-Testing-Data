@@ -16,8 +16,8 @@
 
 let bmi;
 function calculateBMI(weight, height) {
-    bmi = (weight/height**2)
-    bmi_2dp = bmi.toFixed(2) //this method converts to string
+    bmi = (weight/height**2);
+    bmi_2dp = bmi.toFixed(2); //this method converts to string
     return Number(bmi_2dp) ; //we want to return a number back
     
 }
