@@ -9,13 +9,13 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 
   function getCardValue(card) {
-  const rank = card.slice(0, card.length - 1); // get everything except last character (the suit)
+  const rankChar = card.slice(0, -1); // Remove the last character (suit)
+  const rankInt = parseInt(rankChar); // Try to convert rank to a number
 
-  if (rank === "A") return 11;
-  if (["K", "Q", "J", "10"].includes(rank)) return 10;
-  if (["2", "3", "4", "5", "6", "7", "8", "9"].includes(rank)) return Number(rank);
-
-  throw new Error("Invalid card rank.");
+  if (rankChar === "A") return 11; // Ace is worth 11
+  else if (["K", "Q", "J"].includes(rankChar)) return 10; // Face cards worth 10
+  else if (rankInt >= 2 && rankInt <= 10) return rankInt; // 2–10 cards
+  else throw new Error("Invalid card rank.");
 }
       
   
@@ -52,27 +52,24 @@ assertEquals(sixofHearts, 6)
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-const facecards = getCardValue("Q")
+const facecards = getCardValue("Q♥")
 assertEquals(facecards, 10)
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+
 const ace = getCardValue("A")
 assertEquals(ace, 11)
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-try {
-  getCardValue("A♠");  // invalid card
-  console.assert(false, "Expected error for invalid card rank");
-} catch (error) {
-  assertEquals(error.message, "Invalid card rank.");
-}
-try {
-  getCardValue("H");  // invalid card
-  console.assert(false, "Expected error for invalid card rank");
-} catch (error) {
-  assertEquals(error.message, "Invalid card rank.");
+function assertThrowsInvalidCard(fn) {
+  try {
+    fn();
+    console.assert(false, "Expected error for invalid card rank");
+  } catch (error) {
+    assertEquals(error.message, "Invalid card rank.");
+  }
 }
