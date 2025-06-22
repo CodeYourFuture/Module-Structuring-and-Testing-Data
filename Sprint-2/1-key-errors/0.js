@@ -17,7 +17,7 @@ console.log(capitalise("reza"));
 // =============> write your new code here
 
 function capitalise(str) {
-  let cap_string = `${str[0].toUpperCase()}${str.slice(1)}`;
+  const cap_string = `${str[0].toUpperCase()}${str.slice(1)}`;
   return cap_string;
 };
 
