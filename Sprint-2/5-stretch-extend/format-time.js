@@ -3,16 +3,18 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
-  if (hours === 0) {
-    return "12 am"; // midnight
-  } else if (hours === 12) {
-    return "12 pm"; // noon
-  } else if (hours > 12) {
-    return `${hours - 12} pm`;
-  } else {
-    return `${hours} am`;
+  const [hourStr, minuteStr] = time.split(":");
+  const hours = Number(hourStr);
+
+  let period = hours >= 12 ? "pm" : "am";
+  let displayHour = hours % 12;
+  if (displayHour === 0) {
+    displayHour = 12; // Handles 00:xx (midnight) and 12:xx (noon) 
   }
+  // If you input "08:00" is allowed to pass
+  const paddedHour = hourStr.length === 2 && displayHour < 10 ? `0${displayHour}` : `${displayHour}`;
+
+  return `${paddedHour}:${minuteStr} ${period}`;
 }
 
 const currentOutput = formatAs12HourClock("08:00");
@@ -29,9 +31,9 @@ console.assert(
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
 
-console.assert(formatAs12HourClock("00:00") === "12 am", "Midnight failed");
-console.assert(formatAs12HourClock("01:00") === "1 am", "1am failed");
-console.assert(formatAs12HourClock("08:00") === "8 am", "8am failed");
-console.assert(formatAs12HourClock("12:00") === "12 pm", "Noon failed");
-console.assert(formatAs12HourClock("13:00") === "1 pm", "1pm failed");
-console.assert(formatAs12HourClock("23:00") === "11 pm", "11pm failed");
+console.assert(formatAs12HourClock("00:00") === "12:00 am", "Midnight failed");
+console.assert(formatAs12HourClock("01:00") === "01:00 am", "1am failed");
+console.assert(formatAs12HourClock("08:00") === "08:00 am", "8am failed");
+console.assert(formatAs12HourClock("12:00") === "12:00 pm", "Noon failed");
+console.assert(formatAs12HourClock("13:00") === "01:00 pm", "1pm failed");
+console.assert(formatAs12HourClock("23:00") === "11:00 pm", "11pm failed");
