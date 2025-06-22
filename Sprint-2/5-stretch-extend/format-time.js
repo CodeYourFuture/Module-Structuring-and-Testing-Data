@@ -3,20 +3,13 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  if (typeof time !== "string" || !/^\d{1,2}:\d{2}$/.test(time)) {
+  if (typeof time !== "string" || !/^\d{2}:\d{2}$/.test(time)) {
     return "Invalid time format";
   }
   const hours = Number(time.substring(0, 2));
   const min = Number(time.substring(3, 5));
 
-  if (
-    isNaN(hours) ||
-    isNaN(min) ||
-    hours < 0 ||
-    min < 0 ||
-    hours > 23 ||
-    min > 59
-  ) {
+  if (hours > 23 || min > 59) {
     return "Invalid time format";
   }
 
