@@ -10,7 +10,6 @@
 
 // =============> the return statement is void and not connected with the expression
 // Finally, correct the code to fix the problem
-//  =============> write your new code here
 
 function sum(a, b) {
   return a + b;

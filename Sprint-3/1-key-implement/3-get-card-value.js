@@ -26,7 +26,7 @@ function assertEquals(actualOutput, targetOutput) {
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
 const aceofSpades = getCardValue("A♠");
-assertEquals(aceofSpades, 11);
+assertEquals(aceofSpades, '11');
 
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",

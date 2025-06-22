@@ -11,7 +11,6 @@
 // =============> we have duplicate console and missing return, so our function will only print and not execute
 
 // Finally, correct the code to fix the problem
-//  =============> write your new code here
 
 function multiply(a, b) {
   return a * b;

@@ -17,7 +17,6 @@
 // =============>'decimalNumber' was already declared so we need to remove it and get add the argument in the console rather
 
 // Finally, correct the code to fix the problem
-// =============> write your new code here
 
 function convertToPercentage(decimalNumber) {
   const percentage = `${decimalNumber * 100}%`;

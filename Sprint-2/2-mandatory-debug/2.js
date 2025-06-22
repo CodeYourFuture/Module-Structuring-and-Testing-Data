@@ -18,7 +18,6 @@
 // the function is only working using one variable 
 // =============> this function is not taking any arguments
 // Finally, correct the code to fix the problem
-// =============> write your new code here
 
 function getLastDigit(num) {
   return num.toString().slice(-1);
