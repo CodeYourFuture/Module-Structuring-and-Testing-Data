@@ -21,8 +21,8 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // # The error is coming from line 5, where the replaceAll function is called on priceAfterOneYear.
-// # The error occurs because there is a missing comma in the replaceAll function call.
-// # The error can be fixed by adding the missing comma in the replaceAll function call.
+// # The error occurs because there is a missing separator in the replaceAll function call.
+// # The error can be fixed by adding the missing separator in the replaceAll function call.
 // # The corrected line should be:
 // # priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 

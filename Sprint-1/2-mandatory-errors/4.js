@@ -1,5 +1,5 @@
 const hour12clocktime = "20:53";
-const hour24clocktime = "08:53"; 
+const hour24clocktime = "13:00"; 
 
 const convertTo12HourFormat = (time) => {
   const [hours, minutes] = time.split(":").map(Number);
