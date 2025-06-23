@@ -17,6 +17,7 @@ function capitalise(str) {
   
 
 // =============> write your new code here
+
 function capitlise(str) {
   let capitalise =`${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
