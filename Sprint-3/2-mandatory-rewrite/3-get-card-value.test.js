@@ -28,3 +28,7 @@ test("should return 11 for Aces", () => {
     expect(getCardValue("A♠")).toEqual(11);
 });
 // Case 5: Handle Invalid Cards:
+test("should throw an error for invalid card ranks", () => {
+    expect(() => getCardValue("X♠")).toThrow("Invalid card rank.");
+    expect(() => getCardValue("1♠")).toThrow("Invalid card rank.");
+})
