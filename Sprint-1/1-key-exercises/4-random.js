@@ -9,7 +9,7 @@ console.log(num); // Output: A random number between 1 and 100
 // # num is a random integer between the specified minimum and maximum values (inclusive).
 
 // Try breaking down the expression and using documentation to explain what it means
-// # The expression Math.random() generates a random floating-point number between [0, 1].
+// # The expression Math.random() generates a random floating-point number between [0, 1).
 // # The expression Math.floor() rounds down to the nearest whole number.
 // # The expression Math.random() * (maximum - minimum + 1) scales the random number to the desired range.
 // # The addition of minimum shifts the range to start from the minimum value.
