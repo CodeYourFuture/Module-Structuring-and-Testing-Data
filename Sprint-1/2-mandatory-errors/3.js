@@ -16,7 +16,7 @@
 
 2. After running it shows "TypeError: cardNumber.slice is not a function"
 
-3. Ah I see, my prediction was partially correct that it would not work but my reason and logic were wrong. What's different is that slice() only works on strings or arrays, not numbers. So to fix this, I. have to convert the number to a string first so I can slice it. See below a solution below:
+3. 💔 Ah I see, my prediction was partially correct that it would not work but my reason and logic were wrong. What's different is that slice() only works on strings or arrays, not numbers. So to fix this, I. have to convert the number to a string first so I can slice it. See below a solution below:
 
 */
 
