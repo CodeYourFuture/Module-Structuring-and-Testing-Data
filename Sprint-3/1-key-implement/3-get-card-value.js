@@ -80,5 +80,5 @@ try {
   getCardValue("z♠"); // this should throw an error of "Invalid card rank."
   console.log("Test failed: Expected an error for invalid card rank.");
 } catch(error){
-  assertEquals(error.meessage, "Invalid card rank.");
+  assertEquals(error.message, "Invalid card rank.");
 }
