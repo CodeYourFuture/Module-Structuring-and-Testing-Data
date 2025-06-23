@@ -15,7 +15,8 @@ console.log(result);
 // # Answer: There are 5 variable declarations in this program.
 
 // b) How many function calls are there?
-// # Answer: There are 3 function calls in this program.
+// # Answer: There are 1 function calls in this program. which is `console.log(result)`.
+// *** i thought function call is the one who is found inside a parenthesis, but now i read more detail on function call and understand it well ***
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // # Answer: The expression `movieLength % 60` calculates the remainder when `movieLength` is divided by 60.
