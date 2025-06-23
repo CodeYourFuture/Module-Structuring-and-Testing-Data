@@ -10,5 +10,4 @@ function capitalise(str) {
 }
 
 // =============> write your explanation here
-
 // =============> write your new code here
