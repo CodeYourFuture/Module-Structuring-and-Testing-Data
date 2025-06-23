@@ -12,7 +12,7 @@ console.log(num);
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 //const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;  
 //This line generates a random integer between minimum and maximum, inclusive. Here's a breakdown:
-//Math.random() returns a decimal between 0 (inclusive) and 1 (exclusive).
+//Math.random() returns a decimal in the interval [0, 1), meaning it's 0 (inclusive) up to, but not including, 1 (exclusive).
 //→ MDN: Math.random()
 
 //(maximum - minimum + 1) defines the size of the range, including the maximum.

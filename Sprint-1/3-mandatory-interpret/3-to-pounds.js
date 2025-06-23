@@ -12,8 +12,7 @@ const pounds = paddedPenceNumberString.substring(
 );
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2);
 
 console.log(`£${pounds}.${pence}`);
 
@@ -36,7 +35,7 @@ console.log(`£${pounds}.${pence}`);
 // 4. const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2);
 // This line extracts the pounds part by slicing the string from the beginning up to the last 2 characters.
 // Rationale: In UK currency, the last two digits represent pence, and the digits before that represent pounds.
-// 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
+// 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2);
 // This line extracts the last 2 characters as the pence part.
 // If for any reason it's shorter than 2 digits, it adds a "0" to the end to ensure the format is correct.
 // Purpose: Guarantees a consistent two-digit pence value.

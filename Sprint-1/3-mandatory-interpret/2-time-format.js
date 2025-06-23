@@ -51,7 +51,7 @@ e) What do you think the variable result represents? Can you think of a better n
 */
 // The variable result represents the movie length formatted as a string in hh:mm:ss (hours, minutes, seconds) format.
 // A better name for this variable could be:
-// movieDurationFormatted (or movieTimeFormatted)
+// formattedMovieDuration (or formattedMovieTime).
 // This would make the purpose of the variable more clear when reading the code.
 
 /*
