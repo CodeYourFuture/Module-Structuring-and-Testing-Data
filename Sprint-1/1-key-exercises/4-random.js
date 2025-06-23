@@ -21,7 +21,7 @@ console.log(num); // Output: A random number between 1 and 100
 // # Finally, the minimum value is added to shift the range to the desired minimum value
 
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
-// # Each time the program is run, num will return a different random integer between 1 and 100
+// # Each time the program is run, num will output a different random integer between 1 and 100
 // # You can also try changing the minimum and maximum values to see how it affects the return value.
 // # For example, changing minimum to 10 and maximum to 50 will generate a random integer between 10 and 50
 // # The program will still generate a random integer, but now it will be within the new specified range
