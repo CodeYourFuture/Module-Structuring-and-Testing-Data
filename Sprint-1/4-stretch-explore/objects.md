@@ -20,4 +20,4 @@ What does `console` store?
 
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 // # It means that `console` is an object, and `log` or `assert`
-are methods of that object.
+are methods of that object, and .(dot) is Accesses a property/method inside console.
