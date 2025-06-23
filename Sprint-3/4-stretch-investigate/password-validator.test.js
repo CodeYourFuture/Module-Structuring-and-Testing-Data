@@ -24,12 +24,12 @@ test("password has at least 5 characters", () => {
   const invalidPassword = "Aa#1"; // 4 chars (too short)
 
   // Act (valid case)
-  const validResult = isValidPassword(validPassword, previousPasswords);
+  const validResult = isValidPassword(validPassword, []);
   // Assert
   expect(validResult).toEqual(true);
 
   // Act (invalid case)
-  const invalidResult = isValidPassword(invalidPassword, previousPasswords);
+  const invalidResult = isValidPassword(invalidPassword, []);
   // Assert
   expect(invalidResult).toEqual(false);
 });
@@ -65,7 +65,7 @@ test("password has at least one English lowercase letter (a-z)", () => {
 });
 
 // Test 4: Number requirement
-test("password has at least one number (0-9)", () => {
+test("password has at least one digit (0-9)", () => {
   // Arrange
   const validPassword = "Aa#123"; // Contains '1'
   const invalidPassword = "Aa#abc"; // No numbers
@@ -108,6 +108,3 @@ test("password must not be in previous passwords list", () => {
   expect(newResult).toEqual(true);
   expect(oldResult).toEqual(false);
 });
-
-  
-

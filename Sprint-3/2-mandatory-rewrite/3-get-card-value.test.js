@@ -1,9 +1,9 @@
 const getCardValue = require("./3-get-card-value");
 
 test("should return 11 for Ace of Spades", () => {
-    const aceofSpades = getCardValue("A♠");
-    expect(aceofSpades).toEqual(11);
-    });
+  const aceofSpades = getCardValue("A♠");
+  expect(aceofSpades).toEqual(11);
+});
 
 // Case 2: Handle Number Cards (2-10):
 test("returns the numeric value for number cards (2-10)", function () {
@@ -23,7 +23,7 @@ test("returns 11 for Ace", function () {
 });
 // Case 5: Handle Invalid Cards:
 test("throws error for invalid card ranks", function () {
-  expect(getCardValue("X♠")).toBe("Invalid card rank");
-  expect(getCardValue("11♣")).toBe("Invalid card rank");
-  expect(getCardValue("#♦")).toBe("Invalid card rank");
-}); 
+  expect(() => getCardValue("X♠")).toThrow("Invalid card rank");
+  expect(() => getCardValue("11♣")).toThrow("Invalid card rank");
+  expect(() => getCardValue("#♦")).toThrow("Invalid card rank");
+});

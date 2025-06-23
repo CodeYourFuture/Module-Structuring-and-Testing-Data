@@ -8,6 +8,6 @@ function getCardValue(card) {
 
   if (["10", "J", "Q", "K"].includes(rank)) return 10;
 
-  return "Invalid card rank";
+  throw new Error("Invalid card rank");
 }
 module.exports = getCardValue;
