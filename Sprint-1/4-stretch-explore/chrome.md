@@ -18,8 +18,8 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
     A popup alert box appears showing the message Hello world! with the text input field to enter a value
 What is the return value of `prompt`?
-    If I enter value then myName will return this value.
-    If I click cancel then myName will return this null.
-    If I click ok without entering value then myName will return "".
+    If I entered a value (and clicked OK), then prompt() would return the value.
+    If I click cancel, the prompt() would return null.
+    If I click ok without entering value then prompt() will return "".
 
 
