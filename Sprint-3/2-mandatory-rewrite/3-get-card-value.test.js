@@ -21,3 +21,7 @@ test("should return 11 as Ace as worth 11 points", () => {
     expect(aceCard).toEqual(11);
 })
 // Case 5: Handle Invalid Cards:
+test("should return invalid card rank, if the number is unrecognized", () => {
+    const invalidCrd = getCardValue("12♠")
+    expect(invalidCrd).toEqual("Invalid card rank.");
+})
