@@ -12,9 +12,12 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-        /*  There are 2 functions called which are 'Number' and '.replaceAll'
-            carPrice = Number(carPrice.replaceAll(",", ""));
-            priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+        /*  There are 5 functions call:
+            replaceAll(",", ""))   line 4
+            Number(.....)          line 4
+            replaceAll(",", ""))   line 5
+            Number(.....)          line 5
+            console.log(....)      line 10
         */
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
@@ -32,5 +35,5 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
         /*  The expression  Number(carPrice.replaceAll(",","")) is taking value of the carPrice variable,
-            and replacing the commas by space then convert this value to be numbers.
+            and removing the commas.
         */
