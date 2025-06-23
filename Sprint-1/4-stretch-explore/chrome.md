@@ -20,6 +20,6 @@ What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
     If I entered a value (and clicked OK), then prompt() would return the value.
     If I click cancel, the prompt() would return null.
-    If I click ok without entering value then prompt() will return "".
+    If I click ok without entering value then prompt() will return ""
 
 
