@@ -19,4 +19,4 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 // # It creates a popup input textbox and accept an input.
 What is the return value of `prompt`?
-// # The return value is the input value of the user.
+// # The return value is the input value from the user.
