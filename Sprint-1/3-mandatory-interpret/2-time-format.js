@@ -25,7 +25,7 @@ console.log(result);
 //Answer: it represents the duration of the movie in minutes without the 24 seconds remainder
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//Answer: it represents the movie duration in hh:mm:ss , better name 'movie duration'
+//Answer: it represents the movie duration in hh:mm:ss , better name 'movieDuration'
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 //Answer:can't check for all values but it did work for the values I used
