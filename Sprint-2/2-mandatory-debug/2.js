@@ -21,6 +21,7 @@
 // The last digit of 806 is 3
 
 // =============> write the output here
+// The output is always '3'
 // Explain why the output is the way it is
 // =============> write your explanation here
 // The output is always '3' because the function `getLastDigit` is using a global variable `num` which is set to 103
