@@ -1,4 +1,5 @@
-// Predict and explain first:--// The multiply function logs the product of a and b but does not return anything.So the console.log will print:
+// Predict and explain first:--\
+// The multiply function logs the product of a and b but does not return anything.So the console.log will print:
 //The result of multiplying 10 and 32 is undefined
 
 function multiply(a, b) {
