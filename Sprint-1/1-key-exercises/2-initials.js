@@ -2,7 +2,7 @@ let firstName = "Creola";
 let middleName = "Katherine";
 let lastName = "Johnson";
 // The code above declares these three variables: firstName, middleName, and lastName.
-// Each variable is assigned a string value representing aeach lement in the name.
+// Each variable is assigned a string value representing each element in the name.
 // The task is to create a new variable take initials that combines the first character from each of these strings.
 // The initials variable should contain the first letter of each name, resulting in the string "CKJ".
 
