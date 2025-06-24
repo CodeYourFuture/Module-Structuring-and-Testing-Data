@@ -11,8 +11,11 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
+This displays a popup box (called an "alert dialog") in the browser with the message: 'Hello world!'
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+A popup input box appears asking: "What is your name?"
 What is the return value of `prompt`?
+surafel
