@@ -18,7 +18,7 @@ function getAngleType(angle) {
 
 }
 
-console.log(getAngleType(0)); // Right angle
+console.log(getAngleType(-90)); // Right angle
 
 
 
