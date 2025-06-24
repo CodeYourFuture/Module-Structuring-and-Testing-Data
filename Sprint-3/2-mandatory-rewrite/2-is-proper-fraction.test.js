@@ -2,17 +2,12 @@ const isProperFraction = require("./2-is-proper-fraction");
 
 test("should return true for a proper fraction", () => {
   expect(isProperFraction(2, 3)).toEqual(true);
-  expect(isProperFraction(1, 2)).toEqual(true);
 });
 
 // Case 2: Identify Improper Fractions:
-test("should return false for an improper fraction", () => {
-  expect(isProperFraction(5, 3)).toEqual(false);
-  expect(isProperFraction(3, 3)).toEqual(false);
-});
-
 
 // Case 3: Identify Negative Fractions:
+<<<<<<< HEAD
 test("should return false for a negative fraction", () => {
   expect(isProperFraction(-2, 3)).toEqual(false);
   expect(isProperFraction(2, -3)).toEqual(false);
@@ -21,4 +16,7 @@ test("should return false for a negative fraction", () => {
 
 
 
+=======
+>>>>>>> parent of 01079c2 (Update Sprint-3\2\2-is-proper-fraction.js)
 
+// Case 4: Identify Equal Numerator and Denominator:
