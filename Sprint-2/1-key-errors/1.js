@@ -4,7 +4,7 @@
 // =============> write your prediction here
 
 // Try playing computer with the example to work out what is going on
-
+/*
 function convertToPercentage(decimalNumber) {
   const decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
@@ -13,7 +13,7 @@ function convertToPercentage(decimalNumber) {
 }
 
 console.log(decimalNumber);
-
+*/
 // =============> write your explanation here
 // The error will occur because the variable `decimalNumber` is declared twice, once as a parameter and once inside the function.
 // The second declaration will cause a syntax error because you cannot redeclare a parameter in the same scope.
@@ -25,3 +25,4 @@ function convertToPercentage(decimalNumber) {
   const percentage = `${decimalNumber * 100}%`;
   return percentage;
 }
+console.log(convertToPercentage(0.2)); 
