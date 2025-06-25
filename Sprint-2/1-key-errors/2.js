@@ -23,7 +23,7 @@ function square(3) {
 
 function square(number) {
   const result = number * number;
-  return result; // ← semicolon instead of colon
+  return result; 
 }
 
 console.log(square(3));
