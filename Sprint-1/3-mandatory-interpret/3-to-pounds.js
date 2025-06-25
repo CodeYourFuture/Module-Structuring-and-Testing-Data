@@ -12,8 +12,8 @@ const pounds = paddedPenceNumberString.substring(
 );
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2);
+  // .padEnd(2, "0");
 
 console.log(`£${pounds}.${pence}`);
 
