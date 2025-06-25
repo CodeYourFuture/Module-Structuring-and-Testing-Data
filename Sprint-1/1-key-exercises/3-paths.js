@@ -20,9 +20,10 @@ console.log(`The base part of ${filePath} is ${base}`);
 
 const dir = filePath.slice(0,lastSlashIndex+1);
 console.log(`The dir part is ${dir}`)
+//Yes, the substring assigned to dir does include the trailing slash and matches what you’d typically expect as a full directory path.
 
-const LastDotIndex = filePath.lastIndexOf(".") //looks for the last dot in the string
-const ext = filePath.slice(LastDotIndex+1);
+const lastDotIndex = filePath.lastIndexOf(".") //looks for the last dot in the string
+const ext = filePath.slice(lastDotIndex+1);
 console.log(`The ext is ${ext}`)
 
 // https://www.google.com/search?q=slice+mdn
