@@ -11,7 +11,7 @@ const countChar = require("./count");
 // Then it should correctly count overlapping occurrences of char (e.g., 'a' appears five times in 'aaaaa').
 
 test("should count multiple occurrences of a character", () => {
-  const str = "aaaaa";
+  const str =  "aaaaa";
   const char = "a";
   const count = countChar(str, char);
   expect(count).toEqual(5);
@@ -22,3 +22,11 @@ test("should count multiple occurrences of a character", () => {
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+test(
+  "Should return 0 indicating that no occurrences of the char were found ", () =>{
+    const str = "Hello"
+    const char = "a"
+    const count = countChar(str,char)
+    expect(count).toEqual(0)
+  }
+);
