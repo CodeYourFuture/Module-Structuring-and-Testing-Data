@@ -11,7 +11,6 @@ function formatTimeDisplay(seconds) {
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
 
-console.log(formatTimeDisplay(61)); //13313 output 03:41:53
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
 
@@ -19,23 +18,17 @@ console.log(formatTimeDisplay(61)); //13313 output 03:41:53
 
 // a) When formatTimeDisplay is called how many times will pad be called?
 // =============> write your answer here
-// 3
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
-// 0
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
-// 00
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-// The answer is 01 because remainingSeconds value is 1 and this value is input parameter of last call of pad function.
-
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-// In this case, pad function return 01. Pad function converts num to string format then converts to two digits.
