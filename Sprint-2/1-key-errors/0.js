@@ -21,4 +21,4 @@ function capitalise(str) {
   return str;
 }
 
-console.log(capitalise("wheew! Done it without template literals :)")); // Should print "Wheew! Done it without template literals :)""
+console.log(capitalise("wheew! Done it without template literals :)")); // Should print "Wheew! Done it without template literals :)"
