@@ -12,7 +12,7 @@ const getOrdinalNumber = require("./get-ordinal-number");
     expect(getOrdinalNumber(1)).toEqual("1st");
     });
 
-    test("should return '3rd' for 3", () => {
+    test("should return '3rd' for 3rd", () => {
     expect(getOrdinalNumber(3)).toEqual("3rd");
     });
 
