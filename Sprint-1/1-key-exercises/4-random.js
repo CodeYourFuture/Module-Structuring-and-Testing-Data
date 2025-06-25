@@ -17,6 +17,11 @@ console.log(num)
 //The expression(they evaluate to a single value) (maximum - minimum +1) evaluates to 100 always.(100-1+1). 
 
 
+/*Generates a random integer between 1 and 100 (inclusive).
+ Math.random() returns [0,1), multiplied by (max - min + 1) → 100
+ Math.floor() rounds down to the nearest integer*/
+
+
 // This first thing evaluated is the expression (maximum-minimum +1) which gives us the range of 100.
 //The second step is that Math.random generate a decimal number btw 0 (included)and 1(excluded)
 //This decimal number is then multiplied by range e.g 100 in this case. To this number then Math.floor is applied which
