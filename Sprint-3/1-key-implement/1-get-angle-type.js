@@ -8,22 +8,16 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-  if (angle === 90) {
-    return "Right angle";
-  } else if (angle === 45) {
-    return "Acute angle";
-  } else if (angle === 120) {
-    return "Obtuse angle";
-  } else if (angle === 180) {
-    return "Straight angle";
-  } else if (angle >= 181 && angle <= 359) {
-    return "Reflex angle";
-  } else {
-    return "Revolution";
-  }
+  if (angle === 90) return "Right angle";
+  if (angle < 90) return "Acute angle";
+  if (angle > 90 && angle < 180) return "Obtuse angle";
+  if (angle === 180) return "Straight angle";
+  if (angle > 180 && angle < 360) return "Reflex angle";
 
-  // read to the end, complete line 36, then pass your test here
+  return "Revolution";
 }
+
+// read to the end, complete line 36, then pass your test here
 
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
