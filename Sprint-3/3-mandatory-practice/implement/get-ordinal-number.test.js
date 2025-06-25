@@ -11,3 +11,21 @@ const getOrdinalNumber = require("./get-ordinal-number");
 test("should return '1st' for 1", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
     });
+test("should return '2nd' for 2", () => {
+    expect(getOrdinalNumber(2)).toEqual("2nd");
+    });
+test("should return '3rd' for 3", () => {
+    expect(getOrdinalNumber(3)).toEqual("3rd");
+    });
+test("should return 'th' for 11", () => {
+    expect(getOrdinalNumber(11)).toEqual("th");
+    });
+test("should return 'th' for 12", () => {
+    expect(getOrdinalNumber(12)).toEqual("th");
+    });
+test("should return 'th' for 13", () => {
+    expect(getOrdinalNumber(13)).toEqual("th");
+    });
+test("should return 'th' for 4", () => {
+    expect(getOrdinalNumber(4)).toEqual("th");
+    });
