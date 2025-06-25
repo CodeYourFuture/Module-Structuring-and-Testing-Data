@@ -5,15 +5,15 @@ const penceStringWithoutTrailingP = penceString.substring(
   penceString.length - 1); // removes p
 
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); //take lengthe to three indexes
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); //take length to three indexes
 const pounds = paddedPenceNumberString.substring(
   0,                                                     //get 3
   paddedPenceNumberString.length - 2  //takes 
 );
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2);
+  
 
 console.log(`£${pounds}.${pence}`);
 
