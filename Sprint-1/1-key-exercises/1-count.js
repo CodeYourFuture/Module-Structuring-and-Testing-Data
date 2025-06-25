@@ -9,7 +9,7 @@ count = count + 1;
 
 //line 3 has two parts, the right side is (count+1). Javascript will evaluate this expression first.
 //it will look up the current value of the count variable which is assigned as 0 and add 1 to 
-//it. This will update the count to 1.
+//it. This will update the count to 1.The term describing it is called incrementing.
 
 
 // The left side of the expression takes the result from right hand side and assign the value to
