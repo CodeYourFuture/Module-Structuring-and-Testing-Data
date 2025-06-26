@@ -20,5 +20,6 @@ What is the return value of `prompt`?
 I wrote this code in Console.
 let myName = prompt("What is your name?");
 alert("Hello "+myName);
-Then, Google asked me my name and said Hello Hakan
+Then, browser asked me my name and said Hello Hakan
 prompt is a function for interaction with user and return the value of user entry.
+When the user clicks Cancel, the prompt() function returns null.

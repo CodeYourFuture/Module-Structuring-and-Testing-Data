@@ -9,4 +9,5 @@ In line 3, there is an expression. It performs 2 different action.
     Once is assignment a new value to variable of count. = is an operator which is used for assignment. 
     Second is count + 1 means add one to existing value.
 The meaning of line 3 is "Assign count plus 1 to count variable." so new value is 0+1=1
+The one-word programming term that describes the operation on line 3 is "increment".
 */

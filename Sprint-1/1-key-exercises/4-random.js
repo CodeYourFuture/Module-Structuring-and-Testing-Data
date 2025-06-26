@@ -8,5 +8,5 @@ console.log(num);
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
-// There are two variable which are min and max in this file. in line 4 there is an expression
-// to create a number randomly between minimum and maximum.
+// Math.random() generates a random decimal between 0 (inclusive) and 1 (exclusive).
+// Math.random() * (maximum - minimum + 1) gives a number between 0 and just under 100.

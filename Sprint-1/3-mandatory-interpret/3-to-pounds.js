@@ -14,8 +14,8 @@ const pounds = paddedPenceNumberString.substring(
 );
 console.log(pounds);
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2);
+  //.padEnd(2, "0");
 
 console.log(pence);
 console.log(`£${pounds}.${pence}`);
@@ -31,7 +31,9 @@ console.log(`£${pounds}.${pence}`);
 /* 2. in penceStringWithoutTrailingP assignment, last character of penceString which is 'p' is removed
    3. in paddedPenceNumberString assignment, the value completed to 3 digit if the length is shorter than three digit
    4. in pounds assignment, pennies part of penceString is removed.
-   5. in pence assignment, pounds part of penceString is removed and it is completed one digit if the length is shorter than three digit
+   5. In the pence assignment, the pounds part is removed from penceString. If the remaining string is shorter than
+      three digits, leading zeros are added. When the input is less than three digits, it means there is no pounds part, 
+      so the pounds value should be 0.
    6. in console.log function, pounds and pence are concatenated and converted price format
 
 */

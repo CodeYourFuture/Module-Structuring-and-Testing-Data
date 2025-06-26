@@ -16,7 +16,7 @@ console.log(`The percentage change is ${percentageChange}`);
     //2.number -- Line 4 and Line 5
     //3.Console.Log -- Line 10
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-   //The error is in the line 5. one comma is missing.
+   //The error is in the line 5. One comma is missing between the arguments.
 
 // c) Identify all the lines that are variable reassignment statements
     //Reassignment exists in line 4 and line 5. 
@@ -29,4 +29,5 @@ console.log(`The percentage change is ${percentageChange}`);
     //line 8 : percentageChange
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
-//in this expression, the purpose is converting format to number and removing commas in the string. It is needed to make mathematical calculation.
+//The purpose of this expression is to first remove the commas from the string and then convert it to a number, 
+// which is necessary for performing mathematical calculations.

@@ -33,8 +33,9 @@ In this line, remainder seconds reduced from total duration and it provides minu
 
 e) What do you think the variable result represents? Can you think of a better name for this variable?
 result variable represents duration in time format. In daily life, people can understand duration in "hh:mm:ss" format easily.
+A more descriptive name could be: formattedDuration, formattedTime,movieDurationFormatted,movieLengthFormatted.
+
 
 f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-It doesn't work for all values, I tried fifteen minutes and it result was 0:0:15, so it is not proper time format
-
+It doesn't work for all values, I tried fifteen minutes and it result was 0:0:15, so it is not proper time format.
 */
