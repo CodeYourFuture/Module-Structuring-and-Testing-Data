@@ -80,5 +80,3 @@ try {
 } catch (e) {
   assertEquals(e.message, "Invalid card rank");
 }
-
-console.log("All tests passed!");
