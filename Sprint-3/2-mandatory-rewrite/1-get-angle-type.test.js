@@ -19,5 +19,5 @@ test("should indentify straight angle (180°)", () => {
 });
 
 test("should indentify reflex angle (greater than 180°)", () => {
-  expect(getAngleType(260)).toEqual("Reflex Angle");
+  expect(getAngleType(260)).toEqual("Reflex angle");
 });
