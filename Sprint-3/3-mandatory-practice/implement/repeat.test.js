@@ -44,5 +44,7 @@ test("should return an empty string ", () => {
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 
 test("throws an error for negative count", () => {
-  expect(() => repeat("hello", -1)).toThrow("Count must be a positive integer");
+  expect(() => repeat("hello", -1)).toThrow(
+    "count must be a non-negative integer"
+  );
 });
