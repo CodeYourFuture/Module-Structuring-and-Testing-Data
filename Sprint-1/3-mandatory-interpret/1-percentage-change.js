@@ -21,23 +21,18 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 
-
-
-// ANSWER : 
+// ANSWER :
 
 // A: totally 7 times:
-// 3 times replaceAll()  ,  3 times Number() , 1 time console.log 
+// 2 times replaceAll()  ,  2 times Number() , 1 time console.log
 
+// B: Missing comma between 2 arguments of replaceAll () function
 
-// B: Missing comma between 2 arguments of replaceAll () function 
-
-
-// C: 
+// C:
 // carPrice = Number(carPrice.replaceAll(",", ""));
 // priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
-
-// D: 
+// D:
 // let carPrice = "10,000";
 // let priceAfterOneYear = "8,543";
 // const priceDifference = carPrice - priceAfterOneYear;

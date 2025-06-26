@@ -24,10 +24,7 @@ console.log(result);
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 
-
-
-
-// ANSWER 
+// ANSWER
 // A : Totally 6
 
 // B: Just 1 , console.log(result);
@@ -36,6 +33,6 @@ console.log(result);
 
 // D: How many minutes are in this movie.
 
-// E: It shows the time of movie in this style :--->   HH:MM:SS
+// E: It shows the time of movie in this style :--->   HH:MM:SS   Name :-->  formattedTime/ formattedMovieLength
 
 //F: Yes it works, I tried different movie length in seconds.
