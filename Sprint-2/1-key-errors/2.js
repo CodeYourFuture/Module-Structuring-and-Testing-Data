@@ -4,17 +4,21 @@
 // this function should square any number but instead we're going to get an error
 
 // =============> write your prediction of the error here
+SyntaxError due to wrong variable
 
 function square(3) {
     return num * num;
 }
 
 // =============> write the error message here
-
+SyntaxError: Unexpected token 
 // =============> explain this error message here
-
+Function parameters must be valid identifiers names like num, not literal values.
 // Finally, correct the code to fix the problem
-
+function square(num) 
 // =============> write your new code here
-
+function square(num) {
+  return num * num;
+}
+console.log(square(3)); // 
 
