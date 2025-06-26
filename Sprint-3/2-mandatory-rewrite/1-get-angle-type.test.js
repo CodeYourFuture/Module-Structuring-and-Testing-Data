@@ -15,7 +15,7 @@ test("should indentify obtuse angle (greater than 90°)", () => {
 });
 
 test("should indentify straight angle (180°)", () => {
-  expect(getAngleType(120)).toEqual("Straight angle");
+  expect(getAngleType(180)).toEqual("Straight angle");
 });
 
 test("should indentify reflex angle (greater than 180°)", () => {
