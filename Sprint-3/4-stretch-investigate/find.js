@@ -20,6 +20,13 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+// In this example, there is a while loop and it works till to check all letters and it will increase one by one
+// because index++ increases index value.
+// when it finds first index, loop won't continue because of return.
 // b) What is the if statement used to check
+// This if statement compare char parameter and character of str at the specific index.
 // c) Why is index++ being used?
+// This row is written to use increase index and compare all letters in the str.
 // d) What is the condition index < str.length used for?
+// str.length gives the number of letters in str and while loop should continue till to check all letters
+// except finding first index of the match.
