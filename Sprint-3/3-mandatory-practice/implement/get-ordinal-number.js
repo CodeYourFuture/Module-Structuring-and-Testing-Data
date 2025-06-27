@@ -34,3 +34,5 @@ console.log(getOrdinalNumber(21));
 console.log(getOrdinalNumber(22));
 console.log(getOrdinalNumber(23));
 console.log(getOrdinalNumber(24));
+
+module.exports = getOrdinalNumber;
