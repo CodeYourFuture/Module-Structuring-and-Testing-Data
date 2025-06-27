@@ -8,16 +8,20 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-test("should return '1st' for 1", () => {
+test("should return 'st' for ordinal numbers ending in 1 like (1, 21, 31..)", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
+    expect(getOrdinalNumber(21)).toEqual("21st");
+    expect(getOrdinalNumber(31)).toEqual("31st")
     });
 
 // Case 2: Identify the ordinal number for 2
 // When the number is 2,
 // The function should then return "2nd".
 
-test("Should return `2nd` for 2", () => {
+test("Should return `nd` for ordinal numbers ending in 2 like (2, 22, 32)", () => {
     expect(getOrdinalNumber(2)).toEqual("2nd");
+    expect(getOrdinalNumber(22)).toEqual("22nd");
+    expect(getOrdinalNumber(32)).toEqual("32nd");
 });
 
 // Case 3: Identify the ordinal number for 3
@@ -26,4 +30,6 @@ test("Should return `2nd` for 2", () => {
 
 test("Should return `3rd` for 3", () => {
     expect(getOrdinalNumber(3)).toEqual("3rd");
+    expect(getOrdinalNumber(23)).toEqual("23rd");
+    expect(getOrdinalNumber(33)).toEqual("33rd");
 });
