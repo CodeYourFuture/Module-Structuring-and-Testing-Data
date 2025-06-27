@@ -73,35 +73,32 @@ assertEquals(largeNumerator, true); // 1/1000 is a proper fraction
 const largeDenominator = isProperFraction(1000, 1);
 assertEquals(largeDenominator, false); // 1000/1 is not a proper
 
+// [Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
+// Assertion failed: Expected undefined to equal false
 
+// [Done] exited with code=0 in 0.859 seconds
 
-[Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
-Assertion failed: Expected undefined to equal false
+// [Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
+// Assertion failed: Expected undefined to equal false
 
-[Done] exited with code=0 in 0.859 seconds
+// [Done] exited with code=0 in 0.054 seconds
 
-[Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
-Assertion failed: Expected undefined to equal false
+// [Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
+// Assertion failed: Expected undefined to equal false
 
-[Done] exited with code=0 in 0.054 seconds
+// [Done] exited with code=0 in 0.052 seconds
 
-[Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
-Assertion failed: Expected undefined to equal false
+// [Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
+// Assertion failed: Expected undefined to equal false
 
-[Done] exited with code=0 in 0.052 seconds
+// [Done] exited with code=0 in 0.054 seconds
 
-[Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
-Assertion failed: Expected undefined to equal false
+// [Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
+// Assertion failed: Expected undefined to equal false
 
-[Done] exited with code=0 in 0.054 seconds
+// [Done] exited with code=0 in 0.053 seconds
 
-[Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
-Assertion failed: Expected undefined to equal false
+// [Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
+// Assertion failed: Assertion failed: false !== true. Check your function isProperFraction. You may need to fix your code or the test case. If you think your code is correct, check the test case. If the test case is correct, check your function. Expected false to equal true
 
-[Done] exited with code=0 in 0.053 seconds
-
-[Running] node "/Users/seddiqazam/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-3/1-key-implement/2-is-proper-fraction.js"
-Assertion failed: Assertion failed: false !== true. Check your function isProperFraction. You may need to fix your code or the test case. If you think your code is correct, check the test case. If the test case is correct, check your function. Expected false to equal true
-
-[Done] exited with code=0 in 0.035 seconds
-
+// [Done] exited with code=0 in 0.035 seconds
