@@ -24,15 +24,4 @@ function getOrdinalNumber(num) {
   return num + "th";
 }
 
-console.log(getOrdinalNumber(1));
-console.log(getOrdinalNumber(2));
-console.log(getOrdinalNumber(3));
-console.log(getOrdinalNumber(11));
-console.log(getOrdinalNumber(12));
-console.log(getOrdinalNumber(13));
-console.log(getOrdinalNumber(21));
-console.log(getOrdinalNumber(22));
-console.log(getOrdinalNumber(23));
-console.log(getOrdinalNumber(24));
-
 module.exports = getOrdinalNumber;
