@@ -3,7 +3,7 @@ function getOrdinalNumber(num) {
  const lastDigit= num % 10; // gets the last digit to decide if its going to be "St, Nd, Rd"
 
  // handles special cases "11, 12 ,13" to always end in "Th".
-  if(lastTwoDigits === 11 || lastTwoDigits === 11 || lastTwoDigits === 13){
+  if(lastTwoDigits === 11 || lastTwoDigits === 12 || lastTwoDigits === 13){
     return num + "th";
   }
 
