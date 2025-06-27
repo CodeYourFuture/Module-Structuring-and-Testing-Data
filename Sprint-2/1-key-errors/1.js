@@ -15,6 +15,16 @@ function convertToPercentage(decimalNumber) {
 console.log(decimalNumber);
 
 // =============> write your explanation here
+// decimalNumber is already a function parameter, so it's already declared in the function's scope.
+
+
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
+function convertToPercentage(decimalNumber) {
+  const percentage = `${decimalNumber * 100}%`;
+
+  return percentage;
+}
+
+console.log(50);
