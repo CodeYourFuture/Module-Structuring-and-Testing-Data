@@ -4,24 +4,24 @@ function getOrdinalNumber(num) {
 
  // handles special cases "11, 12 ,13" to always end in "Th".
   if(lastTwoDigits === 11 || lastTwoDigits === 11 || lastTwoDigits === 13){
-    return num + "TH";
+    return num + "th";
   }
 
  // will return "St" if the number ends in 1.
   if (lastDigit === 1){
-    return num + "ST";
+    return num + "st";
   }
 // will return "Nd" if the number ends in 2.
   if (lastDigit === 2){
-    return num + "ND";
+    return num + "nd";
   }
 // will return "Rd" if the number ends in 3.
   if (lastDigit === 3){
-    return num + "RD";
+    return num + "rd";
   }
 
 // will return all numbers that end in 4, 5, 6, 7, 8, 9 with "Th".
-  return num + "TH";
+  return num + "th";
 }
 
 console.log(getOrdinalNumber(1));
