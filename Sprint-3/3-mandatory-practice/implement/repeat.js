@@ -1,5 +1,9 @@
-function repeat(times = 1) {
-    return "hello".repeat(times); // Repeat the string "hello" the specified number of times
+function repeat(str, count) {
+    if (count < 0) {
+        throw new Error("Count must be a non-negative integer"); // Handle negative count
+    }
+    return str.repeat(count); // Repeat the string "hello" the specified number of times
+
     
 }
 
@@ -10,6 +14,6 @@ function repeat(times = 1) {
 // If times is 0, it should return an empty string.
 // If times is negative, it should return an empty string as well. 
 // If times is not provided, it should default to 1, returning "hello".
-console.log(repeat(3)); // "hellohellohello"
+//console.log(repeat(9)); // "hellohellohello"
 
 module.exports = repeat;
