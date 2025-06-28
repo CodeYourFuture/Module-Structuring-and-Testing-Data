@@ -17,8 +17,9 @@ function repeat(str, count) {
   }
   return str.repeat(count); // if the count is above two it repeat "count" number of times.
 }
-console.log(repeat("hello", 0)); // expect ""
+/* console.log(repeat("hello", 0)); // expect ""
 console.log(repeat("hello", 1)); // expect string to be called
 console.log(repeat("hello", 3));// expect string to be repeated 3 times.
 console.log(repeat("hello", -1)); // expect string to throw error for being a negative number
+*/
 module.exports = repeat;
