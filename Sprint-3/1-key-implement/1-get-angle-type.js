@@ -8,11 +8,13 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-   if (angle === 90) return "Right angle";
-   if (angle > 0 && angle < 90) return "Acute angle";
+  if (angle === 90) return "Right angle";
+  if (angle > 0 && angle < 90) return "Acute angle";
   if (angle > 90 && angle < 180) return "Obtuse angle";
   if (angle === 180) return "Straight angle";
   if (angle > 180 && angle < 360) return "Reflex angle";
+  // If the angle is not in any of the above categories, we can return a default value
+  return "Unknown angle type";
    // read to the end, complete line 36, then pass your test here
 }
 
