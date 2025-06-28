@@ -19,7 +19,7 @@ console.log(`The base part of ${filePath} is ${base}`);
 // Get everthing before base
 const dir = filePath.slice(0,lastSlashIndex);
 
-//Get everything after the last dot in the base
+//Get everything after the last dot in the base:
 const lastDotIndex = base.lastIndexOf(".");
 const ext = base.slice(lastSlashIndex+1);
 
