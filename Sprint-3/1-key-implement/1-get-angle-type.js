@@ -54,11 +54,11 @@ assertEquals(obtuse,"Obtuse angle");
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
-const Straight  = getAngleType(180); 
-assertEquals(Straight,"Straight angle"); 
+ const Straight  = getAngleType(180); 
+ assertEquals(Straight,"Straight angle"); 
 
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
-const Reflex = getAngleType(200); 
-assertEquals(Reflex,"Reflex angle"); 
+ const Reflex = getAngleType(200); 
+ assertEquals(Reflex,"Reflex angle"); 
