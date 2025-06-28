@@ -11,5 +11,14 @@ function capitalise(str) {
 }
 
 // =============> the error message indicate that 'str'has already been declared. This is true as 'str' was first declared/introduced as a parameter for
-// the function capitalise. Therefore, you can re-declare the same 'str' within the same scope as a variable as seen in lin 9. 
+// the function capitalise. Therefore, you can NOT re-declare the same 'str' within the same scope as a variable as seen in lin 9. 
  capitalise("hassan");
+
+ //Below is a fixed version of the code:
+
+ function capitalise(str) {
+  let capitalised_initial = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return capitalised_initial;
+}
+
+console.log( capitalise("hassan"));
