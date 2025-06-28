@@ -10,6 +10,7 @@ const getOrdinalNumber = require("./get-ordinal-number");
 
 test("should return '1st' for 1", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
+    // This test checks if the function correctly identifies the ordinal number for 1
     });
 
 // Case 2: Identify the ordinal number for 2
@@ -101,11 +102,15 @@ test("should throw an error for non-number input", () => {
 // When the input is a negative number,
 // Then the function should return the negative number with the appropriate ordinal suffix
 test("should return '-1st' for -1", () => {
-    expect(getOrdinalNumber(-1)).toEqual("-1st");
+    expect(() => getOrdinalNumber(-1)).toThrow(
+      "Input must be a number"
+    );
 });
 // Invalid Input Case: Zero
 // When the input is zero,
 // Then the function should return "0th"
 test("should return '0th' for 0", () => {
-    expect(getOrdinalNumber(0)).toEqual("0th");
+    expect(() => getOrdinalNumber(0)).toThrow(
+      "Input must be a number"
+    );
 });

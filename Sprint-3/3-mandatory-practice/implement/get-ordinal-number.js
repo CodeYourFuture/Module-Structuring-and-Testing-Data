@@ -1,22 +1,19 @@
-function getOrdinalNumber(num) { // Function to convert a number to its ordinal representation
+function getOrdinalNumber(num) {
+  // Function to convert a number to its ordinal representation
   if (num <= 0 || !Number.isInteger(num)) {
     throw new Error("Input must be a number"); // Validate input: must be a positive integer
-  } 
+  }
 
-  const lastDigit = num % 10; // Get the last digit of the number
   const lastTwoDigits = num % 100; // Get the last two digits of the number
-
   if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
     return num + `th`; // Special case for 11, 12, and 13
   }
 
-  const suffix = 
-    lastDigit === 0 ? 'th' : // 0 always gets 'th'
-    lastDigit === 1 ? 'st' :
-    lastDigit === 2 ? 'nd' :
-    lastDigit === 3 ? 'rd' :
-    'th'; // Determine the appropriate suffix based on the last digit
-  return num + suffix; // Return the number concatenated with its ordinal suffix
+  const lastDigit = num % 10; // Get the last digit of the number
+
+  const suffixes = { [1]: "st", [2]: "nd", [3]: "rd" }; // Define suffixes for 1st, 2nd, and 3rd
+  const suffix = suffixes[lastDigit] || "th"; // Default to "th
+  return num + suffix; // Return the number with its ordinal suffix
 }
 
 // Given a number num,
