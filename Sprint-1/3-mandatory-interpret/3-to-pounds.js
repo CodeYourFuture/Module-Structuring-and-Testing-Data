@@ -13,7 +13,7 @@ const pounds = paddedPenceNumberString.substring(
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  
 
 console.log(`£${pounds}.${pence}`);
 
@@ -26,11 +26,11 @@ console.log(`£${pounds}.${pence}`);
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
 
-const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1); removes the trailing p from the penceString, so the value will be "399".
+// const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1); removes the trailing p from the penceString, so the value will be "399".
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); pads the numeric string with zeros until it 3 digits character Long. value will be "399" and also ensuring consistency of 3 digits value.
+// const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); pads the numeric string with zeros until it 3 digits character Long. value will be "399" and also ensuring consistency of 3 digits value.
 
-const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2); extracts the pounds part from the padded string by taking all but the last two digits.Here, it will be "3".
+// const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2); extracts the pounds part from the padded string by taking all but the last two digits.Here, it will be "3".
 
-const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");  extracts the last two characters as the pence portion and ensures it is always two digits.
-  console.log(`£${pounds}.${pence}`); formats and prints the final price in pounds and pence format, hence it will output "£3.99" 
+// const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");  extracts the last two characters as the pence portion and ensures it is always two digits.
+// console.log(`£${pounds}.${pence}`); formats and prints the final price in pounds and pence format, hence it will output "£3.99" 
