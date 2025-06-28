@@ -3,6 +3,3 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
-
-const cityOfBirth = "Bolton";
-console.log(`I was born in ${cityOfBirth}`); 
