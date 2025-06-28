@@ -10,5 +10,8 @@ test("should return false for a improper faction", () => {
 });
 
 // Case 3: Identify Negative Fractions:
+test("should return true for a negative fraction", () => {
+  expect(isProperFraction(-4, 7)).toEqual(true);
+});
 
 // Case 4: Identify Equal Numerator and Denominator:
