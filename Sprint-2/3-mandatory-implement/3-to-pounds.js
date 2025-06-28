@@ -4,3 +4,9 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
+
+function toPounds(kg) {
+    const pounds =kg *2.20462;
+    return pounds.toFixed(2);
+    
+}
