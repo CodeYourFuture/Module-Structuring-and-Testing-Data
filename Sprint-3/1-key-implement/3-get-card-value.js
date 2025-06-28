@@ -10,21 +10,18 @@
 function getCardValue(card) {
        if (!card || typeof card !== "string") return "Invalid card format";  
   //extracting the rank of the card
-       const rank = card.slice(0, -1).trim();
-}
+       const rank = card[0];
+
 //parseInt(rank) and Number(rank) are the same thing. parseInt() is a function that parses a string and returns an integer. If the first character in the string can't be converted into a number, then it returns NaN. Number() is a function that converts a string to a number. If the string can't be converted into a number, then it returns NaN.
        if (rank === "A") return 11;
         //For numerical cards, we return the number
-        else if (!isNaN(rank) >= 2 && Number(rank) <= 10) return Number(rank);
+        else if (Number(rank) >= 2 && Number(rank) <= 10) return Number(rank);
         //For face cards, we return 10
         else if ( rank === "J" || rank=== "Q" || rank ==="K" ) return 10;
         //If the card is invalid, we throw an error
         else return("Invalid card rank.");
+      }
   
-    
-    
-
-
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
@@ -68,4 +65,4 @@ assertEquals(aceofDiamonds, 11);
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 const Invalidcardrank = getCardValue("1:diamonds:");
-assert.strictEqual(Invalidcardrank,"Invalid card rank");
+assertEquals(Invalidcardrank,"Invalid card rank");
