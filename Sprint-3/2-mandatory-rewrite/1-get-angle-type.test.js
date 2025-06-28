@@ -46,7 +46,7 @@ test("should identify Reflex angle", () => {
 // Then the function should return "Reflex angle"
 
 
-test("should identify angle over 360", () => {
+test("should identify angle not in range (0, 360)", () => {
   expect(getAngleType(360)).toEqual("invalid");
   expect(getAngleType(370)).toEqual("invalid");
 });
