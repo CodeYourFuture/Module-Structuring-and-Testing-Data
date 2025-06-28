@@ -28,17 +28,23 @@ function assertEquals(actualOutput, targetOutput) {
 const aceofSpades = getCardValue("A♠");
 assertEquals(aceofSpades, 11);
 
+
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
 // ====> write your test here, and then add a line to pass the test in the function above
+if(rank===)
+assertEquals(fiveofHearts, 5);
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const faceCards= getCardValue(J,Q,K);
+assertEquals(faceCards, 10);
+console.log(J,Q,K)
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
