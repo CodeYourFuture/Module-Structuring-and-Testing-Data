@@ -2,7 +2,7 @@ function repeat(str, count) {
   // Check if "count" is a negative number.
   if (count < 0) {
     // Will throw error if "count" is negative.
-    throw new Error("Count must be a positve number");
+    throw new Error("Count must be a positive number");
   }
 
   // Check if the count equals 0
