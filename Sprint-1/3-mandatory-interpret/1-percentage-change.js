@@ -36,3 +36,5 @@ console.log(`The percentage change is ${percentageChange}`);
 // 4. const percentageChange = (priceDifference / carPrice) * 100; 
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+// The expression Number(carPrice.replaceAll(",","")) takes a string representing a car price (which may include commas, like "12,345"), removes all commas using replaceAll(",", ""), and then converts the result to a number using Number(...).
+// The purpose is to turn a formatted price string into a numeric value that can be used for calculations.

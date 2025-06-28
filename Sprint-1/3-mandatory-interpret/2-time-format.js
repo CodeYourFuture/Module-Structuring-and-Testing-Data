@@ -27,7 +27,7 @@ console.log(result);
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
-// movieLength % 60 tells how many minutes are left over after counting full hours. 
+// The expression movieLength % 60 calculates the remainder when movieLength (in minutes) is divided by 60.
 
 
 
