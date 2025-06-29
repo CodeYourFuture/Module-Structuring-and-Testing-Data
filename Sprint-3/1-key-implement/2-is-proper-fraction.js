@@ -9,7 +9,6 @@
 
 function isProperFraction(numerator, denominator) {
   return Math.abs(numerator) < Math.abs(denominator);
-;
 }
 
 // here's our helper again
@@ -54,5 +53,5 @@ assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
-const bothNegative=isProperFraction(-8, -10);
+const bothNegative = isProperFraction(-8, -10);
 assertEquals(bothNegative, true);
