@@ -1,5 +1,10 @@
 function getCardValue(card) {
-    // replace with your code from key-implement
-    return 11;
+  const rank = card;
+
+  if (rank === "A") return 11;
+  if (["J", "Q", "K"].includes(rank)) return 10;
+  const number = Number(rank);
+  if (number >= 2 && number <= 10) return number;
+  throw new Error("Invalid card rank");
 }
 module.exports = getCardValue;
