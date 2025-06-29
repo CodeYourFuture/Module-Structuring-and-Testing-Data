@@ -1,5 +1,5 @@
-function repeat() {
-    return "hellohellohello";
+function repeat(str) {
+  return "hellohellohello";
 }
 
 module.exports = repeat;
