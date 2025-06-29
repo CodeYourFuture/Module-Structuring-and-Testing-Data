@@ -37,7 +37,7 @@ test("should return an empty string for count = 0", () => {
     const str = "Good Morning";
     const count = 0;
     const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual(" ");
+    expect(repeatedStr).toEqual("");
     });
 
 
