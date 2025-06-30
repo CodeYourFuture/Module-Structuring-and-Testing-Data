@@ -24,7 +24,7 @@ console.log(result);
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
  
-// Answer a: there are 6 variable declarations which are const movieLength, const remaininingSeconds, const totalMinutes, const remainingMinutes,
+// Answer a: there are 6 variable declarations which are const movieLength, const remainingSeconds, const totalMinutes, const remainingMinutes,
 //           cost totalHours and const result.
 
 // Answer b: only one function call which is console.log(result).
@@ -37,7 +37,7 @@ console.log(result);
 // Answer e: this builds a string representing the time in HH:MM:SS format, based on the movie length in seconds. The better name can be 
 //           formattedTime or timeString.
 
-// Answer e: It will work for most large intergers or large hours but it does not work well for time below 60 seconds like 37 seconds is 
+// Answer e: It will work for most large integers or large hours but it does not work well for time below 60 seconds like 37 seconds is 
 //           0:0:37 which can be considered unformatted. What is more, it does not handle negative numbers and does not pad numbers with zero.
 
 
