@@ -11,5 +11,7 @@ let initials = ``;
 initials += firstName[0];
 initials += middleName[0];
 initials += lastName[0];
+console.log(initials); // Output: "CKJ"
+
 
 
