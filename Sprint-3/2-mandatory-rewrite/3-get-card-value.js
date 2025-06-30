@@ -1,37 +1,23 @@
 function getCardValue(card) {
-    switch(card) {
-        case "A♠":
+    const rank = card.slice(0, 1)
+    switch(rank) {
         case "A":
             return 11;
             break;
-        case "2♠":
-            return 2;
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+        case "9":
+        case "10":
+            return Number(rank);
             break;
-        case "3♠":
-            return 3;
-            break;
-        case "4♠":
-            return 4;
-            break;
-        case "5♠":
-            return 5;
-            break;
-        case "6♠":
-            return 6;
-            break;
-        case "7♠":
-            return 7;
-            break;
-        case "8♠":
-            return 8;
-            break;
-        case "9♠":
-            return 9;
-            break;
-        case "10♠":
-        case "J♠":
-        case "K♠":
-        case "Q♠":
+        case "J":
+        case "K":
+        case "Q":
             return 10;
             break;
         default:
