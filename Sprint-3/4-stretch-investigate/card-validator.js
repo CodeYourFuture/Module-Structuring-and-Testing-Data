@@ -42,7 +42,6 @@ function cardNumberValidator(cardNumber) {
     return true;
 }
 
-console.log(cardNumberValidator("111111111111111a"));
 module.exports = cardNumberValidator;
 
 /*
