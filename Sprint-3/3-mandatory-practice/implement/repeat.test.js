@@ -49,5 +49,5 @@ test("should return an empty string for count = 0", () => {
 test("should throw an error / return an error message", () => {
     const str = "Bye";
     const count = -3;
-    expect(() => repeat(str, count)).toThrow("Invalid number. Please enter a positive number or 0 for count");
+    expect(() => repeat(str, count)).toThrow("Invalid number");
     });

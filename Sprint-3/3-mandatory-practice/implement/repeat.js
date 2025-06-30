@@ -4,8 +4,11 @@ function repeat(str, count) {
     } else if (count === 0) {
         return "";
     } else {
-        throw new Error("Invalid number. Please enter a positive number or 0 for count");
+        throw new Error("Invalid number");
     }     
 }
 
 module.exports = repeat;
+
+
+console.log(repeat("abc", -1))
