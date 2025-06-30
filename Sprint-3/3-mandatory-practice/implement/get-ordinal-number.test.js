@@ -8,20 +8,28 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-test("should return '1st' for 1", () => {
+test("should append 'st' to numbers ending with 1 and not ending with 11", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
     });
 
+test("should append 'st' to numbers ending with 1 and not ending with 11", () => {
+    expect(getOrdinalNumber(41)).toEqual("41st");
+    });
 
-test("should return '21st' for 21", () => {
-    expect(getOrdinalNumber(21)).toEqual("21st");
+
+test("should append 'nd' to numbers ending with 2", () => {
+    expect(getOrdinalNumber(62)).toEqual("61nd");
 });
 
-test("should get '2nd' for 2", () => {
-    expect(getOrdinalNumber(2)).toEqual("2nd");
+test("should append 'rd' to numbers ending with 3", () => {
+    expect(getOrdinalNumber(93)).toEqual("93nd");
 });
 
 
-test("should get '22nd' for 22", () => {
-    expect(getOrdinalNumber(22)).toEqual("22nd");
+test("should append 'th' to numbers ending (4-9)", () => {
+    expect(getOrdinalNumber(8)).toEqual("8th");
+});
+
+test("should append 'th' to numbers ending (11-13)", () => {
+    expect(getOrdinalNumber(12)).toEqual("12th");
 });
