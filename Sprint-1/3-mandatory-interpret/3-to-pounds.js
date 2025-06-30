@@ -11,9 +11,9 @@ const pounds = paddedPenceNumberString.substring(
   paddedPenceNumberString.length - 2
 );
 
-const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+const pence = paddedPenceNumberString.substring(
+  paddedPenceNumberString.length - 2
+);
 
 console.log(`£${pounds}.${pence}`);
 
@@ -56,4 +56,3 @@ Extract the pound part (everything except the last 2 characters)
  Display the final formatted price in pounds and pence
 
 */
-
