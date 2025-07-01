@@ -10,11 +10,9 @@ const getOrdinalNumber = require("./get-ordinal-number");
 
 test("should append 'st' to numbers ending with 1 and not ending with 11", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
-    });
-
-test("should append 'st' to numbers ending with 1 and not ending with 11", () => {
     expect(getOrdinalNumber(41)).toEqual("41st");
     });
+
 
 
 test("should append 'nd' to numbers ending with 2", () => {

@@ -11,4 +11,3 @@ function repeat(str, count) {
 module.exports = repeat;
 
 
-console.log(repeat("abc", -1))
