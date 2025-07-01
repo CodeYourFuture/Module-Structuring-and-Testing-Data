@@ -1,8 +1,8 @@
 // Predict and explain first...
 
 // Why will an error occur when this program runs?
-/* =============> write your prediction here: because on line 11 decimalNumber isn't between 2 curly brackets,also
-decimalNumber already used as parameter so it can't be declared again inside the function*/
+/* =============> write your prediction here: because on line 11 
+decimalNumber is already used as parameter so it can't be declared again inside the function*/
 
 // Try playing computer with the example to work out what is going on
 
