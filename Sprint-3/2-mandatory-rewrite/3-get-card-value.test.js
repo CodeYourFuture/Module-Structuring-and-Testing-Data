@@ -7,14 +7,11 @@ test("should return 11 for Ace of Spades", () => {
 
 // Case 2: Handle Number Cards (2-10):
 test("should return 2-10 for cards rank (2-10)", () => {
-    const numberCards = getCardValue("3♠");
-    expect(numberCards).toEqual(3);
+    expect(getCardValue("2♠")).toEqual(2);
+    expect(getCardValue("9♣︎")).toEqual(9);
+    expect(getCardValue("7♠")).toEqual(7);
 });
 
-test("should return 9 for 9♠", () => {
-    const numberCards = getCardValue("9♠");
-    expect(numberCards).toEqual(9);
-});
 
 
 
