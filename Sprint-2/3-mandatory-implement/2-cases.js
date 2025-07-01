@@ -14,11 +14,11 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-function Upper_Case (str){
+function UpperCase (str){
     str  = str.toUpperCase();
     result = str.split(' ')
     result = result.join('_')
     return `${result}`
 }
-console.log(Upper_Case("lord of the rings"));
+console.log(UpperCase("lord of the rings"));
 

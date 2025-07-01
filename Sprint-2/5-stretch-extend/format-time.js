@@ -23,4 +23,8 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
-// console.log(formatAs12HourClock('12'))
+console.log(formatAs12HourClock("08:00")); //8:00 am
+console.log(formatAs12HourClock("23:30")); //11:00 pm
+console.log(formatAs12HourClock("17:50")); //5:00 pm
+console.log(formatAs12HourClock("01:59")); //1:59 am
+console.log(formatAs12HourClock("13:09")); //1:00 pm
