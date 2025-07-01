@@ -18,11 +18,11 @@ test("should append 'st' to numbers ending with 1 and not ending with 11", () =>
 
 
 test("should append 'nd' to numbers ending with 2", () => {
-    expect(getOrdinalNumber(62)).toEqual("61nd");
+    expect(getOrdinalNumber(62)).toEqual("62nd");
 });
 
 test("should append 'rd' to numbers ending with 3", () => {
-    expect(getOrdinalNumber(93)).toEqual("93nd");
+    expect(getOrdinalNumber(93)).toEqual("93rd");
 });
 
 
