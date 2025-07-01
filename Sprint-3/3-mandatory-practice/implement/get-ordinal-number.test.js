@@ -17,17 +17,22 @@ test("should append 'st' to numbers ending with 1 and not ending with 11", () =>
 
 test("should append 'nd' to numbers ending with 2", () => {
     expect(getOrdinalNumber(62)).toEqual("62nd");
+    expect(getOrdinalNumber(22)).toEqual("22nd");
 });
 
 test("should append 'rd' to numbers ending with 3", () => {
     expect(getOrdinalNumber(93)).toEqual("93rd");
+    expect(getOrdinalNumber(3)).toEqual("3rd");
 });
 
 
 test("should append 'th' to numbers ending (4-9)", () => {
-    expect(getOrdinalNumber(8)).toEqual("8th");
+    expect(getOrdinalNumber(4)).toEqual("4th");
+    expect(getOrdinalNumber(6)).toEqual("6th");
+    expect(getOrdinalNumber(9)).toEqual("9th");
 });
 
 test("should append 'th' to numbers ending (11-13)", () => {
     expect(getOrdinalNumber(12)).toEqual("12th");
+    expect(getOrdinalNumber(13)).toEqual("13th");
 });
