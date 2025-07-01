@@ -1,13 +1,13 @@
-// Predict and explain first...
-//  =============> write your prediction here
+/"hello Mhairi" === `hello ${mhairiName}`;
+"${mhairiName} is 28" === `Mhairi is ${mhairiAge}`;
 
-// call the function capitalise with a string input
-// interpret the error message and figure out why an error is occurring
+// My answer is:
+const mhairiName = "Mhairi";
+const mhairiAge = 28;
 
-function capitalise(str) {
-  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
-}
+const sentence1= `hello ${mhairiName}`;
+console.log(sentence1); // ➜ Output: hello Mhairi
 
-// =============> write your explanation here
-// =============> write your new code here
+
+const sentence= `${mhairiName} is ${mhairiAge}`;
+console.log(sentence);  // ➜ Output: Mhairi is 28
