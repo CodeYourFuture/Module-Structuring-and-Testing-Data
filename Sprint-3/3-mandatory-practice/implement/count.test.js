@@ -22,3 +22,6 @@ test("should count multiple occurrences of a character", () => {
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+console.log(countChar("hello", "l"));  // Should print 2
+console.log(countChar("banana", "a")); // Should print 3
