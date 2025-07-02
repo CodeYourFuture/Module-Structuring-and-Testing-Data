@@ -1,4 +1,5 @@
-// implement a function countChar that counts the number of times a character occurs in a string
+ 
+ // implement a function countChar that counts the number of times a character occurs in a string
 const countChar = require("./count");
 // Given a string str and a single character char to search for,
 // When the countChar function is called with these inputs,
