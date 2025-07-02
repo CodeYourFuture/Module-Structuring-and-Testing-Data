@@ -23,4 +23,35 @@ test("password has at least 5 characters", () => {
     // Assert
     expect(result).toEqual(true);
 }
-);
+); const previousPasswords = ["Password123!", "Welcome1$", "Admin#2023"];
+
+function isValidPassword(password) {
+  if (password.length < 5) {
+    return { valid: false, message: "Password must be at least 5 characters long." };
+  }
+
+  if (!/[A-Z]/.test(password)) {
+    return { valid: false, message: "Password must include at least one uppercase letter." };
+  }
+
+  if (!/[a-z]/.test(password)) {
+    return { valid: false, message: "Password must include at least one lowercase letter." };
+  }
+
+  if (!/[0-9]/.test(password)) {
+    return { valid: false, message: "Password must include at least one number." };
+  }
+
+  if (!/[!#$%.*&]/.test(password)) {
+    return { valid: false, message: "Password must include at least one special symbol (!#$%.*&)." };
+  }
+
+  if (previousPasswords.includes(password)) {
+    return { valid: false, message: "This password has already been used. Please choose a new one." };
+  }
+
+  return { valid: true };
+}
+
+module.exports = isValidPassword;
+
