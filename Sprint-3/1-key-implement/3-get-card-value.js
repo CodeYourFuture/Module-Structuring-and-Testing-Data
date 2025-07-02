@@ -1,4 +1,3 @@
-
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 // You will need to implement a function getCardValue
 // the function takes a single parameter, a string representing a playing card
