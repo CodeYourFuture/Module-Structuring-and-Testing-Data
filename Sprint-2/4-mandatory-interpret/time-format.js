@@ -17,21 +17,26 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> pad is called 3 times — once for hours, once for minutes, and once for seconds.
+// =============> pad is called 3 times — once each for hours, for minutes andvfor seconds.
 
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> pad is first called for total hourse which is 0 hours
+// =============> The first call is for totalHours, and when you call formatTimeDisplay(61), the value of totalHours is:
+//totalHours = (61 - 1) / 60 = 60 / 60 = 1, remainingMinutes = 1
+//totalHours = totalMinutes - remainingMinutes = 1 - 1 = 0
+// So, num = 0 for the first pad call.
 
 // c) What is the return value of pad is called for the first time?
-// =============> the return value is "00"
+// =============> The return value is "00" because pad(0) results in "00" using .padStart(2, "0").
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> pad is called for total seconds at last time which is 1 seconds.
+// =============> The last call is for remaining seconds. With input 61, remainingSeconds = 61 % 60 = 1, so num = 1 in the last call.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> the return value is "01".It pads "1" with a leading zero to ensure two digits.
+// =============> The return value is "01" – pad(1) returns "01" because it adds a leading zero to make it 2 characters.
+
+// so final output should be "00:01:01"
 
 
