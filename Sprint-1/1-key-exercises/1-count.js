@@ -6,3 +6,5 @@ count = count + 1;
 // Describe what line 3 is doing, in particular focus on what = is doing
 // Line 3 is incrementing the count variable by 1, effectively adding 1 to its current value
 // The = operator is used to assign the new value (count + 1) back to the count variable
+// The code is valid and will not throw an error
+// because count is declared with let, allowing it to be reassigned.
