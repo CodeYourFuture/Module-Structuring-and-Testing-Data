@@ -28,5 +28,10 @@ test("should return false for an improper fraction", () => {
 
 // Case 4: Identify Equal Numerator and Denominator:
 test("should return false for an improper fraction", () => {
+  expect(isProperFraction(-2, -3)).toEqual(true);
+});
+
+// Case 4: Identify Equal Numerator and Denominator:
+test("should return false for an improper fraction", () => {
   expect(isProperFraction(3, 3)).toEqual(false);
 });
