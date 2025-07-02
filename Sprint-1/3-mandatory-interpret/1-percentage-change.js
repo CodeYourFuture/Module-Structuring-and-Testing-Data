@@ -41,6 +41,19 @@
 // This is necessary to perform arithmetic operations on the car price, as arithmetic operations cannot be performed directly on strings.
 
 //correct the code
+let carPrice = "10,000";
+let priceAfterOneYear = "8,543";
+
+// Remove commas and convert to numbers
 carPrice = Number(carPrice.replaceAll(",", ""));
 priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
+
+// Calculate difference and percentage change
+const priceDifference = carPrice - priceAfterOneYear;
+const percentageChange = (priceDifference / carPrice) * 100;
+
+// Output the result
+console.log(`The percentage change is ${percentageChange.toFixed(2)}%`);
+
+
 // The corrected line should be:
