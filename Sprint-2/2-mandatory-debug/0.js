@@ -8,7 +8,6 @@
 function multiply(a, b) {
   return a * b;
 }
-
 // Now the function returns the correct value, so the output will be:
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
