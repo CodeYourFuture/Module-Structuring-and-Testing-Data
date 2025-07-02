@@ -1,4 +1,5 @@
 
+
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
 // You will need to implement a function getCardValue
@@ -11,7 +12,7 @@
 function getCardValue(card) {
   if (!card || typeof card !== "string") return "Invalid card format";  
 //extracting the rank of the card
-  const rank = card[0];
+  const rank = card.slice(0, -1);
 
 //parseInt(rank) and Number(rank) are the same thing. parseInt() is a function that parses a string and returns an integer. If the first character in the string can't be converted into a number, then it returns NaN. Number() is a function that converts a string to a number. If the string can't be converted into a number, then it returns NaN.
   if (rank === "A") return 11;
@@ -46,24 +47,25 @@ assertEquals(aceofSpades, 11);
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
 assertEquals(fiveofHearts,5);
-// ====> write your test here, and then add a line to pass the test in the function above
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-const kingofhearts = getCardValue("J","K","Q");
-assertEquals(kingofhearts,10);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♠"), 10);
+
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
-const aceofDiamonds = getCardValue("A:diamonds:");
+const aceofDiamonds = getCardValue("A♠");
 assertEquals(aceofDiamonds, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-const Invalidcardrank = getCardValue("1:diamonds:");
-assertEquals(Invalidcardrank,"Invalid card rank");
+const Invalidcardrank = getCardValue("1♦");
+assertEquals(Invalidcardrank,"Invalid card rank.");
