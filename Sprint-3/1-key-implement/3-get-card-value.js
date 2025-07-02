@@ -1,7 +1,5 @@
 
-
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
-
 // You will need to implement a function getCardValue
 // the function takes a single parameter, a string representing a playing card
 // the function should return the numerical value of the card
@@ -34,7 +32,6 @@ actualOutput === targetOutput,
 );
 }
 // Acceptance criteria:
-
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
