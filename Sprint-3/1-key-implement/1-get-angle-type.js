@@ -1,3 +1,4 @@
+
 // Implement a function getAngleType
 // Build up your function case by case, writing tests as you go
 // The first test and case is written for you. The next case has a test, but no code.
