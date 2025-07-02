@@ -15,9 +15,8 @@
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
-
-const greating = "Hello there" 
-console.log (greating.toUpperCase());
-
-const heading = "lord of the rings"
-console.log(heading.toUpperCase());
+function toUpperSnakeCase (inputString) {
+    return inputString.toUpperCase().replaceAll(" ", "_");
+}
+console.log(toUpperSnakeCase("hello there"));         // "HELLO_THERE"
+console.log(toUpperSnakeCase("lord of the rings"));   //"LORD_OF_THE_RINGS"
