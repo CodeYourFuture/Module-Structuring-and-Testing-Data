@@ -26,8 +26,8 @@ I think, we can solve this bug with two different apprach
       }
 2. Remove declaration key word and make just assignment        
       function capitalise(str) {
-        let _str = `${str[0].toUpperCase()}${str.slice(1)}`;
-        return _str;
+        str = `${str[0].toUpperCase()}${str.slice(1)}`;
+        return str;
       }
 */
 
