@@ -4,7 +4,6 @@ function isProperFraction(numerator, denominator) {
     if (numerator > denominator)return false;
     return false;
     
-    
     // add your completed function from key-implement here
 }
 
