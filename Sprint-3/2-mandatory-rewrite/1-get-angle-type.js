@@ -24,10 +24,10 @@ function getAngleType(angle) {
 // we have just written the CommonJS module.exports syntax for you
 module.exports = getAngleType;
 
-console.log(getAngleType(90)); // "Right angle"
-console.log(getAngleType(180)); // "Straight angle"
-console.log(getAngleType(45)); // "Acute angle"
-console.log(getAngleType(120)); // "Obtuse angle"
-console.log(getAngleType(0)); // "Invalid angle"
-console.log(getAngleType(200)); // "Invalid angle"
-console.log(getAngleType(90.5)); // "Invalid angle"
+// console.log(getAngleType(90)); // "Right angle"
+// console.log(getAngleType(180)); // "Straight angle"
+// console.log(getAngleType(45)); // "Acute angle"
+// console.log(getAngleType(120)); // "Obtuse angle"
+// console.log(getAngleType(0)); // "Invalid angle"
+// console.log(getAngleType(200)); // "Invalid angle"
+// console.log(getAngleType(90.5)); // "Invalid angle"
