@@ -54,3 +54,9 @@ console.assert(
   currentOutput6 === targetOutput6,
   `current output: ${currentOutput6}, target output: ${targetOutput6}`
 );
+const currentOutput7 = formatAs12HourClock("23:45");
+const targetOutput7 = "11:45 pm";
+console.assert(
+  currentOutput7 === targetOutput7,
+  `current output: ${currentOutput7}, target output: ${targetOutput7}`
+);
