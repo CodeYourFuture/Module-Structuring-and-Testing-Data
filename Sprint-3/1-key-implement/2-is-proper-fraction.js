@@ -22,7 +22,6 @@ function assertEquals(actualOutput, targetOutput) {
 }
 
 // Acceptance criteria:
-
 // Proper Fraction check:
 // Input: numerator = 2, denominator = 3
 // target output: true
