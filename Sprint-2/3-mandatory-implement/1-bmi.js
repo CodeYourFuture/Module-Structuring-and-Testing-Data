@@ -18,9 +18,21 @@
 
 // You will need to implement a function that calculates the BMI of someone based off their weight and height
 function calculateBMI(weight, height) {
-  const bmi = weight / (height * height); // Step 1 & 2
-  return Number(bmi.toFixed(1)); // Step 3: Round to 1 decimal place
-}
+  const bmi = weight / (height * height); 
+  return Number(bmi.toFixed(1)); 
+
+  // What we will enter: The first result as example;
+
+ function calculateBMI(70, 1.73) {
+     const bmi = 70 / (1.73 * 1.73);
+     return parseFloat(bmi.toFixed(1));
+
+// The results: 
+
+//    Weight = 70 kg, height = 1.73 m.
+//    	•	BMI = 70 ÷ (1.73 × 1.73) = 70 ÷ 2.9929 ≈ 23.41
+//    	•	Rounded to 1 decimal = 23.4
+//    	•	The function returns 23.4
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
