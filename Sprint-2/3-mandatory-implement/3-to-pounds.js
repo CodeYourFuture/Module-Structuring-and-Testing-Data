@@ -20,7 +20,7 @@ function toPounds(penceString) {
     .padEnd(2, "0");
   console.log(`£${pounds}.${pence}`);
 }
-toPounds((penceString = "399p"));
-toPounds((penceString = "102p"));
-toPounds((penceString = "1025p"));
+toPounds("399p");
+toPounds("102p");
+toPounds("1025p");
 
