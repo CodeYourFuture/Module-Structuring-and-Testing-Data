@@ -8,3 +8,4 @@ count = count + 1;
 // The = operator is used to assign the new value (count + 1) back to the count variable
 // The code is valid and will not throw an error
 // because count is declared with let, allowing it to be reassigned.
+console.log(count); // Output: 1
