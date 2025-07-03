@@ -9,3 +9,9 @@ let initials = ``;
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 
+function getInitial(firstName, middleName, lastName) {
+  return firstName[0] + middleName[0] + lastName[0];
+}
+
+initials = getInitial("Creola", "Katherine", "Johnson");
+console.log(`initials is ${initials}`);
