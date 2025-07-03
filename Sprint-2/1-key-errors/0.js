@@ -32,6 +32,6 @@ function capitalise(str) {
 function capitalise(str) {
   return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
-let str = "saratahir"
-let result = capitalise(str)
-console.log(result)
+const name = "saratahir";
+const capitalisedName = capitalise(name);
+console.log(capitalisedName);
