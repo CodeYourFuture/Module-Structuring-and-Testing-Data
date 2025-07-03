@@ -55,7 +55,6 @@ test("password has at least one special character", () => {
 });
 
 
-
 test("valid password", () => {
   expect(isValidPassword("Valid1!")).toBe(true); // Meets all conditions
 });
@@ -63,7 +62,6 @@ test("valid password", () => {
 test("password should not be a previously used password", () => {
   expect(isValidPassword("Valid1!")).toBe(false); // Used before
 });
-
 
 
 // test("valid password", () => {
