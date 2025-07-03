@@ -18,7 +18,6 @@ function passwordValidator(password) {
     if (!specialCharacters.some(char => password.includes(char))) return false;
     // Check if the password was used before
    
-
     if (bannedPassword.includes(password)) return false;
 
     bannedPassword.push(password);
