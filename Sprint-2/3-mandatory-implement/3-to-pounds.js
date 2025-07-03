@@ -4,7 +4,7 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
-function topound(penceString){                    
+function toPound(penceString){                    
   if (!penceString || !penceString.endsWith("p")) {
     return "Invalid input: must be a non-empty string ending with 'p'";
   }
@@ -13,9 +13,7 @@ let penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
 );
-if (isNaN(penceStringWithoutTrailingP)
-
-) {
+if (isNaN(penceStringWithoutTrailingP)) {
     return "Invalid input: not a number";
   }
 // If condition to check input is always a number.
