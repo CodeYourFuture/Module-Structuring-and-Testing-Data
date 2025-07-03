@@ -33,7 +33,20 @@ function getCardValue(card) {
 
   // Extract the rank by removing the last character (the suit emoji)
   // .trim() helps remove any accidental whitespace
-  const rank = card.slice(0, -1).trim();
+  // const rank = card.slice(0, -1).trim();
+  //What would happen here if we provided the String "A♠ " ?
+  /*First, .slice(0, -1) cuts off the last character — which is the space,
+So you get "A♠"
+Then .trim() doesn’t do much, because there’s no space left.
+I end up with "A♠" which is wrong, since the suit didn’t get removed.
+So order matters a lot here. trim must come before slice, or it won't work reliably if whitespace is present.
+*/
+//What would be assigned to to the variable "rank" ?
+//If slice() comes first, we get "A♠",  which is wrong.
+//How does the order in which the String methods are called impact the end result?
+//It determines whether I correctly slice off the suit or accidentally keep it. The methods aren't interchangeable.
+// here is the correct order:
+  const rank = card.trim().slice(0, -1);
 
   // Handle Ace (A)
   if (rank === "A") {
@@ -126,6 +139,12 @@ assertEquals(getCardValue(""), "Invalid card");
 assertEquals(getCardValue(null), "Invalid card");
 assertEquals(getCardValue(undefined), "Invalid card");
 assertEquals(getCardValue(123), "Invalid card"); // A number, not a string card
+
+// Accidental whitespace
+assertEquals(getCardValue("  A♠"), 11); 
+assertEquals(getCardValue("10♣ "), 10);
+assertEquals(getCardValue("  J♠ "), 10); 
+
 
 // Final confirmation
 console.log("\nAll console.assert tests passed if no 'Expected ... but got ...' messages appear above!");
