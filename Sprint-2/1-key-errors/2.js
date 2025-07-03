@@ -25,8 +25,9 @@
 
 
 function square(num) {
-    return num * num;
+  return num * num;
 }
-let num = 7
-result = square(num)
-console.log(result)
+
+const number = 7;
+const result = square(number);
+console.log(result); 
