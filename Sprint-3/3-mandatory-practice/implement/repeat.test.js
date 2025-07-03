@@ -45,3 +45,4 @@ test("should throw an arror when count is negative", () => {
     const count = -1;
     expect(() => repeat("hello", -1)).toThrow("Count must be a non-negative integer");
     });
+    
