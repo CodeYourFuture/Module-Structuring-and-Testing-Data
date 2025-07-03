@@ -8,7 +8,12 @@ function countChar(stringOfCharacters, findCharacter) {
     return stringOfCharacters.length;
   }
 
-  return stringOfCharacters.split(findCharacter).length - 1;
+  let count = 0;
+  for (let i = 0; i < stringOfCharacters.length; i++) {
+    if (stringOfCharacters[i] === findCharacter) {
+      count++;
+    }
+  }
 }
 
 module.exports = countChar;
