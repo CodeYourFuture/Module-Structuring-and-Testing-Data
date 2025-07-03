@@ -6,7 +6,7 @@
 // # The last digit of 105 is 3
 // # The last digit of 806 is 3
 
-const num = 103;
+//const num = 103;
 
 function getLastDigit() {
   return num.toString().slice(-1);

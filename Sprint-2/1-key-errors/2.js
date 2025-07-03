@@ -9,11 +9,11 @@
 // # This is because we're trying to use the variable 'num' before it's declared.
 // # To fix this, we need to pass the number to be squared as an argument to the function
 // # or declare 'num' before using it.
-
+/*
 function square(3) {
     return num * num;
 }
-
+*/
 // =============> write the error message here
 // # SyntaxError: Unexpected number
 
