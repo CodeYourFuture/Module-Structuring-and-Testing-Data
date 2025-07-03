@@ -19,6 +19,6 @@ function toUpperSnakeCase(string){
     .toUpperCase()
    .replace(/\s+/g, '_');
 }
-let string = "lord of the rings"
-let result = toUpperSnakeCase(string)
+const string = "lord of the rings"
+const result = toUpperSnakeCase(string)
 console.log (result)
