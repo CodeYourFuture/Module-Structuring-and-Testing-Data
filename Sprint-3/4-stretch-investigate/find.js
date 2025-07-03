@@ -1,3 +1,4 @@
+
 function find(str, char) {
   let index = 0;
 
