@@ -23,4 +23,4 @@ function toUpperSnakeCase(input) {
 }
 
 // Example usage:
-console.log(toUpperSnakeCase("lord of the rings")); // Output: "HELLO_THERE"
+console.log(toUpperSnakeCase("lord of the rings")); // Output: "LORD_OF_THE_RINGS"
