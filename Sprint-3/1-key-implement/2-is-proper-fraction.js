@@ -45,7 +45,7 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
-assertEquals(properFraction, true);
+assertEquals(negativeFraction, true);
 
 // Negative Fraction check:
 // Input: numerator = -14, denominator = 7
@@ -53,7 +53,7 @@ assertEquals(properFraction, true);
 // Explanation: The fraction -14/7 is not a proper fraction because the absolute value of the numerator (14) is greater than the denominator (7). The function should return false.
 
 const negativeFraction1 = isProperFraction(-14, 7);
-assertEquals(improperFraction, false);
+assertEquals(negativeFraction1, false);
 
 // Negative Fraction check:
 // Input: numerator = 4, denominator = -7
@@ -61,14 +61,14 @@ assertEquals(improperFraction, false);
 // Explanation: The fraction 4/-7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 
 const negativeFraction2 = isProperFraction(4, -7);
-assertEquals(properFraction, true);
+assertEquals(negativeFraction2, true);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
-assertEquals(improperFraction, false);
+assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
@@ -78,7 +78,7 @@ assertEquals(improperFraction, false);
 // Explanation: The fraction 0/7 is a proper fraction because the numerator is equal 0. The function should return true.
 
 const zeroFraction = isProperFraction(0, 7);
-assertEquals(properFraction, true);
+assertEquals(zeroFraction, true);
 
 // Zero Fraction check:
 // Input: numerator = 7, denominator = 0
@@ -86,4 +86,4 @@ assertEquals(properFraction, true);
 // Explanation: The fraction 7/0 is not a proper fraction because the denominator in fraction can not be equal 0. The function should return false.
 
 const zeroFraction2 = isProperFraction(7, 0);
-assertEquals(improperFraction, false);
+assertEquals(zeroFraction2, false);
