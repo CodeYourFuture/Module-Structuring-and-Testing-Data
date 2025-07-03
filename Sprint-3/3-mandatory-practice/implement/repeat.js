@@ -5,12 +5,6 @@ function repeat(str, count) {
         throw new Error("Count must be non-negative");
     }
 
-    // Case: Handle Count of 0
-    // If count is 0, the string should be repeated zero times, resulting in an empty string.
-    if (count === 0) {
-        return "";
-    }
-
     // Initialize an empty string to build our result
     let result = "";
 
