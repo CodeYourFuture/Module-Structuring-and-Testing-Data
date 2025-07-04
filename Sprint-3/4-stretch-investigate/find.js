@@ -27,7 +27,8 @@ console.log(find("code your future", "z"));
 // It checks if the current letter at the current position is the one we're looking for (str[index] === char, line 5)
 
 // c) Why is index++ being used?
-// To move to the next letter in the string
+// Functional: to move to the next letter in the string
+// Technical: index++ increments the index by 1
 
 // d) What is the condition index < str.length used for?
 // It makes sure we don’t go past the end of the string
