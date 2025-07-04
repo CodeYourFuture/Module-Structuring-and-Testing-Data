@@ -27,9 +27,9 @@ function getCardValue(card) {
         else if ( rank === "J" || rank=== "Q" || rank ==="K" ) return 10;
         //If the card is invalid, we throw an error
         else return("Invalid card rank.");
-  
-    
-    
+
+
+
 
 
 // You need to write assertions for your function to check it works in different cases
@@ -71,8 +71,8 @@ faceCards.forEach((card) => {
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
-const aceofDiamonds = getCardValue("A:diamonds:");
-assertEquals(aceofDiamonds, 11);
+const aceOfDiamonds = getCardValue("A♦");
+assertEquals(aceOfDiamonds, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
