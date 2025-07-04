@@ -1,5 +1,15 @@
-function getOrdinalNumber(num) {
- return "1st";
-}
+const getOrdinalNumber = (n) => {
+  if (n > 3 && n < 21) return n + "th";
+  switch (n % 10) {
+    case 1:
+      return n + "st";
+    case 2:
+      return n + "nd";
+    case 3:
+      return n + "rd";
+    default:
+      return n + "th";
+  }
+};
 
 module.exports = getOrdinalNumber;
