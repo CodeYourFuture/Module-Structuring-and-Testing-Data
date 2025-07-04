@@ -33,7 +33,7 @@ test("password has a unknown character", () => {
 })
 
 
- test("password has at least 5 characters", () => {
+ test("password has more than 5 characters", () => {
   expect(isValidPassword("1£b4A")).toBe(false);// Fails because no letters or special chars
   expect(isValidPassword("1@Qe")).toBe(false); // Fails because the password is less than 5 characters.
 });
@@ -62,6 +62,18 @@ test("valid password", () => {
 
 test("password should not be a previously used password", () => {
   expect(isValidPassword("Valid1!")).toBe(true);
+});
+
+// we care tring manually to add a password that has been used before
+test("valid password", () => {
+  const banned = [];
+  expect(isValidPassword("Valid1!", banned)).toBe(true); // first time, valid
+});
+
+test("password should not be a previously used password", () => {
+  const banned = [];
+  isValidPassword("Valid1!", banned); // use it once
+  expect(isValidPassword("Valid1!", banned)).toBe(false); // second use, now rejected
 });
 
 
