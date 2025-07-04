@@ -28,8 +28,8 @@ test("should return 10 for King of Diamonds", () => {
   expect(getCardValue("K♦")).toEqual(10);
 });
 // Case 4: Handle Ace (A):
-test("should return 11 for Ace, (") => {const ace = getCardValue("A♠");
-    expect(ace).toEqual(11);}
+test("should return 11 for Ace, () => { const ace = getCardValue("A")
+    expect(ace).toEqual(11);});
 
 
 // Case 5: Handle Invalid Cards:
