@@ -28,15 +28,21 @@ test("append 'nd' to numbers ending in 2, except those ending in 12", () => {
 test("append 'rd' to numbers ending in 3, except those ending in 13", () => {
   expect(getOrdinalNumber(3)).toEqual("3rd");
   expect(getOrdinalNumber(23)).toEqual("23rd");
-  expect(getOrdinalNumber(203)).toEqual("203rd");
-  expect(getOrdinalNumber(13)).toEqual("13th"); 
+  expect(getOrdinalNumber(203)).toEqual("203rd"); 
 });
 
 // all end in 'th'
 test("append 'th' to all other numbers", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
+  expect(getOrdinalNumber(5)).toEqual("5th");
+  expect(getOrdinalNumber(6)).toEqual("6th");
+  expect(getOrdinalNumber(10)).toEqual("10th");
+  expect(getOrdinalNumber(1000)).toEqual("1000th");
+});
+
+// unique cases 11, 12 ,13
+test("handle unique cases correctly", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(12)).toEqual("12th");
   expect(getOrdinalNumber(13)).toEqual("13th");
-  expect(getOrdinalNumber(1000)).toEqual("1000th");
 });
