@@ -9,29 +9,16 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
   const rank = card.slice(0, -1);
-
-  if (rank === "A") return 11;
-
-  if (["J", "Q", "K"].includes(rank)) return 10;
-
   const num = Number(rank);
-  if (num >= 2 && num <= 10) return num;
-
+  if (rank === "A") return 11;
+  //parseInt(rank) and Number(rank) are the same thing. parseInt() is a function that parses a string and returns an integer. If the first character in the string can't be converted into a number, then it returns NaN. Number() is a function that converts a string to a number. If the string can't be converted into a number, then it returns NaN.
+  //For numerical cards, we return the number
+  if (!isNaN(num) >= 2 && num <= 10) return num;
+  //For face cards, we return 10
+  if (rank === "J" || rank === "Q" || rank === "K") return 10;
+  //If the card is invalid, we throw an error
   return "Invalid card rank.";
 }
-//parseInt(rank) and Number(rank) are the same thing. parseInt() is a function that parses a string and returns an integer. If the first character in the string can't be converted into a number, then it returns NaN. Number() is a function that converts a string to a number. If the string can't be converted into a number, then it returns NaN.
-       if (rank === "A") return 11;
-        //For numerical cards, we return the number
-        else if (!isNaN(rank) >= 2 && Number(rank) <= 10) return Number(rank);
-        //For face cards, we return 10
-        else if ( rank === "J" || rank=== "Q" || rank ==="K" ) return 10;
-        //If the card is invalid, we throw an error
-        else return("Invalid card rank.");
-
-
-
-
-
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
@@ -46,8 +33,8 @@ function assertEquals(actualOutput, targetOutput) {
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
-const aceofSpades = getCardValue("A♠");
-assertEquals(aceofSpades, 11);
+const aceOfSpades = getCardValue("A♠");
+assertEquals(aceOfSpades, 11);
 
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
