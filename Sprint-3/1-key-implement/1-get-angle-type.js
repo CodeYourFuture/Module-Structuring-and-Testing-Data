@@ -2,7 +2,7 @@
 // Build up your function case by case, writing tests as you go
 // The first test and case is written for you. The next case has a test, but no code.
 // Execute this script in your terminal
-//node 1-get-angle-type.js
+// node 1-get-angle-type.js
 // The assertion error will tell you what the expected output is
 // Write the code to pass the test
 // Then, write the next test! :) Go through this process until all the cases are implemented
@@ -14,6 +14,7 @@ function getAngleType(angle) {
   if (angle > 90 && angle < 180) return "Obtuse angle";
   if (angle === 180) return "Straight angle";
   if (angle > 180 && angle < 360) return "Reflex angle";
+  if (angle < 0 || angle >= 360) return "Invalid angle";
 }
 
 // we're going to use this helper function to make our assertions easier to read
@@ -55,8 +56,6 @@ obtuseAngles.forEach((angle) => {
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
-const Straight  = getAngleType(180);
-assertEquals(Straight,"Straight angle");
 // ====> write your test here, and then add a line to pass the test in the function above
 const straight = getAngleType(180);
 assertEquals(straight, "Straight angle");
@@ -69,3 +68,15 @@ const reflexAngles = [181, 270, 359];
 reflexAngles.forEach((angle) => {
   assertEquals(getAngleType(angle), "Reflex angle");
 });
+
+// Case 6: Handle Invalid Angles:
+// When the angle is less than 0 or greater than or equal to 360 degrees,
+// Then the function should return "Invalid angle"
+const negativeAngles = getAngleType(-45);
+assertEquals(negativeAngles, "Invalid angle");
+
+const zeroAngle = getAngleType(0);
+assertEquals(zeroAngle, "Invalid angle");
+
+const greaterThan360 = getAngleType(400);
+assertEquals(greaterThan360, "Invalid angle");
