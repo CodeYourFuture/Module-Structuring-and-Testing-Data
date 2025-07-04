@@ -6,10 +6,7 @@
 // interpret the error message and figure out why an error is occurring
 // the error is in the use of let str. (str) is already an input and you can't use it again.
 
-function capitalise(str) {
-  let str= `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
-}
+
 
 // =============> write your explanation here
 //In order to fix the problem we need to declare let with capitalise instead of str. 
@@ -20,5 +17,6 @@ function capitalise(str) {
 
 function capitlise(str) {
   let capitalise =`${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
+  return capitalise;
 }
+console.log(capitlise("good")); 
