@@ -23,31 +23,35 @@ test("should count multiple occurrences of a character", () => {
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
 
+// Scenario 1: Multiple occurrences
+test("should count multiple occurrences of a character", () => {
+  expect(countChar("aaaaa", "a")).toEqual(5);
+});
+
+// Scenario 2: No occurrences
 test("should return 0 when the character is not found", () => {
-  const str = "hello";
-  const char = "z";
-  const count = countChar(str, char);
-  expect(count).toEqual(0);
+  expect(countChar("hello", "z")).toEqual(0);
 });
 
+// Scenario 3: Case sensitivity
 test("should be case-sensitive", () => {
-  const str = "Millena";
-  const char = "m";
-  const count = countChar(str, char);
-  expect(count).toEqual(0);
+  expect(countChar("Millena", "m")).toEqual(0); // lowercase 'm' not present
+  expect(countChar("Millena", "M")).toEqual(1); // uppercase 'M' present
 });
- 
 
+// Scenario 4: Count spaces
 test("should count spaces as characters", () => {
-  const str = "Millena Mesfin";
-  const char = " ";
-  const count = countChar(str, char);
-  expect(count).toEqual(1);
+  expect(countChar("Millena Mesfin", " ")).toEqual(1);
 });
 
+// Scenario 5: Empty string
 test("should return 0 for an empty string", () => {
-  const str = "";
-  const char = "m";
-  const count = countChar(str, char);
-  expect(count).toEqual(0);
+  expect(countChar("", "m")).toEqual(0);
+});
+
+// Scenario 6: Show it counts 'm' but ignores 'M'
+test("should count only lowercase 'm'", () => {
+  const str = "mMmmMmmM";
+  expect(countChar(str, "m")).toEqual(5); // 4 lowercase
+  expect(countChar(str, "M")).toEqual(3); // 4 uppercase
 });
