@@ -51,13 +51,13 @@ test("should return 0 when the character does not exist in the string", () => {
   expect(count).toEqual(0);
 });
 
-test("should be case-sensitive", () => {
+test("should return 0 if no exact case match is found", () => {
   const str = "Millena";
   const char = "m";
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
- 
+
 
 test("should count spaces as characters", () => {
   const str = "Millena Mesfin";
