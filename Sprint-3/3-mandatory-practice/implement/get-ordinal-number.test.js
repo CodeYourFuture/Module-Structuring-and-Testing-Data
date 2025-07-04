@@ -51,3 +51,10 @@ test("should return '23rd' for 23", () => {
 test("should return '101st' for 101", () => {
   expect(getOrdinalNumber(101)).toEqual("101st");
 });
+
+test("should return 'th' for numbers ending in 0", () => {
+  expect(getOrdinalNumber(10)).toBe("10th");
+  expect(getOrdinalNumber(20)).toBe("20th");
+  expect(getOrdinalNumber(30)).toBe("30th");
+  expect(getOrdinalNumber(100)).toBe("100th");
+});
