@@ -22,6 +22,18 @@ test("should return true for a negative proper fraction", () => {
 
 // Case 4: Identify Equal Numerator and Denominator:
 test("should return false for equal numerator and denominator", () => {
-  expect(isEqualNumeratorAndDenominator(5, 5)).toEqual(false);
+  expect(isProperFraction(5, 5)).toEqual(false);
 });
 
+// Case 6: Identify Zero Denominator:
+test("should throw an error for zero denominator", () => {
+  expect(() => isProperFraction(3, 0)).toThrow("Denominator cannot be zero.");
+});
+
+// Case 5: Identify Fractions with Absolute Values:
+test("should return false for equal numerator and denominator regardless of sign", () => {
+  expect(isProperFraction(5, 5)).toEqual(false);
+  expect(isProperFraction(-5, 5)).toEqual(false);
+  expect(isProperFraction(5, -5)).toEqual(false);
+  expect(isProperFraction(-5, -5)).toEqual(false);
+});
