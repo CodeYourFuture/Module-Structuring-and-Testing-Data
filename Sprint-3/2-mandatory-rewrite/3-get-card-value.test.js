@@ -1,8 +1,8 @@
 const getCardValue = require("./3-get-card-value");
 
 test("should return 11 for Ace of Spades", () => {
-    
-    expect(aceofSpades).toEqual(11);
+    const aceOfSpades = getCardValue("A♠");
+    expect(aceOfSpades).toEqual(11);
     });
 
 // Case 2: Handle Number Cards (2-10):
