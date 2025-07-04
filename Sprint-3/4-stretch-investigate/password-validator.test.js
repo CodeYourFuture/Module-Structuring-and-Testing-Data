@@ -55,17 +55,16 @@ test("password has at least one symbol", () => {
     expect(result).toEqual(false);
 });
 
-test("password must not be used before", () => {
-    const password = "Ab1!x";
-    const previousPasswords = ["Ab1!x", "Xyz123!"];
-    const result = isValidPassword(password, previousPasswords);
-    expect(result).toEqual(false);
+test("if password was used before should return false ", () => {
+  const password = "Ab1!x";
+  const previousPasswords = ["Ab1!x", "Xyz123!"];
+  const result = isValidPassword(password, previousPasswords);
+  expect(result).toEqual(false);
 });
 
-test("password must not be used before", () => {
-    const password = "New1!";
-    const previousPasswords = ["Ab1!x", "Xyz123!"];
-    const result = isValidPassword(password, previousPasswords);
-    expect(result).toEqual(true);
+test("if password was not used before should return true", () => {
+  const password = "New1!";
+  const previousPasswords = ["Ab1!x", "Xyz123!"];
+  const result = isValidPassword(password, previousPasswords);
+  expect(result).toEqual(true);
 });
-
