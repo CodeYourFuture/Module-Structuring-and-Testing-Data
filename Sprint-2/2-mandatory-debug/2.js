@@ -7,8 +7,10 @@
 
 const num = 103;
 
-function getLastDigit() {
+function getLastDigit()) {
   return num.toString().slice(-1);
+
+
 }
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
