@@ -64,6 +64,12 @@ test("password should not be a previously used password", () => {
   expect(isValidPassword("Valid1!")).toBe(true);
 });
 
+// Shouldn't we be testing if the function can return false when a password is one of the previous passwords?
+test("should not accept a previously used password", () => {
+  const banned = ["Valid1!"];
+  expect(isValidPassword("Valid1!", banned)).toBe(false); // Should return false
+});
+
 // we care tring manually to add a password that has been used before
 test("valid password", () => {
   const banned = [];
