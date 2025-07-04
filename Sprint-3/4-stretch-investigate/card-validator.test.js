@@ -10,8 +10,32 @@ To be valid, a card must:
 */
 const isValidCard = require("./card-validator");
 
-test("card number is valid with all rules passed", () => {
+test("card number is valid when it passes all rules", () => {
   const cardNumber = "9999777788880000";
+  const result = isValidCard(cardNumber);
+  expect(result).toEqual(true);
+});
+
+test("card number must contain only digits", () => {
+  const cardNumber = "1234567890123456";
+  const result = isValidCard(cardNumber);
+  expect(result).toEqual(true);
+});
+
+test("card number must not have all digits the same", () => {
+  const cardNumber = "1234567890123456";
+  const result = isValidCard(cardNumber);
+  expect(result).toEqual(true);
+});
+
+test("card number sum of digits must be greater than 16", () => {
+  const cardNumber = "5555555555554444";
+  const result = isValidCard(cardNumber);
+  expect(result).toEqual(true);
+});
+
+test("card number must end with an even digit", () => {
+  const cardNumber = "1234567890123458"; 
   const result = isValidCard(cardNumber);
   expect(result).toEqual(true);
 });

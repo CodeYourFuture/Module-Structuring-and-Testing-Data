@@ -1,34 +1,32 @@
-function isValidCreditCard(cardNumber){
-   
-    
-    if(cardNumber.length !==16 || isNaN(cardNumber)){
-        return false;
-    }
-    // Check if the input is exactly 16 digits and contains only numbers
+function isValidCard(number) {
+  // Convert to string if not already
+  const numStr = String(number);
 
-    let lastDigit = Number(cardNumber[cardNumber.length - 1]); 
-    if (lastDigit % 2 !== 0) {
-        return false;
-    }
-    //  the last digit must be even.
-   
-    
-    if (!/^\d{16}$/.test(cardNumber)) {
-        return false;
-    }
-    // The test(cardNumber)  checks if cardNumber matches the pattern of exactly 16 digits.
+  // Must be 16 digits and all numbers
+  if (!/^\d{16}$/.test(numStr)) {
+    return false;
+  }
 
-     return true;
-     // if all tests passed ,return true which is valid card number
+  // Must have at least two different digits
+  const allSame = numStr.split("").every((digit) => digit === numStr[0]);
+  if (allSame) {
+    return false;
+  }
 
+  // Last digit must be even
+  const lastDigit = parseInt(numStr[numStr.length - 1]);
+  if (lastDigit % 2 !== 0) {
+    return false;
+  }
+
+  // Sum of all digits must be greater than 16
+  const sum = numStr.split("").reduce((acc, digit) => acc + parseInt(digit), 0);
+  if (sum <= 16) {
+    return false;
+  }
+
+  // All checks passed
+  return true;
 }
-console.log(isValidCreditCard("1234567899876548")); // true (valid card)
-console.log(isValidCreditCard("2224446668881118")); // true (valid card)
-console.log(isValidCreditCard("a92332119c011112")); // false (contains letters)
-console.log(isValidCreditCard("4444444444444444")); // true
-console.log(isValidCreditCard("333111111111110")); // false (sum less than 16)
 
-      
-
-
-    
+module.exports = isValidCard;
