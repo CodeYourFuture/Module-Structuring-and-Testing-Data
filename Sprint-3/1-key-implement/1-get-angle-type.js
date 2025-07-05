@@ -28,7 +28,7 @@ function assertEquals(actualOutput, targetOutput) {
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
-
+console.log("hello there");
 // Acceptance criteria:
 
 // Given an angle in degrees,
