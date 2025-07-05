@@ -4,6 +4,8 @@ test("should return 11 for Ace of Spades", () => {
     const aceofSpades = getCardValue("A♠");
     expect(aceofSpades).toEqual(11);
     });
+
+    
 // Case 2: Handle Number Cards (2-10)
 test("should return the value of number cards (2-10)", () => {
     const testCases = [
@@ -27,10 +29,6 @@ test("should return 10 for face cards J, Q, K", () => {
     expect(getCardValue("Q♣")).toEqual(10);
     expect(getCardValue("K♥")).toEqual(10);
 });
-
-// Case 4: Handle Ace 
- const AceCard = getCardValue("A");
-assertEquals(AceCard ("A"), 11);
 
 // Case 5: Handle Invalid Cards
 test("should throw error for invalid card Z♠", () => {

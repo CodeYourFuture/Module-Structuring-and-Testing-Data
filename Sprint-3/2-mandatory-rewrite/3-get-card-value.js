@@ -1,8 +1,4 @@
 function getCardValue(card) {
-    // replace with your code from key-implement
-    return 11;
-}
-function getCardValue(card) {
     const rank = card.slice(0, -1); // strip off the suit emoji
 
     if (rank === "A") return 11;
@@ -15,3 +11,5 @@ function getCardValue(card) {
 
     throw new Error("Invalid card rank");
 }
+
+module.exports = getCardValue;
