@@ -36,3 +36,4 @@ test("should throw an error for decimal number like 2.1", () => {
 test("should throw an error for malformed format like 00_02", () => {
   expect(() => getCardValue("00_02♠")).toThrow("Invalid card rank");
 });
+
