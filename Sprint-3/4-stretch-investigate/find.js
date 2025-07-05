@@ -20,6 +20,10 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+// =====> When the function is called, the index is initialized to 0, and then inside the while loop, the index increases by 1 (index++).
 // b) What is the if statement used to check
+// =====> The if statement checks which index in the string matches the character char, and when this condition is met, it returns that index.
 // c) Why is index++ being used?
+// =====> The expression index++ increases the value of index by 1 each time, preventing an infinite loop.
 // d) What is the condition index < str.length used for?
+// =====> This condition makes the while loop run as long as the index is less than the length of the string.
