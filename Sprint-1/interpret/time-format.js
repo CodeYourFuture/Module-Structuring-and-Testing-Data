@@ -1,4 +1,4 @@
-const movieLength = -19; // length of movie in seconds
+const movieLength = 60; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -31,4 +31,4 @@ console.log(result);
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 
-// yes it will work with all interger and floating point value.
+// yes it will work with all interger but not with floating point value as the seconds will not be whole numbers. Also negative values while it works should not be accepted as film running time. Also strings will not work as well.  
