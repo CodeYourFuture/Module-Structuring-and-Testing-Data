@@ -1,11 +1,10 @@
 function cardNumberValidator(cardNum) {
   // Convert the input number to a string for digit-by-digit checks
   const strNum = cardNum.toString();
-
-  // Must be 16 digits and all numeric
-  if (strNum.length !== 16 || isNaN(strNum)) { // Invalid if not exactly 16 digits or contains non-numeric characters
-    return false;
-  }
+  
+  if (!/^\d{16}$/.test(strNum)) { // Use regex '\d{16}' to ensure exactly 16 digits, no other chars 
+  return false;
+}
 
   // At least two different digits - all digits can't be the same
   const allSame = strNum.split("").every((digit) => digit === strNum[0]);
@@ -31,5 +30,10 @@ function cardNumberValidator(cardNum) {
   return true; // All validation rules passed
 }
 
+/*
+console.log(cardNumberValidator("-123456789123450"));
+console.log(cardNumberValidator("12.3456789123450"));
+console.log(cardNumberValidator("              98"));
+*/
 module.exports = cardNumberValidator;
 
