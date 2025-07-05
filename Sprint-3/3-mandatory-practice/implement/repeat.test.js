@@ -9,42 +9,29 @@ const repeat = require("./repeat");
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
-test("should repeat the string count times", () => {
+test("repeats the string 3 times when count is 3", () => {
     const str = "hello";
     const count = 3;
-    const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("hellohellohello");
+    expect(repeat(str, count)).toEqual("hellohellohello");
     });
 
 // case: handle Count of 1:
-// Given a target string str and a count equal to 1,
-// When the repeat function is called with these inputs,
-// Then it should return the original str without repetition, ensuring that a count of 1 results in no repetition.
-test("should repeat the string count times", () => {
+test("returns the original string when count is 1", () => {
     const str = "hello";
     const count = 1;
-    const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("hello");
+    expect(repeat(str, count)).toEqual("hello");
     });
 
 // case: Handle Count of 0:
-// Given a target string str and a count equal to 0,
-// When the repeat function is called with these inputs,
-// Then it should return an empty string, ensuring that a count of 0 results in an empty output.
-test("should repeat the string count times", () => {
+test("returns an empty string when count is 0", () => {
     const str = "hello";
     const count = 0;
-    const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("");
+    expect(repeat(str, count)).toEqual("");
     });
 
 // case: Negative Count:
-// Given a target string str and a negative integer count,
-// When the repeat function is called with these inputs,
-// Then it should throw an error or return an appropriate error message, as negative counts are not valid.
-test("should repeat the string count times", () => {
+test("throws an error when count is negative", () => {
     const str = "hello";
     const count = -3;
-    const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("Invalid input");
+    expect(() => repeat(str, count)).toThrow("Invalid input: Count is a negative value");
     });
