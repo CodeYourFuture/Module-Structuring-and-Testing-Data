@@ -42,8 +42,9 @@ assertEquals(acute, "Acute angle");
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
-const obtuse = getAngleType(120);
 // ====> write your test here, and then add a line to pass the test in the function above
+const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angle");
 
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
