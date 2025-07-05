@@ -1,14 +1,11 @@
+
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;}
-    if (Math.abs(numerator) < Math.abs(denominator)) {
-        return true;
-    } { return false; }
-    if (numerator < denominator) {
-        return true;
-    } if (numerator === denominator) {
-        return false;
-    } if (denominator === 0) {
-        return false;
-    } 
+  // Check for invalid fraction (denominator cannot be zero)
+  if (denominator === 0) {
+    return false;
+  }
+  // Check if the absolute value of the numerator is less than the absolute value of the denominator
+  return Math.abs(numerator) < Math.abs(denominator);
+}
 
 module.exports = isProperFraction;

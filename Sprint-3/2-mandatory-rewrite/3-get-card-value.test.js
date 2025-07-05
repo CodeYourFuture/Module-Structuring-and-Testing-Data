@@ -5,9 +5,15 @@ test("should return 11 for Ace of Spades", () => {
     expect(aceofSpades).toEqual(11);
     });
 // Case 2: Handle Number Cards (2-10)
-test("should return 5 for 5 of Hearts", () => {
-    const five = getCardValue("5♥");
-    expect(five).toEqual(5);
+test("should return the value of number cards (2-10)", () => {
+    const testCases = [
+        ["2♣", 2],
+        ["5♠", 5],
+        ["10♦", 10]
+    ];
+    testCases.forEach(([card, expected]) => {
+        expect(getCardValue(card)).toEqual(expected);
+    });
 });
 
 test("should return 10 for 10 of Diamonds", () => {
@@ -16,19 +22,10 @@ test("should return 10 for 10 of Diamonds", () => {
 });
 
 // Case 3: Handle Face Cards (J, Q, K)
-test("should return 10 for Jack of Spades", () => {
-    const jack = getCardValue("J♠");
-    expect(jack).toEqual(10);
-});
-
-test("should return 10 for Queen of Clubs", () => {
-    const queen = getCardValue("Q♣");
-    expect(queen).toEqual(10);
-});
-
-test("should return 10 for King of Hearts", () => {
-    const king = getCardValue("K♥");
-    expect(king).toEqual(10);
+test("should return 10 for face cards J, Q, K", () => {
+    expect(getCardValue("J♠")).toEqual(10);
+    expect(getCardValue("Q♣")).toEqual(10);
+    expect(getCardValue("K♥")).toEqual(10);
 });
 
 // Case 4: Handle Ace 

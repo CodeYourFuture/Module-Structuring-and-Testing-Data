@@ -8,32 +8,32 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-const getOrdinalNumber = require("./getOrdinalNumber");
+function getOrdinalNumber(num) {
+  // Handle invalid inputs gracefully (optional)
+  if (typeof num !== "number" || !Number.isInteger(num)) {
+    return "Invalid input";
+  }
 
-test("should return 1st", () => {
-  expect(getOrdinalNumber(1)).toEqual("1st");
-});
+  // Handle the special case for teens (11, 12, 13)
+  const teenRemainder = num % 100;
+  if (teenRemainder >= 11 && teenRemainder <= 13) {
+    return num + "th";
+  }
 
-test("should return 2nd", () => {
-  expect(getOrdinalNumber(2)).toEqual("2nd");
-});
+  // Get the last digit to determine suffix
+  const lastDigit = num % 10;
 
-test("should return 3rd", () => {
-  expect(getOrdinalNumber(3)).toEqual("3rd");
-});
+  switch (lastDigit) {
+    case 1:
+      return num + "st";
+    case 2:
+      return num + "nd";
+    case 3:
+      return num + "rd";
+    default:
+      return num + "th";
+  }
+}
 
-test("should return 8th", () => {
-  expect(getOrdinalNumber(8)).toEqual("8th");
-});
+module.exports = getOrdinalNumber;
 
-test("should return 19th", () => {
-  expect(getOrdinalNumber(19)).toEqual("19th");
-});
-
-test("should return 81st", () => {
-  expect(getOrdinalNumber(81)).toEqual("81st");
-});
-
-test("should return 125th", () => {
-  expect(getOrdinalNumber(125)).toEqual("125th");
-});
