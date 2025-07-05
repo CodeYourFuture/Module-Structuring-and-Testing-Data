@@ -22,5 +22,4 @@ function toPounds(penceString) {
 console.log(toPounds("399p")); // £3.99
 console.log(toPounds("99p"));  // £0.99
 console.log(toPounds("9p"));   // £0.09
-console.log(toPounds("0p"));   // £0.00
 console.log(toPounds("1234p")); // £12.34
