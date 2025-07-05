@@ -27,4 +27,8 @@ test("should return 11 for any Ace (A)", () => {
 test("should return null or throw an error for invalid cards", () => { 
   expect(() => getCardValue("1♦")).toThrow("Invalid card rank.");
   expect(() => getCardValue("X")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("2Q♠")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("5.1♠")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("0x03♠")).toThrow("Invalid card rank.");
 });
+
