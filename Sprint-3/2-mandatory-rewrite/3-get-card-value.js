@@ -10,9 +10,12 @@ function getCardValue(card) {
     }
     
     const number = parseInt(rank, 10);
-    if (!isNaN(number) && number >= 2 && number <= 9) {
-        return number;
+    if (String(number) !== rank) {
+        throw new Error("Invalid card rank.");
     }
+    if (number >= 2 && number <= 9) return number;
+
+
     throw new Error("Invalid card rank.");
     // replace with your code from key-implement
 }
