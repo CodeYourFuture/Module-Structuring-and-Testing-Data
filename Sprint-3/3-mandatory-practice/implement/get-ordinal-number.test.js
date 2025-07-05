@@ -8,33 +8,40 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-test("should return '1st' for 1", () => {
+test("should return '...st' for numbers ending in 1, but not in 11", () => {
     expect(getOrdinalNumber(1)).toEqual("1st");
+    expect(getOrdinalNumber(21)).toEqual("21st");
+    expect(getOrdinalNumber(531)).toEqual("531st");
 });
 
-test("should return '2nd' for 2", () => {
+test("should return '...nd' for numbers ending in 2, but not in 12", () => {
     expect(getOrdinalNumber(2)).toEqual("2nd");
+    expect(getOrdinalNumber(42)).toEqual("42nd");
+    expect(getOrdinalNumber(132)).toEqual("132nd");
 });
 
-test("should return '3rd' for 3", () => {
+test("should return '...rd' for numbers ending in 3, but not in 13", () => {
     expect(getOrdinalNumber(3)).toEqual("3rd");
+    expect(getOrdinalNumber(123)).toEqual("123rd");
+    expect(getOrdinalNumber(73)).toEqual("73rd");
 });
 
-test("should return '4th' for 4", () => {
+test("should return '...th' for numbers ending in 4, but not in 14", () => {
     expect(getOrdinalNumber(4)).toEqual("4th");
+    expect(getOrdinalNumber(84)).toEqual("84th");
+    expect(getOrdinalNumber(784)).toEqual("784th");
 });
 
-test("should return '10th' for 10", () => {
+test("should return '...th' for numbers ending in 10", () => {
     expect(getOrdinalNumber(10)).toEqual("10th");
+    expect(getOrdinalNumber(150)).toEqual("150th");
+    expect(getOrdinalNumber(340)).toEqual("340th");
 });
 
-test("should return '...th' for exeptions", () => {
+test("should return '...th' for numbers ending in 11, 12, 13", () => {
     expect(getOrdinalNumber(11)).toEqual("11th");
     expect(getOrdinalNumber(12)).toEqual("12th");
     expect(getOrdinalNumber(13)).toEqual("13th");
-});
-
-test("should return '...th' for exeptions at the end of number", () => {
     expect(getOrdinalNumber(311)).toEqual("311th");
     expect(getOrdinalNumber(512)).toEqual("512th");
     expect(getOrdinalNumber(413)).toEqual("413th");
