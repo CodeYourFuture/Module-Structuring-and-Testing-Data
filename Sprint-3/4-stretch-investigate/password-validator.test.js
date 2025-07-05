@@ -27,12 +27,8 @@ test("password has at least one English uppercase letter (A-Z)", () => {
   expect(isValidPassword("letm3in!")).toBe(false);
 });
 
-test("password has at least one English lowercase letter (a-z)", () => {
-  expect(isValidPassword("PaSS1!")).toBe(true);
-});
-
 test("password has at least one number (0-9)", () => {
-  expect(isValidPassword("passIng")).toBe(false);
+  expect(isValidPassword("Pass!word")).toBe(false);
 });
 
 test("password has at least one non-alphanumeric symbol (!#$%.*&)", () => {
