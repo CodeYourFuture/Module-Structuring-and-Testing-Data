@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 86401; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -21,5 +21,6 @@ console.log(result);
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 //------->ans: (movieLength - remainingSeconds) / 60;
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//
+//------->ans: it generates a number in "seconds", for selection of name? the selected one is fine. as long as it follows the variable names convention and the reader or debugger easily understand it.
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+//------->ans: it has a constrain or maybe limitation, that is if value movie length is bigger that 86400 the time shown not appropriate, it should give a hint that it more than a day
