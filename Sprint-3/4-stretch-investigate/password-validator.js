@@ -1,5 +1,5 @@
-
-function passwordValidator(password, bannedPassword = []) {
+const bannedPassword = []
+function passwordValidator(password) {
     //return password.length < 5 ? false : true
    // let bannedPassword = ["Password123","Mill3*","M56!h"];
     if (typeof password !== "string" || password.length < 5) return false;
