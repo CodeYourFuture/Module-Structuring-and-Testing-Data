@@ -27,3 +27,15 @@ test("should return '4th' for 4", () => {
 test("should return '10th' for 10", () => {
     expect(getOrdinalNumber(10)).toEqual("10th");
 });
+
+test("should return '...th' for exeptions", () => {
+    expect(getOrdinalNumber(11)).toEqual("11th");
+    expect(getOrdinalNumber(12)).toEqual("12th");
+    expect(getOrdinalNumber(13)).toEqual("13th");
+});
+
+test("should return '...th' for exeptions at the end of number", () => {
+    expect(getOrdinalNumber(311)).toEqual("311th");
+    expect(getOrdinalNumber(512)).toEqual("512th");
+    expect(getOrdinalNumber(413)).toEqual("413th");
+});

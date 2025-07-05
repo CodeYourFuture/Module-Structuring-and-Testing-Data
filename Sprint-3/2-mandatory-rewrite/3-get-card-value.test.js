@@ -23,9 +23,28 @@ test("should return 11 for Ace Cards ", () => {
     expect(getCardValue("A♦")).toEqual(11);
     expect(getCardValue("A♣")).toEqual(11);
 });
-// Case 5: Handle Invalid Cards:
-test("should return error for invalid Cards", () => {
+// Case 5: Handle Invalid Cards suits:
+test("should return error for invalid Card suits", () => {
     expect(() => {
         getCardValue("Z");
-    }).toThrow("Invalid card rank.");
+    }).toThrow("Invalid card suit.");
+    expect(() => {
+        getCardValue("7#");
+    }).toThrow("Invalid card suit.");
 });
+// Case 6: Handle Invalid Cards faces:
+test("should return error for invalid Card faces", () => {
+    expect(() => {
+        getCardValue("Z♠");
+    }).toThrow("Invalid card face.");
+    expect(() => {
+        getCardValue("@♦");
+    }).toThrow("Invalid card face.");
+});
+// Case 7: Handle Invalid Card numbers:
+test("should return error for invalid Card numbers", () => {
+    expect(() => {
+        getCardValue("23♠");
+    }).toThrow("Invalid card number.");
+});
+

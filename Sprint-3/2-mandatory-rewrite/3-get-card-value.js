@@ -1,10 +1,15 @@
 function getCardValue(card) {
+    let noSuitPart = card.substring(0, card.length - 1);
     let suits = ["♠", "♥", "♦", "♣"];
+    let faceCards = ['J', 'Q', 'K', 'A'];
     if (!suits.includes(card[card.length - 1])) {
-        throw new Error("Invalid card rank.");
+        throw new Error("Invalid card suit.");
     }
-    if (card.substring(0, card.length - 1) !== "10" && !isNaN(Number(card[0])) && Number(card[0]) < 2) {
-        throw new Error("Invalid card rank.");
+    if (isNaN(Number(noSuitPart)) && !faceCards.includes(noSuitPart)) {
+        throw new Error("Invalid card face.");
+    }
+    if (!isNaN(Number(noSuitPart)) && (Number(noSuitPart) < 2 || Number(noSuitPart) > 10)) {
+        throw new Error("Invalid card number.");
     }
     if (card[0] === 'A') {
         return 11;
