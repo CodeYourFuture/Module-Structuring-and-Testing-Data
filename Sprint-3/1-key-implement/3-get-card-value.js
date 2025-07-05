@@ -13,7 +13,7 @@ function getCardValue(card) {
   if (rank === "A") return 11;
   //parseInt(rank) and Number(rank) are the same thing. parseInt() is a function that parses a string and returns an integer. If the first character in the string can't be converted into a number, then it returns NaN. Number() is a function that converts a string to a number. If the string can't be converted into a number, then it returns NaN.
   //For numerical cards, we return the number
-  if (!isNaN(num) >= 2 && num <= 10) return num;
+  if (!isNaN(num) && num >= 2 && num <= 10) return num;
   //For face cards, we return 10
   if (rank === "J" || rank === "Q" || rank === "K") return 10;
   //If the card is invalid, we throw an error
