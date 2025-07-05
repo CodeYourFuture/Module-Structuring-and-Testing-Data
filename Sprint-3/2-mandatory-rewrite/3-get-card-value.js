@@ -11,6 +11,7 @@ function getCardValue(card) {
   if (["K", "Q", "J", "10"].includes(rank)) return 10;
   
   // Digits 2–9
+  // return the rank as a number if it's between 2 and 9
   if ("23456789".includes(rank)) return Number(rank);
 
   throw new Error("Invalid card rank");
