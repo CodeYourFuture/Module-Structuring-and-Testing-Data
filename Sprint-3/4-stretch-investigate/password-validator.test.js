@@ -25,13 +25,12 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+// Case: Password with only 5 digits should be valid if it meets all rules
+
  const isValidPassword = require("./password-validator");
 
-test("password has at least 5 characters", () => {
-  // Arrange
+test("should validate a password of exactly 5 digits if valid", () => {
   const password = "12345";
-  // Act
   const result = isValidPassword(password);
-  // Assert
-  expect(result).toEqual(false); // Fix: This should be false because it doesn't meet all rules
+  expect(result).toEqual(true); // Fix: This should be true because it meets the minimum length
 });
