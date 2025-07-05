@@ -43,7 +43,7 @@ test("password has to have at least one number (0-9)", () => {
 
 test("password has to have at least one of the following non-alphanumeric symbols: !#$%.*&", () => {
     // Act
-    const result = passwordValidator('qweiQ');
+    const result = passwordValidator('qwei1Q');
     // Assert
     expect(result).toEqual(false);
 });

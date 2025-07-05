@@ -11,10 +11,13 @@ test("card number must have at least two different digits represented (all of th
 
 test("card number must not contain invalid characters.", () => {
     expect(isCardValid('a92332119c011112')).toEqual(false);
+    expect(isCardValid('-123456789012340')).toEqual(false);
+    expect(isCardValid('1.23456789012340')).toEqual(false);
 });
 
 test("the sum of all the digits must be greater than 16.", () => {
     expect(isCardValid('1111111111111110')).toEqual(false);
+    expect(isCardValid('5000011111111200')).toEqual(false);
 });
 
 test("The final digit must not be odd.", () => {

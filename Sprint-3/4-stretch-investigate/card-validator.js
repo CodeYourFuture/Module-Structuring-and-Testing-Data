@@ -4,6 +4,9 @@ function isCardValid(cardNumber) {
     } /* this check goes before others, because if not-number characters present 
         there is no point to do other checks */ else if (isNaN(cardNumber)) {
         return false;
+    } /* number also must be integer and positive*/
+    else if (!Number.isInteger(Number(cardNumber)) || Number(cardNumber) < 0) {
+        return false;
     } else if (checkIfStringHasOneTypeChar(cardNumber)) {
         return false;
     } else if (sumOfDigits(cardNumber) < 16) {
@@ -18,7 +21,7 @@ function isCardValid(cardNumber) {
 function sumOfDigits(cardNumber) {
     sum = 0;
     for (let i = 0; i < cardNumber.length - 1; i++) {
-        sum = sum + Number(cardNumber[0]);
+        sum = sum + Number(cardNumber[i]);
     }
     return sum;
 }
