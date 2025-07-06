@@ -5,25 +5,6 @@ const repeat = require("./repeat");
 // Then it should:
 
 
-
-function test(description, fn) {
-  try {
-    fn();
-    console.log(`pass ${description}`);
-  } catch (e) {
-    console.error(`failed ${description}`);
-    console.error(e);
-  }
-}
-function expect(actual) {
-  return {
-    toEqual(expected) {
-      if (actual !== expected) {
-        throw new Error(`Expected ${actual} to equal ${expected}`);
-      }
-    }
-  };
-}
 // case: repeat String:
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
