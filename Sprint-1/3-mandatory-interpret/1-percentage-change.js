@@ -19,8 +19,8 @@
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // The error occurs on line 7: `priceAfterOneYear.replaceAll("," "")`
-// The error is due to a syntax mistake in the `replaceAll` method call; there is an extra space between the comma and the closing double quote.
-
+// The error is due to a syntax mistake in the `replaceAll` method call. There is a missing comma between the two arguments.
+// To fix this, we need to add the missing comma, it should be `priceAfterOneYear.replaceAll(",", "")`.
 
 // c) Identify all the lines that are variable reassignment statements
 // The variable reassignment statements are:
@@ -54,6 +54,5 @@ const percentageChange = (priceDifference / carPrice) * 100;
 
 // Output the result
 console.log(`The percentage change is ${percentageChange.toFixed(2)}%`);
-
 
 // The corrected line should be:
