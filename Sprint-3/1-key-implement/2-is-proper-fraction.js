@@ -9,6 +9,7 @@
 
 function isProperFraction(numerator, denominator) {
     if (numerator < denominator) return true;
+    return false; // Added to handle the case for improper fractions
 }
 
 // here's our helper again
