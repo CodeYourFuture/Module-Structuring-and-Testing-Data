@@ -12,10 +12,12 @@
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// There are 3 function calls in this file:
-// 1. `carPrice.replaceAll(",", "")` on line 6
-// 2. `priceAfterOneYear.replaceAll("," "")` on line 7
-// 3. `console.log(...)` on line 12
+//There are 5 function calls in total.
+// 1. `carPrice.replaceAll(",", "")` on line 4.
+// 2. numbeer(carPrice.replaceAll(",", ""))` on line 4.
+// 3. `priceAfterOneYear.replaceAll("," "")` on line 5.
+// 4. `Number(priceAfterOneYear.replaceAll("," ""))` on line 5.
+// 5. `console.log(...)` on line 10.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // The error occurs on line 7: `priceAfterOneYear.replaceAll("," "")`
