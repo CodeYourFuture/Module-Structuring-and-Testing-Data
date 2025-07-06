@@ -7,6 +7,10 @@ test("should return 11 for Ace of Spades", () => {
 // Case 2: Handle Number Cards (2-10):
 test("should return 5 for Five of Hearts", () => {
     expect(getCardValue("5♥")).toEqual(5);
+    expect(getCardValue("3♣")).toEqual(3);
+    expect(getCardValue("4♦")).toEqual(4);
+
+
 });
 test('returns 10 for Ten of Diamonds', () => {
   expect(getCardValue('10♦')).toEqual(10);
