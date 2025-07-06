@@ -26,16 +26,16 @@
 
 // c) Identify all the lines that are variable reassignment statements
 // The variable reassignment statements are:
-// 1. `carPrice = Number(carPrice.replaceAll(",", ""));` on line 6
-// 2. `priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));` on line 7
+// 1. `carPrice = Number(carPrice.replaceAll(",", ""));` on line 4
+// 2. `priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));` on line 5
 
 // d) Identify all the lines that are variable declarations
 // The variable declarations are:
 // 1. `let carPrice = "10,000";` on line 1
 // 2. `let priceAfterOneYear = "8,543";` on line 2
-// 3. `const priceDifference = carPrice - priceAfterOneYear;` on line 9
-// 4. `const percentageChange = (priceDifference / carPrice) * 100;` on line 10
-// 5. `console.log(...)` on line 12 (though this is a function call, it also serves as a declaration in this context)
+// 3. `const priceDifference = carPrice - priceAfterOneYear;` on line 7
+// 4. `const percentageChange = (priceDifference / carPrice) * 100;` on line 8
+// 5. `console.log(...)` on line 10 (though this is a function call, it also serves as a declaration in this context)
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 // The expression `Number(carPrice.replaceAll(",", ""))` is converting the string representation of the car price (which includes commas) into a number.
