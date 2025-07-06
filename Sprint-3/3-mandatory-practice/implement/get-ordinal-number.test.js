@@ -4,24 +4,6 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // continue testing and implementing getOrdinalNumber for additional cases
 // Write your tests using Jest - remember to run your tests often for continual feedback
 
-function test(description, fn) {
-  try {
-    fn();
-    console.log(`pass ${description}`);
-  } catch (e) {
-    console.error(`failed ${description}`);
-    console.error(e);
-  }
-}
-function expect(actual) {
-  return {
-    toEqual(expected) {
-      if (actual !== expected) {
-        throw new Error(`Expected ${actual} to equal ${expected}`);
-      }
-    }
-  };
-}
 // Case 1: Identify the ordinal number for 1
 // When the number is 1,
 // Then the function should return "1st"
@@ -38,8 +20,6 @@ test("should return '2nd' for2", () => {
     expect(getOrdinalNumber(2)).toEqual("2nd");
     });
 
-
-
 // Case 3: identify the ordinal number for 30
 // when the number is ,
 // then the function should return "30th"
@@ -47,7 +27,6 @@ test("should return '2nd' for2", () => {
 test("should return '30th' for30", () => { 
     expect(getOrdinalNumber(30)).toEqual("30th");
     });
-
 
 // Case 4: 3rd
 test("should return '3rd' for 3", () => { 
