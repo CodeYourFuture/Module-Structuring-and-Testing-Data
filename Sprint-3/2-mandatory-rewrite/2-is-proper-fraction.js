@@ -8,11 +8,3 @@ function isProperFraction(numerator, denominator) {
 
 module.exports = isProperFraction;
 
-/*
-console.log(isProperFraction(2, -3));   
-console.log(isProperFraction(-2, 3));   
-console.log(isProperFraction(-2, -3));  
-console.log(isProperFraction(3, 2));    
-console.log(isProperFraction(0, 5));    
-console.log(isProperFraction(5, 0));    
-*/
