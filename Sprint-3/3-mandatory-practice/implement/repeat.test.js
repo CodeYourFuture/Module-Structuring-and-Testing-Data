@@ -45,5 +45,4 @@ test("should repeat the string count times", () => {
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 test("should throw an error for negative count", () => {
   expect(() => repeat("oops", -2)).toThrow("Count must be non-negative");
-  }
-});
+  });

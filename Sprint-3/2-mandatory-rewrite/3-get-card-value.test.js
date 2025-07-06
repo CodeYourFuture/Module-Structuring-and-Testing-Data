@@ -30,3 +30,14 @@ test("should throw an error for invalid card rank", () => {
 test("should throw an error for invalid card rank", () => {
     expect(() => getCardValue("11♠")).toThrow("Invalid card rank.");
 });
+
+
+test("should throw an error for hex literal rank", () => {
+    expect(() => getCardValue("0x02♠")).toThrow("Invalid card rank.");
+});
+test("should throw an error for float rank", () => {
+    expect(() => getCardValue("2.1♠")).toThrow("Invalid card rank.");
+});
+test("should throw an error for underscore rank", () => {
+    expect(() => getCardValue("00_02♠")).toThrow("Invalid card rank.");
+});

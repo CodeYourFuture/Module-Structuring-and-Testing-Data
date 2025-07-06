@@ -3,8 +3,7 @@ function getCardValue(card) {
   
   if (rank === "A") return 11;
   if (["K", "Q", "J", "10"].includes(rank)) return 10;
-  const num = Number(rank);
-  if (num >= 2 && num <= 9) return num;
+  if (/^[2-9]$/.test(rank)) return Number (rank);
   
   throw new Error("Invalid card rank.");
 }
