@@ -28,3 +28,11 @@ const str = "ssss";
 const char = "h";
 const count = countChar(str, char);
 expect(count).toEqual(0);});
+
+// Scenario: Case sensitivity
+test("should respect case sensitivity when counting characters", () => {
+  const str = "AbcA";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
