@@ -1,12 +1,9 @@
 function repeat(str, count) {
   if (count < 0) {
-    return "Invalid Input";
+    throw new Error("Invalid input: count must be non-negative");
   }
-  return `${str}`.repeat(count);
+  return String(str).repeat(count);
 }
-
-
-
 
 
 module.exports = repeat;
