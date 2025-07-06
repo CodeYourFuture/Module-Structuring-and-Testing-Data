@@ -16,7 +16,6 @@ and  "08:00 am" directly from the input for 08:00,and not clearly mention 12:00 
 function formatAs12HourClock(time) {
     const [hourStr, minuteStr] = time.split(":");
     let hours = Number(hourStr);
-  const minutes = minuteStr;
   const period = hours >= 12 ? "pm" : "am";
 if (hours === 0) {
     hours = 12;
@@ -24,7 +23,7 @@ if (hours === 0) {
     hours -= 12;
   }
 
-  return `${hours}:${minutes} ${period}`;
+  return `${hours}:${minuteStr} ${period}`;
 }
 /*The function `formatAs12HourClock` converts a 24-hour time string like `"23:00"` into a 12-hour format with AM or PM. First, it splits the input string at the colon, separating the hours and minutes into two variables, for example, `"23"` and `"00"`. 
 The hour string is then converted to a number so it can be manipulated. The minutes remain as a string.
