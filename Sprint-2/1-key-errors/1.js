@@ -28,4 +28,4 @@ function convertToPercentage(decimalNumber) {
   return percentage;
 }
 console.log(convertToPercentage(0.5)); // Output: "50%"
-console.log(convertToPercentage(0.1));
+console.log(convertToPercentage(0.1)); // Output: "10%"
