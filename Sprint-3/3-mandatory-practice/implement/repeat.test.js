@@ -44,12 +44,6 @@ test("should repeat the string count times", () => {
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 test("should throw an error for negative count", () => {
-  const str = "oops";
-  const count = -2;
-  try {
-    repeat(str, count);
-    throw new Error("Did not throw for negative count");
-  } catch (e) {
-    expect(e.message).toEqual("Count must be non-negative");
+  expect(() => repeat("oops", -2)).toThrow("Count must be non-negative");
   }
 });
