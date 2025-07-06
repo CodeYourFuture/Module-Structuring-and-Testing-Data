@@ -16,7 +16,7 @@
 
 function calculateBMI(weightKg, heightM) {
     // return the BMI of someone based off their weight and height
-    square=(heightM*heightM);
+    const square=(heightM*heightM);
     const bmi = weightKg / square;
     // return the BMI to 1 decimal 
   return bmi.toFixed(1);
