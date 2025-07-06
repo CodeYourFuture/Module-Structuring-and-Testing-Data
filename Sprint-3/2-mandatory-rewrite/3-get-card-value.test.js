@@ -24,6 +24,9 @@ test("should return 11 for  AceCard", () => {
 
 test('throws error for invalid card', () => {
   expect(() => getCardValue("ST")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("0x02♠")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("5.1♠")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("   5   ♠")).toThrow("Invalid card rank.");
 });
 // Case 2: Handle Number Cards (2-10):
 // Case 3: Handle Face Cards (J, Q, K):
