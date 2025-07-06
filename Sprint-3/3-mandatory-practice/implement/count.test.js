@@ -9,26 +9,6 @@ function countChar(stringOfCharacters, findCharacter) {
     return count;
 }
 
-
-function test(description, fn) {
-  try {
-    fn();
-    console.log(`pass ${description}`);
-  } catch (e) {
-    console.error(`failed ${description}`);
-    console.error(e);
-  }
-}
-function expect(actual) {
-  return {
-    toEqual(expected) {
-      if (actual !== expected) {
-        throw new Error(`Expected ${actual} to equal ${expected}`);
-      }
-    }
-  };
-}
-
 // Given a string str and a single character char to search for,
 // When the countChar function is called with these inputs,
 // Then it should:
