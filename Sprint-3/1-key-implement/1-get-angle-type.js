@@ -51,10 +51,15 @@ assertEquals(acute, "Acute angle");
 const obtuse = getAngleType(120);
 assertEquals(obtuse, "Obtuse angle");
 console.log("Obtuse angle test passed!");
+const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angle");
+
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
 // ====> write your test here, and then add a line to pass the test in the function above
+const straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
 
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
@@ -63,3 +68,6 @@ console.log("Obtuse angle test passed!");
 
 
 console.log("All tests passed! 🎉");
+
+const reflex = getAngleType(270);
+assertEquals(reflex, "Reflex angle");
