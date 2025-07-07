@@ -1,6 +1,6 @@
 function repeat(str, count) {
 
-  if (Number(count) > 1) {
+  if (count > 1) {
     let result=""
     for (let i = 0; i <= count-1; i++) {
       result += str;
