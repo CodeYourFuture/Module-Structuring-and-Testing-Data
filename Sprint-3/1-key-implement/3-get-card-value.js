@@ -10,13 +10,12 @@
 
 function getCardValue(card) {
   const rank = card.slice(0, -1); // remove last character 
-  const numberCards = Number(rank);
+  const numberCards = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];   // Define number cards in standard deck rather than relying on 'Number(rank)' to convert and check rank range.
 
   if (rank === "A") return 11;
-  if (["K", "Q", "J", "10"].includes(rank)) return 10; // To handle face cards
-  if (!isNaN(numberCards) && numberCards >= 2 && numberCards <= 10) { // Check that numberCards is a valid number and ensure they are within range (2–10)
-    return numberCards;
-  }
+  if (["K", "Q", "J"].includes(rank)) return 10; // To handle face cards
+  if (numberCards.includes(rank)) return Number(rank);
+  
   return "Invalid card rank";
 }
 
@@ -48,7 +47,7 @@ assertEquals(fiveofHearts, 5);
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-const faceCards = ["K♠", "Q♥", "J♦", "10♣"];
+const faceCards = ["K♠", "Q♥", "J♦"];
 for (const card of faceCards) {
   assertEquals(getCardValue(card), 10); // compare with number, not string
 }
