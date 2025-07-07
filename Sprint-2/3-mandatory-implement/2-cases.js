@@ -14,17 +14,3 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-
-let myStr = "hello world I am sleepy";
-
-// let myStrUpperCase = myStr.toUpperCase();
-
-// let arrWord = myStrUpperCase.split(" ");
-
-// let myStrUpperCaseWithSnakeCase = arrWord.join("_");
-
-//console.log(`${arrWord}`);
-
-let combine = myStr.toUpperCase().split(" ").join("_");
-
-console.log(`${combine}`);
