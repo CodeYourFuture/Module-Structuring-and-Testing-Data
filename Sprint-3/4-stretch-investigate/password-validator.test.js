@@ -16,35 +16,29 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
  // Assert
     
+const passwordValidator= require("./password-validator");
 
-  const previousPasswords = ("Password123!", "Welcome1$", "Admin#2023");
+  test("Password must be at least 5 characters long.", () => {
+    expect(passwordValidator("Strong1!")).toBe(true);
+});
+  
+  test("Password must include at least one uppercase letter.", () =>{
+    expect(passwordValidator("strong1")).toBe(false);
+  } )
+  
+  test("Password must include at least one lowercase letter.", () =>{
+    expect(passwordValidator("STRONG1")).toBe(false);
+  } )
+  
+  test("Password must include at least one number.", () =>{
+    expect(passwordValidator("Strong")).toBe(false);
+  } )
 
-function isValidPassword(password) {
-  if (password.length < 5) {
-    return { valid: false, message: "Password must be at least 5 characters long." };
-  }
+ test("Password must include at least one special symbol (!#$%.*&).", () =>{
+    expect(passwordValidator("Strong")).toBe(false);
+  } )  
 
-  if (!/[A-Z]/.test(password)) {
-    return { valid: false, message: "Password must include at least one uppercase letter." };
-  }
-
-  if (!/[a-z]/.test(password)) {
-    return { valid: false, message: "Password must include at least one lowercase letter." };
-  }
-
-  if (!/[0-9]/.test(password)) {
-    return { valid: false, message: "Password must include at least one number." };
-  }
-
-  if (!/[!#$%.*&]/.test(password)) {
-    return { valid: false, message: "Password must include at least one special symbol (!#$%.*&)." };
-  }
-
-  if (previousPasswords.includes(password)) {
-    return { valid: false, message: "This password has already been used. Please choose a new one." };
-  }
-
-  return { valid: true };
-}
-
-module.exports = isValidPassword;
+  test("This password has already been used. Please choose a new one.", () =>{
+    expect(passwordValidator("Password123")).toBe(false);
+    
+  })
