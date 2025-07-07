@@ -51,6 +51,8 @@ console.assert(negativeFraction === true, "Expected -4/7 to be a proper fraction
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
 // ====> complete with your assertion
+assertEquals(equalFraction, false);
+console.assert(equalFraction === false, "Expected 3/3 to not be a proper fraction");
 
 // Stretch:
 // What other scenarios could you test for?
