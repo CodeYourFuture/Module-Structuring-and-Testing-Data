@@ -2,7 +2,7 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
@@ -29,7 +29,7 @@ We  got the error because we missed the comma between the arguments in replaceAl
 */
 
 // c) Identify all the lines that are variable reassignment statements
-// -  we reassigned the value of the carPrice and priceAfterOneYear  in line 4 and 5 
+// -  we reassigned the value of the carPrice and priceAfterOneYear  in line 4 and 5
 
 // d) Identify all the lines that are variable declarations
 /* let carPrice = "10,000";
@@ -39,7 +39,9 @@ const percentageChange = (priceDifference / carPrice) * 100;
 1, 2, 7 and 8 lines are variable declarations 
 */
 
-
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
-/* Number(carPrice.replaceAll",", "") ====> the replaceAll takes the first argument and replaces all its occurrences  in carPrice 
-with the second argument. Then the Number function converts the result into a number  */
+/* 
+This expression removes all commas from the string carPrice using replaceAll(",", ""), 
+then converts the resulting string to a number using Number(). 
+This is useful to transform formatted price strings like "10,000" into numeric values for calculations.
+*/
