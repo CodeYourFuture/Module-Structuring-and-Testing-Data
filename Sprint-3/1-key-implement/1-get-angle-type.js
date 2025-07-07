@@ -13,7 +13,7 @@ function getAngleType(angle) {
     if (angle > 90 && angle < 180) return "Obtuse angle";
     if (angle === 180) return "Straight angle";
     if (angle > 180 && angle < 360) return "Reflex angle";
-    // If the angle is not in the range of 0 to 360, we can return an error message
+    return "Invalid angle"; // Added to handle angles outside the range of 0 to 360 degrees
    // read to the end, complete line 36, then pass your test here
 }
 
@@ -24,6 +24,7 @@ function assertEquals(actualOutput, targetOutput) {
     actualOutput === targetOutput,
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
+  return actualOutput === targetOutput; // Return true if the assertion passes
 }
 
 // Acceptance criteria:
@@ -37,6 +38,8 @@ function assertEquals(actualOutput, targetOutput) {
 // Then the function should return "Right angle"
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+
+
 
 // Case 2: Identify Acute Angles:
 // When the angle is less than 90 degrees,
