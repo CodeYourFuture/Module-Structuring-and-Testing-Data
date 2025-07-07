@@ -18,7 +18,7 @@ function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
      let bmi = weight / (height ** 2);
        
-    return bmi.toFixed(1);
+    return parseFloat(bmi.toFixed(1));
 }
      
      
