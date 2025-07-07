@@ -1,23 +1,12 @@
 function getAngleType(angle) {
-
- if (angle === 90) return "Right angle";
-  // replace with your completed function from key-implement
-
-// if the angle is less than 90 degrees, it's an acute angle
-  if (angle < 90) return "Acute angle";
-  // if the angle is greater than 90 degrees and less than 180 degrees, it's an obtuse angle
-  if (angle > 90 && angle < 180) return "Obtuse angle";
-  // if the angle is exactly 180 degrees, it's a straight angle
-  if (angle === 180) return "Straight angle";
-  // if the angle is greater than 180 degrees and less than 360 degrees, it's a reflex angle
-  if (angle > 180 && angle < 360) return "Reflex angle";
-  
-  // if the angle doesn't match any of the above conditions, return an error message
-  return "Invalid angle";
+   if (angle === 90) return "Right angle";
+    if (angle < 90) return "Acute angle";
+    if (angle > 90 && angle < 180) return "Obtuse angle";
+    if (angle === 180) return "Straight angle";
+    if (angle > 180 && angle < 360) return "Reflex angle";
+    return "Invalid angle"; // Added to handle angles outside the range of 0 to 360 degrees
+   // read to the end, complete line 36, then pass your test here
 }
-
-
-
 
 
 
