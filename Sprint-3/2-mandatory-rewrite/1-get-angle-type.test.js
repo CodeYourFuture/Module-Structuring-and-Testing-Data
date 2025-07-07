@@ -30,7 +30,7 @@ test("return 'Invalid angle' for angle equal to or greater than 360", () => {
   expect(getAngleType(400)).toBe("Invalid angle");
 });
 
-// Case 5: Reject angles that are zero or negative:
+// Case 7: Reject angles that are zero or negative:
 test("return 'Invalid angle' for angle less than or equal to 0", () => {
   expect(getAngleType(0)).toBe("Invalid angle");
   expect(getAngleType(-45)).toBe("Invalid angle");
