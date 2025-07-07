@@ -9,13 +9,23 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 
 function getCardValue(card) {
+  if (card.length < 2) {
+    throw new Error("Invalid card format card string is too short.");
+  }
+  const validSuits = ['♠', '♥', '♦', '♣']
+  const suit = card.slice(-1);
+  if (!validSuits.includes(suit))
+    throw new Error ("Invalid card missing suit")
+
   rank = card.slice(0, -1); 
   if (rank === "A") return 11;
-  const numRank = parseInt(rank)
-  if ([2, 3, 4, 5, 6, 7, 8, 9].includes(numRank)) return parseInt(numRank);
-  if (["J", "Q", "K", "10"].includes(rank)) return 10;
-  if (rank === "A") return 11;
+  const numRank = Number(rank)
 
+  if (!isNaN(numRank) && numRank >=2 && numRank <= 9){
+    return numRank
+  }
+
+  if (["J", "Q", "K", "10"].includes(rank)) return 10;
   throw new Error("Invalid card rank.");
 }
 
@@ -84,6 +94,12 @@ try {
   console.assert(false, "Expected an error for invalid card rank '1♠'");
 } catch (error) {
   assertEquals(error.message, "Invalid card rank.");
+}
+try {
+  getCardValue("99");
+  console.assert(false, "Expected an error for invalid card rank '99'");
+} catch (error) {
+  assertEquals(error.message, "Invalid card missing suit");
 }
 
 // Stretch:
