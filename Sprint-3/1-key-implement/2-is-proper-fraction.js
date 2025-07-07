@@ -56,3 +56,12 @@ console.assert(equalFraction === false, "Expected 3/3 to not be a proper fractio
 
 // Stretch:
 // What other scenarios could you test for?
+// Zero Numerator check:
+// Input: numerator = 0, denominator = 5
+// target output: true
+// Explanation: The fraction 0/5 is a proper fraction because the numerator is zero, which is less than the denominator. The function should return true.
+const zeroNumerator = isProperFraction(0, 5);
+assertEquals(zeroNumerator, true);
+console.assert(zeroNumerator === true, "Expected 0/5 to be a proper fraction");
+
+
