@@ -8,9 +8,11 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
+    const rank = card.slice(0, -1); // Get the rank (everything except the last character)
     if (rank === "A") return 11;
     if (["J", "Q", "K"].includes(rank)) return 10;
     if (rank >= "2" && rank <= "9") return parseInt(rank, 10);
+    if (rank === "10") return 10; // Handle the 10 card explicitly
     throw new Error("Invalid card rank");
 }
 
