@@ -5,19 +5,21 @@
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minuteNum = Number(time.slice(3));
-  const minute = String(minuteNum).padStart(2, "0");
+  const minuteStr = String(minuteNum).padStart(2, "0");
 
   if (hours > 12) {
-    return `${hours - 12}:${minute} pm`;
-  } else if (hours === 0 && minuteNum === 0) {
-    return "12:00 am";
-  } else if (hours === 0 && minuteNum > 0) {
-    return `12:${minute} am`;
+    return `${hours - 12}:${minuteStr} pm`;
+  } else if (hours === 0) {
+    if (minuteNum === 0) {
+      return "12:00 am";
+    } else {
+      return `12:${minuteStr} am`;
+    }
   } else if (hours === 12) {
-    return `${hours}:${minute} pm  `;
+    return `${hours}:${minuteStr} pm`;
   }
 
-  return `${String(hours).padStart(2, "0")}:${minute} am`;
+  return `${String(hours).padStart(2, "0")}:${minuteStr} am`;
 }
 
 const currentOutput = formatAs12HourClock("08:00");
