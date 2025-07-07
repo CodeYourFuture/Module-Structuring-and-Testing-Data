@@ -56,8 +56,16 @@ assertEquals(kingOfSpades, 10);
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+// (Note: In some games, the Ace can also be worth 1 point, but for this function, we will assume it is always worth 11 points.)
+const aceOfDiamonds = getCardValue("A♦");
+assertEquals(aceOfDiamonds, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+try {
+    getCardValue("Z♠"); // Invalid card
+} catch (error) {
+    console.assert(error.message === "Invalid card rank", "Expected error for invalid card rank");
+}
