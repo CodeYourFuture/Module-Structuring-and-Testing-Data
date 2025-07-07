@@ -61,6 +61,57 @@ test("password has not non-alphanumeric symbols", () => {
     expect(result2).toEqual(false);
 }
 );
+test("password is invalid for multiple conditions", () => {
+    // Arrange
+    const password = "HELLOWORLD";
+    // Act
+    const result2 = isValidPassword(password);
+    // Assert
+    expect(result2).toEqual(false);
+}
+);
+
+test("password is invalid for multiple conditions", () => {
+    // Arrange
+    const password = "";
+    // Act
+    const result2 = isValidPassword(password);
+    // Assert
+    expect(result2).toEqual(false);
+}
+);
+
+test("password is invalid for multiple conditions", () => {
+    // Arrange
+    const password = "helloworld";
+    // Act
+    const result2 = isValidPassword(password);
+    // Assert
+    expect(result2).toEqual(false);
+}
+);
+
+test("password is invalid for multiple conditions", () => {
+    // Arrange
+    const password = "12345";
+    // Act
+    const result2 = isValidPassword(password);
+    // Assert
+    expect(result2).toEqual(false);
+}
+);
+
+test("password is invalid for multiple conditions", () => {
+    // Arrange
+    const password = "!#$%.*&";
+    // Act
+    const result2 = isValidPassword(password);
+    // Assert
+    expect(result2).toEqual(false);
+}
+);
+
+
 test("password has same password with previous", () => {
     // Arrange
     const password = "HelloWorld02$";
