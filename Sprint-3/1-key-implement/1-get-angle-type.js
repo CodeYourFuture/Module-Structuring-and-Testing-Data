@@ -10,7 +10,8 @@
 function getAngleType(angle) {
   if (angle === 90) return "Right angle";
   // read to the end, complete line 36, then pass your test here
-  if (angle < 90) return "Acute angle";
+  if (angle === 0) return "Zero angle";
+  if (angle > 0 && angle < 90) return "Acute angle";
   if (angle > 90 && angle < 180) return "Obtuse angle";
   if (angle === 180) return "Straight angle";
   if (angle > 180 && angle < 360) return "Reflex angle";
@@ -76,7 +77,7 @@ const negativeAngles = getAngleType(-45);
 assertEquals(negativeAngles, "Invalid angle");
 
 const zeroAngle = getAngleType(0);
-assertEquals(zeroAngle, "Invalid angle");
+assertEquals(zeroAngle, "Zero angle");
 
 const greaterThan360 = getAngleType(400);
 assertEquals(greaterThan360, "Invalid angle");
