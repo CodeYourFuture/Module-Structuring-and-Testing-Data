@@ -42,9 +42,8 @@ test("should repeat empty string for count equals zero", () => {
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
-test("should repeat empty string for count equals zero", () => {
+test("should throw an error for negative count", () => {
   const str = "hello";
   const count = -5;
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("Negative counts are not valid.");
+  expect(() => repeat(str, count)).toThrow("Negative counts are not valid.");
 });

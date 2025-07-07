@@ -9,7 +9,7 @@ function repeat(str, count) {
   }
   if (count == 1) return str;
   if (count == 0) return "";
-  return "Negative counts are not valid.";
+  throw new Error("Negative counts are not valid.");
 }
 
 module.exports = repeat;
