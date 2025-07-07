@@ -15,15 +15,17 @@ const base = filePath.slice(lastSlashIndex + 1);
 console.log(`The base part of ${filePath} is ${base}`);
 
 // Create a variable to store the dir part of the filePath variable
-// Create a variable to store the ext part of the variable
+
 
 const dir = filePath.slice(0, lastSlashIndex);// The code uses the lastIndexOf method to find the position of the last slash in;
 console.log(`The dir part of ${filePath} is ${dir}`);
 filePath.slice(0, lastSlashIndex);
-const ext = filePath;
+
 filePath
   .slice(lastSlashIndex + 1)
   .split(".")
   .pop();
-// The code above uses the lastIndexOf method to find the position of the last slash in the filePath string.
-// The slice method is then used to extract the base part of the filePath string, which is the part after the last slash.
+// Create a variable to store the ext part of the variable
+
+const ext=base.slice(base.lastIndexOf(".") + 1);
+console.log(`The ext part of ${filePath} is ${ext}`); 
