@@ -47,3 +47,5 @@ function cardValidation(CardNumber){
     // The function returns true, indicating that the card number meets all validation criteria.
     return true; 
     }
+
+    module.exports = cardValidation;

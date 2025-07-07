@@ -1,15 +1,14 @@
 let previousPasswords = []
 
-function passwordValidator(password) {
-    if(password.length >= 5 
-        && /[A-Z]/.test(password) 
-        && /[a-z]/.test(password) 
-        && /\d/.test(password) 
-        && /[!#$%.*&]/.test(password)
-        && !previousPasswords.includes(password)) {
-        return true;
-        }; 
-    return false;
-    }
+function passwordValidator(password,previousPasswords = []) {
+    const hasMinLength = password.length >= 5 
+    const hasUpperCase = /[A-Z]/.test(password) 
+        const hasLowerCase = /[a-z]/.test(password) 
+        const hasNumber = /\d/.test(password) 
+        const hasSymbols = /[!#$%.*&]/.test(password)
+        const isNotPreviousPassword = !previousPasswords.includes(password) 
+        
+        return hasMinLength && hasUpperCase && hasLowerCase && hasNumber && hasSymbols && isNotPreviousPassword;
+}
 
 module.exports = passwordValidator;
