@@ -36,10 +36,7 @@ function assertEquals(actualOutput, targetOutput) {
 // Case 1: Identify Right Angles:
 // When the angle is exactly 90 degrees,
 // Then the function should return "Right angle"
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
-
-
+assertEquals(getAngleType(90), "Right angle");
 
 // Case 2: Identify Acute Angles:
 // When the angle is less than 90 degrees,
