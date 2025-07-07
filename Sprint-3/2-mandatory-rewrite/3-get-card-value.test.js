@@ -6,34 +6,21 @@ test("should return 11 for Ace of Spades", () => {
 });
 
 // Case 2: Handle Number Cards (2-10):
-test("should return 2 for 2 of Hearts", () => {
-  const twoOfHearts = getCardValue("2♥");
-  expect(twoOfHearts).toEqual(2);
-});
-
-test("should return 10 for 10 of Diamonds", () => {
-  const tenOfDiamonds = getCardValue("10♦");
-  expect(tenOfDiamonds).toEqual(10);
+test("should return the value of number cards (2-10)", () => {
+  expect(getCardValue("2♣")).toEqual(2);
+  expect(getCardValue("5♠")).toEqual(5);
+  expect(getCardValue("10♥")).toEqual(10);
 });
 
 // Case 3: Handle Face Cards (J, Q, K):
-test("should return 10 for Jack of Clubs", () => {
-  const jackOfClubs = getCardValue("J♣");
-  expect(jackOfClubs).toEqual(10);
-});
-test("should return 10 for Queen of Hearts", () => {
-  const queenOfHearts = getCardValue("Q♥");
-  expect(queenOfHearts).toEqual(10);
+test("should return 10 for Face cards J, Q, K", () => {
+  expect(getCardValue("J♠")).toEqual(10);
+  expect(getCardValue("Q♥")).toEqual(10);
 });
 
 // Case 4: Handle Ace (A):
 test("should return 11 for Ace of Diamonds", () => {
-  const aceOfDiamonds = getCardValue("A♦");
-  expect(aceOfDiamonds).toEqual(11);
-});
-test("should return 11 for Ace of Clubs", () => {
-  const aceOfClubs = getCardValue("A♣");
-  expect(aceOfClubs).toEqual(11);
+  expect(getCardValue("A♦")).toEqual(11);
 });
 
 // Case 5: Handle Invalid Cards:
