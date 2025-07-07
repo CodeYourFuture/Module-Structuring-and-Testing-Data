@@ -27,5 +27,5 @@ filePath
   .pop();
 // Create a variable to store the ext part of the variable
 
-const ext=base.slice(base.lastIndexOf(".") + 1);
+const ext=base.slice(base.lastIndexOf(".") + 1); // The code uses the lastIndexOf method to find the position of the last dot in the base variable.
 console.log(`The ext part of ${filePath} is ${ext}`); 
