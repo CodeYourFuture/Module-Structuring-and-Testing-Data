@@ -2,6 +2,7 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
+//priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
 priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
@@ -18,7 +19,7 @@ console.log(`The percentage change is ${percentageChange}`);
 //    In line 10: console.log(`The percentage change is ${percentageChange}`); 1 function call; console.log().
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-//    There is a TypoError in line 5. it can be fixed by adding ',' to the replaceAll() function.
+//    There is a SyntaxError in line 5. it can be fixed by adding ',' to the replaceAll() function. I have fixed the error in line 6.
 
 // c) Identify all the lines that are variable reassignment statements
 //    Variable reassignment taken place in line 4 and line 5.
