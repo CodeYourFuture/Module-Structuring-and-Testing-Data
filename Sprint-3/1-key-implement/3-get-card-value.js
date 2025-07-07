@@ -9,6 +9,9 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
     if (rank === "A") return 11;
+    if (["J", "Q", "K"].includes(rank)) return 10;
+    if (rank >= "2" && rank <= "9") return parseInt(rank, 10);
+    throw new Error("Invalid card rank");
 }
 
 // You need to write assertions for your function to check it works in different cases
