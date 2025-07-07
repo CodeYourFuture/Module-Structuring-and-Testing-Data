@@ -22,15 +22,16 @@ console.log(`The percentage change is ${percentageChange}`);
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 
 
-// a) There are 3 function calls in this file:
+// a) There are 5 function calls in this file:
 //  `carPrice.replaceAll(",", "")` on line 5
 //  `priceAfterOneYear.replaceAll(",", "")` on line 6
-//  `Number(...)` on lines 5 and 6
-// b) The error occurs on line 5 there's a missing comma.
+//  `Number(...)` on lines 4 and 5
+// console.log on line 10.
+// b) A comma is missing between the first and second string arguments which causes the error.
 //c) The variable reassignment statements are:
 //  `carPrice = Number(carPrice.replaceAll(",", ""));` on line 5
 //  `priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));` on line 6
 // d) The variable declarations are:
 // `let carPrice = "10,000";` on line 1
 // `let priceAfterOneYear = "8,543";` on line 2
-// e) The expression `Number(carPrice.replaceAll(",", ""))` is converting carprice, which contains a comma, into a number.  
+// e) The expression `Number(carPrice.replaceAll(",", ""))` is converting car price, which contains a comma, into a number.  
