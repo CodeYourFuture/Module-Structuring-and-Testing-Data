@@ -38,7 +38,7 @@ If the length was less than 3, zeros would be added at the start.
   paddedPenceNumberString.length - 2
 ); - In this line, the substring method is used to extract only the first character from the previously created paddedPenceNumberString variable,
  which has a length of 3. This extracted part is assigned to pounds.
-5- And finally, here we use the substring method to take the last two characters, and then use the padEnd method to add zeros at the end 
-if the length is less than 2.
-
+5- And finally, here we use the substring method to take the last two characters, and then use the padEnd method to add zeros at the end if 
+the length is less than 2.padEnd(2, "0") ensures the pence part always has two digits.Without this, if the pence is a single digit (e.g., "5"), 
+it could be displayed incorrectly (e.g., "5" instead of "50").
 */
