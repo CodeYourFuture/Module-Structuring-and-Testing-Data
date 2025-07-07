@@ -20,8 +20,6 @@ function cardValidator(cardNumber) {
     // Check not all digits are the same
     if (i > 0 && char !== cardNumber[0]) allSame = false;
     // I have added new condition here
-
-    if (sum > 16 && !allSame) break;
   }
   if (allSame) return false;
   if (sum <= 16) return false;
