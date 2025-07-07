@@ -8,10 +8,11 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  let rank = card[0];
+  let rank = card.startsWith("10") ? "10" : card[0];
   if (rank === "A") return 11;
   else if (rank >= "2" && rank <= "9") return Number(rank);
-  else if (rank == "10" || rank == "J" || rank == "Q" || rank == "K") return 10;
+  else if (rank === "10" || rank === "J" || rank === "Q" || rank === "K")
+    return 10;
   else return "Invalid Card rank";
 }
 
@@ -41,7 +42,7 @@ assertEquals(fiveofHearts, 5);
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-const faceCards = getCardValue("Q♣");
+const faceCards = getCardValue("10♣");
 assertEquals(faceCards, 10);
 
 // Handle Ace (A):
