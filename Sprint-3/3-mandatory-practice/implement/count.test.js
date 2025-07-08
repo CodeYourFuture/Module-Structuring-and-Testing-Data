@@ -29,3 +29,14 @@ test("should return 0 when char is not present in str", () => {
   const count2 = countChar(str2,char2);
   expect(count2).toEqual(0);
 });
+
+
+
+// Match multiple letters
+
+test("should count matches when searching for multiple letters", () => {
+  const str3 = "the rain in spain, aiyo, aiyo";
+  const char3 = "ai";
+  const count3 = countChar(str3, char3);
+  expect(count3).toEqual(4);
+})
