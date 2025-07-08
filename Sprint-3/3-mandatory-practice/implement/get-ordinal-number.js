@@ -25,7 +25,7 @@ function getOrdinalNumber(num) {
     return num + "rd";
   }
   
-  // For digits 4,5,6,7,8,9,0 or the special cases 11,12,13
+  // Everything else just ends in th
   return num + "th";
 
 }
