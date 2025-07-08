@@ -27,7 +27,7 @@ test("should return '2nd' for numbers ending in 2 except 12", () => {
 // Case 3: Identify the ordinal number for 3
 // When the number is 3,
 // Then the function should return "3rd"
-test("should return '3rd' for 3", () => {
+test("should return '3rd' for numbers ending in 3 except 13", () => {
   expect(getOrdinalNumber(3)).toEqual("3rd");
   expect(getOrdinalNumber(23)).toEqual("23rd");
 });
@@ -35,7 +35,7 @@ test("should return '3rd' for 3", () => {
 // Case 4: Identify the ordinal number for numbers between 4 and 20
 // When the number is between 4 and 20 (inclusive),
 // Then the function should return the number with "th" appended
-test("should return '4th' for 4", () => {
+test("should return '4th' to '20th' for numbers between 4 and 20", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(5)).toEqual("5th");
   expect(getOrdinalNumber(20)).toEqual("20th");
