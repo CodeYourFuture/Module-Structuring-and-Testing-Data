@@ -6,11 +6,13 @@ test("should return 11 for Ace of Spades", () => {
     });
 
 // Case 2: Handle Number Cards (2-10):
-test("should return the number for number cards", () => {
-    const nineOfSpades = getCardValue("9♠");
-    expect(nineOfSpades).toEqual(9);
-});
-
+test.each([...Array.from({length:11}, (_,i) => i.toString())])(
+  'should return correct rank for card number %s', 
+  (number) => {
+    const result = getCardValue(`${number}♠`);
+    expect(result).toEqual(Number(number));
+  }
+);
 
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return 10 for any valid face card", () => {
@@ -39,3 +41,13 @@ test("should return correct rank if string is padded with any spaces", () => {
     const spacesInCard = getCardValue("  A ♠   ");
     expect(spacesInCard).toEqual(11);
 })
+
+
+// Handle all unicode card symbols:
+test.each(['♠', '♥', '♦', '♣'])(
+  'should return correct rank for card with suit %s', 
+  (suit) => {
+    const result = getCardValue(`9${suit}`);
+    expect(result).toEqual(9);
+  }
+);

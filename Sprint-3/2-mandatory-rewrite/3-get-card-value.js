@@ -1,14 +1,14 @@
 function getCardValue(card) {
   
-    card = card.replaceAll(" ", ""); // removes any extra spaces added in card string
+  card = card.replaceAll(" ", ""); // removes any extra spaces added in card string
 
-    if (card.length != 2) {
+  if (card.length != 2 && card.length != 3) {
     throw new Error("Invalid card entered");
   }
 
   //get rank and suit from card string
-  const rank = card.slice(0,-1);
-  const suit = card.slice(1);
+  const rank = card.slice(0,-1); // returns everything except last character
+  const suit = card.slice(-1); // returns just the last character
 
 
   // make array of number ranks only 0,1,..,10
