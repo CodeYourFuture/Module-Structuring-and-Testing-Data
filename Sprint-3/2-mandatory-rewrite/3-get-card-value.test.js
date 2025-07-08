@@ -6,22 +6,41 @@ test("should return 11 for Ace of Spades", () => {
 });
 
 // Case 2: Handle Number Cards (2-10):
-test("should return number for card number bw 2-10", () => {
+test("should return number for card number bw 2-9", () => {
   const fiveofHearts = getCardValue("5♥");
   expect(fiveofHearts).toEqual(5);
 });
+
+test("should return number for card number 10", () => {
+  const fiveofHearts = getCardValue("10♥");
+  expect(fiveofHearts).toEqual(10);
+});
+
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return number for face of cards", () => {
   const faceofHearts = getCardValue("J♥");
   expect(faceofHearts).toEqual(10);
 });
+
 // Case 4: Handle Ace (A):
 test("should return number for face of cards", () => {
   const aceofHearts = getCardValue("A♥");
   expect(aceofHearts).toEqual(11);
 });
+
 // Case 5: Handle Invalid Cards:
 test("should return number for face of cards", () => {
   const invalidCard = getCardValue("C♥");
   expect(invalidCard).toEqual("Invalid card rank.");
+});
+
+
+describe("calculateMedian", () => {
+  [
+    { input: "111111♠", expected: "Invalid card rank." },
+    { input: "2.1♠", expected: "Invalid card rank."},
+    { input: "2AAAAA♠", expected: "Invalid card rank." },
+  ].forEach(({ input, expected }) =>
+    it(`returns Dedupe Array ]`, () => expect(getCardValue(input)).toEqual(expected))
+  );
 });
