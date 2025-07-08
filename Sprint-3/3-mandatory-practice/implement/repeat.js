@@ -6,10 +6,10 @@ function repeat(str, count) {
   }
 
   if (count < 0) {
-    result = "Negative counts are not valid."; // catch negative numbers
+    throw new Error("Negative count is invalid."); // catch negative numbers
+  } else {
+    return result;
   }
-
-  return result;
 }
 
 module.exports = repeat;
