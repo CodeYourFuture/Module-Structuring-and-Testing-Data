@@ -1,7 +1,4 @@
 function getOrdinalNumber(num) {
- return "1st";
-}
-function getOrdinalNumber(num) {
   const lastDigit = num % 10;
   const lastTwoDigits = num % 100;
 
@@ -20,5 +17,4 @@ function getOrdinalNumber(num) {
       return num + "th";
   }
 }
-
 module.exports = getOrdinalNumber;

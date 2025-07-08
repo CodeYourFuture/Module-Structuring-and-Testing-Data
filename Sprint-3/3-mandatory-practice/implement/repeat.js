@@ -1,11 +1,9 @@
-function repeat() {
-    return "hellohellohello";
-}
+function repeat(str = "", count = 1) {
+  if (count < 0) {
+    throw new Error("Invalid count");
+  }
 
-module.exports = repeat;
-
-function repeat(word = "hello", times = 3) {
-    return word.repeat(times);
+  return str.repeat(count);
 }
 
 module.exports = repeat;
