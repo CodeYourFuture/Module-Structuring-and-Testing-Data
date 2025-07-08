@@ -14,7 +14,7 @@ function toPounds(number){
     const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
     const pounds = paddedPenceNumberString.substring(0,paddedPenceNumberString.length - 2);
     const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
-return `£${pounds}.${pence}`
+    return `£${pounds}.${pence}`
 }
 console.assert(toPounds('399')==='£3.99','Test fail with; 399');
 console.assert(toPounds('399p')==='£3.99','Test fail with; 399p');

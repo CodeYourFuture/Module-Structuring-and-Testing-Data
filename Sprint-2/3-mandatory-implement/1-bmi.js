@@ -16,7 +16,7 @@
 
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
-return (weight/(height*height)).toFixed(1);
+return parseFloat((weight/(height*height)).toFixed(1));
 //return Math.round((weight/(height*height))*10)/10; //This is other option to fix the number of decimals to 1.
 }
 console.log(`According your values of weight and height, your BMI is: ${calculateBMI(90,1.73)}`);
