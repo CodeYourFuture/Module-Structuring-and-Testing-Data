@@ -9,13 +9,26 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
   rankChar = card.slice(0, -1); // drop the suit symbol
-  rankInt = parseInt(rankChar);
-  if (rankChar === "A") return 11; // card if ace
-  else if (rankChar === "J" || rankChar === "Q" || rankChar === "K")
-    return 10; // card is picture
-  else if (rankInt >= 2 && rankInt <= 10)
-    return rankInt; // card is number between 2 and 10
-  else return "Invalid card rank."; // it is not a card
+
+  if (rankChar === "A") return 11; // card is ace
+  else if (
+    rankChar === "10" ||
+    rankChar === "J" ||
+    rankChar === "Q" ||
+    rankChar === "K"
+  )
+    return 10; // card is 10 or picture
+  else if (rankChar.length > 1) {
+    return "Invalid card rank.";
+  } // if the card rank string is more than 1 character
+  else if (
+    Number(rankChar) % 1 === 0 &&
+    Number(rankChar) >= 2 &&
+    Number(rankChar) <= 9
+  ) {
+    // card is integer number between 2 and 9
+    return Number(rankChar);
+  } else return "Invalid card rank."; // it is not a card
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -61,14 +74,14 @@ assertEquals(aceofHearts, 11);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-const notCard = getCardValue("12♥");
+const notCard = getCardValue("0x02♥");
 assertEquals(notCard, "Invalid card rank.");
 
-const notCard2 = getCardValue("11♥");
+const notCard2 = getCardValue("2.1♥");
 assertEquals(notCard2, "Invalid card rank.");
 
-const notCard3 = getCardValue("B♥");
+const notCard3 = getCardValue("00_02♥");
 assertEquals(notCard3, "Invalid card rank.");
 
-const notCard4 = getCardValue("!♥");
+const notCard4 = getCardValue("3XYZ♥");
 assertEquals(notCard4, "Invalid card rank.");

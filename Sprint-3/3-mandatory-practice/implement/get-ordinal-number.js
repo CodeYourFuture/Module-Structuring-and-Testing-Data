@@ -1,35 +1,27 @@
 function getOrdinalNumber(num) {
   let numStr = num.toString(); // convert input to char string
-  let numLastDigit = numStr.slice(-1); // get the last char
+  let numLastDigit = numStr.slice(-2); // get the last two char
+
+  if (numLastDigit === "11" || numLastDigit === "12" || numLastDigit === "13") {
+    // catch 11, 12, 13
+    return numStr + "th";
+  }
+
+  numLastDigit = numStr.slice(-1); // get the last char
 
   // if ends in 1
-  if (numLastDigit == "1") {
-    if (num == 11) {
-      // catch special case 11
-      return numStr + "th";
-    } else {
-      return numStr + "st";
-    }
+  if (numLastDigit === "1") {
+    return numStr + "st";
   }
 
   // if ends in 2
-  else if (numLastDigit == "2") {
-    if (num == 12) {
-      // catch special case 12
-      return numStr + "th";
-    } else {
-      return numStr + "nd";
-    }
+  else if (numLastDigit === "2") {
+    return numStr + "nd";
   }
 
   // if ends in 3
-  else if (numLastDigit == "3") {
-    if (num == 13) {
-      // catch special case 13
-      return numStr + "th";
-    } else {
-      return numStr + "rd";
-    }
+  else if (numLastDigit === "3") {
+    return numStr + "rd";
   }
 
   // other
