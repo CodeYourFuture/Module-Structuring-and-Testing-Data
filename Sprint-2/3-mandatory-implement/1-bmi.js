@@ -19,8 +19,9 @@ function calculateBMI(weight, height) {
     let bmi = (weight/(height * height));
 
     // round to 1 decimal place
-    bmi = (Math.round((bmi*10)))/10;
-
+    //bmi = (Math.round((bmi*10)))/10;
+    bmi = bmi.toFixed(1);
+    
     // return the calculated bmi
     return bmi;
 }
