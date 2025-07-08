@@ -1,13 +1,14 @@
 function getCardValue(card) {
-  
-  if (card.length != 2) {
+
+  if (card.length != 2 && card.length != 3) {
     console.error('Invalid card');
     return;
   }
 
-  //get rank and suit from card string
-  const rank = card.slice(0,-1);
-  const suit = card.slice(1);
+
+  //get suit from card string
+  const suit = card.slice(-1); //returns just the last character
+  const rank = card.slice(0,-1); // returns everything except the last character
 
 
   // make array of number ranks only 0,1,..,10
@@ -53,6 +54,13 @@ assertEquals(aceofSpades, 11);
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveOfHearts = getCardValue("5♥");
 assertEquals(fiveOfHearts, 5);
+
+// Handle card of rank 10:
+// Given a card with a rank between "2" and "9",
+// When the function is called with such a card,
+// Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
+const tenOfHearts = getCardValue("10♥");
+assertEquals(tenOfHearts, 10);
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
