@@ -15,10 +15,9 @@ function getAngleType(angle) {
     if (angle > 90 && angle < 180) return "Obtuse Angle";
     if (angle === 180) return "Straight Angle";
     if (angle > 180 && angle < 360) return "Reflex Angle";
-    if( angle < 0 || angle > 360)
-    return "Invalid Angle"; // This handles angles outside the 0-360 range 
-    if(angle === 0 || angle === 360) 
-    return "Invalid Angle"; // This handles angles outside the 0-360 range
+    if( angle <= 0 || angle >= 360)return "Invalid Angle"; // This handles angles outside the 0-360 range 
+    //if(angle === 0 || angle === 360) 
+    //return "Invalid Angle"; // This handles angles outside the 0-360 range
     // you can add more cases here as needed
     // but make sure to write tests for each case first
     // and then implement the code to pass the test

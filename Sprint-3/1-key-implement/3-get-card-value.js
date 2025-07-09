@@ -25,8 +25,8 @@ function assertEquals(actualOutput, targetOutput) {
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
-const ace_of_Spades = getCardValue("A♠");
-assertEquals(ace_of_Spades, 11);
+const aceOfSpades = getCardValue("A♠");
+assertEquals(aceOfSpades, 11);
 
 // ====> write your test here, and then add a line to pass the test in the function above
 
@@ -39,43 +39,43 @@ assertEquals(ace_of_Spades, 11);
 // Given a card with a rank of "J",
 // When the function is called with a Jack,
 // Then it should return 10 points, as Jacks are worth 10 points in blackjack.
-const jack_of_Diamonds = getCardValue("J♦");
-assertEquals(jack_of_Diamonds, 10);
+const jackOfDiamonds = getCardValue("J♦");
+assertEquals(jackOfDiamonds, 10);
 
 // Handle Queen (Q):
 // Given a card with a rank of "Q",
 // When the function is called with a Queen,
 // Then it should return 10 points, as Queens are worth 10 points in blackjack.
-const queen_of_Hearts = getCardValue("Q♥");
-assertEquals(queen_of_Hearts, 10);
+const queenOfHearts = getCardValue("Q♥");
+assertEquals(queenOfHearts, 10);
 
 // Handle King (K):
 // Given a card with a rank of "K",
 // When the function is called with a King,
 // Then it should return 10 points, as Kings are worth 10 points in blackjack.
-const king_of_Clubs = getCardValue("K♣");
-assertEquals(king_of_Clubs, 10);
+const kingOfClubs = getCardValue("K♣");
+assertEquals(kingOfClubs, 10);
 
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "10",
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5, "10" should return 10).
-const two_of_Spades = getCardValue("2♠");
-assertEquals(two_of_Spades, 2);
-const three_of_Hearts = getCardValue("3♥");
-assertEquals(three_of_Hearts, 3);
-const four_of_Diamonds = getCardValue("4♦");
-assertEquals(four_of_Diamonds, 4);
-const five_of_Hearts = getCardValue("5♥");
-assertEquals(five_of_Hearts, 5);
-const six_of_Clubs = getCardValue("6♣");
-assertEquals(six_of_Clubs, 6);
-const seven_of_Spades = getCardValue("7♠");
-assertEquals(seven_of_Spades, 7);
-const eight_of_Hearts = getCardValue("8♥");
-assertEquals(eight_of_Hearts, 8);
-const nine_of_Diamonds = getCardValue("9♦");
-assertEquals(nine_of_Diamonds, 9);
+const twoOfSpades = getCardValue("2♠");
+assertEquals(twoOfSpades, 2);
+const threeOfHearts = getCardValue("3♥");
+assertEquals(threeOfHearts, 3);
+const fourOfDiamonds = getCardValue("4♦");
+assertEquals(fourOfDiamonds, 4);
+const fiveOfHearts = getCardValue("5♥");
+assertEquals(fiveOfHearts, 5);
+const sixOfClubs = getCardValue("6♣");
+assertEquals(sixOfClubs, 6);
+const sevenOfSpades = getCardValue("7♠");
+assertEquals(sevenOfSpades, 7);
+const eightOfHearts = getCardValue("8♥");
+assertEquals(eightOfHearts, 8);
+const nineOfDiamonds = getCardValue("9♦");
+assertEquals(nineOfDiamonds, 9);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),

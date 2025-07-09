@@ -9,6 +9,9 @@
 
 function isProperFraction(numerator, denominator) {
   if (numerator < denominator) return true;
+  if (denominator === 0) {
+  throw new Error("Denominator cannot be zero");
+}
   return false;
   // Note: This function currently does not handle cases where the denominator is zero.
   // If you want to handle that case, you can add a check for it.
@@ -62,4 +65,6 @@ assertEquals(equalFraction, false);
 // Stretch:
 // What other scenarios could you test for?
 
-console.log(isProperFraction(3, 3));
+
+
+console.log(isProperFraction(-4, 3));
