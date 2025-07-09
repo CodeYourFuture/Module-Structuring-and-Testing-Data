@@ -12,6 +12,7 @@ test("should return 7 for Seven of Hearts", () => {
 test("should return 10 for Ten of Diamonds", () => {
   expect(getCardValue("10♦")).toEqual(10);
 });
+
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return 10 for Jack of Clubs", () => {
   expect(getCardValue("J♣")).toEqual(10);
