@@ -29,16 +29,11 @@ function assertEquals(actualOutput, targetOutput) {
 // Explanation: The fraction 2/3 is a proper fraction, where the numerator is less than the denominator. The function should return true.
 assertEquals(isProperFraction(2, 3), true); // ✅ should pass
 
-
-
 // Improper Fraction check:
 // Input: numerator = 5, denominator = 2
 // target output: false
 // Explanation: The fraction 5/2 is an improper fraction, where the numerator is greater than or equal to the denominator. The function should return false.
 assertEquals(isProperFraction(5, 2), false); // ✅ should pass
-
-
-
 
 // Negative Fraction check:
 // Input: numerator = -4, denominator = 7
@@ -57,3 +52,10 @@ assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
+// Zero Numerator check:
+// Input: numerator = 0, denominator = 5
+// target output: true
+// Explanation: The fraction 0/5 is a proper fraction because the numerator is zero,
+// which is less than the denominator. The function should return true.
+const zeroNumerator = isProperFraction(0, 5);
+assertEquals(zeroNumerator, true); // ✅ should pass
