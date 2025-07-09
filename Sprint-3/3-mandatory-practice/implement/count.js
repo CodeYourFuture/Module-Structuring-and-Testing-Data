@@ -9,9 +9,11 @@ function countChar(stringOfCharacters, findCharacter) {
     return count;
 }
 
-console.log(countChar("hello world", "l")); // ➜ 3
-console.log(countChar("Mississippi", "s")); // ➜ 4
+console.log(countChar("hello world", "l")); 
+console.log(countChar("Mississippi", "s")); 
 console.log(countChar("banana", "n"));  
+console.log(countChar("Hello", "h"));
+console.log(countChar("hello", "H"));
 console.log(countChar("", ""));
 
 module.exports = countChar;

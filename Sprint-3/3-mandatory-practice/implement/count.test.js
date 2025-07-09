@@ -29,3 +29,19 @@ test("should return 0 if character does not occur", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+// Scenario: Case Sensitivity
+
+test("should return 0 when matching lowercase against uppercase", () => {
+  const str = "Hello";
+  const char = "h"; // Different case
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+test("should return 0 when matching uppercase against lowercase", () => {
+  const str = "hello";
+  const char = "H"; // Different case
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
