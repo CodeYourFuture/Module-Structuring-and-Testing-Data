@@ -10,12 +10,11 @@
 function getAngleType(angle) {
    if (angle === 90) return "Right Angle";
    // read to the end, complete line 36, then pass your test here
-    
    if (angle > 0 && angle < 90) return "Acute Angle";
-    if (angle > 90 && angle < 180) return "Obtuse Angle";
-    if (angle === 180) return "Straight Angle";
-    if (angle > 180 && angle < 360) return "Reflex Angle";
-    if( angle <= 0 || angle >= 360)return "Invalid Angle"; // This handles angles outside the 0-360 range 
+   if (angle > 90 && angle < 180) return "Obtuse Angle";
+   if (angle === 180) return "Straight Angle";
+   if (angle > 180 && angle < 360) return "Reflex Angle";
+   if( angle <= 0 || angle >= 360)return "Invalid Angle"; // This handles angles outside the 0-360 range 
     //if(angle === 0 || angle === 360) 
     //return "Invalid Angle"; // This handles angles outside the 0-360 range
     // you can add more cases here as needed
@@ -96,16 +95,18 @@ const fullCircle = getAngleType(360);
 assertEquals(fullCircle, "Invalid Angle");
 
 
-console.log(right);
-console.log(acute);
-console.log(obtuse);
-console.log(straight);
-console.log(reflex);
-console.log(invalid);
-console.log(zeroAngle);
-console.log(fullCircle);  
-// If all assertions pass, the function is working correctly for the given cases
-console.log("All tests passed!");
+console.log(getAngleType(0));
+console.log(getAngleType(90));
+console.log(getAngleType(180));
+console.log(getAngleType(360));
+console.log(getAngleType(1));
+console.log(getAngleType(91));
+console.log(getAngleType(181));
+console.log(getAngleType(-90));
+
+
+
+
 
 
 
