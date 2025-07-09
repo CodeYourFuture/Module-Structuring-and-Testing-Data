@@ -30,7 +30,7 @@ test("should return the original string if count is 1", () => {
 // When the repeat function is called with these inputs,
 // Then it should return an empty string, ensuring that a count of 0 results in an empty output.
 
-test("should return the empty string if count 0", () => {
+test("should return  empty string if count 0", () => {
   expect(repeat("hello", 0)).toEqual("");
 });
 
