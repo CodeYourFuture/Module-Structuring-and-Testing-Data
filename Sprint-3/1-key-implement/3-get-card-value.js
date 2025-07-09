@@ -8,8 +8,25 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+  const rank = card.slice(0, -1); // get the rank (before the suit symbol)
+
+  if (!isNaN(rank)) {
+    return Number(rank); // Number card
+  }
+
+  if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10; // Face cards
+  }
+
+  if (rank === "A") {
+    return 11; // Ace
+  }
+
+  // Anything else is invalid
+  throw new Error("Invalid card rank");
 }
+
+// if the rank is not a number or a face card, throw an error(invalid card rank).
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
@@ -33,13 +50,23 @@ assertEquals(aceofSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
-// ====> write your test here, and then add a line to pass the test in the function above
+assertEquals(fiveofHearts, 5);
+
+const tenofDiamonds = getCardValue("10♦");
+assertEquals(tenofDiamonds, 10);
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const jackofClubs = getCardValue("J♣");
+assertEquals(jackofClubs, 10);
 
+const queenofHearts = getCardValue("Q♥");
+assertEquals(queenofHearts, 10);
+
+const kingofSpades = getCardValue("K♠");
+assertEquals(kingofSpades, 10);
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
@@ -49,3 +76,8 @@ const fiveofHearts = getCardValue("5♥");
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+try {
+  getCardValue("Z♠");
+} catch (error) {
+  console.log("Caught error:", error.message); // Should say "Invalid card rank"
+}
