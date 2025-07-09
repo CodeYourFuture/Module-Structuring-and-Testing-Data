@@ -13,7 +13,7 @@ function getCardValue(card) {
   if (["J", "Q", "K"].includes(rank)) return 10; // Face cards are worth 10 points
   const numericRank = parseInt(rank, 10); // Convert rank to a number
   if (numericRank >= 2 && numericRank <= 10) return numericRank; // Number cards return their value
-  throw new Error("Invalid card rank"); // Throw an error for invalid ranks
+  else throw new Error("Invalid card rank"); // Throw an error for invalid ranks
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -86,13 +86,5 @@ assertEquals(nineOfDiamonds, 9);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-function getCardValue(card) {
-  const rank = card.slice(0, -1); // Extract the rank part of the card string
-  if (rank === "A") return 11; // Ace is worth 11 points
-  if (["J", "Q", "K"].includes(rank)) return 10; // Face cards are worth 10 points
-  const numericRank = parseInt(rank, 10); // Convert rank to a number
-  if (numericRank >= 2 && numericRank <= 10) return numericRank; // Number cards return their value
-  throw new Error("Invalid card rank"); // Throw an error for invalid ranks
-}
 
-console.log(getCardValue("A♠")); // 11
+console.log(getCardValue('12')); // 11

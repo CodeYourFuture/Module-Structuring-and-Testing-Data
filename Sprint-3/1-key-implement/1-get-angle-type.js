@@ -102,7 +102,7 @@ console.log(getAngleType(360));
 console.log(getAngleType(1));
 console.log(getAngleType(91));
 console.log(getAngleType(181));
-console.log(getAngleType(-90));
+console.log(getAngleType(-90)); 
 
 
 
