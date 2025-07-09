@@ -8,7 +8,12 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  if (rank === "A") return 11;
+  const rank = card.slice(0, -1); // Extract the rank part of the card string
+  if (rank === "A") return 11; // Ace is worth 11 points
+  if (["J", "Q", "K"].includes(rank)) return 10; // Face cards are worth 10 points
+  const numericRank = parseInt(rank, 10); // Convert rank to a number
+  if (numericRank >= 2 && numericRank <= 10) return numericRank; // Number cards return their value
+  throw new Error("Invalid card rank"); // Throw an error for invalid ranks
 }
 
 // You need to write assertions for your function to check it works in different cases
