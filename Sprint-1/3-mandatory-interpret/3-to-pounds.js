@@ -57,3 +57,33 @@ console.log(`£${pounds}.${pence}`);
 
 // Overall Purpose of the Code:
 // This code takes a string like "399p" (meaning 399 pence) and formats it as a proper British currency string like £3.99.It handles other cases too, like "5p" → £0.05 or "99p" → £0.99, thanks to the padding.
+
+// After removing padEnd(2, "0") and testing my code with different values like "1p" and "5p", I came to the conclusion that I don’t need padEnd(2, "0").
+// This is because I used padStart(3, "0") earlier in the code, which ensures that every pence string is padded to at least 3 digits.
+// So, there is no need to use padEnd(2, "0") — the last two digits will always be present and correct.
+
+/*    const penceString = "1p";
+
+const penceStringWithoutTrailingP = penceString.substring(
+  0,
+  penceString.length - 1
+);
+
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+const pounds = paddedPenceNumberString.substring(
+  0,
+  paddedPenceNumberString.length - 2
+);
+
+const pence = paddedPenceNumberString
+  .substring(paddedPenceNumberString.length - 2)
+
+console.log(`£${pounds}.${pence}`);*/
+
+/* 
+In this code, I removed padEnd(2, "0") but still got the correct value: £0.01. 
+This shows that the code works fine without using padEnd.
+
+I tested it with different values like "1p", "5p", and "99p", and all of them produced the correct output.
+So I can confirm that padEnd is not necessary here, because padStart(3, "0") already ensures the pence string has enough digits.
+*/
