@@ -1,5 +1,6 @@
 const getAngleType = require("./1-get-angle-type");
-// Case 2: Identify Acute Angles (less than 90°)
+
+// Case 1: Identify Right Angles
 test("should identify right angle (90°)", () => {
   expect(getAngleType(90)).toEqual("Right angle");
 });
