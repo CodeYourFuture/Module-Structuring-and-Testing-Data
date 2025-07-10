@@ -9,3 +9,9 @@ function getCardValue(card) {
   throw new Error("Invalid card rank");
 }
 module.exports = getCardValue;
+
+console.log(getCardValue("2XYZ♠")); // ==> 2
+console.log(getCardValue("0x02♠")); // ==> 2
+console.log(getCardValue("2.1♠")); // ==> 2
+// console.log(getCardValue("00_02♠")); //==> Invalid card rank
+console.log(getCardValue("2.5♥"));

@@ -8,12 +8,14 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-  if (angle < 90) return "Acute angle";
-  if (angle === 90) return "Right angle";
-  if (angle < 180) return "Obtuse angle";
-  if (angle === 180) return "Straight angle";
-  if (angle < 360) return "Reflex angle";
-
+  if (typeof angle === "number" && isFinite(angle)) {
+    if (angle <= 0 || angle >= 360) return "Invalid angle";
+    if (angle < 90) return "Acute angle";
+    if (angle === 90) return "Right angle";
+    if (angle < 180) return "Obtuse angle";
+    if (angle === 180) return "Straight angle";
+    if (angle < 360) return "Reflex angle";
+  } else return "Invalid Input";
   // read to the end, complete line 36, then pass your test here
 }
 
@@ -62,3 +64,13 @@ assertEquals(strDegree, "Straight angle");
 // Then the function should return "Reflex angle"
 const reflex = getAngleType(270);
 assertEquals(reflex, "Reflex angle");
+
+// When the angle is less than or equal to 0 or greater than or equal to 360,
+// Then the function should return "Invalid angle
+const invalidAngle = getAngleType(-20);
+assertEquals(invalidAngle, "Invalid angle");
+
+// When the input is invalid,
+// Then the function should return "invalid Input"
+const invalidInput = getAngleType("Aida");
+assertEquals(invalidInput, "Invalid Input");

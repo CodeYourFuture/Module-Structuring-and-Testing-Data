@@ -1,4 +1,7 @@
 const getCardValue = require("./3-get-card-value");
+let cardList = ["♥", "♣", "♠", "♦"];
+let faceCardList = ["J", "Q", "K"];
+let invalidCards = ["B♣", "11♠", "0♣", "5", "♠", "_", ""];
 
 test("should return 11 for Ace of Spades", () => {
   const aceofSpades = getCardValue("A♠");
@@ -6,28 +9,38 @@ test("should return 11 for Ace of Spades", () => {
 });
 
 // Case 2: Handle Number Cards (2-10):
-test("should return 5 for 5♥ of Spades", () => {
-  const fiveofHearts = getCardValue("5♥");
-  expect(fiveofHearts).toEqual(5);
-});
+
+for (let item of cardList) {
+  for (let i = 2; i <= 10; i++) {
+    test(`should return ${i} for ${i}${item}`, () => {
+      const fiveofHearts = getCardValue(`${i}${item}`);
+      expect(fiveofHearts).toEqual(i);
+    });
+  }
+}
 
 // Case 3: Handle Face Cards (J, Q, K):
-
-test("should return 10 Face Cards", () => {
-  const FaceCard = getCardValue("J♥");
-  expect(FaceCard).toEqual(10);
-});
+for (let face of faceCardList) {
+  for (let item of cardList) {
+    test(`should return 10 for ${face}${item}`, () => {
+      const FaceCard = getCardValue(`${face}${item}`);
+      expect(FaceCard).toEqual(10);
+    });
+  }
+}
 
 // Case 4: Handle Ace (A):
-
-test("should return 11 for Ace of Spades", () => {
-  const HandleAce = getCardValue("A♥");
-  expect(HandleAce).toEqual(11);
-});
+for (let item of cardList) {
+  test(`should return 11 for Ace of ${item}`, () => {
+    const HandleAce = getCardValue(`A${item}`);
+    expect(HandleAce).toEqual(11);
+  });
+}
 
 // Case 5: Handle Invalid Cards:
 
-test("should return 11 for Ace of Spades", () => {
-  const InvalidCard = getCardValue("B♣");
-  expect(InvalidCard).toEqual(32);
-});
+for (let invCard of invalidCards) {
+  test(`should throw error for invalid card ${invCard}`, () => {
+    expect(() => getCardValue(invCard)).toThrow("Invalid card rank");
+  });
+}
