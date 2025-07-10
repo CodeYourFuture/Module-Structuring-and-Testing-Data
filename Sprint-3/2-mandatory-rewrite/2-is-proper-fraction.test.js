@@ -5,6 +5,9 @@ test("should return true for a proper fraction", () => {
 });
 
 // Case 2: Identify Improper Fractions:
+test("should return false for an improper fraction", () => {
+  expect(isProperFraction(5, 2)).toEqual(false);
+});
 
 // Case 3: Identify Negative Fractions:
 
