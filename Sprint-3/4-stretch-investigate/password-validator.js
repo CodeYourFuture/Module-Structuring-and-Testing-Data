@@ -1,9 +1,9 @@
 const previousPasswords = ["Password123!", "Welcome1$", "Admin#2023"]; // example previous passwords list
 
 function passwordValidator(password) {
+  
   // Check that password is a string
   if (typeof password !== "string") return false;
-
   // Check minimum length
   if (password.length < 5) return false;
 

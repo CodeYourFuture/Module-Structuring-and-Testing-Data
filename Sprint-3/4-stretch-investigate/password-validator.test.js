@@ -19,11 +19,14 @@ You must breakdown this problem in order to solve it. Find one test case first a
 const passwordValidator= require("./password-validator");
 
   test("Password must be at least 5 characters long.", () => {
-    expect(passwordValidator("Strong1!")).toBe(true);
+    expect(passwordValidator("St1!")).toBe(false);
 });
-  
+
+  test("password with exactly 5 valid characters long", () => {
+  expect(isValidPassword("Stg1!")).toBe(true);
+});
   test("Password must include at least one uppercase letter.", () =>{
-    expect(passwordValidator("strong1")).toBe(false);
+    expect(passwordValidator("strong1!")).toBe(false);
   } )
   
   test("Password must include at least one lowercase letter.", () =>{
@@ -31,14 +34,14 @@ const passwordValidator= require("./password-validator");
   } )
   
   test("Password must include at least one number.", () =>{
-    expect(passwordValidator("Strong")).toBe(false);
+    expect(passwordValidator("Strong*")).toBe(false);
   } )
 
  test("Password must include at least one special symbol (!#$%.*&).", () =>{
-    expect(passwordValidator("Strong")).toBe(false);
+    expect(passwordValidator("Strong2")).toBe(false);
   } )  
 
   test("This password has already been used. Please choose a new one.", () =>{
-    expect(passwordValidator("Password123")).toBe(false);
+    expect(passwordValidator("Password123!")).toBe(false);
     
   })
