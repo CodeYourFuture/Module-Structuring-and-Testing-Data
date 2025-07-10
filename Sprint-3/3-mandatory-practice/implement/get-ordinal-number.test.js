@@ -4,6 +4,8 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // continue testing and implementing getOrdinalNumber for additional cases
 // Write your tests using Jest - remember to run your tests often for continual feedback
 
+
+
 // Case 1: Identify the ordinal number for 1
 // When the number is 1,
 // Then the function should return "1st"
