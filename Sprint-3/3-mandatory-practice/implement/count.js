@@ -10,7 +10,6 @@ function countChar(stringOfCharacters, findCharacter) {
 
   return count;
 }
-console.log(countChar("ahmad", "a")); // example usage should return 2.
-console.log(countChar("hello", "h")); // example usage should return 1;
+console.log(countChar("aAaAaAaAa", "a")); // example usage should return 5.
 
 module.exports = countChar;
