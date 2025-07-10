@@ -15,4 +15,5 @@ const base = filePath.slice(lastSlashIndex + 1);
 console.log(`The base part of ${filePath} is ${base}`);
 
 const dir = filePath.slice(0, lastSlashIndex); // This gives us everything up to (but not including) the last /
+const dotIndex = base.lastIndexOf("."); // This finds the position of the dot in the filename (like "file.txt") so that I can slice out the extension using:const ext = base.slice(dotIndex)
 const ext = base.slice(dotIndex); //  gives ".txt"

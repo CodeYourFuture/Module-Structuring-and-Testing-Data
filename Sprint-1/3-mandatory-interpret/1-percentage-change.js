@@ -23,6 +23,9 @@ console.log(`The percentage change is ${percentageChange}`);
                                                                     ^^^
 SyntaxError: missing ) after argument list *\
 
+// this error happens because of a coma. a replace() needs two argument separated by a comma to work but here ("," "") there is no comma and it confuses js because it thinks i am opening a string and not closing it properly.
+// so to fix my code i need to make two argument "what to replace" & "what to replace it with" so to replace "8,543" with "8543" which is basically to remove the comma from the middle of the numbers-
+// like i said earlier this two arguments needs to separate by a comma like this (",","") which is telling it to change "," to "".
 // c) Identify all the lines that are variable reassignment statements
 
 /* line 4 and line 5 
@@ -41,6 +44,4 @@ this is because we cant do math with a string with a comma so we need to remove 
 the string we left with Number(), this function will convert the string into number so that we can do our math. 
 IN SUMMARY
 Number("10,000") will actually return NaN (Not a Number)
-❗ Because the comma confuses it
-
-So you must remove the comma first, then convert to number. *\
+ *\
