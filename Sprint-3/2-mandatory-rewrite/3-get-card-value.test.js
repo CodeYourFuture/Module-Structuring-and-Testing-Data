@@ -30,3 +30,7 @@ test("should return 11 for Ace of Diamonds", () => {
     expect(aceOfDiamonds).toEqual(11);
 });
 // Case 5: Handle Invalid Cards:
+test("should throw an error for invalid card rank", () => {
+    expect(() => getCardValue("Z♠")).toThrow("Invalid card rank");
+});
+
