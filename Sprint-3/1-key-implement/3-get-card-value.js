@@ -18,9 +18,7 @@ function getCardValue(card) {
     return 10; // Face cards
   }
 
-  if (rank === "A") {
-    return 11; // Ace
-  }
+  if (rank === "A") return 11; // Ace
 
   // Anything else is invalid
   throw new Error("Invalid card rank");
