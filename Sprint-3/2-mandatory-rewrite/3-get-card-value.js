@@ -8,3 +8,5 @@ function getCardValue(card) {
   throw new Error("Invalid card rank");
 }
 module.exports = getCardValue;
+const value= getCardValue("A");
+console.log(typeof value==="number");
