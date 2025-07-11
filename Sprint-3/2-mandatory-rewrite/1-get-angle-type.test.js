@@ -1,5 +1,12 @@
 const getAngleType = require("./1-get-angle-type");
 
+// Test cases for invalid angles
+ test("should return invalid angle for angles <=0 or angle >=360", ()=> {
+  expect(getAngleType(0)).toEqual("invalid angle");
+  expect(getAngleType(360)).toEqual("invalid angle");
+ }); 
+
+
 test("should identify right angle (90°)", () => {
   expect(getAngleType(90)).toEqual("Right angle");
 });
