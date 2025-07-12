@@ -6,3 +6,6 @@ count = count + 1;
 // Describe what line 3 is doing, in particular focus on what = is doing
 // line 3 increases the value of count by 1.
 // the "=" operator assigns the  result of "count + 1" back to the variable count.
+// Can you find out what one-word programming term describes the operation on line 3?
+// The one word term is "increment".
+// increment means increasing the value of a variable by 1.
