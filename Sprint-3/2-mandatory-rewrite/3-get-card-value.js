@@ -1,9 +1,12 @@
 function getCardValue(card) {
   const rank = card.slice(0, -1); 
+
   if (rank === "A") return 11;
   if (["J", "Q", "K"].includes(rank)) return 10;
-  const number = Number(rank);
-  if (number >= 2 && number <= 10) return number;
+
+  if (/^(10|[2-9])$/.test(rank)) { 
+        return Number(rank);
+  } 
   throw new Error("Invalid card rank");
 }
 module.exports = getCardValue;
