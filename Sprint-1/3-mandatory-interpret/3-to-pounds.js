@@ -26,11 +26,13 @@ console.log(`£${pounds}.${pence}`);
 // To begin, we can start with
 // 1. const penceString = "399p": initializes a string variable with the value "399p"
 
-
 // 2: "const penceStringWithoutTrailingP = penceString.substring(0,penceString.length - 1)"__ Removes the trailing "p" character.
-// substring(0,penceString.length - 1) this code gets all characters except the last one. so "399p" becomes just"399". 
-// 3: const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0") Ensures the pence string that has at least 3 digits, by padding it in left with "0" if needed for example: 399 stays 399 or 7 would become 007. 
-// 4: const pounds = paddedPenceNumberString.substring(0,paddedPenceNumberString.length - 2) Extracts the pound portion (except the last two one) __ "399"-"3"(pounds) 
+// substring(0,penceString.length - 1) this code gets all characters except the last one. so "399p" becomes just"399".
+// 3: const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0") Ensures the pence string that has at least 3 digits, by padding it in left with "0" if needed for example: 399 stays 399 or 7 would become 007.
+// 4: const pounds = paddedPenceNumberString.substring(0,paddedPenceNumberString.length - 2) Extracts the pound portion (except the last two one) __ "399"-"3"(pounds)
 // 5: const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0") Gets the last two digits as the pence part. for example: "399"__"99"(pence)
 // padEnd(2, "0") ensures at least two digits for pence.__eg: "3"_"30".
 // 6: console.log(`£${pounds}.${pence}`) logs the full formatted price in pounds and pence.__eg:for "399P" pounds"3" pence"99" and the result is __ "3.99"
+// Could we expect this program to work as intended for any valid penceString if we deleted .padEnd(2, "0") from the code?
+// In other words, do we really need .padEnd(2, "0") in this script?
+// Yes, we need `.padEnd(2, "0")` to ensure the penceString is always at least two digits long.
