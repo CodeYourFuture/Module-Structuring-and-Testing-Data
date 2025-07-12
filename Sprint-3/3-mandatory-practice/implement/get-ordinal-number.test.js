@@ -26,6 +26,8 @@ const getOrdinalNumber = require("./get-ordinal-number");
         expect(getOrdinalNumber(3)).toEqual("3rd");
     });
 
-    test("should return '11th' for 11", () => {
+    test("should return '11th' for 11 , 12, 13", () => {
         expect(getOrdinalNumber(11)).toEqual("11th");
+        expect(getOrdinalNumber(12)).toEqual("12th");
+        expect(getOrdinalNumber(13)).toEqual("13th");   
     });     
