@@ -25,3 +25,10 @@ test("should return 11 for Ace", () => {
 test("should throw error for invalid card rank", () => {
     expect(() => getCardValue("L")).toThrow(new Error("Invalid card rank"));
 });
+
+// Case 6: should throw error for invalid numeric format:  
+test("should throw error for invalid numeric format", () => {
+    expect(() => getCardValue("0x02♠")).toThrow("Invalid card rank");
+    expect(() => getCardValue("2.1♠")).toThrow("Invalid card rank");  
+    expect(() => getCardValue("2♠♠")).toThrow("Invalid card rank");
+});
