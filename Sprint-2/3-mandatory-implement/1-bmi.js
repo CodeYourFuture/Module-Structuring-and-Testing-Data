@@ -23,7 +23,7 @@ function calculateBMI(weight, height) {
     bmi = bmi.toFixed(1);
     
     // return the calculated bmi
-    return bmi;
+    return +bmi;
 }
 
 console.log(calculateBMI(70,1.73));
