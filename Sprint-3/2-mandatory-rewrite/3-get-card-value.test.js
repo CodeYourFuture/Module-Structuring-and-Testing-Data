@@ -5,23 +5,30 @@ test("should return 11 for Ace of Spades", () => {
   expect(aceofSpades).toEqual(11);
 });
 
-const aceofSpades = getCardValue("A♠");
-assertEquals(aceofSpades, 11);
+test("should return 5 for 5 of Hearts", () => {
+  const fiveofHearts = getCardValue("5♥");
+  expect(fiveofHearts).toEqual(5);
+});
 
-const fiveofHearts = getCardValue("5♥");
-assertEquals(fiveofHearts, 5);
+test("should return 10 for 10 of Diamonds", () => {
+  const tenofDiamonds = getCardValue("10♦");
+  expect(tenofDiamonds).toEqual(10);
+});
 
-const tenofDiamonds = getCardValue("10♦");
-assertEquals(tenofDiamonds, 10);
+test("should return 10 for Jack of Clubs", () => {
+  const jackofClubs = getCardValue("J♣");
+  expect(jackofClubs).toEqual(10);
+});
 
-const jackofClubs = getCardValue("J♣");
-assertEquals(jackofClubs, 10);
+test("should return 10 for Queen of Hearts", () => {
+  const queenofHearts = getCardValue("Q♥");
+  expect(queenofHearts).toEqual(10);
+});
 
-const queenofHearts = getCardValue("Q♥");
-assertEquals(queenofHearts, 10);
-
-const kingofSpades = getCardValue("K♠");
-assertEquals(kingofSpades, 10);
+test("should return 10 for King of Spades", () => {
+  const kingofSpades = getCardValue("K♠");
+  expect(kingofSpades).toEqual(10);
+});
 
 try {
   getCardValue("Z♠");
