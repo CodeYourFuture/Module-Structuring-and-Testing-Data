@@ -31,3 +31,9 @@ const getOrdinalNumber = require("./get-ordinal-number");
         expect(getOrdinalNumber(12)).toEqual("12th");
         expect(getOrdinalNumber(13)).toEqual("13th");   
     });     
+test("should append 'th' to numbers ending  in 0, 4, 9", () => {
+    expect(getOrdinalNumber(124)).toEqual( "124th" );
+    expect(getOrdinalNumber(10)).toEqual( "10th" );
+    expect(getOrdinalNumber(99)).toEqual( "99th" );   
+    }); 
+    
