@@ -4,9 +4,9 @@ function getCardValue(card) {
   const rank = card.slice(0, -1); // Extract rank (everything except the last character)
   if (rank === "A") return 11; // handle Ace as 11
   if (["K", "Q", "J"].includes(rank)) return 10; // handle face cards as 10
-  const numerincRank = parseInt(rank); //Handle number cards 2–9
-  if (numerincRank >= 2 && numerincRank <= 9) {
-    return numerincRank; // Return the numeric value for cards 2-9
+  const numericRank = parseInt(rank); //Handle number cards 2–9
+  if (numericRank >= 2 && numericRank <= 9) {
+    return numericRank; // Return the numeric value for cards 2-9
   }
   // Invalid card rank
   return 0;
