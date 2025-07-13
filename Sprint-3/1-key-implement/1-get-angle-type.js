@@ -37,29 +37,35 @@ function assertEquals(actualOutput, targetOutput) {
 // Case 1: Identify Right Angles:
 // When the angle is exactly 90 degrees,
 // Then the function should return "Right angle"
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
+const rightAngle = getAngleType(90);
+assertEquals(rightAngle, "Right angle");
 
 // Case 2: Identify Acute Angles:
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
-const acute = getAngleType(45);
-assertEquals(acute, "Acute angle");
+const acuteAngle = getAngleType(45);
+assertEquals(acuteAngle, "Acute angle");
 
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
-const obtuse = getAngleType(120); 
-assertEquals(obtuse,"Obtuse angle"); 
+const obtuseAngle = getAngleType(120); 
+assertEquals(obtuseAngle,"Obtuse angle"); 
 
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
- const Straight  = getAngleType(180); 
- assertEquals(Straight,"Straight angle"); 
+ const straightAngle  = getAngleType(180); 
+ assertEquals(straightAngle,"Straight angle"); 
 
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
- const Reflex = getAngleType(200); 
- assertEquals(Reflex,"Reflex angle"); 
+ const reflexAngle = getAngleType(200); 
+ assertEquals(reflexAngle,"Reflex angle"); 
+
+// Case 6: Handle Unknown Angles:
+// When the angle is not in any of the above categories (e.g., negative angles or angles greater than or equal to 360 degrees),
+// Then the function should return "Unknown angle type"
+const unknownAngle = getAngleType(400);
+assertEquals(unknownAngle, "Unknown angle type"); 
