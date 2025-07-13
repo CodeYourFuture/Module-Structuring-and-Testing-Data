@@ -29,4 +29,4 @@ test("should return 0 when the character is not present", () => {
   expect(count).toEqual(0);
 });
 
-module.exports = countChar;
+
