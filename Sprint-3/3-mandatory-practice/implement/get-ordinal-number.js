@@ -19,6 +19,7 @@ if(strNum.slice(-1)==="3") {
         return strNum + "rd";
     }
     
+        return strNum + "th";
 }
 
 
