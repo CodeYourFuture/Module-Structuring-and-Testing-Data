@@ -8,7 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
+    if (numerator === 0 && denominator === 0) return "put numbers above and below";
+    else if (numerator < denominator && numerator !== 0) return true;
+    else if (numerator > denominator && denominator !== 0) return false;
+    else if (numerator === denominator) return false;
+    else if (numerator === 0) return "input non-zero above";
+    else if (denominator === 0) return "input non-zero below";
+    //else if (numerator === 0 && denominator === 0) return "put numbers above and below";
+    // the above line of code did not work here it had to go to the top as it is a most specific case considering our function.
 }
 
 // here's our helper again
@@ -40,14 +47,37 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
-// ====> complete with your assertion
+assertEquals(negativeFraction, true);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
-// ====> complete with your assertion
+assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
+// We could test for if the numerator is zero
+
+// Zero Numerator check:
+// Input: numerator = 0, denominator = 3
+// target output: true
+// Explanation: Even though this gives a zero value it still returns true 
+//so we expect it to be true
+const zeroNumeratorFraction = isProperFraction(0, 3); 
+assertEquals(zeroNumeratorFraction, "input non-zero above");
+
+// Zero Denominator check:
+// Input: numerator = 3, denominator = 0
+// target output: undefined
+// Explanation: This gives an undefined value.
+const zeroDenominatorFraction = isProperFraction(3, 0); 
+assertEquals(zeroDenominatorFraction, "input non-zero below");
+
+// Zero Numerator and Zero Denominator check:
+// Input: numerator = 0, denominator = 0
+// target output: false
+// Explanation: This actually outputs false even though the operation is practically impossible.
+const zeroZeroFraction = isProperFraction(0, 0); 
+assertEquals(zeroZeroFraction, "put numbers above and below");
