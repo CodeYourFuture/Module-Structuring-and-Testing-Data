@@ -47,3 +47,11 @@ test("should identify reflex angles (between 180° and 360°)", () => {
 });
 
 
+// Case 6: Handle Unknown Angles:
+// When the angle is not in any of the above categories (e.g., negative angles or angles greater than or equal to 360 degrees),
+// Then the function should return "Unknown angle type"
+test("should handle unknown angles (negative or >= 360°)", () => {
+  expect(getAngleType(-45)).toEqual("Unknown angle type");
+  expect(getAngleType(360)).toEqual("Unknown angle type");
+  expect(getAngleType(400)).toEqual("Unknown angle type");
+});
