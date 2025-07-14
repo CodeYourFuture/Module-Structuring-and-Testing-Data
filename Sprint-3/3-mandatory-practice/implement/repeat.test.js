@@ -9,12 +9,12 @@ const repeat = require("./repeat");
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
-// test("should repeat the string count times", () => {
-//   const str = "hello";
-//   const count = 3;
-//   const repeatedStr = repeat(str, count);
-//   expect(repeatedStr).toEqual("hellohellohello");
-// });
+test("should repeat the string count times", () => {
+  const str = "hello";
+  const count = 3;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("hellohellohello");
+});
 
 // case: handle Count of 1:
 // Given a target string str and a count equal to 1,
