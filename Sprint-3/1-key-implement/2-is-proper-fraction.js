@@ -8,11 +8,9 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (denominator === 0) {
-    // Denominator can't be zero in a valid fraction
-    return false;
-  }
-  // if (numerator < denominator) return true; it will not work for negative numbers
+  if (numerator < denominator) return true; //it will  is proper fraction
+  if (denominator === 0) return false; // Denominator cannot be zero
+  
   return Math.abs(numerator) < Math.abs(denominator);
 }
 
