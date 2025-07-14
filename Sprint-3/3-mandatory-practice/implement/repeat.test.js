@@ -44,5 +44,4 @@ test("should repeat the string count times", () => {
 test("throws error for negative count", () => {
     const str = "Hey";
     const count = -3;
-    expect(() => repeat(str, count)).toThrow("Invalid input: str must be a string and times must be a non-negative integer");
-});
+    expect(() => repeat(str, count)).toThrow("Invalid input: str must be a string and times must be a non-negative int
