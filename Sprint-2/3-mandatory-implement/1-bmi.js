@@ -15,5 +15,11 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+  const bmi = weight / (height * height);
+  return bmi.toFixed(1); // toFixed(1) means: show 1 number after the decimal point (e.g. 23.41 becomes 23.4).
 }
+
+console.log(calculateBMI(96, 1.79)); // output: 30.0
+
+// toFixed(1) returns a string, not a number
+// if i want to return a number i will use return number(bmi.tofixed(1))
