@@ -1,16 +1,15 @@
-// A set of words can be grouped together in different cases.
+// This function converts any sentence into UPPER_SNAKE_CASE
+function toUpperSnakeCase(input) {
+  // Step 1: Convert the string to uppercase
+  const upperCase = input.toUpperCase();
 
-// For example, "hello there" in snake case would be written "hello_there"
-// UPPER_SNAKE_CASE means taking a string and writing it in all caps with underscores instead of spaces.
+  // Step 2: Replace all spaces with underscores
+  const snakeCase = upperCase.replace(/ /g, "_");
 
-// Implement a function that:
+  // Step 3: Return the result
+  return snakeCase;
+}
 
-// Given a string input like "hello there"
-// When we call this function with the input string
-// it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
-
-// Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
-
-// You will need to come up with an appropriate name for the function
-// Use the MDN string documentation to help you find a solution
-// This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+// Example usage:
+console.log(toUpperSnakeCase("hello there"));          // Output: "HELLO_THERE"
+console.log(toUpperSnakeCase("lord of the rings"));    // Output: "LORD_OF_THE_RINGS"
