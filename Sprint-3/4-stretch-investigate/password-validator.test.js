@@ -21,11 +21,20 @@ test("password has at least 5 characters", () => {
   // Act
   const result = isValidPassword(password);
   // Assert
-  expect(result).toEqual(true);
+  expect(result).toEqual(false);
 });
-expect(result).toEqual(true);
-const isValidPassword = require("./password-validator");
-// // usage example
-// console.log(isValidPassword("Test123!")); // true
-// console.log(isValidPassword("pass")); // false (too short)
-// console.log(isValidPassword("password")); // false (no number or special character)
+
+// TEST 4: Missing symbol
+// Should fail because there is no special character
+test("fails if missing symbol", () => {
+  const password = "Hello123";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+// TEST 6: Common/reused password (if your logic rejects common ones)
+// Should fail because the password is too common (if that rule is included)
+test("fails if reused/common password", () => {
+  const password = "Password123!";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false); // Update this only if your validator handles common passwords
+});
