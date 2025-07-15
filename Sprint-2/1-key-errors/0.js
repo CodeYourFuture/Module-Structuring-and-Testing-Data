@@ -11,7 +11,7 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
+// =============>  write your explanation here
 // The function already receives `str` as a parameter. 
 // Inside the function, it tries to declare `let str = ...`, 
 // which causes a conflict because JavaScript does not 
