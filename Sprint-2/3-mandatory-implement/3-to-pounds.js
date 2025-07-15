@@ -1,6 +1,11 @@
-// In Sprint-1, there is a program written in interpret/to-pounds.js
+// Define a function that converts kilograms to pounds
+function toPounds(kg) {
+  const pounds = kg * 2.20462;
+  return pounds.toFixed(2); // rounds to 2 decimal places
+}
 
-// You will need to take this code and turn it into a reusable block of code.
-// You will need to declare a function called toPounds with an appropriately named parameter.
-
-// You should call this function a number of times to check it works for different inputs
+// Call the function with different inputs to test it
+console.log(toPounds(1));     // 2.20
+console.log(toPounds(5));     // 11.02
+console.log(toPounds(70));    // 154.32
+console.log(toPounds(0));     // 0.00
