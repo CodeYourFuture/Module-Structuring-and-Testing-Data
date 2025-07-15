@@ -33,4 +33,12 @@ test("should return Invalid card rank ", () => {
     expect(invalid).toEqual('Invalid card rank.');
     });
 
+test("should return the value 10 for 10 of hearts ", () => {
+    const tenOfHearts = getCardValue("10♥");
+    expect(tenOfHearts).toEqual(10);
+    });
 
+test("should return the value Invalid card rank for value of 22", () => {
+    const twentyTwo = getCardValue("22");
+    expect(twentyTwo).toEqual("Invalid card rank.");
+    });

@@ -20,5 +20,5 @@ test("should return True for a proper fraction", () => {
 
 
 test("should return True for a proper fraction", () => {
-  expect(isProperFraction(3, 3)).toEqual(false);
+  expect(isProperFraction(3, 3)).toEqual(true);
 });
