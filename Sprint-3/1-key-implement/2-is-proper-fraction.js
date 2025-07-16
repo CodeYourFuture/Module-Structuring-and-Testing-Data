@@ -8,7 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (denominator === 0) return "Undefined";
+    if (denominator === 0) throw new Error("Denominator cannot be zero");
     else if (numerator < denominator) return true;
     else return false;
 }
@@ -59,6 +59,6 @@ assertEquals(equalFraction, false);
 // target output: Undefined
 // Explanation: The fraction 3/0 is not a fraction type like proper or improper because division by zero is not allowed in mathematics. The function should return undefined.
 const zeroFraction = isProperFraction(3,0);
-assertEquals(zeroFraction, "Undefined");
+assertEquals(zeroFraction, "Denominator cannot be zero");
 
 
