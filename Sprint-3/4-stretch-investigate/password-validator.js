@@ -1,9 +1,9 @@
-function passwordValidator(password) {
-    return password.length < 5 ? false : true
-}
+// function passwordValidator(password) {
+//  return password.length < 5 ? false : true
+// }
 
 
-module.exports = passwordValidator;
+// module.exports = passwordValidator;
 
 // List of previously used passwords that are no longer allowed
 const oldPasswords = ["Password1!", "12345aA!", "Admin123!"]; 
