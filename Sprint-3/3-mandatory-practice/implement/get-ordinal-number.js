@@ -1,5 +1,7 @@
 const getOrdinalNumber = (n) => {
-  if (n > 3 && n < 21) return n + "th";
+  if (n % 100 >= 11 && n % 100 <= 13) {
+    return n + "th";
+  }
   switch (n % 10) {
     case 1:
       return n + "st";
@@ -11,5 +13,7 @@ const getOrdinalNumber = (n) => {
       return n + "th";
   }
 };
-
+// console.log(getOrdinalNumber(511));
+// console.log(getOrdinalNumber(612));
+// console.log(getOrdinalNumber(21));
 module.exports = getOrdinalNumber;
