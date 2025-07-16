@@ -1,5 +1,5 @@
 // Predict and explain first...
-//  =============> write your prediction here
+//  =============> Capatlises the first letter of a string.
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
@@ -9,5 +9,8 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+// =============> The variable 'str' is being declared twice, once as a parameter and again with 'let' resulting in a syntax error.
+// =============> function capitalise(str) {
+// =============>   let word = `${str[0].toUpperCase()}${str.slice(1)}`;
+// =============>   return word;
+// =============> }
