@@ -41,3 +41,10 @@ test("should identify Straight angle (180°)", () => {
 test("should identify Reflex angle (greater 180° and less 360°)", () => {
   expect(getAngleType(220)).toEqual("Reflex angle");
 });
+
+// "Wrong angle"
+// when the angle is below 0 or above 360 
+
+test("should identify wrong angle (below 0 or above 360 )", () => {
+  expect(getAngleType(400)).toEqual("Wrong angle");
+});
