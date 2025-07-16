@@ -10,7 +10,6 @@ function cardNumberValidator(cardNumber) {
       return false;
     }
   }
-
   // check if at least two different digits present (all of the digits cannot be the same)
   let hasDifferentDigits = false;
   for (let i = 1; i < numberInArray.length; i++) {
@@ -23,19 +22,19 @@ function cardNumberValidator(cardNumber) {
     return false; // all digits are the same
   }
   // check if sum of all the digits are greater than 16.
-    let sum = 0;
-    for (let i = 0; i < numberInArray.length; i++) {
-      sum += Number(numberInArray[i]);
-    }
-    if (sum <= 16) {
-      return false; // the sum is not greater than 16
-    }
-    // check if the final digit is even.
-    let lastDigit = numberInArray[numberInArray.length - 1] % 2;
-    if (lastDigit !== 0) {
-      return false;
-    }
-    return true;
+  let sum = 0;
+  for (let i = 0; i < numberInArray.length; i++) {
+    sum += Number(numberInArray[i]);
+  }
+  if (sum <= 16) {
+    return false; // the sum is not greater than 16
+  }
+  // check if the final digit is even.
+  let lastDigit = numberInArray[numberInArray.length - 1] % 2;
+  if (lastDigit !== 0) {
+    return false;
+  }
+  return true;
 }
 
 module.exports = cardNumberValidator;
