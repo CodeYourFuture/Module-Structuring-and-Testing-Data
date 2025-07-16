@@ -1,0 +1,25 @@
+const validateCreditCard = require("./credit-card-validator-2");
+
+test("validates a correct card number: 9999777788880000", () => {
+  expect(validateCreditCard("9999777788880000")).toBe(true);
+});
+
+test("validates a correct card number: 6666666666661666", () => {
+  expect(validateCreditCard("6666666666661666")).toBe(true);
+});
+
+test("rejects card with invalid characters: a92332119c011112", () => {
+  expect(validateCreditCard("a92332119c011112")).toBe(false);
+});
+
+test("rejects card with only one digit repeated: 4444444444444444", () => {
+  expect(validateCreditCard("4444444444444444")).toBe(false);
+});
+
+test("rejects card with sum less than or equal to 16: 1111111111111110", () => {
+  expect(validateCreditCard("1111111111111110")).toBe(false);
+});
+
+test("rejects card ending in an odd digit: 6666666666666661", () => {
+  expect(validateCreditCard("6666666666666661")).toBe(false);
+});
