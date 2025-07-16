@@ -23,3 +23,4 @@ test("rejects card with sum less than or equal to 16: 1111111111111110", () => {
 test("rejects card ending in an odd digit: 6666666666666661", () => {
   expect(validateCreditCard("6666666666666661")).toBe(false);
 });
+
