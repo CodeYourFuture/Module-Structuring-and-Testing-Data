@@ -6,6 +6,8 @@ function getAngleType(angle) {
   if (angle === 180) return "Straight angle";
   if (angle > 180 && angle < 360) return "Reflex angle";
 
+}
+
 
 
 

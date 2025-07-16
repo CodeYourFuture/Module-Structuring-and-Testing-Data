@@ -18,6 +18,7 @@ function getAngleType(angle) {
    if (angle > 90 && angle < 180) return "Obtuse angle";
    if (angle === 180) return "Straight angle";
    if (angle > 180 && angle < 360) return "Reflex angle";
+   
    // read to the end, complete line 36, then pass your test here
 }
 
