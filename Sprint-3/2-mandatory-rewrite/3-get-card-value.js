@@ -1,6 +1,6 @@
 function getCardValue(card) {
   const rank = card.slice(0, -1);
-  if (Number(rank) <= 10 && Number(rank) >= 2) {
+  if (/^(10|[2-9])$/.test(rank)) {
     return Number(rank);
   } else if (rank === "A") {
     return 11;
@@ -10,4 +10,5 @@ function getCardValue(card) {
     throw new Error("Invalid card rank");
   }
 }
-module.exports = getCardValue;
+// console.log(getCardValue("0x02♠"));
+module.exports = getCardValue; 
