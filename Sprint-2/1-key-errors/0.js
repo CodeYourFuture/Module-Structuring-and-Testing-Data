@@ -1,6 +1,6 @@
 // Predict and explain first...
 //  =============> write your prediction here
-//the function will turn the first given string into Uppercase.
+//the function will turn the first given character into Uppercase.
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
