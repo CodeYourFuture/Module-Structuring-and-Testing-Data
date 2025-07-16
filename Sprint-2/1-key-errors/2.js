@@ -3,18 +3,18 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> The function `square` will throw an error because the parameter `3` is not a valid variable name.
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> SyntaxError: Unexpected number
 
-// =============> explain this error message here
+// =============> The error occurs when attempting to declare a function with a numeric parameter, which is not permitted.
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
-
-
+// =============> function square(num) {
+// =============>     return num * num;
+// =============> }
