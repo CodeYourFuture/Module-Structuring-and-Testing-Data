@@ -17,9 +17,8 @@ function getAngleType(angle) {
   if (angle > 90 && angle < 180) return "Obtuse angle";
   if (angle === 180) return "Straight angle";
   if (angle > 180 && angle < 360) return "Reflex angle";
-  else if (angle > 180 && angle < 360) return "Reflex angle";
 }
-
+// there was duplication of the same condition.  so i have corrected it here
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
 function assertEquals(actualOutput, targetOutput) {
