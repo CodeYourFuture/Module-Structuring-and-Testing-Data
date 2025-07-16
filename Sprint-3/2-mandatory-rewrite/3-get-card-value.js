@@ -7,7 +7,7 @@ function getCardValue(card) {
 
   if (num >= 2 && num <= 9) return num;
 
-  throw new Error("Invalid card rank");
+  throw new Error("Invalid card rank: '${rank}'"); // now it shows what specific rank is invalid 
 }
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
