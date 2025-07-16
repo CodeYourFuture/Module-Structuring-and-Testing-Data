@@ -14,3 +14,9 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+function toUpperSnakeCase(input) // Function to convert a string to UPPER_SNAKE_CASE
+ {
+    return input.toUpperCase().replace(/\s+/g, "_");// Convert the string to uppercase and replace spaces with underscores
+  }  
+console.log(toUpperSnakeCase("hello there")); // Outputs: "HELLO_THERE"
+console.log(toUpperSnakeCase("lord of the rings")); // Outputs: "LORD_OF_THE_RINGS"
