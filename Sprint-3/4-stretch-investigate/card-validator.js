@@ -4,17 +4,13 @@ function cardNumberValidator(cardNumber) {
   }
   const numberInArray = cardNumber.toString().split(""); // convert the cardNumber to sting then into an array
   // check if all numbers are numbers
-  let isAllNumbers = true;
   for (let index = 0; index <= numberInArray.length - 1; index++) {
     const currentNumber = numberInArray[index];
     if (isNaN(currentNumber)) {
-      isAllNumbers = false;
-      break;
+      return false;
     }
   }
-  if (!isAllNumbers) {
-    return false; // Not all digits are numbers
-  }
+
   // check if at least two different digits present (all of the digits cannot be the same)
   let hasDifferentDigits = false;
   for (let i = 1; i < numberInArray.length; i++) {
