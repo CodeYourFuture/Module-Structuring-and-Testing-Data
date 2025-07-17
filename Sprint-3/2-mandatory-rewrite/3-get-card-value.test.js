@@ -28,3 +28,10 @@ test("should return 11 for Ace of Heart",()=>{
 test("should return invalid cards for anything else",()=>{
     expect(getCardValue("l")).toBe("Invalid card rank")
 })
+
+test("should return invalid cards for anything else", () => {
+  expect(getCardValue("2.1♠")).toBe("Invalid card rank");
+});
+test("should return invalid cards for anything else", () => {
+  expect(getCardValue("00_02♠")).toBe("Invalid card rank");
+});
