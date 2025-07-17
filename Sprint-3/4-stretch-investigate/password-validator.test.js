@@ -12,7 +12,7 @@ To be valid, a password must:
 - Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
 - Must not be any previous password in the passwords array. 
 
-You must breakdown this problem in order to solve it. Find one test case first and get that working
+You must breakdown this problem in order to solve it. Find one test case first and get that working.
 */
 const isValidPassword = require("./password-validator");
 test("password has at least 5 characters", () => {
@@ -22,27 +22,32 @@ test("password has at least 5 characters", () => {
     const result = isValidPassword(password);
     // Assert
     expect(result).toEqual(true);
+    expect(isValidPassword("12h")).toEqual(false)
 }
 );
 test("password has at least one uppercase letter (A-Z)", () => {
   const password = "abcB123%"; 
   const result = isValidPassword(password);
   expect(result).toEqual(true);
+  expect(isValidPassword("12as?lh")).toEqual(false);
 });
 test("password has at least one lowercase letter (a-z)", () => {
   const password = "abcB123%";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
+  expect(isValidPassword("123AK/")).toEqual(false);
 });
 test("password has at least one number (0-9)", () => {
   const password = "abcB123%";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
+  expect(isValidPassword("wubdUH/;")).toEqual(false);
 });
 test('password has at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")', () => {
   const password = "abcB123%";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
+  expect(isValidPassword("1426dgdj")).toEqual(false);
 });
      const previousPasswords=["12345r%M"]
      test("password must not be any previous password", () => {
