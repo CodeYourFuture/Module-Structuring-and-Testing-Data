@@ -10,4 +10,3 @@ To avoid this, always declare and assign your variables before using them.
 */
 const cityOfBirth = "Bolton";
 console.log(`I was born in ${cityOfBirth}`);
-

@@ -8,8 +8,6 @@
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
-
-
 /* This code throws an error because `cardNumber` is a **number**, and numbers do not have a `.slice()` method—`.slice()` is a method for strings and arrays.
 
 **How to fix:**  
