@@ -1,16 +1,21 @@
 // Predict and explain first...
-//  =============> Capitalises the first letter of a string.
+//  =============> write your prediction here
+// A syntax error should occur because the function parameter is named `str`, but it is also being redeclared inside the function.
 
-// Call the function capitalise with a string input.
-// Interpret the error message and work out why an error is occurring.
+// call the function capitalise with a string input
+// interpret the error message and figure out why an error is occurring
 
 function capitalise(str) {
   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
 
-// =============> The variable 'str' is being declared twice, once as a parameter and again with 'let', resulting in a syntax error.
-// =============> function capitalise(str) {
-// =============>   let word = `${str[0].toUpperCase()}${str.slice(1)}`;
-// =============>   return word;
-// =============> }
+// =============> write your explanation here
+// The code outputs the error `SyntaxError: Identifier 'str' has already been declared`.
+// JavaScript does not allow you to redeclare a variable or parameter with the same name in the same scope.
+// In this case, the parameter `str` is being redeclared as a `let` variable inside the function, which is not allowed.
+// =============> write your new code here
+function capitalise(str) {
+  const capitalisedString = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return capitalisedString;
+}
