@@ -1,6 +1,7 @@
 function getOrdinalNumber(num) {
-    if (isNaN(num)) {
-      return NaN;
+
+    if (isNaN(num) || (!Number.isInteger(num))) {
+      return "NaN";
     }
      
 const strNum=String(num);

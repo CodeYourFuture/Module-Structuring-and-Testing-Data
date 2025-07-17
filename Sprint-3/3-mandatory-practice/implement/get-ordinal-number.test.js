@@ -50,5 +50,7 @@ test("should append 'th' to numbers whose last digits are between 4 and 13 inclu
 // When the number is NaN
 // Then the function should return "NaN"
 test("should return 'NaN' for NaN", () => {
-    expect(isNaN(getOrdinalNumber(NaN))).toEqual(true);
+    expect(getOrdinalNumber(NaN)).toEqual("NaN");
   });
+
+ 
