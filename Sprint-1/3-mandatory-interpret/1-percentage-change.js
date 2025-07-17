@@ -65,12 +65,4 @@ This allows for mathematical operations on the price.
 
 
 
-
-
-
-
-
-
-
-
 */
