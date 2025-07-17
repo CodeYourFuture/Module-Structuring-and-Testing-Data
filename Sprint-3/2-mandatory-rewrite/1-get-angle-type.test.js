@@ -40,3 +40,7 @@ test("should identify reflex angle(180<angle<=360)",()=>{
 test("should identify revolutional angle(angle>360)", () => {
   expect(getAngleType(390)).toEqual("Revolutional angle");
 });
+
+test("should identify a negative angle(angle<0)", () => {
+  expect(getAngleType(-390)).toEqual("Negative angle");
+});
