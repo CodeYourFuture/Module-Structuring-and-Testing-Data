@@ -16,10 +16,9 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function toUpperSnakeCase(str) {
-    // Replace spaces with underscores and convert to uppercase
-    return str.replace(/ /g, "_").toUpperCase();
+  // Replace spaces with underscores and convert to uppercase
+  return str.replace(/ /g, "_").toUpperCase();
 }
-
 
 console.log(toUpperSnakeCase("hello there")); // "HELLO_THERE"
 console.log(toUpperSnakeCase("lord of the rings")); // "LORD_OF_THE_RINGS"

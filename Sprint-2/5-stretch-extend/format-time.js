@@ -24,8 +24,6 @@
 //   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 // );
 
-
-
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(3, 5);
@@ -47,13 +45,28 @@ function pad(num) {
 }
 
 // Test cases for different groups of input data and edge cases
-console.assert(formatAs12HourClock("00:00") === "12:00 am", "Test midnight failed");
+console.assert(
+  formatAs12HourClock("00:00") === "12:00 am",
+  "Test midnight failed"
+);
 console.assert(formatAs12HourClock("01:00") === "01:00 am", "Test 1am failed");
 console.assert(formatAs12HourClock("08:00") === "08:00 am", "Test 8am failed");
 console.assert(formatAs12HourClock("12:00") === "12:00 pm", "Test noon failed");
 console.assert(formatAs12HourClock("13:00") === "01:00 pm", "Test 1pm failed");
-console.assert(formatAs12HourClock("11:59") === "11:59 am", "Test 11:59am failed");
-console.assert(formatAs12HourClock("12:59") === "12:59 pm", "Test 12:59pm failed");
-console.assert(formatAs12HourClock("15:30") === "03:30 pm", "Test 3:30pm failed");
+console.assert(
+  formatAs12HourClock("11:59") === "11:59 am",
+  "Test 11:59am failed"
+);
+console.assert(
+  formatAs12HourClock("12:59") === "12:59 pm",
+  "Test 12:59pm failed"
+);
+console.assert(
+  formatAs12HourClock("15:30") === "03:30 pm",
+  "Test 3:30pm failed"
+);
 console.assert(formatAs12HourClock("23:00") === "11:00 pm", "Test 11pm failed");
-console.assert(formatAs12HourClock("23:59") === "11:59 pm", "Test 11:59pm failed");
+console.assert(
+  formatAs12HourClock("23:59") === "11:59 pm",
+  "Test 11:59pm failed"
+);

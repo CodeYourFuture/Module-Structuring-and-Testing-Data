@@ -8,7 +8,6 @@
 // The last digit of 806 is 3
 // Because getLastDigit always uses the global variable num (103) and ignores the argument.
 
-
 // const num = 103;
 
 // function getLastDigit() {
