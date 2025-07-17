@@ -1,5 +1,5 @@
 function isProperFraction(numerator, denominator) {
-    if (isNaN(numerator) || isNaN(denominator)) return NaN;
+    if (isNaN(numerator) || isNaN(denominator)) return false;
     if (Math.abs(numerator) < Math.abs(denominator)) {
         return true}else{
             return false;
