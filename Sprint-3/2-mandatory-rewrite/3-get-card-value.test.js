@@ -17,9 +17,11 @@ const twoofSpades = getCardValue("2♠");
 expect(twoofSpades).toEqual(2);
 })
 // Case 3: Handle Face Cards (J, Q, K):.
-test("should return 10 for J of spades",()=>{
-    const jofSpades=getCardValue("J♠");
-    expect(jofSpades).toEqual(10);
+test("should return 10 for Face Cards (J, Q, K)", () => {
+  const jofSpades = getCardValue("J♠");
+  expect(jofSpades).toEqual(10);
+  expect(getCardValue("K♠")).toEqual(10);
+  expect(getCardValue("Q♠")).toEqual(10)
 });
 // Case 4: Handle Ace (A):
 test("should return 11 for Ace of Heart",()=>{
