@@ -24,12 +24,3 @@ test("should return '12th' for 12", () => {
     expect(getOrdinalNumber(12)).toEqual("12th");
 
     });    
-// output 
-console.log(getOrdinalNumber(1));   // "1st"
-console.log(getOrdinalNumber(2));   // "2nd"
-console.log(getOrdinalNumber(3));   // "3rd"
-console.log(getOrdinalNumber(4));   // "4th"
-console.log(getOrdinalNumber(11));  // "11th"
-console.log(getOrdinalNumber(12));  // "12th"
-console.log(getOrdinalNumber(13));  // "13th"
-console.log(getOrdinalNumber(21));  // "21st"
