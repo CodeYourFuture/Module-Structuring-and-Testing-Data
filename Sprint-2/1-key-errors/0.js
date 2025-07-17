@@ -24,6 +24,9 @@ function capitalise(str) {
 function capitalise(str) {
   str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
+
+}
+
   capitalise(hello);
   console.log(capitalise('hello'));
   // I used "hello" as an example input when
