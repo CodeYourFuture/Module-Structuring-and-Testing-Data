@@ -1,6 +1,10 @@
 // Predict and explain first...
 
-// Prediction: The program will first print `320` to the console and then print `The result of multiplying 10 and 32 is undefined`.
+// =============> write your prediction here
+// The console will output two lines.
+//    1. `320` (from inside the multiply function)
+//    2. Second line: `The result of multiplying 10 and 32 is undefined`
+// This is because the `multiply` function logs the result but does not return it, as functions that do not explicitly return a value return `undefined` by default.
 
 function multiply(a, b) {
   console.log(a * b);
@@ -8,11 +12,14 @@ function multiply(a, b) {
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
-// Explanation: The `multiply` function uses `console.log(a * b)` to display the product but does not explicitly return any value. In JavaScript, functions without a `return` statement implicitly return `undefined`. Therefore, when `multiply(10, 32)` is called within the `console.log` statement, it logs `320` and then returns `undefined`, which is then used in the string interpolation.
+// =============> write your explanation here
+// The bug occurs because the `multiply` function uses `console.log()` to display the result instead of using the `return` keyword.
+// When the function call is placed inside the template literal, it resolves to its return value, which is `undefined`.
 
 // Finally, correct the code to fix the problem
-// New Code:
-// function multiply(a, b) {
-//   return a * b;
-// }
-// console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
+//  =============> write your new code here
+function multiplyFixed(a, b) {
+  return a * b;
+}
+
+console.log(`The result of multiplying 10 and 32 is ${multiplyFixed(10, 32)}`);
