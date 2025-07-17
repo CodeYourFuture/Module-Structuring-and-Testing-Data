@@ -28,9 +28,6 @@ console.log(`£${pounds}.${pence}`);
 
 /*
 
-1. const penceString = "399p";
-Initializes a string variable with the value "399p", representing a price in pence with a trailing "p".
-
 2. const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1);
 Removes the trailing "p" character from the string, leaving only the numeric part (e.g., "399").
 
