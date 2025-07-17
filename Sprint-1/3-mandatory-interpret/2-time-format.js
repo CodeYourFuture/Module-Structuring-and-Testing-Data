@@ -24,7 +24,6 @@ console.log(result);
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 
-
 /* SOLUTION
 
 a) **How many variable declarations are there in this program?**  

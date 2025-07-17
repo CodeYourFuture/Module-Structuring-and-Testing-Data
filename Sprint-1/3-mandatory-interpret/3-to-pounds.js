@@ -48,4 +48,3 @@ Outputs the formatted price in pounds and pence (e.g., "£3.99").
 
 
 */
-
