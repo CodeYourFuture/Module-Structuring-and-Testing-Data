@@ -5,10 +5,14 @@ test("should return 11 for Ace of Spades", () => {
     expect(aceofSpades).toEqual(11);
     });
 
-// Case 2: Handle Number Cards (2-10):
+// Case 2: Handle Number Cards (2-10):..
 test("should return 5 for 5 of heart",()=>{
     const fiveofHearts = getCardValue("5♥");
     expect(fiveofHearts).toEqual(5); 
+})
+test("should return 2 for 2 of Spades", () => {
+const twoofSpades = getCardValue("2♠");
+expect(twoofSpades).toEqual(2);
 })
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return 10 for J of spades",()=>{
