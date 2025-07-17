@@ -1,5 +1,5 @@
 function getCardValue(card) {
-    // replace with your code from key-implement..
+    // replace with your code from key-implement...
     let rank=card.slice(0,-1);
     if (rank === "A") return 11;
     const allrank=["2","3","4","5","6","7","8","9","10"]
