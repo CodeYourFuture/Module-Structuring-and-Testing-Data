@@ -1,4 +1,6 @@
 function getAngleType(angle) {
+if (typeof angle !== "number" || angle <= 0 || angle > 360) return "Invalid angle";
+
   if (angle === 90) return "Right angle";
   // replace with your completed function from key-implement
   if (angle < 90)
