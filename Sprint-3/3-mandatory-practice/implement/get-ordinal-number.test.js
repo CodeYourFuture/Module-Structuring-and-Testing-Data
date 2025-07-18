@@ -34,8 +34,8 @@ test("appends 'th' to numbers ending in 11, 12, 13", () => {
   expect(getOrdinalNumber(112)).toBe("112th");
 });
 
-// Category 5: All other numbers
-test("appends 'th' to all other numbers", () => {
+// Category 5: Numbers ending in 0 or 4–9 (excluding 11–13)
+test("appends 'th' to numbers ending in 0 or 4–9, except for 11–13", () => {
   expect(getOrdinalNumber(4)).toBe("4th");
   expect(getOrdinalNumber(9)).toBe("9th");
   expect(getOrdinalNumber(100)).toBe("100th");
