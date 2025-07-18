@@ -27,7 +27,7 @@ console.log(result);
 /* SOLUTION
 
 a) **How many variable declarations are there in this program?**  
-There are **5** variable declarations: `movieLength`, `remainingSeconds`, `totalMinutes`, `remainingMinutes`, `totalHours`, and `result`.
+There are **6** variable declarations: `movieLength`, `remainingSeconds`, `totalMinutes`, `remainingMinutes`, `totalHours`, and `result`.
 
 b) **How many function calls are there?**  
 - The template literal uses `${...}` expressions, but these are not function calls.  
