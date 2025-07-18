@@ -37,7 +37,7 @@ function assertEquals(actualOutput, targetOutput) {
 // Given an angle in degrees,
 // When the function getAngleType is called with this angle,
 // Then it should:
-
+   
 // Case 1: Identify Right Angles:
 // When the angle is exactly 90 degrees,
 // Then the function should return "Right angle"
@@ -76,3 +76,10 @@ assertEquals(Straight, "Straight angle");
 
 const reflex = getAngleType(220);
 assertEquals(reflex, "Reflex angle");
+
+
+// Case 6: Identify Wrong Angles:
+// When the angle is different to the all scenarios above,
+
+const wrong = getAngleType(400);
+assertEquals(wrong, "Wrong angle");
