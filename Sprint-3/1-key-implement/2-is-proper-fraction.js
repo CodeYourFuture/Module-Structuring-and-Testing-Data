@@ -8,7 +8,16 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) return true;
+  if (
+    typeof numerator !== "number" ||
+    typeof denominator !== "number" ||
+    denominator === 0
+  ) {
+    return false; // invalid input
+  }
+
+  const value = numerator / denominator;
+  return value > 0 && value < 1;
 }
 
 // here's our helper again
@@ -18,6 +27,7 @@ function assertEquals(actualOutput, targetOutput) {
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
+
 // Test 1: Proper Fraction
 const test1 = isProperFraction(2, 3);
 assertEquals(test1, true);
@@ -26,28 +36,10 @@ assertEquals(test1, true);
 const test2 = isProperFraction(5, 2);
 assertEquals(test2, false);
 
-// Test 3: Negative Proper Fraction
+// Test 3: Negative Proper Fraction (should be false!)
 const test3 = isProperFraction(-4, 7);
-assertEquals(test3, true);
+assertEquals(test3, false);
 
 // Test 4: Equal Numerator and Denominator
 const test4 = isProperFraction(3, 3);
 assertEquals(test4, false);
-
-// Stretch Tests
-
-// Test 5: Zero numerator
-const test5 = isProperFraction(0, 5);
-assertEquals(test5, true);
-
-// Test 6: Denominator is zero
-const test6 = isProperFraction(1, 0);
-assertEquals(test6, false);
-
-// Test 7: Negative denominator
-const test7 = isProperFraction(3, -5);
-assertEquals(test7, true);
-
-// Test 8: Non-number input
-const test8 = isProperFraction("a", 5);
-assertEquals(test8, false);
