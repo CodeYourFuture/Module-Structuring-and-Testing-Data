@@ -8,7 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+  if (rank === "A") return 11;
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -49,3 +49,59 @@ const fiveofHearts = getCardValue("5♥");
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+  const rank = card.slice(0, -1); // removes the suit
+
+  if (!rank) {
+    throw new Error("Invalid card format.");
+  }
+
+  if (!isNaN(rank)) {
+    const num = parseInt(rank);
+    if (num >= 2 && num <= 10) return num;
+  }
+
+  if (["J", "Q", "K"].includes(rank)) return 10;
+
+  if (rank === "A") return 11;
+
+  throw new Error("Invalid card rank.");
+}
+
+// ✅ Assertion helper
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected ${actualOutput} to equal ${targetOutput}`
+  );
+}
+
+// ✅ Tests
+const aceofSpades = getCardValue("A♠");
+assertEquals(aceofSpades, 11);
+
+const fiveofHearts = getCardValue("5♥");
+assertEquals(fiveofHearts, 5);
+
+const tenofClubs = getCardValue("10♣");
+assertEquals(tenofClubs, 10);
+
+const jackofDiamonds = getCardValue("J♦");
+assertEquals(jackofDiamonds, 10);
+
+const queenofSpades = getCardValue("Q♠");
+assertEquals(queenofSpades, 10);
+
+const kingofHearts = getCardValue("K♥");
+assertEquals(kingofHearts, 10);
+
+// Error handling test
+try {
+  getCardValue("Z♦");
+} catch (error) {
+  console.assert(
+    error.message === "Invalid card rank.",
+    `Expected error message but got "${error.message}"`
+  );
+}
