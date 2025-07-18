@@ -26,7 +26,7 @@ test("append 'rd' to numbers ending in 3, except those ending in 13", () => {
   expect(getOrdinalNumber(13)).toEqual("13th"); // exception case
 });
 
-test("append 'th' to all other numbers", () => {
+test("append 'th' to numbers ending in 0, 4–9, or 11–13", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(10)).toEqual("10th");
   expect(getOrdinalNumber(11)).toEqual("11th");
