@@ -28,10 +28,10 @@ test("should return '11th' for 11", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
 });
 
-test("should return '11th' for 12", () => {
+test("should return '12th' for 12", () => {
   expect(getOrdinalNumber(12)).toEqual("12th");
 });
 
-test("should return '11th' for 13", () => {
+test("should return '13th' for 13", () => {
   expect(getOrdinalNumber(13)).toEqual("13th");
 });
