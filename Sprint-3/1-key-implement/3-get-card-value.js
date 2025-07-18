@@ -8,18 +8,25 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
+  if (typeof card !== "string" || card.length < 2) return 0;
+
+  let rank = card;
+
+  if (card.startsWith("10")) {
+    rank = "10";
+  } else {
+    rank = card[0];
+  }
+
   if (rank === "A") return 11;
+  if (["K", "Q", "J"].includes(rank)) return 10;
+
+  const numberValue = Number(rank);
+  if (!isNaN(numberValue)) return numberValue;
+
+  return 0;
 }
 
-// You need to write assertions for your function to check it works in different cases
-// we're going to use this helper function to make our assertions easier to read
-// if the actual output matches the target output, the test will pass
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
 // Acceptance criteria:
 
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
