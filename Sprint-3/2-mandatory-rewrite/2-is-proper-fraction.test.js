@@ -19,12 +19,12 @@ test("should return true for a zero numerator", () => {
 
 // Case 3: Identify Negative proper Fractions:
 
-test("should return false for a negative improper fraction", () => {
+test("should return true for a negative improper fraction", () => {
   expect(isProperFraction(-3, -4)).toEqual(true);
 });
 
 // Case 4: Identify Negative Improper Fractions:
-test("should return true for a negative proper fraction", () => {
+test("should return false for a negative proper fraction", () => {
   expect(isProperFraction(-5, -3)).toEqual(false);
 });
 

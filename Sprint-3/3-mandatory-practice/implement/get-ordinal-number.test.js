@@ -68,19 +68,24 @@ test("should return '1000th' for 1000", () => {
           // case 2: test for negative numbers
           // When the number is negative,
           // Then the function should return "Negative numbers are not supported"
-          test("should return 'Negative numbers are not supported' for -1", () => {
-            expect(getOrdinalNumber(-1)).toEqual("Negative numbers are not supported");
+          test("should throw an error for negative numbers", () => {
+            expect(() => getOrdinalNumber(-1)).toThrow("Input must be a positive integer");
           });
           // case 3: test for non-integer numbers
           // When the number is a non-integer,
           // Then the function should return "Input must be a positive integer"
-          test("should return 'Input must be a positive integer' for 1.5", () => {
-            expect(getOrdinalNumber(1.5)).toEqual("Input must be a positive integer");
+          test("should throw an error for non-integer numbers", () => {
+            expect(() => getOrdinalNumber(1.5)).toThrow("Input must be a positive integer");
           });
           // case 4: test for zero
           // When the number is zero,
           // Then the function should return "Input must be a positive integer"
-          test("should return 'Input must be a positive integer' for 0", () => {
-            expect(getOrdinalNumber(0)).toEqual("Input must be a positive integer");
+          test("should throw an error for zero", () => {
+            expect(() => getOrdinalNumber(0)).toThrow("Input must be a positive integer");
           });
         
+
+
+
+
+
