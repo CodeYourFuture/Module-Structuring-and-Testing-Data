@@ -13,6 +13,7 @@ function getAngleType(angle) {
   if (angle === 45) return "Acute angle";
   if (angle === 120) return "Obtuse angle";
 @@ -45,23 +46,43 @@
+}
 
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
