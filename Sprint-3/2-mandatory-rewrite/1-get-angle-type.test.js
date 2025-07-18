@@ -11,6 +11,9 @@ test("should identify right angle (90°)", () => {
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
 test("should identify acute angles (<90°)", () => {
+  expect(getAngleType(1)).toEqual("Acute angle");
+  expect(getAngleType(15)).toEqual("Acute angle");
+  expect(getAngleType(45)).toEqual("Acute angle");
   expect(getAngleType(89)).toEqual("Acute angle");
 });
 

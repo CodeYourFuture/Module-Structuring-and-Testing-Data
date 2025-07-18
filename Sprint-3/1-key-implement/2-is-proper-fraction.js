@@ -54,8 +54,8 @@ assertEquals(equalFraction, false);
 // Stretch:
 // What other scenarios could you test for?
 
-const zeroNumerator = isProperFraction(0, 5);
-assertEquals(zeroNumerator, true); // 0/5 is a proper fraction
+const zeroNumerator = isProperFraction(0, 0);
+assertEquals(zeroNumerator, true);
 
 const negativeDenominator = isProperFraction(2, -8);
 assertEquals(negativeDenominator, true);

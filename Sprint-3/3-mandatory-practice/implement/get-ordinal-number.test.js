@@ -23,3 +23,15 @@ test("should return '3rd' for 3", () => {
 test("should return '4th' for 4", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
 });
+
+test("should return '11th' for 11", () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+});
+
+test("should return '11th' for 12", () => {
+  expect(getOrdinalNumber(12)).toEqual("12th");
+});
+
+test("should return '11th' for 13", () => {
+  expect(getOrdinalNumber(13)).toEqual("13th");
+});

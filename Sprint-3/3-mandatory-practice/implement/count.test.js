@@ -25,3 +25,15 @@ test("should count multiple occurrences of a character", () => {
 test("should return 0 when there are no occurrences", () => {
   expect(countChar("hello", "z")).toEqual(0);
 });
+
+test("should count multiple 'a' in 'aaa'", () => {
+  expect(countChar("aaa", "a")).toEqual(3);
+});
+
+test("should count 'e' in 'excellent'", () => {
+  expect(countChar("excellent", "e")).toEqual(3);
+});
+
+test("should return 0 when there are no occurrences", () => {
+  expect(countChar("excellent", "E")).toEqual(0);
+});

@@ -1,6 +1,5 @@
 function isProperFraction(numerator, denominator) {
-  if (numerator < 0 || denominator < 0) return false;
-  return numerator < denominator;
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 module.exports = isProperFraction;
