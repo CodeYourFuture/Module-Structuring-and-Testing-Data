@@ -8,50 +8,47 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-  if (typeof(angle) !== "number" || angle<=0 || angle >360 ) return "Invalid angle"
+  if (typeof angle !== "number" || angle <= 0 || angle > 360)
+    return "Invalid angle";
   if (angle === 90) return "Right angle";
-  if (angle === 45) return "Acute angle";
-  if (angle === 120) return "Obtuse angle";
-@@ -45,23 +46,43 @@
+  if (angle === 180) return "Straight angle";
+  if (angle > 0 && angle < 90) return "Acute angle";
+  if (angle > 90 && angle < 180) return "Obtuse angle";
+  if (angle > 180 && angle < 360) return "Reflex angle";
+
+  return "Invalid angle";
 }
 
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
-const obtuse = getAngleType(120);
-assertEquals(obtuse, "Obtuse angle");
+assertEquals(getAngleType(120), "Obtuse angle");
+
 // ====> write your test here, and then add a line to pass the test in the function above
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
 // ====> write your test here, and then add a line to pass the test in the function above
-const straight = getAngleType(180);
-assertEquals(straight, "Straight angle");
+assertEquals(getAngleType(180), "Straight angle");
+
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 // ====> write your test here, and then add a line to pass the test in the function above
-const reflex = getAngleType(181);
-assertEquals(reflex, "Reflex angle");
-const reflex2 = getAngleType(359);
-assertEquals(reflex2, "Reflex angle");
+assertEquals(getAngleType(181), "Reflex angle");
+assertEquals(getAngleType(359), "Reflex angle");
 
 // Case 6: No valid input:
 // When the angle is greater than 360 degrees and less than 0 degrees,
 // Then the function should return "Invalid angle"
 // ====> write your test here, and then add a line to pass the test in the function above
-const outOfRange = getAngleType(-5);
-assertEquals(outOfRange, "Invalid angle");
-const outOfRange2 = getAngleType(361);
-assertEquals(outOfRange2, "Invalid angle");
+assertEquals(getAngleType(-5), "Invalid angle");
+assertEquals(getAngleType(361), "Invalid angle");
 
 // Case 6: Not number input:
 // When the angle is not a number,
 // Then the function should return "Invalid angle"
 // ====> write your test here, and then add a line to pass the test in the function above
-const notNumberInput = getAngleType("-5");
-assertEquals(notNumberInput, "Invalid angle");
-const notNumberInput2 = getAngleType(true);
-assertEquals(notNumberInput2, "Invalid angle");
-const notNumberInput3 = getAngleType("Hello");
-assertEquals(notNumberInput3, "Invalid angle");
+assertEquals(getAngleType("-5"), "Invalid angle");
+assertEquals(getAngleType(true), "Invalid angle");
+assertEquals(getAngleType("Hello"), "Invalid angle");
