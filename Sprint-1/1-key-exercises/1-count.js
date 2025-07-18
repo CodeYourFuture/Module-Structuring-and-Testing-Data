@@ -7,5 +7,5 @@ count = count + 1;
 
 /*Line 3 is reassigning variable count with a new value, in this case we're saying add 1 to whatever we already have in count, 
 and so by using the console.log before and after the reassignment the we can tell new value of count is 1
-The "one-word" description of the programming operation in line 3 is IINCREMENT
+The "one-word" description of the programming operation in line 3 is INCREMENT
 */
