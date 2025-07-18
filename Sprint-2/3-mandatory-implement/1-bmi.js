@@ -16,7 +16,8 @@
 
 function calculateBMI(weight, height) {
   const bmi = weight / (height * height);
-  return bmi.toFixed(1); // toFixed(1) means: show 1 number after the decimal point (e.g. 23.41 becomes 23.4).
+  return Number(bmi.toFixed(1)); // toFixed(1) means: show 1 number after the decimal point (e.g. 23.41 becomes 23.4).
+  // this will return a number
 }
 
 console.log(calculateBMI(96, 1.79)); // output: 30.0
