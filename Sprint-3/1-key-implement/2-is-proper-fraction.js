@@ -1,11 +1,20 @@
 // Implement a function isProperFraction
+// Definition:
+// A proper fraction is defined as a fraction in the form
+//   numerator/denominator 
+// where
+// - Both numerator and denominator are integers
+// - denominator ≠ 0
+// - |numerator| < |denominator| (note: |x| denotes the absolute value of x)
+//
+// Examples of proper fractions, 1/2, -1/2.
+// 1/-2 and -1/-2 are also considered proepr fractions because 
+// mathematically, 1/-2 is equal to -1/2 and -1/-2 is equal to 1/2.
+
 // Write assertions for your function to check it works in different cases
-// Terms:
-// Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
-// Written here like this: 1/2 == Numerator/Denominator
-// the first test and first case is written for you
-// complete the rest of the tests and cases
-// write one test at a time, and make it pass, build your solution up methodically
+// The first test and first case is written for you
+// Complete the rest of the tests and cases
+// Write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
     if (numerator < denominator) return true;
