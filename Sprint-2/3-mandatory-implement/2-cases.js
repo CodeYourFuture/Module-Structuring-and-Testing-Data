@@ -16,14 +16,16 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function toUpperSnakeCase(string) {
-  //split the string into an array of words
-  const wordsArray = string.split(" ");
-  // Convert each word to uppercase
-  const upperWordsArray = wordsArray.map((word) => word.toUpperCase());
-  // Join the array back into a string with underscores
-  const toUpperSnakeCase = upperWordsArray.join("_");
+  // First convert the entire string to uppercase
+  const upperCaseString = string.toUpperCase();
+
+  // Then split it into words (assuming space-separated)
+  const wordsArray = upperCaseString.split(" ");
+
+  // Then join the array into a string using underscores
+  const result = wordsArray.join("_");
   // Return the string in UPPER_SNAKE_CASE
-  return toUpperSnakeCase;
+  return result;
 }
 // Example usage for this function
 // let string = "hello there";
