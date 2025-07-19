@@ -15,7 +15,7 @@ function convertTo12HourClockTime(time24clock) {
     hours -= 12; // Convert to 12-hour format
   }
 
-  return `${hours}:${minutes.toString().padStart(2, "0")} ${modifier}`;
+  return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")} ${modifier}`;
 }
 function convertTo24HourClockTime(time12clock) {
   let [time, modifier] = time12clock.split(" ");
@@ -32,6 +32,3 @@ function convertTo24HourClockTime(time12clock) {
     .padStart(2, "0")}`;
 }
 console.log(convertTo12HourClockTime(twentyFourHourClockTime)); // Output: "08:53 PM"
-console.log(convertTo24HourClockTime(twelveHourClockTime)); // Output: "20:53"
-// Output: "20:53"
-// Output: "08:53 PM"
