@@ -16,6 +16,7 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function makeAllCaps(text) {
-  return text.toUpperCase().split(" ").join("_");
+  if (typeof text !== "string") return "";
+  return text.toUpperCase().replace(/\s+/g, "_");
 }
 console.log(makeAllCaps("Anuar"));

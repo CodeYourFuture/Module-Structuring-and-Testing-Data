@@ -2,7 +2,6 @@
 
 // You will need to take this code and turn it into a reusable block of code.
 // You will need to declare a function called toPounds with an appropriately named parameter.
-
 // You should call this function a number of times to check it works for different inputs
 
 function toPounds(amount) {
@@ -17,7 +16,7 @@ function toPounds(amount) {
   const pence = paddedPenceNumberString
     .substring(paddedPenceNumberString.length - 2)
     .padEnd(2, "0");
-  console.log(`£${pounds}.${pence}`);
+  return `£${pounds}.${pence}`;
 }
 
 toPounds("500p");
