@@ -8,10 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) return true;
-  if (numerator >= denominator) return false;
-}
-
+  if (denominator === 0) {
+    return undefined;
+  } else if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  } else {
+    return false;
+  }
+} 
 // here's our helper again
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
