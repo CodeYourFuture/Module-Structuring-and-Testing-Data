@@ -11,7 +11,7 @@ function isProperFraction(numerator, denominator) {
   if (denominator == 0){
     return false
   }
-  return numerator < denominator;
+  return Math.abs(numerator) < Math.abs(denominator);
   }          
 
 // here's our helper again
