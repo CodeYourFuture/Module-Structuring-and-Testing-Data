@@ -2,3 +2,6 @@
 
 const age = 33;
 age = age + 1;
+
+
+// use let instead of const to allow reassignment
