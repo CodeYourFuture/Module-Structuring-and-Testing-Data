@@ -1,5 +1,9 @@
 function getAngleType(angle) {
   // replace with your completed function from key-implement
+    // Step 0: Validate input is a positive integer
+    if (!Number.isInteger(angle) || angle <= 0 || angle >= 360) {
+    return "Invalid angle";
+  }
   // Step 1: Check for a right angle (exactly 90 degrees)
   if (angle === 90) return "Right angle";
 
@@ -30,4 +34,4 @@ module.exports = getAngleType;
 // console.log(getAngleType(120)); // "Obtuse angle"
 // console.log(getAngleType(0)); // "Invalid angle"
 // console.log(getAngleType(200)); // "Invalid angle"
-// console.log(getAngleType(90.5)); // "Invalid angle"
+console.log(getAngleType(90.5)); // "Invalid angle"
