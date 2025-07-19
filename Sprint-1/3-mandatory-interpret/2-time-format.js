@@ -32,8 +32,7 @@ console.log(result);
 //    5. `const totalHours = (totalMinutes - remainingMinutes) / 60;`
 //    6. `const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;`
 
-// b) There are 0 function calls in this program. 
-// All operations are arithmetic operations and do not involve calling any functions.
+// b) There is 1 function calls in this program console.log(result);. 
 
 // c) The expression `movieLength % 60` calculates the remainder when `movieLength` (the total length of the movie in seconds) is divided by 60.
 // This gives the number of seconds that do not complete a full minute, effectively providing the remaining seconds after converting the total movie length into minutes.
@@ -46,4 +45,9 @@ console.log(result);
 
 // f) This code will work for all values of `movieLength` that are non-negative integers.
 // However, if `movieLength` is negative, the calculations will still work but may not make sense in the context of a movie duration.
+// If `movieLength` is a floating-point number, the output will still be formatted correctly, but the seconds and minutes may not be whole numbers.
+// If `movieLength` is a very large number, the code will still function correctly, but the output may not be practical for real-world movie durations.
+// The code assumes that `movieLength` is a valid non-negative number representing the length of a movie in seconds, and it will produce a formatted string representing that duration in hours, minutes, and seconds.
+// The code does not handle cases where `movieLength` is not a number or is undefined, which could lead to unexpected results.
+// The code is designed to handle typical movie lengths, but it may not be robust against all possible inputs.
 

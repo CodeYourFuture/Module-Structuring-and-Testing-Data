@@ -22,9 +22,10 @@ console.log(`The percentage change is ${percentageChange}`);
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 
 
-// a) There are 2 function calls in this file:
+// a) There are 3 function calls in this file:
 //    1. `carPrice.replaceAll(",", "")` on line 4
 //    2. `priceAfterOneYear.replaceAll(",", "")` on line 5
+//    3. `console.log(...)` on line 9
 
 
 // b) The error occurs on line 5 because there is a syntax error in the `replaceAll` method call. 
