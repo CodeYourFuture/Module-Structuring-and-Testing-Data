@@ -34,4 +34,4 @@ module.exports = getAngleType;
 // console.log(getAngleType(120)); // "Obtuse angle"
 // console.log(getAngleType(0)); // "Invalid angle"
 // console.log(getAngleType(200)); // "Invalid angle"
-console.log(getAngleType(90.5)); // "Invalid angle"
+// console.log(getAngleType(90.5)); // "Invalid angle"
