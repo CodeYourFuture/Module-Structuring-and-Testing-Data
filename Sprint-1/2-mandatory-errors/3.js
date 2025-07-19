@@ -9,9 +9,7 @@
 //run this Code, my prediction is right. In order to fix it, first cast to string first:
 
 const cardNumber=4533787178994213;
-const last4Digits = cardNumber.toString.slice(-4);
 
 //then conver to number
-const last4Digits = Number(cardNumber.toString.slice(-4));
-console log(last4Digits);
-
+const last4Digits = Number(cardNumber.toString().slice(-4));
+console.log(last4Digits);
