@@ -9,7 +9,7 @@ function getOrdinalNumber(n) {
     ord = "rd";
   }
 
-  return ord;
+  return n + ord;
 }
 console.log(getOrdinalNumber(1)); // The output should be "1st"
 
