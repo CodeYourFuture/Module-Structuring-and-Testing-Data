@@ -1,7 +1,12 @@
 function isProperFraction(numerator, denominator) {
-  if (Math.abs(numerator) < Math.abs(denominator)) return true; // This version of code works correctly for proper and negative fractions.
-  if (Math.abs(numerator) >= Math.abs(denominator)) return false;
-  if (Math.abs(numerator) === Math.abs(denominator)) return false;
+  if (denominator === 0) {
+    return false;
+  } else if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
+// This version of code works correctly for proper and negative fractions.
 module.exports = isProperFraction;
