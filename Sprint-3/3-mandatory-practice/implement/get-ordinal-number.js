@@ -1,7 +1,15 @@
-function getOrdinalNumber(num) {
-  if (num === 1) {
-    return "1st";
+function getOrdinalNumber(n) {
+  let ord = "th";
+
+  if (n % 10 == 1 && n % 100 != 11) {
+    ord = "st";
+  } else if (n % 10 == 2 && n % 100 != 12) {
+    ord = "nd";
+  } else if (n % 10 == 3 && n % 100 != 13) {
+    ord = "rd";
   }
+
+  return ord;
 }
 console.log(getOrdinalNumber(1)); // The output should be "1st"
 
