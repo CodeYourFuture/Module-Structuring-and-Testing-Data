@@ -14,20 +14,60 @@ const usedPasswords = [
   "eV$7xGn2",
 ];
 
+// function passwordValidator(password) {
+//   let arr = password.split("");
+//   // - Have at least 5 characters.
+//   if (arr.length < 5) return false;
+//   // - Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
+//   const symbols = new Array("!", "#", "$", "%", ".", "*", "&");
+
+//   const hasSymbol = arr.some((char) => symbols.includes(char));
+//   const hasDigit = arr.some((char) => /[0-9]/.test(char));
+//   const hasLower = arr.some((char) => /[a-z]/.test(char));
+//   const hasUpper = arr.some((char) => /[A-Z]/.test(char));
+
+//   const usedPass = !usedPasswords.includes(password);
+//   return hasSymbol && hasDigit && hasLower && hasUpper && usedPass;
+// }
+
+//Prettier makes this looks odd.
+
+// function passwordValidator(password) {
+//   const arr = password.split("");
+//   const symbols = ["!", "#", "$", "%", ".", "*", "&"];
+
+//   return password.length < 5
+//     ? false
+//     : !arr.some((char) => symbols.includes(char))
+//     ? false
+//     : !arr.some((char) => /[0-9]/.test(char))
+//     ? false
+//     : !arr.some((char) => /[a-z]/.test(char))
+//     ? false
+//     : !arr.some((char) => /[A-Z]/.test(char))
+//     ? false
+//     : usedPasswords.includes(password)
+//     ? false
+//     : true;
+// }
+
+//
+
+//return ASAP if condition match
+
 function passwordValidator(password) {
-  let arr = password.split("");
-  // - Have at least 5 characters.
-  if (arr.length < 5) return false;
-  // - Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
-  const symbols = new Array("!", "#", "$", "%", ".", "*", "&");
+  const arr = password.split("");
+  const symbols = ["!", "#", "$", "%", ".", "*", "&"];
 
-  const hasSymbol = arr.some((char) => symbols.includes(char));
-  const hasDigit = arr.some((char) => /[0-9]/.test(char));
-  const hasLower = arr.some((char) => /[a-z]/.test(char));
-  const hasUpper = arr.some((char) => /[A-Z]/.test(char));
+  if (usedPasswords.includes(password)) return false;
+  if (password.length < 5) return false;
+  if (!arr.some((char) => symbols.includes(char))) return false;
 
-  const usedPass = !usedPasswords.includes(password);
-  return hasSymbol && hasDigit && hasLower && hasUpper && usedPass;
+  if (!arr.some((char) => /[0-9]/.test(char))) return false;
+  if (!arr.some((char) => /[a-z]/.test(char))) return false;
+  if (!arr.some((char) => /[A-Z]/.test(char))) return false;
+
+  return true;
 }
 
 module.exports = passwordValidator;
