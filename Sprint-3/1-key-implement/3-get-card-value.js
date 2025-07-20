@@ -7,16 +7,56 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
+// function getCardValue(card) {
+//   let rank = card.slice(0, -1); //start from 0 until just before one last character
+//   if (rank === "A") return 11;
+//   else if ((rank === "10") | (rank === "J") | (rank === "Q") | (rank === "K"))
+//     return 10;
+//   else if (rank > 1 && rank < 10)
+//     return Number(
+//       rank
+//     ); //need to convert to number, because === compare type and exact number
+//   else return null;
+// }
+
+// function getCardValue(card) {
+//   const rank = card.slice(0, -1); // Get the rank part (e.g., "A", "10", "K")
+
+//   switch (rank) {
+//     case "A":
+//       return 11;
+//     case "10":
+//     case "J":
+//     case "Q":
+//     case "K":
+//       return 10;
+//     case "2":
+//     case "3":
+//     case "4":
+//     case "5":
+//     case "6":
+//     case "7":
+//     case "8":
+//     case "9":
+//       return Number(rank); // Convert to number from string
+//     default:
+//       return null; // Not a valid card
+//   }
+// }
+
 function getCardValue(card) {
-  let rank = card.slice(0, -1); //start from 0 until just before one last character
-  if (rank === "A") return 11;
-  else if ((rank === "10") | (rank === "J") | (rank === "Q") | (rank === "K"))
-    return 10;
-  else if (rank > 1 && rank < 10)
-    return Number(
-      rank
-    ); //need to convert to number, because === compare type and exact number
-  else return null;
+  const rank = card.slice(0, -1);
+
+  switch (true) {
+    case rank === "A":
+      return 11;
+    case ["10", "J", "Q", "K"].includes(rank):
+      return 10;
+    case !isNaN(rank) && +rank >= 2 && +rank <= 9:
+      return Number(rank);
+    default:
+      return null;
+  }
 }
 
 // You need to write assertions for your function to check it works in different cases
