@@ -30,11 +30,15 @@ test("should return 10 for King of Spades", () => {
   expect(kingofSpades).toEqual(10);
 });
 
-try {
-  getCardValue("Z♠");
-} catch (error) {
-  console.log("Caught error:", error.message);
-}
+test("throws an error or invalid card", () => {
+  expect(() => getCardValue("Z♠")).toThrow("Invalid card");
+});
+
+// try {
+// getCardValue("Z♠");
+//} catch (error) {
+// console.log("Caught error:", error.message);
+//}
 
 // Case 2: Handle Number Cards (2-10):
 // Case 3: Handle Face Cards (J, Q, K):
