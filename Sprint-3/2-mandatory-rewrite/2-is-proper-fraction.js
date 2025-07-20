@@ -3,9 +3,9 @@ function isProperFraction(numerator, denominator) {
   // add your completed function from key-implement here
 
   if (numerator === 0 || denominator === 0) return false;
-  else if (numerator === denominator) return false;
-  else if (Math.abs(numerator) < Math.abs(denominator)) return true;
-  else if (Math.abs(numerator) > Math.abs(denominator)) return false;
+  if (numerator === denominator) return false;
+  if (Math.abs(numerator) < Math.abs(denominator)) return true;
+  if (Math.abs(numerator) > Math.abs(denominator)) return false;
 }
 
 module.exports = isProperFraction;
