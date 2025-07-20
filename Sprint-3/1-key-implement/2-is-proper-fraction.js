@@ -7,11 +7,26 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 
+// function isProperFraction(numerator, denominator) {
+//   if (numerator === 0 || denominator === 0) return false;
+//   else if (numerator === denominator) return false;
+//   else if (Math.abs(numerator) < Math.abs(denominator)) return true;
+//   else if (Math.abs(numerator) > Math.abs(denominator)) return false;
+// }
+
 function isProperFraction(numerator, denominator) {
-  if (numerator === 0 || denominator === 0) return false;
-  else if (numerator === denominator) return false;
-  else if (Math.abs(numerator) < Math.abs(denominator)) return true;
-  else if (Math.abs(numerator) > Math.abs(denominator)) return false;
+  switch (true) {
+    case numerator === 0 || denominator === 0:
+      return false;
+    case numerator === denominator:
+      return false;
+    case Math.abs(numerator) < Math.abs(denominator):
+      return true;
+    case Math.abs(numerator) > Math.abs(denominator):
+      return false;
+    default:
+      return false; // Just in case any weird input gets through
+  }
 }
 
 // here's our helper again
