@@ -25,6 +25,14 @@ let myStr = "hello world I am sleepy";
 
 //console.log(`${arrWord}`);
 
-let combine = myStr.toUpperCase().split(" ").join("_");
+function combine(myStr) {
+  return myStr.toUpperCase().split(" ").join("_");
+}
 
-console.log(`${combine}`);
+console.log(
+  `dear Lord please convert [${myStr}] to capitalizeSnakeCase,..and  ${combine(
+    myStr
+  )}`
+);
+
+//thanks God, it is "functioning" now. :D
