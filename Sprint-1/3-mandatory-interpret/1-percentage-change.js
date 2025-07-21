@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// There are  three; Ln4, Ln5, Ln10.
+// There are  four; Ln4, Ln5, Ln10(2)   ---> there are two function calls on Ln10 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // the error is as a result of the two arguments in Ln5 not being seperated
 // c) Identify all the lines that are variable reassignment statements
