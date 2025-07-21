@@ -18,4 +18,4 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 A popup input box appears asking: "What is your name?"
 What is the return value of `prompt`?
-It will respond received input from user
+Shows input dialog
