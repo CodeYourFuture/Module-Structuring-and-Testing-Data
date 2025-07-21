@@ -25,9 +25,11 @@ console.log(find("code your future", "z")); // Should output -1 since 'z' is not
 
 /*
 Explanation:
-a) The 'index' variable starts at 0 and increments by 1 each loop (index++), allowing the function to check each character in the string.
+a) The 'index' variable starts at 0 and increments by 1 each loop (index++), allowing the function to 
+check each character in the string.
 b) The 'if' statement checks whether the current character (str[index]) matches the character we're searching for.
 c) 'index++' is used to move forward to the next character in the string on each loop iteration.
-d) The condition 'index < str.length' ensures the loop only runs while 'index' is a valid position inside the string, preventing errors.
+d) The condition 'index < str.length' ensures the loop only runs while 'index' is a valid position inside the string, 
+preventing errors.
 */
 
