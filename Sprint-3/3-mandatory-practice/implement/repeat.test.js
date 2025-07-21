@@ -9,12 +9,30 @@ const repeat = require("./repeat");
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
-test("should repeat the string count times", () => {
-    const str = "hello";
-    const count = 3;
-    const repeatedStr = repeat(str, count);
-    expect(repeatedStr).toEqual("hellohellohello");
-    });
+test("should repeat string correctly for various valid counts", () => {
+  const testCases = [
+    { str: "hello", count: 1, expected: "hellohello" },
+    { str: "hello", count: 0, expected: "" },
+  ];
+
+  testCases.forEach(({ str, count, expected }) => {
+    const result = repeat(str, count);
+    expect(result).toEqual(expected);
+  });
+});
+// we combined the test cases for various valid counts into single test.
+// Why combine?
+// Reduce duplication.
+// Keeps test organized.
+// Easier to add more cases in the future.
+
+// Separate test case for error case.
+
+test("should throw error when count is negative", () => {
+  expect(() => repeat("hello", -2)).toThrow(
+    "Repeat count must be non-negative"
+  );
+});
 
 // case: handle Count of 1:
 // Given a target string str and a count equal to 1,
