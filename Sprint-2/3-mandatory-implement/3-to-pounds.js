@@ -7,15 +7,15 @@
 
 
 function convertToPounds (penceString) {
-//penceString = "399p";
-penceStringWithoutTrailingP = penceString.substring(0,  penceString.length - 1);
+    //penceString = "399p";
+    penceStringWithoutTrailingP = penceString.substring(0,  penceString.length - 1);
 
-paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
-pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2);
+    paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+    pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2);
 
-pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
+    pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
 
-return (`£${pounds}.${pence}`);
+  return (`£${pounds}.${pence}`);
 }
 console.log(convertToPounds("845p"))
 

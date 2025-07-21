@@ -27,7 +27,7 @@ console.log(formatTimeDisplay(61))
 // =============> write your answer here ===> 0 (Zero)
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here ==> 00 //this is one zero padded to the original value 
+// =============> write your answer here ===> "00" //this is one zero padded to the original value 
 // of zero, converted to a string.
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
