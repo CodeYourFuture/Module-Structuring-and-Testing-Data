@@ -27,7 +27,8 @@ console.log(result);
 //total seconds were divided by 60: That way, line4 is sure to bring a whole number back.  
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//It represents the movie duration in the format; HH:MM:SS. A good name would be "movieduration"
+//It represents the movie duration in the format; HH:MM:SS. A good name would be "movieduration" or "movieFormatTime"
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-// Yes it will as long as the minimum movielength is 1 sec. The divided operand will always be returned if the dividing operand can go into it.
+// Yes it will as long as the minimum movielength is 1 sec or more. The modulus operand will always be return the remainder 
+// if the dividing operand (denominator) can't divide it equally.
