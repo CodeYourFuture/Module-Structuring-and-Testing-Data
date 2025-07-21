@@ -21,10 +21,10 @@ const dir = filePath.slice(0,lastSlashIndex);
 
 //Get everything after the last dot in the base:
 const lastDotIndex = base.lastIndexOf(".");
-const ext = base.slice(lastSlashIndex+1);
+const ext = base.slice(-3);
 
-console.log('The dir part of ${filePath} is ${dir}');
-console.log('The ext part of ${filePath} is ${ext}');
+console.log(`The dir part of ${filePath} is ${dir}`);
+console.log(`The ext part of ${filePath} is ${ext}`);
 
 
 // https://www.google.com/search?q=slice+mdn
