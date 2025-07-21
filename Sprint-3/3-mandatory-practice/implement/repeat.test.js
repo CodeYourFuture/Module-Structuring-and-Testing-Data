@@ -11,7 +11,7 @@ const repeat = require("./repeat");
 
 test("should repeat string correctly for various valid counts", () => {
   const testCases = [
-    { str: "hello", count: 1, expected: "hellohello" },
+    { str: "hello", count: 1, expected: "hello" },
     { str: "hello", count: 0, expected: "" },
   ];
 
@@ -30,7 +30,7 @@ test("should repeat string correctly for various valid counts", () => {
 
 test("should throw error when count is negative", () => {
   expect(() => repeat("hello", -2)).toThrow(
-    "Repeat count must be non-negative"
+    "Times must be a non-negative integer"
   );
 });
 
