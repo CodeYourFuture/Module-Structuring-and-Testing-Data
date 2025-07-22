@@ -7,24 +7,35 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
-function getCardValue(card) {
-  let rank = card.charAt(0);
-  console.log(rank);
 
-  if (rank === "A") {
+
+function getCardValue(card) {
+  if (typeof card !== 'string' || card.length < 2) {
+    return 'Invalid card rank.';
+  }
+
+  const validSuits = ['♠', '♥', '♦', '♣'];
+  const suit = card.slice(-1); // Last character
+  const rank = card.slice(0, -1); // Everything before last character
+
+  if (!validSuits.includes(suit)) {
+    return 'Invalid card rank.';
+  }
+
+  if (rank === 'A') {
     return 11;
+  } else if (['J', 'Q', 'K'].includes(rank)) {
+    return 10;
   } else if (!isNaN(rank)) {
-    // Convert rank to number
-    let numericRank = Number(rank);
+    const numericRank = Number(rank);
     if (numericRank >= 2 && numericRank <= 10) {
       return numericRank;
     }
-  } else if (rank === 'J' || rank === 'Q' || rank === 'K') {
-    return 10;
   }
 
   return 'Invalid card rank.';
 }
+
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
@@ -72,6 +83,15 @@ assertEquals(aceofHeart, 11);
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
-// Then it should throw an error indicating "Invalid card rank."
+// Then it should throw an error indicating "Invalid card rank."""
 const invalid = getCardValue("-1");
 assertEquals(invalid, 'Invalid card rank.');
+
+
+const tenOfDiamonds = getCardValue("10♦");
+assertEquals(tenOfDiamonds, 10);
+
+const twentytwo = getCardValue("22");
+assertEquals(twentytwo, 'Invalid card rank.'); 
+
+
