@@ -1,6 +1,3 @@
-function repeat() {
-    return "hellohellohello";
-}
 // Implement a function repeat
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
