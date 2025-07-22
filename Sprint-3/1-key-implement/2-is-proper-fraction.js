@@ -10,9 +10,6 @@
 function isProperFraction(numerator, denominator) {
   // A proper fraction is a fraction where the absolute value of the numerator is less than the denominator.
   return Math.abs(numerator) < denominator;
-    return true;
-  }
-  return false;
 }
 
 // here's our helper again
