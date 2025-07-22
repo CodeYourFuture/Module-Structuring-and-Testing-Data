@@ -2,22 +2,24 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(3, 5);
 
-  let formattedHour;
+  let rawHour;
   let period;
 
   if (hours === 0) {
-    formattedHour = "12";
+    rawHour = 12;
     period = "am";
   } else if (hours === 12) {
-    formattedHour = "12";
+    rawHour = 12;
     period = "pm";
   } else if (hours > 12) {
-    formattedHour = String(hours - 12).padStart(2, "0");
+    rawHour = hours - 12;
     period = "pm";
   } else {
-    formattedHour = String(hours).padStart(2, "0");
+    rawHour = hours;
     period = "am";
   }
+
+  const formattedHour = String(rawHour).padStart(2, "0");
 
   return `${formattedHour}:${minutes} ${period}`;
 }
