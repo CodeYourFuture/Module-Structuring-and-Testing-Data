@@ -79,7 +79,6 @@ const aceofHeart = getCardValue("A♥");
 assertEquals(aceofHeart, 11);
 
 
-
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
@@ -94,4 +93,5 @@ assertEquals(tenOfDiamonds, 10);
 const twentytwo = getCardValue("22");
 assertEquals(twentytwo, 'Invalid card rank.'); 
 
-
+const nothing = getCardValue("");
+assertEquals(nothing, 'Invalid card rank.');
