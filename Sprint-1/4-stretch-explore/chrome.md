@@ -19,3 +19,9 @@ What effect does calling the `prompt` function have?
 the prompt function produces a pop up box with an input box so a user can type in information.
 What is the return value of `prompt`?
 it returns the value from the user input. 
+
+If you were writing a program that uses prompt() to ask for an input value, how can
+your program tell if the user clicked "OK" or "Cancel"?
+
+the prompt function returns a string when the user presses ok, so even if the user does not type anything it will return an empty string. so we can test if the returned value is a string to determine if the user pressed ok.
+on the other hand if the user presses cancel the function will return null, so we can test test if null got returned to check if a user had pressed cancel.

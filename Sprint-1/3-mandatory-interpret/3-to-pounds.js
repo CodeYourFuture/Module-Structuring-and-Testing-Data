@@ -12,8 +12,7 @@ const pounds = paddedPenceNumberString.substring(
 );
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2); // .padEnd(2, "0"); taken out.
 
 console.log(`£${pounds}.${pence}`);
 
@@ -30,3 +29,5 @@ console.log(`£${pounds}.${pence}`);
 // 4. const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2): extracts the pounds part of the string by taking all characters except the last two, resulting in "3".
 // 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0"): extracts the last two characters of the string and pads it with trailing zeros if necessary, resulting in "99" since it already has two characters.
 // 6. console.log(`£${pounds}.${pence}`): prints the final formatted string in pounds and pence, resulting in "£3.99". by concatenating the pounds and pence variables with a '£' symbol and a '.' in between.
+
+//the pad.end(2, "0") is not necessary in this case because the penceStringWithoutTrailingP already has two characters. If it had less than two characters, it would pad it with zeros to ensure it always has two characters. However, since we are extracting the last two characters from a string that is guaranteed to have at least two characters, the padding is not necessary.

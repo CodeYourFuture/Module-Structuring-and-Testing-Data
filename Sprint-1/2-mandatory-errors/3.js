@@ -9,3 +9,6 @@ console.log(last4Digits);
 // Then run the code and see what error it gives.
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
+
+//if i was not allowed to modify the statement const cardNumber = 4533787178994213;. in order to get the same result as above I would have to convert the number to a string first.
+//using const last4Digits = cardNumber.toString().slice(-4);.
