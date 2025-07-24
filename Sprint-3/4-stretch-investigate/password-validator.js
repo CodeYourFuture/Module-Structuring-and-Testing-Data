@@ -1,5 +1,7 @@
+const previousPasswords = ["Password123!", "helloWorld1#", "Test1234."];
+
 function passwordValidator(password) {
-       const hasMinLength = password.length >= 5;
+    const hasMinLength = password.length >= 5;
     const hasUpperCase = /[A-Z]/.test(password);
     const hasLowerCase = /[a-z]/.test(password);
     const hasDigit = /\d/.test(password);
