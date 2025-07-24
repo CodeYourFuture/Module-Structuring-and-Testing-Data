@@ -14,11 +14,3 @@ function getAngleType(angle) {
 // We will upgrade our approach to ES6 modules in the next course module, so for now 
 // we have just written the CommonJS module.exports syntax for you
 module.exports = getAngleType;
-console.log(getAngleType(45));   // Acute angle
-console.log(getAngleType(90));   // Right angle
-console.log(getAngleType(135));  // Obtuse angle
-console.log(getAngleType(180));  // Straight angle
-console.log(getAngleType(270));  // Reflex angle
-console.log(getAngleType(0));    // Invalid angle
-console.log(getAngleType(360));  // Invalid angle
-console.log(getAngleType(-10));  // Invalid angle
