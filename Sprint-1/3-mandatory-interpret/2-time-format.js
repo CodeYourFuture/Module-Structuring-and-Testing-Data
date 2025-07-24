@@ -15,8 +15,8 @@ console.log(result);
 // There are 6 variable declarations
 
 // b) How many function calls are there?
-// There is two function calls
-// Ln9 and Ln10.
+// There is one function call
+// Ln10.
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
