@@ -9,7 +9,7 @@ function passwordValidator(password) {
     const isNotPrevious = !previousPasswords.includes(password);
 
     return hasMinLength && hasUpperCase && hasLowerCase && hasDigit && hasSpecialChar && isNotPrevious;
-}
+};
 module.exports = passwordValidator;
 // This function checks if the password is at least 5 characters long.
 // If the password is shorter than 5 characters, it returns false; otherwise, it returns true.
