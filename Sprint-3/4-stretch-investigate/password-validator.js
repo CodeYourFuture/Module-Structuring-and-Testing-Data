@@ -1,6 +1,13 @@
 function passwordValidator(password) {
-    return password.length < 5 ? false : true
-};
+       const hasMinLength = password.length >= 5;
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasDigit = /\d/.test(password);
+    const hasSpecialChar = /[!#$%.*&]/.test(password); // Only allow these specific symbols
+    const isNotPrevious = !previousPasswords.includes(password);
+
+    return hasMinLength && hasUpperCase && hasLowerCase && hasDigit && hasSpecialChar && isNotPrevious;
+}
 module.exports = passwordValidator;
 // This function checks if the password is at least 5 characters long.
 // If the password is shorter than 5 characters, it returns false; otherwise, it returns true.
@@ -13,8 +20,3 @@ module.exports = passwordValidator;
 // - At least one special character
 // - No spaces or other invalid characters
 //// Example of a more complex password validation function:
-function passwordValidator(password) {
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasDigit = /\d/.test(password);
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password)};
