@@ -7,8 +7,6 @@ function getAngleType(angle) {
     return "Reflex angle"; // angle between 180 and 360
 };
 
-
-
 // Don't get bogged down in this detail
 // Jest uses CommonJS module syntax by default as it's quite old
 // We will upgrade our approach to ES6 modules in the next course module, so for now 
