@@ -16,12 +16,45 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 
 const isValidPassword = require("./password-validator");
+
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
+    const password = "Ab1!c";
     const result = isValidPassword(password);
-    // Assert
     expect(result).toEqual(true);
-}
-);
+});
+
+test("fails if less than 5 characters", () => {
+    const password = "A1!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails without uppercase letter", () => {
+    const password = "ab1!c";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails without lowercase letter", () => {
+    const password = "AB1!C";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails without number", () => {
+    const password = "Ab!cd";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails without symbol", () => {
+    const password = "Ab1cd";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails if password is previously used", () => {
+    const password = "Password123!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
