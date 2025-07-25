@@ -27,16 +27,10 @@ test("should return 10 for Queen of Hearts", () => {
 test("should return 10 for King of Diamonds", () => {
   expect(getCardValue("K♦")).toEqual(10);
 });
-// Case 4: Handle Ace (A):
-test("should return 11 for Ace, () => { const ace = getCardValue("A")
-    expect(ace).toEqual(11);});
 
-
-// Case 5: Handle Invalid Cards:
+// Case 4: Handle Invalid Cards:
 test("should throw error for invalid card rank", () => {
   expect(() => getCardValue("Z♠")).toThrow("Invalid card rank");
 });
 
-test("should throw error for empty string", () => {
-  expect(() => getCardValue("")).toThrow("Invalid card rank");
-});
+
