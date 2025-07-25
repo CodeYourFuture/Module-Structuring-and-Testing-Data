@@ -5,8 +5,9 @@ test("should add 'st' for numbers ending in 1 except(11)",() => {
   expect(getOrdinalNumber(21)).toBe("21st");
 });
 
-test("should return '2nd' for 2", () => {
+test("should add 'nd' for numbers ending in 2 except(12)", () => {
   expect(getOrdinalNumber(2)).toBe("2nd");
+  expect(getOrdinalNumber(102)).toBe("102nd");
 });
 
 test("should return '3rd' for 3", () => {
