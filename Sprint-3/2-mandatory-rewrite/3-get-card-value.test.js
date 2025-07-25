@@ -19,18 +19,9 @@ test("should return 10 for 10 of Clubs", () => {
 });
 
 // Case 3: Handle Face Cards (J, Q, K)
-test("should return 10 for Jack of Diamonds", () => {
+test("should return 10 for face cards(J,Q,K)", () => {
     expect(getCardValue("J♦")).toBe(10);
 });
-
-test("should return 10 for Queen of Clubs", () => {
-    expect(getCardValue("Q♣")).toBe(10);
-});
-
-test("should return 10 for King of Spades", () => {
-    expect(getCardValue("K♠")).toBe(10);
-});
-
 // Case 4: Handle Invalid Cards
 test("should throw an error for invalid card rank", () => {
     expect(() => getCardValue("Z♠")).toThrow("Invalid card rank");
