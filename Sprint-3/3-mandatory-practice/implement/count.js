@@ -1,15 +1,15 @@
-function countChar(stringOfCharacters, findCharacter) {
-    // Initialize a counter to keep track of occurrences
-    let count = 0;
+function countChar(str, char) {
+  if (char.length !== 1) {
+    throw new Error("Second argument must be a single character");
+  }
 
-    // Loop through the string and count matches
-    for (let char of stringOfCharacters) {
-        if (char === findCharacter) {
-            count++;
-        }
+  let count = 0;
+  for (let c of str) {
+    if (c === char) {
+      count++;
     }
-
-    return count;
+  }
+  return count;
 }
 
 module.exports = countChar;
