@@ -1,6 +1,3 @@
-function getOrdinalNumber(num) {
- return "1st";
-}
 // This function currently only handles the case for 1st.
 // You can expand it to handle other numbers as needed.
 // For example, you might want to add cases for 2nd, 3rd, etc., and handle exceptions for numbers like
