@@ -5,16 +5,17 @@
 // To do this, you can use a switch statement or if-else conditions to check the value of num and return the appropriate ordinal string.
 // Example of handling more cases:
 
-function getOrdinalNumber(num) {
-
-     if (num % 10 === 1 && num % 100 !== 11) {
-        return num + "st";
-    }if (num % 10 === 2 && num % 100 !== 12) {
-        return num + "nd";
-    }if (num % 10 === 3 && num % 100 !== 13) {
-        return num + "rd";
-    } else {
-        return num + "th";
+function getOrdinalNumber(n) {
+   const suffixes = ["th", "st", "nd", "rd"];
+    const v = n % 100;
+    
+    if (v >= 11 && v <= 13) {
+        return n + "th";
     }
+
+    const lastDigit = n % 10;
+    const suffix = suffixes[lastDigit] || "th";
+
+    return n + suffix;
 }
 module.exports = getOrdinalNumber;
