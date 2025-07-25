@@ -10,16 +10,22 @@ test("should add 'nd' for numbers ending in 2 except(12)", () => {
   expect(getOrdinalNumber(102)).toBe("102nd");
 });
 
-test("should return '3rd' for 3", () => {
+test("should add 'rd' for numbers ending in 3 except(13)", () => {
   expect(getOrdinalNumber(3)).toBe("3rd");
+  expect(getOrdinalNumber(23)).toBe("23rd");
 });
 
-test("should return '4th' for 4", () => {
-  expect(getOrdinalNumber(4)).toBe("4th");
+
+test("adds 'th' for 11, 12, and 13", () => {
+    expect(getOrdinalNumber(11)).toBe("11th");
+    expect(getOrdinalNumber(12)).toBe("12th");
+    expect(getOrdinalNumber(13)).toBe("13th");
 });
 
-test("should return '11th' for 11", () => {
-  expect(getOrdinalNumber(11)).toBe("11th");
+test("adds 'th' for all other numbers", () => {
+    expect(getOrdinalNumber(4)).toBe("4th");
+    expect(getOrdinalNumber(100)).toBe("100th");
+    expect(getOrdinalNumber(214)).toBe("214th");
 });
 
 test("should return '12th' for 12", () => {
