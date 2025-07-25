@@ -25,3 +25,21 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+// 2. const penceStringWithoutTrailingP = penceString.substring( 
+// 0, penceString.length - 1): removes the trailing 'p' from the string.
+
+// 3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0")
+// : pads the string with leading zeros to ensure it has at least 3 characters.
+
+// 4. const pounds = paddedPenceNumberString.substring
+// (0, paddedPenceNumberString.length - 2): extracts the pounds part of the string
+//  by taking all characters except the last two because it represents the pence.
+
+// 5. const pence = paddedPenceNumberString.substring
+// (paddedPenceNumberString.length - 2).padEnd(2, "0"): 
+// extracts the pence part of the string by taking the last two characters 
+// and ensuring it has exactly 2 characters by padding with zeros if necessary.
+
+// 6. console.log(`£${pounds}.${pence}`): prints the final formatted string 
+// in pounds and pence e.g. £3.99.
