@@ -1,7 +1,8 @@
 const getOrdinalNumber = require("./get-ordinal-number");
 
-test("should return '1st' for 1", () => {
+test("should add 'st' for numbers ending in 1 except(11)",() => {
   expect(getOrdinalNumber(1)).toBe("1st");
+  expect(getOrdinalNumber(21)).toBe("21st");
 });
 
 test("should return '2nd' for 2", () => {
