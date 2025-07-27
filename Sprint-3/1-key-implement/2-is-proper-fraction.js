@@ -9,11 +9,11 @@
 
 function isProperFraction(numerator, denominator) {
     if (numerator === 0 && denominator === 0) return "put numbers above and below";
-    else if (numerator < denominator && numerator !== 0) return true;
-    else if (numerator > denominator && denominator !== 0) return false;
-    else if (numerator === denominator) return false;
-    else if (numerator === 0) return "input non-zero above";
+    //else if (numerator === 0) return "input non-zero above";  -- not needed as numerator can be zero
     else if (denominator === 0) return "input non-zero below";
+    else if (numerator < denominator) return true;
+    else if (numerator > denominator) return false;
+    else if (numerator === denominator) return false;
     //else if (numerator === 0 && denominator === 0) return "put numbers above and below";
     // the above line of code did not work here it had to go to the top as it is a most specific case considering our function.
 }
@@ -65,8 +65,10 @@ assertEquals(equalFraction, false);
 // target output: true
 // Explanation: Even though this gives a zero value it still returns true 
 //so we expect it to be true
-const zeroNumeratorFraction = isProperFraction(0, 3); 
-assertEquals(zeroNumeratorFraction, "input non-zero above");
+/* const zeroNumeratorFraction = isProperFraction(0, 3); 
+assertEquals(zeroNumeratorFraction, "input non-zero above"); */
+// test case commented out as 0/3 is not a mathematical error
+
 
 // Zero Denominator check:
 // Input: numerator = 3, denominator = 0
@@ -78,6 +80,8 @@ assertEquals(zeroDenominatorFraction, "input non-zero below");
 // Zero Numerator and Zero Denominator check:
 // Input: numerator = 0, denominator = 0
 // target output: false
-// Explanation: This actually outputs false even though the operation is practically impossible.
-const zeroZeroFraction = isProperFraction(0, 0); 
-assertEquals(zeroZeroFraction, "put numbers above and below");
+// Explanation: This will outputs false as the operation is practically impossible.
+/* const zeroZeroFraction = isProperFraction(0, 0); 
+assertEquals(zeroZeroFraction, "put numbers above and below"); */
+//we already check for zero denominator and that is enough 
+// as numerator can indeed be zero.

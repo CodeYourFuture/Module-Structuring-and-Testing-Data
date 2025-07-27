@@ -8,16 +8,19 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    rank = card[0]
+    let rank;
+    if (card.startsWith("10")) {
+      rank = 10;
+    } else {
+      rank = card[0];
+    }
     if ((card.length > 3) || (card.length === 3 && !(card[0] === "1" && card[1] === "0" && isNaN(card[2]))))
     return "Invalid card rank";
     else if (rank === "A") return 11;
     else if (rank === "K" || rank === "Q" || rank === "J" ) return 10;
     else if (Number(rank) >= 2 && Number(rank) <= 10) return Number(rank);
-    //else return "Invalid card rank.";
-    /* else if (card.length > 3 && !(card[0] === "1" && card[1] === "0" && isNaN(card[2]))) 
-      return "Invalid card rank"; */
-}
+    
+  }
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
@@ -62,3 +65,7 @@ assertEquals(QueenofDiamonds, 10);
 // Then it should throw an error indicating "Invalid card rank."
 const seventySevenofDiamonds = getCardValue("77♦");
 assertEquals(seventySevenofDiamonds, "Invalid card rank");
+
+//Handle cards with value of ten
+const tenOfHearts = getCardValue("10♥");
+assertEquals(tenOfHearts, 10);

@@ -28,3 +28,21 @@ test(" should return a message that card is not valid", () => {
     const ninetynineLove = getCardValue("99♥");
     expect(ninetynineLove).toEqual("Invalid card rank");
 });
+
+// Case 6: Handle Ten Cards:
+test(" should return 10", () => {
+    const tenOfHearts = getCardValue("10♥");
+    expect(tenOfHearts).toEqual(10);
+});
+
+//Case 7: more invalid cards:
+test(" should return a message that card not valid", () => {
+    const zeroOfHearts = getCardValue("0♥");
+    expect(zeroOfHearts).toEqual("Invalid card rank");
+});
+
+//Case 8: more invalid cards:
+test(" should return a message that card not valid", () => {
+    const xOfHearts = getCardValue("X♥");
+    expect(xOfHearts).toEqual("Invalid card rank");
+});

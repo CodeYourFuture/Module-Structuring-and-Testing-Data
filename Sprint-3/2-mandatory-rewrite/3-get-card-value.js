@@ -1,6 +1,11 @@
 function getCardValue(card) {
-    rank = card[0]
-    if ((card.length > 3) || (card.length === 3 && !(card[0] === "1" && card[1] === "0" && isNaN(card[2]))))
+    let rank;
+    if (card.startsWith("10")) {
+      rank = "10";
+    } else {
+      rank = card[0];
+    }
+    if ((card.length > 3) || (card.length === 3 && !card.startsWith("10")) || (isNaN(rank) && !"AKQJ".includes(rank)) || rank === "0")
     return "Invalid card rank";
     else if (rank === "A") return 11;
     else if (rank === "K" || rank === "Q" || rank === "J" ) return 10;
