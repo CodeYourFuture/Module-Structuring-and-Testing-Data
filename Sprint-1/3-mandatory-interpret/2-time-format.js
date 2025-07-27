@@ -1,4 +1,4 @@
-const movieLength = -100.895; // length of movie in seconds
+const movieLength = 0.23 + 0.3; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -23,4 +23,4 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // gives the movie duration in "hours:minutes:seconds". a improved name could be "movieDurationFormatted"
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-// yes it works for all lengths. we tested with negatives and large ints, even decimals.
+// yes it works for all lengths. we tested with negatives and large ints, even decimals. it breaks for NaN, modulo struggles with negatives, then theres the precision for when we added the floating points
