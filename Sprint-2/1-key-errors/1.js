@@ -22,10 +22,9 @@
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
-function convertToPercentage(decimalNumber) {
-  decimalNumber = 0.5; // Remove 'const' to avoid redeclaration
+function convertToPercentage(decimalNumber) { // Remove 'const' to avoid redeclaration
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
 }
-console.log(convertToPercentage(0.5));
+console.log(convertToPercentage(0.7));
