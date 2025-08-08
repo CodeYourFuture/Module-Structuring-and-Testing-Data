@@ -57,8 +57,8 @@ assertEquals(kingOfClubs, 10);
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 try {
-  getCardValue("1♠");
-  console.assert(false, "Expected an error for invalid card");
-} catch (error) {
-  console.assert(error.message === "Invalid card rank.", `Expected 'Invalid card rank.', but got '${error.message}'`);
+  getCardValue("222♥");
+  console.error("Test failed: Expected error for invalid card rank");
+} catch (errorbox) {
+  assertEquals(errorbox.message, "Invalid card rank.");
 }
