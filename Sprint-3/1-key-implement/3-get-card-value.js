@@ -8,10 +8,19 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
+    if (!card || card.length < 2) {
+        throw new Error("Invalid card rank.");
+    }
+    
     const rank = card.slice(0, -1);
+    
     if (rank === "A") return 11;
     if (rank === "J" || rank === "Q" || rank === "K" || rank === "10") return 10;
-    if (!isNaN(rank)) return Number(rank);
+    
+    if (!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 9 && rank.length === 1) {
+        return Number(rank);
+    }
+    
     throw new Error("Invalid card rank.");
 }
 
@@ -67,6 +76,27 @@ assertEquals(tenofSpades, 10);
 try {
     getCardValue("Z♠");
     console.error("Error was expected but not thrown");
+} catch (e) {
+    assertEquals(e.message, "Invalid card rank.");
+}
+
+try {
+    const oddValue = getCardValue("345♠");
+    console.error("Error was expected but not thrown for '345♠'");
+} catch (e) {
+    assertEquals(e.message, "Invalid card rank.");
+}
+
+try {
+    const onlySuit = getCardValue("♠");
+    console.error("Error was expected but not thrown for '♠'");
+} catch (e) {
+    assertEquals(e.message, "Invalid card rank.");
+}
+
+try {
+    const oneHundred = getCardValue("100♠");
+    console.error("Error was expected but not thrown for '100♠'");
 } catch (e) {
     assertEquals(e.message, "Invalid card rank.");
 }

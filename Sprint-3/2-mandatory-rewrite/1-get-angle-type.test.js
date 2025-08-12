@@ -25,4 +25,20 @@ test("should identify straight angle (180°)", () => {
   expect(getAngleType(180)).toEqual("Straight angle");
 });
 
-/
+test("should identify reflex angles (greater than 180° and less than 360°)", () => {
+  expect(getAngleType(270)).toEqual("Reflex angle");
+});
+
+test("should identify full rotation (0° or 360°)", () => {
+  expect(getAngleType(360)).toEqual("Full rotation");
+  expect(getAngleType(0)).toEqual("Full rotation");
+});
+
+test("should handle undefined angle value", () => {
+  expect(getAngleType()).toEqual("Invalid angle: Please provide a valid number");
+});
+
+test("should handle angle values outside the valid range", () => {
+  expect(getAngleType(361)).toEqual("Invalid angle: Angle must be between 0 and 360 degrees");
+  expect(getAngleType(-10)).toEqual("Invalid angle: Angle must be between 0 and 360 degrees");
+});

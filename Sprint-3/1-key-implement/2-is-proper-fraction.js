@@ -19,7 +19,7 @@ function isProperFraction(numerator, denominator) {
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
-    Expected ${actualOutput} to equal ${targetOutput}
+    `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
 

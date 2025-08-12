@@ -29,3 +29,24 @@ test("should return 0 if character does not occur", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+test("should be case sensitive", () => {
+  const str = "Hello World";
+  const char = "h";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+  
+  const uppercaseCount = countChar(str, "H");
+  expect(uppercaseCount).toEqual(1);
+});
+
+test("should count spaces as characters", () => {
+  const str = "Hello World";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+  
+  const multiSpaceStr = "Hello  World  !";
+  const multiSpaceCount = countChar(multiSpaceStr, " ");
+  expect(multiSpaceCount).toEqual(4);
+});

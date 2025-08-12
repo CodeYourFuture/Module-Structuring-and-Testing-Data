@@ -8,12 +8,21 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
+  if (angle === undefined || isNaN(angle)) {
+    return "Invalid angle: Please provide a valid number";
+  }
+  
+  if (angle < 0 || angle > 360) {
+    return "Invalid angle: Angle must be between 0 and 360 degrees";
+  }
+  
+  if (angle === 360 || angle === 0) return "Full rotation";
+  
   if (angle === 90) return "Right angle";
   if (angle < 90) return "Acute angle";
   if (angle > 90 && angle < 180) return "Obtuse angle";
   if (angle === 180) return "Straight angle";
   if (angle > 180 && angle < 360) return "Reflex angle";
-   // read to the end, complete line 36, then pass your test here
 }
 
 // we're going to use this helper function to make our assertions easier to read
@@ -61,3 +70,25 @@ assertEquals(straight, "Straight angle");
 // ====> write your test here, and then add a line to pass the test in the function above
 const reflex = getAngleType(270);
 assertEquals(reflex, "Reflex angle");
+
+// Case 6: Identify Full Rotation:
+// When the angle is exactly 360 degrees or 0 degrees,
+// Then the function should return "Full rotation"
+const fullRotation = getAngleType(360);
+assertEquals(fullRotation, "Full rotation");
+const zeroAngle = getAngleType(0);
+assertEquals(zeroAngle, "Full rotation");
+
+// Case 7: Handle missing input:
+// When no angle is provided,
+// Then the function should return an error message
+const noAngle = getAngleType();
+assertEquals(noAngle, "Invalid angle: Please provide a valid number");
+
+// Case 8: Handle invalid angle values:
+// When an angle outside the valid range (0-360 degrees) is provided,
+// Then the function should return an error message
+const tooBig = getAngleType(361);
+assertEquals(tooBig, "Invalid angle: Angle must be between 0 and 360 degrees");
+const negative = getAngleType(-10);
+assertEquals(negative, "Invalid angle: Angle must be between 0 and 360 degrees");

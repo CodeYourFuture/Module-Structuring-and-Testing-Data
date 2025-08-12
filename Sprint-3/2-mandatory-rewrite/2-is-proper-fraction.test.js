@@ -18,3 +18,8 @@ test("should return true for a negative proper fraction", () => {
 test("should return false when numerator and denominator are equal", () => {
   expect(isProperFraction(3, 3)).toEqual(false);
 });
+
+test("should return false when denominator is zero", () => {
+  expect(isProperFraction(0, 0)).toEqual(false);
+  expect(isProperFraction(5, 0)).toEqual(false);
+});
