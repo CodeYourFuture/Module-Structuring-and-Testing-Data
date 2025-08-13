@@ -22,5 +22,5 @@ test("should return 10 for King of Hearts and Queen of Diamonds", () => {
 
 // Case 5: Handle Invalid Cards:
 test("should throw an error for invalid card", () => {
-    expect(() => getCardValue("Z♠")).toThrow("Invalid card rank."); //not sure how to write this test
+    expect(() => getCardValue("Z♠")).toThrow("Invalid card rank.");
 });
