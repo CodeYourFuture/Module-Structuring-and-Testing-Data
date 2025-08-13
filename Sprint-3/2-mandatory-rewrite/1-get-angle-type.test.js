@@ -6,7 +6,7 @@ test("should identify right angle (90°)", () => {
 
 // REPLACE the comments with the tests
 // make your test descriptions as clear and readable as possible
-
+ 
 test("should identify acute angles (less than 90°)", () => {
   expect(getAngleType(45)).toEqual("Acute angle");
   expect(getAngleType(89)).toEqual("Acute angle");

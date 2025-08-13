@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/JenniferIsidienu/Module-Structuring-and-Testing-Data#readme",
   "devDependencies": {
-    "jest": "^30.0.5"
+    "jest": "^27.0.0"
   }
 }

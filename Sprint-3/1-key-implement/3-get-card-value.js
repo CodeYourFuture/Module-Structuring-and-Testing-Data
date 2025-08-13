@@ -15,7 +15,7 @@ function getCardValue(card) {
 
   // If the rank is a number between "2" and "10", return its numeric value
     if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(rank)) {
-        return parseInt(rank, 10); // Convert string to number
+        return Number(rank); // Convert string to number
     }
 
   // If the rank is "J", "Q", or "K", return 10

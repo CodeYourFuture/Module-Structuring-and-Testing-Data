@@ -10,8 +10,10 @@
 function isProperFraction(numerator, denominator) {
   // A proper fraction has a non-zero denominator,
   // and the absolute value of the numerator is less than the denominator.
-     if (denominator === 0) return false;
-  return Math.abs(numerator) < Math.abs(denominator);
+  if (denominator === 0) return false;
+  if (numerator < 0) numerator = -numerator;
+  if (denominator < 0) denominator = -denominator;
+  return numerator < denominator;
 
 }
 
