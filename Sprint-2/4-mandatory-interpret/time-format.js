@@ -17,18 +17,24 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// =============> Pad will be called 3 times, once for each of the totalHours, 
+// remainingMinutes, and remainingSeconds.
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
+console.log(formatTimeDisplay(61)); // Output: "00:01:01" 
+
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// =============> When pad is called for the first time, the value assigned to num is 0 (from totalHours).
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// =============> The return value of pad when called for the first time is "00".
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> When pad is called for the last time, the value assigned to num is 1.
+// The reason is that the last call to pad is for the remainingSeconds, which is 1 in this case.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> The return value of pad when called for the last time is "01".
+// The reason is that pad converts the number 1 to a string and pads it with a leading zero, 
+// resulting in "01".
