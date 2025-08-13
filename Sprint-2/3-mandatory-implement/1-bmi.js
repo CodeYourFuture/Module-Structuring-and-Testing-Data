@@ -16,4 +16,18 @@
 
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
+    if (height <= 0) {
+        throw new Error("Height must be greater than zero.");
+    }
+    if (weight <= 0) {
+        throw new Error("Weight must be greater than zero.");
+    }
+    const bmi = weight / (height * height);
+    return parseFloat(bmi.toFixed(1)); // Return BMI to 1 decimal place
 }
+// Example usage:
+ const weight = 70; // in kg
+ const height = 1.73; // in metres
+ const bmi = calculateBMI(weight, height);
+ console.log(`Your BMI is: ${bmi}`); // Output: Your BMI is: 23.4
+

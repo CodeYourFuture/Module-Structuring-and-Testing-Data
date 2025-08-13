@@ -8,8 +8,25 @@
 // Given a string input like "hello there"
 // When we call this function with the input string
 // it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
+function toUpperSnakeCase(input) {
+    // Check if input is a string
+    if (typeof input !== 'string') {
+        throw new Error("Input must be a string.");
+    }
+    // Convert the string to uppercase and replace spaces with underscores
+    return input.toUpperCase().replace(/ /g, '_');
+}
+// Example usage:
+const inputString = "hello there";
+const upperSnakeCaseString = toUpperSnakeCase(inputString);
+console.log(upperSnakeCaseString); // Output: "HELLO_THERE"
 
 // Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
+
+const inputString1 = "LORD_OF_THE_RINGS";
+const upperSnakeCaseString1 = toUpperSnakeCase(inputString1);
+console.log(upperSnakeCaseString1); // Output: "LORD_OF_THE_RINGS"
+
 
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
