@@ -1,20 +1,22 @@
 
-// Predict and explain first BEFORE you run any code...
+// Predict and explain first BEFORE you run any code:- 
+// its SyntaxError: Unexpected number because its invalid parameter 
 
-// this function should square any number but instead we're going to get an error
-
-// =============> write your prediction of the error here
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> write the error message :-SyntaxError: Unexpected number
 
-// =============> explain this error message here
-
-// Finally, correct the code to fix the problem
-
-// =============> write your new code here
+// =============> explain this error message here:- its SyntaxError: Unexpected number because the parameter '3' is a number literal, but function parameters must be valid variable names.
+// this function should square any number but instead we're going to get an error
 
 
+// Finally, correct the code to fix the problem\
+
+function square(num) {
+    return num * num;
+}
+
+console.log(square(3))
