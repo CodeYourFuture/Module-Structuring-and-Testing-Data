@@ -1,22 +1,24 @@
-const penceString = "399p";
+const penceString = "399p";// Initializes the string and extracts all characters except the trailing 'p'
+
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
 );
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); // Ensures the numeric string has at least 3 characters by adding leading zeros if needed
+
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
-);
+);   // Extracts the pounds part by taking all digits except the last two
+
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .padEnd(2, "0"); // Extracts the pence portion of the price by taking the last two digits and ensures it has exactly two digits.
 
-console.log(`£${pounds}.${pence}`);
-
+console.log(`£${pounds}.${pence}`); // Constructs and logs the final price in the format £pounds.pence.
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
 
