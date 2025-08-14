@@ -14,13 +14,53 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
 const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
-    // Arrange
+
+test("fails if only numbers are used", () => {
     const password = "12345";
-    // Act
     const result = isValidPassword(password);
-    // Assert
+    expect(result).toEqual(false);
+});
+
+test("valid password passes all rules", () => {
+    const password = "Good1!";
+    const result = isValidPassword(password);
     expect(result).toEqual(true);
-}
-);
+});
+
+test("fails if password is too short", () => {
+    const password = "A1!a";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails if missing uppercase letter", () => {
+    const password = "good1!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails if missing lowercase letter", () => {
+    const password = "GOOD1!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails if missing number", () => {
+    const password = "Good!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails if missing symbol", () => {
+    const password = "Good12";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
+
+test("fails if password is in oldPasswords list", () => {
+    const password = "Password1!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+});
