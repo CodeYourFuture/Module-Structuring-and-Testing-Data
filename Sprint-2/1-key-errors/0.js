@@ -1,13 +1,17 @@
 // Predict and explain first...
-//  =============> write your prediction here
+// The code will produce an error.
 
 // call the function capitalise with a string input
-// interpret the error message and figure out why an error is occurring
+//The error message indicates that 'str' has already been declared: function capitalise(str) and  let str
 
 function capitalise(str) {
   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+// =============> The error message indicates that 'str' has already been declared.
+// =============>
+function capitalise(str) {
+  let capitalisedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return capitalisedStr;
+}
