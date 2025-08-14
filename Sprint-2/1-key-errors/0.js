@@ -1,5 +1,5 @@
 // Predict and explain first...
-//  =============> write your prediction here
+// it should show syntax error
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
@@ -9,5 +9,13 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+// the input "sty" is the same as output "str" which is not allowed in JS
+// my new code:
+
+function capitalise(str) {
+    return(`${str[0].toUpperCase()}${str. slice(1)}`)
+}
+console.log(capitalise("morning"))
+console.log(capitalise("heavy"))
+
+
