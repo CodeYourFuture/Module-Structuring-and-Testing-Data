@@ -2,7 +2,11 @@
 
 // For example, "hello there" in snake case would be written "hello_there"
 // UPPER_SNAKE_CASE means taking a string and writing it in all caps with underscores instead of spaces.
+function replace(str) {
+    return str.replace(/ /g, '_')
+}
 
+console.log(replace("Ahmed Mahmoud").toUpperCase());
 // Implement a function that:
 
 // Given a string input like "hello there"
