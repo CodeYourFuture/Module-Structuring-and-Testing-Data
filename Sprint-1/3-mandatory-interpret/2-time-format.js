@@ -1,13 +1,17 @@
 const movieLength = 8784; // length of movie in seconds
 
-const remainingSeconds = movieLength % 60;
-const totalMinutes = (movieLength - remainingSeconds) / 60;
+if (movieLength < 0) {
+    console.log("Error: Movie length cannot be negative.");
+} else {
+    const remainingSeconds = movieLength % 60;
+    const totalMinutes = (movieLength - remainingSeconds) / 60;
+    const remainingMinutes = totalMinutes % 60;
+    const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const remainingMinutes = totalMinutes % 60;
-const totalHours = (totalMinutes - remainingMinutes) / 60;
+    const formattedTime = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+    console.log(formattedTime);
+}
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(result);
 
 // For the piece of code above, read the code and then answer the following questions
 
