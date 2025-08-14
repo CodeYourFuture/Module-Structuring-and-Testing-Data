@@ -11,6 +11,20 @@
 
 // Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
 
+// Store the original phrase
+const phrase = "lord of the rings";
+
+// Define a function that converts the phrase to UPPER_SNAKE_CASE
+function upperSnakePhrase(phrase) {
+  // Convert the phrase to uppercase, then replace all spaces with underscores
+  return phrase.toUpperCase().replace(/ /g, "_");
+}
+
+// Print the original phrase and the converted UPPER_SNAKE_CASE version
+console.log(
+  `Phrase "${phrase}" in UPPER_SNAKE_CASE will be ${upperSnakePhrase(phrase)}`
+);
+
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
