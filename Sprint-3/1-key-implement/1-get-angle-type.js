@@ -38,6 +38,11 @@ assertEquals(right, "Right angle");
 // Then the function should return "Acute angle"
 const acute = getAngleType(45);
 assertEquals(acute, "Acute angle");
+ if (angle ===90) return "Right angle";
+ if (angle < 90) return "Acute angle";
+ if (angle === 180 ) return "Obtuse angle";
+ if (angle === 180 ) return "Straight angle"
+ if (angle < 360) return "Reflex angle";
 
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
