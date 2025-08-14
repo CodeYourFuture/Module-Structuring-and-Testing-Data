@@ -1,20 +1,21 @@
-
-// Predict and explain first BEFORE you run any code...
-
-// this function should square any number but instead we're going to get an error
-
-// =============> write your prediction of the error here
-
-function square(3) {
+function square(num) {
     return num * num;
 }
 
-// =============> write the error message here
+let result = square(3);
+console.log (`The result is ${result}`);
 
-// =============> explain this error message here
+// =============> SyntaxError: Unexpected number
+
+// =============> This error cause because there was a number in the place where it is not expected by parser.
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+// =============> function square(num) {
+    // return num * num;
+    //  }
+
+// let result = square(3);
+// console.log (`The result is ${result}`);
 
 
