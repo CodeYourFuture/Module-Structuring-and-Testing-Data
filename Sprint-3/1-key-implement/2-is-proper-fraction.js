@@ -40,14 +40,33 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
-// ====> complete with your assertion
+// ====> const equalFraction = isProperFraction(3, 3);
+assertEquals(equalFraction, false);
+
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
-// ====> complete with your assertion
+// ====> function isProperFraction(numerator, denominator) {
+    if (denominator === 0) return "Undefined (denominator cannot be zero)"; // Handle division by zero
+    return numerator < denominator;
+}
+
+// Helper function for assertions
+//function assertEquals(actualOutput, targetOutput) {
+  //console.assert(
+  //  actualOutput === targetOutput,
+ //   `Expected ${actualOutput} to equal ${targetOutput}`
+ // );
+//}
+
+// Test for Equal Numerator and Denominator
+//const equalFraction = isProperFraction(3, 3);
+//assertEquals(equalFraction, false);
+
 
 // Stretch:
 // What other scenarios could you test for?
+//====>Test cases should include zero denominators, zero numerators, negative fractions, and improper fractions to ensure isProperFraction handles all scenarios correctly.
