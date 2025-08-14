@@ -23,3 +23,30 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+
+
+// a) There are 6 variable declarations in this program:
+// which are:
+
+// movieLength
+
+// remainingSeconds
+
+// totalMinutes
+
+// remainingMinutes
+
+// totalHours
+
+// result
+
+// b) There are 2 function calls in this program.
+
+// c) Expression movieLength %60 represents remainder of division by 60.
+
+// d) expression assigned to totalminutes means minutes in the movie by removing the remaining seconds and dividing by 60.
+
+// e) Result variable represents the total time. A better name would be totalTime.
+
+// f) Yes code will work for all the values of movielength. It'll always return the total time with no problems. But It's not working if movielength less than 60 seconds, more than 24 hours or negative values.
+
