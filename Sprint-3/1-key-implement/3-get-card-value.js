@@ -8,7 +8,12 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+  let rank = card.slice(0, -1);
+  if (rank === "A") return 11;
+  if (rank === "K" || rank === "Q" || rank === "J" || rank === "10") return 10;
+  if (Number(rank) >= 2 && Number(rank) <= 9 && rank.length === 1)
+    return Number(rank);
+  throw Error("Invalid card rank");
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -39,13 +44,32 @@ const fiveofHearts = getCardValue("5♥");
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const kingOfHearts = getCardValue("K♥");
+assertEquals(kingOfHearts, 10);
+
+const jackOfSpades = getCardValue("J♠");
+assertEquals(jackOfSpades, 10);
+
+const queenOfDiamonds = getCardValue("Q♦");
+assertEquals(queenOfDiamonds, 10);
+
+const tenOfDiamonds = getCardValue("10♦");
+assertEquals(tenOfDiamonds, 10);
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const ace = getCardValue("A♣");
+assertEquals(ace, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+try {
+  getCardValue("X♠");
+  console.log("Test failed: should have thrown an error");
+} catch (e) {
+  assertEquals(e.message, "Invalid card rank");
+}
