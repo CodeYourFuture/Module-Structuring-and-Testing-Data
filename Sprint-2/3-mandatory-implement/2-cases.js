@@ -14,3 +14,16 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+/* Solution
+-We capitalise the string
+-We split the string using a "_" as the dermacator. */
+
+function uppercasesnake (str) {
+    str= str.toUpperCase();
+    //str= str.replace(" ","_"); // this line did not work
+    str= str.replace(/\s+/g,"_"); 
+    return str;
+
+}
+console.log(uppercasesnake("I want to be a good programmer"))
