@@ -16,6 +16,35 @@ test("should repeat the string count times", () => {
     expect(repeatedStr).toEqual("hellohellohello");
     });
 
+    
+    test("should return the original string when count is 1", () => {
+        const str = "hello";
+        const count = 1;
+        const repeatedStr = repeat(str, count);
+        expect(repeatedStr).toEqual("hello");
+    });
+    
+    
+    test("should return an empty string when count is 0", () => {
+        const str = "hello";
+        const count = 0;
+        const repeatedStr = repeat(str, count);
+        expect(repeatedStr).toEqual("");
+    });
+    
+
+    test("should throw an error when count is negative", () => {
+        const str = "hello";
+        const count = -2;
+        try {
+            repeat(str, count);
+        } catch (e) {
+            expect(e.message).toEqual("Count must be a non-negative integer.");
+        }
+    });
+
+
+
 // case: handle Count of 1:
 // Given a target string str and a count equal to 1,
 // When the repeat function is called with these inputs,
