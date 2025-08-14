@@ -14,3 +14,9 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function makeAllCaps(text) {
+  if (typeof text !== "string") return "";
+  return text.toUpperCase().replace(/\s+/g, "_");
+}
+console.log(makeAllCaps("Anuar"));
