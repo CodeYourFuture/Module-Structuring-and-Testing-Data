@@ -1,11 +1,43 @@
 const getCardValue = require("./3-get-card-value");
 
 test("should return 11 for Ace of Spades", () => {
-    const aceofSpades = getCardValue("A♠");
-    expect(aceofSpades).toEqual(11);
+    expect(getCardValue("A♠")).toEqual(11);
     });
 
 // Case 2: Handle Number Cards (2-10):
+test("should return correct numeric value for number cards", () => {
+    expect(getCardValue("5♥")).toEqual(5);
+    expect(getCardValue("3♣")).toEqual(3);
+    expect(getCardValue("4♦")).toEqual(4);
+
+
+});
+test('returns 10 for Ten of Diamonds', () => {
+  expect(getCardValue('10♦')).toEqual(10);
+});
+
 // Case 3: Handle Face Cards (J, Q, K):
-// Case 4: Handle Ace (A):
-// Case 5: Handle Invalid Cards:
+test.each(["K♣", "Q♦", "J♥"])(
+  'returns 10 for %s',
+  (card) => {
+    expect(getCardValue(card)).toEqual(10);
+  });
+
+// Case 4: Handle Invalid Cards:
+test("should throw an error for invalid card rank", () => {
+    expect(() => getCardValue("Z♣")).toThrow("Invalid card rank.");
+});
+test("should throw an error for invalid card rank", () => {
+    expect(() => getCardValue("11♠")).toThrow("Invalid card rank.");
+});
+
+
+test("should throw an error for hex literal rank", () => {
+    expect(() => getCardValue("0x02♠")).toThrow("Invalid card rank.");
+});
+test("should throw an error for float rank", () => {
+    expect(() => getCardValue("2.1♠")).toThrow("Invalid card rank.");
+});
+test("should throw an error for underscore rank", () => {
+    expect(() => getCardValue("00_02♠")).toThrow("Invalid card rank.");
+});
