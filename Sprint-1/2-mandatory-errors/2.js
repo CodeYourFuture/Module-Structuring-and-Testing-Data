@@ -2,4 +2,5 @@
 // what's the error ?
 
 console.log(`I was born in ${cityOfBirth}`);
+//you cannot console log a variable that hasn't been assigned yet because the program runs from the top to bottom.
 const cityOfBirth = "Bolton";

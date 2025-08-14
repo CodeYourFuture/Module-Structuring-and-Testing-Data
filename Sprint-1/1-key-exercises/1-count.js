@@ -1,5 +1,5 @@
 let count = 0;
-
+//the = is reassigning the new value  to the variable count of count
 count = count + 1;
 
 // Line 1 is a variable declaration, creating the count variable with an initial value of 0
