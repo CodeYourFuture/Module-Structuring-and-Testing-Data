@@ -1,2 +1,3 @@
-const 12HourClockTime = "20:53";
-const 24hourClockTime = "08:53";
+const _12HourClockTime = "08:53"; // A variable name cannot start with a number, so I changed the variable name to _12HourClockTime
+const _24FourHourClockTime = "20:53"; // Instead you can start with an underscore, letter, or dollar sign
+console.log(`The time is ${_12HourClockTime} in 12-hour format and ${_24FourHourClockTime} in 24-hour format.`); // I have changed the variable name to _12HourClockTime and _24FourHourClockTime
