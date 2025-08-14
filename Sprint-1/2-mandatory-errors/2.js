@@ -3,3 +3,9 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+// The console.log command should come after the variable has been identified not before.
+// This code is not in the right order.
+
+const cityOfBirth = "Bolton";
+console.log(`I was born in ${cityOfBirth}`);
