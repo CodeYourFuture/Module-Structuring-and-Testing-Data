@@ -20,13 +20,21 @@ test("should repeat the string count times", () => {
 // Given a target string str and a count equal to 1,
 // When the repeat function is called with these inputs,
 // Then it should return the original str without repetition, ensuring that a count of 1 results in no repetition.
-
+test("should return original string for count = 1", () => {
+    expect(repeat("test", 1)).toEqual("test");
+});
 // case: Handle Count of 0:
 // Given a target string str and a count equal to 0,
 // When the repeat function is called with these inputs,
 // Then it should return an empty string, ensuring that a count of 0 results in an empty output.
+test("should return an empty string for count of 0", () => {
+    expect(repeat("test", 0)).toEqual("");
+});
 
 // case: Negative Count:
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+test("should throw an error for negative count", () => {
+    expect(() => repeat("bleep", -2)).toThrow("count must be a positive integer");
+});

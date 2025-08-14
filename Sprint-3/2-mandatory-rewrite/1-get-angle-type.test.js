@@ -4,6 +4,21 @@ test("should identify right angle (90°)", () => {
   expect(getAngleType(90)).toEqual("Right angle");
 });
 
+test("should identify acute angle (90°)", () => {
+  expect(getAngleType(45)).toEqual("Acute angle");
+});
+
+test("should identify obtuse angle (120°)", () => {
+  expect(getAngleType(120)).toEqual("Obtuse angle");
+});
+
+test("should identify Straight angle (180°)", () => {
+  expect(getAngleType(180)).toEqual("Straight angle");
+});
+
+test("should identify a reflex angle (270°)", () => {
+  expect(getAngleType(270)).toEqual("Reflex angle");
+});
 // REPLACE the comments with the tests
 // make your test descriptions as clear and readable as possible
 
