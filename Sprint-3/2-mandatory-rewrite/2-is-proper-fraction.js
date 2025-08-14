@@ -1,6 +1,9 @@
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
-    // add your completed function from key-implement here
+    if (Math.abs(numerator/denominator) >= 1) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 module.exports = isProperFraction;
