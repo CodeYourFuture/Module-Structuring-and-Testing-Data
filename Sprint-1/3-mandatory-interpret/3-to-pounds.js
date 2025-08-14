@@ -25,3 +25,11 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 3. Initialises a new variable penceStringWithoutTrailingP with the value of penceString without the last character (the 'p')
+// 8. Intitialises a new variable paddedPenceNumberString with the value of penceStringWithoutTrailingP, 
+// padded to ensure it has at least 3 characters, adding leading zeros if necessary.
+// 9. Initialises a new variable "pounds" with the first part of paddedPenceNumberString, which represents the pounds part of the price.
+// 14. Initialises a new variable "pence" with the last two characters of paddedPenceNumberString, 
+// which represents the pence part of the price,
+// padded to ensure it has at least 2 characters, adding trailing zeros if necessary.
+// 18. Finally, the program logs the formatted price in pounds and pence to the console.
