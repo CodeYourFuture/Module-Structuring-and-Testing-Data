@@ -16,3 +16,4 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+Answer: prompt opens a pop up at the top of the page which contains the question 'what is your name' and the return value of prompt is the name i introduced
