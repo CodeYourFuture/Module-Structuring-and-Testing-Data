@@ -1,6 +1,8 @@
 // This is the latest solution to the problem from the prep.
 // Make sure to do the prep before you do the coursework
-// Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
+// Your task is to write tests for as many different groups of 
+// input data or edge cases as you can, and fix any bugs you find.
+
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
@@ -23,3 +25,27 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+
+//
+function formatAs12HourClock(time) {
+  const [hourStr, minutes] = time.split(":");
+  const hours = Number(hourStr);
+
+  if (hours === 0) {
+    return `12:${minutes} am`;  // Midnight 
+  }
+  if (hours === 12) {
+    return `12:${minutes} pm`;  // Noon 
+  }
+  if (hours > 12) {
+    return `${String(hours - 12).padStart(2, "0")}:${minutes} pm`;  
+  }
+  return `${time} am`;  // Morning
+}
+
+// Test cases
+console.log(formatAs12HourClock("08:00"));  
+console.log(formatAs12HourClock("23:00"));  
+console.log(formatAs12HourClock("00:30"));  
+console.log(formatAs12HourClock("12:45"));  
+console.log(formatAs12HourClock("13:15"));  
