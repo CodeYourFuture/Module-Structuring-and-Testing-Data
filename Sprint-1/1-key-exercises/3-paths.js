@@ -17,7 +17,12 @@ console.log(`The base part of ${filePath} is ${base}`);
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-const dir = ;
-const ext = ;
+//// The directory part (everything before the last "/")
+const dir = filePath.slice(0, lastSlashIndex);
+console.log(`The directory part of ${filePath} is ${dir}`)
+// The extension part is located 5 characters after the last "/"
+const ext = filePath.slice(lastSlashIndex+ 5);
+console.log(`The extension part of ${filePath} is ${ext}`)
+
 
 // https://www.google.com/search?q=slice+mdn
