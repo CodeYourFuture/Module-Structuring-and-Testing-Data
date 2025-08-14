@@ -14,10 +14,6 @@ const lastSlashIndex = filePath.lastIndexOf("/");
 const base = filePath.slice(lastSlashIndex + 1);
 console.log(`The base part of ${filePath} is ${base}`);
 
-// Create a variable to store the dir part of the filePath variable
-// Create a variable to store the ext part of the variable
-
-const dir = ;
-const ext = ;
-
-// https://www.google.com/search?q=slice+mdn
+const dir = filePath.slice(0, lastSlashIndex); // This gives us everything up to (but not including) the last /
+const dotIndex = base.lastIndexOf("."); // This finds the position of the dot in the filename (like "file.txt") so that I can slice out the extension using:const ext = base.slice(dotIndex)
+const ext = base.slice(dotIndex); //  gives ".txt"
