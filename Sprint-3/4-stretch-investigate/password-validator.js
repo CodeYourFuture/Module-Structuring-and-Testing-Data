@@ -1,6 +1,5 @@
 function passwordValidator(password) {
-    return password.length < 5 ? false : true
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$/;
+    return regex.test(password);
 }
-
-
 module.exports = passwordValidator;
