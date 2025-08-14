@@ -11,8 +11,17 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
+<!-- it shows a popup msg with this text:Hello world! -->
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+<!-- It ask user to enter a name with a popup msg -->
+
 What is the return value of `prompt`?
+<!-- If I print it, it shows the text that user entered -->
+
+
+<!-- alert("Hi")
+let Name=prompt("Enter your name please: ")
+alert(name) -->
