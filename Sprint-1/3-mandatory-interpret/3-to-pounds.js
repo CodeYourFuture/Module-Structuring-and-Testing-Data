@@ -1,19 +1,24 @@
-const penceString = "399p";
+const penceString = "9p"; //init variable
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
-);
+); //remove p character at the end of the variable
+console.log(penceStringWithoutTrailingP);
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); //
+console.log(paddedPenceNumberString); //give format of 3 zeroes if the number is less than 3 digits.
+
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
-);
+); //get ponds value conversion changes for given pence
+
+console.log(pounds);
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .padEnd(2, "0"); //get the reminds after conversion to pounds
 
 console.log(`£${pounds}.${pence}`);
 

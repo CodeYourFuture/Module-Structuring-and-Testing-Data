@@ -6,7 +6,7 @@
 // =============> write your prediction of the error here
 
 function square(3) {
-    return num * num;
+  return num * num;
 }
 
 // =============> write the error message here
@@ -16,5 +16,3 @@ function square(3) {
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here
-
-
