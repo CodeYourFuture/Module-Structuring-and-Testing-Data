@@ -1,13 +1,23 @@
 function getAngleType(angle) {
-  if (angle === 90) return "Right angle";
-  // replace with your completed function from key-implement
-
+  // Ensure angle is a number and within valid bounds
+  if (typeof angle !== "number" || angle <= 0 || angle >= 360) {
+    return "Invalid angle";
+  }
+  if (angle < 90) {
+    return "Acute angle";
+  }
+  if (angle === 90) {
+    return "Right angle";
+  }
+  if (angle < 180) {
+    return "Obtuse angle";
+  }
+  if (angle === 180) {
+    return "Straight angle";
+  }
+  // Any remaining angle must be between 180 and 360 (exclusive)
+  return "Reflex angle";
 }
-
-
-
-
-
 
 
 

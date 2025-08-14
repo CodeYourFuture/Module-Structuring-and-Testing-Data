@@ -40,6 +40,7 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
+assertEquals(properFraction, true);
 // ====> complete with your assertion
 
 // Equal Numerator and Denominator check:
@@ -51,3 +52,17 @@ const equalFraction = isProperFraction(3, 3);
 
 // Stretch:
 // What other scenarios could you test for?
+// fraction is true because the absolute value of the numerator (0) is less than the denominator (5).
+assertEquals(isProperFraction (0, 5), true)
+
+// fraction is fa;se because the absolute value of the numerator (3) is greater than the denominator (0).
+assertEquals(isProperFraction(3, 0), false);
+
+// fraction is true because the absolute value of the numerator (2) is less than the denominator (-5).
+assertEquals(isProperFraction(2, -5), true);
+
+// fraction is false because the absolute value of the numerator (-3) is greater than the denominator (-4).
+assertEquals(isProperFraction(-3, -4), false);
+
+// fraction is true because the absolute value of the numerator (-9) is less than the denominator (5).
+assertEquals(isProperFraction(-9, 5), false);
