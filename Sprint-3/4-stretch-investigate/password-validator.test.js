@@ -21,6 +21,30 @@ test("password has at least 5 characters", () => {
     // Act
     const result = isValidPassword(password);
     // Assert
-    expect(result).toEqual(true);
+    expect(result).toEqual(false);
 }
 );
+test("valid passwords", () => {
+    expect (isValidPassword("1Aa2345!")).toEqual(true); 
+})
+test("valid passwords", () => {
+    expect (isValidPassword("1Aa2345")).toEqual(false); 
+})
+test("Fails only on length", () => {
+    expect(isValidPassword("1A!")).toEqual(false);
+})
+test("Fails only on uppercase", () => {
+    expect(isValidPassword("pa$$1!")).toEqual(false);
+})
+test("Fails only on lowercase", () => {
+    expect(isValidPassword("PA$$1!")).toEqual(false);
+})
+test("Fails only on digit", () => {
+    expect(isValidPassword("Passw!")).toEqual(false);
+})
+test("Fails only on symbol", () => {
+    expect(isValidPassword("Pass12")).toEqual(false);
+})
+test("Fails only on duplicate", () => {
+    expect(isValidPassword("Pass1!", ["Pass1!"])).toEqual(false);
+})
