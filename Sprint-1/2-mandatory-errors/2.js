@@ -3,3 +3,5 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+// the error is because you are trying to execute the code without first declaring the variable.
+// so the declaration comes first then execution comes after.
