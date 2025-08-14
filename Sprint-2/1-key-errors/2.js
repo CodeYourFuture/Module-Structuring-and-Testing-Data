@@ -3,18 +3,22 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> The 'num' variable is not defined in the function scope,
+// so when we try to use it, it will throw an error.
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> The error is "SyntaxError: Unexpected number"
 
-// =============> explain this error message here
+// =============> The number '3" is used where it shouldn't be, as a parameter.
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+// =============> write your new code here:
+function square(num) {
+    return num * num;
+}
 
 
