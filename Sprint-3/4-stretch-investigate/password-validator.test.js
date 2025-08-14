@@ -15,12 +15,23 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+test("password invalid, contains only numbers", () => {
+  const password = "12345";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+//password was not used in the past
+test("password invalid, was used before", () => {
+  expect(isValidPassword("wWb1!")).toEqual(false);
+});
+
+// password without upper case letter
+test("password fails, contains no uppercase letter", () => {
+  expect(isValidPassword("abcdef!")).toEqual(false);
+});
+//password meeting all requirements
+test("password is valid when it meets all required criteria", () => {
+  const password = "ZaR!0";
+  const result = isValidPassword(password);
+  expect(result).toEqual(true);
+});
