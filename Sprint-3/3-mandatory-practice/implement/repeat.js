@@ -3,3 +3,11 @@ function repeat() {
 }
 
 module.exports = repeat;
+
+function repeat(str, num) {
+    // Handle edge cases
+    if (num <= 0) return '';
+    return str.repeat(num);
+}
+
+module.exports = repeat;
