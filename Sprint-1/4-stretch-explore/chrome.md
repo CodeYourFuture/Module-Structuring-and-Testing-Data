@@ -11,8 +11,15 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
+//It Gives me a pop up on the page
 
-Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
+Now try invoking the function `prompt` with a string input of `"What is your name?"`
+//Opens a pop up with the question
+
+- store the return value of your call to `prompt` in an variable called `myName`.
+  //const myName = prompt("What is your name?"); worked :)
 
 What effect does calling the `prompt` function have?
+//Opens a pop up with the question
 What is the return value of `prompt`?
+//What I typed in the pop up.
