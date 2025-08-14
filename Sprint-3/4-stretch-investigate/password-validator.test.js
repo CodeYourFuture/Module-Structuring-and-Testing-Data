@@ -16,11 +16,36 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 const isValidPassword = require("./password-validator");
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+  // Arrange
+  const password = "12345Aa*";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(true);
+});
+
+test("password must have at least one uppercase letter", () => {
+  expect(isValidPassword("abc1!")).toBe(false);
+  expect(isValidPassword("Abc1!")).toBe(true);
+});
+
+test("password must have at least one lowercase letter", () => {
+  expect(isValidPassword("ABC1!")).toBe(false);
+  expect(isValidPassword("AbC1!")).toBe(true);
+});
+
+test("password must have at least one number", () => {
+  expect(isValidPassword("Fdeg!")).toBe(false);
+  expect(isValidPassword("Fdeg1!")).toBe(true);
+});
+
+test("password must have at least one special character (!#$%.*&)", () => {
+  expect(isValidPassword("Abc12")).toBe(false);
+  expect(isValidPassword("Abc1!")).toBe(true);
+});
+
+test("password must not be in previousPasswords", () => {
+  const prev = ["passWord123!", "Hello123!"];
+  expect(isValidPassword("passWord123!", prev)).toBe(false);
+  expect(isValidPassword("ffDe12!", prev)).toBe(true);
+});
