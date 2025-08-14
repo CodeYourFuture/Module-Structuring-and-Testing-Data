@@ -3,23 +3,25 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+  let hours = Number(time.slice(0, 2));
+  const minutes = time.slice(3, 5);
+
+  let suffix = 'am';
+  if (hours === 0) {
+    hours = 12; // midnight
+  } else if (hours === 12) {
+    suffix = 'pm'; // noon
+  } else if (hours > 12) {
+    hours -= 12;
+    suffix = 'pm';
   }
-  return `${time} am`;
+
+  const formattedHours = hours < 10 ? `0${hours}` : `${hours}`;
+  return `${formattedHours}:${minutes} ${suffix}`;
 }
 
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
 console.assert(
   currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
-);
-
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
-);
+  `current output: ${cu
