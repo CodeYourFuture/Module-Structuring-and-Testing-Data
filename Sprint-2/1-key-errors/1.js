@@ -1,7 +1,10 @@
 // Predict and explain first...
 
 // Why will an error occur when this program runs?
-// =============> write your prediction here
+/* We will get an error message for this code because the variable named decimalNumber is declared again inside the function, 
+which causes a syntax error.Also, calling the function directly with console.log(decimalNumber) will cause an error because it
+tries to access the decimalNumber parameter defined inside the function. Therefore, we need to define decimalNumber outside the 
+function as well. */
 
 // Try playing computer with the example to work out what is going on
 
@@ -14,7 +17,10 @@ function convertToPercentage(decimalNumber) {
 
 console.log(decimalNumber);
 
-// =============> write your explanation here
-
-// Finally, correct the code to fix the problem
-// =============> write your new code here
+// correct cod:
+function convertToPercentage(decimalNumber) {
+  const percentage = `${decimalNumber * 100}%`;
+  return percentage;
+}
+const convertedNumber = convertToPercentage(0.2);
+console.log(convertedNumber);
