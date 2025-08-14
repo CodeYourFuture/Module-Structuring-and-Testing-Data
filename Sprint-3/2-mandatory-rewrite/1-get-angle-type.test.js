@@ -42,3 +42,8 @@ test("should handle angle values outside the valid range", () => {
   expect(getAngleType(361)).toEqual("Invalid angle: Angle must be between 0 and 360 degrees");
   expect(getAngleType(-10)).toEqual("Invalid angle: Angle must be between 0 and 360 degrees");
 });
+
+test("should handle edge case inputs that might bypass initial checks", () => {
+  expect(getAngleType(NaN)).toEqual("Invalid angle: Please provide a valid number");
+  expect(getAngleType(null)).toEqual("Acute angle");
+});
