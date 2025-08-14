@@ -3,18 +3,22 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> an error will pop up because you have a value of 3 (integer) passed into the function as a parameter. 
 
-function square(3) {
-    return num * num;
-}
+// function square(3) {
+//     return num * num;
+// }
 
-// =============> write the error message here
+// =============> write the error message here: SyntaxError: Unexpected number
 
-// =============> explain this error message here
+// =============> explain this error message here: the JS engine didn't expect this parameter name - in this case a number.
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+function square(num=3) {
+    return num * num;
+}
+
+
 
 
