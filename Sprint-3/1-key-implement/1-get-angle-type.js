@@ -54,3 +54,30 @@ const obtuse = getAngleType(120);
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 // ====> write your test here, and then add a line to pass the test in the function above
+function getAngleType(angle) {
+  if (angle === 90) return "Right angle";
+  if (angle < 90) return "Acute angle";
+  if (angle > 90 && angle < 180) return "Obtuse angle";
+  if (angle === 180) return "Straight angle";
+  if (angle > 180 && angle < 360) return "Reflex angle";
+  return "Invalid angle"; // Handles out-of-range values
+}
+
+// Helper function for assertions
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected "${actualOutput}" to equal "${targetOutput}"`
+  );
+}
+
+//  **Test Cases**
+
+
+assertEquals(getAngleType(90), "Right angle");
+assertEquals(getAngleType(45), "Acute angle");
+assertEquals(getAngleType(120), "Obtuse angle");
+assertEquals(getAngleType(180), "Straight angle");
+assertEquals(getAngleType(270), "Reflex angle");
+
+
