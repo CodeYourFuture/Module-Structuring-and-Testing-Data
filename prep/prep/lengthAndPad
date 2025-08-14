@@ -1,0 +1,11 @@
+// The .length property is used in programming to determine the number of elements in an array,
+ the number of characters in a string, 
+ or the size of other data structures depending on the language
+
+ // .padStart padStart(targetLength, padString) This method pads the current string from the beginning (left side)
+  until the string's length reaches the target length.
+  If the string is already longer than the target length, it does nothing.
+
+  
+  // .padEnd padEnd(targetLength, padString)This method pads the current string from the end (right side) until the string's length reaches the target length. 
+  Similar to .padStart(), if the string is already longer, it will remain unchanged.

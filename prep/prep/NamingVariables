@@ -1,0 +1,5 @@
+// can contain letters and numbers. However the names must start with a letter not a number
+//can not contain spaces
+//can not contain reserved words/keywords
+//names should be short and concise
+//naming convention for javascript should be camel case which starts a name with a lowe case 

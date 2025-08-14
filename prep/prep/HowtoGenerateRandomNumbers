@@ -1,0 +1,11 @@
+// this code generates a randome number(float) between 0 and 1 inclusive
+//The Math.random() function generates a floating-point number between 0 (inclusive) and 1 (exclusive):
+//Without +1, the upper bound is excluded because Math.floor() always rounds down
+
+const random = Math.random();
+console.log(random);
+
+// now to generate a whole number between any range eg 1-10
+
+const random2 = Math.floor(Math.random() * 10) +1;
+console.log(random2);

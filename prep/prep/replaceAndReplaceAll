@@ -1,0 +1,11 @@
+// replace is used When you want to a substring inside a string with another substring
+//string.replace(searchSstring, replacerstring)
+
+let text = 'Mr Blue has a blue house and a blue car'
+text.replace('blue', 'red');
+let result = text.replace('blue', 'red');
+console.log(result);
+
+// the above will only replace the first match but if you want to replace all words use replaceAll
+
+//ReplaceAll

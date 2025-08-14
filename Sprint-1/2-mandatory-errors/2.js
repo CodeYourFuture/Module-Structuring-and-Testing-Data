@@ -2,4 +2,9 @@
 // what's the error ?
 
 console.log(`I was born in ${cityOfBirth}`);
-const cityOfBirth = "Bolton";
+ const cityOfBirth = "Bolton";
+
+ //Answer
+ //The error above is because we are tring to use cityOfBirth before it is defined 
+ const cityOfBirth = "Bolton";
+ console.log(`I was born in ${cityOfBirth}`);
