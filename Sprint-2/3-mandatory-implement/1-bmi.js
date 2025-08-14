@@ -16,4 +16,13 @@
 
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
+    // first square the height (height × height)
+    // divide the weight by that squared height value
+    // format the result to 1 decimal place
+
+    const heightInput = height * height;
+    const result = weight / heightInput;
+    return result.toFixed(1);
+
 }
+console.log(calculateBMI(101, 1.3))
