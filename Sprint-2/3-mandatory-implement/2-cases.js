@@ -10,7 +10,13 @@
 // it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
 
 // Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
-
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+function toUpperSnakeCase(input) {
+  return input.toUpperCase().split(" ").join("_");
+}
+
+// Example usage:
+console.log(toUpperSnakeCase("hello there"));           // "HELLO_THERE"
+console.log(toUpperSnakeCase("lord of the rings"));     // "LORD_OF_THE_RINGS"
