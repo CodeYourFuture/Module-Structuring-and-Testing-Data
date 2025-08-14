@@ -23,3 +23,11 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+
+// Answer a: There are 6 variable declarations in this program: movieLength, remainingSeconds,totalMinutes,totalHours,remainingMinutes, and result.
+// Answer b: There is only one function call "console,log(result);".
+// Answer c: The expression movieLength % 60 uses the modules operator (%) which returns the remainder after dividing movieLength by 60.
+// This tells us how many remainder seconds are left after converting the total time into full minutes.
+// Answer d: This line calculates the total number of complete minutes in the movie after removing the  leftover seconds. in first subtract the  remaining seconds then divide the rest by 60 to convert seconds by minutes.
+// Answer e: result stores the formatted time in hours,minutes,seconds. A better name for this variable formattedTime,durationString,timeInHMS.
+// Answer f: yes, it works for all non negative integer values of movieLength
