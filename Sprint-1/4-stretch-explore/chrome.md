@@ -10,9 +10,10 @@ Let's try an example.
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
-What effect does calling the `alert` function have?
+What effect does calling the `alert` function have?it displays a popup alert boc with the message "Hello World!".(google.com says Hello world!)
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
-What effect does calling the `prompt` function have?
-What is the return value of `prompt`?
+What effect does calling the `prompt` function have? it opens a popup input bpx asking the user ,"what is your name ?". the user can enter a value.
+
+What is the return value of `prompt`?the text entered by the user (as a string) , if user clicks ok without entering anything , returns empty string (""). if user clicks cancel it returns null.Fi
