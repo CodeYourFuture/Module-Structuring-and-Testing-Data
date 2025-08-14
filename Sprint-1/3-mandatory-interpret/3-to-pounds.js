@@ -1,4 +1,4 @@
-const penceString = "399p";
+const penceString = "99p";
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
@@ -11,9 +11,9 @@ const pounds = paddedPenceNumberString.substring(
   paddedPenceNumberString.length - 2
 );
 
-const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+const pence = paddedPenceNumberString.substring(
+  paddedPenceNumberString.length - 2
+);
 
 console.log(`£${pounds}.${pence}`);
 
@@ -24,4 +24,18 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 1. const penceString = "399p": initializes a string variable with the value "399p"
+/* 2. const penceStringWithoutTrailingP = penceString.substring(
+  0,
+  penceString.length - 1
+); In this line, A new variable is created using the substring method. The substring method is used to extract a specific part of a string. 
+Starting from index 0 and going up to but not including, the last character, the 'p' at the end of the string is removed. 
+3.- const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); 
+This line assigns a new variable where the string is padded with leading zeros to ensure a length of 3. 
+If the length was less than 3, zeros would be added at the start.
+4. const pounds = paddedPenceNumberString.substring(
+  0,
+  paddedPenceNumberString.length - 2
+); - In this line, the substring method is used to extract only the first character from the previously created paddedPenceNumberString variable,
+ which has a length of 3. This extracted part is assigned to pounds.
+*/
