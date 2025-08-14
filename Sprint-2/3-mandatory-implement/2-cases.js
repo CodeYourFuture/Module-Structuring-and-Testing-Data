@@ -14,3 +14,10 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function allCapsWithUnderScore(text) {
+  return text.toUpperCase().replaceAll(" ", "_");
+}
+
+console.log(allCapsWithUnderScore("hello there")); // Output: HELLO_THERE
+console.log(allCapsWithUnderScore("lord of the rings")); // Output: LORD_OF_THE_RINGS
