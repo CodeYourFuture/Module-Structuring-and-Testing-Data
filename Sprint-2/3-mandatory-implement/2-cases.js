@@ -14,3 +14,13 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+function toUpperSnakeCase(input) {
+    // split the words by spaces
+    const words = input.split(' ');
+    // map each of the words to uppercase and join them with underscores
+    const upperSnakeCase = words.map(word => word.toUpperCase()).join('_');
+    return upperSnakeCase;
+}
+
+//test
+console.log(toUpperSnakeCase("why do people run")); // "WHY_DO_PEOPLE_RUN"
