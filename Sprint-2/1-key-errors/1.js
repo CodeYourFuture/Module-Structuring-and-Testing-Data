@@ -2,7 +2,7 @@
 
 // Why will an error occur when this program runs?
 // =============> write your prediction here
-
+// given the value (0.5) in function scope
 // Try playing computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
@@ -15,6 +15,15 @@ function convertToPercentage(decimalNumber) {
 console.log(decimalNumber);
 
 // =============> write your explanation here
+// remove the decimalNumber in function
+//put the value(0.5) and corrected call the convertToPercentage function in console.log
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
+function convertToPercentage(decimalNumber){
+  const percentage = `${decimalNumber * 100}%`;
+  return percentage;
+  
+  
+  }
+  console.log(convertToPercentage(0.5));
