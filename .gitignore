@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 .vscode
 **/.DS_Store
+package-lock.json
+Sprint-3/3-mandatory-practice/implement/fffff.test.js
