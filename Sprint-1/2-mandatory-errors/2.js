@@ -3,3 +3,5 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+It is not working because the const was declared after the console.log
