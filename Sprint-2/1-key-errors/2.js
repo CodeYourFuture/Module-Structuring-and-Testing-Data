@@ -3,18 +3,24 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> My prediction is that error occurs because function trying to use a number as a function.
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> Expected identifier but found "3"
 
-// =============> explain this error message here
+// =============> While program waiting for an identifier, it found a number instead.
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+// =============> 
+    function square(num) {
+        return num * num;
+    }
+
+    // to call the function
+    console.log(square(9)); // Output: 81
 
 
