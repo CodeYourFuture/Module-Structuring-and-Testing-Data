@@ -17,4 +17,4 @@ function sum(a, b)
   return a + b;
 }
 
-console.log(`The sum of 45 and 12 is ${sum(45, 12)}`); // Output: "The sum of 10 and 32 is 42"
+console.log(`The sum of 45 and 12 is ${sum(45, 12)}`); // Output: "The sum of 45 and 12 is 57"

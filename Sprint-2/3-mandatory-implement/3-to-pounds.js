@@ -22,7 +22,10 @@ const pounds = paddedPenceNumber.substring(
 const pence = paddedPenceNumber
   .substring(paddedPenceNumber.length - 2);
 
-return `${pounds}.${pence}`;
+
+const formattedPounds = pounds || "0";
+
+return `£${formattedPounds}.${pence}`;
 }
 
 console.log(`The amount in pounds is ${toPounds("10000000")}`);

@@ -19,7 +19,7 @@
 // =============> write your new code here
 
 function capitalise(str) {
-  let capitalisedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
+  const capitalisedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
   return capitalisedStr;
 }
 
