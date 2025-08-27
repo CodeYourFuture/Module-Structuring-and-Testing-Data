@@ -20,6 +20,11 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+//  increments by 1 in every iteration using index++.
 // b) What is the if statement used to check
+//  checks if the character at the current index matches the specified character.
 // c) Why is index++ being used?
+// It moves the pointer forward through the string. Without it, the loop would run infinitely.
+
 // d) What is the condition index < str.length used for?
+// It ensures we don’t read beyond the string boundary — this prevents errors or undefined behavior.
