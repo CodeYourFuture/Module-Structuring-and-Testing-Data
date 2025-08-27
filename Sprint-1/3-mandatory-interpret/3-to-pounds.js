@@ -1,4 +1,4 @@
-const penceString = "399p";
+const penceString = "5p";
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
@@ -13,7 +13,6 @@ const pounds = paddedPenceNumberString.substring(
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
 
 console.log(`£${pounds}.${pence}`);
 
@@ -24,4 +23,9 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 1. const penceString = "399p": initialize a string variable with the value "399p"
+//2. Removes the trailing "p" from the string: and result will be 399
+//3. Ensures the number has at least 3 digits by padding from the left with zeros: like 000
+//4. Extracts the pound portion: "3"
+//5.Extracts the pound portion: "99"
+//6. Extracts the pound portion: in the standard monetary format of pounds and pence: "£3.99"

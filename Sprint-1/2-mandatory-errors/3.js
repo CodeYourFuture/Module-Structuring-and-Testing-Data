@@ -1,5 +1,10 @@
 const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.slice(-4);
+// Prediction: The code will not work because the `slice` method is being called on a number type (`cardNumber`),
+// and the `slice` method is a string method. In JavaScript, numbers do not have a `slice` method.
+// Running the code will likely result in a TypeError.
+
+const last4Digits = cardNumber.toString().slice(-4); // Convert cardNumber to a string first
+console.log(`The last 4 digits of the card number are ${last4Digits}`);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
