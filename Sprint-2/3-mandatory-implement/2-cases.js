@@ -14,3 +14,38 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toUpperSnakeCase(string) {
+  // First convert the entire string to uppercase
+  const upperCaseString = string.toUpperCase();
+
+  // Then split it into words (assuming space-separated)
+  const wordsArray = upperCaseString.split(" ");
+
+  // Then join the array into a string using underscores
+  const result = wordsArray.join("_");
+  // Return the string in UPPER_SNAKE_CASE
+  return result;
+}
+// Example usage for this function
+// let string = "hello there";
+
+// console.log(`The string in UPPER_SNAKE_CASE is: ${toUpperSnakeCase(string)}`);
+
+console.log(
+  `The string in UPPER_SNAKE_CASE for 'hello there' is: ${toUpperSnakeCase(
+    "hello there"
+  )}`
+);
+
+console.log(
+  `The string in UPPER_SNAKE_CASE for 'lord of the rings' is: ${toUpperSnakeCase(
+    "lord of the rings"
+  )}`
+);
+
+console.log(
+  `The string in UPPER_SNAKE_CASE for 'example usage for this function' is: ${toUpperSnakeCase(
+    "example usage for this function"
+  )}`
+);
