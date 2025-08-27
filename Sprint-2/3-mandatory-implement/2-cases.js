@@ -14,3 +14,9 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toUpperCaseSnake(sentence){
+sentence = sentence.split(' ').join('_').toUpperCase();
+return sentence;
+}
+console.log(toUpperCaseSnake("Do what you can, with what you have, where you are."));
