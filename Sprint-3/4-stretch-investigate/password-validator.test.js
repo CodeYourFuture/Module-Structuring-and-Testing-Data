@@ -16,11 +16,25 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 const isValidPassword = require("./password-validator");
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+  // Arrange
+  const password = "12345";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
+});
+
+// TEST 4: Missing symbol
+// Should fail because there is no special character
+test("fails if missing symbol", () => {
+  const password = "Hello123";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+// TEST 6: Common/reused password (if your logic rejects common ones)
+// Should fail because the password is too common (if that rule is included)
+test("fails if reused/common password", () => {
+  const password = "Password123!";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false); // Update this only if your validator handles common passwords
+});
