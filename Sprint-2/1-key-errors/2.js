@@ -5,9 +5,16 @@
 
 // =============> write your prediction of the error here
 
-function square(3) {
+// It will get an error because as parameter to the function is a integer (3) 
+// Also num is not declare in anywhere
+
+function square(num) {
     return num * num;
 }
+
+console.log(square(3));
+
+
 
 // =============> write the error message here
 
