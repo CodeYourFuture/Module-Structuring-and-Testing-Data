@@ -9,7 +9,12 @@
   "keywords": [],
   "author": "Code Your Future",
   "license": "ISC",
+<<<<<<< Updated upstream
   "dependencies": {
     "jest": "^29.7.0"
+=======
+  "devDependencies": {
+    "jest": "^30.0.2"
+>>>>>>> Stashed changes
   }
 }

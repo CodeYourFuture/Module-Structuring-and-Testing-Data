@@ -1,0 +1,13 @@
+{
+  "name": "sprint-3",
+  "version": "1.0.0",
+  "description": "> https://programming.codeyourfuture.io/structuring-data/sprints/3/prep/",
+  "main": "index.js",
+  "scripts": {
+  "test": "jest"
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
