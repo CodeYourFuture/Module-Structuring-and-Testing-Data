@@ -8,9 +8,16 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-   if (angle === 90) return "Right angle";
-   // read to the end, complete line 36, then pass your test here
+  if (angle === 90) {
+    return "Right angle";
+  }
+   // Run the tests, work out what Case 2 is testing, and implement the required code here.
+   // Then keep going for the other cases, one at a time.
 }
+
+// The line below allows us to load the getAngleType function into tests in other files.
+// This will be useful in the "rewrite tests with jest" step.
+module.exports = getAngleType;
 
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
