@@ -10,8 +10,8 @@ Write your assertions and build up your program case by case. Don't rush to a so
 Here is a recommended order:
 
 1. `1-get-angle-type.js`
-1. `2-is-proper-fraction.js`
-1. `3-get-card-value.js`
+2. `2-is-proper-fraction.js`
+3. `3-get-card-value.js`
 
 ## 2 Rewrite tests with Jest
 
@@ -32,9 +32,9 @@ You can run all the tests in this repo by running `npm test` in your terminal. H
 https://code.visualstudio.com/docs/editor/testing
 
 1. Go to rewrite-tests-with-jest/1-get-angle-type.test.js
-1. Click the green play button to run the test. It's on the left of the test function in the gutter.
-1. Read the output in the TEST_RESULTS tab at the bottom of the screen.
-1. Explore all the tests in this repo by opening the TEST EXPLORER tab. The logo is a beaker.
+2. Click the green play button to run the test. It's on the left of the test function in the gutter.
+3. Read the output in the TEST_RESULTS tab at the bottom of the screen.
+4. Explore all the tests in this repo by opening the TEST EXPLORER tab. The logo is a beaker.
 
 ![VSCode Test Runner](../../run-this-test.png)
 
