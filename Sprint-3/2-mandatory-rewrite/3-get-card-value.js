@@ -1,13 +1,16 @@
 function getCardValue(card) {
-  const rank = card.slice(0, -1); // All characters except the last one (suit)
+  const rank = card.slice(0, -1); // remove suit (last char)
 
   if (!rank) throw new Error("Invalid card rank");
 
   if (rank === "A") return 11;
-  if (["K", "Q", "J", "10"].includes(rank)) return 10;
+  if (["K", "Q", "J"].includes(rank)) return 10;
+  if (rank === "10") return 10;
 
-  const number = Number(rank);
-  if (number >= 2 && number <= 9) return number;
+  // Explicit check for number cards (2–9 only, no leading zeros or decimals)
+  if (/^[2-9]$/.test(rank)) {
+    return Number(rank);
+  }
 
   throw new Error("Invalid card rank");
 }
