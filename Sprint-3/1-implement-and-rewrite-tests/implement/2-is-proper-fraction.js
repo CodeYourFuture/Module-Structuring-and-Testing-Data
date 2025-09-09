@@ -8,10 +8,20 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
+<<<<<<< HEAD:Sprint-3/1-key-implement/2-is-proper-fraction.js
   // Use absolute value of numerator to handle negatives
     if (numerator < denominator) return true;
     return false; // for all other cases
+=======
+  if (numerator < denominator) {
+    return true;
+  }
+>>>>>>> 8f3d6cf2d1733da02a010f1a16c46b8b5ab4c491:Sprint-3/1-implement-and-rewrite-tests/implement/2-is-proper-fraction.js
 }
+
+// The line below allows us to load the isProperFraction function into tests in other files.
+// This will be useful in the "rewrite tests with jest" step.
+module.exports = isProperFraction;
 
 // here's our helper again
 function assertEquals(actualOutput, targetOutput) {
