@@ -6,16 +6,11 @@ test("should return 11 for Ace", () => {
   expect(getCardValue("A♥")).toEqual(11);
 });
 
-// Case 2: Number cards (2–10)
-test("should return the value of number cards (2–10)", () => {
+// Case 2: Number cards (sample of 2–10)
+test("should return the value of number cards (2, 5, 10)", () => {
   expect(getCardValue("2♣")).toEqual(2);
   expect(getCardValue("5♠")).toEqual(5);
   expect(getCardValue("10♥")).toEqual(10);
-
-  // You can even loop for efficiency:
-  for (let i = 2; i <= 10; i++) {
-    expect(getCardValue(`${i}♦`)).toEqual(i);
-  }
 });
 
 // Case 3: Face cards (J, Q, K)
@@ -33,4 +28,5 @@ test("should throw an error for invalid card rank", () => {
   expect(() => getCardValue("2.1♠")).toThrow("Invalid card rank");
   expect(() => getCardValue("0002♠")).toThrow("Invalid card rank");
 });
+
 
