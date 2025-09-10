@@ -17,9 +17,7 @@ function isValidCreditCard(cardNumber) {
 
   // Calculate the sum of all digits and check if greater than 16
   const sum = cardNumber.split('').reduce((acc, digit) => acc + Number(digit), 0);
-  if (sum <= 16) {
-    return false;
-  }
+    return sum <= 16;
 
   // All conditions passed, card is valid
   return true;
