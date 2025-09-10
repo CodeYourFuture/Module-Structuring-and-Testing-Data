@@ -8,19 +8,11 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-<<<<<<< HEAD:Sprint-3/1-key-implement/1-get-angle-type.js
   if (angle === 90) return "Right angle";
   if (angle < 90) return "Acute angle";
   if (angle > 90 && angle < 180) return "Obtuse angle";
   if (angle === 180) return "Straight angle";
   if (angle > 180 && angle < 360) return "Reflex angle";
-=======
-  if (angle === 90) {
-    return "Right angle";
-  }
-   // Run the tests, work out what Case 2 is testing, and implement the required code here.
-   // Then keep going for the other cases, one at a time.
->>>>>>> 8f3d6cf2d1733da02a010f1a16c46b8b5ab4c491:Sprint-3/1-implement-and-rewrite-tests/implement/1-get-angle-type.js
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
