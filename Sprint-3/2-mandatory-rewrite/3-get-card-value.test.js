@@ -23,10 +23,18 @@ test("should return 10 for face cards (J, Q, K)", () => {
 
 // Case 4: Invalid cards
 test("should throw an error for invalid card rank", () => {
-  expect(() => getCardValue("Z♣")).toThrow("Invalid card rank");
-  expect(() => getCardValue("0x02♠")).toThrow("Invalid card rank");
-  expect(() => getCardValue("2.1♠")).toThrow("Invalid card rank");
-  expect(() => getCardValue("0002♠")).toThrow("Invalid card rank");
+  const invalidCards = [
+    "Z♣",      // invalid letter
+    "0x02♠",   // invalid rank
+    "2.1♠",    // decimal
+    "0002♠",   // leading zeros
+    "",        // empty string
+    "♠"        // suit only
+  ];
+
+  invalidCards.forEach(card => {
+    expect(() => getCardValue(card)).toThrow("Invalid card rank");
+  });
 });
 
 
