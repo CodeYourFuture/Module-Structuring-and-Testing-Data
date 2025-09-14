@@ -1,7 +1,7 @@
 const minimum = 1;
 const maximum = 100;
 
-const num = Math.floor(0.999 * (maximum - minimum + 1)) + minimum;
+const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 // In this exercise, you will need to work out what num represents?
 // Try breaking down the expression and using documentation to explain what it means

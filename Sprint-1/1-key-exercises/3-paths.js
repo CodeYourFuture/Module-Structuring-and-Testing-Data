@@ -22,6 +22,5 @@ const dir = filePath.slice(0,lastSlashIndex)
 
 const lastDoutIndex = base.lastIndexOf(".")
 const ext = base.slice(lastDoutIndex)
-console.log(ext)
 
 // https://www.google.com/search?q=slice+mdn
