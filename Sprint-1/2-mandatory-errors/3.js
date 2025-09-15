@@ -1,5 +1,9 @@
-const cardNumber = 4533787178994213;
+const cardNumber = '4533787178994213';
 const last4Digits = cardNumber.slice(-4);
+
+// A number was not able to be sliced, whereas a string can be sliced
+// So, the error is that cardNumber should be a string, not a number
+console.log(last4Digits);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
