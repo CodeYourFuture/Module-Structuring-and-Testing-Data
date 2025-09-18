@@ -11,15 +11,15 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // The num variable will evaluate to a random number between the minimum and maximum values
 
 // Math.random()
-// Random decimal number (0 - 1)
+// Random decimal number [0, 1)
 
 // (maximum - minimum + 1)
 // The size of the range
 
 // Math.random() * (maximum - minimum + 1)
-// Random decimal (0 - 100)
+// Random decimal [0, 101)
 
 // Math.floor(...)
-// Rounds the result down to a whole number (0 - 99)
+// Rounds the result down to a whole number [0, 100]
 
-// Adding minimum shifts the range up, so the final result is between the minimum and maximum (1 - 100 inclusive)
+// Adding minimum shifts the range up, so the final result is between the minimum and maximum [1, 100]

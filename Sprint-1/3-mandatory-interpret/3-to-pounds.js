@@ -17,9 +17,9 @@ const pounds = paddedPenceNumberString.substring(
 );
 
 // 5. extracts the pence part by taking the last two digits, and pads with trailing zeroes if needed
-const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+const pence = paddedPenceNumberString.substring(
+  paddedPenceNumberString.length - 2
+);
 
 // 6. formats and prints the result as a pounds and pence string
 console.log(`£${pounds}.${pence}`);
