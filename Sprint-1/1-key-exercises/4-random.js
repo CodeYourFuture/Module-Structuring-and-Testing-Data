@@ -17,9 +17,9 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // The size of the range
 
 // Math.random() * (maximum - minimum + 1)
-// Random decimal [0, 101)
+// Random decimal [0, 100)
 
 // Math.floor(...)
-// Rounds the result down to a whole number [0, 100]
+// Rounds the result down to a whole number [0, 99]
 
 // Adding minimum shifts the range up, so the final result is between the minimum and maximum [1, 100]
