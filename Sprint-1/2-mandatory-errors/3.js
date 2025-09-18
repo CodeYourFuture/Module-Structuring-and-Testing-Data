@@ -7,7 +7,6 @@
 // .slice() called on a number, and  Numbers don’t have string methods like .slice().it will throw an error
 // console.log(last4Digits) => TypeError: cardNumber.slice is not a function at Object.
 const cardNumber = 4533787178994213;;
-// const last4Digits = cardNumber.toString;
 const numToStr = cardNumber.toString()
 const last4Digits = numToStr.slice(-4)
-console.log(last4Digits)  //===>4213
+// console.log(last4Digits) ===>4213
