@@ -16,7 +16,7 @@ const pounds = paddedPenceNumberString.substring(
   paddedPenceNumberString.length - 2
 );
 
-// 5. extracts the pence part by taking the last two digits, and pads with trailing zeroes if needed
+// 5. extracts the pence part by taking the last two digits
 const pence = paddedPenceNumberString.substring(
   paddedPenceNumberString.length - 2
 );
