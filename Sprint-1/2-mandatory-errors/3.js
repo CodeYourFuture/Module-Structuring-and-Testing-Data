@@ -6,7 +6,8 @@
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 // .slice() called on a number, and  Numbers don’t have string methods like .slice().it will throw an error
 // console.log(last4Digits) => TypeError: cardNumber.slice is not a function at Object.
-const cardNumber = 4533787178994213;
+const cardNumber = 4533787178994213;;
 // const last4Digits = cardNumber.toString;
-const last4Digits = cardNumber % 10000;
-console.log(last4Digits)
+const numToStr = cardNumber.toString()
+const last4Digits = numToStr.slice(-4)
+console.log(last4Digits)  //===>4213
