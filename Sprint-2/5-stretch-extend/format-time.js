@@ -18,7 +18,7 @@ function formatAs12HourClock(time) {
     throw new Error("Invalid time");
   }
 
-  const minutesStr = String(minutes).padEnd(2, 0);
+  const minutesStr = String(minutes).padStart(2, 0);
 
   if (hours == 0) {
     return `12:${minutesStr} am`;
@@ -39,15 +39,15 @@ function formatAs12HourClock(time) {
   return `${time} am`;
 }
 
-const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
+const currentOutput = formatAs12HourClock("08:01");
+const targetOutput = "08:01 am";
 console.assert(
   currentOutput === targetOutput,
   `current output: ${currentOutput}, target output: ${targetOutput}`
 );
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
+const currentOutput2 = formatAs12HourClock("23:09");
+const targetOutput2 = "11:09 pm";
 console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
@@ -101,6 +101,15 @@ console.assert(
   currentOutput9 === targetOutput9,
   `current output: ${currentOutput9}, target output: ${targetOutput9}`
 );
+
+const currentOutput10 = formatAs12HourClock("24:05");
+const targetOutput10 = "12:05 am";
+console.assert(
+  currentOutput10 === targetOutput10,
+  `current output: ${currentOutput10}, target output: ${targetOutput10}`
+);
+
+// Edge cases and invalid inputs
 
 try {
   formatAs12HourClock("25:00");
