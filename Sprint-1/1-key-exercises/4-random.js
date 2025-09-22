@@ -11,6 +11,6 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Math.floor - Rounds a number DOWN to the nearest integer
 // Math.random - generates a random floating number > 0 and < 1
 // (maximum - minimum + 1) = 100 - 1 + 1 = 100
-// So, num represents a rounded down random integer generated between 1 and 100 + 1
-
+// So, num represents a rounded down random integer generated between 1 and 100
+// Edge case: Math.floor(99.99) + 1 = 99 + 1 = 100
 console.log(num);
