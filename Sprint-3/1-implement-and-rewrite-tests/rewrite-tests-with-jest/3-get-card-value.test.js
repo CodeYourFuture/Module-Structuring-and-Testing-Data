@@ -3,11 +3,55 @@
 const getCardValue = require("../implement/3-get-card-value");
 
 test("should return 11 for Ace of Spades", () => {
-  const aceofSpades = getCardValue("A♠");
-  expect(aceofSpades).toEqual(11);
+  const aceOfSpades = getCardValue("A♠");
+  expect(aceOfSpades).toEqual(11);
 });
 
 // Case 2: Handle Number Cards (2-10):
+test("should return 9 for Nine of Hearts", () => {
+  const nineOfHearts = getCardValue("9♥");
+  expect(nineOfHearts).toEqual(9);
+});
+test("should return 5 for Five of Hearts", () => {
+  const fiveOfHearts = getCardValue("5♥");
+  expect(fiveOfHearts).toEqual(5);
+});
+test("should return 2 for Two of Diamonds", () => {
+  const twoOfDiamonds = getCardValue("2♦");
+  expect(twoOfDiamonds).toEqual(2);
+});
 // Case 3: Handle Face Cards (J, Q, K):
+test("should return 10 for King of Diamonds", () => {
+  const kingOfDiamonds = getCardValue("K♦");
+  expect(kingOfDiamonds).toEqual(10);
+});
+test("should return 10 for Queen of Clubs", () => {
+  const queenOfClubs = getCardValue("Q♣");
+  expect(queenOfClubs).toEqual(10);
+});
+test("should return 10 for Jack of Hearts", () => {
+  const jackOfHearts = getCardValue("J♥");
+  expect(jackOfHearts).toEqual(10);
+});
+test("should return 10 for Ten of Spades", () => {
+  const tenOfSpades = getCardValue("10♠");
+  expect(tenOfSpades).toEqual(10);
+});
 // Case 4: Handle Ace (A):
+test("should return 11 for Ace of Hearts", () => {
+  const aceOfHearts = getCardValue("A♥");
+  expect(aceOfHearts).toEqual(11);
+});
 // Case 5: Handle Invalid Cards:
+test("should throw an error for invalid card rank", () => {
+  const invalidCard = getCardValue("1♠");
+  expect(invalidCard).toEqual("Error: Invalid card rank");
+});
+test("should throw an error for another invalid card rank", () => {
+  const anotherInvalidCard = getCardValue("Z♠");
+  expect(anotherInvalidCard).toEqual("Error: Invalid card rank");
+});
+test("should throw an error for empty card string", () => {
+  const emptyCard = getCardValue("");
+  expect(emptyCard).toEqual("Error: Invalid card rank");
+});
