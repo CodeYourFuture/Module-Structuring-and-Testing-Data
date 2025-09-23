@@ -75,24 +75,52 @@ assertEquals(negativeDenominator, true);
 // Explanation: The fraction 0/5 is a proper fraction because the absolute value of numerator (0) is less than the denominator (5).
 const zeroNumerator = isProperFraction(0, 5);
 assertEquals(zeroNumerator, true);
+
 // Stretch 3: zero denominator - this is mathematically undefined but we can decide how we want to handle it
+// Input: numerator = 5, denominator = 0
+// target output: false
+// Explanation: The fraction 5/0 is undefined in mathematics. In this implementation, we choose to return false.
 const zeroDenominator = isProperFraction(5, 0);
 assertEquals(zeroDenominator, false);
+
 // Stretch 4: both zero
+// Input: numerator = 0, denominator = 0
+// target output: false
+// Explanation: The fraction 0/0 is indeterminate in mathematics. In this implementation, we choose to return false.
 const bothZero = isProperFraction(0, 0);
 assertEquals(bothZero, false);
+
 // Stretch 5: negative numerator and denominator
+// Input: numerator = -3, denominator = -5
+// target output: true
+// Explanation: The fraction -3/-5 is a proper fraction because the absolute value of the numerator (3) is less than the absolute value of the denominator (5). The function should return true.
 const negativeNumeratorAndDenominator = isProperFraction(-3, -5);
 assertEquals(negativeNumeratorAndDenominator, true);
+
 // Stretch 6: improper negative numerator and denominator
+// Input: numerator = -3, denominator = -2
+// target output: false
+// Explanation: The fraction -3/-2 is an improper fraction because the absolute value of the numerator (3) is greater than the absolute value of the denominator (2). The function should return false.
 const properNegativeNumeratorAndDenominator = isProperFraction(-3, -2);
 assertEquals(properNegativeNumeratorAndDenominator, false);
+
 // Stretch 7: decimal values
+// Input: numerator = 2.5, denominator = 3.5
+// target output: true
+// Explanation: The fraction 2.5/3.5 is a proper fraction because the absolute value of the numerator (2.5) is less than the absolute value of the denominator (3.5). The function should return true.
 const decimalValues = isProperFraction(2.5, 3.5);
 assertEquals(decimalValues, true);
+
 // Stretch 8: improper decimal values
+// Input: numerator = 3.5, denominator = 2.5
+// target output: false
+// Explanation: The fraction 3.5/2.5 is an improper fraction because the absolute value of the numerator (3.5) is greater than the absolute value of the denominator (2.5). The function should return false.
 const improperDecimalValues = isProperFraction(3.5, 2.5);
 assertEquals(improperDecimalValues, false);
+
 // Stretch 9: invalid inputs (non-numeric values)
+// Input: numerator = "a", denominator = 2
+// target output: false
+// Explanation: The function should handle non-numeric inputs gracefully. In this case, we choose to return false.
 const invalidInputs = isProperFraction("a", 2);
 assertEquals(invalidInputs, false);
