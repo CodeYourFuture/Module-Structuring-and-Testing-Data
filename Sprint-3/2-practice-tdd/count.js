@@ -6,8 +6,8 @@ function countChar(stringOfCharacters, findCharacter) {
       count += 1;
     }
   }
-  console.log(arrayOfCharacters);
-  console.log(count);
+  //console.log(arrayOfCharacters);
+  //console.log(count);
   return count;
 }
 
