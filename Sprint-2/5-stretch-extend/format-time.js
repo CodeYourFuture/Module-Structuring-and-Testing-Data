@@ -7,18 +7,18 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(3); 
   let currTime = "am";
-  let HoursModefied = hours;
+  let hoursModefied = hours;
 
   if (hours === 0) {
-    HoursModefied = 12;
+    hoursModefied = 12;
   } else if (hours === 12) {
     currTime = "pm";
   } else if (hours > 12) {
-    HoursModefied = hours - 12;
+    hoursModefied = hours - 12;
     currTime = "pm";
   }
 
-  const formattedHour = HoursModefied < 10 ? "0" + HoursModefied : HoursModefied.toString();
+  const formattedHour = hoursModefied < 10 ? "0" + hoursModefied : hoursModefied.toString();
   return `${formattedHour}:${minutes} ${currTime}`; 
    
 }
