@@ -59,3 +59,15 @@ test("should return '1000011th' for 1000011", () => {
 test("should return '1000002nd' for 1000002", () => {
   expect(getOrdinalNumber(1000002)).toEqual("1000002nd");
 });
+test("should return '0th' for 0", () => {
+  expect(getOrdinalNumber(0)).toEqual("0th");
+});
+test("should return '-1st' for -1", () => {
+  expect(getOrdinalNumber(-1)).toEqual("-1st");
+});
+test("should return '-2nd' for -2", () => {
+  expect(getOrdinalNumber(-2)).toEqual("-2nd");
+});
+test("should return '-3rd' for -3", () => {
+  expect(getOrdinalNumber(-3)).toEqual("-3rd");
+});
