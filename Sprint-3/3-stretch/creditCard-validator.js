@@ -1,0 +1,1 @@
+function creditCardValidator(cardNumber) {}
