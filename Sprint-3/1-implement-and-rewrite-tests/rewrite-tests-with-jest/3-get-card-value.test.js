@@ -34,8 +34,8 @@ test("should return null for invalid cards", () => {
   expect(getCardValue("Z♠")).toBeNull();
 });
 
-// We can run this test file using the command `npx jest 1-get-angle-type.test.js`
+// We can run this test file using the command `npx jest 3-get-card-value.test.js`
 // in the terminal. Making sure we are in the directory where this file is located.
-// If we have Jest installed globally, you can simply run `jest 1-get-angle-type.test.js`
+// If we have Jest installed globally, you can simply run `3-get-card-value.test.js`
 // instead. If you have added a test script to your package.json file, you can also run
-// `npm test 1-get-angle-type.test.js` to execute the tests.
+// `npm test 3-get-card-value.test.js` to execute the tests.

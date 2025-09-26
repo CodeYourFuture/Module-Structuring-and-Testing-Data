@@ -21,8 +21,8 @@ test("should return false for equal numerator and denominator", () => {
   expect(isProperFraction(4, 4)).toEqual(false);
 });
 
-// We can run this test file using the command `npx jest 1-get-angle-type.test.js`
+// We can run this test file using the command `npx jest 2-is-proper-fraction.test.js`
 // in the terminal. Making sure we are in the directory where this file is located.
-// If we have Jest installed globally, you can simply run `jest 1-get-angle-type.test.js`
+// If we have Jest installed globally, you can simply run `jest 2-is-proper-fraction.test.js`
 // instead. If you have added a test script to your package.json file, you can also run
-// `npm test 1-get-angle-type.test.js` to execute the tests.
+// `npm test 2-is-proper-fraction.test.js` to execute the tests.
