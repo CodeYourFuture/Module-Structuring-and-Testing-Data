@@ -8,6 +8,34 @@ test("should return 11 for Ace of Spades", () => {
 });
 
 // Case 2: Handle Number Cards (2-10):
+test("should return correct value for number cards (2-10)", () => {
+  expect(getCardValue("2♣")).toEqual(2);
+  expect(getCardValue("5♦")).toEqual(5);
+  expect(getCardValue("10♥")).toEqual(10);
+});
+
 // Case 3: Handle Face Cards (J, Q, K):
+test("should return 10 for face cards (J, Q, K)", () => {
+  expect(getCardValue("J♣")).toEqual(10);
+  expect(getCardValue("Q♦")).toEqual(10);
+  expect(getCardValue("K♥")).toEqual(10);
+});
 // Case 4: Handle Ace (A):
+test("should return 11 for Ace (A)", () => {
+  expect(getCardValue("A♣")).toEqual(11);
+  expect(getCardValue("A♦")).toEqual(11);
+  expect(getCardValue("A♥")).toEqual(11);
+}); 
 // Case 5: Handle Invalid Cards:
+test("should return null for invalid cards", () => {
+  expect(getCardValue("1♣")).toBeNull();
+  expect(getCardValue("11♦")).toBeNull();
+  expect(getCardValue("B♥")).toBeNull();
+  expect(getCardValue("Z♠")).toBeNull();
+});
+
+// We can run this test file using the command `npx jest 1-get-angle-type.test.js`
+// in the terminal. Making sure we are in the directory where this file is located.
+// If we have Jest installed globally, you can simply run `jest 1-get-angle-type.test.js`
+// instead. If you have added a test script to your package.json file, you can also run
+// `npm test 1-get-angle-type.test.js` to execute the tests.
