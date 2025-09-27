@@ -17,7 +17,7 @@ function getAngleType(angle) {
   } else if (angle === 180) {
     return "Straight angle";
   } else if (angle > 180 && angle < 360) {
-    return "Reflec angle";
+    return "Reflex angle";
   } else {
     return "Invalid angle";
   }
@@ -71,4 +71,4 @@ assertEquals(straight, "Straight angle");
 // Then the function should return "Reflex angle"
 
 const reflex = getAngleType(181);
-assertEquals(reflex, "Reflec angle");
+assertEquals(reflex, "Reflex angle");

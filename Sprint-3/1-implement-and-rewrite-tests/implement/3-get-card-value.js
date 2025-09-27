@@ -8,7 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
- let rank = card.length === 1 ? card : card.slice(0, -1);
+  let rank = card.length === 1 ? card : card.slice(0, -1);
   if (rank === "A") {
     return 11;
   }
