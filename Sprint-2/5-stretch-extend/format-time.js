@@ -6,7 +6,7 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(3, 5);
   if (hours >= 12) {
-    return `${hours - 12}:${minutes} pm`;
+    return `${hours !== 12 ? hours - 12 : hours}:${minutes} pm`;
   }
   return `${time} am`;
 }
@@ -90,8 +90,8 @@ console.assert(
 );
 
 // Edge: single digit hour
-const outSingle = formatAs12HourClock("7:00");
-const targetSingle = "7:00 am";
+const outSingle = formatAs12HourClock("7:45");
+const targetSingle = "7:45 am";
 console.assert(
   outSingle === targetSingle,
   `current output: ${outSingle}, target output: ${targetSingle}`
