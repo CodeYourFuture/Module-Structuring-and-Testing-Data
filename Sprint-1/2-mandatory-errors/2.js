@@ -3,3 +3,4 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+//a variable needs to be declared before being initialized
