@@ -2,3 +2,5 @@
 
 const age = 33;
 age = age + 1;
+//the "age" variable has been declared with a const and already assigned a value and it can not 
+// be reassigned another value because of the "const"
