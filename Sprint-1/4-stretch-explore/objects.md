@@ -13,4 +13,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
+it stores properties
+
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+the dot allows to access the properties of the object "console"
