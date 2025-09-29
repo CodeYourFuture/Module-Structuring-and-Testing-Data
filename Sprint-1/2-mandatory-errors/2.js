@@ -3,3 +3,12 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+/* The error:
+ The variable cityOfBirth should be declared before it is used in the console.log statement.
+ */
+
+/* The correct code:
+const cityOfBirth = "Bolton";
+console.log(`I was born in ${cityOfBirth}`);
+*/
