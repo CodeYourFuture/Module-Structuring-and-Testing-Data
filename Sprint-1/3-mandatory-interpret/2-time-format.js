@@ -18,7 +18,7 @@ console.log(result);
 3.Line 4 : const totalMinutes.
 4.Line 6 : const remainingMinutes.
 5.Line 7 : const totalHours.
-6.Line 8 : const result.   
+6.Line 9 : const result.   
 */
 
 // b) How many function calls are there?
