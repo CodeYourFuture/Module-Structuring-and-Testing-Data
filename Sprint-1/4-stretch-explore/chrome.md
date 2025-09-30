@@ -12,7 +12,12 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
+Answer: A pop up window displaying a text (Hello World!) will appear on the top and an OK button. It's a temporarily effect, but it required a user interaction to press OK before continuing.
+
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+Answer: A pop up window appears with a title and a question (What is your name?), also an answering space area. At the right down of the window there are two buttons to the user, Ok and cancel.
+After typing myName and press OK the console display the answer(myName).
