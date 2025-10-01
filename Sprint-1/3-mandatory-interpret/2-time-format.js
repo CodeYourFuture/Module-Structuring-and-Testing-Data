@@ -37,7 +37,7 @@ Line 10 : console.log().
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 
 /*
-The expression gives the completed total minutes of the movie, by subtract the movie length in sec from the remaining seconds and divide the result by 60 to convert it to minutes
+The expression gives the completed total minutes of the movie, by subtract the remainingSeconds from the movieLength and divide the result by 60 to convert it to minutes
 */
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
