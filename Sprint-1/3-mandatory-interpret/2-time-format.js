@@ -45,7 +45,7 @@ The expression gives the completed total minutes of the movie, by subtract the r
 /*
  The variable result shows(display) the total length of the movie in three sections (Hours:Minutes:seconds) in string format.
 
- I can think of "MovieDuration" as a better name because it gives more description to the output. 
+ I can think of "movieDuration" as a better name because it gives more description to the output. 
 */
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
