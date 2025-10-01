@@ -48,6 +48,7 @@ let carPrice = "10,000";
 declaring a new variable priceAfterOneYear:
 let priceAfterOneYear = "8,543";
 */
+// Editing : priceDifference and percentageChange are variables too.
 
 
 
