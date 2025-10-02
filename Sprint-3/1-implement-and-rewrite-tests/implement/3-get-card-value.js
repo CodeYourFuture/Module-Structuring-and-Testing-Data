@@ -18,7 +18,7 @@ function getCardValue(card) {
   } else if (!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 9) {
     return Number(rank);
   } else {
-    throw new Error("Invalid card rank");
+    throw new Error('Invalid card rank: "${rank}"');  //rather than just "Invalid card rank" we can show the actual rank that was invalid
   }
 
 
@@ -84,7 +84,7 @@ try {
   console.assert(false, "Expected an error to be thrown for invalid card rank");
 } catch (e) {
   console.assert(
-    e.message === "Invalid card rank",
+    e.message ===  'Invalid card rank: "${rank}"',
     `Expected error message to be "Invalid card rank" but got "${e.message}"`
   );
 }
