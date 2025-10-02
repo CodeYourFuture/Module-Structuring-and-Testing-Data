@@ -84,7 +84,7 @@ try {
   console.assert(false, "Expected an error to be thrown for invalid card rank");
 } catch (e) {
   console.assert(
-    e.message ===  'Invalid card rank: "${rank}"',
+    e.message ===  'Invalid card rank: "1"',  // rather than just "Invalid card rank" we can show the actual rank that was invalid
     `Expected error message to be "Invalid card rank" but got "${e.message}"`
   );
 }
