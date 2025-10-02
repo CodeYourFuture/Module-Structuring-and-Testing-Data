@@ -27,12 +27,27 @@ test("should return 11 for Ace (A)", () => {
   expect(getCardValue("A♥")).toEqual(11);
 }); 
 // Case 5: Handle Invalid Cards:
-test("should return null for invalid cards", () => {
-  expect(getCardValue("1♣")).toBeNull();
-  expect(getCardValue("11♦")).toBeNull();
-  expect(getCardValue("B♥")).toBeNull();
-  expect(getCardValue("Z♠")).toBeNull();
+
+test("should throw an error for invalid input '1♣'", () => {
+  expect(() => getCardValue("1♣")).toThrow("Invalid card");
 });
+
+test("should throw an error for invalid input '1♦'", () => {
+  expect(() => getCardValue("1♦")).toThrow("Invalid card");
+});
+
+test("should throw an error for invalid input 'B♥'", () => {
+  expect(() => getCardValue("B♥")).toThrow("Invalid card");
+});
+
+test("should throw an error for invalid input 'Z♠'", () => {
+  expect(() => getCardValue("Z♠")).toThrow("Invalid card");
+});
+
+test("should throw an error for empty string", () => {
+  expect(() => getCardValue("")).toThrow("Invalid card");
+});
+
 
 // We can run this test file using the command `npx jest 3-get-card-value.test.js`
 // in the terminal. Making sure we are in the directory where this file is located.
