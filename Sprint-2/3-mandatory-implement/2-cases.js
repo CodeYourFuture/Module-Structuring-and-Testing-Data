@@ -18,6 +18,6 @@
 function convertToSnakeUpperCase(str){
     // const upper=str.toUpperCase();
     // const snake=upper.replace(" ","_");
-    return str.toUpperCase().replace(" ", "_");
+    return str.toUpperCase().replaceAll(" ", "_");
 }
-console.log(convertToSnakeUpperCase("hello there"));
+console.log(convertToSnakeUpperCase("hello there buddy"));
