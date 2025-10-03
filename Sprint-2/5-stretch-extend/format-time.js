@@ -8,7 +8,7 @@ function formatAs12HourClock(time) {
   if(hours<1){
     return `12:${minutes} am`
   }
-  if(hours==12&& minutes==00){
+  if(hours==12 && minutes==00){
     return "12:00 pm"
   }
   if (hours > 12) {
