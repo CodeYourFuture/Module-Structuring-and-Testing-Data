@@ -3,18 +3,29 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// undefined, because "num" isn't used as a parameter
 
-function square(3) {
-    return num * num;
-}
+// function square(3) {
+//     return num * num;
+// }
 
-// =============> write the error message here
+// /Users/cyf/Desktop/CYF/Module-Structuring-and-Testing-Data/Sprint-2/1-key-errors/2.js:8
+// function square(3) {
+//     ^
 
-// =============> explain this error message here
+// SyntaxError: Unexpected number
+
+
+// the first line tells us where the error occurs:root,folder,file,line 
+//second line shows exactly which piece of code throws the error
+//third line tells us which type of error it is, in this case it is a SyntaxError, meaning that the code wasnt written according to the rules of js,
+//an finally it tells us what went wrong
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+ function square(num) {
+    return num * num;
+}
 
+console.log(square(3));
 
