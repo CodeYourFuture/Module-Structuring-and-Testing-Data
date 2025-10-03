@@ -29,23 +29,23 @@ test("should return 11 for Ace (A)", () => {
 // Case 5: Handle Invalid Cards:
 
 test("should throw an error for invalid input '1♣'", () => {
-  expect(() => getCardValue("1♣")).toThrow("Invalid card");
+  expect(() => getCardValue("1♣")).toThrow('Invalid card rank: "1"');
 });
 
 test("should throw an error for invalid input '1♦'", () => {
-  expect(() => getCardValue("1♦")).toThrow("Invalid card");
+  expect(() => getCardValue("1♦")).toThrow('Invalid card rank: "1"');
 });
 
 test("should throw an error for invalid input 'B♥'", () => {
-  expect(() => getCardValue("B♥")).toThrow("Invalid card");
+  expect(() => getCardValue("B♥")).toThrow('Invalid card rank: "B"');
 });
 
 test("should throw an error for invalid input 'Z♠'", () => {
-  expect(() => getCardValue("Z♠")).toThrow("Invalid card");
+  expect(() => getCardValue("Z♠")).toThrow('Invalid card rank: "Z"');
 });
 
 test("should throw an error for empty string", () => {
-  expect(() => getCardValue("")).toThrow("Invalid card");
+  expect(() => getCardValue("")).toThrow('Invalid card rank: ""');
 });
 
 

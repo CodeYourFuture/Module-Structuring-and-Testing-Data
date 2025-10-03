@@ -8,8 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  
-  const rank = card.slice(0, -1); // Extract rank before the suit
+  const rank = card.slice(0, -1); // Get everything except the last char (the suit)
 
   if (rank === "A") {
     return 11;
@@ -18,10 +17,8 @@ function getCardValue(card) {
   } else if (!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 9) {
     return Number(rank);
   } else {
-    throw new Error('Invalid card rank: "${rank}"');  //rather than just "Invalid card rank" we can show the actual rank that was invalid
+    throw new Error(`Invalid card rank: "${rank}"`);  // rather than just "Invalid card rank" we can show the actual rank that was invalid
   }
-
-
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
