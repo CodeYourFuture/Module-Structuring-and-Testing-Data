@@ -16,7 +16,7 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function snakeItUp(name) {
-  const upperCase = name.toUpperCase();
-  return upperCase.replaceAll(" ", "_");
+  const upperCase = name.toUpperCase(); // Convert the string to uppercase
+  return upperCase.replaceAll(" ", "_"); // Replace all spaces with underscores
 }
 console.log(snakeItUp("fares bakhet is my name"));
