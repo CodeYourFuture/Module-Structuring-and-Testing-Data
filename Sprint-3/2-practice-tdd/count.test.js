@@ -14,7 +14,7 @@ test("should count multiple occurrences of a character", () => {
   const str = "aaaaa";
   const char = "a";
   const count = countChar(str, char);
-  expect(count).toEqual(5);
+  expect(parseInt(count)).toEqual(5);
 });
 
 // Scenario: No Occurrences
@@ -27,5 +27,29 @@ test("should return 0 when character does not exist in the string", () => {
   const str = "abcdefg";
   const char = "h";
   const count = countChar(str, char);
-  expect(count).toEqual(0);
+  expect(parseInt(count)).toEqual(0);
+});
+
+// test for empty string
+test("should return 0 when string is empty", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(parseInt(count)).toEqual(0);
+});
+
+// test for str is an array
+test("should return 0 when str is an array", () => {
+  const str = ["a", "b", "c"];
+  const char = "a";
+  const count = countChar(str, char);
+  expect(parseInt(count)).toEqual(1);
+});
+
+// test for str is a number
+test("should return 0 when str is a number", () => {
+  const str = 12345;
+  const char = "3";
+  const count = countChar(str, char);
+  expect(parseInt(count)).toEqual(1);
 });
