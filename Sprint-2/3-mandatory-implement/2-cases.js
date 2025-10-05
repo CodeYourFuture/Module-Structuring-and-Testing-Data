@@ -14,3 +14,9 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toUpperSnake(name) {
+  const upperCase = name.toUpperCase(); // Convert the string to uppercase
+  return upperCase.replaceAll(" ", "_"); // Replace all spaces with underscores
+}
+console.log(snakeItUp("alaa tagi is my name"));
