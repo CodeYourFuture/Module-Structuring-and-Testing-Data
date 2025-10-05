@@ -24,4 +24,24 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 1. const penceString = "399p": initializes a string variable with the value "399p"
+
+
+// const penceString = "399p"
+// Stores original price string with 'p' suffix
+
+// Remove trailing 'p'
+// Uses .substring() to remove the last character
+// "399p" → "399"
+
+// Pad to 3 digits
+// Ensures string has at least 3 digits for consistent parsing
+// "399" → "399" (no change here)
+
+// Extract pounds
+// Takes all digits except last 2 as pounds
+// "399" → "3"
+
+// Extract pence
+// Takes last 2 digits as pence, ensures 2-digit format
+// "399" → "99"
