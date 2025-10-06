@@ -7,7 +7,7 @@
 
 
 function toPounds(penceString) {
-const penceStringWithoutTrailingP = penceString.substring(
+  const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1 // to remove the trailing 'p'
 );
@@ -22,7 +22,7 @@ const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)  // the last two characters
   .padEnd(2, "0");  // in case there is only one character of pence
 
-return `£${pounds}.${pence}`;
+  return `£${pounds}.${pence}`;
 }
 
 console.log(toPounds("399p")); // should log "£3.99"
