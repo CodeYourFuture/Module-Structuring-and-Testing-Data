@@ -15,7 +15,7 @@
 
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 // by concatenating an empty string the code works as expected
-const cardNumber = "" + 4533787178994213;
+const cardNumber = (4533787178994213).toString();
 const last4Digits = cardNumber.slice(-4);
 console.log(last4Digits); // should log '4213'
 

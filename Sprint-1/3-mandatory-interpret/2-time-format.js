@@ -34,4 +34,4 @@ console.log(result);
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 
-// Yes the code will work for all values of movieLength, because the use of a variable makes it so that the code can be reused for any value of movieLength
+// No it will not work for all values. In the case of negative values it will result in a negative time which isn't valid. Also there are certain cases where the remaining minutes or seconds are less than 10, which will make the format look weird e.g 0:3:3 which isn't the standard representation of time. This can be fixed by using the padStart method ensuring there are always 2 digits for hours, minutes and seconds. Additionally if the length passes 24 hours we would need to account for days in the format as that would be more appropriate.
