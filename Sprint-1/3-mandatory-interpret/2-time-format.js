@@ -21,8 +21,8 @@ console.log(result);
         // %-this is remaider operator that help us get remaining. In this case, dividing MovieLength % 60 returned 
         // remainder. It is not a typical mathematic division, it is division where we can get remainder.
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
-        // Mean the subtraction remaider(second)  from the total length (in second) and divide by 60, because we need Minutes (1 min = 60 sec)
+        // Means the subtraction remaider(second)  from the total length (in second) and divide by 60, because we need Minutes (1 min = 60 sec)
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-        //time
+        //FormattedMovieTime
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
         //It works with a different values(negative and positive numbers).
