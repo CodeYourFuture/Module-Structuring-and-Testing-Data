@@ -25,3 +25,18 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+//lines 3 to 6= we asing a variable "penceStringWithoutTrailingP".
+//we  use substring to start from index 0 and get the lenght 4 - 1 = 3 
+// so sbtstring start form 0 and the length has 3 = 399
+
+
+// line 8. We declare variale "const paddedPenceNumberString" make sure the number number has least 3 digits
+
+//line 9 to 12= use substring to extrac from start form index 0 and string lenght taking 2 digits = reusl 3
+
+/// lines 14 to 16= const to the pence: the start indext for Substring will be 3-2= 1
+// substring with 1 argument wil start on the given indes and goes until the end = 99
+// padending (2, "0") will keep only 2 digits =99
+
+// line 18 = template literal with the results £3.99
