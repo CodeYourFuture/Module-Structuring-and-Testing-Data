@@ -11,5 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baba05206/Module-Structuring-and-Testing-Data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Baba05206/Module-Structuring-and-Testing-Data/issues"
+  },
+  "homepage": "https://github.com/Baba05206/Module-Structuring-and-Testing-Data#readme"
 }
