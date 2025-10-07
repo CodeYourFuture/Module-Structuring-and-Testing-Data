@@ -24,18 +24,14 @@ function passwordValidator(password) {
   const notInPreviousPasswords = !previousPasswords.includes(password);
   console.log(`previous password condition: ${notInPreviousPasswords}`);
 
-  if (
+  return (
     lengthCondition &&
     uppercaseCondition &&
     lowercaseCondition &&
     numberCondition &&
     symbolCondition &&
     notInPreviousPasswords
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+  );
 }
 
 module.exports = passwordValidator;
