@@ -47,6 +47,12 @@ let carPrice = "10,000";
 
 declaring a new variable priceAfterOneYear:
 let priceAfterOneYear = "8,543";
+
+declaring a new variable priceDifference:
+const priceDifference = carPrice - priceAfterOneYear;
+
+declaring a new variable percentageChange:
+const percentageChange = (priceDifference / carPrice) * 100;
 */
 
 
