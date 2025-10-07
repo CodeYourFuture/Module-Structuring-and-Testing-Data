@@ -17,29 +17,29 @@ You must breakdown this problem in order to solve it. Find one test case first a
 const isValidPassword = require("./password-validator");
 
 describe("passwordValidator", () => {
-  const password = "123Ab*";
+  const validPassword = "123Ab*";
 
   test("returns true for passwords with at least 5 characters", () => {
-    expect(isValidPassword(password)).toBe(true);
+    expect(isValidPassword(validPassword)).toBe(true);
   });
 
   test("return true for passwords with at least one uppercase letter", () => {
-    expect(isValidPassword(password)).toBe(true);
+    expect(isValidPassword(validPassword)).toBe(true);
   });
 
   test("return true for passwords with at least one lowercase letter", () => {
-    expect(isValidPassword(password)).toBe(true);
+    expect(isValidPassword(validPassword)).toBe(true);
   });
 
   test("return true for passwords with at least one number", () => {
-    expect(isValidPassword(password)).toBe(true);
+    expect(isValidPassword(validPassword)).toBe(true);
   });
 
   test("return true for passwords with at least one non-alphanumeric symbol", () => {
-    expect(isValidPassword(password)).toBe(true);
+    expect(isValidPassword(validPassword)).toBe(true);
   });
 
   test("return true for passwords that are not in the previous passwords array", () => {
-    expect(isValidPassword(password)).toBe(true);
+    expect(isValidPassword(validPassword)).toBe(true);
   });
 });
