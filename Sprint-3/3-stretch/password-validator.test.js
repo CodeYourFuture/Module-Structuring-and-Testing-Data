@@ -42,4 +42,30 @@ describe("passwordValidator", () => {
   test("return true for passwords that are not in the previous passwords array", () => {
     expect(isValidPassword(validPassword)).toBe(true);
   });
+
+  // tests for false cases
+
+  test("returns false for passwords with less than 5 characters", () => {
+    expect(isValidPassword("1234")).toBe(false);
+  });
+
+  test("returns false for passwords without an uppercase letter", () => {
+    expect(isValidPassword("123ab*")).toBe(false);
+  });
+
+  test("returns false for passwords without a lowercase letter", () => {
+    expect(isValidPassword("123AB*")).toBe(false);
+  });
+
+  test("returns false for passwords without a number", () => {
+    expect(isValidPassword("abAB*")).toBe(false);
+  });
+
+  test("returns false for passwords without a non-alphanumeric symbol", () => {
+    expect(isValidPassword("123Abc")).toBe(false);
+  });
+
+  test("returns false for passwords that are in the previous passwords array", () => {
+    expect(isValidPassword("123Ab!")).toBe(false);
+  });
 });
