@@ -1,12 +1,14 @@
 function repeat(str, count) {
-  if ((Number(count) < 0) | (typeof str === "object")) {
-    throw new Error("Invalid data value");
+  if (typeof str !== "string" && typeof str !== "number") {
+    throw new Error("Input should be a string");
   }
-  try {
-    return String(str).repeat(Number(count));
-  } catch (error) {
-    throw new Error("Invalid data value");
+  if (Number(count) < 0) {
+    throw new Error("Count should be a positive number");
   }
+  if (typeof count !== "number" && typeof count !== "string") {
+    throw new Error("Count should be a number");
+  }
+  return String(str).repeat(Number(count));
 }
 
 module.exports = repeat;

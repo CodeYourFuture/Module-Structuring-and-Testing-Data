@@ -45,7 +45,7 @@ test("should return an empty string when count is 0", () => {
 test("should throw an error when count is negative", () => {
   const str = "hello";
   const count = -2;
-  expect(() => repeat(str, count)).toThrow("Invalid data value");
+  expect(() => repeat(str, count)).toThrow("Count should be a positive number");
 });
 
 // case: str is not a string:
@@ -96,8 +96,15 @@ test("should return an empty string when str is an empty string", () => {
 // Given invalid types for both str (e.g., an object) and count (e.g., an array),
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, indicating that the input types are not supported.
-test("should throw an error when str and count are of invalid types", () => {
+test("should throw an error when str is invalid type", () => {
   const str = { text: "hello" };
-  const count = [3];
-  expect(() => repeat(str, count)).toThrow("Invalid data value");
+  const count = 3;
+  expect(() => repeat(str, count)).toThrow("Input should be a string");
+});
+
+// case: for throw error
+test("should throw an error when count is an array", () => {
+  const str = "hello";
+  const count = [2];
+  expect(() => repeat(str, count)).toThrow("Count should be a number");
 });
