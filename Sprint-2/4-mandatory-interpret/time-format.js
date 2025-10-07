@@ -17,18 +17,23 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// =============> // three times
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// =============> 61%60=1/61-1/60=1/60%60=0, the value assigned to num when pad called for the first time is 0.
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// =============> write your answer here: "00".
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> write your answer here: remainingSeconds 61%60=1.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> write your answer here: "01" because of .padStart(2, "0")
+console.log(pad(0));
+console.log(pad(1));
+console.log(pad(123));
+console.log(formatTimeDisplay(61));
+
