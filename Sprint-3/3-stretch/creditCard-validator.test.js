@@ -7,7 +7,7 @@ describe("creditCardValidator", () => {
   });
 
   test("should return false if the card number is not digit only", () => {
-    expect(creditCardValidator("1234-5678-9012-345a")).toBe(false);
+    expect(creditCardValidator("1234-5678-abcd-3456")).toBe(false);
     expect(creditCardValidator("1234 5678 9012 3456")).toBe(true);
   });
 
@@ -25,5 +25,17 @@ describe("creditCardValidator", () => {
     expect(creditCardValidator("0000-0000-0000-0000")).toBe(false);
     expect(creditCardValidator("1111 1111 1111 1111")).toBe(false);
     expect(creditCardValidator("1234 5678 9012 3456")).toBe(true);
+  });
+
+  // test for less than 16 digits
+  test("should return false for a card number with less than 16 digits", () => {
+    expect(creditCardValidator("123456789012345")).toBe(false);
+    expect(creditCardValidator("1234-5678-9012-345")).toBe(false);
+  });
+
+  // test for more than 16 digits
+  test("should return false for a card number with more than 16 digits", () => {
+    expect(creditCardValidator("12345678901234567")).toBe(false);
+    expect(creditCardValidator("1234-5678-9012-34567")).toBe(false);
   });
 });
