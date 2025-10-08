@@ -8,6 +8,22 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
+  if (
+    angle === null ||
+    (typeof angle !== "number" && typeof angle !== "string")
+  ) {
+    return "Input should be a number or a number in string";
+  }
+  angle = Number(angle);
+  if (isNaN(angle)) {
+    return "Input should be a number or a number in string";
+  }
+  if (angle < 0 || angle > 360) {
+    return "Angle should be between 0 and 360";
+  }
+  if (angle === 0) {
+    return "Zero angle";
+  }
   if (angle === 90) {
     return "Right angle";
   }
@@ -24,6 +40,9 @@ function getAngleType(angle) {
   }
   if (angle > 180 && angle < 360) {
     return "Reflex angle";
+  }
+  if (angle === 360) {
+    return "Full rotation";
   }
 }
 
