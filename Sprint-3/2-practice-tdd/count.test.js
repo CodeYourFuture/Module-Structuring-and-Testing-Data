@@ -39,7 +39,7 @@ test("should return 0 when string is empty", () => {
 });
 
 // test for str is an array
-test("should return 0 when str is an array", () => {
+test("should return 1 when str is an array", () => {
   const str = ["a", "b", "c"];
   const char = "a";
   const count = countChar(str, char);
@@ -47,7 +47,7 @@ test("should return 0 when str is an array", () => {
 });
 
 // test for str is a number
-test("should return 0 when str is a number", () => {
+test("should return 1 when str is a number", () => {
   const str = 12345;
   const char = "3";
   const count = countChar(str, char);
