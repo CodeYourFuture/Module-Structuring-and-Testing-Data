@@ -15,3 +15,4 @@ function capitalise(str) {
 //SyntaxError: Identifier 'str' has already been declared
 
 // =============> write your new code here
+
