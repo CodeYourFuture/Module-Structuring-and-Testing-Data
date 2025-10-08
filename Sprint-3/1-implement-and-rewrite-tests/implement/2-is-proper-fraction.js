@@ -8,6 +8,12 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
+  if (typeof numerator !== "number" && typeof numerator !== "string")
+    return false;
+  if (typeof denominator !== "number" && typeof denominator !== "string")
+    return false;
+  if (isNaN(numerator) || isNaN(denominator)) return false;
+  if (denominator == 0) return false; // handle zero denominator case
   return Math.abs(numerator) < Math.abs(denominator);
 }
 

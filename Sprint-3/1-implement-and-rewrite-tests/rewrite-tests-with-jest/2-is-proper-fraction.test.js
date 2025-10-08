@@ -69,3 +69,68 @@ test("should return false when 3.5 > 2.5", () => {
 test("should return false for non-numeric inputs", () => {
   expect(isProperFraction("a", 2)).toEqual(false);
 });
+
+// Stretch  10: numerator is a string that can be converted to a number
+test("should return true when '2' < 3", () => {
+  expect(isProperFraction("2", 3)).toEqual(true);
+});
+
+// Stretch 11: denominator is a string that can be converted to a number
+test("should return false when 5 > '2'", () => {
+  expect(isProperFraction(5, "2")).toEqual(false);
+});
+
+// Stretch 12: both numerator and denominator are strings that can be converted to numbers
+test("should return true when '2' < '3'", () => {
+  expect(isProperFraction("2", "3")).toEqual(true);
+});
+
+// Stretch 13: numerator is null
+test("should return false when numerator is null", () => {
+  expect(isProperFraction(null, 3)).toEqual(false);
+});
+
+// Stretch 14: denominator is null
+test("should return false when denominator is null", () => {
+  expect(isProperFraction(3, null)).toEqual(false);
+});
+
+// Stretch 15: both numerator and denominator are null
+test("should return false when both numerator and denominator are null", () => {
+  expect(isProperFraction(null, null)).toEqual(false);
+});
+
+// Stretch 16: numerator is undefined
+test("should return false when numerator is undefined", () => {
+  expect(isProperFraction(undefined, 3)).toEqual(false);
+});
+
+// Stretch 17: denominator is undefined
+test("should return false when denominator is undefined", () => {
+  expect(isProperFraction(3, undefined)).toEqual(false);
+});
+
+// Stretch 18: both numerator and denominator are undefined
+test("should return false when both numerator and denominator are undefined", () => {
+  expect(isProperFraction(undefined, undefined)).toEqual(false);
+});
+
+// Stretch 19: numerator is an array
+test("should return false when numerator is an array", () => {
+  expect(isProperFraction([2], 3)).toEqual(false);
+});
+
+// Stretch 20: denominator is an array
+test("should return false when denominator is an array", () => {
+  expect(isProperFraction(2, [3])).toEqual(false);
+});
+
+// Stretch 21: numerator is an object
+test("should return false when numerator is an object", () => {
+  expect(isProperFraction({ num: 2 }, 3)).toEqual(false);
+});
+
+// Stretch 22: denominator is an object
+test("should return false when denominator is an object", () => {
+  expect(isProperFraction(2, { den: 3 })).toEqual(false);
+});
