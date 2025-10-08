@@ -43,15 +43,42 @@ test("should return 11 for Ace of Hearts", () => {
   expect(aceOfHearts).toEqual(11);
 });
 // Case 5: Handle Invalid Cards:
+const errorMessage =
+  "Error: Invalid card rank. Input should be a string in the format 'R♠', where R is 2-10, J, Q, K, or A, followed by either ♠, ♥, ♦, or ♣.";
+
 test("should throw an error for invalid card rank", () => {
   const invalidCard = getCardValue("1♠");
-  expect(invalidCard).toEqual("Error: Invalid card rank");
+  expect(invalidCard).toEqual(errorMessage);
 });
 test("should throw an error for another invalid card rank", () => {
   const anotherInvalidCard = getCardValue("Z♠");
-  expect(anotherInvalidCard).toEqual("Error: Invalid card rank");
+  expect(anotherInvalidCard).toEqual(errorMessage);
 });
 test("should throw an error for empty card string", () => {
   const emptyCard = getCardValue("");
-  expect(emptyCard).toEqual("Error: Invalid card rank");
+  expect(emptyCard).toEqual(errorMessage);
+});
+test("should throw an error for boolean (true) input", () => {
+  const booleanCard = getCardValue(true);
+  expect(booleanCard).toEqual(errorMessage);
+});
+test("should throw an error for boolean (false) input", () => {
+  const booleanCard = getCardValue(false);
+  expect(booleanCard).toEqual(errorMessage);
+});
+test("should throw an error for numeric input", () => {
+  const numericCard = getCardValue(10);
+  expect(numericCard).toEqual(errorMessage);
+});
+test("should throw an error for null input", () => {
+  const nullCard = getCardValue(null);
+  expect(nullCard).toEqual(errorMessage);
+});
+test("should throw an error for undefined input", () => {
+  const undefinedCard = getCardValue(undefined);
+  expect(undefinedCard).toEqual(errorMessage);
+});
+test("should throw an error for object input", () => {
+  const objectCard = getCardValue({ rank: "A", suit: "♠" });
+  expect(objectCard).toEqual(errorMessage);
 });

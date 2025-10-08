@@ -8,6 +8,12 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
+  const errorMessage =
+    "Error: Invalid card rank. Input should be a string in the format 'R♠', where R is 2-10, J, Q, K, or A, followed by either ♠, ♥, ♦, or ♣.";
+
+  if (typeof card !== "string" || card.length < 2) {
+    return errorMessage;
+  }
   const rank = card.slice(0, -1);
   if (rank === "A") {
     return 11;
@@ -19,7 +25,7 @@ function getCardValue(card) {
   if (numericRank >= 2 && numericRank <= 9) {
     return numericRank;
   }
-  return "Error: Invalid card rank";
+  return errorMessage;
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -75,9 +81,9 @@ assertEquals(aceOfHearts, 11);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-const invalidCard = "1♠";
+const invalidCard = getCardValue("1♠");
 assertEquals(invalidCard, "Error: Invalid card rank");
-const anotherInvalidCard = "Z♠";
+const anotherInvalidCard = getCardValue("Z♠");
 assertEquals(anotherInvalidCard, "Error: Invalid card rank");
-const emptyCard = "";
+const emptyCard = getCardValue("");
 assertEquals(emptyCard, "Error: Invalid card rank");
