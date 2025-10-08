@@ -1,7 +1,7 @@
 // const 12HourClockTime = "20:53";
 // const 24hourClockTime = "08:53";
 
-console.log(12HourClockTime , 24hourClockTime);
+// console.log(12HourClockTime , 24hourClockTime);
 
 // Answer
 // After running the code, it gave an error message "SyntaxError: Invalid or unexpected token". 
