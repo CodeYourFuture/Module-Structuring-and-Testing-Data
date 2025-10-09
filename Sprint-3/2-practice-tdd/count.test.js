@@ -38,18 +38,125 @@ test("should return 0 when string is empty", () => {
   expect(parseInt(count)).toEqual(0);
 });
 
+// tests for unhappy paths (invalid str)
+const errorMessageForString = "Input str should be a string";
+
 // test for str is an array
-test("should return 1 when str is an array", () => {
+test("should throw an error when str is an array", () => {
   const str = ["a", "b", "c"];
   const char = "a";
-  const count = countChar(str, char);
-  expect(parseInt(count)).toEqual(1);
+  expect(() => countChar(str, char)).toThrow(errorMessageForString);
 });
 
 // test for str is a number
-test("should return 1 when str is a number", () => {
+test("should throw an error when str is a number", () => {
   const str = 12345;
-  const char = "3";
+  const char = "1";
+  expect(() => countChar(str, char)).toThrow(errorMessageForString);
+});
+
+// test for str is an object
+test("should throw an error when str is an object", () => {
+  const str = { a: 1, b: 2 };
+  const char = "a";
+  expect(() => countChar(str, char)).toThrow(errorMessageForString);
+});
+
+// test for str is null
+test("should throw an error when str is null", () => {
+  const str = null;
+  const char = "a";
+  expect(() => countChar(str, char)).toThrow(errorMessageForString);
+});
+
+// test for str is undefined
+test("should throw an error when str is undefined", () => {
+  const str = undefined;
+  const char = "a";
+  expect(() => countChar(str, char)).toThrow(errorMessageForString);
+});
+
+// test for str is a boolean
+test("should throw an error when str is a boolean", () => {
+  const str = true;
+  const char = "a";
+  expect(() => countChar(str, char)).toThrow(errorMessageForString);
+});
+
+// tests for unhappy paths (invalid char)
+const errorMessageForCharacter = "Input char should be a string";
+
+// test for char is an array
+test("should throw an error when char is an array", () => {
+  const str = "abcdefg";
+  const char = ["a", "b"];
+  expect(() => countChar(str, char)).toThrow(errorMessageForCharacter);
+});
+
+// test for char is a number
+test("should throw an error when char is a number", () => {
+  const str = "abcdefg";
+  const char = 1;
+  expect(() => countChar(str, char)).toThrow(errorMessageForCharacter);
+});
+
+// test for char is an object
+test("should throw an error when char is an object", () => {
+  const str = "abcdefg";
+  const char = { a: 1 };
+  expect(() => countChar(str, char)).toThrow(errorMessageForCharacter);
+});
+
+// test for char is null
+test("should throw an error when char is null", () => {
+  const str = "abcdefg";
+  const char = null;
+  expect(() => countChar(str, char)).toThrow(errorMessageForCharacter);
+});
+
+// test for char is undefined
+test("should throw an error when char is undefined", () => {
+  const str = "abcdefg";
+  const char = undefined;
+  expect(() => countChar(str, char)).toThrow(errorMessageForCharacter);
+});
+
+// test for char is a boolean
+test("should throw an error when char is a boolean", () => {
+  const str = "abcdefg";
+  const char = true;
+  expect(() => countChar(str, char)).toThrow(errorMessageForCharacter);
+});
+
+// test for char is more than one character
+const errorMessageForSingleCharacter =
+  "Input char should be a single character";
+
+test("should throw an error when char is more than one character", () => {
+  const str = "abcdefg";
+  const char = "ab";
+  expect(() => countChar(str, char)).toThrow(errorMessageForSingleCharacter);
+});
+
+// test for char is a space character
+test("should return 0 when char is a space character", () => {
+  const str = "abcdefg";
+  const char = " ";
   const count = countChar(str, char);
-  expect(parseInt(count)).toEqual(1);
+  expect(parseInt(count)).toEqual(0);
+});
+
+// test for str is a space character
+test("should return 0 when str is a space character", () => {
+  const str = "       ";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(parseInt(count)).toEqual(0);
+});
+
+//test for char is an empty string
+test("should throw an error when char is an empty string", () => {
+  const str = "abcdefg";
+  const char = "";
+  expect(() => countChar(str, char)).toThrow(errorMessageForSingleCharacter);
 });

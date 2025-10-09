@@ -2,12 +2,15 @@ function countChar(stringOfCharacters, findCharacter) {
   let arrayOfCharacters = [];
   if (typeof stringOfCharacters === "string") {
     arrayOfCharacters = stringOfCharacters.split("");
-  } else if (Array.isArray(stringOfCharacters)) {
-    arrayOfCharacters = stringOfCharacters;
-  } else if (typeof stringOfCharacters === "number") {
-    arrayOfCharacters = stringOfCharacters.toString().split("");
-  } else if (typeof stringOfCharacters === "object") {
-    return 0;
+  } else {
+    throw new Error("Input str should be a string");
+  }
+
+  if (typeof findCharacter !== "string") {
+    throw new Error("Input char should be a string");
+  }
+  if (findCharacter.length !== 1) {
+    throw new Error("Input char should be a single character");
   }
 
   let count = 0;
