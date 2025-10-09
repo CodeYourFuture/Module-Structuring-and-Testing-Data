@@ -1,9 +1,7 @@
-function repeat() {
+function repeat(str, count) {
   if (arguments.length !== 2) {
     throw new Error("Function requires exactly two arguments: str and count.");
   }
-
-  const [str, count] = arguments;
 
   if (typeof str !== "string") {
     throw new Error("First argument must be a string.");
@@ -27,5 +25,6 @@ function repeat() {
   }
   return result;
 }
+
 
 module.exports = repeat;
