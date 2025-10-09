@@ -45,7 +45,9 @@ test("should return an empty string when count is 0", () => {
 test("should throw an error when count is negative", () => {
   const str = "hello";
   const count = -2;
-  expect(() => repeat(str, count)).toThrow("Count should be a positive number");
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
 });
 
 // case: str is not a string:
@@ -106,5 +108,7 @@ test("should throw an error when str is invalid type", () => {
 test("should throw an error when count is an array", () => {
   const str = "hello";
   const count = [2];
-  expect(() => repeat(str, count)).toThrow("Count should be a number");
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
 });
