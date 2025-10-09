@@ -1,9 +1,8 @@
 function getOrdinalNumber(num) {
-
   if (!Number.isInteger(num) || num <= 0) {
     return "Invalid input";
   }
-if (num % 100 >= 11 && num % 100 <= 13) {
+  if (num % 100 >= 11 && num % 100 <= 13) {
     return num + "th";
   }
   switch (num % 10) {
