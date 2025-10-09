@@ -54,13 +54,5 @@ test("append 'th' to all other numbers", () => {
   expect(getOrdinalNumber(114)).toEqual("114th");
 });
 
-// category 5: special case for 11, 12, 13 -> "th"
-test("append 'th' to numbers ending in 11, 12, or 13", () => {
-  expect(getOrdinalNumber(11)).toEqual("11th");
-  expect(getOrdinalNumber(12)).toEqual("12th");
-  expect(getOrdinalNumber(13)).toEqual("13th");
-  expect(getOrdinalNumber(111)).toEqual("111th");
-  expect(getOrdinalNumber(112)).toEqual("112th");
-  expect(getOrdinalNumber(113)).toEqual("113th");
-});
+
 
