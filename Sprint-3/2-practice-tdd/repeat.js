@@ -1,14 +1,11 @@
 function repeat(str, count) {
-  if (typeof str !== "string" && typeof str !== "number") {
-    throw new Error("Input should be a string");
+  if (typeof str !== "string") {
+    throw new Error("Input str should be a string in format 'Hello'");
   }
-  if (Number(count) < 0 && Number.isInteger(Number(count))) {
+  if (!Number.isInteger(count) || count <= 0) {
     throw new Error("Count should be a positive integer number");
   }
-  if (typeof count !== "number" && typeof count !== "string") {
-    throw new Error("Count should be a positive integer number");
-  }
-  return String(str).repeat(Number(count));
+  return str.repeat(count);
 }
 
 module.exports = repeat;

@@ -30,12 +30,13 @@ test("should return the string 1 time when count is 1", () => {
 // case: Handle Count of 0:
 // Given a target string str and a count equal to 0,
 // When the repeat function is called with these inputs,
-// Then it should return an empty string, ensuring that a count of 0 results in an empty output.
-test("should return an empty string when count is 0", () => {
+// Then it should throw an error or return an appropriate error message, as repeating a string zero times is not valid.
+test("should throw an error when count is 0", () => {
   const str = "hello";
   const count = 0;
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("");
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
 });
 
 // case: Negative Count:
@@ -50,37 +51,73 @@ test("should throw an error when count is negative", () => {
   );
 });
 
-// case: str is not a string:
-// Given a non-string input for str (e.g., a number) and a positive integer count,
-// When the repeat function is called with these inputs,
-// Then it should convert the non-string str to a string and repeat it count times, returning the appropriately repeated string.
-test("should convert non-string str to string and repeat it count times", () => {
-  const str = 123;
-  const count = 2;
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("123123");
-});
-
-// case: count is not a number:
-// Given a target string str and a non-numeric input for count (e.g., a string that can be converted to a number),
-// When the repeat function is called with these inputs,
-// Then it should convert the non-numeric count to a number and repeat the str that many times, returning the appropriately repeated string.
-test("should convert non-numeric count to number and repeat the string that many times", () => {
-  const str = "hello";
-  const count = "3";
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("hellohellohello");
-});
-
 // case: count is a decimal number:
 // Given a target string str and a decimal number for count,
 // When the repeat function is called with these inputs,
-// Then it should round down the count to the nearest integer and repeat the str that many times, returning the appropriately repeated string.
-test("should round down decimal count to nearest integer and repeat the string that many times", () => {
+// Then it should throw an error or return an appropriate error message, indicating that the count should be a positive integer number.
+test("should throw an error when count is a decimal number", () => {
   const str = "hello";
-  const count = 3.7;
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("hellohellohello");
+  const count = 2.5;
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
+});
+
+// case: count is not an integer number:
+// Given a target string str and a non-integer input for count (e.g., a string or an array),
+// When the repeat function is called with these inputs,
+// Then it should throw an error or return an appropriate error message, indicating that the count should be a positive integer number.
+test("should throw an error when count is not a number", () => {
+  const str = "hello";
+  const count = "abc";
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
+});
+
+// case: count is an array:
+test("should throw an error when count is an array", () => {
+  const str = "hello";
+  const count = [2];
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
+});
+
+// case: count is an object:
+test("should throw an error when count is an object", () => {
+  const str = "hello";
+  const count = { num: 2 };
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
+});
+
+// case: count is null:
+test("should throw an error when count is null", () => {
+  const str = "hello";
+  const count = null;
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
+});
+
+// case: count is a boolean:
+test("should throw an error when count is a boolean", () => {
+  const str = "hello";
+  const count = true;
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
+});
+
+// case: count is undefined:
+test("should throw an error when count is undefined", () => {
+  const str = "hello";
+  const count = undefined;
+  expect(() => repeat(str, count)).toThrow(
+    "Count should be a positive integer number"
+  );
 });
 
 // case: str is an empty string:
@@ -94,21 +131,56 @@ test("should return an empty string when str is an empty string", () => {
   expect(repeatedStr).toEqual("");
 });
 
-// case: invalid str and count types:
-// Given invalid types for both str (e.g., an object) and count (e.g., an array),
-// When the repeat function is called with these inputs,
-// Then it should throw an error or return an appropriate error message, indicating that the input types are not supported.
-test("should throw an error when str is invalid type", () => {
-  const str = { text: "hello" };
-  const count = 3;
-  expect(() => repeat(str, count)).toThrow("Input should be a string");
+// case: str is not a string eg: number:
+test("should throw an error when str is a number", () => {
+  const str = 123;
+  const count = 2;
+  expect(() => repeat(str, count)).toThrow(
+    "Input str should be a string in format 'Hello'"
+  );
 });
 
-// case: for throw error
-test("should throw an error when count is an array", () => {
-  const str = "hello";
-  const count = [2];
+// case: str is an array:
+test("should throw an error when str is an array", () => {
+  const str = ["hello"];
+  const count = 2;
   expect(() => repeat(str, count)).toThrow(
-    "Count should be a positive integer number"
+    "Input str should be a string in format 'Hello'"
+  );
+});
+
+// case: str is an object:
+test("should throw an error when str is an object", () => {
+  const str = { text: "hello" };
+  const count = 2;
+  expect(() => repeat(str, count)).toThrow(
+    "Input str should be a string in format 'Hello'"
+  );
+});
+
+// case: str is null:
+test("should throw an error when str is null", () => {
+  const str = null;
+  const count = 2;
+  expect(() => repeat(str, count)).toThrow(
+    "Input str should be a string in format 'Hello'"
+  );
+});
+
+// case: str is a boolean:
+test("should throw an error when str is a boolean", () => {
+  const str = true;
+  const count = 2;
+  expect(() => repeat(str, count)).toThrow(
+    "Input str should be a string in format 'Hello'"
+  );
+});
+
+// case: str is undefined:
+test("should throw an error when str is undefined", () => {
+  const str = undefined;
+  const count = 2;
+  expect(() => repeat(str, count)).toThrow(
+    "Input str should be a string in format 'Hello'"
   );
 });
