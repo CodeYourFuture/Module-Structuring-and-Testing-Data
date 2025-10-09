@@ -1,6 +1,6 @@
 function getOrdinalNumber(num) {
 
-  if (typeof num !== "number" || !Number.isInteger(num) || num <= 0) {
+  if (!Number.isInteger(num) || num <= 0) {
     return "Invalid input";
   }
 if (num % 100 >= 11 && num % 100 <= 13) {
