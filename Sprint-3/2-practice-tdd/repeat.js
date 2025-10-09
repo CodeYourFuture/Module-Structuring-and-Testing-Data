@@ -7,7 +7,7 @@ function repeat(str, count) {
     throw new Error("First argument must be a string.");
   }
 
-  if (typeof count !== "number" || !Number.isInteger(count) || count < 0) {
+  if (!Number.isSafeInteger(count) || count < 0) {
     throw new Error("Second argument must be a non-negative integer.");
   }
 
