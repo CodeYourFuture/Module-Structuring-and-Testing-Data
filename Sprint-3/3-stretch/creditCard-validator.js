@@ -1,6 +1,7 @@
 function creditCardValidator(cardNumber) {
   // declare the length of valid card number
   const VALID_LENGTH = 16;
+  const minimumSum = 16;
 
   // Remove all - and spaces from the input
   const sanitized = cardNumber.replace(/[-\s]/g, "");
@@ -30,7 +31,7 @@ function creditCardValidator(cardNumber) {
   const sum = sanitized
     .split("")
     .reduce((total, digit) => total + Number(digit), 0);
-  if (sum <= VALID_LENGTH) {
+  if (sum <= minimumSum) {
     return false;
   }
 

@@ -38,4 +38,11 @@ describe("creditCardValidator", () => {
     expect(creditCardValidator("12345678901234567")).toBe(false);
     expect(creditCardValidator("1234-5678-9012-34567")).toBe(false);
   });
+
+  // test for only 16 digits without spaces or dashes
+  test("should return true for a card number with 16 digits without spaces or dashes", () => {
+    expect(creditCardValidator("1234567890123456")).toBe(true);
+    expect(creditCardValidator("0000000000000000")).toBe(false);
+    expect(creditCardValidator("1111111111111111")).toBe(false);
+  });
 });

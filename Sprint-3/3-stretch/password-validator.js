@@ -1,4 +1,12 @@
-function passwordValidator(password) {
+const previousPasswords = [
+  "123Ab!",
+  "abcD1#",
+  "Password1!",
+  "Qwerty1*",
+  "Zxcvbnm2$",
+];
+
+function isValidPassword(password, previousPasswords) {
   const lengthCondition = password.length >= 5;
   console.log(`length condition: ${lengthCondition}`);
 
@@ -14,13 +22,6 @@ function passwordValidator(password) {
   const symbolCondition = /[!#$%.*&]/.test(password);
   console.log(`symbol condition: ${symbolCondition}`);
 
-  const previousPasswords = [
-    "123Ab!",
-    "abcD1#",
-    "Password1!",
-    "Qwerty1*",
-    "Zxcvbnm2$",
-  ];
   const notInPreviousPasswords = !previousPasswords.includes(password);
   console.log(`previous password condition: ${notInPreviousPasswords}`);
 
@@ -34,4 +35,4 @@ function passwordValidator(password) {
   );
 }
 
-module.exports = passwordValidator;
+module.exports = { isValidPassword, previousPasswords };
