@@ -1,11 +1,3 @@
-const previousPasswords = [
-  "123Ab!",
-  "abcD1#",
-  "Password1!",
-  "Qwerty1*",
-  "Zxcvbnm2$",
-];
-
 function isValidPassword(password, previousPasswords) {
   const lengthCondition = password.length >= 5;
   console.log(`length condition: ${lengthCondition}`);
@@ -35,4 +27,4 @@ function isValidPassword(password, previousPasswords) {
   );
 }
 
-module.exports = { isValidPassword, previousPasswords };
+module.exports = isValidPassword;

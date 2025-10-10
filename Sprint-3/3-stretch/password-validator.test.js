@@ -14,7 +14,15 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-const { isValidPassword, previousPasswords } = require("./password-validator");
+const isValidPassword = require("./password-validator");
+
+const previousPasswords = [
+  "123Ab!",
+  "abcD1#",
+  "Password1!",
+  "Qwerty1*",
+  "Zxcvbnm2$",
+];
 
 describe("passwordValidator", () => {
   const validPassword = "123Ab*";
