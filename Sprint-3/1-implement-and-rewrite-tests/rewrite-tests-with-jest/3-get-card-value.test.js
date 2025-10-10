@@ -14,12 +14,12 @@ test("Should return numeric value(8) for Number Cards (2-10)", () => {
 });
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return the value 10,  a card with a rank of ('10', 'J', 'Q', or 'K')", () => {
-  const aceofSpades = getCardValue("K");
+  const aceofSpades = getCardValue("K♠");
   expect(aceofSpades).toEqual(10);
 });
 // Case 4: Handle Ace (A):
 test("should return the value 11,for a card with a rank of 'A' ", () => {
-  const aceofSpades = getCardValue("A");
+  const aceofSpades = getCardValue("A♣");
   expect(aceofSpades).toEqual(11);
 });
 // Case 5: Handle Invalid Cards:
