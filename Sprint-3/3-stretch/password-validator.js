@@ -19,10 +19,6 @@ function passwordValidator(password) {
   if (!hasSpecial) {
     return false;
   }
-
-  if (oldPassword.includes(password)) {
-    return false;
-  }
-  return true;
+  return !oldPassword.includes(password);
 }
 module.exports = passwordValidator;
