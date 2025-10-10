@@ -14,3 +14,21 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+
+//1- methodo that take space add _ ?
+//2- methodo find first index of ech word
+//3- methodo to tranform string to upercase = toUpperCase()
+//4- return the value 
+
+
+
+function takeSapcestoUpercase (textSnake){
+
+    let takespace = textExemple.split(" ");// returns array nned to tranform to string again before upercase
+    let transfStringAgain = takespace.join("_");
+    let changeUper = transfStringAgain.toUpperCase(1);
+    return changeUper;
+};
+   let textExemple = "hello there";
+console.log(takeSapcestoUpercase(textExemple));
