@@ -17,7 +17,12 @@ console.log(`The base part of ${filePath} is ${base}`);
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-const dir = ;
-const ext = ;
+const dir = filePath.slice(0, lastSlashIndex);// the slice is a method that cuts out part of a string and returns it as a new string. we use it here to get the dir part of the filePath
+const ext = base.slice(base.lastIndexOf("."));//the ext is any thing after the last dot 
+//const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
+//const dir = "/Users/mitch/cyf/Module-JS1/week-1/interpret";
+
+console.log(`The dir part of ${filePath} is ${dir}`);
+console.log(`The ext part of ${filePath} is ${ext}`);   
 
 // https://www.google.com/search?q=slice+mdn
