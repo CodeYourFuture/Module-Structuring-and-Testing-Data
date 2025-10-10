@@ -14,3 +14,12 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+function convertToUpperSnakeCase(str) {
+    let upperCase= str.toUpperCase();
+    return upperCase.split(" ").join("_");
+   
+}
+console.log(convertToUpperSnakeCase("hello there"));
+
+console.assert(convertToUpperSnakeCase("hello there") === "HELLO_THERE", "Test Case 1 Failed");
+console.assert(convertToUpperSnakeCase("lord of the rings") === "LORD_OF_THE_RINGS", "Test Case 2 Failed");
