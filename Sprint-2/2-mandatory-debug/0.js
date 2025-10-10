@@ -16,7 +16,7 @@
 
 // =============> write your explanation here
 // it wasn't completely as I predicted, the first console log statement inside the function multiply did worked and
-// it printed 320, which measn that the function parameters a and b took the values 10 and 32 from the function call multiply(10, 32).
+// it printed 320, which means that the function parameters a and b took the values 10 and 32 from the function call multiply(10, 32).
 // but the second console log statement printed "The result of multiplying 10 and 32 is undefined" because the function multiply does not return any value,
 // so the result of multiplying 10 and 32 is undefined. 
 
