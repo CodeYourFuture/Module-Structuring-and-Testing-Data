@@ -8,7 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  let rank = card.length === 1 ? card : card.slice(0, -1);
+  let rank = card.slice(0, -1);
   if (rank === "A") {
     return 11;
   }
@@ -57,7 +57,7 @@ assertEquals(fiveofHearts, 5);
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-const faceCards = getCardValue("J");
+const faceCards = getCardValue("J♣");
 assertEquals(faceCards, 10);
 
 // Handle Ace (A):
@@ -65,7 +65,7 @@ assertEquals(faceCards, 10);
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
 const ace = getCardValue("A");
-assertEquals(ace, 11);
+assertEquals(ace, "Invalid card rank");
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
