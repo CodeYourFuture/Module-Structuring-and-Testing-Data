@@ -5,23 +5,23 @@ const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
 );
-// declare a new var and assign penceString value without last character (p)/
+// Creates a new string that removes the last character (p) from penceString. 
 
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
-//declare a new variable and Make sure it is at least 3 digits long eg: 1 become 001.
+//Ensure the string has at least three digits by adding "0" to the start if needed.
 
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
 );
-//declare a new variable and assign the paddedPenceNumberString value without last two digit.
+//Extracts the pounds part by taking all characters except the last two digits.
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
   .padEnd(2, "0");
-// pence= take the pound length and remove it and keep all rest digit and if the shorter than 2 digit add 0 until paddedPenceNumberString
-//  .substring(paddedPenceNumberString.length - 2) becomes 2 digits
+//extract the last two digits to get the pence part.
 console.log(`£${pounds}.${pence}`);
+// Combines the pound and pence values into a formatted string.
 
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
