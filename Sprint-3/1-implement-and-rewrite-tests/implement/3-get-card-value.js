@@ -8,8 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const errorMessage =
-    "Error: Invalid card rank. Input should be a string in the format 'R♠', where R is 2-10, J, Q, K, or A, followed by either ♠, ♥, ♦, or ♣.";
+  const errorMessage = "Error: Invalid card rank";
 
   if (typeof card !== "string" || card.length < 2) {
     return errorMessage;

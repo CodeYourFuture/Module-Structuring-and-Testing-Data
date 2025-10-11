@@ -43,8 +43,7 @@ test("should return 11 for Ace of Hearts", () => {
   expect(aceOfHearts).toEqual(11);
 });
 // Case 5: Handle Invalid Cards:
-const errorMessage =
-  "Error: Invalid card rank. Input should be a string in the format 'R♠', where R is 2-10, J, Q, K, or A, followed by either ♠, ♥, ♦, or ♣.";
+const errorMessage = "Error: Invalid card rank";
 
 test("should throw an error for invalid card rank", () => {
   const invalidCard = getCardValue("1♠");
