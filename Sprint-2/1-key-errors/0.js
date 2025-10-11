@@ -16,6 +16,6 @@
 console.log(capitalise("hello")); // Test the function
 // =============> write your new code here
 function capitalise(str) {
-let capitalised = `${str[0].toUpperCase()}${str.slice(1)}`;
-return capitalised;
+  let capitalised = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return capitalised;
 }
