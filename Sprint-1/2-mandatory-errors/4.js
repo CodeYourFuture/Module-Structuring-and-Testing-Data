@@ -1,2 +1,3 @@
-const 12HourClockTime = "20:53";
-const 24hourClockTime = "08:53";
+const HourClockTime = "20:53";
+const hourClockTime = "08:53";
+//variable name must mot stat with an digit.
