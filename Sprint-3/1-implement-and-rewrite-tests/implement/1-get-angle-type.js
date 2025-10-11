@@ -8,16 +8,13 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-  if (
-    angle === null ||
-    (typeof angle !== "number" && typeof angle !== "string")
-  ) {
+  if (typeof angle !== "number" && typeof angle !== "string") {
+    return "Input should be a number or a number in string";
+  }
+  if (angle === null || isNaN(Number(angle))) {
     return "Input should be a number or a number in string";
   }
   angle = Number(angle);
-  if (isNaN(angle)) {
-    return "Input should be a number or a number in string";
-  }
   if (angle < 0 || angle > 360) {
     return "Angle should be between 0 and 360";
   }
