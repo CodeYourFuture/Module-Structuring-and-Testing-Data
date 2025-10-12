@@ -6,13 +6,13 @@
 // Try playing computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
+  //const decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
 }
 
-console.log(decimalNumber);
+console.log(convertToPercentage(0.5));
 
 // =============> write your explanation here: // the error: identifier `decimalNumber` has already been declared. this error shows that identifier has already been declared and we can not redeclare it again.The identifier `decimalNumber` declared in parameter.//
 
@@ -22,4 +22,4 @@ console.log(decimalNumber);
 // const percentage = `${decimalNumber * 100}%`;
 // return percentage;
 // }
-// console.log(convertTopercentge(0.5));//
+// console.log(convertTopercentage(0.5));//
