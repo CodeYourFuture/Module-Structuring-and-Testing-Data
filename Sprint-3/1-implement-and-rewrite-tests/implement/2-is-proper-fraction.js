@@ -8,9 +8,10 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) {
-    return true;
+  if (denominator === 0) {
+    return false;
   }
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -46,6 +47,7 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
+assertEquals(negativeFraction, true);
 // ====> complete with your assertion
 
 // Equal Numerator and Denominator check:
@@ -53,7 +55,114 @@ const negativeFraction = isProperFraction(-4, 7);
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
+assertEquals(equalFraction, false);
 // ====> complete with your assertion
 
 // Stretch:
 // What other scenarios could you test for?
+
+// Zero Numerator check:
+const zeroNumerator = isProperFraction(0, 5);
+assertEquals(zeroNumerator, true);
+
+// Negative Denominator check:
+const negativeDenominator = isProperFraction(2, -3);
+assertEquals(negativeDenominator, true);
+
+// Both Negative check:
+const bothNegative = isProperFraction(-2, -5);
+assertEquals(bothNegative, true);
+
+// Large Numbers check:
+const largeNumbers = isProperFraction(1000000, 1000001);
+assertEquals(largeNumbers, true);
+
+let numerator = 2;
+let denominator = 2;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
+
+numerator = -3;
+denominator = 4;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
+
+numerator = 5;
+denominator = -6;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
+
+numerator = -7;
+denominator = -8;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
+
+numerator = 0;
+denominator = 1;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
+
+numerator = 10;
+denominator = 20;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
+
+numerator = 15;
+denominator = 10;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
+
+numerator = -25;
+denominator = 30;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
+
+numerator = 478356;
+denominator = 478357;
+console.log(
+  numerator +
+    "/" +
+    denominator +
+    " proper fraction output is " +
+    isProperFraction(numerator, denominator)
+);
