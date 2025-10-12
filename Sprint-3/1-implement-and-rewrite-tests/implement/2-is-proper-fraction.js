@@ -20,7 +20,7 @@ function isProperFraction(numerator, denominator) {
   // we could add more checks here for invalid input, but not required for this exercise
 }
 
-// The line below allows us to load the isProperFraction function into tests in other files.
+// The line below allows uscd-- to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
 
