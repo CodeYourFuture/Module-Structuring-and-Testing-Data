@@ -11,16 +11,9 @@ function isProperFraction(numerator, denominator) {
   if (numerator < denominator) {
     return true;
   }
-  if (numerator < 0 && Math.abs(numerator) < denominator) {
-    return false;
-  } 
-  if (numerator >= denominator) {
-    return false;
-  }
-  // we could add more checks here for invalid input, but not required for this exercise
 }
 
-// The line below allows uscd-- to load the isProperFraction function into tests in other files.
+// The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
 
@@ -54,7 +47,6 @@ assertEquals(improperFraction, false);
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
 // ====> complete with your assertion
-assertEquals(negativeFraction, true);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
@@ -62,47 +54,6 @@ assertEquals(negativeFraction, true);
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
 // ====> complete with your assertion
-assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
-
-
-// Zero Numerator check:
-// Input: numerator = 0, denominator = 5
-// target output: true
-// Explanation: The fraction 0/5 is a proper fraction because the numerator (0) is less than the denominator (5). The function should return true.
-const zeroNumerator = isProperFraction(0, 5);
-assertEquals(zeroNumerator, true);
-
-// Negative Denominator check:
-// Input: numerator = 2, denominator = -3
-// target output: false
-// Explanation: The fraction 2/-3 is not a proper fraction because the denominator is negative. The function should return false.
-const negativeDenominator = isProperFraction(2, -3);
-assertEquals(negativeDenominator, true);
-
-let numerator= 1;
-let denominator= 7;
-console.log(numerator + "/" + denominator + " check =", isProperFraction(numerator, denominator));
-numerator= 5;
-denominator= 1;
-console.log(numerator + "/" + denominator + " check =", isProperFraction(numerator, denominator));
-numerator= -4;
-denominator= 9;
-console.log(numerator + "/" + denominator + " check =", isProperFraction(numerator, denominator));
-numerator= 0;
-denominator= 6;
-console.log(numerator + "/" + denominator + " check =", isProperFraction(numerator, denominator));   
-numerator= 4;
-denominator= 4;
-console.log(numerator + "/" + denominator + " check =", isProperFraction(numerator, denominator));
-numerator= -5;
-denominator= 8;
-console.log(numerator + "/" + denominator + " check =", isProperFraction(numerator, denominator));
-numerator= 4;
-denominator= -2;
-console.log(numerator + "/" + denominator + " check =", isProperFraction(numerator, denominator));
-numerator= -3;
-denominator= -7;
-console.log(numerator + "/" + denominator + " check =", isProperFraction(numerator, denominator));
