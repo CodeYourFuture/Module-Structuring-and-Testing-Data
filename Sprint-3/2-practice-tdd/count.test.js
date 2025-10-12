@@ -2,7 +2,7 @@
 const countChar = require("./count");
 // Given a string str and a single character char to search for,
 // When the countChar function is called with these inputs,
-// Then it should: correctly count the occurrences of char in str.
+// Then it should:  correctly count the occurrences of char in str.
 
 
 // Scenario: Multiple Occurrences
