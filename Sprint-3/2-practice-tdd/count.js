@@ -1,5 +1,9 @@
 function countChar(stringOfCharacters, findCharacter) {
-  return 5
-}
+    return stringOfCharacters.split(findCharacter).length - 1;
+  }
 
 module.exports = countChar;
+console.log(countChar('hello', 'l'));
+console.log(countChar('hello', 'z')); 
+console.log(countChar('alaaa', 'a'));
+
