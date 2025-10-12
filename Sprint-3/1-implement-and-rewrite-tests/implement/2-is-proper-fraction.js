@@ -12,7 +12,7 @@ function isProperFraction(numerator, denominator) {
     return true;
   }
   if (numerator < 0 && Math.abs(numerator) < denominator) {
-    return true;
+    return false;
   } 
   if (numerator >= denominator) {
     return false;
@@ -80,7 +80,7 @@ assertEquals(zeroNumerator, true);
 // target output: false
 // Explanation: The fraction 2/-3 is not a proper fraction because the denominator is negative. The function should return false.
 const negativeDenominator = isProperFraction(2, -3);
-assertEquals(negativeDenominator, false);
+assertEquals(negativeDenominator, true);
 
 let numerator= 1;
 let denominator= 7;
