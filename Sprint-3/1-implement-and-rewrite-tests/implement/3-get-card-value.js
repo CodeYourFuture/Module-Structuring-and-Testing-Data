@@ -16,8 +16,11 @@ function getCardValue(card) {
   }
   
   const numValue = parseInt(rank, 10);
-  if (numValue >= 2 && numValue <= 10) {
+  if (numValue >= 2 && numValue < 10) {
     return numValue;
+  }
+  if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
   }
 }
 
@@ -54,6 +57,8 @@ assertEquals(fiveofHearts, 5);
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const kingofDiamonds = getCardValue("K♦");
+assertEquals(kingofDiamonds, 10);
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
