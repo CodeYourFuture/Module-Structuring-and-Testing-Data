@@ -21,6 +21,52 @@ test("password has at least 5 characters", () => {
     // Act
     const result = isValidPassword(password);
     // Assert
-    expect(result).toEqual(true);
+    expect(result).toEqual(false);
 }
 );
+
+// passsword has at least one uppercase letter
+test("password has at least one uppercase letter", () => {
+
+    const password = "1234a";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+}
+);
+
+// password has at least one lowercase letter
+test("password has at least one lowercase letter", () => {
+
+    const password = "1234A";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+}
+);
+
+// password has at least one number
+test("password has at least one number", () => {
+
+    const password = "abcdA";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+}
+);
+
+// password has at least one symbol: 
+test("password has at least one symbol: (!, #, $, %, ., *, &)", () => {
+
+    const password = "abcdA1";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+}
+);
+
+// password must not be any previous password in the passwords array.   
+test("password must not be any previous password in the passwords array.", () => {
+
+    const password = "Amtf22#";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+}
+);
+
