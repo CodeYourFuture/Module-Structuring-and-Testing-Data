@@ -14,6 +14,12 @@ function isProperFraction(numerator, denominator) {
   if (numerator >= denominator) {
     return false;
   }
+  if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  }
+  if (Math.abs(numerator) >= Math.abs(denominator)) {
+    return false;
+  }
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -49,6 +55,7 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
+assertEquals(negativeFraction, true);
 // ====> complete with your assertion
 
 // Equal Numerator and Denominator check:
@@ -56,7 +63,15 @@ const negativeFraction = isProperFraction(-4, 7);
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
+assertEquals(equalFraction, false);
 // ====> complete with your assertion
 
 // Stretch:
 // What other scenarios could you test for?
+// Zero Numerator check:
+// Input: numerator = 0, denominator = 5
+// target output: true
+// Explanation: The fraction 0/5 is a proper fraction because the numerator (0) is less than the denominator (5). The function should return true.
+const zeroNumerator = isProperFraction(0, 5);
+assertEquals(zeroNumerator, true);
+
