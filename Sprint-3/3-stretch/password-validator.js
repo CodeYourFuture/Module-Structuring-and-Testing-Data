@@ -1,4 +1,4 @@
-const passwords = ["aebdc!", "123$cdo"];
+const passwords = ["Abcde1!", "Hello#2"];
 function passwordValidator(password) {  
     if (password.length < 5) {
         return false;
