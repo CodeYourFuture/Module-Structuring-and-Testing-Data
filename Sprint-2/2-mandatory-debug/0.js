@@ -1,6 +1,6 @@
 // Predict and explain first...
 
-// =============> write your prediction here : There is no return statement for the parameters.
+// =============> write your prediction here : There is no return statement for the parameters. because of this, the function returns undefined.
 
 function multiply(a, b) {
   console.log(a * b);
