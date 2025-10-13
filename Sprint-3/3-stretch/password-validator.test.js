@@ -64,7 +64,7 @@ test("password has at least one symbol: (!, #, $, %, ., *, &)", () => {
 // password must not be any previous password in the passwords array.   
 test("password must not be any previous password in the passwords array.", () => {
 
-    const password = "Amtf22#";
+    const password = "Aq@1122#";
     const result = isValidPassword(password);
     expect(result).toEqual(false);
 }
