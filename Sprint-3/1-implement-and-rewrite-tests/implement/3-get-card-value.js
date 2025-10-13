@@ -8,7 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  let rank = card.slice(0, -1);
+  let rank = card.slice(0, card.length - 1);
   if (rank === "A") {
     return 11;
   }
@@ -23,6 +23,10 @@ function getCardValue(card) {
   return "Invalid card rank";
 }
 
+let car = "10♠";
+
+let ran = car.slice(0, -1);
+console.log(ran);
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;

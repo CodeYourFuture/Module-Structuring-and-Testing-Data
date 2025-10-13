@@ -1,15 +1,14 @@
 function find(str, char) {
   let index = 0;
+
   while (index < str.length) {
     if (str[index] === char) {
       return index;
     }
     index++;
   }
-
   return -1;
 }
-
 // console.log(find("code your future", "u"));
 // console.log(find("code your future", "z"));
 
