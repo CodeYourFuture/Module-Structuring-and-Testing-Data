@@ -8,8 +8,16 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
+  // Extract the rank (all characters except the last one which is the suit)
+  const rank = card.slice(0, -1);
+  
   if (rank === "A") {
     return 11;
+  }
+  
+  const numValue = parseInt(rank, 10);
+  if (numValue >= 2 && numValue <= 10) {
+    return numValue;
   }
 }
 
@@ -39,6 +47,7 @@ assertEquals(aceofSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
+assertEquals(fiveofHearts, 5);
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Handle Face Cards (J, Q, K):
