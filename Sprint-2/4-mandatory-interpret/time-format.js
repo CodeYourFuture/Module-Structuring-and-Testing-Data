@@ -31,4 +31,5 @@ function formatTimeDisplay(seconds) {
 // =============> write your answer here : 1, because remainingSeconds is 1 on python tutor.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here : "00", because num is converted to string and padded to 2 characters with "0". That's mean "1" becomes "01".
+// =============> write your answer here :
+// "01", because the number 1 is converted to a string ("1").Then padStart(2, "0") makes sure it has 2 characters by adding "0" at the start, so "1" becomes "01".
