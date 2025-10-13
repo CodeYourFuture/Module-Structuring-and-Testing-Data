@@ -16,12 +16,16 @@ function getCardValue(card) {
   }
   
   const numValue = parseInt(rank, 10);
-  if (numValue >= 2 && numValue < 10) {
+  if (numValue >= 2 && numValue <= 10) {
     return numValue;
   }
-  if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
+  
+  if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
   }
+  
+  // If we get here, it's an invalid card - return undefined
+  return undefined;
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -71,3 +75,6 @@ assertEquals(aceofClubs, 11);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+const invalidCard = getCardValue("1♣");
+assertEquals(invalidCard, undefined);
+
