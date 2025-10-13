@@ -12,6 +12,9 @@ function getAngleType(angle) {
     return "Right angle";
   }
    // Run the tests, work out what Case 2 is testing, and implement the required code here.
+  if (angle < 90) {
+    return "Acute angle";
+  }
    // Then keep going for the other cases, one at a time.
 }
 
