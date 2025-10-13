@@ -15,7 +15,7 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-  const bmi = (weight / (height * height)).toFixed(1); //.toFixed(1)https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+  const bmi = Math.round((weight / (height * height)) * 10) / 10;
   return bmi;
   // return the BMI of someone based off their weight and height
 }
