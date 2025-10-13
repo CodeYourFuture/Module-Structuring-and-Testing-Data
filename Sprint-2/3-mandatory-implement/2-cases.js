@@ -19,4 +19,4 @@ function toUpperSnake(name) {
   const upperCase = name.toUpperCase(); // Convert the string to uppercase
   return upperCase.replaceAll(" ", "_"); // Replace all spaces with underscores
 }
-console.log(snakeItUp("alaa tagi is my name"));
+console.log(toUpperSnake("alaa tagi is my name"));
