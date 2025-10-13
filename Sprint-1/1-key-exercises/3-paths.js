@@ -10,14 +10,15 @@
 // (All spaces in the "" line should be ignored. They are purely for formatting.)
 
 const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
+
 const lastSlashIndex = filePath.lastIndexOf("/");
 const base = filePath.slice(lastSlashIndex + 1);
-console.log(`The base part of ${filePath} is ${base}`);
+// +1 to not include the slash in the base
+// lastSlashIndex finds position of the last / in the string
+// slice extracts part of the string from that position to the end
+const dir = filePath.slice(0, lastSlashIndex);
 
-// Create a variable to store the dir part of the filePath variable
-// Create a variable to store the ext part of the variable
-
-const dir = ;
-const ext = ;
-
-// https://www.google.com/search?q=slice+mdn
+const dotIndex = base.lastIndexOf(".");
+const ext = base.slice(dotIndex);
+// dotIndex finds position of the last . in the base string and slice extracts after this
+console.log(`The base part of the file path is ${base}, the dir part is ${dir}, and the ext part is ${ext}`);
