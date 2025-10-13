@@ -10,7 +10,9 @@ function formatTimeDisplay(seconds) {
 
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
+console.log(formatTimeDisplay(61)); // This line is inserted only to test the function. It returns "00:01:01"
 
+// Here is a function that takes a number of seconds and returns a string formatted as "HH:MM:SS"
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
 
@@ -18,12 +20,12 @@ function formatTimeDisplay(seconds) {
 
 // a) When formatTimeDisplay is called how many times will pad be called?
 // =============> write your answer here
-
+//3 times
 // Call formatTimeDisplay with an input of 61, now answer the following:
-
+// 00:01:01
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
-
+//61
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
 
