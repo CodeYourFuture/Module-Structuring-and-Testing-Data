@@ -22,15 +22,24 @@ console.log(formatTimeDisplay(61)); // This line is inserted only to test the fu
 // =============> write your answer here
 //3 times
 // Call formatTimeDisplay with an input of 61, now answer the following:
-// 00:01:01
+
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
 //61
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
-
+//0
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-
+/*
+The value assigned to num when pad is called for the last time is 1.
+The last call to pad in the template literal is pad(remainingSeconds). Since remainingSeconds = 61 % 60 = 1, the value passed to num is 1. This will return "01" after padding, resulting in the final output "00:01:01"
+*/
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
+/*
+The return value of the last call to pad is "01".
+Explanation: When pad is called with remainingSeconds (which equals 1), the parameter num receives the value 1. The function then converts it to a string "1", 
+pads it to 2 characters with leading zeros to get "01", and returns this string. This returned value "01" 
+is then inserted into the template literal as the last part of the time display, producing the final output "00:01:01".
+*/
