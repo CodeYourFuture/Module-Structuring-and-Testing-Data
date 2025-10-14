@@ -3,3 +3,6 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+
+// Code is executed line by line so the variable cityOfBirth is not defined when it is called in the console.log line.
