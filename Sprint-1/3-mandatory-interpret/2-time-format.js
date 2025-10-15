@@ -8,8 +8,8 @@ const totalHours = (totalMinutes - remainingMinutes) / 60;
 
 const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
-let movieDuration = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(movieDuration);
+let formattedDuration = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+console.log(formattedDuration);
 // For the piece of code above, read the code and then answer the following questions
 
 
@@ -28,9 +28,9 @@ console.log(movieDuration);
 //we are converting the seconds into minutes by dividing by 60 
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// we can change the name of the variable result into a clearer variable name like movieDuration
+// we can change the name of the variable result into a clearer variable name like formattedDuration
 //and if i want to change or update the value later i can use let instead of const
-// let movieDuration = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-//the result will be the duration of the movie in hours, minutes, and seconds.
+// formattedDuration = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+//the result will be the duration of the movie in hours, minutes, and seconds(hh:mm:ss) format
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 //yes it will work for all values of movieLength  because the code will always convert seconds into hours, minutes, and seconds format.
