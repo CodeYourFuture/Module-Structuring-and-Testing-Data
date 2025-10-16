@@ -23,12 +23,15 @@
 
 
 
-function takeSapcestoUpercase (textSnake){
-
-    let takespace = textExemple.split(" ");// returns array nned to tranform to string again before upercase
-    let transfStringAgain = takespace.join("_");
-    let changeUper = transfStringAgain.toUpperCase(1);
-    return changeUper;
+function takeSapcestoUpercase(inputString) {
+    
+  let takespace = inputString.split(" ");
+  let transfStringAgain = takespace.join("_");
+  let changeUper = transfStringAgain.toUpperCase();
+  return changeUper;
 };
-   let textExemple = "hello there";
+   let textExemple = "cat dog rabbit";
 console.log(takeSapcestoUpercase(textExemple));
+
+ let textExemple2 = "hello there";
+ console.log(takeSapcestoUpercase(textExemple2));

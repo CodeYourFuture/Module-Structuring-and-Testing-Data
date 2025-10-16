@@ -17,9 +17,10 @@ console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 // Finally, correct the code to fix the problem
 //  =============> to use the function that gives a result need to use RETURN not consol.log inside the function
 
-function multiply(a, b) {
-  const forAllMutiply = (a * b);
-  return forAllMutiply; //return can be use for diferents values/results
+function multiply(num1, num2) {
+  // const forAllMutiply = (a * b);
+  // return forAllMutiply; //return can be use for diferents values/results
+  return num1 * num2;
 }
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
