@@ -33,6 +33,10 @@ test("should return '11th' for 11", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
 });
 
+test("should return '-11th' for -11", () => {
+  expect(getOrdinalNumber(-11)).toEqual("-11th");
+});
+
 test("should return NaN for s", () => {
   expect(getOrdinalNumber("8")).toEqual(NaN);
 });
