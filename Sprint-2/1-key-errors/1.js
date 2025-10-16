@@ -48,6 +48,6 @@ function convertToPercentage(decimalNumber) {
   return percentage;
 }
 
-const ActualOutput = convertToPercentage(15);
-console.log(ActualOutput);
+const actualOutput = convertToPercentage(15);
+console.log(actualOutput);
 console.log(decimalNumber);
