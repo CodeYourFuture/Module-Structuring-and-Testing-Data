@@ -34,4 +34,4 @@ console.log(`£${pounds}.${pence}`);
 // 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2)  .padEnd(2, "0");
 //    This code takes the last digit from the string and also make sure that it has only two digits this gives a "99" value.
 // 6. console.log(`£${pounds}.${pence}`);
-//    his gives a result with £ sign and separated by . " in this case it gives £3.99 "
+//    This gives a result with £ sign and separated by . " in this case it gives £3.99 "
