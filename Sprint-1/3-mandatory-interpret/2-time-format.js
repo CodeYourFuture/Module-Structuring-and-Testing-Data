@@ -28,7 +28,7 @@ console.log(result);
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 // line 4 find how many  total minutes has in the month lenght. 
 // first gets te toal seconds less the reminds sconds. it gives the results of total seconds and divides it 
-//by the 60 ( minutes) = results homw many minutes has in the total lenght 
+//by the 60 ( minutes) = results homw many minutes has in the total lenght or movieTotalLength
 //8784 - 24 ==== 8760
 // 8760 / 60 equals 146 minutes
 

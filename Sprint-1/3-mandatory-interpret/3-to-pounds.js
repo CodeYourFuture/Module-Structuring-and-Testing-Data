@@ -1,4 +1,4 @@
-const penceString = "399p";
+const penceString = "9p";
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
@@ -36,7 +36,6 @@ console.log(`£${pounds}.${pence}`);
 //line 9 to 12= use substring to extrac from start form index 0 and string lenght taking 2 digits = reusl 3
 
 /// lines 14 to 16= const to the pence: the start indext for Substring will be 3-2= 1
-// substring with 1 argument wil start on the given indes and goes until the end = 99
-// padending (2, "0") will keep only 2 digits =99
+// true i got confused . padend make sure the pence part has 2 digits. if it dosen;t padend will add the 0 to it. if it has already 2 digits will stay the same 
 
 // line 18 = template literal with the results £3.99

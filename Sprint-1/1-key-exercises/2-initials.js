@@ -12,9 +12,9 @@ let lastName = "Johnson";
 
 let initials= `${firstName.charAt(0)} ${middleName.charAt(0)} ${lastName.charAt(0)}`;
 //test
-let initialsSecond = `${firstName.charAt(3)} ${middleName.charAt(2)} ${lastName.charAt(4)}`;
+//let initialsSecond = `${firstName.charAt(3)} ${middleName.charAt(2)} ${lastName.charAt(4)}`;
 
-console.log (initials, initialsSecond);
+console.log (initials);
 
 
 

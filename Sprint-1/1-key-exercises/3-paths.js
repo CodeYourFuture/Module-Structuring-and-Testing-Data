@@ -27,10 +27,3 @@ console.log(`The extension part is: ${extPart}`);
 
 // https://www.google.com/search?q=slice+mdn
 
-
-// let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-
-// let newFruits= fruits.slice(1,3);
-
-// console.log(newFruits)
-
