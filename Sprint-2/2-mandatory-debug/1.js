@@ -8,12 +8,12 @@
 // Therefore, any console.log using sum(10, 32) will display `undefined` in the output.
 
 
-function sum(a, b) {
-  return;
-  a + b;
-}
+//function sum(a, b) {
+  //return;
+  //a + b;
+//}
 
-console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
+//console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
 
 // =============> write your explanation here
 // Explanation
