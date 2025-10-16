@@ -13,7 +13,6 @@ function capitalise(str) {
 // =============> write your explanation here. My explanation: We have to change the name of variable and return it in order to fix an error.
 // =============> write your new code here
 function capitalise(str) {
-  let strChanged = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return strChanged;
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 console.log(capitalise("some string"));
