@@ -3,18 +3,26 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> Prediction of the error:
+// The function will give an error because '3' is not a valid variable name. 
+// Function parameters must have names, not numbers.
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> Error message:
+// SyntaxError: Unexpected number
 
-// =============> explain this error message here
+// =============> Explanation of the error:
+// 1. You cannot use a number as a parameter name. 
+// 2. Also, 'num' is not defined inside the function, so it will cause another error if we fix the parameter first.
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+// =============> Corrected Code:
+function square(num) {
+    return num
+}
 
 
