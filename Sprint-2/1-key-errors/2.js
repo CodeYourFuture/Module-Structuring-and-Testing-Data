@@ -3,18 +3,21 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> // It will throw a syntaxerror because in the function definition we sit the parameter name not the value
 
-function square(3) {
-    return num * num;
-}
+// function square(3) {
+//     return num * num;
+// }
 
-// =============> write the error message here
+// =============> SyntaxError: Unexpected number
 
-// =============> explain this error message here
+// =============> As I predicted we must set the parameter name in the definition
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+// =============> 
+    function square(num) {
+    return num * num;
+}
 
-
+console.log(square(3));
