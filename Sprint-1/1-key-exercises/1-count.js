@@ -6,3 +6,5 @@ count = count + 1;
 // Describe what line 3 is doing, in particular focus on what = is doing
 // Line 3  returns the incremented value of count. The operator = assigns count +1 to the varibale count in the
 // left.   
+
+// Describe what line 3 is doing. 
