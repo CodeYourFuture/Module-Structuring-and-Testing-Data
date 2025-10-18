@@ -11,6 +11,7 @@ function convertToPercentage(decimalNumber) {
 
   return percentage;=
 }
+
 console.log(decimalNumber);
 
 // =============> write your explanation here
