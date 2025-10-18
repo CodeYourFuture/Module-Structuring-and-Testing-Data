@@ -6,34 +6,15 @@
 // =============> write your prediction of the error here
 
 function square(3) {
-    
     return num * num;
 }
 
 // =============> write the error message here
 
-SyntaxError: Unexpected number
-
-
 // =============> explain this error message here
-
-the function takes the number we give it (3) and times it by itself.
-
-so 3 * 3 = 9.
-
-it works now cuz we used num instead of a number in the ()
-
 
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here
-
-function square(num){
-
-    return num * num
-  }
-  
-  console.log(square(3))
-  
 
 
