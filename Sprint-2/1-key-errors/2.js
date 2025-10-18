@@ -9,7 +9,6 @@ function square(3) {
     
     return num * num;
 }
-
 // =============> write the error message here
 
 SyntaxError: Unexpected number
