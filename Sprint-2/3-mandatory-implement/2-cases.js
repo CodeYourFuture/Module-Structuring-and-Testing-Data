@@ -14,3 +14,18 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+// function that turns text into UPPER_SNAKE_CASE
+
+function makeUpperSnake(text) {
+
+    let newText =text.replace(/ /g,'_');
+
+    newText = newText.toUpperCase();
+
+    return newText;
+
+  }
+  console.log(makeUpperSnake("hello there"));
+  console.log(makeUpperSnake("lord of the rings"));
+  
+
