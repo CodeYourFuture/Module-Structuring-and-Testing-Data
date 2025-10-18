@@ -32,6 +32,11 @@ console.log(result);
 
 //   Ans: the variable result represent total movie lenght, Movie duration_hr_min_sec would be better name.
 
+// In a "camel case" the following options would be better names
+// 1. MovieDurationHrMinSec 
+// 2. TotalMovieSpan
+// 3. TotalMoviePeriod
+
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 
 // Ans: I have tried with different values and it seems to work for all values, but it needs to validate to avoid entering negative values 
@@ -39,3 +44,4 @@ console.log(result);
 
 
 // Corrected typo reminder -----> remainder
+// Suggested better names in "camel case" a convention in Javascript
