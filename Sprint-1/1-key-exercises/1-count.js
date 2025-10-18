@@ -9,6 +9,8 @@
 
 // Described what line three is doing.
 
+// Example from codewar (from programming workshop)
+
 function drawStairs(n) {
 	let result = "";
 	if (n < 1) return result; // nothing to do
