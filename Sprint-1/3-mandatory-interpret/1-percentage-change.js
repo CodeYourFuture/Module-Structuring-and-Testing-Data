@@ -30,7 +30,6 @@ priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
 
 let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
-
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
 
