@@ -4,28 +4,3 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
-
-
-
-
-function toPounds(penceString) {
-
-    let numberStr =penceString.substring(0,penceString.length -1);
-  
-    numberStr = numberStr.padStart(3,"0");
-  
-    let pounds = numberStr.substring(0, numberStr.length -2);
-  
-    let pence = numberStr.substring(numberStr.length -2).padEnd(2,"0");
-  
-    return "£" +pounds + "." +pence;
-  }
-
-console.log(toPounds("399p"));
-console.log(toPounds("50p"));
-console.log(toPounds("5p"));
-console.log(toPounds("1200p"));
-
-  
-
-
