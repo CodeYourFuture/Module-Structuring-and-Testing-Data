@@ -8,9 +8,32 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  if (rank === "A") {
-    return 11;
+  const rank = card.slice(0,-1)
+  const suit = card.slice(-1) 
+  if (!["♠","♥","♦","♣"].includes(suit)) {
+    return "Invalid card rank.";
   }
+switch(rank) {
+  case "2":
+  case "3":
+  case "4":
+  case "5":
+  case "6":
+  case "7":
+  case "8":
+  case "9":
+    return parseInt(rank);
+  case "10":
+  case "J":
+  case "Q":
+  case "K":
+    return 10;
+  case "A":
+    return 11;
+  default:
+    return "Invalid card rank.";
+}
+
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,18 +63,36 @@ assertEquals(aceofSpades, 11);
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
 // ====> write your test here, and then add a line to pass the test in the function above
-
+assertEquals(fiveofHearts, 5);
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const kingofDiamonds = getCardValue("K♦");
+assertEquals(kingofDiamonds, 10);
+
+const tenofClubs = getCardValue("10♣");  
+assertEquals(tenofClubs, 10);
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
-
+const aceofHearts = getCardValue("A♥");
+assertEquals(aceofHearts, 11);
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+const invalidCard =  getCardValue("1♠");
+assertEquals(invalidCard, "Invalid card rank.");
+
+const invalidCard2 =  getCardValue("B♦");
+assertEquals(invalidCard2, "Invalid card rank.");
+
+const invalidCard3 =  getCardValue("11");
+assertEquals(invalidCard3, "Invalid card rank.");
+
+const invalidCard4 =  getCardValue("3😄");
+assertEquals(invalidCard4, "Invalid card rank.");
