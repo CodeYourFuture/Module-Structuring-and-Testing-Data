@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 100000; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -41,5 +41,15 @@ The value being passed to the console.log() function as an argument is the final
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 // The expression assigned to totalMinutes is (movieLength - remainingSeconds) / 60. This expression first subtracts the remaining seconds (calculated in line 3) from the total movie length in seconds (movieLength). This gives the total number of seconds that can be fully converted into minutes. Then, this result is divided by 60, since there are 60 seconds in a minute. The final result is the total number of full minutes in the movie length, excluding any leftover seconds.
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//  The variable result represents the formatted string that shows the movie length in hours, minutes, and seconds. A better name for this variable could be formattedMovieLength or movieDurationFormatted, as these names more clearly indicate that the variable contains a formatted representation of the movie's duration.
+// The variable result represents the formatted string that shows the movie length in hours, minutes, and seconds. A better name for this variable could be formattedMovieLength or movieDurationFormatted, as these names more clearly indicate that the variable contains a formatted representation of the movie's duration.
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+/*  
+Test 1-- movieLength = 5 | result = 0:0:5
+Test 2-- movieLength = 3725 | result = 1:2:5
+Test 3-- movieLength = 100000 | result = 27:46:40
+A - (In the first two examples above, the code is returning the 'result' without zero padding for single digit hours, minutes & seconds. 
+The typical time format requires zero padding for single digit h/m/s - (e.g., "1:2:5" should be "01:02:05"). 
+B - (In the third example above, the code correctly returned the result as 27:46:40 which is more than 24 hours which is the standard number of hours in a clock. 
+This may result in unhandled exception as the number of hours is above 24.)
+Based on the above, my opinion is that this code does not work as well as it could do for all values of movieLength.
+*/
