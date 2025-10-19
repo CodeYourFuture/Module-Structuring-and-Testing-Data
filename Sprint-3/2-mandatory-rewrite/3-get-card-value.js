@@ -33,7 +33,8 @@ function getCardValue(card) {
   if (["K", "Q", "J"].includes(rank)) return 10;
 
   // If rank is numeric (2-10), safely convert to number
-  return parseInt(rank, 10);
+  // we can use 'Number(rank)' instead of 'parseint(rank, 10)'
+  return Number(rank);
 }
 
 module.exports = getCardValue;
