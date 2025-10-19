@@ -16,4 +16,3 @@ function square(3) {
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here
-
