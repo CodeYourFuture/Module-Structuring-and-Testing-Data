@@ -3,18 +3,26 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// The function does not define the parameter correctly
+// Instead, the input has been inserted where the parameter name should be 
+// Then num is being used in the function body but it is not defined anywhere
 
-function square(3) {
-    return num * num;
-}
+// function square(3) {
+   // return num * num;
+// }
 
-// =============> write the error message here
-
-// =============> explain this error message here
+// SyntaxError: Unexpected number
+// The number 3 is used directly in the function parameter 
+// The function parameter should be num to accept any number as input
+// Then the function body can use num to square the input value
+//Defining a function should describe the parameters it expects, not specific values
 
 // Finally, correct the code to fix the problem
-
-// =============> write your new code here
+function square(num) {
+    return num * num;
+}
+console.log(square(5)); 
+console.log(square(10));
+console.log(square(-3));
 
 
