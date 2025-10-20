@@ -5,11 +5,11 @@
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes=time.slice(3,5)
-  if(hours<1){
+  if(hours===0){
     return `12:${minutes} am`
   }
-  if(hours==12 && minutes==00){
-    return "12:00 pm"
+  if(hours===12 ){
+    return `${hours}:${minutes} pm`
   }
   if (hours > 12) {
     return `${hours - 12}:${minutes} pm`;
@@ -52,8 +52,8 @@ console.assert(
   `current output: ${currentOutput5}, target output: ${targetOutput5}`
 );
 
-const currentOutput6 = formatAs12HourClock("12:00");
-const targetOutput6 = "12:00 pm";
+const currentOutput6 = formatAs12HourClock("12:59");
+const targetOutput6 = "12:59 pm";
 console.assert(
   currentOutput6 === targetOutput6,
   `current output: ${currentOutput6}, target output: ${targetOutput6}`
