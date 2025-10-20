@@ -19,7 +19,7 @@ console.log(result);
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
-//Remainder assignment. Which means when 8784 seconds is divided by 60 it gives 24.
+//Remainder assignment. Which means when 8784 seconds is divided by 60 it gives 146 with a remainder of 24.
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 //movieLength - remainingSeconds removes the leftover seconds that don’t make up a full minute.

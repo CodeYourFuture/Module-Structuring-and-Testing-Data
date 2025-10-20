@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// There are 5 function calls. Number(), carPrice.replaceAll(),priceAfterOneYear.replaceAll(), console.log(),percentageChange(),
+// There are 5 function calls. Number(), carPrice.replaceAll(),priceAfterOneYear.replaceAll(), console.log(),Number().
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 //The error is at line 5. It is a Syntax error. A comma is expected in between the two strings.By adding , in between the stings.
