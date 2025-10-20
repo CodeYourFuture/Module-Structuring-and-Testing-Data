@@ -8,9 +8,11 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) {
+  if (numerator < denominator && numerator !== 0) {
     return true;
   } else if (numerator >= denominator) {
+    return false;
+  } else if (numerator === 0) {
     return false;
   }
 }
@@ -61,3 +63,5 @@ assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
+const zeroNumerator = isProperFraction(0, 5);
+assertEquals(zeroNumerator, false);
