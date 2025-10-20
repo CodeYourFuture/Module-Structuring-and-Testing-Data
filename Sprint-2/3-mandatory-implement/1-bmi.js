@@ -17,12 +17,7 @@
 function calculateBMI(weight, height) {
   let sqh = height * height;
   let bmi = weight / sqh;
-  let bmiS = bmi.toString();
 
-  if (bmiS.includes(".")) {
-    let dotBmiS = bmiS.indexOf(".");
-    return Number(bmiS.slice(0, dotBmiS + 2));
-  }
-  return bmi;
+  return bmi.toFixed(1);
 }
 console.log(calculateBMI(20, 1.79));
