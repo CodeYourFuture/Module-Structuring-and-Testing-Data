@@ -25,7 +25,7 @@ console.log(result);
    //total time in minutes without the remaining seconds
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-   //"Movie length"
+   //it represents the total movie time , so.... const totalMovieTime perhaps
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
    //it will work with all values as long as they are numbers,
