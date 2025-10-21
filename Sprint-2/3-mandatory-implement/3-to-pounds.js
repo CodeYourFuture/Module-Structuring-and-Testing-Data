@@ -32,6 +32,16 @@ function toPounds (penceString) {
     return `£${pounds}.${pence}`;
 }
 console.log(toPounds("399p"));
+console.log(toPounds("5p"))
+console.log(toPounds("007p")); // leading zeroes handled -> £0.07
+// Edge cases and inputs this function does not handle well (demonstration)
+// 1) Missing trailing 'p' – the current implementation will drop the last character,
+//    so "399" is treated like "39" and becomes £0.39 (not what we want)
+console.log(toPounds("399"));
+
+// 2) Different trailing character – the function does not validate the trailing 'p',
+//    it simply removes the last character. "399P" still returns £3.99
+console.log(toPounds("399P"));
 
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
