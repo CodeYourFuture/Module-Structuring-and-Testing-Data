@@ -1,26 +1,44 @@
-/* 
-Password Validation
-
-Write a program that should check if a password is valid
-and returns a boolean
-
-To be valid, a password must:
-- Have at least 5 characters.
-- Have at least one English uppercase letter (A-Z)
-- Have at least one English lowercase letter (a-z)
-- Have at least one number (0-9)
-- Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
-- Must not be any previous password in the passwords array. 
-
-You must breakdown this problem in order to solve it. Find one test case first and get that working
-*/
 const isValidPassword = require("./password-validator");
+
+// Test 1: Password has at least 5 characters and is valid
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+  const password = "Abc1!";
+  const result = isValidPassword(password);
+  expect(result).toEqual(true);
+});
+
+// Test 2: Password too short
+test("password shorter than 5 characters is invalid", () => {
+  const password = "A1!a";
+  expect(isValidPassword(password)).toEqual(false);
+});
+
+// Test 3: Missing uppercase
+test("password without uppercase letter is invalid", () => {
+  const password = "abc1!";
+  expect(isValidPassword(password)).toEqual(false);
+});
+
+// Test 4: Missing lowercase
+test("password without lowercase letter is invalid", () => {
+  const password = "ABC1!";
+  expect(isValidPassword(password)).toEqual(false);
+});
+
+// Test 5: Missing number
+test("password without number is invalid", () => {
+  const password = "Abcde!";
+  expect(isValidPassword(password)).toEqual(false);
+});
+
+// Test 6: Missing special character
+test("password without special character is invalid", () => {
+  const password = "Abcde1";
+  expect(isValidPassword(password)).toEqual(false);
+});
+
+// Test 7: Password already used
+test("password that is already used is invalid", () => {
+  const password = "Password1!";
+  expect(isValidPassword(password)).toEqual(false);
+});
