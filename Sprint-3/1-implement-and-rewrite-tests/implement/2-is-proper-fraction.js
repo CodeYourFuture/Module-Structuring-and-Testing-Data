@@ -8,8 +8,12 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) {
+  if (denominator === 0) {
+    return "Invalid — denominator cannot be zero";
+  } else if (numerator * numerator < denominator * denominator) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -46,6 +50,7 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
+assertEquals(negativeFraction, true);
 // ====> complete with your assertion
 
 // Equal Numerator and Denominator check:
@@ -53,7 +58,27 @@ const negativeFraction = isProperFraction(-4, 7);
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
+assertEquals(equalFraction, false);
 // ====> complete with your assertion
 
 // Stretch:
 // What other scenarios could you test for?
+//Stretch 1 - Zero numerator
+const zeroNumerator = isProperFraction(0, 5);
+assertEquals(zeroNumerator, true);
+
+//Stretch 2 - Negative denominator
+const negativeDenominator = isProperFraction(4, -7);
+assertEquals(negativeDenominator, true);
+
+//Stretch 3 - Both numerator and denominator negative
+const bothNegative = isProperFraction(-2, -3);
+assertEquals(bothNegative, true);
+
+//Stretch 4 - Zero denominator (edge case)
+const zeroDenominator = isProperFraction(3, 0);
+assertEquals(zeroDenominator, "Invalid — denominator cannot be zero");
+
+//Stretch 5 - Both numerator and denominator negative (numerator absolute value > denominator absolute value)
+const bothNegative2 = isProperFraction(-5, -3);
+assertEquals(bothNegative2, false);
