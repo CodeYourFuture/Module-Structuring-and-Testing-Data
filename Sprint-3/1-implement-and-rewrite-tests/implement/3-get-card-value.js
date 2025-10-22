@@ -69,6 +69,7 @@ assertEquals(tenofDiamonds, 10);
 // Given a card with a rank of "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return 10
+//
 const jackofClubs = getCardValue("J♣");
 assertEquals(jackofClubs, 10);
 
