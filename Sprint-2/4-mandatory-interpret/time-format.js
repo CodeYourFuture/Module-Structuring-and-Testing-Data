@@ -1,8 +1,8 @@
-function pad(0) {
+function pad(num) {
   return num.toString().padStart(2, "0");
 }
 
-function formatTimeDisplay(61) {
+function formatTimeDisplay(num) {
   const remainingSeconds = seconds % 60;
   const totalMinutes = (seconds - remainingSeconds) / 60;
   const remainingMinutes = totalMinutes % 60;
