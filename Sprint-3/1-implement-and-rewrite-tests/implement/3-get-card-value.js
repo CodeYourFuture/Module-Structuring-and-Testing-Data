@@ -18,7 +18,7 @@ function getCardValue(card) {
     card = Number(card);
     return card;
   } else {
-    throw new Error("Invalid card rank.");
+    return "Invalid card rank.";
   }
 }
 
@@ -79,4 +79,5 @@ assertEquals(tenOfSpades, 10);
 // Then it should throw an error indicating "Invalid card rank."
 
 
-const invalidRandomCard = getCardValue("15♠"); 
+const invalidRandomCard = getCardValue("15♠");
+//assertEquals(invalidRandomCard, "Invalid card rank.");
