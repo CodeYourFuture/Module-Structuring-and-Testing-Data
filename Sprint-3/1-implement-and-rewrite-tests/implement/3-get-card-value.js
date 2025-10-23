@@ -55,13 +55,13 @@ assertEquals(fiveofHearts, 5);
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
 
-const kingofDiamonds = getCardValue("K♦");
+const kingofDiamonds = getCardValue("K");
 assertEquals(kingofDiamonds, 10);
-const queenofClubs = getCardValue("Q♣");
+const queenofClubs = getCardValue("Q");
 assertEquals(queenofClubs, 10);
-const jackofHearts = getCardValue("J♥");
+const jackofHearts = getCardValue("J");
 assertEquals(jackofHearts, 10);
-const tenofSpades = getCardValue("10♠");
+const tenofSpades = getCardValue("10");
 assertEquals(tenofSpades, 10);
 // Handle Ace (A):
 // Given a card with a rank of "A",
