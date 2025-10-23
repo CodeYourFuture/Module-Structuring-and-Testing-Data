@@ -11,12 +11,10 @@ function isProperFraction(numerator, denominator) {
   if (Math.abs(numerator) < Math.abs(denominator)) {
     return true;
   }
-  if (Math.abs(numerator) > Math.abs(denominator)) {
+  if (Math.abs(numerator) >= Math.abs(denominator)) {
     return false;
   }
-  if (Math.abs(numerator) === Math.abs(denominator) ){
-    return false;
-  }
+  
   if (isNaN(numerator)|| isNaN(denominator)) {
     return false;
   }
