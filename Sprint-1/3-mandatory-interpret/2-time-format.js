@@ -1,13 +1,18 @@
-const movieLength = 5464557657; // length of movie in seconds
+const movieLength = 1237401; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
+
 const totalMinutes = (movieLength - remainingSeconds) / 60;
 
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(result);
+const timeInHhMmSs = `${totalHours
+  .toString()
+  .padStart(2, "0")}:${remainingMinutes
+  .toString()
+  .padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
+console.log(timeInHhMmSs);
 
 // For the piece of code above, read the code and then answer the following questions
 
@@ -25,7 +30,7 @@ console.log(result);
    //total time in minutes without the remaining seconds
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-   //it represents the total movie time , so.... const totalMovieTime perhaps
+   //it represents the total movie time , so.... const timeInHhMmSs perhaps
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
    //it will work with all values as long as they are numbers,
