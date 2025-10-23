@@ -3,10 +3,17 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
+  if (!/^\d{2}:\d{2}$/.test(time)) { //If input does not match HH:MM format, returns string "Invalid time format"
+  return "Invalid time format";
+}
+
   const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
-  }
+  const minutes = time.slice(3);
+ if (hours === 0) return `12:${minutes} am`;
+  if (hours === 12) return `12:${minutes} pm`;
+    if (hours === 24) return `12:${minutes} am`;
+   if (hours > 12) return `${hours - 12}:00 pm`;
+
   return `${time} am`;
 }
 
@@ -23,3 +30,12 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+
+console.log(formatAs12HourClock("12:00")); // 
+console.log(formatAs12HourClock("00:00")); //
+console.log(formatAs12HourClock("15:30")); //
+console.log(formatAs12HourClock("11:45")); //
+console.log(formatAs12HourClock("24:00")); //
+console.log(formatAs12HourClock("ab:cd")); //
+console.log(formatAs12HourClock("9:00")); //
+console.log(formatAs12HourClock("09:0"));
