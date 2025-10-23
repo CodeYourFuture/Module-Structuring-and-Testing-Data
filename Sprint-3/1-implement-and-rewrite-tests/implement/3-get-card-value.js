@@ -8,9 +8,26 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
+  // Extract rank (everything except the last character, which is the suit)
+  const rank = card.slice(0, -1);
+
+  // Handle Ace
   if (rank === "A") {
     return 11;
   }
+
+  // Handle Face Cards
+  if (["K", "Q", "J", "10"].includes(rank)) {
+    return 10;
+  }
+
+  // Handle Number Cards (2–9)
+  if (!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 9) {
+    return Number(rank);
+  }
+
+  // Handle invalid inputs
+  throw new Error("Invalid card rank");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -39,19 +56,38 @@ assertEquals(aceofSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
-// ====> write your test here, and then add a line to pass the test in the function above
+assertEquals(fiveofHearts, 5);
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const jackOfDiamonds = getCardValue("J♦");
+assertEquals(jackOfDiamonds, 10);
+
+const queenOfClubs = getCardValue("Q♣");
+assertEquals(queenOfClubs, 10);
+
+const kingOfSpades = getCardValue("K♠");
+assertEquals(kingOfSpades, 10);
+
+const tenOfHearts = getCardValue("10♥");
+assertEquals(tenOfHearts, 10);
+
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const aceofClubs = getCardValue("A♣");
+assertEquals(aceofClubs, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+try {
+  getCardValue("X♣");
+} catch (error) {
+  assertEquals(error.message, "Invalid card rank");
+}
