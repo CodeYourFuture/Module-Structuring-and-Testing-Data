@@ -85,3 +85,4 @@ console.log(getCardValue("10♣"));
 console.log(getCardValue("J♦"));
 console.log(getCardValue("A♥"));
 console.log(getCardValue("11♠"));
+console.log(getCardValue("J"));
