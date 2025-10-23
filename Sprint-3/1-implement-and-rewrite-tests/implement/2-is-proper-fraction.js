@@ -8,16 +8,10 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) {
-    return true;
-  }
-  if (numerator < 0 && Math.abs(numerator) < denominator) {
-    return false;
+  if (denominator === 0) {
+    return false; 
   } 
-  if (numerator >= denominator) {
-    return false;
-  }
-  // we could add more checks here for invalid input, but not required for this exercise
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
