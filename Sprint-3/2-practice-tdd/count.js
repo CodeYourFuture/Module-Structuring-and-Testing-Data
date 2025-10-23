@@ -23,20 +23,20 @@ function countChar(stringOfCharacters, findCharacter) {
 }
 
 // Examples
-countChar("hello", "l"); // returns 2
-countChar("javascript", "a"); // returns 2
-countChar("hello", "z"); // returns 0
-countChar("null", ""); // "Error: The character to count must be a single character."
-countChar("", "a"); // "Error: The string cannot be empty."
-countChar("hello", "ll"); // "Error: The character to count must be a single character."
-countChar("hipopotamos' make wonderful pets", "o"); // returns 3
-countChar("hipopotamos", "p"); // returns 1
-countChar("hipopotamos' are a friendly animal", "t"); // returns 1
-countChar("hipopotamos", "x"); // returns 0
-countChar("Pneumonoultramicroscopicsilicovolcanoconiosis", "i"); // returns 6
-console.log(countChar("null", ""));
-console.log(countChar("", "a"));
-console.log(countChar("hello", "ll"));
-countChar(null, "a"); // "Error: The string cannot be empty."
+console.log(countChar("hello", "l")); // Expected: 2
+console.log(countChar("javascript", "a")); // Expected: 2
+console.log(countChar("hello", "z")); // Expected: 0
+console.log(countChar("null", "")); // Expected: "Error: The character to count must be a single character."
+console.log(countChar("", "a")); // Expected: "Error: The string cannot be empty."
+console.log(countChar("hello", "ll")); // Expected: "Error: The character to count must be a single character."
+console.log(countChar("hipopotamos' make wonderful pets", "o")); // Expected: 3
+console.log(countChar("hipopotamos", "p")); // Expected: 1
+console.log(countChar("hipopotamos' are a friendly animal", "t")); // Expected: 1
+console.log(countChar("hipopotamos", "x")); // Expected: 0
+console.log(countChar("Pneumonoultramicroscopicsilicovolcanoconiosis", "i")); // Expected: 6
+console.log(countChar("null", "")); // Expected: "Error: The character to count must be a single character."
+console.log(countChar("", "a")); // Expected: "Error: The string cannot be empty."
+console.log(countChar("hello", "ll")); // Expected: "Error: The character to count must be a single character."
+console.log(countChar(null, "a")); // Expected: "Error: The input string cannot be null or undefined."
 
 module.exports = countChar;
