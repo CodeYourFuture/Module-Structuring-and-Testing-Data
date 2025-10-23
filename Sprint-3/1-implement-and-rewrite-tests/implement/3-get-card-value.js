@@ -8,22 +8,21 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank = card.slice(0, -1); // remove the suit symbol
+  const rank = card.slice(0, -1);
 
   if (rank === "A") {
     return 11;
-  }
-
-  if (["K", "Q", "J", "10"].includes(rank)) {
+  } else if (rank === "K" || rank === "Q" || rank === "J" || rank === "10") {
     return 10;
-  }
+  } else {
+    const numericRank = parseInt(rank, 10);
 
-  const numeric = parseInt(rank);
-  if (!isNaN(numeric)) {
-    return numeric;
+    if (!isNaN(numericRank) && numericRank >= 2 && numericRank <= 9) {
+      return numericRank;
+    } else {
+      throw new Error(`Invalid or unrecognized card rank: "${rank}"`);
+    }
   }
-
-  throw new Error("Invalid card rank.");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -88,7 +87,7 @@ try {
   console.assert(false, "Expected an error for invalid card rank");
 } catch (error) {
   console.assert(
-    error.message === "Invalid card rank.",
-    `Expected error message "Invalid card rank.", got "${error.message}"`
+    error.message === 'Invalid or unrecognized card rank: "Z"',
+    `Expected error message 'Invalid or unrecognized card rank: "Z"', got "${error.message}"`
   );
 }
