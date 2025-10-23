@@ -3,18 +3,29 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> First there is a number inside the function which is not allowed in JavaScript it should be a variable name
+//the second mistake is num is not declared
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> Uncaught SyntaxError: Unexpected number
+// =============> we put a number (3)where JavaScript expected a variable name 
+//Uncaught SyntaxError: Illegal return statement
 
-// =============> explain this error message here
+//we cant use return inside the function without declaring the function properly
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+
+// =============> 
+function square(num) {
+  return num * num;
+}
+console.log(square(3));  // the answer should be 9
+console.log(square(5));  // the answer should be 25
+console.log(square(10)); // the answer should be 100
+
 
 
