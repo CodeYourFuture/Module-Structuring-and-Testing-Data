@@ -14,7 +14,7 @@
 
 // =============> As I predict it will throw a SyntaxError: Identifier 'str' has already been declared
 //because in JavaScript we can not redeclare the same variable in the same scope. 
-function Capitalise(str){
+function capitalise(str){
   return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
-console.log(Capitalise("ahmadHmedan"));
+console.log(capitalise("ahmadHmedan"));
