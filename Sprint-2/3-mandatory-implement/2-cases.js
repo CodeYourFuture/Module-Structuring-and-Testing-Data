@@ -15,21 +15,25 @@
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
-function ConvertToUpperSnakeCase(s1)
-{
- let result = "";
-    for(let i=0;i<s1.length;i++)
-    {
+// function ConvertToUpperSnakeCase(s1)
+// {
+//  let result = "";
+//     for(let i=0;i<s1.length;i++)
+//     {
        
-        if(s1[i]===" ")
-        {
-           result+=s1[i]="_";
-        }
-        else
-            result+=s1[i];
-    }
-        let UPPER_SNAKE_CASE=result.toUpperCase();
-   return UPPER_SNAKE_CASE;
-}
-console.log(ConvertToUpperSnakeCase("Ahmad Hmedan"));
+//         if(s1[i]===" ")
+//         {
+//            result+=s1[i]="_";
+//         }
+//         else
+//             result+=s1[i];
+//     }
+//         let UPPER_SNAKE_CASE=result.toUpperCase();
+//    return UPPER_SNAKE_CASE;
+// }
+// console.log(ConvertToUpperSnakeCase("Ahmad Hmedan"));
 
+function convertToUpperSnakeCase(str) {
+  return str.replaceAll(" ", "_").toUpperCase();
+}
+console.log(convertToUpperSnakeCase("Ahmad Hmedan"));
