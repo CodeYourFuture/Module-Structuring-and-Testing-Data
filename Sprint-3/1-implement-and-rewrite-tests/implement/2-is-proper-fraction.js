@@ -8,23 +8,20 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
+  if (typeof numerator !== "number" || typeof denominator !== "number") {
+    return false; // Invalid input types
+  }
+
   if (denominator === 0) {
-    return false; 
-  } 
-  return Math.abs(numerator) < Math.abs(denominator);
+    return false; // Division by zero is undefined
+  }
+
+  const value = numerator / denominator;
+  return Math.abs(value) < 1; // Proper fraction if the value is between -1 and 1
 }
 
-// The line below allows us to load the isProperFraction function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
 
-// here's our helper again
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
 
 // Acceptance criteria:
 
