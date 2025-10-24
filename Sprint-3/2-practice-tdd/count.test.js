@@ -31,3 +31,76 @@ test("should return 0 for no occurrences", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+
+// Scenario: Multiple occurrences
+test("should count multiple occurrences of a character", () => {
+  const str = "aaaaa";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(5);
+});
+
+// Scenario: No occurrences
+test("should return 0 for no occurrences", () => {
+  const str = "hello";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Empty string
+test("should return 0 when input string is empty", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Empty character
+test("should return 0 when character input is empty", () => {
+  const str = "hello";
+  const char = "";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Character longer than 1
+test("should return 0 when character input is longer than one character", () => {
+  const str = "hello";
+  const char = "ll";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: char string longer than str string
+test("should return 0 when char is longer than the input string", () => {
+  const str = "a";
+  const char = "abc";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Non-string inputs
+test("should return 0 when inputs are not strings", () => {
+  expect(countChar(12345, "1")).toEqual(0);
+  expect(countChar("12345", 1)).toEqual(0);
+  expect(countChar(null, "a")).toEqual(0);
+  expect(countChar("hello", undefined)).toEqual(0);
+});
+
+// Scenario: Case sensitivity
+test("should count only exact case matches", () => {
+  const str = "AaAaA";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+});
+
+// Scenario: Spaces and special characters
+test("should correctly count spaces and symbols", () => {
+  const str = "a b c d e ! !";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(6);
+});
