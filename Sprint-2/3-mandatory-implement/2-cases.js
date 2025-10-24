@@ -28,8 +28,8 @@
 //         else
 //             result+=s1[i];
 //     }
-//         let UPPER_SNAKE_CASE=result.toUpperCase();
-//    return UPPER_SNAKE_CASE;
+//         let upperSnakeCase=result.toUpperCase();
+//    return upperSnakeCase;
 // }
 // console.log(ConvertToUpperSnakeCase("Ahmad Hmedan"));
 
