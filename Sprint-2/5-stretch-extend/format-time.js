@@ -5,20 +5,20 @@
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes=time.slice(3,5)
-  if(hours==0){
+  if(hours === 0){
     return `12:${minutes} am`
   }
-  if(hours===12 ){
+  if(hours === 12 ){
     return `${hours}:${minutes} pm`
   }
   if (hours > 12) {
     return `${hours - 12}:${minutes} pm`;
   }
-  return `${time} am`;
+  return `${hours}:${minutes} am`;
 }
-
+console.log(formatAs12HourClock("01:33"))
 const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
+const targetOutput = "8:00 am";
 console.assert(
   currentOutput === targetOutput,
   `current output: ${currentOutput}, target output: ${targetOutput}`
