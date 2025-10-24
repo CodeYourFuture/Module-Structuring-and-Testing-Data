@@ -1,6 +1,6 @@
 // This is the latest solution to the problem from the prep.
 // Make sure to do the prep before you do the coursework
-// 
+//
 // function formatAs12HourClock(time) {
 //   const hours = Number(time.slice(0, 2));
 //   if (hours > 12) {
@@ -33,8 +33,7 @@
 //   `current output: ${currentOutput4}, target output: ${targetOutput4}`
 // )
 
-
-// This is my version 
+// This is my version
 function TimeAs12hours(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(3);
@@ -88,8 +87,8 @@ console.assert(
   `current time:${currentTime}, Target Time:${targetTime}`
 );
 
-currentTime=TimeAs12hours("12:00");
-targetTime="12:00 pm";
+currentTime = TimeAs12hours("12:00");
+targetTime = "12:00 pm";
 console.assert(
   currentTime === targetTime,
   `current time:${currentTime}, Target Time:${targetTime}`
