@@ -17,3 +17,10 @@
 function calculateBMI(weight, height) {
     // return the BMI of someone based off their weight and height
 }
+(calculateBMI(weight/hight*hight));
+    let bmi = 85 / (1.54 * 1.54);
+    console.log(bmi)
+   //here the result was 35.833307439446366 I need to round it to 1 decimal place
+   console.log(bmi.toFixed(1));
+   //now the output is 35.8
+   
