@@ -8,8 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+  if (rank === "A") {
+    return 11;
+  }
 }
+
+// The line below allows us to load the getCardValue function into tests in other files.
+// This will be useful in the "rewrite tests with jest" step.
+module.exports = getCardValue;
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
