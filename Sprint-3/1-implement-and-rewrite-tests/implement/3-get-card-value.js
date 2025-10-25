@@ -15,10 +15,10 @@ function getCardValue(card) {
     return 11;
   }
   
-  const numValue = parseInt(rank, 10);
-  if (numValue >= 2 && numValue <= 10) {
-    return numValue;
-  }
+const numeric = Number(rank);            
+if (Number.isInteger(numeric) && numeric >= 2 && numeric <= 10) {
+  return numeric;
+}
   
   if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
