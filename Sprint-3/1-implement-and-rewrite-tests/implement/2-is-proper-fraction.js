@@ -8,8 +8,13 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
+<<<<<<< HEAD
+  if (denominator) {
+    return true;
+=======
   if (typeof numerator !== "number" || typeof denominator !== "number") {
     return false; // Invalid input types
+>>>>>>> 52740052fb0ad97a2c7253a04978b14a15b9e763
   }
 
   if (denominator === 0) {
