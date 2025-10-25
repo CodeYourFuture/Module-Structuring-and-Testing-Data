@@ -21,9 +21,9 @@ function calculateBmi(weight,height) {
 
 function calculateBMI (weight,height) {
 
-    let bmi = weight / (height*height)
+    const bmi = weight / (height*height)
 
-    return bmi.toFixed(1)
+    return Math.round(bmi * 10) / 10;
 
   }
   
