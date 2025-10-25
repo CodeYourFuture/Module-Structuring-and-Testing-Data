@@ -1,6 +1,4 @@
 function repeat(str, count) {
-  //const str = arguments[0];
-  //const count = arguments[1];
   if (count < 0) {
     throw new Error("Count must be a non-negative integer");
   }
