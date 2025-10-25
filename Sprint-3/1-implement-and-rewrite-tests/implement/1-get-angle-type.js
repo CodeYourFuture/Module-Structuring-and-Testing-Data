@@ -16,7 +16,7 @@ function getAngleType(angle) {
     return "Acute angle";
   }
    // Then keep going for the other cases, one at a time.
-  if (angle > 90 && angle < 180) {
+  if (angle < 180) {
     return "Obtuse angle";
   }
   if (angle === 180) {
