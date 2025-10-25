@@ -8,14 +8,12 @@ function getOrdinalNumber(num) {
     return num + "th";
   } else if (num.slice(-1) === "1") {
     return num + "st";
-    return num + "st";
   } else if (num.slice(-1) === "2") {
     return num + "nd";
   } else if (num.slice(-1) === "3") {
     return num + "rd";
-  } else {
-    return num + "th";
   }
+  return num + "th";
 }
 
 module.exports = getOrdinalNumber;
