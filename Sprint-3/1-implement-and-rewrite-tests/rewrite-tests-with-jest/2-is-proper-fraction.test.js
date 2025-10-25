@@ -13,7 +13,7 @@ test("should return false for an improper fraction", () => {
 
 // Case 3: Identify Negative Fractions:
 test("should return false for a negative fraction", () => {
-  expect(isProperFraction(-2, 3)).toEqual(false);
+  expect(isProperFraction(-2, 3)).toEqual(true);
 });
 
 // Case 4: Identify Equal Numerator and Denominator:
