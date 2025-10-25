@@ -22,9 +22,9 @@ test("append 'rd' to numbers ending in 3, except those ending in 13", () => {
   expect(getOrdinalNumber(133)).toEqual("133rd");
 });
 
-test("should return 'th' for the rest numbers", () => {
+test("should return 'th' for numbers where the last digit is not 1, 2, or 3, excluding special cases 11–13", () => {
   expect(getOrdinalNumber(10)).toEqual("10th");
   expect(getOrdinalNumber(11)).toEqual("11th");
-  expect(getOrdinalNumber(34)).toEqual("34th");
+  expect(getOrdinalNumber(13)).toEqual("13th");
   expect(getOrdinalNumber(134)).toEqual("134th");
 });
