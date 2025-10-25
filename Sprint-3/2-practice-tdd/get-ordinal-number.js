@@ -6,11 +6,14 @@ function getOrdinalNumber(num) {
     num.slice(-2) === "13"
   ) {
     return num + "th";
-  } else if (num.slice(-1) === "1") {
+  }
+  if (num.slice(-1) === "1") {
     return num + "st";
-  } else if (num.slice(-1) === "2") {
+  }
+  if (num.slice(-1) === "2") {
     return num + "nd";
-  } else if (num.slice(-1) === "3") {
+  }
+  if (num.slice(-1) === "3") {
     return num + "rd";
   }
   return num + "th";
