@@ -11,6 +11,18 @@ function isProperFraction(numerator, denominator) {
   if (numerator < denominator) {
     return true;
   }
+  if (numerator > denominator) {
+    return false;
+  }
+  if (numerator === denominator) {
+    return true;
+  }
+  if (numerator === 0) {
+    return true;
+  }
+  if (denominator===0) {
+    return true;
+  }
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -47,6 +59,7 @@ assertEquals(improperFraction, false);
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
 // ====> complete with your assertion
+assertEquals(negativeFraction, true);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
@@ -54,6 +67,20 @@ const negativeFraction = isProperFraction(-4, 7);
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
 // ====> complete with your assertion
+assertEquals(equalFraction, true);
 
 // Stretch:
 // What other scenarios could you test for?
+// zero value check:
+// Input: numerator = 0, denominator = 5
+// target output: true
+// Explanation: The fraction 0/5 will be zero because zero divided any number will give zero. The function should return true.
+const zeroValue = isProperFraction(0, 5);
+assertEquals(zeroValue, true);
+
+// undefine value check:
+// Input: numerator = 5, denominator = 0
+// target output: true
+// Explanation: The fraction 5/0 will be undefine because any number divided by zero will be undefine. The function should return true.
+const undefine = isProperFraction(0, 5);
+assertEquals(undefine, true);
