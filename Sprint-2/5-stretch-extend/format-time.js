@@ -4,8 +4,8 @@
 
 function formatAs12HourClock(time) {
   // Expect time in "HH:MM" format
-  let hours = Number(time.slice(0, 2));
-  let mins = time.slice(3);
+  const hours = Number(time.slice(0, 2));
+  const mins = time.slice(3);
 
   if (hours === 0) {
     return `12:${mins} am`;
@@ -16,7 +16,7 @@ function formatAs12HourClock(time) {
   }
 
   if (hours > 12) {
-    let newHr = hours - 12;
+    const newHr = hours - 12;
     // pad single digits like 1:00 -> 01:00
     return `${String(newHr).padStart(2, "0")}:${mins} pm`;
   }
