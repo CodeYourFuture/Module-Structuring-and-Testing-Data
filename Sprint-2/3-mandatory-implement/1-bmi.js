@@ -20,7 +20,7 @@
   const bmi = weight / (height * height);
 
   // Round to 1 decimal place and return
-  return bmi.toFixed(1);
+  return Number(bmi.toFixed(1));
 }
 
 // Test cases
@@ -28,3 +28,4 @@ console.log(calculateBMI(85, 1.54)); // 35.8
 console.log(calculateBMI(60, 1.65)); // 22.0
 console.log(calculateBMI(72, 1.80)); // 22.2
 // now the function is reusable and correct.
+console.log(typeof calculateBMI(85, 1.54));
