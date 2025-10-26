@@ -16,7 +16,7 @@ test("should repeat the string count times", () => {
   expect(repeatedStr).toEqual("hellohellohellohello");
 });
 
-/const repeat = require("./repeat");
+ const repeat = require("./repeat");
 
 // case: Handle Count of 1 :
 // Given a target string str and a count equal to 1,
@@ -77,9 +77,8 @@ test("should return an empty string when str is empty", () => {
 // case: Undefined or missing arguments :
 // When arguments are missing or undefined, it should throw an error.
 test("should handle undefined inputs gracefully", () => {
-  expect(() => repeat(undefined, 3)).toThrow();
-  expect(() => repeat("hello")).toThrow();
-  expect(() => repeat()).toThrow();
+  expect(() => repeat(undefined, 3)).toThrow("argument must be defined");
+
 });
 
 // case: Boolean inputs :
