@@ -11,9 +11,20 @@ test("should return false for an improper fraction", () => {
   expect(isProperFraction(5, 3)).toEqual(false);
 });
 
-// Case 3: Identify Negative Fractions:
-test("should return false for a negative fraction", () => {
-  expect(isProperFraction(-2, 3)).toEqual(true);
+
+// Case 3: Function call with negative parameters
+// Negative proper fraction: numerator absolute value less than denominator
+test("should return true for negative proper fraction", () => {
+  expect(isProperFraction(-2, 3)).toEqual(true); // -2/3 is proper
+  expect(isProperFraction(2, -3)).toEqual(true); // 2/-3 is proper
+  expect(isProperFraction(-2, -3)).toEqual(true); // -2/-3 is proper
+});
+
+// Negative improper fraction: numerator absolute value greater than or equal to denominator
+test("should return false for negative improper fraction", () => {
+  expect(isProperFraction(-5, 3)).toEqual(false); // -5/3 is improper
+  expect(isProperFraction(5, -3)).toEqual(false); // 5/-3 is improper
+  expect(isProperFraction(-5, -3)).toEqual(false); // -5/-3 is improper
 });
 
 // Case 4: Identify Equal Numerator and Denominator:
