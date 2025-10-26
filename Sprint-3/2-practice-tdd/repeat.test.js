@@ -16,7 +16,6 @@ test("should repeat the string count times", () => {
   expect(repeatedStr).toEqual("hellohellohellohello");
 });
 
- const repeat = require("./repeat");
 
 // case: Handle Count of 1 :
 // Given a target string str and a count equal to 1,
