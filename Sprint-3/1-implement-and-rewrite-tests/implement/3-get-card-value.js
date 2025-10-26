@@ -15,10 +15,11 @@ function getCardValue(card) {
     return 11;
   }
   
-const numeric = Number(rank);            
-if (Number.isInteger(numeric) && numeric >= 2 && numeric <= 10) {
-  return numeric;
-}
+  // Strictly validate rank for number cards (2-10)
+  const validRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  if (validRanks.includes(rank)) {
+    return Number(rank);
+  }
   
   if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;

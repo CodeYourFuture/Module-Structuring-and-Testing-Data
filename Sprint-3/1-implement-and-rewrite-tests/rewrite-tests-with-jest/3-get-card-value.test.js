@@ -47,9 +47,9 @@ test("should return correct value for all number cards 2-10", () => {
 });
 
 test("should handle numeric-literal edge cases", () => {
-  expect(getCardValue("0x02♠")).toEqual(2); 
+  expect(getCardValue("0x02♠")).toBeUndefined(); 
   expect(getCardValue("2.1♠")).toBeUndefined();      
-  expect(getCardValue("0002♠")).toEqual(2);     
+  expect(getCardValue("0002♠")).toBeUndefined();     
 });
 
 test("should return 10 for all face cards", () => {
