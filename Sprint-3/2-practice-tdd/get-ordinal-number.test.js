@@ -8,12 +8,12 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-test("should return NaN for 1.5", () => {
-  expect(getOrdinalNumber(1.5)).toEqual(NaN);
-});
+test("should return 'not an integer number' for 1.5", () => {
+  expect(getOrdinalNumber(1.5)).toEqual("not an integer number");
+}); 
 
-test("should return NaN for 0", () => {
-  expect(getOrdinalNumber(0)).toEqual(NaN);
+test("should return 'invalid number' for 0", () => {
+  expect(getOrdinalNumber(0)).toEqual("invalid number");
 });
 
 test("should return '1st' for 1", () => {
