@@ -1,4 +1,5 @@
 function repeat(str,count) {
+  
   if(count<0){
     return "Error: negative numbers are not valid";
   }
@@ -6,6 +7,4 @@ function repeat(str,count) {
 }
 
 module.exports = repeat;
-
-
 
