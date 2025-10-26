@@ -8,22 +8,19 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank=card.slice(0,-1);
+  const rank = card.slice(0, -1);
   if (rank === "A") {
     return 11;
   }
-  if(rank==="J" || rank==="Q" || rank==="K")
-  {
+  if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
   }
-  const convertTheStringtoNumber=Number(rank);
-if (convertTheStringtoNumber>=2 && convertTheStringtoNumber<=10){
-  return convertTheStringtoNumber;
-}
-else 
-{
-  return "Invalid card rank";
-}
+  const convertTheStringtoNumber = Number(rank);
+  if (convertTheStringtoNumber >= 2 && convertTheStringtoNumber <= 10) {
+    return convertTheStringtoNumber;
+  } else {
+    return "Invalid card rank";
+  }
 }
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -52,17 +49,17 @@ assertEquals(aceofSpades, 11);
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
 // ====> write your test here, and then add a line to pass the test in the function above
-assertEquals(fiveofHearts,5);
+assertEquals(fiveofHearts, 5);
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
 const jackofHearts = getCardValue("J♥");
-assertEquals(jackofHearts,10);
+assertEquals(jackofHearts, 10);
 const queenofSpades = getCardValue("Q♠");
-assertEquals(queenofSpades,10);
+assertEquals(queenofSpades, 10);
 const kingofSpades = getCardValue("K♠");
-assertEquals(kingofSpades,10);
+assertEquals(kingofSpades, 10);
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
