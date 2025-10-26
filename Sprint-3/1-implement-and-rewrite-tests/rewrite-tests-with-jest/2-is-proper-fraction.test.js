@@ -7,8 +7,8 @@ test("should return true for a proper fraction", () => {
 });
 
 // Case 2: Identify Improper Fractions:
-test("returns false for an improper fraction",()=>{
-  expect(isProperFraction(5,2)).toEqual(false);
+test("returns false for an improper fraction", () => {
+  expect(isProperFraction(5, 2)).toEqual(false);
 });
 // Case 3: Identify Negative Fractions:
 test("returns true for a negative proper fraction( absolute value of the numerator is less than the denominator)", () => {
