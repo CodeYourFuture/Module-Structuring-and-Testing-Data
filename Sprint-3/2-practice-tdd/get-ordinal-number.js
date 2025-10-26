@@ -1,13 +1,18 @@
 function getOrdinalNumber(num) {
-  if (typeof num !== "number" ||!Number.isInteger(num) || num === 0 ) {
+  if (typeof num !== "number") {
     return NaN;
   }
- 
-  const lastDigit=Number(num.toString().slice(-1));
-  const lastTwoDigits=Number(num.toString().slice(-2));
+  if(!Number.isInteger(num)){
+    return "not an integer number";
+  }
+  if(num === 0 ){
+    return "invalid number";
+  }
 
+  const lastDigit = Number(num.toString().slice(-1));
+  const lastTwoDigits = Number(num.toString().slice(-2));
 
-  if(lastTwoDigits>=10 && lastTwoDigits<=13){
+  if (lastTwoDigits >= 10 && lastTwoDigits <= 13) {
     return `${num}th`;
   }
 
@@ -18,10 +23,8 @@ function getOrdinalNumber(num) {
   } else if (lastDigit === 3) {
     return `${num}rd`;
   }
-  
+
   return `${num}th`;
-
 }
-console.log(getOrdinalNumber(-1))
-module.exports = getOrdinalNumber;
 
+module.exports = getOrdinalNumber;
