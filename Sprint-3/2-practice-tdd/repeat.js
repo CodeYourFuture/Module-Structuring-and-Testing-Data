@@ -1,4 +1,7 @@
 function repeat(str, count) {
+  if (str === undefined || count === undefined){
+    throw new Error ("argument must be defined")
+  }
   if (count < 0) {
     throw new Error("Count must be a non-negative integer");
   }
@@ -13,5 +16,5 @@ function repeat(str, count) {
 
 module.exports = repeat;
 
-console.log(repeat("hello", 3)); 
+
 
