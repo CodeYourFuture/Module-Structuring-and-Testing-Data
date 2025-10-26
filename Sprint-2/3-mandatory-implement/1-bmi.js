@@ -14,13 +14,17 @@
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
 
-function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+// I have made a small change to the test cases to ensure they match the expected output to 1 decimal place
+   function calculateBMI(weight, height) {
+  // Calculate BMI using the formula: weight (kg) / (height (m) * height (m))
+  const bmi = weight / (height * height);
+
+  // Round to 1 decimal place and return
+  return bmi.toFixed(1);
 }
-(calculateBMI(weight/hight*hight));
-    let bmi = 85 / (1.54 * 1.54);
-    console.log(bmi)
-   //here the result was 35.833307439446366 I need to round it to 1 decimal place
-   console.log(bmi.toFixed(1));
-   //now the output is 35.8
-   
+
+// Test cases
+console.log(calculateBMI(85, 1.54)); // 35.8
+console.log(calculateBMI(60, 1.65)); // 22.0
+console.log(calculateBMI(72, 1.80)); // 22.2
+// now the function is reusable and correct.
