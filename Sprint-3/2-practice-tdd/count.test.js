@@ -50,7 +50,7 @@ test("should return 0 if the character doesn't appear in the string", () => {
   expect(count).toEqual(0);
 });
 
-test("should return 0 if the character doesn't appear in the string", () => {
+test("should return 1 when substring appears once in the string", () => {
   const str = "aaca";
   const char = "ac";
   const count = countChar(str, char);
