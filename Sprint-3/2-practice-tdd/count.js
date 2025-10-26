@@ -12,4 +12,4 @@ function countChar(stringOfCharacters, findCharacter) {
 }
 
 module.exports = countChar;
-console.log(countChar("aaaaa","a"));
+
