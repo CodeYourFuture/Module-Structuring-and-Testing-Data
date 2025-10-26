@@ -17,10 +17,3 @@ function getOrdinalNumber(num) {
 
 module.exports = getOrdinalNumber;
 
-console.log(getOrdinalNumber(1));
-console.log(getOrdinalNumber(2));
-console.log(getOrdinalNumber(3));
-console.log(getOrdinalNumber(4));
-console.log(getOrdinalNumber(11));
-console.log(getOrdinalNumber(22));
-console.log(getOrdinalNumber(33));
