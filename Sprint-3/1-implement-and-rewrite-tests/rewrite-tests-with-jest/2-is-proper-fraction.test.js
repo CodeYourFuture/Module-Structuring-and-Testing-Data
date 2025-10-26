@@ -1,62 +1,53 @@
 const isProperFraction = require("../implement/2-is-proper-fraction");
 
-<<<<<<< HEAD
 // Case 1: Proper fraction
 // When numerator < denominator, it should return true.
 test("should return true for a proper fraction", () => {
-=======
+
 // Case 1: Proper Fraction
 // Given a numerator smaller than denominator (2/3),
 // When the function is called,
 // Then it should return true because it's a proper fraction.
 test("should return true for a proper fraction (2/3)", () => {
->>>>>>> 52740052fb0ad97a2c7253a04978b14a15b9e763
   expect(isProperFraction(2, 3)).toEqual(true);
 });
 
-<<<<<<< HEAD
 // Case 2: Improper fraction
 // When numerator > denominator, it should return false.
 test("should return false for an improper fraction", () => {
-=======
+
 // Case 2: Improper Fraction
 // Given a numerator greater than denominator (5/2),
 // When the function is called,
 // Then it should return false because it's an improper fraction.
 test("should return false for an improper fraction (5/2)", () => {
->>>>>>> 52740052fb0ad97a2c7253a04978b14a15b9e763
   expect(isProperFraction(5, 2)).toEqual(false);
 });
 
-<<<<<<< HEAD
 // Case 3: Negative proper fraction
 // When numerator is negative but |numerator| < |denominator|, it should return true.
 test("should return true for a negative proper fraction", () => {
-=======
+
 // Case 3: Negative Proper Fraction
 // Given a negative proper fraction (-1/2),
 // When the function is called,
 // Then it should return true because the value is between -1 and 1.
 test("should return true for a negative proper fraction (-1/2)", () => {
->>>>>>> 52740052fb0ad97a2c7253a04978b14a15b9e763
   expect(isProperFraction(-1, 2)).toEqual(true);
 });
 
-<<<<<<< HEAD
 // Case 4: Equal numerator and denominator
 // When numerator === denominator, it should return false.
 test("should return false for equal numerator and denominator", () => {
-=======
+
 // Case 4: Equal Numerator and Denominator
 // Given a numerator equal to denominator (3/3),
 // When the function is called,
 // Then it should return false because it's equal to 1 (not proper).
 test("should return false for equal numerator and denominator (3/3)", () => {
->>>>>>> 52740052fb0ad97a2c7253a04978b14a15b9e763
   expect(isProperFraction(3, 3)).toEqual(false);
 });
 
-<<<<<<< HEAD
 // Case 5: Zero numerator
 // 0 divided by any non-zero denominator is a proper fraction.
 test("should return true for zero numerator", () => {
@@ -87,7 +78,6 @@ test("should return true for large proper fractions", () => {
   expect(isProperFraction(999, 1000)).toEqual(true);
 });
 
-=======
 // Case 5: Negative Improper Fraction
 // Given a negative improper fraction (-4/3),
 // When the function is called,
@@ -119,5 +109,3 @@ test("should return true for zero numerator (0/5)", () => {
 test("should return false for zero denominator (5/0)", () => {
   expect(isProperFraction(5, 0)).toEqual(false);
 });
-
->>>>>>> 52740052fb0ad97a2c7253a04978b14a15b9e763
