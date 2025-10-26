@@ -6,14 +6,11 @@
 // You should call this function a number of times to check it works for different inputs
 
 function toPounds(kg) {
-  const pounds = kg * 2.20462; 
-
-    return pounds;
+  const pounds = kg * 2.20462;
+  return `${pounds.toFixed(2)} lbs`; // returns a string
 }
-console.log(toPounds(1));   
-console.log(toPounds(5));   
-console.log(toPounds(10));  
-  // if I want to round the result to 2 decimal places I can use toFixed(2)
-  console.log(toPounds(1).toFixed(2));   
-  console.log(toPounds(5).toFixed(2));   
-  console.log(toPounds(10).toFixed(2));
+
+// Test cases 
+console.log(toPounds(1));   //the output "2.20 lbs"
+console.log(toPounds(5));   //the output is  "11.02 lbs"
+console.log(toPounds(10)); //the output is  "22.05 lbs"
