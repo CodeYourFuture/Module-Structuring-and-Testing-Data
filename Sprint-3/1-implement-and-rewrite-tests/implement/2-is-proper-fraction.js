@@ -5,11 +5,17 @@
 // Written here like this: 1/2 == Numerator/Denominator
 // the first test and first case is written for you
 // complete the rest of the tests and cases
-// write one test at a time, and make it pass, build your solution up methodically
+// write one test at a time, and make it pass, build your solution up
 
 function isProperFraction(numerator, denominator) {
+  if (denominator === 0) return false;
+  if (numerator < 1) numerator = numerator * -1;
+  if (denominator < 1) denominator = Math.abs(denominator);
+
   if (numerator < denominator) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -47,6 +53,7 @@ assertEquals(improperFraction, false);
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
 // ====> complete with your assertion
+assertEquals(negativeFraction, true);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
@@ -54,6 +61,12 @@ const negativeFraction = isProperFraction(-4, 7);
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
 // ====> complete with your assertion
-
+assertEquals(equalFraction, false);
 // Stretch:
 // What other scenarios could you test for?
+//Negative fraction check
+//Input: numerator=-4, denominator=2;
+//target output: false
+// Explanation: The fraction -4/2 is not a proper fraction because the absolute value of the numerator (4) is more than the denominator (2). The function should return false.
+const negativeFractionCase2 = isProperFraction(-4, 2);
+assertEquals(negativeFractionCase2, false);
