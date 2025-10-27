@@ -27,4 +27,17 @@ test("should return 0 occurence of a character", () => {
   const char = "z";
   const count = countChar(str, char);
   expect(count).toEqual(0);
-})
+});
+
+// Scenario: One occurrence
+// Given an input string `str`,
+// And a character `char` that occurs once within `str` (e.g., 'a' in 'boat'),
+// When the function is called with these inputs,
+// Then it should correctly return the count of `char` (e.g., 'a' appears once in 'boat').
+
+test("should return 1 occurence of a character", () => {
+  const str = "boat";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
