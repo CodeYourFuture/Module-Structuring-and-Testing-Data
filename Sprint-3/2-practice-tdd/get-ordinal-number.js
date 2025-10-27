@@ -2,10 +2,10 @@ function getOrdinalNumber(num) {
   if (typeof num !== "number") {
     return NaN;
   }
-  if(!Number.isInteger(num)){
+  if (!Number.isInteger(num)) {
     return "not an integer number";
   }
-  if(num === 0 ){
+  if (num === 0) {
     return "invalid number";
   }
 
