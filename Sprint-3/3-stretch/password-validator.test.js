@@ -70,10 +70,10 @@ test("password must not be any previous password in the passwords array.", () =>
 }
 );
 // password is valid when all requirements are met
-test ("password is valid when it meets all requirements",()d=>{
+test ("password is valid when it meets all requirements",() =>{ 
     
-    const passsword = "Abcd!2";
-    const result = isValidPassword(passsword);
+    const password = "Abcd!2";
+    const result = isValidPassword(password);
     expect(result).toEqual(true);
 }
 );
