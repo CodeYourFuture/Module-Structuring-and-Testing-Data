@@ -1,10 +1,11 @@
-function repeat(str,count) {
-  
-  if(count<0){
-    return "Error: negative numbers are not valid";
+function repeat(str, count) {
+  if (count < 0 || count === undefined || typeof count !== "number") {
+    return "Error : count must be a positive integer";
   }
-  return (str.repeat(count));
+  if (count === 0) {
+    return "";
+  }
+  return str.repeat(count);
 }
 
 module.exports = repeat;
-
