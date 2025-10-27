@@ -56,4 +56,37 @@ test("should throw an error when more than one string is passed as char", () => 
   expect(count).toEqual("invalid input: Input just one character");
 });
 
+test("should count characters regardless of case (treat 'a' and 'A' as equal)", () => {
+  const str = "JUMP";
+  const char = "m";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
 
+test("should return correct count of space characters", () => {
+  const str = "F r o NT";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(3);
+});
+
+test("should count numeric characters correctly in the string", () => {
+  const str = "2Languages6";
+  const char = "2";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
+
+test("should correctly count characters in a very long string", () => {
+  const str = "b".repeat(500) + "abB";
+  const char = "b";
+  const count = countChar(str, char);
+  expect(count).toEqual(502);
+});
+
+test("should count numeric characters correctly in the string", () => {
+  const str = "2Languages6";
+  const char = 2;
+  const count = countChar(str, char);
+  expect(count).toEqual("Invalid input: input should be a string");
+});
