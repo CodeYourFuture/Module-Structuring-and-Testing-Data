@@ -40,6 +40,18 @@ test("should return an empty string", ()=>{
   expect(repeatedStr).toEqual("");
 })
 
+// case: Handle str not a string:
+// Given a number and a count equal to 2,
+// When the repeat function is called with these inputs,
+// Then it should return an error message.
+
+test("should return an error message", ()=>{
+  const str = 5;
+  const count = 5;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("Error: str must be a string");
+})
+
 // case: Handle Count of Undefined:
 // Given a target string str and a count equal to Undefined,
 // When the repeat function is called with these inputs,
@@ -48,6 +60,18 @@ test("should return an empty string", ()=>{
 test("should return an error message", ()=>{
   const str = "hello";
   const count = undefined;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("Error : count must be a positive integer");
+})
+
+// case: Handle Count of array:
+// Given a target string str and a count equal to [],
+// When the repeat function is called with these inputs,
+// Then it should return an error message.
+
+test("should return an error message", ()=>{
+  const str = "hello";
+  const count = [];
   const repeatedStr = repeat(str, count);
   expect(repeatedStr).toEqual("Error : count must be a positive integer");
 })
