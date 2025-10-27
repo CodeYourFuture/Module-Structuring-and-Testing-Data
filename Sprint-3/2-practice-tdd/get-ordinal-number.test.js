@@ -11,3 +11,15 @@ const getOrdinalNumber = require("./get-ordinal-number");
 test("should return '1st' for 1", () => {
   expect(getOrdinalNumber(1)).toEqual("1st");
 });
+
+test("should return '2nd' for 2", () => {
+  expect(getOrdinalNumber(2)).toEqual("2nd");
+});
+
+test("should return '3rd' for 3", () => {
+  expect(getOrdinalNumber(3)).toEqual("3rd");
+});
+
+test("should return any number between 4 and 20 with a suffix of 'th' at end of number", () => {
+  expect(getOrdinalNumber(10)).toEqual("10th");
+});
