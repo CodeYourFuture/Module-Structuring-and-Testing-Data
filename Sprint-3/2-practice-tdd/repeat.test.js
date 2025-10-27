@@ -33,23 +33,35 @@ expect(repeatedStr).toEqual("hello")
 // When the repeat function is called with these inputs,
 // Then it should return an empty string, ensuring that a count of 0 results in an empty output.
 
-// test("should return an empty string", ()=>{
-//   const str = "hello";
-//   const count = 0;
-//   const repeatedStr = repeat(str, count);
-//   expect(repeatedStr).toEqual("");
-// })
+test("should return an empty string", ()=>{
+  const str = "hello";
+  const count = 0;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("");
+})
+
+// case: Handle Count of Undefined:
+// Given a target string str and a count equal to Undefined,
+// When the repeat function is called with these inputs,
+// Then it should return an error message.
+
+test("should return an error message", ()=>{
+  const str = "hello";
+  const count = undefined;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("Error : count must be a positive integer");
+})
 
 // case: Negative Count:
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 
-test("should return error", ()=>{
+test("should return an error message", ()=>{
   const str="hello";
   const count=-1;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("Error: negative numbers are not valid");
+  expect(repeatedStr).toEqual("Error : count must be a positive integer");
 })
 
 // case: Handle empty string:
@@ -69,7 +81,7 @@ test("should return an empty string", () => {
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
-test("should return an empty string", () => {
+test("should repeat the string count times", () => {
   const str = "a b";
   const count = 2;
   const repeatedStr = repeat(str, count);
@@ -77,11 +89,11 @@ test("should return an empty string", () => {
 });
 
 // case: Handle long string :
-// Given a target string str and a count equal to1,
+// Given a target string str and a count equal to 1,
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
-test("should return an empty string", () => {
+test("should not repeat the string", () => {
   const str = "xvg56756yrhfghe5ujdfh45657tjrtg6yrthrty";
   const count = 1;
   const repeatedStr = repeat(str, count);
@@ -93,7 +105,7 @@ test("should return an empty string", () => {
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
-test("should return an empty string", () => {
+test("should repeat str 18 times", () => {
   const str = "x";
   const count = 18;
   const repeatedStr = repeat(str, count);
