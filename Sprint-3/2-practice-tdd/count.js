@@ -1,6 +1,9 @@
 function countChar(stringOfCharacters, findCharacter) {
   let characterOccurrence = "";
-  if (typeof stringOfCharacters === "string" && typeof findCharacter === "string") {
+  if (
+    typeof stringOfCharacters === "string" &&
+    typeof findCharacter === "string"
+  ) {
     stringOfCharacters = stringOfCharacters.toLowerCase();
     findCharacter = findCharacter.toLowerCase();
     if (findCharacter.length === 1) {
