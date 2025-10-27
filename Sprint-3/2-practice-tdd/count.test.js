@@ -49,3 +49,11 @@ test("should return 0 occurrence of character in an empty string", () => {
   expect(count).toEqual(0);
 });
 
+test("should throw an error when more than one string is passed as char", () => {
+  const str = "jump";
+  const char = "pp";
+  const count = countChar(str, char);
+  expect(count).toEqual("invalid input: Input just one character");
+});
+
+
