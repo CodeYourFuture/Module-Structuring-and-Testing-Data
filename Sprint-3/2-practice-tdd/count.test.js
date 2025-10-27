@@ -41,3 +41,11 @@ test("should return 1 occurence of a character", () => {
   const count = countChar(str, char);
   expect(count).toEqual(1);
 });
+
+test("should return 0 occurrence of character in an empty string", () => {
+  const str = "";
+  const char = "b";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
