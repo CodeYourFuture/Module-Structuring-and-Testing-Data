@@ -1,5 +1,14 @@
-function repeat() {
-  return "hellohellohello";
+function repeat(str, count) {
+  if (typeof str !== "string") {
+    return "Error: str must be a string";
+  }
+  if (count < 0 || count === undefined || typeof count !== "number") {
+    return "Error : count must be a positive integer";
+  }
+  if (count === 0) {
+    return "";
+  }
+  return str.repeat(count);
 }
 
 module.exports = repeat;
