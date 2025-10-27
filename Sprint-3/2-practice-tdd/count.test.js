@@ -12,9 +12,9 @@ const countChar = require("./count");
 
 test("should count multiple occurrences of a character", () => {
   const str = "aaaaa";
-  const char = "b";
+  const char = "a";
   const count = countChar(str, char);
-  expect(count).toEqual(3);
+  expect(count).toEqual(5);
 });
 
 // Scenario: No Occurrences
