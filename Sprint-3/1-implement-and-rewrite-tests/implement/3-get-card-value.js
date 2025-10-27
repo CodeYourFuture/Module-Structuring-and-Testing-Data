@@ -8,13 +8,13 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank=card.slice(0,-1);
-  const numberRank=Number(rank)
-  if(numberRank>=2 && numberRank<10){
+  const rank = card.slice(0, -1);
+  const numberRank = Number(rank);
+  if (numberRank >= 2 && numberRank < 10) {
     return numberRank;
   }
-  if(rank==="10" || rank==="J" || rank==="Q" || rank==="K"){
-    return 10
+  if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
   }
   if (rank === "A") {
     return 11;
@@ -37,14 +37,11 @@ function assertEquals(actualOutput, targetOutput) {
 }
 
 function invalidCardRank(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    "Invalid card rank"
-  );
+  console.assert(actualOutput === targetOutput, "Invalid card rank");
 }
 // Acceptance criteria:
 
-// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will 
+// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will
 // be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
@@ -56,7 +53,7 @@ function invalidCardRank(actualOutput, targetOutput) {
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
-assertEquals(fiveofHearts,5)
+assertEquals(fiveofHearts, 5);
 
 const sixofHearts = getCardValue("6♥");
 assertEquals(sixofHearts, 6);
@@ -67,10 +64,9 @@ assertEquals(sixofHearts, 6);
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
 const faceCards = getCardValue("J♥");
-assertEquals(faceCards,10)
+assertEquals(faceCards, 10);
 
-assertEquals(getCardValue("Q♥"),10);
-
+assertEquals(getCardValue("Q♥"), 10);
 
 // Handle Ace (A):
 // Given a card with a rank of "A",

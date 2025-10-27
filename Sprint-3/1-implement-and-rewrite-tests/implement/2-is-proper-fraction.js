@@ -14,12 +14,11 @@ function isProperFraction(numerator, denominator) {
   if (Math.abs(numerator) >= Math.abs(denominator)) {
     return false;
   }
-  
-  if (isNaN(numerator)|| isNaN(denominator)) {
+
+  if (isNaN(numerator) || isNaN(denominator)) {
     return false;
   }
 }
-
 
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -54,7 +53,7 @@ assertEquals(improperFraction, false);
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
-assertEquals(negativeFraction,true)
+assertEquals(negativeFraction, true);
 // ====> complete with your assertion
 
 // Equal Numerator and Denominator check:
@@ -62,7 +61,7 @@ assertEquals(negativeFraction,true)
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
-assertEquals(equalFraction,false)
+assertEquals(equalFraction, false);
 // ====> complete with your assertion
 
 // Stretch:
@@ -72,5 +71,5 @@ assertEquals(equalFraction,false)
 //Input: numerator=NaN, denominator=3
 // target output: false
 // Explanation: the fraction NaN/3 is not a proper fraction because the numerator is not a number.The function should return false.
-const notANumberFraction=isProperFraction(NaN,3);
-assertEquals(notANumberFraction,false)
+const notANumberFraction = isProperFraction(NaN, 3);
+assertEquals(notANumberFraction, false);
