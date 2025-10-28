@@ -54,6 +54,13 @@ test("should return '11th' for 11", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
 });
 
+// Case 20: Identify the ordinal number for 20
+// When the number is 20,
+// Then the function should return "20rd"
+test("should return '20th' for 20", () => {
+  expect(getOrdinalNumber(20)).toEqual("20th");
+});
+
 // Case 23: Identify the ordinal number for 23
 // When the number is 23,
 // Then the function should return "33rd"
