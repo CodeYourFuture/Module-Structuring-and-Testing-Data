@@ -37,6 +37,6 @@ test("should return 11 for Ace of Diamonds", () => {
   expect(getCardValue("A♦")).toEqual(11);
 });
 // Case 5: Handle Invalid Cards:
-test("should return null for invalid card 'B'", () => {
-  expect(getCardValue("Z♠")).toBeNull();
+test("should throw an error for invalid card 'Z♠'", () => {
+  expect(() => getCardValue("Z♠")).toThrow("Invalid card");
 });
