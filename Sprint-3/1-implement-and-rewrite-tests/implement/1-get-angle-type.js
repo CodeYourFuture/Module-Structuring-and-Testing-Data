@@ -8,22 +8,30 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-  angleType = "";
-  if (angle === 90) {
-    angleType = "Right angle";
-  } else if (angle < 90) {
-    angleType = "Acute angle";
-  } else if (angle > 90 && angle < 180) {
-    angleType = "Obtuse angle";
-  } else if (angle === 180) {
-    angleType = "Straight angle";
-  } else if (angle > 180 &&  angle < 360) {
-    angleType =  "Reflex angle";
+  if (typeof angle !== "number" || angle < 0 || angle > 360) {
+    return "Invalid angle";
   }
-  return angleType;
-   // Run the tests, work out what Case 2 is testing, and implement the required code here.
-   // Then keep going for the other cases, one at a time.
+
+  if (angle === 0) {
+    return "Acute angle"; 
+  } else if (angle < 90) {
+    return "Acute angle";
+  } else if (angle === 90) {
+    return "Right angle";
+  } else if (angle > 90 && angle < 180) {
+    return "Obtuse angle";
+  } else if (angle === 180) {
+    return "Straight angle";
+  } else if (angle > 180 && angle < 360) {
+    return "Reflex angle";
+  } else if (angle === 360) {
+    return "Full rotation";
+  }
+
+  return "Invalid angle";
 }
+
+
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -47,33 +55,61 @@ function assertEquals(actualOutput, targetOutput) {
 // Case 1: Identify Right Angles:
 // When the angle is exactly 90 degrees,
 // Then the function should return "Right angle"
-
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+const rightEdge = getAngleType(90.0);
+assertEquals(rightEdge, "Right angle");
 
 // Case 2: Identify Acute Angles:
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
-const acute = getAngleType(45);
-assertEquals(acute, "Acute angle");
+const acute1 = getAngleType(45);
+assertEquals(acute1, "Acute angle");
+const acute2 = getAngleType(0);
+assertEquals(acute2, "Acute angle");
+const acute3 = getAngleType(89.999);
+assertEquals(acute3, "Acute angle");
 
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
-const obtuse = getAngleType(120);
-// ====> write your test here, and then add a line to pass the test in the function above
-assertEquals(obtuse, "Obtuse angle");
+const obtuse1 = getAngleType(91);
+assertEquals(obtuse1, "Obtuse angle");
+const obtuse2 = getAngleType(120);
+assertEquals(obtuse2, "Obtuse angle");
+const obtuse3 = getAngleType(179.999);
+assertEquals(obtuse3, "Obtuse angle");
 
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
-// ====> write your test here, and then add a line to pass the test in the function above
-const straight = getAngleType(180);
-assertEquals(straight, "Straight angle");
+const straight1 = getAngleType(180);
+assertEquals(straight1, "Straight angle");
+const straightEdge = getAngleType(180.0);
+assertEquals(straightEdge, "Straight angle");
 
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
-// ====> write your test here, and then add a line to pass the test in the function above
-const reflex = getAngleType(270);
-assertEquals(reflex, "Reflex angle");
+const reflex1 = getAngleType(181);
+assertEquals(reflex1, "Reflex angle");
+const reflex2 = getAngleType(270);
+assertEquals(reflex2, "Reflex angle");
+const reflex3 = getAngleType(359.999);
+assertEquals(reflex3, "Reflex angle");
+
+// Case 6: Identify Full Rotation:
+// When the angle is exactly 360 degrees,
+// Then the function should return "Full rotation"
+const fullRotation = getAngleType(360);
+assertEquals(fullRotation, "Full rotation");
+
+// Case 7: Handle Invalid Angles:
+// When the angle is negative or greater than 360,
+// Then the function should return "Invalid angle"
+const invalid1 = getAngleType(-10);
+assertEquals(invalid1, "Invalid angle");
+const invalid2 = getAngleType(400);
+assertEquals(invalid2, "Invalid angle");
+const invalid3 = getAngleType("abc");
+assertEquals(invalid3, "Invalid angle");
