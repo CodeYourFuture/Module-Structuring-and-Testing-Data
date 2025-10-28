@@ -3,3 +3,4 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+// Error: Cannot access 'cityOfBirth' before instialization - the error means: you tried to use a let or const variable before its declaration line ran.
