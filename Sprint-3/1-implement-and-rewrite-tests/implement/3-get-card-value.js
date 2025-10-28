@@ -9,7 +9,6 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
   card = card.substring(0 , card.length -1); // Remove the suit emoji
-  console.log(card);
   if (card === "A") {
     return 11;
   } if (card === "J" || card === "Q" || card === "K" || card === "10") {
