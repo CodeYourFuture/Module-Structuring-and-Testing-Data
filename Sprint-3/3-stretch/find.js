@@ -20,6 +20,10 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+      // it changes during each iteration of cycle. (index++)
 // b) What is the if statement used to check
+     // in this example it check where is character in "str" and return its index.
 // c) Why is index++ being used?
+      // to change index value during iteration
 // d) What is the condition index < str.length used for?
+      // its a condition for while statement, cycle will repeat until statement is true
