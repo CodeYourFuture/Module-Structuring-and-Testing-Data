@@ -103,3 +103,14 @@ test.each([
     countChar(str, char);
   }).toThrow(error);
 });
+//test for 2 arguments
+test("should throw error if more/less than 2 arguments are provided", () => {
+  expect(() => {
+    countChar("hello");
+  }).toThrow("Function requires exactly two arguments: a string and a character to find.");
+  expect(() => {
+    countChar("hello", "h", "extra");
+  }).toThrow(
+    "Function requires exactly two arguments: a string and a character to find."
+  );
+});

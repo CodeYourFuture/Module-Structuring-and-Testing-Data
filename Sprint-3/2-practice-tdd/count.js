@@ -1,4 +1,9 @@
 function countChar(stringOfCharacters, findCharacter) {
+  if (arguments.length !== 2) {
+    throw new Error(
+      "Function requires exactly two arguments: a string and a character to find."
+    );
+  }
   if (typeof stringOfCharacters !== 'string'){
     throw new Error("First argument must be a string.");
   }
