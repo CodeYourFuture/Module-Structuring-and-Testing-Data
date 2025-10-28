@@ -12,7 +12,7 @@ function getCardValue(card) {
   if (rank === "A") {
     return 11;
   }
-  else if (parseInt(rank) >= 2 && parseInt(rank)){
+  else if ((parseInt(rank) >= 2 && parseInt(rank)) && parseInt(rank) < 11){
     return parseInt(rank)
   }
   else if( rank === "J" || rank === "Q" || rank === "K") {
