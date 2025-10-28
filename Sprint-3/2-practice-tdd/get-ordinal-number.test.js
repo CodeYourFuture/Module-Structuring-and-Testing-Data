@@ -32,3 +32,31 @@ test("should return '3rd' for 3", () => {
 test("should return '4th' for 4", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
 });
+
+// Case 9: Identify the ordinal number for 9
+// When the number is 9,
+// Then the function should return "4th"
+test("should return '9th' for 9", () => {
+  expect(getOrdinalNumber(9)).toEqual("9th");
+});
+
+// Case 10: Identify the ordinal number for 10
+// When the number is 10,
+// Then the function should return "4th"
+test("should return '10th' for 10", () => {
+  expect(getOrdinalNumber(10)).toEqual("10th");
+});
+
+// Case 11: Identify the ordinal number for 11
+// When the number is 11,
+// Then the function should return "4th"
+test("should return '11th' for 11", () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+});
+
+// Case 23: Identify the ordinal number for 23
+// When the number is 23,
+// Then the function should return "33rd"
+test("should return '23rd' for 23", () => {
+  expect(getOrdinalNumber(23)).toEqual("23rd");
+});
