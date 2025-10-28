@@ -1,4 +1,18 @@
 function getOrdinalNumber(num) {
+  if (arguments.length !== 1) {
+    throw new Error("Function requires exactly one argument");
+  }
+  if (typeof num !== "number" || isNaN(num)) {
+    throw new Error("Input must be a number");
+  }
+  if (!Number.isFinite(num)){
+    throw new Error("Input must be a finite number");
+  }
+  if (!Number.isInteger(num) || num < 0) {
+    throw new Error("Input must be a non-negative integer");
+  }
+  
+  
   switch (num % 100) {
     case 11:
     case 12:

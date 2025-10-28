@@ -59,3 +59,49 @@ test("should return '111th' for 111", () => {
 test("should return '0th' for 0", () => {
   expect(getOrdinalNumber(0)).toEqual("0th");
 });
+
+// Extra test to check for correct number of arguments
+test("should throw an error if no arguments are provided", () => {
+  expect(() => getOrdinalNumber()).toThrow("Function requires exactly one argument");
+});
+
+test("should throw an error if more than one argument is provided", () => {
+  expect(() => getOrdinalNumber(1, 2)).toThrow("Function requires exactly one argument");
+});
+
+//Invalid input tests
+test("should throw an error if the argument is not a number", () => {
+  expect(() => getOrdinalNumber("a")).toThrow("Input must be a number");
+});
+
+test("should throw an error if the argument is a negative number", () => {
+  expect(() => getOrdinalNumber(-1)).toThrow("Input must be a non-negative integer");
+});
+
+test("should throw an error if the argument is a decimal", () => {
+  expect(() => getOrdinalNumber(1.5)).toThrow("Input must be a non-negative integer");
+});
+
+test("should throw an error if the argument is NaN", () => {
+  expect(() => getOrdinalNumber(NaN)).toThrow("Input must be a number");
+});
+
+test("should throw an error if the argument is Infinity", () => {
+  expect(() => getOrdinalNumber(Infinity)).toThrow("Input must be a finite number");
+});
+
+test("should throw an error if the argument is -Infinity", () => {
+  expect(() => getOrdinalNumber(-Infinity)).toThrow("Input must be a finite number");
+});
+test("should throw an error if the argument is an object", () => {
+  expect(() => getOrdinalNumber({})).toThrow("Input must be a number");
+});
+test("should throw an error if the argument is an array", () => {
+  expect(() => getOrdinalNumber([])).toThrow("Input must be a number");
+});
+test("should throw an error if the argument is null", () => {
+  expect(() => getOrdinalNumber(null)).toThrow("Input must be a number");
+});
+test("should throw an error if the argument is undefined", () => {
+  expect(() => getOrdinalNumber(undefined)).toThrow("Input must be a number");
+}); 
