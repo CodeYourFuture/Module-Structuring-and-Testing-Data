@@ -54,3 +54,6 @@ assertEquals(equalFraction, false); // assertion for equal numerator and denomin
 
 // Stretch:
 // What other scenarios could you test for?
+console.log(isProperFraction(5, 2));
+console.log(isProperFraction(-4, 7));
+console.log(isProperFraction(-3, 3));
