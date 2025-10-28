@@ -53,3 +53,53 @@ test("should return 0 when the input string is empty", () => {
   expect(count).toEqual(0);
 });
 
+// Scenario: Numeric Characters
+test("should count numeric characters in the string", () => {
+  const str = "123123123";
+  const char = "2";
+  const count = countChar(str, char);
+  expect(count).toEqual(3);
+});
+
+// Scenario: Whitespace Characters
+test("should count whitespace characters in the string", () => {
+  const str = "a b c d e f ";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(6);
+});
+
+// Scenario: Edge Case - Character Not a Single Character
+test('should throw error if char is not a single character', () => { 
+  const str = 'hello';
+  const char = 'll';
+  expect(() => {
+    countChar(str, char);
+  }).toThrow('Character to find must be a single character');
+ })
+ 
+// Scenario: Special Case - Special Characters
+test.each([
+  { str: "!!!@@@###", char: "!", expected: 3 },
+  { str: "$$$%%%^^^", char: "%", expected: 3 },
+  { str: "&&&***(((", char: "(", expected: 3 },
+])(
+  "should count special characters correctly in '$str'",
+  ({ str, char, expected }) => {
+    const count = countChar(str, char);
+    expect(count).toEqual(expected);
+  }
+);  
+//Scenario: Invalid Input Types
+test.each([
+  { str: 12345, char: "a", error: "First argument must be a string." },
+  { str: "hello", char: 5, error: "Second argument must be a string." },
+  { str: [], char: "a", error: "First argument must be a string." },
+  { str: "hello", char: {}, error: "Second argument must be a string." },
+  { str: null, char: "a", error: "First argument must be a string." },
+  {str: "hi", char: undefined, error: "Second argument must be a string." },
+])("should throw error for invalid inputs", ({ str, char, error }) => {
+  expect(() => {
+    countChar(str, char);
+  }).toThrow(error);
+});
