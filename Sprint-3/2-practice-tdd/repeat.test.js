@@ -51,3 +51,38 @@ test("should throw an error when count is negative", () => {
     "Count must be a non-negative integer"
   );
 });
+
+// case: Undefined String
+// Given that str is undefined and count is a positive integer,
+// When the repeat function is called with these inputs,
+// Then it should throw an error or return an appropriate message,
+// since repeating an undefined value does not make sense.
+
+test("should throw an error when string is undefined", () => {
+  const str = undefined;
+  const count = 2;
+  expect(() => repeat(str, count)).toThrow("String must be defined");
+});
+
+// case: Empty String
+// Given an empty string str and a positive integer count,
+// When the repeat function is called,
+// Then it should return an empty string, since there is nothing to repeat.
+
+test("should return an empty string when input string is empty", () => {
+  const str = "";
+  const count = 3;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("");
+});
+
+// case: Null String
+// Given that str is null and count is a positive integer,
+// When the repeat function is called,
+// Then it should throw an error, because null is not a valid string input.
+
+test("should throw an error when string is null", () => {
+  const str = null;
+  const count = 2;
+  expect(() => repeat(str, count)).toThrow("String must be a valid string");
+});
