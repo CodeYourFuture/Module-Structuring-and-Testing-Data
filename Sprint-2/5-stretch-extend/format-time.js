@@ -4,18 +4,12 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  if (hours===0)  {
-    return`12:00 am`
-  }
-  if (hours===12)  {
-    return `12:00 pm`
-  }
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
-  }
-  if (hours > 0 && hours < 12)
-  return `${String(hours).padStart(2, "0")}:00 am`;
+  const minutes = time.slice(3, 5);
+  const ampm = hours >= 12 ? "pm" : "am";
+  const Hour = String(hours % 12 === 0 ? 12 : hours % 12).padStart(2, "0")
+  return `${Hour}:${minutes} ${ampm}`;
 }
+
 
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";

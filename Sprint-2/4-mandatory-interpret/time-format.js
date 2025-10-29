@@ -33,7 +33,7 @@ console.log(formatTimeDisplay(61));
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-/* The value assigned to num when the pad is called for the last time is "1". */
+/* The value assigned to num when the pad is called for the last time is 1. */
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
