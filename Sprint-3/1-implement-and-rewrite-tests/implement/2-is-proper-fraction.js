@@ -8,31 +8,29 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-   //if numerator or denominator is not an integer, it is not a proper
+  // Invalid input: must be integers
   if (!Number.isInteger(numerator) || !Number.isInteger(denominator)) {
     return false;
   }
-  // if absolute numerator is strictly equal to zero or absolute denominator, it is not a proper fraction
-  if (Math.abs(numerator) === 0 || Math.abs(denominator) === 0) {
+
+  // Denominator cannot be zero
+  if (denominator === 0) {
     return false;
   }
-  // if absolute numerator is strictly equals to absolute, it is not a proper fraction
-  else if (Math.abs(numerator) === Math.abs(denominator)) {
+
+  // Numerator cannot be zero
+  if (numerator === 0) {
     return false;
   }
-  
-  // if absolute Numerator is greater than zero and smaller than absolute denominator, it is a proper fraction
-  else if (Math.abs(numerator) < Math.abs(denominator)) {
+
+  // Proper fraction: absolute numerator smaller than absolute denominator
+  if (Math.abs(numerator) < Math.abs(denominator)) {
     return true;
   }
-  
-  // All other cases are not proper fractions
-  else {
-    return false;
-  }
- 
-}
 
+  // All other cases are not proper fractions
+  return false;
+}
 
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step
@@ -109,7 +107,6 @@ assertEquals(bothNegative, true);
 const zeroDenominator = isProperFraction(1, 0);
 assertEquals(zeroDenominator, false);
 
-
 // Float Numerator check:
 // Input: numerator = 2.5, denominator = 3
 // Target output: false
@@ -158,4 +155,3 @@ assertEquals(negOneDenominator, false);
 // Explanation: 2/4 is a proper fraction because the absolute value of the numerator is less than the absolute value of the denominator.
 const twoOverFour = isProperFraction(2, 4);
 assertEquals(twoOverFour, true);
-
