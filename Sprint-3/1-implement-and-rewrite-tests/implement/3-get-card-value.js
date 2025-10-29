@@ -8,20 +8,23 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  let rank = card.slice(0, card.length - 1);
+  let rank = card.slice(0, -1); 
 
   if (rank === "A") {
     return 11;
 
-  }  else if ((parseInt(rank) >= 2 && parseInt(rank)) && parseInt(rank) < 11){
-    return parseInt(rank)
-  }
-  else if( rank === "J" || rank === "Q" || rank === "K") {
+  }  
+  
+   if (["K", "Q", "J"].includes(rank)) {
     return 10;
   }
-  else{
+
+  const num = parseInt(rank, 10);
+  if (num >= 2 && num <= 10) {
+    return num;
+  } 
     throw  new Error("Invalid card rank.")
-  }
+  
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
