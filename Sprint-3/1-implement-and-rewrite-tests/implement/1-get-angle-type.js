@@ -13,7 +13,7 @@ function getAngleType(angle) {
   }
 
   if (angle === 0) {
-    return "Acute angle";
+    return "Zero angle";
   } else if (angle < 90) {
     return "Acute angle";
   } else if (angle === 90) {
@@ -59,12 +59,10 @@ const rightEdge = getAngleType(90.0);
 assertEquals(rightEdge, "Right angle");
 
 // Case 2: Identify Acute Angles:
-// When the angle is less than 90 degrees,
+// When the angle is greater than 0 degrees and less than 90 degrees,
 // Then the function should return "Acute angle"
 const acute1 = getAngleType(45);
 assertEquals(acute1, "Acute angle");
-const acute2 = getAngleType(0);
-assertEquals(acute2, "Acute angle");
 const acute3 = getAngleType(89.999);
 assertEquals(acute3, "Acute angle");
 
@@ -111,3 +109,9 @@ const invalid2 = getAngleType(400);
 assertEquals(invalid2, "Invalid angle");
 const invalid3 = getAngleType("abc");
 assertEquals(invalid3, "Invalid angle");
+
+// Case 8: Identify Zero Angle:
+// When the angle is exactly 0 degrees,
+// Then the function should return "Zero angle"
+const acute2 = getAngleType(0);
+assertEquals(acute2, "Zero angle");
