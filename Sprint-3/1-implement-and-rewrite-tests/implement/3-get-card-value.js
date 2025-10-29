@@ -22,14 +22,32 @@ function getCardValue(card) {
     return 10;
   }
 
-  // Handle number cards 2-9
-  const num = Number(rank);
-  if (num >= 2 && num <= 9) {
-    return num;
+  // Handle number cards 2-10
+  const validRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+
+  // Check if rank is valid
+  if (!validRanks.includes(rank)) {
+    throw new Error("Invalid card rank.");
   }
 
-  // Invalid card
-  throw new Error("Invalid card rank.");
+  // Return correct values
+  if (rank === "A") return 11;
+  if (["J", "Q", "K"].includes(rank)) return 10;
+  return Number(rank); // for 2–10
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
