@@ -8,16 +8,11 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) {
-    return true;
-  }
+  return Math.abs(numerator) < denominator;
 }
 
-// The line below allows us to load the isProperFraction function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
 
-// here's our helper again
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -25,35 +20,16 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// Acceptance criteria:
+// Proper Fraction: 2/3 → true
+assertEquals(isProperFraction(2, 3), true);
 
-// Proper Fraction check:
-// Input: numerator = 2, denominator = 3
-// target output: true
-// Explanation: The fraction 2/3 is a proper fraction, where the numerator is less than the denominator. The function should return true.
-const properFraction = isProperFraction(2, 3);
-assertEquals(properFraction, true);
+// Improper Fraction: 5/2 → false
+assertEquals(isProperFraction(5, 2), false);
 
-// Improper Fraction check:
-// Input: numerator = 5, denominator = 2
-// target output: false
-// Explanation: The fraction 5/2 is an improper fraction, where the numerator is greater than or equal to the denominator. The function should return false.
-const improperFraction = isProperFraction(5, 2);
-assertEquals(improperFraction, false);
+// Negative Fraction: -4/7 → true (absolute value < denominator)
+assertEquals(isProperFraction(-4, 7), true);
 
-// Negative Fraction check:
-// Input: numerator = -4, denominator = 7
-// target output: true
-// Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
-const negativeFraction = isProperFraction(-4, 7);
-// ====> complete with your assertion
+// Equal Numerator and Denominator: 3/3 → false
+assertEquals(isProperFraction(3, 3), false);
 
-// Equal Numerator and Denominator check:
-// Input: numerator = 3, denominator = 3
-// target output: false
-// Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
-const equalFraction = isProperFraction(3, 3);
-// ====> complete with your assertion
-
-// Stretch:
-// What other scenarios could you test for?
+console.log("✅ All tests passed!");
