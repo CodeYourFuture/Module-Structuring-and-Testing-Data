@@ -33,6 +33,7 @@ test("should identiify obtuse angle (>90° and <180°)", () => {
 // Then the function should return "Straight angle"
 test("should identify straight angle (180°)", () => {
   expect(getAngleType(180)).toEqual("Straight angle");
+  expect(getAngleType(180.0)).toEqual("Straight angle");
 });
 
 // Case 5: Identify Reflex Angles:
