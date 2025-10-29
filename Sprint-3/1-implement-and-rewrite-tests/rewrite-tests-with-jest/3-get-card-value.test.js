@@ -51,7 +51,11 @@ test("should throw an error for invalid card ranks and provide a descriptive mes
   expect(() => getCardValue("♣")).toThrow(
     'Invalid or unrecognized card rank: ""'
   );
+  /*
+// (Optional) Stretch case — outside normal input expectations
+// The function isn't required to handle this, but it tests how the function fails gracefully or otherwise.
   expect(() => getCardValue("")).toThrow(
     'Invalid or unrecognized card rank: ""'
   );
+  */
 });

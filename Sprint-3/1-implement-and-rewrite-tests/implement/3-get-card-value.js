@@ -8,22 +8,21 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank = card.slice(0, -1);
+  const rank = card.slice(0, -1).toUpperCase(); // extract the rank by removing the last character (suit)
 
-  if (rank === "A") {
-    return 11;
-  } else if (rank === "K" || rank === "Q" || rank === "J" || rank === "10") {
-    return 10;
+  if (rank === "A") { // ace
+    return 11; // default value for ace
+  } else if (rank === "K" || rank === "Q" || rank === "J" || rank === "10") { // face cards and 10
+    return 10; // value for face cards and 10
   } else {
-    const numericRank = parseInt(rank, 10);
-
-    if (!isNaN(numericRank) && numericRank >= 2 && numericRank <= 9) {
-      return numericRank;
+    const numericRank = parseInt(rank, 10); // convert rank to a number
+    if (!isNaN(numericRank) && numericRank >= 2 && numericRank <= 9) { // check if it's a valid number card
+      return numericRank; // return the numeric value
     } else {
-      throw new Error(`Invalid or unrecognized card rank: "${rank}"`);
+      throw new Error(`Invalid or unrecognized card rank: "${rank}"`); // handle invalid card ranks
     }
   }
-}
+} 
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
