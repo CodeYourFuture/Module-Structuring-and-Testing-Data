@@ -19,8 +19,8 @@ test("returns false when numerator equals denominator", () => {
   expect(isProperFraction(9, 9)).toEqual(false);
 });
 
-test("return false when  numerator equals denominator when both are negative",()=>{
-  expect(isProperFraction(-4,-4)).toEqual(false);
+test("return false when  numerator equals denominator when both are negative", () => {
+  expect(isProperFraction(-4, -4)).toEqual(false);
 });
 
 test("returns false for a negative proper fraction( absolute value of the denominator is less than the numerator)", () => {
