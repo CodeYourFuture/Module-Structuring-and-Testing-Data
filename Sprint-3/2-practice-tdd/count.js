@@ -1,21 +1,11 @@
 function countChar(stringOfCharacters, findCharacter) {
-  // Ensure valid inputs
-  if (
-    typeof stringOfCharacters !== "string" ||
-    typeof findCharacter !== "string"
-  ) {
-    return 0;
-  }
-
-  // Count occurrences
-  let count = 0;
-  for (let char of stringOfCharacters) {
-    if (char === findCharacter) {
-      count++;
+let total = 0;
+   for (let i=0; i < stringOfCharacters.length; i++){
+    if (findCharacter == stringOfCharacters[i]){
+      total++;
     }
-  }
-
-  return count;
+   }
+   return total; 
 }
 
 module.exports = countChar;

@@ -1,28 +1,24 @@
 function getOrdinalNumber(num) {
-  // Ensure the input is a valid number
-  if (typeof num !== "number" || isNaN(num)) {
-    return "";
+ 
+let result;
+
+  if (num % 100 == 11 || num % 100 == 12 || num % 100 == 13){
+    result = num.toString() + "th";
+  }
+  else if (num % 10 == 1){
+    result = num.toString() +"st";
+  }
+  else if (num % 10 == 2){
+    result = num.toString() + "nd";
+  }
+  else if (num % 10 == 3){
+    result = num.toString() + "rd";
+  }
+  else {
+    result = num.toString() + "th";
   }
 
-  const lastTwoDigits = num % 100;
-  const lastDigit = num % 10;
-
-  // Handle special cases: 11th, 12th, 13th
-  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
-    return `${num}th`;
-  }
-
-  // Handle normal ordinal endings
-  switch (lastDigit) {
-    case 1:
-      return `${num}st`;
-    case 2:
-      return `${num}nd`;
-    case 3:
-      return `${num}rd`;
-    default:
-      return `${num}th`;
-  }
-}
+  return result
+} 
 
 module.exports = getOrdinalNumber;
