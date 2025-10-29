@@ -108,3 +108,54 @@ assertEquals(bothNegative, true);
 // Explanation: Division by zero is invalid; fraction cannot be proper.
 const zeroDenominator = isProperFraction(1, 0);
 assertEquals(zeroDenominator, false);
+
+
+// Float Numerator check:
+// Input: numerator = 2.5, denominator = 3
+// Target output: false
+// Explanation: Fractions with a non-integer numerator are not considered proper fractions.
+const floatNumerator = isProperFraction(2.5, 3);
+assertEquals(floatNumerator, false);
+
+// Float Denominator check:
+// Input: numerator = 2, denominator = 3.5
+// Target output: false
+// Explanation: Fractions with a non-integer denominator are invalid and should not be considered proper fractions.
+const floatDenominator = isProperFraction(2, 3.5);
+assertEquals(floatDenominator, false);
+
+// Both Numerator and Denominator as Floats check:
+// Input: numerator = 1.5, denominator = 2.5
+// Target output: false
+// Explanation: Fractions with both numerator and denominator as floats are invalid and should not be considered proper fractions.
+const floatBoth = isProperFraction(1.5, 2.5);
+assertEquals(floatBoth, false);
+
+// Large Number check:
+// Input: numerator = 99, denominator = 100
+// Target output: true
+// Explanation: 99/100 is a valid proper fraction, even with large values.
+const largeNumbers = isProperFraction(99, 100);
+assertEquals(largeNumbers, true);
+
+// Negative Zero check:
+// Input: numerator = -0, denominator = 5
+// Target output: false
+// Explanation: Negative zero is equivalent to zero; not a proper fraction.
+const negativeZero = isProperFraction(-0, 5);
+assertEquals(negativeZero, false);
+
+// Denominator less than -1 check:
+// Input: numerator = 1, denominator = -1
+// Target output: false
+// Explanation: Equal magnitude makes it improper, regardless of sign.
+const negOneDenominator = isProperFraction(1, -1);
+assertEquals(negOneDenominator, false);
+
+// Proper Fraction check:
+// Input: numerator = 2, denominator = 4
+// Target output: true
+// Explanation: 2/4 is a proper fraction because the absolute value of the numerator is less than the absolute value of the denominator.
+const twoOverFour = isProperFraction(2, 4);
+assertEquals(twoOverFour, true);
+
