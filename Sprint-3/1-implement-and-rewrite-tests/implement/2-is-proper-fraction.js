@@ -9,7 +9,7 @@
 
 function isProperFraction(numerator, denominator) {
   if (denominator === 0) return false;
-  if (numerator < 1) numerator = numerator * -1;
+  if (numerator < 1) numerator = Math.abs(numerator) ;
   if (denominator < 1) denominator = Math.abs(denominator);
 
   if (numerator < denominator) {
