@@ -53,3 +53,15 @@ test("should identify full roatation angle 360°", () => {
   expect(getAngleType(360)).toEqual("Full rotation");
 });
 
+// Case 7: Handle Invalid Angles:
+// When the angle is negative or greater than 360 or any other data type
+// Then the function should return "Invalid angle"
+test("should return 'Invalid angle' for negative, >360, or non-numeric values", () => {
+  expect(getAngleType(-10)).toEqual("Invalid angle");
+  expect(getAngleType(400)).toEqual("Invalid angle");
+  expect(getAngleType("abc")).toEqual("Invalid angle");
+  expect(getAngleType(true)).toEqual("Invalid angle");
+  expect(getAngleType(null)).toEqual("Invalid angle");
+  expect(getAngleType(undefined)).toEqual("Invalid angle");
+});
+
