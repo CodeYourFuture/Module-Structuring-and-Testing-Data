@@ -8,11 +8,13 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank = card[0];
+  let rank = "";
 
-  if (card === "A♠") {
-    return 11;
-  } else if (Number(rank) > 1 && Number(rank) < 10) {
+  for (let i = 0; i < card.length - 1; i++) {
+    rank += card[i];
+  }
+
+  if (Number.isInteger(Number(rank)) && Number(rank) > 1 && Number(rank) < 10) {
     return Number(rank);
   } else if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
     return 10;
@@ -68,5 +70,5 @@ assertEquals(ace, 11);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-const invalidCard = getCardValue("15♠");
+const invalidCard = getCardValue("100♠");
 assertEquals(invalidCard, "Invalid card rank.");
