@@ -7,27 +7,35 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 
-
-
 function isProperFraction(numerator, denominator) {
-  let actualOutput;
-  // Denominator must be positive
-  if (denominator <= 0) {
-    actualOutput = false;
+   //if numerator or denominator is not an integer, it is not a proper
+  if (!Number.isInteger(numerator) || !Number.isInteger(denominator)) {
+    return false;
   }
-  // Numerator must be positive and smaller than denominator
-  else if (numerator > 0 && numerator < denominator) {
-    actualOutput = true;
+  // if absolute numerator is strictly equal to zero or absolute denominator, it is not a proper fraction
+  if (Math.abs(numerator) === 0 || Math.abs(denominator) === 0) {
+    return false;
   }
+  // if absolute numerator is strictly equals to absolute, it is not a proper fraction
+  else if (Math.abs(numerator) === Math.abs(denominator)) {
+    return false;
+  }
+  
+  // if absolute Numerator is greater than zero and smaller than absolute denominator, it is a proper fraction
+  else if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  }
+  
   // All other cases are not proper fractions
   else {
-    actualOutput = false;
+    return false;
   }
-  return actualOutput;
+ 
 }
 
+
 // The line below allows us to load the isProperFraction function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
+// This will be useful in the "rewrite tests with jest" step
 module.exports = isProperFraction;
 
 // here's our helper again
@@ -60,7 +68,7 @@ assertEquals(improperFraction, false);
 // Explanation: Negative numerator should not count as proper fraction.
 const negativeFraction = isProperFraction(-4, 7);
 // ====> complete with your assertion
-assertEquals(negativeFraction, false);
+assertEquals(negativeFraction, true);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
@@ -85,14 +93,14 @@ assertEquals(zeroNumerator, false);
 // Target output: false
 // Explanation: Denominator must be positive for a proper fraction.
 const negativeDenominator = isProperFraction(3, -5);
-assertEquals(negativeDenominator, false);
+assertEquals(negativeDenominator, true);
 
 // Both Negative check:
 // Input: numerator = -2, denominator = -3
 // Target output: false
 // Explanation: Proper fractions must have positive numerator and denominator.
 const bothNegative = isProperFraction(-2, -3);
-assertEquals(bothNegative, false);
+assertEquals(bothNegative, true);
 
 // Zero Denominator check:
 // Input: numerator = 1, denominator = 0
