@@ -15,12 +15,11 @@ function getCardValue(card) {
   if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
   }
-  const convertTheStringtoNumber = Number(rank);
-  if (convertTheStringtoNumber >= 2 && convertTheStringtoNumber <= 10) {
-    return convertTheStringtoNumber;
-  } else {
-    return "Invalid card rank";
-  }
+
+  const validRank = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  if (validRank.includes(rank)) {
+    return Number(rank);
+  } else return "Invalid card rank";
 }
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
