@@ -45,3 +45,11 @@ test("should identify reflex angle (>180° and <360°)", () => {
   expect(getAngleType(270)).toEqual("Reflex angle");
   expect(getAngleType(359.999)).toEqual("Reflex angle");
 });
+
+// Case 6: Identify Full Rotation:
+// When the angle is exactly 360 degrees,
+// Then the function should return "Full rotation"
+test("should identify full roatation angle 360°", () => {
+  expect(getAngleType(360)).toEqual("Full rotation");
+});
+
