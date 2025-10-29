@@ -65,3 +65,9 @@ test("should return 'Invalid angle' for negative, >360, or non-numeric values", 
   expect(getAngleType(undefined)).toEqual("Invalid angle");
 });
 
+// Case 8: Identify Zero Angle:
+// When the angle is exactly 0 degrees,
+// Then the function should return "Zero angle"
+test("should return 'Zero angle' when the input is 0", () => {
+  expect(getAngleType(0)).toEqual("Zero angle");
+})
