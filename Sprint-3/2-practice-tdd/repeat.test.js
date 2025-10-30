@@ -9,7 +9,7 @@ const repeat = require("./repeat");
 // When the repeat function is called with these inputs,
 // Then it should repeat the str count times and return a new string containing the repeated str values.
 
-<<<<<<<< HEAD:Sprint-3/2-practice-tdd/implement/repeat.test.js
+
 test("should repeat string correctly for various valid counts", () => {
   const testCases = [
     { str: "hello", count: 1, expected: "hello" },
@@ -32,14 +32,15 @@ test("should repeat string correctly for various valid counts", () => {
 test("should throw error when count is negative", () => {
   expect(() => repeat("hello", -2)).toThrow(
     "Times must be a non-negative integer"
-  );
-========
+)
+});
+
 test("should repeat the string count times", () => {
   const str = "hello";
   const count = 3;
   const repeatedStr = repeat(str, count);
   expect(repeatedStr).toEqual("hellohellohello");
->>>>>>>> main:Sprint-3/2-practice-tdd/repeat.test.js
+
 });
 
 // case: handle Count of 1:

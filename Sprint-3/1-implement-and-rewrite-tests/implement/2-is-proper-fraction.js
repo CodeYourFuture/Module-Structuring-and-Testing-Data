@@ -8,15 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-<<<<<<<< HEAD:Sprint-3/implement/2-is-proper-fraction.js
   if (Math.abs(numerator) < denominator) return true; // This version of code works correctly for proper and negative fractions.
   if (Math.abs(numerator) >= Math.abs(denominator)) return false;
   if (Math.abs(numerator) === Math.abs(denominator)) return false;
-========
+
   if (numerator < denominator) {
     return true;
   }
->>>>>>>> main:Sprint-3/1-implement-and-rewrite-tests/implement/2-is-proper-fraction.js
+
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.

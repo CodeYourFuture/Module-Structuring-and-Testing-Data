@@ -8,7 +8,6 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-<<<<<<<< HEAD:Sprint-3/implement/3-get-card-value.js
   const rank = card.slice(0, -1); // get the rank (before the suit symbol)
 
   if (!isNaN(rank)) {
@@ -26,16 +25,17 @@ function getCardValue(card) {
 }
 
 // if the rank is not a number or a face card, throw an error(invalid card rank).
-========
-  if (rank === "A") {
-    return 11;
-  }
-}
+
+  // if (rank === "x") {
+  //   return 11;
+  // }
+
+
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
->>>>>>>> main:Sprint-3/1-implement-and-rewrite-tests/implement/3-get-card-value.js
+
 
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
@@ -85,8 +85,8 @@ assertEquals(kingofSpades, 10);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-try {
-  getCardValue("Z♠");
-} catch (error) {
-  console.log("Caught error:", error.message); // Should say "Invalid card rank"
-}
+// try {
+//   getCardValue("Z♠");
+// } catch (error) {
+//   console.log("Caught error:", error.message); // Should say "Invalid card rank"
+// }
