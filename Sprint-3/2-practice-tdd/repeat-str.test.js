@@ -1,5 +1,5 @@
 // Implement a function repeat
-const repeat = require("./repeat");
+const repeatStr = require("./repeat-str");
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
 // Then it should:
@@ -12,7 +12,7 @@ const repeat = require("./repeat");
 test("should repeat the string count times", () => {
   const str = "hello";
   const count = 3;
-  const repeatedStr = repeat(str, count);
+  const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hellohellohello");
 });
 
