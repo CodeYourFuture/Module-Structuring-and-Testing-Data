@@ -105,7 +105,7 @@ test("should return an error message for non-integer negative count", () => {
   const str = "banana";
   const count = -1.7;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("Negative number invalid");
+  expect(repeatedStr).toEqual("Invalid count: count should be an integer");
 });
 
 // case: Object input
