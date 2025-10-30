@@ -14,10 +14,17 @@ function getOrdinalNumber(num) {
   }
 
   // Handle regular suffixes
-  if (lastDigit === 1) return `${num}st`;
-  if (lastDigit === 2) return `${num}nd`;
-  if (lastDigit === 3) return `${num}rd`;
+  if (lastDigit === 1) {
+    return `${num}st`;
+  }
 
+  if (lastDigit === 2) {
+    return `${num}nd`;
+  }
+
+  if (lastDigit === 3) {
+    return `${num}rd`;
+  }
   // Default suffix
   return `${num}th`;
 }
