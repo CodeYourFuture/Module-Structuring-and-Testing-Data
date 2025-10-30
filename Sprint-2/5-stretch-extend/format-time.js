@@ -4,10 +4,10 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  const minutes = time.slice(3, 5);
+  const minutes = time.slice(-2);
   const ampm = hours >= 12 ? "pm" : "am";
-  const Hour = String(hours % 12 === 0 ? 12 : hours % 12).padStart(2, "0")
-  return `${Hour}:${minutes} ${ampm}`;
+  const hour = String(hours % 12 === 0 ? 12 : hours % 12).padStart(2, "0")
+  return `${hour}:${minutes} ${ampm}`;
 }
 
 
