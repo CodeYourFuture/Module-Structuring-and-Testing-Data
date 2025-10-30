@@ -55,7 +55,7 @@ test("password has at least one number", () => {
 // password has at least one symbol: 
 test("password has at least one symbol: (!, #, $, %, ., *, &)", () => {
 
-    const password = "abcd12";
+    const password = "abcd!1";
     const result = isValidPassword(password);
     expect(result).toEqual(false);
 }
