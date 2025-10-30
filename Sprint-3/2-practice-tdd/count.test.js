@@ -51,16 +51,57 @@ test("should return 0 when the character does not exist in the string", () => {
   expect(count).toEqual(0);
 });
 
-test("should return 0 when the character does not exist in the string", () => {
-  const str = "hello";
-  const char = "z";
+test("should return 0 when the 'c' does not exist in string 'I dont have an apple'", () => {
+  const str = "I dont have an apple";
+  const char = "c";
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
 
-test("should return 0 when the 'c' does not exist in string 'I dont have an apple'", () => {
-  const str = "I dont have an apple";
-  const char = "c";
+// Scenario: Find character is longer than the input string
+// Given a string shorter than the findCharacter (e.g., 'a' vs 'abc'),
+// When the function is called,
+// Then it should return 0 because a multi-character string cannot match a single character position.
+
+test("should return 0 when findCharacter is longer than the input string", () => {
+  const str = "a";
+  const char = "abc";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Empty string input
+// Given an empty input string and a valid character,
+// When the function is called,
+// Then it should return 0 because there are no characters to search.
+
+test("should return 0 when input string is empty", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Non-string input type
+// Given that one or both inputs are not strings (e.g., number, array),
+// When the function is called,
+// Then it should return 0 or handle the input gracefully without throwing an error.
+
+test("should return 0 when inputs are not strings", () => {
+  const str = 12345;
+  const char = 1;
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Empty findCharacter
+// Given a valid string but an empty findCharacter,
+// When the function is called,
+// Then it should return 0 because an empty search target is not valid.
+
+test("should return 0 when findCharacter is an empty string", () => {
+  const str = "hello";
+  const char = "";
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });

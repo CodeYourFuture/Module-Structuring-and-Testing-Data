@@ -18,7 +18,6 @@ function repeat(str, count) {
     return "";
   }
 
-  // 5. Repeat the string count times
   let result = "";
   for (let i = 0; i < count; i++) {
     result += str;

@@ -67,3 +67,35 @@ test("should return '20th' for 20", () => {
 test("should return '23rd' for 23", () => {
   expect(getOrdinalNumber(23)).toEqual("23rd");
 });
+
+// Case Undefind :
+// When the nymber is Undefind ,
+// Then the function should return "Invalid input"
+
+test("should return 'Invalid input' when input is undefined", () => {
+  expect(getOrdinalNumber(undefined)).toEqual("Invalid input");
+});
+
+// Case null :
+// When the nymber is null ,
+// Then the function should return "Invalid input"
+
+test("should return 'Invalid input' when input is null", () => {
+  expect(getOrdinalNumber(null)).toEqual("Invalid input");
+});
+
+// Case negetive number  :
+// When the number is negetive number ,
+// Then the function should return "-1th"
+
+test("should return '-1th' for -1", () => {
+  expect(getOrdinalNumber(-1)).toEqual("-1th");
+});
+
+// Case NaN input :
+// When the nymber is NaN  ,
+// Then the function should return "Invalid input"
+
+test("should return 'Invalid input' when input is NaN", () => {
+  expect(getOrdinalNumber(NaN)).toEqual("Invalid input");
+});
