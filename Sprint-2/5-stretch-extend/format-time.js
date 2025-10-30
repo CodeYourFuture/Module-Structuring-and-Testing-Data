@@ -62,7 +62,7 @@ console.assert(
 
 function formatAs12HourClock(time) {
   let hours = Number(time.slice(0, 2));
-  const minutes = time.slice(3);
+  const minutes = time.slice(-2);
 
   let suffix;
   if (hours >= 12) {
@@ -71,7 +71,11 @@ function formatAs12HourClock(time) {
     suffix = "am";
   }
 
-  hours = hours % 12 || 12; // convert 0 to 12, 13 to 1
+  hours = hours % 12 || 12; // convert 0 to 12, 13 to 1  it returns the remainder
+  // for eg. taking 12/12 the remainder is 0
+  // similarly if 13 is taken 13/12 , the remainder is 1, the operator || helps us to return the remainder after 
+  // a division 
+
   const formattedHours = hours.toString().padStart(2, "0");
 
   return `${formattedHours}:${minutes} ${suffix}`;
@@ -84,3 +88,6 @@ console.assert(
   currentOutput6 === targetOutput6,
   `current output: ${currentOutput6}, target output: ${targetOutput6}`
 )
+
+
+// Updated const minutes = time.slice(3) --- to const minutes = time.slice(-2)
