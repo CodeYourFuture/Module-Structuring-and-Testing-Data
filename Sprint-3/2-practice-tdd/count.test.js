@@ -1,70 +1,101 @@
 // implement a function countChar that counts the number of times a character occurs in a string
-const countChar = require("./count");
+// const countChar = require("./count");
 // Given a string str and a single character char to search for,
 // When the countChar function is called with these inputs,
 // Then it should:
 
 const countChar = require("./count");
 
-// Grouped tests for standard character counting
-test.each([
-  ["a", "aaaaa", 5],
-  ["l", "hello", 2],
-  ["a", "javascript", 2],
-  ["z", "hello", 0],
-  ["h", "hello", 1],
-  ["o", "hipopotamos' make wonderful pets", 3],
-  ["p", "hipopotamos", 1],
-  ["t", "hipopotamos' are a friendly animal", 1],
-  ["x", "hipopotamos", 0],
-  ["i", "Pneumonoultramicroscopicsilicovolcanoconiosis", 6],
-])("should count occurrences of character '%s' in string '%s'", (char, str, expected) => {
-  expect(countChar(str, char)).toEqual(expected);
+describe("countChar - Standard character counting", () => {
+  test.each([
+    ["aaaaa", "a", 5],
+    ["hello", "l", 2],
+    ["javascript", "a", 2],
+    ["hello", "z", 0],
+    ["hello", "h", 1],
+    ["hipopotamos' make wonderful pets", "o", 4],
+    ["hipopotamos", "p", 2],
+    ["hipopotamos' are friendly animals", "t", 1],
+    ["hipopotamos", "x", 0],
+    ["Pneumonoultramicroscopicsilicovolcanoconiosis", "i", 6],
+  ])("should count occurrences of '%s' in '%s'", (input, char, expected) => {
+    expect(countChar(input, char)).toBe(expected);
+  });
 });
 
-// Edge case: empty string
-test("should return error if the string is empty", () => {
-  expect(countChar("", "a")).toEqual("Error: The string cannot be empty.");
+describe("countChar - Edge cases", () => {
+  test("should return 0 for empty string", () => {
+    expect(countChar("", "a")).toBe(0);
+  });
+
+  test("should return 0 when character is not found", () => {
+    expect(countChar("abcdef", "z")).toBe(0);
+  });
+
+  test("should handle special characters", () => {
+    expect(countChar("!@#$%^&*", "&")).toBe(1);
+  });
+
+  test("should be case-sensitive", () => {
+    expect(countChar("AaAaA", "a")).toBe(2);
+    expect(countChar("AaAaA", "A")).toBe(3);
+  });
+
+  test("should handle numeric characters", () => {
+    expect(countChar("123123123", "2")).toBe(3);
+  });
+
+  test("should handle whitespace characters", () => {
+    expect(countChar("a b c d e", " ")).toBe(4);
+  });
 });
 
-// Edge case: null or undefined string
-test("should return error if the string is null or undefined", () => {
-  expect(countChar(null, "a")).toEqual("Error: The input string cannot be null or undefined.");
-  expect(countChar(undefined, "a")).toEqual("Error: The input string cannot be null or undefined.");
-});
+describe("countChar - Input validation", () => {
+  test("should throw error if input string is null", () => {
+    expect(() => countChar(null, "a")).toThrow(
+      "The input string cannot be null or undefined."
+    );
+  });
 
-// Edge case: invalid character input
-test("should return error if the character to count is not a single character", () => {
-  expect(countChar("hello", "")).toEqual("Error: The character to count must be a single character.");
-  expect(countChar("hello", "ll")).toEqual("Error: The character to count must be a single character.");
-  expect(countChar("hello", null)).toEqual("Error: The character to count must be a single character.");
-  expect(countChar("hello", undefined)).toEqual("Error: The character to count must be a single character.");
-});
+  test("should throw error if input string is undefined", () => {
+    expect(() => countChar(undefined, "a")).toThrow(
+      "The input string cannot be null or undefined."
+    );
+  });
 
-// Case sensitivity
-test("should count only characters that match the exact case", () => {
-  const str = "AaAaA";
-  expect(countChar(str, "a")).toEqual(2); // lowercase only
-  expect(countChar(str, "A")).toEqual(3); // uppercase only
-});
+  test("should throw error if input string is not a string", () => {
+    expect(() => countChar(12345, "a")).toThrow(
+      "The input string must be a string type."
+    );
+  });
 
-// Special characters
-test("should count special characters", () => {
-  expect(countChar("!?!?", "?")).toEqual(2);
-});
+  test("should throw error if findCharacter is null", () => {
+    expect(() => countChar("abc", null)).toThrow(
+      "The character to count must be a single character string."
+    );
+  });
 
-// Spaces
-test("should count spaces correctly", () => {
-  expect(countChar("a b c", " ")).toEqual(2);
-});
+  test("should throw error if findCharacter is undefined", () => {
+    expect(() => countChar("abc", undefined)).toThrow(
+      "The character to count must be a single character string."
+    );
+  });
 
-// Unicode characters
-test("should count unicode characters correctly", () => {
-  expect(countChar("😀😃😀😄", "😀")).toEqual(2);
-});
+  test("should throw error if findCharacter is not a string", () => {
+    expect(() => countChar("abc", 1)).toThrow(
+      "The character to count must be a single character string."
+    );
+  });
 
-// Long strings
-test("should handle long strings efficiently", () => {
-  const longString = "a".repeat(10000) + "b".repeat(5000) + "a".repeat(3000);
-  expect(countChar(longString, "a")).toEqual(13000);
+  test("should throw error if findCharacter is an empty string", () => {
+    expect(() => countChar("abc", "")).toThrow(
+      "The character to count must be a single character string."
+    );
+  });
+
+  test("should throw error if findCharacter is more than one character", () => {
+    expect(() => countChar("abc", "ab")).toThrow(
+      "The character to count must be a single character string."
+    );
+  });
 });

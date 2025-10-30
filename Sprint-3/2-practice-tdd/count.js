@@ -1,24 +1,31 @@
 function countChar(stringOfCharacters, findCharacter) {
-  if (stringOfCharacters == null) {
-    return "Error: The input string cannot be null or undefined.";
+  // 1. Validate 'stringOfCharacters' input
+  if (stringOfCharacters === null || stringOfCharacters === undefined) {
+    throw new Error("The input string cannot be null or undefined.");
+  }
+  if (typeof stringOfCharacters !== "string") {
+    throw new Error("The input string must be a string type.");
   }
 
+  // 2. Validate 'findCharacter' input
+  if (typeof findCharacter !== "string" || findCharacter.length !== 1) {
+    // This handles null, undefined, and strings that aren't a single character (including empty string "")
+    throw new Error(
+      "The character to count must be a single character string."
+    );
+  }
+
+  // 3. Handle the empty string case (returns 0)
   if (stringOfCharacters.length === 0) {
-    return "Error: The string cannot be empty.";
+    return 0;
   }
 
-  if (findCharacter == null) {
-    return "Error: The character to count must be a single character.";
-  }
-
-  const findChars = [...findCharacter];
-  if (findChars.length !== 1) {
-    return "Error: The character to count must be a single character.";
-  }
-
+  // 4. Perform the count
   let count = 0;
   for (let ch of stringOfCharacters) {
-    if (ch === findCharacter) count++;
+    if (ch === findCharacter) {
+      count++;
+    }
   }
 
   return count;
