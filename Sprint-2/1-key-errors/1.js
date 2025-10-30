@@ -22,13 +22,15 @@
 // =============> write your new code here
 
 
-function convertToPercentage() {
-  const decimalNumber = 0.5;
+function convertToPercentage(decimalNumber) {
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
 }
 
-console.log(convertToPercentage());
+console.log(convertToPercentage(0.5));
+console.log(convertToPercentage(0.27));
+console.log(convertToPercentage(0.76));
 
 // The new code run smoothly and retuned "50%"
+// DecimalNumber is now taken as a parameter. 
