@@ -33,4 +33,4 @@ console.log(convertToPercentage(0.27));
 console.log(convertToPercentage(0.76));
 
 // The new code run smoothly and retuned "50%"
-// DecimalNumber is now taken as a parameter. 
+// decimalNumber is now taken as a parameter. 
