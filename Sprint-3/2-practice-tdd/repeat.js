@@ -1,7 +1,7 @@
 function repeat(valueToRepeat, numOfTimes) {
-  // Validate count
+  // Validate numOfTimes
   if (!Number.isInteger(numOfTimes)) {
-    return "Invalid count: count should be an integer";
+    return "Invalid numOfTimes: numOfTimes should be an integer";
   }
   if (numOfTimes < 0) {
     return "Negative number invalid";
