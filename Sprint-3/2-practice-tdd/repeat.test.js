@@ -25,7 +25,7 @@ test("should return the original input with no repetition", () => {
   const count = 1;
   const repeatedStr = repeat(str, count);
   expect(repeatedStr).toEqual(str);
-})
+});
 
 // case: Handle Count of 0:
 // Given a target string str and a count equal to 0,
@@ -36,60 +36,70 @@ test("should return an empty string for zero count times", () => {
   const count = 0;
   const repeatedStr = repeat(str, count);
   expect(repeatedStr).toEqual("");
-})
+});
 
 // case: Negative Count:
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
-test("should return an error message", () => {
+test("should return an error message when negative number count is passed", () => {
   const str = "food";
   const count = -2;
   const repeatedStr = repeat(str, count);
   expect(repeatedStr).toEqual("Negative number invalid");
-})
+});
 
 test("should return an empty string when empty string is expected count number of times", () => {
   const str = "";
   const count = 23;
   const repeatedStr = repeat(str, count);
   expect(repeatedStr).toEqual("");
-})
+});
 
-test("should repeat the number count times as a string", () => {
+test("should return an error message when a number is passed as input", () => {
   const str = 1;
   const count = 3;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("111");
+  expect(repeatedStr).toEqual(
+    "Invalid input: valueToRepeat should be a string"
+  );
 });
 
-test("should repeat boolean count times as a string", () => {
+test("should return an error message when 'true' is passed as input", () => {
   const str = true;
   const count = 2;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("truetrue");
+  expect(repeatedStr).toEqual(
+    "Invalid input: valueToRepeat should be a string"
+  );
 });
 
-test("should repeat null count times as a string", () => {
+test("should return an error message for 'null' as input", () => {
   const str = null;
   const count = 2;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("nullnull");
+  expect(repeatedStr).toEqual(
+    "Invalid input: valueToRepeat should be a string"
+  );
 });
 
-test("should repeat undefined count times as a string", () => {
+test("should return an error message for 'undefined' as input", () => {
   const str = undefined;
   const count = 2;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("undefinedundefined");
+  expect(repeatedStr).toEqual(
+    "Invalid input: valueToRepeat should be a string"
+  );
 });
 
 // case: array input
-test("should repeat [] count times as a string", () => {
+test("should return an error message for 'array' as input", () => {
   const str = [];
   const count = 2;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("");
+  expect(repeatedStr).toEqual(
+    "Invalid input: valueToRepeat should be a string"
+  );
 });
 
 // case: Non-integer positive count
@@ -97,7 +107,7 @@ test("should return an error message for non-integer positive count", () => {
   const str = "apple";
   const count = 2.5;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("Invalid count: count should be an integer");
+  expect(repeatedStr).toEqual("Invalid input: numOfTimes should be an integer");
 });
 
 // case: Non-integer negative count
@@ -105,13 +115,33 @@ test("should return an error message for non-integer negative count", () => {
   const str = "banana";
   const count = -1.7;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("Invalid count: count should be an integer");
+  expect(repeatedStr).toEqual("Invalid input: numOfTimes should be an integer");
 });
 
 // case: Object input
-test("should repeat an object count times as a string", () => {
+test("should return an error message when object is passed as input", () => {
   const str = {};
   const count = 2;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("[object Object][object Object]");
+  expect(repeatedStr).toEqual(
+    "Invalid input: valueToRepeat should be a string"
+  );
+});
+
+test("should return an error message when input is not a string and count is not a number", () => {
+  const str = {};
+  const count = -2.2;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual(
+    "Invalid input: valueToRepeat should be a string"
+  );
+});
+
+test("should return an error message when input is not a string and count is not a number", () => {
+  const str = {};
+  const count = -2;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual(
+    "Invalid input: valueToRepeat should be a string"
+  );
 });
