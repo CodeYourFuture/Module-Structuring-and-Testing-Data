@@ -23,3 +23,48 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+
+//Test cases
+console.assert(
+  formatAs12HourClock("08:00") === "08:00 am",
+  "Test 1 failed"
+);
+
+console.assert(
+  formatAs12HourClock("23:15") === "11:15 pm",
+  "Test 2 failed"
+);
+
+console.assert(
+  formatAs12HourClock("00:05") === "12:05 am",
+  "Test 3 failed"
+);
+
+console.assert(
+  formatAs12HourClock("12:30") === "12:30 pm",
+  "Test 4 failed"
+);
+
+console.assert(
+  formatAs12HourClock("13:45") === "01:45 pm",
+  "Test 5 failed"
+);
+
+//fixed version
+/*function formatAs12HourClock(time) {
+  let hours = Number(time.slice(0, 2));
+  const minutes = time.slice(3); // keep the minutes as they are
+  let period = "am";
+
+  if (hours === 0) {
+    hours = 12; // midnight
+  } else if (hours === 12) {
+    period = "pm"; // noon
+  } else if (hours > 12) {
+    hours -= 12;
+    period = "pm";
+  }
+
+  return `${hours.toString().padStart(2, "0")}:${minutes} ${period}`;
+}
+  */
