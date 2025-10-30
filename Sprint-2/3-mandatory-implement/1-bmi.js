@@ -17,9 +17,14 @@
 function calculateBMI(weight, height) {
 
     const bmi = weight/(height*height);  
-    return bmi.toFixed(1);
+    return Number(bmi.toFixed(1));
     
     // return the BMI of someone based on  their weight and height
 }
 
 console.log("The BMI is",calculateBMI(70, 1.73));
+console.log(typeof calculateBMI(70,1.73));
+
+// Thank you. As I see it n the console it looks like a number when actually it is a number,
+//  the code has been updated to return a number as -----return Number(bmi.toFixed(1)); 
+// changing the string into number. 
