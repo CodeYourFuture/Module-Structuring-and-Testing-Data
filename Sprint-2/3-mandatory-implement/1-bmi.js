@@ -21,8 +21,3 @@ function calculateBMI(weight, height) {
 }
 
 console.log(`Your BMI is ${calculateBMI(70, 1.73)}`);
-
-//const actualOutput = calculateBMI(70, 1.73);
-//const targetOutput = "23.4";
-
-//console.assert(actualOutput === targetOutput, `That is not the correct BMI`);
