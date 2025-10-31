@@ -7,13 +7,18 @@ test("should return true for a proper fraction", () => {
 });
 
 // Case 2: Identify Improper Fractions:
-test("should return false for numerato>denominator",()=>{
+test("should return false for numerator>denominator",()=>{
   expect(isProperFraction(5, 2)).toEqual(false);
 } );
 
 // Case 3: Identify Negative Fractions:
-test ("should return true for negative Fraction",()=>{
-  expect(isProperFraction(-4,7)).toEqual(true);
+test("should return true when the fraction is negative but proper (numerator smaller than denominator in absolute value)", () => {
+  expect(isProperFraction(-4, 7)).toEqual(true);
+});
+
+
+test("should return false when the numerator is negative and greater in absolute value than the denominator", () => {
+  expect(isProperFraction(-3, 2)).toEqual(false);
 });
 
 // Case 4: Identify Equal Numerator and Denominator:

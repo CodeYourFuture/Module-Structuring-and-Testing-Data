@@ -21,11 +21,7 @@ function getCardValue(card) {
   else {
     return "Invalid card rank."
   }
-  // for (let i=1; i<10; i++){
-  //   if (i==5){
-  //    return rank === "5"
-  //   }
-  // }
+ 
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
