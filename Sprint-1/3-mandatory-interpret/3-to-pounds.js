@@ -25,3 +25,13 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 3-6. initializes a constant string variable penceStringWithoutTrailingP which is penceString with the p removed from the end of the string
+//  to give a plain number string
+// 8. initializes a constant string variable paddedPenceNumberString, which pads "0"s at the start
+// of penceStringWithoutTrailingP until it has length=3  the next parts don't delete any numbers accidentally
+// 9-12. initializes a constant string variable pounds, which is the paddedPenceNumberString, with the last two digits
+// subtracted(i.e. the pence value in the string)
+// 14-16. initializes a constant string variable pence, which is the last two digits of paddedPenceNumberString,
+// with "0" pads at the front of the string until it has length=2
+// 18.calls the console.log function to display the pound-sign and then penceString converted into a pound-value
+//
