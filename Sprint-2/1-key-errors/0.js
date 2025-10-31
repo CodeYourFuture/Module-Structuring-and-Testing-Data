@@ -20,8 +20,8 @@
 
 // =============> write your new code here
 
-function capitalise(firstLetters) {
-  firstLetters = `${firstLetters[0].toUpperCase()}${firstLetters.slice(1)}`;
-  return firstLetters;
+function capitalise(str) {
+  str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return str;
 }
-console.log(capitalise("hello"))
+console.log(capitalise("str"))
