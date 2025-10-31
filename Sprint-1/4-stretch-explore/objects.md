@@ -6,11 +6,20 @@ Open the Chrome devtools Console, type in `console.log` and then hit enter
 
 What output do you get?
 
+- ƒ log() { [native code] }
+
 Now enter just `console` in the Console, what output do you get back?
+
+- console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}
 
 Try also entering `typeof console`
 
 Answer the following questions:
 
 What does `console` store?
-What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+
+- It stores functions/methods
+  What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+  - `console.log` means “get the log property from the console object.”
+  - `console.assert` means “get the assert property from the console object.”
+  - `.` is the property access operator, it lets us access specific functions or values that belong to an object.
