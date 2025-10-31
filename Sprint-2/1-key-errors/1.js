@@ -1,7 +1,7 @@
 // Predict and explain first...
 
 // Why will an error occur when this program runs?
-// =============> I believe that the function converToPercentage is not mentioned in the console.log statement.
+// =============> I believe that the function convertToPercentage is not mentioned in the console.log statement.
 // Declaring the const decimalNumber is unnecessary as it is already declared as a parameter within the function convertToPercentage.
 
 // Try playing computer with the example to work out what is going on
@@ -11,7 +11,7 @@
   // const percentage = `${decimalNumber * 100}%`;
 
   // return percentage;
-}
+//}
 
 // console.log(decimalNumber);
 
