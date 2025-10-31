@@ -41,3 +41,15 @@ test("should return 2 occurrence of m characters",()=>{
   const count = countChar(str, char);
   expect(count).toEqual(2);
 })
+test("should return  occurrence of any characters in empty string",()=>{
+  const str = "";
+  const char = "@";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+})
+test("should return 1 occurrence of @ characters in empty string",()=>{
+  const str = "Ahmadhm@gamil.com";
+  const char = "@";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+})
