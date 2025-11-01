@@ -28,12 +28,12 @@ console.log(formatTimeDisplay(61));
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
-//0
+//00
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-//000
+//1 which is remainder from 61 % 60 from remainingSeconds constant
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-//0
+//01 because if number is less than 10 the return pads one 0 at the start
