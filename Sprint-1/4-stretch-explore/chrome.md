@@ -12,7 +12,7 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
-- It shows a modal pop-up box.
+- It shows a modal pop-up box with phrase `"Hello world!"`.
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
@@ -22,4 +22,4 @@ What effect does calling the `prompt` function have?
 
 ## What is the return value of `prompt`?
 
-- If user typed something in the text input field that'll be the return value with data type String, even if user typed numbers. If user pressed "Cancel" button, then value'll be null.
+- If user typed something in the text input field - that'll be the return value with data type String, even if user typed numbers. If user pressed "Cancel" button, then value'll be null. If user pressed "Ok" button but didn't type anytning then value'll be an empty string - ""
