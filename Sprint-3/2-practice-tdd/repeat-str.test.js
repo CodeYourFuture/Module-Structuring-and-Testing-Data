@@ -31,6 +31,12 @@ test("should return the original string when count is 1", () => {
 // Given a target string str and a count equal to 0,
 // When the repeatStr function is called with these inputs,
 // Then it should return an empty string, ensuring that a count of 0 results in an empty output.
+test("should give a empty string when count is 0", () => {
+    const str = "hello";
+    const count = 0;
+    const repeatedStr = repeat(str, count);
+    expect(repeatedStr).toEqual("");
+})
 
 // case: Negative Count:
 // Given a target string str and a negative integer count,
