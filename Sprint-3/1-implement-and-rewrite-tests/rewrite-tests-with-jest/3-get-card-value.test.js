@@ -9,8 +9,8 @@ test("should return 11 for Ace of Spades", () => {
 
 // Case 2: Handle Number Cards (2-10):
 test("should return correct value for number cards", () => {
-  const fiveheart = getCardValue("5♥");
-  expect(fiveheart).toEqual(5);
+  const fiveHeart = getCardValue("5♥");
+  expect(fiveHeart).toEqual(5);
 });
 
 // Case 3: Handle Face Cards (J, Q, K):
