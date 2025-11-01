@@ -8,15 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  if (rank === "A") {
-    return 11;
-  }
+    var rank = card.slice(0, -1); // get the rank of the card by removing the last character. (the suit is the last character)
+    if (rank === "A") return 11; // this checks for Aces
+    if (rank === "5") return 5; // this should check for the number 5
+    if (rank === "J") return 10; // this checks for Jacks
+    if (rank === "Q") return 10; // this checks for Queens
+    if (rank === "K") return 10; // this checks for Kings
+    if (rank === "10") return 10; // this checks for Tens
 }
-
-// The line below allows us to load the getCardValue function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
-module.exports = getCardValue;
-
 // You need to write assertions for your function to check it works in different cases
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
@@ -39,15 +38,20 @@ assertEquals(aceofSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
+assertEquals(fiveofHearts, 5);
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const jackOfDiamonds = getCardValue("J♦");
+const queenOfClubs = getCardValue("Q♣");
+const kingOfSpades = getCardValue("K♠"); 
+assertEquals(jackOfDiamonds, 10);
+assertEquals(queenOfClubs, 10);
+assertEquals(kingOfSpades, 10);
 
-// Handle Ace (A):
-// Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
 
