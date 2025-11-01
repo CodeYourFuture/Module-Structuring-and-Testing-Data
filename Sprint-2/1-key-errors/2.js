@@ -11,7 +11,7 @@
 
 // =============> explain this error message here
 // the parameter can't be a number like (3),also changing num * num to number instead to match the parameter.
-// Finally, correct the code to fix the problem
+// Finally, correct the code to fix the problem.
 
 // =============> write your new code here
 function square(number) {

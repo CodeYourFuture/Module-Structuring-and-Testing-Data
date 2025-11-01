@@ -13,7 +13,7 @@
 // =============> write your explanation here
 
 // I tried to run the code it gives me SyntaxError,that the decimalNumber has already been declared, we can see in the parameter already has name decimalNumber. 
-// thats why declaring it again inside the function, causes an error.
+// thats why declaring it again inside the function, causes an errors.
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
