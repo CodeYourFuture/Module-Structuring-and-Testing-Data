@@ -18,7 +18,7 @@ function isProperFraction(numerator, denominator) {
     return false;
   }
    else if (numerator === 0){
-   retrurn (true);
+   return (true);
   }
    else if (denominator === 0){
     return (false);
