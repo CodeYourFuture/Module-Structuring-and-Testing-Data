@@ -10,7 +10,14 @@
 function getCardValue(card) {
     var rank = card.slice(0, -1); // get the rank of the card by removing the last character. (the suit is the last character)
     if (rank === "A") return 11; // this checks for Aces
-    if (rank === "5") return 5; // this should check for the number 5
+    if (rank === "2") return 2; // this checks for the twos
+    if (rank === "3") return 3; // this checks for the threes
+    if (rank === "4") return 4; // this checks for the fours
+    if (rank === "5") return 5; // this should check for fives
+    if (rank === "6") return 6; // this checks for the sixes
+    if (rank === "7") return 7; // this checks for the sevens
+    if (rank === "8") return 8; // this checks for the eights
+    if (rank === "9") return 9; // this checks for the nines
     if (rank === "J") return 10; // this checks for Jacks
     if (rank === "Q") return 10; // this checks for Queens
     if (rank === "K") return 10; // this checks for Kings
@@ -38,7 +45,13 @@ assertEquals(aceofSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
+const sixofDiamonds = getCardValue("6♦");
+const sevenofClubs = getCardValue("7♣");
+const eightofSpades = getCardValue("8♠");
 assertEquals(fiveofHearts, 5);
+assertEquals(sixofDiamonds, 6);
+assertEquals(sevenofClubs, 7);
+assertEquals(eightofSpades, 8);
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Handle Face Cards (J, Q, K):
@@ -59,3 +72,4 @@ assertEquals(kingOfSpades, 10);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
