@@ -5,8 +5,8 @@
 // and it won't give the output.
 
 // =============> write your explanation here
-// the code was broken because the console.log was inside the function it not a function,
-//by using the return it gives us the correct output.
+// the code was broken because the console.log was inside the function it not a function,by using the return it gives the outupt
+
 
 // Finally, correct the code to fix the problem
 //  =============> write your new code here
