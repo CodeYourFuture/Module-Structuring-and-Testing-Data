@@ -46,56 +46,56 @@ test("should return empty string if count is 0", () => {
 test("should return error message for negative count", () => {
   const str = "hello";
   const count = -2;
-  expect(repeat(str, count)).toEqual("Second argument must be a non-negative integer");
+  expect(() => repeat(str, count)).toThrow("Second argument must be a non-negative integer");
 });
 
 // invalid input tests
 test("should return error message for non-integer count", () => {
   const str = "hello";
   const count = 2.5;
-  expect(repeat(str, count)).toEqual("Second argument must be a non-negative integer");
+  expect(() => repeat(str, count)).toThrow("Second argument must be a non-negative integer");
 });
 
 test("should return error message for non-string input", () => {
   const str = 123;
   const count = 3;
-  expect(repeat(str, count)).toEqual("First argument must be a string");
+  expect(() => repeat(str, count)).toThrow("First argument must be a string");
 });
 
 test("should return error message for non-string input with invalid count", () => {
   const str = { text: "hello" };
   const count = -2;
-  expect(repeat(str, count)).toEqual("First argument must be a string");
+  expect(() => repeat(str, count)).toThrow("First argument must be a string");
 });
 
 test("should return error message for string input with non number count", () => {
   const str = "hello";
   const count = "3";
   const count2 = [];
-  expect(repeat(str, count)).toEqual("Second argument must be a non-negative integer");
-  expect(repeat(str, count2)).toEqual("Second argument must be a non-negative integer");
+  expect(() => repeat(str, count)).toThrow("Second argument must be a non-negative integer");
+  expect(() => repeat(str, count2)).toThrow("Second argument must be a non-negative integer");
 });
 
 test("should return error message for string input with NaN count", () => {
   const str = "hello";
   const count = NaN;
-  expect(repeat(str, count)).toEqual("Second argument must be a non-negative integer");
+  expect(() => repeat(str, count)).toThrow("Second argument must be a non-negative integer");
 });
 
 test("should return error message for string input with null count", () => {
   const str = "hello";
   const count = null;
-  expect(repeat(str, count)).toEqual("Second argument must be a non-negative integer");
+  expect(() => repeat(str, count)).toThrow("Second argument must be a non-negative integer");
 });
 
 test("should return error message for string input with undefined count", () => {
   const str = "hello";
   const count = undefined;
-  expect(repeat(str, count)).toEqual("Second argument must be a non-negative integer");
+  expect(() => repeat(str, count)).toThrow("Second argument must be a non-negative integer. Received undefined");
 });
 
 test('should have the correct amount of arguments', () => { 
-  expect(repeat('hello')).toEqual("Function requires exactly 2 arguments");
-  expect(repeat("hello", 3, 3)).toEqual("Function requires exactly 2 arguments"); 
+  expect(() => repeat('hello')).toThrow(new Error("Function requires exactly two arguments: a string and a count. Received 1 arguments"));
+  expect(() => repeat("hello", 3, 3)).toThrow(new Error("Function requires exactly two arguments: a string and a count. Received 3 arguments"));
  })
 

@@ -1,12 +1,13 @@
 function repeat(str, count) {
   if ( arguments.length !== 2) {
-    return "Function requires exactly 2 arguments";
+    throw new Error(`Function requires exactly two arguments: a string and a count. Received ${arguments.length} arguments`);
+    
   }
   if (typeof str !== "string") {
-    return "First argument must be a string";
+    throw new Error("First argument must be a string. Received type " + typeof str);
   }
   if (!Number.isInteger(count) || count < 0) {
-    return "Second argument must be a non-negative integer";
+    throw new Error("Second argument must be a non-negative integer. Received " + count  );
   }
   return str.repeat(count);
 }

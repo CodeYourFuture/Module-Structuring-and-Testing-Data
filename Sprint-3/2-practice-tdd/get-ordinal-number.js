@@ -2,10 +2,10 @@ function getOrdinalNumber(num) {
   if (arguments.length !== 1) {
     throw new Error("Function requires exactly one argument");
   }
-  if (typeof num !== "number" || isNaN(num)) {
+  if (typeof num !== "number") {
     throw new Error("Input must be a number");
   }
-  if (!Number.isFinite(num)){
+  if (!isFinite(num)) {
     throw new Error("Input must be a finite number");
   }
   if (!Number.isInteger(num) || num < 0) {

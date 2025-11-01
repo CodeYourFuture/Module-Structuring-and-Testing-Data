@@ -83,7 +83,7 @@ test("should throw an error if the argument is a decimal", () => {
 });
 
 test("should throw an error if the argument is NaN", () => {
-  expect(() => getOrdinalNumber(NaN)).toThrow("Input must be a number");
+  expect(() => getOrdinalNumber(NaN)).toThrow("Input must be a finite number");
 });
 
 test("should throw an error if the argument is Infinity", () => {
