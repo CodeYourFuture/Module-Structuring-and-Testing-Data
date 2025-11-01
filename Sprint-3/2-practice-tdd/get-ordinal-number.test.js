@@ -26,3 +26,15 @@ test("Should return `2nd` for 2", () => {
 test("Should return `3rd` for 3", () => {
     expect(getOrdinalNumber(3)).toEqual("3rd");
 });
+// Case 4: identify the special ordinal numbers for 11, 12, 13 
+// When the number is 11, 12, 13,
+// The function should return "11th, 12th, 13th"
+
+test ("should return `11th, 12th, 13th` for special ordinal numbers ending on these", () => {
+    expect(getOrdinalNumber(11)).toEqual("11th");
+    expect(getOrdinalNumber(12)).toEqual("12th");
+    expect(getOrdinalNumber(13)).toEqual("13th");
+    expect(getOrdinalNumber(111)).toEqual("111th");
+    expect(getOrdinalNumber(112)).toEqual("112th");
+    expect(getOrdinalNumber(113)).toEqual("113th");
+});
