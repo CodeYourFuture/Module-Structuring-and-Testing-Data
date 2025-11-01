@@ -13,14 +13,33 @@ test("should identify right angle (90°)", () => {
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
 
+test("should identify actue angle (40°)", () => {
+  expect(getAngleType(40)).toEqual("Acute angle");
+});
+
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
+
+test("should identify obtuse angle (120°)", () => {
+  expect(getAngleType(120)).toEqual("Obtuse angle");
+});
 
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
 
+test("should identify straight angle (180°)", () => {
+  expect(getAngleType(180)).toEqual("Straight angle");
+});
+
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+
+test("should identify reflex angle (240)", () => {
+  expect(getAngleType(240)).toEqual("Reflex angle");
+});
+
+
+// Sprint-3 rewrite-tests-with jest 1-get-angle-type-test.js tests conducted 
