@@ -15,9 +15,7 @@ function countChar(stringOfCharacters, findCharacter) {
   } 
   if (stringOfCharacters.length === 0) {
     return 0;
-  }
-  console.log(Array.from(stringOfCharacters));
-  
+  }  
   return Array.from(stringOfCharacters).filter(char => char === findCharacter).length;
 }
 
