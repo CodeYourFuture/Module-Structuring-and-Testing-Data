@@ -3,6 +3,7 @@
 // The return statement is not in the right place, so the function doesn’t return the value.
 
 // =============> write your explanation here
+
 //  The return statement is stopping the function too early, so it doesn’t return a + b.
 
 // Finally, correct the code to fix the problem
