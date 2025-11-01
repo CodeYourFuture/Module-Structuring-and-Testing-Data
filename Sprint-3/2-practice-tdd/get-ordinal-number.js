@@ -6,7 +6,21 @@ function getOrdinalNumber(num) {
  if (lastTwoDigits === 11 || lastTwoDigits === 12 || lastTwoDigits === 13){
   return num + "St";
 }
+ // will return "St" if the number ends in 1.
+  if (lastDigit === 1){
+    return num + "st";
+  }
+// will return "Nd" if the number ends in 2.
+  if (lastDigit === 2){
+    return num + "nd";
+  }
+// will return "Rd" if the number ends in 3.
+  if (lastDigit === 3){
+    return num + "rd";
+  }
 
+// will return all numbers that end in 4, 5, 6, 7, 8, 9 with "Th".
+  return num + "th";
 }
 
 module.exports = getOrdinalNumber;
