@@ -17,18 +17,18 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// =============> 3 times
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// =============> 0
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// =============> "00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> "1". The last time pad works on remainingSeconds which is "1" if the input (remainingSeconds) is 61: remainingSeconds = seconds % 60, modulo operator gives the remainder of the division of seconds by 60, so 61 % 60 = 1.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> "01". THe pad(1) is called, converting 1 to string and transform it to "01".
