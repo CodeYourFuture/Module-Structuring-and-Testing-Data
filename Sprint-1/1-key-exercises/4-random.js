@@ -8,7 +8,8 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
-// Here, Math.rondom creates a random number between 0 to 1 and Math.floor rounds donw to the nearest integer. 
+// Here, Math.rondom creates a random number which is greater than or equals to 0 and less than 1.
+// Math.floor rounds down to the nearest integer which is less than or equals to a given number
 // When creating a random number between 0 and 1, we will multiply it by the (100 - 1 + 1), then round it down to the nearest integer
-// Then add all of that to 1.
+// Then add all of that to 1 which is the minimun.
 
