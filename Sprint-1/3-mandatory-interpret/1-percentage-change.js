@@ -1,11 +1,11 @@
-let carPrice = "10,000";
-let priceAfterOneYear = "8,543";
+let carPrice = "10,000"; // variable declaration
+let priceAfterOneYear = "8,543"; // variable declaration 
 
-carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+carPrice = Number(carPrice.replaceAll(",", "")); // variable reassignment statement and function call (.replaceall is replacing the comma for a empty space and the number() is converting the string into a number value)
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", "")); // variable reassignment statement and function call
 
-const priceDifference = carPrice - priceAfterOneYear;
-const percentageChange = (priceDifference / carPrice) * 100;
+const priceDifference = carPrice - priceAfterOneYear; // variable declaration
+const percentageChange = (priceDifference / carPrice) * 100; // variable declaration
 
 console.log(`The percentage change is ${percentageChange}`);
 
