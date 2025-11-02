@@ -1,7 +1,7 @@
 function getOrdinalNumber(number) {
   // Handle invalid inputs
   if (typeof number !== "number" || !Number.isFinite(number)) {
-    return "Invalid input";
+    return "Invalid input : Expected a infinit number";
   }
 
   // Handle zero or negative numbers (optional)

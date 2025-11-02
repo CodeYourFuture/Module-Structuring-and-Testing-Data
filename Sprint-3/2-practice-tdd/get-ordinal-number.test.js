@@ -73,7 +73,9 @@ test("should return '23rd' for 23", () => {
 // Then the function should return "Invalid input"
 
 test("should return 'Invalid input' when input is undefined", () => {
-  expect(getOrdinalNumber(undefined)).toEqual("Invalid input");
+  expect(getOrdinalNumber(undefined)).toEqual(
+    "Invalid input : Expected a infinit number"
+  );
 });
 
 // Case null :
@@ -81,7 +83,9 @@ test("should return 'Invalid input' when input is undefined", () => {
 // Then the function should return "Invalid input"
 
 test("should return 'Invalid input' when input is null", () => {
-  expect(getOrdinalNumber(null)).toEqual("Invalid input");
+  expect(getOrdinalNumber(null)).toEqual(
+    "Invalid input : Expected a infinit number"
+  );
 });
 
 // Case negetive number  :
@@ -97,5 +101,7 @@ test("should return '-1th' for -1", () => {
 // Then the function should return "Invalid input"
 
 test("should return 'Invalid input' when input is NaN", () => {
-  expect(getOrdinalNumber(NaN)).toEqual("Invalid input");
+  expect(getOrdinalNumber(NaN)).toEqual(
+    "Invalid input : Expected a infinit number"
+  );
 });

@@ -63,11 +63,13 @@ test("should return 0 when the 'c' does not exist in string 'I dont have an appl
 // When the function is called,
 // Then it should return 0 because a multi-character string cannot match a single character position.
 
-test("should return 0 when findCharacter is longer than the input string", () => {
+test("should return a message  when findCharacter is longer than the input string", () => {
   const str = "a";
   const char = "abc";
   const count = countChar(str, char);
-  expect(count).toEqual(0);
+  expect(count).toEqual(
+    "the stringOfCharacters MUST be lonegr than findingcharacter"
+  );
 });
 
 // Scenario: Empty string input
@@ -75,23 +77,11 @@ test("should return 0 when findCharacter is longer than the input string", () =>
 // When the function is called,
 // Then it should return 0 because there are no characters to search.
 
-test("should return 0 when input string is empty", () => {
+test("should return a Message  when input stringOfCharacters is empty", () => {
   const str = "";
   const char = "a";
   const count = countChar(str, char);
-  expect(count).toEqual(0);
-});
-
-// Scenario: Non-string input type
-// Given that one or both inputs are not strings (e.g., number, array),
-// When the function is called,
-// Then it should return 0 or handle the input gracefully without throwing an error.
-
-test("should return 0 when inputs are not strings", () => {
-  const str = 12345;
-  const char = 1;
-  const count = countChar(str, char);
-  expect(count).toEqual(0);
+  expect(count).toEqual("stringOfCharacters can not be empty");
 });
 
 // Scenario: Empty findCharacter
@@ -99,9 +89,21 @@ test("should return 0 when inputs are not strings", () => {
 // When the function is called,
 // Then it should return 0 because an empty search target is not valid.
 
-test("should return 0 when findCharacter is an empty string", () => {
+test("should return message  when findCharacter is an empty string", () => {
   const str = "hello";
   const char = "";
   const count = countChar(str, char);
-  expect(count).toEqual(0);
+  expect(count).toEqual("findCharacter can not be empty");
+});
+
+// Scenario: Non-string input type
+// Given that one or both inputs are not strings (e.g., number, array),
+// When the function is called,
+// Then it should return 0 or handle the input gracefully without throwing an error.
+
+test("should return message when inputs are numbers", () => {
+  const str = 12345;
+  const char = 1;
+  const count = countChar(str, char);
+  expect(count).toEqual("Values Can not be Numbers");
 });
