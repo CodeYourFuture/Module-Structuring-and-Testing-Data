@@ -10,19 +10,30 @@
 function getCardValue(card) {
   const rank = card.slice(0, -1); // get the rank (before the suit symbol)
 
+
+  const num = Number(rank); // converting to a number.
+
   if (!isNaN(rank)) {
-    return Number(rank); // Number card
+    return num; // Number card
   }
 
   if (rank === "J" || rank === "Q" || rank === "K") {
     return 10; // Face cards
   }
 
-  if (rank === "A") return 11; // Ace
+  if (rank === "A") return 11; // Ace 
 
   // Anything else is invalid
-  throw new Error("Invalid card rank");
-}
+   throw new Error("Invalid card rank")
+  
+} 
+
+console.log(Number("0x002"));
+console.log(Number("2.1"));
+console.log(Number("9e1"));
+console.log(Number("0002"));
+
+
 
 // if the rank is not a number or a face card, throw an error(invalid card rank).
 
