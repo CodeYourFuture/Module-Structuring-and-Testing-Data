@@ -11,5 +11,5 @@ console.log (last4Digits)
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
 //Prediction: The slice method doesn't work on numbers and integers. It only works on strings and arrays
-//Error message: The error message satates that "SLice is not a function"
+//Error message: The error message states that "Slice is not a function"
 
