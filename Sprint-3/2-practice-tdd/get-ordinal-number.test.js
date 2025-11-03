@@ -34,3 +34,8 @@ test("should return '12th' for 12", () => {
 test("should return '13th' for 13", () => {
   expect(getOrdinalNumber(13)).toEqual("13th");
 });
+test("append 'nd' to numbers ending in 2, except those ending in 12", () => {
+    expect( getOrdinalNumber(2) ).toEqual("2nd");
+    expect( getOrdinalNumber(22) ).toEqual("22nd");
+    expect( getOrdinalNumber(132) ).toEqual("132nd");
+});

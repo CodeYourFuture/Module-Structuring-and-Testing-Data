@@ -1,16 +1,16 @@
 function repeat(str, count) {
   
   if (count < 0){
-    return null
+    throw new Error("Count must be positive number!");
   }
   else if (count == 0){
-    return ""
+    return "";
   }
   let result = "";
   for ( let i=0; i<count; i++){
-    result +=str
+    result +=str;
   }
-  return result
+  return result;
 }
 
 module.exports = repeat;

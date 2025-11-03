@@ -1,15 +1,17 @@
 function getOrdinalNumber(num) {
   let result;
-  if (num % 100 == 11 || num % 100 == 12 || num % 100 == 13){
+  let rem_100 = num % 100;
+  let rem_10 = num % 10;
+  if (rem_100 == 11 || rem_100  == 12 || rem_100  == 13){
     result = num.toString() + "th";
   }
-  else if (num % 10 == 1){
+  else if (rem_10 == 1){
     result = num.toString() +"st";
   }
-  else if (num % 10 == 2){
+  else if (rem_10 == 2){
     result = num.toString() + "nd";
   }
-  else if (num % 10 == 3){
+  else if (rem_10 == 3){
     result = num.toString() + "rd";
   }
   else {
