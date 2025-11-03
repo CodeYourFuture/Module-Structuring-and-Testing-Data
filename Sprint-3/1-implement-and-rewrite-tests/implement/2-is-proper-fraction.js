@@ -68,3 +68,4 @@ console.log(isProperFraction(-4, 7));
 console.log(isProperFraction(-3, 3));
 console.log(isProperFraction(-2, -3)); // This is a proper fraction because the absolute value of numerator 2 and denominator is 3.
 // the value of  numerator is less than denominator.
+console.log(isProperFraction(-4, -7));
