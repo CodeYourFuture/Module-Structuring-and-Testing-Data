@@ -27,6 +27,8 @@ function getAngleType(angle) {
   // Case 5: Reflex angle
   else if (angle > 180 && angle < 360) {
     return "Reflex angle";
+      } else {
+    return "Invalid angle";// added to handle angles not in the specified range for Example -1 or 500
   }
 }
 // The line below allows us to load the getAngleType function into tests in other files.
