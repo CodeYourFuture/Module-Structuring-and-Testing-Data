@@ -11,10 +11,14 @@
 
 function calculateBMI(weight, height) {
     let bmi = (weight / (height * height));
-    return bmi.toFixed(1);
+    return Number(bmi.toFixed(1));
 }
 console.log(calculateBMI(70, 1.73));
 console.log(calculateBMI(95, 1.82));
 console.log(calculateBMI(52, 1.6));
 console.log(calculateBMI(110, 1.75));
 console.log(calculateBMI(65, 1.9));
+
+console.assert(typeof calculateBMI(60, 1.65) === 'number', 'Should return a number');
+console.assert(calculateBMI(60, 1.65) === 22.0, 'Should correctly calculate BMI');
+console.log('All tests passed!');
