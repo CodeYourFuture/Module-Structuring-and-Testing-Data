@@ -50,10 +50,10 @@ test("should throw error for non-string input", () => {
   expect(() => getCardValue(5)).toThrow("Card must be a string");
 });
 
-// try {
-// getCardValue("Z♠");
-//} catch (error) {
-// console.log("Caught error:", error.message);
-//}
+try {
+getCardValue("Z♠");
+} catch (error) {
+console.log("Caught error:", error.message);
+}
 
 
