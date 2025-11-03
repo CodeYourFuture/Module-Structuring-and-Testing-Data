@@ -31,17 +31,23 @@ jobs:
       - name: Run Jest Tests with Coverage
         run: npm run test:coverage
 
-      - name: Generate Coverage Report Comment
-        uses: ArtiomTr/jest-coverage-report-action@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-script: npm run test:coverage
-          coverage-file: ./coverage/jest-tests/coverage-summary.json
-          annotations: failed-tests
-          package-manager: npm
-
       - name: Upload Coverage Reports
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: coverage-report
           path: coverage/jest-tests/
+
+      - name: Coverage Summary
+        if: always()
+        run: |
+          echo "## 📊 Coverage Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Coverage report has been generated and uploaded as an artifact." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Coverage Files" >> $GITHUB_STEP_SUMMARY
+          if [ -f coverage/jest-tests/coverage-summary.json ]; then
+            echo '```json' >> $GITHUB_STEP_SUMMARY
+            cat coverage/jest-tests/coverage-summary.json >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
