@@ -67,3 +67,4 @@ assertEquals(equalFraction, false);
 const negativeDenominator = isProperFraction(3, -5);
 assertEquals(negativeDenominator, true);
 const bothNegative = isProperFraction(-2, -6);
+assertEquals(bothNegative(-2, -6), true);// both negative should return true as well
