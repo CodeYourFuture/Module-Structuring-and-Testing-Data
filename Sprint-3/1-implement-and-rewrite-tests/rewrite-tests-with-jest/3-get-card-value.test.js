@@ -26,6 +26,7 @@ test("should return 10 for face cards J, Q, K and 10", () => {
   expect(getCardValue("K♥")).toEqual(10);
 });
 
+
 // Case 4: Handle Invalid Cards:
 test("should throw an error for invalid card rank", () => {
   expect(() => getCardValue("B♦")).toThrow("Invalid card rank.");
