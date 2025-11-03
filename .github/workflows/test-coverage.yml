@@ -38,6 +38,14 @@ jobs:
           name: coverage-report
           path: coverage/jest-tests/
 
+      - name: Deploy Coverage Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: always() && github.event_name == 'push'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./coverage/jest-tests
+          destination_dir: coverage/${{ github.ref_name }}
+
       - name: Jest Coverage Comment
         uses: MishaKav/jest-coverage-comment@main
         if: always()
@@ -46,3 +54,10 @@ jobs:
           title: Jest Coverage Report
           badge-title: Coverage
           create-new-comment: false
+
+      - name: Coverage Report Link
+        if: always() && github.event_name == 'push'
+        run: |
+          echo "## 🔗 Coverage Report Link" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📊 [View HTML Coverage Report](https://${{ github.repository_owner }}.github.io/Module-Structuring-and-Testing-Data/coverage/${{ github.ref_name }}/)" >> $GITHUB_STEP_SUMMARY
