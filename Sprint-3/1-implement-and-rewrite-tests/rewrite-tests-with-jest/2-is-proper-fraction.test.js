@@ -7,7 +7,7 @@ test("should return true for a proper fraction", () => {
 });
 
 // Case 2: Identify Improper Fractions:
-est("should return false for improper fractions", () => {
+test("should return false for improper fractions", () => {
   const improperFraction = isProperFraction(5, 2);
   expect(improperFraction).toEqual(false);
 });
