@@ -54,11 +54,31 @@ echo "Passed:      $PASSED"
 echo "Failed:      $FAILED"
 echo ""
 
+# Write to GitHub Actions Summary if available
+if [ -n "$GITHUB_STEP_SUMMARY" ]; then
+  echo "## 🧪 Inline Assertion Tests" >> "$GITHUB_STEP_SUMMARY"
+  echo "" >> "$GITHUB_STEP_SUMMARY"
+  echo "| Metric | Count |" >> "$GITHUB_STEP_SUMMARY"
+  echo "|--------|-------|" >> "$GITHUB_STEP_SUMMARY"
+  echo "| Total Files | $TOTAL |" >> "$GITHUB_STEP_SUMMARY"
+  echo "| ✅ Passed | $PASSED |" >> "$GITHUB_STEP_SUMMARY"
+  echo "| ❌ Failed | $FAILED |" >> "$GITHUB_STEP_SUMMARY"
+  echo "" >> "$GITHUB_STEP_SUMMARY"
+fi
+
 # Now check test parity
 echo "=========================================="
 echo "🔍 Verifying Test Case Parity with Jest"
 echo "=========================================="
 echo ""
+
+# Start parity table in GitHub summary if available
+if [ -n "$GITHUB_STEP_SUMMARY" ]; then
+  echo "## 🔍 Test Case Parity Check" >> "$GITHUB_STEP_SUMMARY"
+  echo "" >> "$GITHUB_STEP_SUMMARY"
+  echo "| File | Inline | Jest | Status |" >> "$GITHUB_STEP_SUMMARY"
+  echo "|------|--------|------|--------|" >> "$GITHUB_STEP_SUMMARY"
+fi
 
 for impl_file in "$IMPLEMENT_DIR"/*.js; do
   filename=$(basename "$impl_file")
@@ -84,22 +104,36 @@ for impl_file in "$IMPLEMENT_DIR"/*.js; do
 
   if [ "$inline_count" -eq "$jest_count" ]; then
     echo "  ✅ Test counts match"
+    if [ -n "$GITHUB_STEP_SUMMARY" ]; then
+      echo "| $filename | $inline_count | $jest_count | ✅ Match |" >> "$GITHUB_STEP_SUMMARY"
+    fi
   else
     echo "  ⚠️  MISMATCH DETECTED"
     if [ $inline_count -gt $jest_count ]; then
       diff=$((inline_count - jest_count))
       echo "      → Inline tests have $diff MORE assertion(s) than Jest"
       echo "      → Jest tests may be missing $diff test case(s)"
+      if [ -n "$GITHUB_STEP_SUMMARY" ]; then
+        echo "| $filename | $inline_count | $jest_count | ⚠️ Inline +$diff |" >> "$GITHUB_STEP_SUMMARY"
+      fi
     else
       diff=$((jest_count - inline_count))
       echo "      → Jest tests have $diff MORE assertion(s) than Inline"
       echo "      → Inline tests may be missing $diff test case(s)"
+      if [ -n "$GITHUB_STEP_SUMMARY" ]; then
+        echo "| $filename | $inline_count | $jest_count | ⚠️ Jest +$diff |" >> "$GITHUB_STEP_SUMMARY"
+      fi
     fi
     PARITY_ISSUES=true
   fi
 
   echo ""
 done
+
+# Add summary note if in GitHub Actions
+if [ -n "$GITHUB_STEP_SUMMARY" ]; then
+  echo "" >> "$GITHUB_STEP_SUMMARY"
+fi
 
 # Final summary
 echo "=========================================="

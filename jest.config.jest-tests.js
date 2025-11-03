@@ -10,7 +10,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     "/node_modules/",
   ],
-  coverageReporters: ["text", "lcov", "json-summary"],
+  coverageReporters: ["text", "lcov", "json-summary", "html"],
   coverageThreshold: {
     global: {
       branches: 40,

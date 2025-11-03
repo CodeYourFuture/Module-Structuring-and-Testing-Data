@@ -41,13 +41,32 @@ jobs:
       - name: Coverage Summary
         if: always()
         run: |
-          echo "## 📊 Coverage Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## 📊 Jest Coverage Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Coverage report has been generated and uploaded as an artifact." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Coverage Files" >> $GITHUB_STEP_SUMMARY
+
           if [ -f coverage/jest-tests/coverage-summary.json ]; then
-            echo '```json' >> $GITHUB_STEP_SUMMARY
-            cat coverage/jest-tests/coverage-summary.json >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
+            # Parse and display coverage metrics
+            echo "| Metric | Coverage | Threshold | Status |" >> $GITHUB_STEP_SUMMARY
+            echo "|--------|----------|-----------|--------|" >> $GITHUB_STEP_SUMMARY
+
+            # Extract coverage percentages using grep and basic parsing
+            total_lines=$(cat coverage/jest-tests/coverage-summary.json | grep -o '"lines":{"total":[0-9]*,"covered":[0-9]*,"skipped":[0-9]*,"pct":[0-9.]*' | grep -o 'pct":[0-9.]*' | cut -d':' -f2)
+            total_statements=$(cat coverage/jest-tests/coverage-summary.json | grep -o '"statements":{"total":[0-9]*,"covered":[0-9]*,"skipped":[0-9]*,"pct":[0-9.]*' | grep -o 'pct":[0-9.]*' | cut -d':' -f2)
+            total_functions=$(cat coverage/jest-tests/coverage-summary.json | grep -o '"functions":{"total":[0-9]*,"covered":[0-9]*,"skipped":[0-9]*,"pct":[0-9.]*' | grep -o 'pct":[0-9.]*' | cut -d':' -f2)
+            total_branches=$(cat coverage/jest-tests/coverage-summary.json | grep -o '"branches":{"total":[0-9]*,"covered":[0-9]*,"skipped":[0-9]*,"pct":[0-9.]*' | grep -o 'pct":[0-9.]*' | cut -d':' -f2)
+
+            # Check thresholds and add status
+            [ $(echo "$total_lines >= 40" | bc -l) -eq 1 ] && lines_status="✅" || lines_status="❌"
+            [ $(echo "$total_statements >= 40" | bc -l) -eq 1 ] && stmt_status="✅" || stmt_status="❌"
+            [ $(echo "$total_functions >= 100" | bc -l) -eq 1 ] && func_status="✅" || func_status="❌"
+            [ $(echo "$total_branches >= 40" | bc -l) -eq 1 ] && branch_status="✅" || branch_status="❌"
+
+            echo "| Lines | ${total_lines}% | 40% | $lines_status |" >> $GITHUB_STEP_SUMMARY
+            echo "| Statements | ${total_statements}% | 40% | $stmt_status |" >> $GITHUB_STEP_SUMMARY
+            echo "| Functions | ${total_functions}% | 100% | $func_status |" >> $GITHUB_STEP_SUMMARY
+            echo "| Branches | ${total_branches}% | 40% | $branch_status |" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "📁 Download the **coverage-report** artifact to view the detailed HTML coverage report." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ Coverage summary file not found." >> $GITHUB_STEP_SUMMARY
           fi
