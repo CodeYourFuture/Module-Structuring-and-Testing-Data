@@ -4,7 +4,8 @@
   "description": "Like learning a musical instrument, programming requires daily practice.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --config=jest.config.jest-tests.js --coverage"
   },
   "keywords": [],
   "author": "Code Your Future",

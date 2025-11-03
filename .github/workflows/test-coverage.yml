@@ -1,0 +1,47 @@
+name: Test Coverage Report
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - 'coursework/sprint-3-implement-and-rewrite*'
+
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Inline Assertion Tests & Verify Parity
+        run: ./scripts/run-inline-tests.sh
+
+      - name: Run Jest Tests with Coverage
+        run: npm run test:coverage
+
+      - name: Generate Coverage Report Comment
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          test-script: npm run test:coverage
+          coverage-file: ./coverage/jest-tests/coverage-summary.json
+          annotations: failed-tests
+          package-manager: npm
+
+      - name: Upload Coverage Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/jest-tests/
