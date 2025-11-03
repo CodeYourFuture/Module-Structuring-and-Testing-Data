@@ -1,6 +1,6 @@
 // Predict and explain first...
 //  =============> write your prediction here
-// it gives us an error.
+// I gives us a syntax error as str declared before.
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
 
