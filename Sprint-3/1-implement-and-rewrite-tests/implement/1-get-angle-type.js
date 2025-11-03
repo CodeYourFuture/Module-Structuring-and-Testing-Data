@@ -31,10 +31,10 @@ function getAngleType(angle) {
   else {
     return "Invalid angle"; // Optional: handles 0 or ≥ 360
   }
-  
+} 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
-module.exports = getAngleType;
+
 // we're going to use this helper function to make our assertions easier to read
 // if the actual output matches the target output, the test will pass
 function assertEquals(actualOutput, targetOutput) {
@@ -83,4 +83,8 @@ assertEquals(straight, "Straight angle");
 const reflex = getAngleType(270);
 assertEquals(reflex, "Reflex angle");
 
-console.assert(reflex === "Reflex angle", `Expected ${reflex} to equal Reflex angle`);
+//console.assert(reflex === "Reflex angle", `Expected ${reflex} to equal Reflex angle`);
+
+
+
+module.exports = getAngleType;

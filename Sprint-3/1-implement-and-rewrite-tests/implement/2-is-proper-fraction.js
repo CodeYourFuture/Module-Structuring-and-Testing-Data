@@ -38,7 +38,6 @@ function assertEquals(actualOutput, targetOutput) {
 // Explanation: The fraction 2/3 is a proper fraction, where the numerator is less than the denominator. The function should return true.
 const properFraction = isProperFraction(2, 3);
 assertEquals(properFraction, true);
-
 // Improper Fraction check:
 // Input: numerator = 5, denominator = 2
 // target output: false
