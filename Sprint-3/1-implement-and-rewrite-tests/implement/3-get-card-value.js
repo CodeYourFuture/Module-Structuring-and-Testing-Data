@@ -12,7 +12,7 @@ function getCardValue(card) {
   if (rank === "A") {
     return 11;
   }
-if (["J", "Q", "K", "10"].includes(rank)) {
+else if (["J", "Q", "K", "10"].includes(rank)) {// changed the if with else if
   return 10;
 } else if (!isNaN(rank)) {    
   return Number(rank);
