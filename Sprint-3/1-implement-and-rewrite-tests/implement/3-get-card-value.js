@@ -8,21 +8,23 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  let rank = card.slice(0, card.length-1) 
+  let rank = card.slice(0, -1);
+  let intPart;
+  if (!isNaN(rank)){
+    intPart = parseInt(rank); 
+  }
   if (rank === "A") {
     return 11;
   }
-  else if ((parseInt(rank) >= 2 && parseInt(rank)) && parseInt(rank) < 11){
+  else if (intPart >= 2 && intPart && intPart < 11){
     return parseInt(rank)
   }
-  else if( rank === "J" || rank === "Q" || rank === "K") {
+  else if(["J", "Q", "K"].includes(rank)) {
     return 10;
   }
   else{
-    throw  new Error("Invalid card rank.")
-  }
-    
- 
+    throw new Error("Invalid card rank.");
+  }   
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -76,10 +78,9 @@ assertEquals(aceOfHeart, 11);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-
-
 try {
-  assertEquals(getCardValue("W♥"), "Invalid card rank");
+  getCardValue("W♥");
+  console.log("❌ Test failed: no error thrown");
 } catch (error) {
-  console.log(error.message);
+  assertEquals(error.message, "Invalid card rank.");
 }
