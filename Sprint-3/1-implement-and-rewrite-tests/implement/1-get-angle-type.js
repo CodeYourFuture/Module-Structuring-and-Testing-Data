@@ -80,7 +80,7 @@ assertEquals(straight, "Straight angle");
 const reflex = getAngleType(270);
 assertEquals(reflex, "Reflex angle");
 
-//console.assert(reflex === "Reflex angle", `Expected ${reflex} to equal Reflex angle`);
+
 
 
 
