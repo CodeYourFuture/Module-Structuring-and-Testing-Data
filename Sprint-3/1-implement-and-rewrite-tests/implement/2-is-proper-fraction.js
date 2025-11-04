@@ -61,3 +61,17 @@ assertEquals(equalFraction, false);
 // Explanation: The fraction 0/5 is a proper fraction because the numerator (0) is less than the denominator (5). The function should return true.
 const zeroNumerator = isProperFraction(0, 5);
 assertEquals(zeroNumerator, true);
+
+// Negative Numerator check:
+// Input: numerator = -3, denominator = 4
+// target output: true
+// Explanation: The fraction -3/4 is a proper fraction because the absolute value of numerator (3) is less than denominator (4)
+const negativeNumerator = isProperFraction(-3, 4);
+assertEquals(negativeNumerator, true);
+
+// Equal Values check:
+// Input: numerator = 7, denominator = 7
+// target output: false
+// Explanation: The fraction 7/7 is NOT a proper fraction because the numerator equals the denominator (not less than)
+const equalValues = isProperFraction(7, 7);
+assertEquals(equalValues, false);

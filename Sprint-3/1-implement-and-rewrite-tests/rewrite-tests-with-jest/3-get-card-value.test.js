@@ -14,13 +14,21 @@ test("should return correct value for number cards", () => {
 });
 
 // Case 3: Handle Face Cards (J, Q, K):
-test("Case 3: Handle Face Cards (J, Q, K)", () => {
+test("Case 3: Handle Face Card (J)", () => {
   const cardOfJ = getCardValue("J♥");
   expect(cardOfJ).toEqual(10);
 });
+test("Case 3: Handle Face Cards (Q)", () => {
+  const cardOfQ = getCardValue("Q♠");
+  expect(cardOfQ).toEqual(10);
+});
+test("Case 3: Handle Face Cards (K)", () => {
+  const cardOfK = getCardValue("K♠");
+  expect(cardOfK).toEqual(10);
+});
 
 // Case 4: Handle Ace (A):
-test("Case 4: Handle Face Cards (J, Q, K)", () => {
+test("Case 4: Handle Face Cards (A)", () => {
   const aceOfHeart = getCardValue("A♥");
   expect(aceOfHeart).toEqual(11);
 });
@@ -29,5 +37,11 @@ test("Case 4: Handle Face Cards (J, Q, K)", () => {
 test("Case 5: Handle Invalid Cards", () => {
   expect(() => {
     getCardValue("21♠");
+  }).toThrow("Invalid card rank");
+});
+
+test("Case 6: Handle card with invalid rank", () => {
+  expect(() => {
+    getCardValue("ZC");
   }).toThrow("Invalid card rank");
 });

@@ -65,6 +65,8 @@ const cardOfQ = getCardValue("Q♠");
 assertEquals(cardOfQ, 10);
 const cardOfK = getCardValue("K♠");
 assertEquals(cardOfK, 10);
+const cardOf10 = getCardValue("10♣");
+assertEquals(cardOf10, 10);
 
 
 // Handle Ace (A):
