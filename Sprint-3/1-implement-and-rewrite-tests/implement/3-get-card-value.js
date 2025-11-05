@@ -20,7 +20,7 @@ function getCardValue(card) {
   const suit = card.slice(-1);
 
   if (!["♠", "♥", "♦", "♣"].includes(suit)) {
-    throw new Error("Invalid card rank");
+    throw new Error("Invalid card suit");
   }
 
   if (rank === "A") return 11; // Ace 
@@ -40,9 +40,9 @@ function getCardValue(card) {
     return 10; // Face cards
   }
 
-  if (!/^[0-9]+$/.test(rank)) {
-    throw new Error("Invalid card rank");
-  }
+  if (!/^(?:[1-9]|10)$/.test(rank)) {
+  throw new Error("Invalid card rank");
+}
   // Reject weird or malformed ranks (like 3AAAA)
 
    const num = Number(rank);
@@ -62,10 +62,10 @@ function getCardValue(card) {
 } 
 
 
-console.log(Number("0x002"));
-console.log(Number("2.1"));
-console.log(Number("9e1"));
-console.log(Number("0002"));
+// console.log(Number("0x002"));
+// console.log(Number("2.1"));
+// console.log(Number("9e1"));
+// console.log(Number("0002"));
 
 
 
