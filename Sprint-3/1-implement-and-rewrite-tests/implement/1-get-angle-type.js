@@ -8,7 +8,9 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-  if (angle === 90) {
+  if (angle < 0 || angle >= 360) {
+    return "Invalid angle";
+  } else if (angle === 90) {
     return "Right angle";
   } else if (angle < 90) {
     return "Acute angle";
@@ -18,11 +20,15 @@ function getAngleType(angle) {
     return "Straight angle";
   } else if (angle > 180 && angle < 360) {
     return "Reflex angle";
-  } 
+  } else {
+    return "Invalid angle";
+  }
+}
+
   
    // Run the tests, work out what Case 2 is testing, and implement the required code here.
    // Then keep going for the other cases, one at a time.
-}
+
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
