@@ -15,5 +15,10 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+    let BMI = weight / (height * height);
+    let rounded = Math.round(BMI * 10) / 10;
+    return rounded;
+
 }
+console.log(calculateBMI(70, 1.73)); 
+    // return the BMI of someone based off their weight and height
