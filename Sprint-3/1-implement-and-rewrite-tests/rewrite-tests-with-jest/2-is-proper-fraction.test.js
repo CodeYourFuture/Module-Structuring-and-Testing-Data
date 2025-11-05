@@ -20,3 +20,12 @@ test("should return true for negative fraction", () => {
 test("should return false for Equal Numerator fraction", () => {
   expect(isProperFraction(3, 3)).toEqual(false);
 });
+
+// Improper fractions as decimals
+test('1.5 should not be proper (3/2)', () => {
+  expect(isProperFraction(1.5)).toBe(false);
+});
+
+test('2.25 should not be proper (9/4)', () => {
+  expect(isProperFraction(2.25)).toBe(false);
+});
