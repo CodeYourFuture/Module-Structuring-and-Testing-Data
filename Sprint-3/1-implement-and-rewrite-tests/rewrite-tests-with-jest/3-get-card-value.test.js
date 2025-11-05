@@ -28,3 +28,4 @@ test("should throw an error for invalid cards", () => {
   expect(() => getCardValue("Z♠")).toThrow("Invalid Card");
 });
 // Sprint-3 rewrite-tests-with-jest/2-get-card-value.test.js. rewrote tests using jest 
+// Few modifications done.

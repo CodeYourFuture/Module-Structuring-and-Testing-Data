@@ -51,8 +51,8 @@ assertEquals(aceofSpades, 11);
 // Given a card with a rank between "2" and "9",
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
-const fiveofHearts = getCardValue("5♥");
-assertEquals(fiveofHearts, 5);
+const numberCards = getCardValue("5♥");
+assertEquals(numberCards, 5);
 // ====> write your test here, and then add a line to pass the test in the function above
 
 
@@ -87,3 +87,5 @@ try {
 } catch (error) {
   assertEquals(error.message, "Invalid Card");
 }
+
+// Functions, assertion and invalid rank tested
