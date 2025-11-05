@@ -13,7 +13,7 @@ test("should return false for improper fractions", () => {
 });
 
 // Case 3: Identify Negative Fractions:
-test("should return true for negative fractions", () => {
+test("should return true when the absolute value of numerator is less than denominator, even if the fraction is negative", () => {
   const negativeFraction = isProperFraction(-4, 7);
   expect(negativeFraction).toEqual(true);
 });
