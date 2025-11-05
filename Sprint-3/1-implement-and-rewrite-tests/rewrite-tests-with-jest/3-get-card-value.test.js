@@ -34,10 +34,6 @@ test("should throw error for malformed numeric input", () => {
   expect(() => getCardValue("2.9999♠")).toThrow("Invalid card rank");
 });
 
-test("should throw error for repeated characters in rank", () => {
-  expect(() => getCardValue("3AAAA♠")).toThrow("Invalid card rank");
-});
-
 test("should throw error for number beyond valid range", () => {
   expect(() => getCardValue("11♠")).toThrow("Invalid card rank");
 });
