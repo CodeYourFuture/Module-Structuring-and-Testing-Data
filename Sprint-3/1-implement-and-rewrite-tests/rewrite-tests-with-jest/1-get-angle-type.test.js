@@ -36,9 +36,11 @@ test("should identify straight angle (180°)", () => {
 test("should identify reflex angle (>180° and <360°)", () => {
   expect(getAngleType(270)).toEqual("Reflex angle");
 });
-// Additional test: Identify Invalid Angles:
+
+// Additional test: Identify Invalid Angle:
 // When the angle is less than 0 degrees or greater than or equal to 360 degrees,
 // Then the function should return "Invalid angle"
-
-expect(getAngleType(-10)).toBe("Invalid angle");
-expect(getAngleType(400)).toBe("Invalid angle");
+test("should identify invalid angle (<0° or >=360°)", () => {
+  expect(getAngleType(-10)).toEqual("Invalid angle");
+  expect(getAngleType(360)).toEqual("Invalid angle");
+});
