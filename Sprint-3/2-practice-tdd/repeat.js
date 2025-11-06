@@ -1,3 +1,5 @@
+const repeat = require("./repeat");
+
 function repeat() {
   return "hellohellohello";
 }
