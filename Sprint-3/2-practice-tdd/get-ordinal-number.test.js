@@ -1,4 +1,11 @@
 const getOrdinalNumber = require("./get-ordinal-number");
+
+function getOrdinalNumber(num) {
+  return "1st";
+}
+
+module.exports = getOrdinalNumber;
+
 // In this week's prep, we started implementing getOrdinalNumber
 
 // continue testing and implementing getOrdinalNumber for additional cases
