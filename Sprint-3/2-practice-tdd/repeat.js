@@ -6,3 +6,4 @@ function repeat(str, count) {
 }
 
 module.exports = repeat;
+
