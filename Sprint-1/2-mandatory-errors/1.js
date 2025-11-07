@@ -3,7 +3,6 @@
 const { cityOfBirth } = require("./2");
 
 let age = 33;
-age = age + 1;
 console.log(age);
 // Currently trying to print the string "I was born in Bolton" but it isn't working...
 // what's the error ?
