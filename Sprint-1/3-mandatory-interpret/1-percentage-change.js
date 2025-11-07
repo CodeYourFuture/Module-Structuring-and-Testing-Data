@@ -15,7 +15,7 @@ console.log(`The percentage change is ${percentageChange} %`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
-/*There are four function calls in total: two in the line
+/*There are 5 function calls in total: two in the line, and another on in console log 
 
 carPrice = Number(carPrice.replaceAll(",", ""));
 
