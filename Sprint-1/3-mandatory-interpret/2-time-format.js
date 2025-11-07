@@ -23,7 +23,7 @@ console.log(result);
 
 // b) How many function calls are there?
 
-        /*There are no function calls in this code. Everything here is using operators and expressions, not calling functions.*/
+        /*There are 1 function calls in this code. in console.log(result);.*/
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
