@@ -46,8 +46,8 @@ test("should return empty when the count is 0", () => {
 test("should return empty when the count is negative", () => {
   const str = "CYF";
   const count = -2;
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("Invalid Input must be a positive number");
+
+  expect(() => repeat(str,count)).toThrow("Repeat count must be a positive number");
 });
 test("should repeat the string five times when the count is 5", () => {
   const str = "CYF";

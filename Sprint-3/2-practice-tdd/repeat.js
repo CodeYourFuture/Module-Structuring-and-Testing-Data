@@ -1,6 +1,5 @@
 function repeat(myString, repeatNumber) {
-  if (repeatNumber < 0) return "Invalid Input must be a positive number";
-  //if (repeatNumber < 0) throw new Error("Repeat count must be a positive number");
+  if (repeatNumber < 0) throw new Error("Repeat count must be a positive number");
   //  if I use this instead return how I can test it with jest??
   return myString.repeat(repeatNumber);
 }
