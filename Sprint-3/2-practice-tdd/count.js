@@ -19,3 +19,4 @@ describe('countChar()', () => {
     expect(countChar('!!!', '!')).toBe(5);
   });
 });
+//this is the end.
