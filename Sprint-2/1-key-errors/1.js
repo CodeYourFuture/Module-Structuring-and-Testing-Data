@@ -21,13 +21,13 @@
 // Finally, correct the code to fix the problem
 // =============> write your new code here
 
-function convertToPercentage() {
-  const decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
+function convertToPercentage(num) {
+
+  const percentage = `${num * 100}%`;
 
   return percentage;
 }
 
-console.log(convertToPercentage());
+console.log(convertToPercentage(0.1));
 
-// the new code runs without error and outputs "50%"
+
