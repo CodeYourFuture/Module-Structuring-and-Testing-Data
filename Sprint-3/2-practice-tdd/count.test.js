@@ -16,16 +16,17 @@ test("counts a single occurrence of a character", () => {
 // When the function is called with these inputs,
 // Then it should correctly count overlapping occurrences of char (e.g., 'a' appears five times in 'aaaaa').
 test("counts multiple occurrences of a character", () => {
-    expect(countChar("banana", "a")).toEqual(3);
-    expect(countChar("mississippi", "s")).toEqual(4);
-  });
-
-test("should count multiple occurrences of a character", () => {
-  const str = "aaaaa";
-  const Char = "a";
-  const count = countChar(str,Char);
-  expect(count).toEqual(5);
+  expect(countChar("aaaaa", "a")).toEqual(5);
+  expect(countChar("banana", "a")).toEqual(3);
+  expect(countChar("mississippi", "s")).toEqual(4);
 });
+
+//test("should count multiple occurrences of a character", () => {
+ // const str = "aaaaa";
+  //const Char = "a";
+  //const count = countChar(str,Char);
+ // expect(count).toEqual(5);
+//});
 
 // Scenario: No Occurrences
 // Given the input string str,
