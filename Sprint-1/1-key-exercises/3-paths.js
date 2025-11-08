@@ -11,14 +11,14 @@
 
 const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
 const lastSlashIndex = filePath.lastIndexOf("/");
-const base = filePath.slice(lastSlashIndex + 1);
-console.log (the base part of ${filePath} is ${base});
+const base = filePath.slice(lastSlashIndex + 1); // file.txt
+console.log (`the base part of ${filePath} is ${base}`);
 
 // Create a variable to store the dir part of the filePath variable.
 // Create a variable to store the ext part of the variable.
 
-const dir = filePath.slice(lastSlashIndex+1)
-const ext = filePath.slice(lastDotIndexOf(".") +1);   
+const dir = filePath.slice(0, lastSlashIndex)
+const ext = filePath.slice(filePath.lastIndexOf("."));   
 
-console.log (dir)
+console.log (dir, ext)
 // https://www.google.com/search?q=slice+mdn
