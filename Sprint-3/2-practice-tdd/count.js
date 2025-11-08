@@ -20,3 +20,4 @@ describe('countChar()', () => {
   });
 });
 //this is the end.
+// Last line
