@@ -13,7 +13,6 @@
 // as the variable in side the function has the same name as the function variable.
 // =============> write your new code here
 function capitalise(str) {
-  let str1 = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str1;
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 console.log(capitalise("abcd"));
