@@ -2,7 +2,7 @@
 
 // Predict the output of the following code:
 // =============> Write your prediction here
-// the result will be 3 times 
+// the result will be 3 
 // const num = 103;
 
 // function getLastDigit() {
