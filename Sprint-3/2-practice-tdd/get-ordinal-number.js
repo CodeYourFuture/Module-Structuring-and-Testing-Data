@@ -15,6 +15,7 @@ function getOrdinalNumber(num) {
       return num + "rd";
     default:
       return num + "th";
+      
   }
 }
 
