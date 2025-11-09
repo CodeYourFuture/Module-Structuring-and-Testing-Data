@@ -45,7 +45,7 @@ function toUpperCamelCase(str) {
 
 // Example usage:
 console.log(toUpperCamelCase("  hello there  ")); // "HELLO_THERE"
-console.log(toUpperCamelCase("hello   there")); // "HELLO_THERE" - The example stated by CJ Yuan volunteer
+console.log(toUpperCamelCase("hello       there")); // "HELLO_THERE" - The example stated by CJ Yuan volunteer
 console.log(toUpperCamelCase("lord of the rings")); // "LORD_OF_THE_RINGS"
 console.log(toUpperCamelCase("javascript is fun")); // "JAVASCRIPT_IS_FUN"
 
