@@ -22,9 +22,9 @@ function toUpperSnakeCase(str) {
 }
 
 // Example usage:
-console.log(toUpperSnakeCase("hello there"));         // Output: "HELLO_THERE"
-console.log(toUpperSnakeCase("lord of the rings"));   // Output: "LORD_OF_THE_RINGS"
-console.log(toUpperSnakeCase("javascript is fun"));   // Output: "JAVASCRIPT_IS_FUN"
+// console.log(toUpperSnakeCase("hello there"));         // Output: "HELLO_THERE"
+// console.log(toUpperSnakeCase("lord of the rings"));   // Output: "LORD_OF_THE_RINGS"
+// console.log(toUpperSnakeCase("javascript is fun"));   // Output: "JAVASCRIPT_IS_FUN"
 
 /**
 Explanation:
@@ -35,4 +35,17 @@ str.replace(/\s+/g, "_") replaces all whitespace (spaces, tabs, etc.) with under
 
 The function returns the final string in UPPER_SNAKE_CASE
 */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// This ensures consistent results even if the input has extra spaces.
+
+function toUpperCamelCase(str) {
+    return str.trim().replace(/\s+/g, "_").toUpperCase();
+}
+
+// Example usage:
+console.log(toUpperCamelCase("  hello there  ")); // "HELLO_THERE"
+console.log(toUpperCamelCase("hello   there")); // "HELLO_THERE" - The example stated by CJ Yuan volunteer
+console.log(toUpperCamelCase("lord of the rings")); // "LORD_OF_THE_RINGS"
+console.log(toUpperCamelCase("javascript is fun")); // "JAVASCRIPT_IS_FUN"
 
