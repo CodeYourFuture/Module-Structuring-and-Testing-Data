@@ -1,6 +1,6 @@
 function getOrdinalNumber(num) {
-  const twoLastDig = num % 100;
-  if (twoLastDig === 11 || twoLastDig === 12 || twoLastDig === 13) {
+  const itsTwoLastDigs = num % 100;
+  if (itsTwoLastDigs === 11 || itsTwoLastDigs === 12 || itsTwoLastDigs === 13) {
     return num + "th";
   }
 
