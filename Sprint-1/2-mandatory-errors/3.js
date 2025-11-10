@@ -13,19 +13,13 @@
 const cardNumber = 4533787178994213;
 const last4Digits = cardNumber.slice(-4);
 
-
 The issue is that .slice() is a string method, but cardNumber here is a number — not a string.
 So when the code runs, JavaScript will say something like:
-
 TypeError: cardNumber.slice is not a function
+That’s because .slice() function only works on strings or arrays — and numbers don’t have that method.
 
-That’s because .slice() only works on strings or arrays — and numbers don’t have that method.
-
-Fixing the problem
-
+Fixing the problem:
 To use .slice(), we need to convert the number into a string first:
-
-Now it works!
 */
 
 const cardNumber = 4533787178994213;
