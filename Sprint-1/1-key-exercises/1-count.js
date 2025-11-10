@@ -6,8 +6,9 @@ count = count + 1;
 // Describe what line 3 is doing, in particular focus on what = is doing
 
 /**
- * Line 3 increase the count variable by 1 then assign the result in right hand side to count variable
+ * Line 3: the variable count in right end side increment by 1 and assign the result to left end side which hold the 
+ * incremention 
  */
  
-console.log('Value of count variable: ', count)
+console.log('Value of count variable after incremented by 1: ', count)
 
