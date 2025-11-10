@@ -24,8 +24,8 @@ console.log(num);
 
  * Step 3: Math.random() * (maximum - minimum + 1)
 
- * This scales the random decimal to the range.
- * Example: If Math.random() returns 0.3728,
+ * This augment the random decimal to fit the range.
+ * Example: If Math.random() it returns 0.3728,
  * 0.3728 * 100 = 37.28
 
  * Step 4: Math.floor(...)
@@ -35,15 +35,13 @@ console.log(num);
 
  * Step 5: + minimum
 
- * Because the range started from 0, we add minimum (which is 1) to shift it to the correct range.
+ * Because the range started from 0, we add minimum (which is 1) to adjust to the correct range.
 
  * Example: 37 + 1 = 38.
 
  * So what does num represent?
- * num is a random integer between 1 and 100 (inclusive).
- * Every time you run the program, you’ll get a different number in that range.
-
- * Running it several times — you’ll see numbers like 27, 99, 7, 100, etc.
+ * num is a random integer between 1 (inclusive) and 100 (exclusive).
+ * Every time the program runs, we get a different number in that range.
 
 */
 
