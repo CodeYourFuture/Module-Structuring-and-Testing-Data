@@ -1,9 +1,10 @@
 name: Test Coverage Report
 
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
+      - refactor/implement-rewrite-coverage
   push:
     branches:
       - 'coursework/sprint-3-implement-and-rewrite*'
