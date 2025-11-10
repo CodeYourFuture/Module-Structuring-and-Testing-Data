@@ -11,41 +11,21 @@ function getCardValue(card) {
   const rank = card.slice(0, -1);
   const cardFace = card.slice(-1);
   const numRank = Number(rank);
+  const allowedCardFaces = ["♠", "♣", "♦", "♥"];
 
-  if (
-    rank === "A" &&
-    (cardFace === "♠" ||
-      cardFace === "♣" ||
-      cardFace === "♦" ||
-      cardFace === "♥")
-  ) {
+  if (!allowedCardFaces.includes(cardFace)) {
+    return "Invalid card face.";
+  }
+
+  if (rank === "A") {
     return 11;
-  } else {
-    ("Invalid card rank.");
   }
 
-  if (
-    (rank === "10" || rank === "J" || rank === "Q" || rank === "K") &&
-    (cardFace === "♠" ||
-      cardFace === "♣" ||
-      cardFace === "♦" ||
-      cardFace === "♥")
-  ) {
+  if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
     return 10;
-  } else {
-    return "Invalid card rank.";
   }
 
-  if (
-    Number.isInteger(numRank) &&
-    numRank >= 2 &&
-    numRank <= 9 &&
-    (cardFace === "♠" ||
-      cardFace === "♣" ||
-      cardFace === "♦" ||
-      cardFace === "♥")
-  ) {
-    console.log("numRank is", rank);
+  if (Number.isInteger(numRank) && numRank >= 2 && numRank <= 9) {
     return numRank;
   } else {
     return "Invalid card rank.";
@@ -112,12 +92,12 @@ assertEquals(aceOfHearts, 11);
 const invalidNumberCard = getCardValue("12♥");
 assertEquals(invalidNumberCard, "Invalid card rank.");
 const invalidFaceCard = getCardValue("5*");
-assertEquals(invalidFaceCard, "Invalid card rank.");
+assertEquals(invalidFaceCard, "Invalid card face.");
 const invalidFaceCard10 = getCardValue("10$");
-assertEquals(invalidFaceCard10, "Invalid card rank.");
+assertEquals(invalidFaceCard10, "Invalid card face.");
 const invalidFaceCardJack = getCardValue("J%");
-assertEquals(invalidFaceCardJack, "Invalid card rank.");
+assertEquals(invalidFaceCardJack, "Invalid card face.");
 const invalidFaceCardQueen = getCardValue("Q£");
-assertEquals(invalidFaceCardQueen, "Invalid card rank.");
+assertEquals(invalidFaceCardQueen, "Invalid card face.");
 const invalidFaceCardKing = getCardValue("K^");
-assertEquals(invalidFaceCardKing, "Invalid card rank.");
+assertEquals(invalidFaceCardKing, "Invalid card face.");
