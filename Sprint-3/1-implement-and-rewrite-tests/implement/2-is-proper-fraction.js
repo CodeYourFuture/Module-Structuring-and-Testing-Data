@@ -8,23 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) {
-    return true;
-  }
-   else if (numerator > denominator){
+  // Make sure denominator cannot be zero
+  if (denominator === 0) {
     return false;
   }
-   else if (numerator === denominator) {
-    return false;
-  }
-   else if (numerator === 0){
-   return (true);
-  }
-   else if (denominator === 0){
-    return (false);
-   }
-}
 
+  // Check if the absolute value of the numerator is smaller than denominator
+  return Math.abs(numerator) < Math.abs(denominator);
+}
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
@@ -57,8 +48,8 @@ assertEquals(improperFraction, false);
 // Input: numerator = -4, denominator = 7
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
-const negativeFraction = isProperFraction(-4, 7);
-assertEquals(negativeFraction, true);
+const negativeFraction = isProperFraction(-4, 3);
+assertEquals(negativeFraction, false);
 
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
@@ -77,5 +68,18 @@ assertEquals(numeratorZero, true);
 const denominatorrZero = isProperFraction(5, 0);
 assertEquals(denominatorrZero, false);
 
+// Expected: true (|-2| < |5|)
+const reviewerCase2 = isProperFraction(-2, 5);
+assertEquals(reviewerCase2, true);
+
+// Expected: false (|-1| = |1|)
+const reviewerCase3 = isProperFraction(-1, 1);
+assertEquals(reviewerCase3, false);
+
+// Expected: true (|-2| < |-3|)
+const reviewerCase4 = isProperFraction(-2, -3);
+assertEquals(reviewerCase4, true);
+
 // Sprint-3-implement 1-is-proper-fraction.js all assertions and necessary functions added
+// Updated the function and has been able to handle possible edge cases.
 
