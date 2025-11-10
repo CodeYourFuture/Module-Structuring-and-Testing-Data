@@ -14,3 +14,4 @@ function capitalise(str) {
 function capitalize(str) {
   let capitalized = `${str[0].toUpperCase()}${str.slice(1)}`;
   return capitalized;
+}
