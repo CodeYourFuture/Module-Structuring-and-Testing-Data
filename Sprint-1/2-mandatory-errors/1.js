@@ -2,7 +2,7 @@
 
 // change keyword 'const' to 'let'
 let age = 33;
-age = age + 1;
+age += 1;
 
 console.log(age);
 
