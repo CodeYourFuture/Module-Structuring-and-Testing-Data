@@ -17,69 +17,25 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
 
+Answers:
+
 1. The alert() function
 
-Code:
+console.alert("Hello world!");
 
-alert("Hello world!");
-
-Effect:
-
-When you call alert("Hello world!") in the Chrome Console:
-
-A modal dialog box (popup window) appears on the screen.
-
-It displays the message:
-
-Hello world!
-
-The dialog has an “OK” button that you must click before continuing.
-
-Purpose:
-It’s used to display information to the user — a simple way to show messages or debugging output in the browser.
-
-Return value:
-
-alert() does not return any value — its return value is undefined.
+When calling the function alert("Hello world!") in the Chrome Console.
+A window popup the the message displaying "Hello world!" on the screen.
+That windows has an “OK” button that needs to click before continuing.
 
 2. The prompt() function
 
-Code:
-
 let myName = prompt("What is your name?");
 
-Effect:
+When calling that function the window display a message "What is your name?" and after the user input a response the value is stored in the variable "myName". 
 
-When you call this:
+That window dialog has two buttons: “OK” and “Cancel”.
+The user can type something like "Carlos" and click “OK” or “Cancel”.
+If the user types something like "Carlos" and clicks OK the prompt function returns the string "Carlos".
 
-A popup dialog appears with:
-
-A message: "What is your name?"
-
-A text input box
-
-“OK” and “Cancel” buttons.
-
-The user can type something (e.g., Alice) and click “OK” or “Cancel”.
-
-Return value:
-
-If the user types something (e.g., "Alice") and clicks OK 
-prompt() returns the string "Alice".
-
-If the user clicks Cancel 
-prompt() returns null.
-
-So after running:
-
-let myName = prompt("What is your name?");
-
-You’ll have:
-
-myName === "Alice" (if entered “Alice”)
-
-myName === null (if Cancelled)
-
-Purpose:
-prompt() is used to get text input from the user through a browser dialog.
+The purpose of prompt() is to get text input from the user through a window dialog.
 
