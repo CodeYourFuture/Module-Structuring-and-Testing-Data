@@ -1,4 +1,10 @@
 function repeat(word, n) {
+  if (typeof n !== 'number' || n < 0) {
+    return "Count must be a non-negative integer";  
+  } 
+  if (n === 0) {
+    return " ";
+  }
   return word.repeat(n);
 }
 

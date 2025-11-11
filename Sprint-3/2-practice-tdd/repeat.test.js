@@ -46,5 +46,5 @@ test("should repeat the string count times", () => {
   const str = "hello";
   const count = -1;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("hellohellohello");
+  expect(repeatedStr).toEqual("Count must be a non-negative integer");  
 });
