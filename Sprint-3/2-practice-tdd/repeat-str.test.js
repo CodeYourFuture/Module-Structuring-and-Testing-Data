@@ -42,9 +42,8 @@ test("should repeat the string count times", () => {
 // Given a target string str and a negative integer count,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
-test("should repeat the string count times", () => {
+test("should throw an error when count is negative", () => {
   const str = "hello";
   const count = -1;
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("invalid");
+  expect(() => repeatStr(str, count)).toThrow("count must be non-negative");
 });
