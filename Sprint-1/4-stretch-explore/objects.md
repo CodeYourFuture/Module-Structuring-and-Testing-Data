@@ -15,26 +15,20 @@ Answer the following questions:
 What does `console` store?
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 
-Step 1: Type console.log and hit Enter
+1. Answer (What does `console` store)? 
 
-What you’ll see in Chrome’s Console:
+What is seen in Chrome’s Console is:
 
 ƒ log() { [native code] }
 
-Meaning:
-This shows that console.log is a function, specifically one that’s built into the browser (that’s what “native code” means — it’s implemented in C++ within Chrome’s V8 engine, not in JavaScript itself).
+This shows that console.log is a function, specifically a built-in function into the browser (that’s what “native code” means) 
 
-Step 2: Type just console and hit Enter
-
-What you’ll see:
-An object printed in the console — something like:
+2. Answer Step 2 (What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?)
 
 Console {memory: MemoryInfo, debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, ...}
 
-
-Meaning:
-
-This shows that console is a built-in JavaScript object.
+This shows that console function is a built-in JavaScript object.
+As it's expect because in Javascript, function is an object type.
 
 It contains many methods (functions) such as:
 
@@ -46,51 +40,34 @@ warn() → prints warnings (in yellow)
 
 assert(), table(), clear(), etc.
 
-So you can think of console as a toolbox full of functions for logging and debugging.
+We can think of console as a tool for for logging and debugging.
 
-Step 3: Type typeof console
-
-Output:
+3. typeof console
 
 "object"
 
-Meaning:
 This confirms that console is an object in JavaScript.
 
-Now, answering the questions directly
-What does console store?
+Going back to the question asked "What does console store?"
 
-console stores an object that provides access to a collection of built-in methods used for outputting information to the browser’s developer console.
+It can be said console function stores an object that provides access to a collection of built-in methods and property used to displaying information to the browser’s developer console.
 
-It’s part of the Web API — the environment provided by browsers, not part of the JavaScript language itself.
-
-What does the syntax console.log or console.assert mean?
+4. What does the syntax console.log or console.assert mean?
 
 console.log means:
 
-Access the property named "log" inside the object named console.
+Access the property named "log" that is part of the object named console.
 
 console.assert means:
 
 Access the property named "assert" inside the same object.
 
-In both cases, the property happens to store a function — so you can call it using parentheses, like console.log("Hi!").
+5. What does the . (dot) mean?
 
-What does the . (dot) mean?
+The dot (.) is the method or property access operator in JavaScript.
 
-The dot (.) is the property access operator in JavaScript.
+It’s used to access a property or method that belongs to a said object.
 
-It’s used to access a property or method belonging to an object.
-
-In general:
-
-object.property
-
-means “get the value of property that belongs to object”.
-
-Examples:
-
-console.log    // accesses the log function in the console object
-Math.PI        // accesses the value of PI in the Math object
-document.body  // accesses the body element of the web page
+console.log    // accesses the log property in the console object
+Math.PI        // accesses the value of PI (3,1415...) in the Math object
 
