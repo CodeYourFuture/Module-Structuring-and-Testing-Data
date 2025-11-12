@@ -11,13 +11,13 @@ test("should return 11 for all Aces", () => {
 
 // Case 2: Handle Number Cards (2-10):
 test("should return correct value for number cards (2-10)", () => {
- const suits = ["♠", "♥", "♦", "♣"];
- for (let i = 2; i <= 10; i++) {
-   for (const suit of suits) {
-     expect(getCardValue(`${i}${suit}`)).toEqual(i);
-   }
- }
-}); // Loop through numbers 2-10 for all suits; 36 test cases 
+  const suits = ["♠", "♥", "♦", "♣"];
+  for (let i = 2; i <= 10; i++) {
+    for (const suit of suits) {
+      expect(getCardValue(`${i}${suit}`)).toEqual(i);
+    }
+  }
+}); // Loop through numbers 2-10 for all suits; 36 test cases
 
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return 10 for all face cards (J, Q, K)", () => {
@@ -29,7 +29,6 @@ test("should return 10 for all face cards (J, Q, K)", () => {
     }
   }
 }); // Loop through face cards for all suits; 12 test cases
-
 
 // Case 4: Handle Invalid Cards:
 test("should throw error for all invalid cards", () => {

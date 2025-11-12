@@ -14,7 +14,7 @@ test("should return false for an improper fraction, including negatives", () => 
   expect(isProperFraction(5, 4)).toEqual(false); //  numerator greater than denominator
   expect(isProperFraction(5, -4)).toEqual(false); // negative denominator
   expect(isProperFraction(-5, 4)).toEqual(false); // negative numerator
-  expect(isProperFraction(-5, -4)).toEqual(false); // both negative 
+  expect(isProperFraction(-5, -4)).toEqual(false); // both negative
 });
 
 // Case 3: Identify Negative Fractions:
