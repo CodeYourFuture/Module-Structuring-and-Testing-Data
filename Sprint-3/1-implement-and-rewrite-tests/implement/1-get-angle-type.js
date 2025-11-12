@@ -23,6 +23,10 @@ function getAngleType(angle) {
    else if (angle > 180 && angle < 360){
     return "Reflex angle";
   }
+  else {
+  throw new Error("Invalid angle");
+}
+
  }
   
    // Run the tests, work out what Case 2 is testing, and implement the required code here.
