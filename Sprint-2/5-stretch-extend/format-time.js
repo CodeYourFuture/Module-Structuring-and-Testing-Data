@@ -23,3 +23,6 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+console.log(`The current output of ${currentOutput} is the same as ${targetOutput}`);
+console.log(`The second current output ${currentOutput2} is equals to ${targetOutput2}`);
+
