@@ -12,7 +12,7 @@ test("should return false for an improper fraction", () => {
 });
 
 // Case 3: Identify Negative Fractions:
-test("should return true for a negative fraction", () => {
+test("should return true for a proper fraction with negative numerator", () => {
   expect(isProperFraction(-2, 3)).toEqual(true);
 });
 
@@ -21,4 +21,12 @@ test("should return false for equal numerator and denominator", () => {
   expect(isProperFraction(3, 3)).toEqual(false);
 });
 
+test("should return false for a negative improper fraction", () => {
+  expect(isProperFraction(-4, 3)).toEqual(false);
+});
+
+
 // Sprint-3 ewrite-tests-with-jest/2-is-proper-fraction.test.js. rewrote tests in jest 
+// Changed the misleading comment "should return true for a negative fraction"
+// to "should return true for a proper fraction with negative numerator"
+// Modified
