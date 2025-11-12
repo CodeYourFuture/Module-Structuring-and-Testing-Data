@@ -10,10 +10,19 @@
 function getAngleType(angle) {
   if (angle === 90) {
     return "Right angle";
+  } else if (angle < 90){
+    return "Acute angle";
+  } else if (angle > 90 && angle < 180){
+    return "Obtuse angle";
+  } else if (angle === 180){
+    return "Straight angle";
+  } else if (angle > 180 && angle < 360){
+    return "Reflex angle";
   }
+}
    // Run the tests, work out what Case 2 is testing, and implement the required code here.
    // Then keep going for the other cases, one at a time.
-}
+
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -39,25 +48,37 @@ function assertEquals(actualOutput, targetOutput) {
 // Then the function should return "Right angle"
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+console.log(getAngleType(90));
 
 // Case 2: Identify Acute Angles:
 // When the angle is less than 90 degrees,
 // Then the function should return "Acute angle"
 const acute = getAngleType(45);
 assertEquals(acute, "Acute angle");
+console.log(getAngleType(45));
 
 // Case 3: Identify Obtuse Angles:
 // When the angle is greater than 90 degrees and less than 180 degrees,
 // Then the function should return "Obtuse angle"
 const obtuse = getAngleType(120);
+assertEquals (obtuse, "Obtuse angle");
+console.log(getAngleType(120));
+
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
 // Then the function should return "Straight angle"
+const straight = getAngleType(180);
+assertEquals (straight, "Straight angle");
+console.log(getAngleType(180));
+
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Case 5: Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+const Reflex = getAngleType(200);
+assertEquals (Reflex, "Reflex angle");
+console.log(getAngleType(200));
 // ====> write your test here, and then add a line to pass the test in the function above
