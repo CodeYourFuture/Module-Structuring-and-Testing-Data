@@ -9,19 +9,16 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
 
-  const rank = card.slice(0,-1);
-  if (rank === "A") {
-    return 11;
-  }
-   else if (["K", "J", "Q", "10"].includes(rank)){
-    return 10;
-   }
-   else if (!isNaN(rank )) {
-    return Number(rank);
-   }
-    else {
-      throw new Error ("Invalid Card");
-    }
+  const rank = card.slice(0, -1);
+  const validRanks = ["A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2"];
+
+   if (!validRanks.includes(rank)) {
+    throw new Error("Invalid Card");
+     }
+
+   if (rank === "A") return 11;
+   if (["K", "Q", "J", "10"].includes(rank)) return 10;
+     return Number(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -88,4 +85,20 @@ try {
   assertEquals(error.message, "Invalid Card");
 }
 
-// Functions, assertion and invalid rank tested
+try {
+  getCardValue("2.1♥"); // decimal — invalid
+  console.log("Test failed: no error thrown for 2.1♥");
+} catch (error) {
+  assertEquals(error.message, "Invalid Card");
+}
+
+try {
+  getCardValue("0002♦"); // padded number — invalid
+  console.log("Test failed: no error thrown for 0002♦");
+} catch (error) {
+  assertEquals(error.message, "Invalid Card");
+}
+
+// Functions, assertion and invalid rank tested, and modified the if statment
+// to hadnle valid numeric literals such as "2.1", "002" "Functions, assertions, and invalid ranks tested. 
+// Modified the if statement to handle valid numeric literals such as '2.1' and '002'. 

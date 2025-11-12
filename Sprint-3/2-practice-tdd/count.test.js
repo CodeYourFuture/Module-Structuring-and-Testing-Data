@@ -22,3 +22,53 @@ test("should count multiple occurrences of a character", () => {
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+test("should return 0 when character does not exist in string", () => {
+  const str = "Code Your Future";
+  const char = "g";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Empty string 
+
+test("should return 0 when string is empty", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: String is a space
+
+test("should return 0 when string is space", () => {
+  const str = "   ";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: String is 
+
+// Scenario: Empty character
+
+test("should return 0 when character is empty", () => {
+  const str = "my code";
+  const char = "";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: char is empty character
+
+test("should return 0 when character is empty string ", () => {
+  const str = "my code";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+
+
+// Scenario: charcter not string 
+
