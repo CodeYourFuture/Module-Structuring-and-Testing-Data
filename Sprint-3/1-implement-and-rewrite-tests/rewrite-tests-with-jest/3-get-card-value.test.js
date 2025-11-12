@@ -8,9 +8,13 @@ test("should return 11 for Ace of Spades", () => {
 });
 
 // Case 2: Handle Number Cards (2-10):
-test("should number cards for (2-10)", () => {
-  const aceofSpades = getCardValue("6♠");
-  expect(aceofSpades).toEqual(6);
+test("should return number cards for (2-10)", () => {
+  const twoOfSpades = getCardValue("2♠");
+  expect(twoOfSpades).toEqual(2);
+  const sixOfHearts = getCardValue("6♥");
+  expect(sixOfHearts).toEqual(6);
+  const tenOfDiamonds = getCardValue("10♦");
+  expect(tenOfDiamonds).toEqual(10);
 });
 
 // Case 3: Handle Face Cards (J, Q, K):
@@ -29,3 +33,4 @@ test("should throw an error for invalid cards", () => {
 });
 // Sprint-3 rewrite-tests-with-jest/2-get-card-value.test.js. rewrote tests using jest 
 // Few modifications done.
+// Completed incomplete description and added a test for multiple values such as boundr values 2 and 10 in line 12-17
