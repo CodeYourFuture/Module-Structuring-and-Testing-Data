@@ -3,9 +3,11 @@
 const getCardValue = require("../implement/3-get-card-value");
 
 test("should return 11 for an Ace", () => {
-  const aceofSpades = getCardValue("A♠");
-  expect(aceofSpades).toEqual(11);
+  expect(getCardValue("A♠")).toEqual(11); 
+  expect(getCardValue("A♥")).toEqual(11);
+ 
 });
+
 
 // Case 2: Handle Number Cards (2-10):
 test("should return number cards for (2-10)", () => {
@@ -33,4 +35,7 @@ test("should throw an error for invalid cards", () => {
 });
 // Sprint-3 rewrite-tests-with-jest/2-get-card-value.test.js. rewrote tests using jest 
 // Few modifications done.
-// Completed incomplete description and added a test for multiple values such as boundr values 2 and 10 in line 12-17
+// Completed incomplete description and added a test 
+// for multiple values such as boundr values 2 and 10 in line 12-17
+
+// Added  test coverage cases
