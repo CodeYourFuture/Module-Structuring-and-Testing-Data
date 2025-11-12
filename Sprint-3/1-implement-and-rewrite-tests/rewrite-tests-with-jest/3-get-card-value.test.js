@@ -2,7 +2,7 @@
 // We will use the same function, but write tests for it using Jest in this file.
 const getCardValue = require("../implement/3-get-card-value");
 
-test("should return 11 for Ace of Spades", () => {
+test("should return 11 for an Ace", () => {
   const aceofSpades = getCardValue("A♠");
   expect(aceofSpades).toEqual(11);
 });
