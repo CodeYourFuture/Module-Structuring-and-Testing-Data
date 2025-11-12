@@ -5,7 +5,7 @@ function countChar(stringOfCharacters, findCharacter) {
       count++;
     }
   }
-  return count;   
+  return count;
 }
 
 module.exports = countChar;

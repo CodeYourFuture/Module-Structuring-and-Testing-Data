@@ -50,4 +50,3 @@ test("should throw an error for negative count", () => {
     repeat(str, count);
   }).toThrow("Invalid count value");
 });
-
