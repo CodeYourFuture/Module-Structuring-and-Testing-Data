@@ -1,15 +1,4 @@
 // implement a function countChar that counts the number of times a character occurs in a string
-const countChar = require("./count");
-
-function countChar(stringOfCharacters, findCharacter) {
-  let count = 0;
-  for (let char of stringOfCharacters) {
-    if (char === findCharacter) count++;
-  }
-  return count;
-}
-
-module.exports = countChar;
 
 // Given a string str and a single character char to search for,
 // When the countChar function is called with these inputs,
@@ -20,6 +9,9 @@ module.exports = countChar;
 // And a character char that may occur multiple times with overlaps within str (e.g., 'a' in 'aaaaa'),
 // When the function is called with these inputs,
 // Then it should correctly count overlapping occurrences of char (e.g., 'a' appears five times in 'aaaaa').
+ 
+const countChar = require('./count');
+
 
 test("should count multiple occurrences of a character", () => {
   const str = "aaaaa";
@@ -54,7 +46,7 @@ test("should return 0 when the input string is empty", () => {
 // Scenario: Special Characters
 // It should correctly count spaces and punctuation.
 test("should count special characters like spaces or punctuation", () => {
-  expect(countChar("a b a b", " ")).toEqual(2);
+  expect(countChar("a b a b", " ")).toEqual(3);
   expect(countChar("wow!!!", "!")).toEqual(3);
 });
 
