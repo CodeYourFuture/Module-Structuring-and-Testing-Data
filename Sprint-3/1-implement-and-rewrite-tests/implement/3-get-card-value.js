@@ -3,10 +3,10 @@ function getCardValue(card) {
   if (rank === "A") {
     return 11;
   }
-  if (!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 10) {
-    // checks for number cards 2-10
+  if (/^(?:[2-9]|10)$/.test(rank)) {
     return Number(rank);
-  }
+  } // Matches strings of only whole numbers 2-10
+  // Handle 10 separately to avoid matching '1' alone
   if (["J", "Q", "K"].includes(rank)) {
     return 10;
   } else {
