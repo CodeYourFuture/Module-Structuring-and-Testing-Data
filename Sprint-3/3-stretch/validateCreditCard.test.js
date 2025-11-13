@@ -1,3 +1,5 @@
+const validateCreditCard = require("./validateCreditCard");
+
 test("valid credit card numbers should return true", () => {
   expect(validateCreditCard("9999777788880000")).toBe(true);
   expect(validateCreditCard("6666666666661666")).toBe(true);
