@@ -37,6 +37,7 @@ function assertEquals(actualOutput, targetOutput) {
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
+
 // Acceptance criteria:
 
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
@@ -57,17 +58,17 @@ assertEquals(fiveOfHearts, 5);
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-const tenofDiamonds = getCardValue("10♦");
-assertEquals(tenofDiamonds, 10);
+const tenOfDiamonds = getCardValue("10♦");
+assertEquals(tenOfDiamonds, 10);
 
 const jackOfClubs = getCardValue("J♣");
 assertEquals(jackOfClubs, 10);
 
-const queensOfSpades = getCardValue("Q♠")
-assertEquals(queensOfSpades, 10);
+const queenOfSpades = getCardValue("Q♠");
+assertEquals(queenOfSpades, 10);
 
-const kingOfHeart = getCardValue("K♥");
-assertEquals(kingOfHeart, 10);
+const kingOfHearts = getCardValue("K♥");
+assertEquals(kingOfHearts, 10);
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
@@ -78,8 +79,9 @@ assertEquals(kingOfHeart, 10);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
 try {
-  getCardValue("1♠"); // invalid rank
+  getCardValue("1♠"); 
   console.error("Test failed: invalid card did not throw error"); 
 } catch (error) {
   console.log("Invalid card test passed"); 
