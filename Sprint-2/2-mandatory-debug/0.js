@@ -16,5 +16,5 @@ console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}
       return a * b; 
 }
 
-console.log(` The sum of 10 and 32 is ${sum(10, 32)}`);
+console.log(`The result of multipying 10 and 32 is ${multiply(10, 32)}`);
 
