@@ -3,6 +3,14 @@ const countChar = require("./count");
 // Given a string str and a single character char to search for,
 // When the countChar function is called with these inputs,
 // Then it should:
+test("count how many times a character occurs a string", () => {
+  const stringOfCharacters = "kiwi";
+  const findCharacter = "w";
+
+  const result = countChar(stringOfCharacters, findCharacter);
+
+  expect(result).toBe(5);
+});
 
 // Scenario: Multiple Occurrences
 // Given the input string str,
