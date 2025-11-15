@@ -15,66 +15,45 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 const isValidPassword = require("./password-validator");
+const previousPasswords = ["Mmd1!", "XyZ2$", "Tes5%"];
+
 
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+  const password = "Ki55$";
+  const result = isValidPassword(password, previousPasswords); // pass the array
+  expect(result).toEqual(true);
+});
 
-// 
-test("password has at least one English uppercase letter (A-Z)", () => {
-    // Arrange
-    const password = "A2345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+test("password has at least one uppercase", () => {
+  const password = "Uo85*";
+  const result = isValidPassword(password, previousPasswords);
+  expect(result).toEqual(true);npx
+});
 
-//
-test("password has least one English lowercase letter (a-z)", () => {
-    // Arrange
-    const password = "Da2345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+test("password has at least one lowercase", () => {
+  const password = "Qf#45";
+  const result = isValidPassword(password, previousPasswords);
+  expect(result).toEqual(true);
+});
 
-// 
-test("password has at least one number 0-9)", () => {
-    // Arrange
-    const password = "Cz!345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+test("password has at least one number", () => {
+  const password = "Cz!35";
+  const result = isValidPassword(password, previousPasswords);
+  expect(result).toEqual(true);
+});
 
-test("password has at least one non-alphanumeric symbols: !, #, $, %, ., *, &)", () => {
-    // Arrange
-    const password = "Cz!345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+test("password has at least one special symbol", () => {
+  const password = "Re*19";
+  const result = isValidPassword(password, previousPasswords);
+  expect(result).toEqual(true);
+});
 
-// 
 test("password must not be a previous password", () => {
-  const previousPasswords = ["Mmd1!", "XyZ2$", "Test10%"];
-  const password = "Mmd1"; 
+  const password = "Mmd1!"; 
   const result = isValidPassword(password, previousPasswords);
   expect(result).toEqual(false);
+
 });
+
 
 // Password-validator implemented and tested.
