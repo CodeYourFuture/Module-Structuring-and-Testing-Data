@@ -82,3 +82,4 @@ try {
 } catch(error){
   assertEquals(error.message, "Invalid card rank.");
 }
+module.exports = getCardValue;
