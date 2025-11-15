@@ -8,8 +8,10 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-    if (numerator < denominator) return true;
-    else return false;
+  if (denominator === 0) {
+    throw new Error();
+  }
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // here's our helper again
@@ -50,7 +52,7 @@ assertEquals(properFraction, true);
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 const equalFraction = isProperFraction(3, 3);
 // ====> complete with your assertion
-assertEquals(equalFraction, false)
+assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
