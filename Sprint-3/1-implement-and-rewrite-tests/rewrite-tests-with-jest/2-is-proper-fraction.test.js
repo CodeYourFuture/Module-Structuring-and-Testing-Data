@@ -18,5 +18,5 @@ test("should return true for a negative proper fraction", () => {
 
 // Case 4: Identify Equal Numerator and Denominator:
 test ("should return false when numerator equals denominator", () => {
-  expect(isProperFraction(0, 5)).toEqual(false);
+  expect(isProperFraction(3, 3)).toEqual(false);
 });
