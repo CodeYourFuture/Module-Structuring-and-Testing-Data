@@ -97,20 +97,14 @@ test.each([
   { str: [], char: "a", error: "First argument must be a string." },
   { str: "hello", char: {}, error: "Second argument must be a string." },
   { str: null, char: "a", error: "First argument must be a string." },
-  {str: "hi", char: undefined, error: "Second argument must be a string." },
 ])("should throw error for invalid inputs", ({ str, char, error }) => {
   expect(() => {
     countChar(str, char);
   }).toThrow(error);
 });
 //test for 2 arguments
-test("should throw error if more/less than 2 arguments are provided", () => {
+test("should throw error if less than 2 arguments are provided", () => {
   expect(() => {
     countChar("hello");
   }).toThrow("Function requires exactly two arguments: a string and a character to find.");
-  expect(() => {
-    countChar("hello", "h", "extra");
-  }).toThrow(
-    "Function requires exactly two arguments: a string and a character to find."
-  );
 });

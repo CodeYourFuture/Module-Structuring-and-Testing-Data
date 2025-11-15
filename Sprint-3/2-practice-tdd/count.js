@@ -1,5 +1,5 @@
 function countChar(stringOfCharacters, findCharacter) {
-  if (arguments.length !== 2) {
+  if (stringOfCharacters === undefined || findCharacter === undefined) {
     throw new Error(
       "Function requires exactly two arguments: a string and a character to find."
     );
@@ -13,7 +13,7 @@ function countChar(stringOfCharacters, findCharacter) {
   if (findCharacter.length !== 1) {
     throw new Error("Character to find must be a single character.");
   } 
-  if (stringOfCharacters.length === 0) {
+  if (!stringOfCharacters.length) {
     return 0;
   }  
   return Array.from(stringOfCharacters).filter(char => char === findCharacter).length;
