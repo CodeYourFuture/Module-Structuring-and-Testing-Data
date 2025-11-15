@@ -54,3 +54,5 @@ assertEquals(equalFraction, false);
 
 // Stretch:
 // What other scenarios could you test for?
+
+module.exports = isProperFraction;
