@@ -1,6 +1,6 @@
 // This statement loads the getAngleType function you wrote in the implement directory.
 // We will use the same function, but write tests for it using Jest in this file.
-const { test } = require("picomatch");
+//const { test } = require("picomatch");
 const getAngleType = require("../implement/1-get-angle-type");
 
 test("should identify right angle (90°)", () => {
