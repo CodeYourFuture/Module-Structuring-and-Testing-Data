@@ -26,16 +26,16 @@ console.log(find("code your future", "z"));
 
 // b) What is the if statement used to check
    
-   // It is used to check if the char is in the string. If it exists.. next step is to return the char.     
+   // It checks if the char is in the string. If it exists.. next step is to return the index of the char.     
 
 
 // c) Why is index++ being used?
   
-  // To check if the given char is present starting from 0 till st.length.
+  // To check if the given char is present starting from 0 till str.length.
 
 
 // d) What is the condition index < str.length used for?
 
-   // As long as index is less than the length of the string, keep looping and finding the char.
+   // As long as index is less than the length of the string, keep looping until the char is found.
 
 // Added explanation to the questions.
