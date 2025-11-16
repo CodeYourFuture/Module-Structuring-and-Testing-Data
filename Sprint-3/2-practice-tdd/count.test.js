@@ -47,12 +47,28 @@ test("should return 0 when the input string is empty", () => {
 test("should count special characters like spaces or punctuation", () => {
   const str1 = "a b a b";
   const char1 = " ";
-  expect(countChar(str1, char1)).toEqual(2);
+  expect(countChar(str1, char1)).toEqual(3);
 
   const str2 = "NO !!!";
   const char2 = "!";
   expect(countChar(str2, char2)).toEqual(3);
 });
+
+// Scenario: Numeric characters inside string
+
+test("should count numeric characters inside the string", () => {
+  const str3 = "123321";
+  const char3 = "2";
+  expect(countChar(str3, char3)).toEqual(2);
+});
+
+// Scenarion Accented characters
+
+test("should count accented characters and unicode properly", () => {
+  const str4 = "café";
+  const char4 = "é";
+  expect(countChar(str4, char4)).toEqual(1);
+  });
 
 // Scenario: Invalid inputs
 
@@ -66,3 +82,5 @@ test("should throw error for invalid character input", () => {
 
 
 // Added different cases and test using npx jest  
+
+// Added some tests, additional test and passed the tests.  
