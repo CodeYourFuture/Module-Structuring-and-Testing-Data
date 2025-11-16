@@ -7,13 +7,13 @@ function countChar(stringOfCharacters, findCharacter) {
   }
 
   let count = 0;
+
   for(let char of stringOfCharacters) {
      if (char === findCharacter) {
       count++;
      }
  }
     return count;
-
 }
 
 module.exports = countChar;
@@ -21,3 +21,4 @@ module.exports = countChar;
 console.log(countChar("amazon", "a"));
 
 // Added lines to check cases and return count of characters.
+// Indentation improved.
