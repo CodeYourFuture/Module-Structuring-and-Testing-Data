@@ -7,21 +7,39 @@
 // Write the code to pass the test
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
+// function getAngleType(angle) {
+//  if (angle === 90) {
+//     return "Right angle";
+//   } else if (angle < 90) {
+//     return "Acute angle";
+//   } else if (angle > 90 && angle < 180) {
+//     return "Obtuse angle";
+//   } else if (angle === 180) {
+//     return "Straight angle";
+//   } else if (angle > 180 && angle < 360) {
+//     return "Reflex angle";
+//   } else {
+//     return "Invalid angle"; 
+//   }
+// }
+
 function getAngleType(angle) {
- if (angle === 90) {
-    return "Right angle";
-  } else if (angle < 90) {
+  // Start with the smallest angles or specific exact values first for clarity
+
+  if (angle < 0 || angle >= 360) { // Check for invalid angles outside the 0 to <360 range first
+    return "Invalid angle";
+  } else if (angle < 90) { // If it's not invalid, and it's less than 90
     return "Acute angle";
-  } else if (angle > 90 && angle < 180) {
+  } else if (angle === 90) { // If it's not less than 90, and it's exactly 90
+    return "Right angle";
+  } else if (angle < 180) { // If it's not <90, not ===90, then it must be >90. So only need to check <180
     return "Obtuse angle";
-  } else if (angle === 180) {
+  } else if (angle === 180) { // If it's not <180, and it's exactly 180
     return "Straight angle";
-  } else if (angle > 180 && angle < 360) {
+  } else if (angle < 360) { // If it's not <180, not ===180, then it must be >180. So only need to check <360
     return "Reflex angle";
-  } else {
-    return "Invalid angle"; 
   }
-}
+};
    // Run the tests, work out what Case 2 is testing, and implement the required code here.
    // Then keep going for the other cases, one at a time.
 
