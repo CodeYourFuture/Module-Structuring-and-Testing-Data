@@ -18,11 +18,18 @@ function formatAs12HourClock(time) {
     return `12:${minutes} am`;
   }
 
+  if (time.charAt(0) === "0") {
+    return `${time.slice(1)} am`;
+  }
+
   return `${time} am`;
 }
 
-const currentOutput = formatAs12HourClock("00:30");
-const targetOutput = "12:30 am";
+console.log(`the 12 hr format for 01:01 is ${formatAs12HourClock("05:01")}`);
+console.log(`the 12 hr format for 13:01 is ${formatAs12HourClock("13:01")}`);
+
+const currentOutput = formatAs12HourClock("01:01");
+const targetOutput = "1:01 am";
 console.assert(
   currentOutput === targetOutput,
   `current output: ${currentOutput}, target output: ${targetOutput}`
