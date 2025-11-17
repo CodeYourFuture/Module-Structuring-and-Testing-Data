@@ -36,12 +36,6 @@ function getCardValue(card) {
   }
 }
 
-console.log(
-  `some test values ${getCardValue("09♥")}, ${getCardValue(
-    "10.0♥"
-  )}, ${getCardValue("2♥")}, ${getCardValue("3.5♥")} `
-);
-
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
