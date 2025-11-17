@@ -8,15 +8,18 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (Math.abs(numerator) < Math.abs(denominator)) {
-    return true;
-  } else if (numerator > denominator) {
-    return false;
-  } else if (numerator === denominator) {
-    return false;
-  } else if (numerator === 0) {
-    return false;
+  const absNumerator = Math.abs(numerator);
+  const absDenominator = Math.abs(denominator);
+
+  if (absDenominator === 0) {
+    return `you cannot have zero as a denominator`;
   }
+
+  if (absNumerator < absDenominator) {
+    return true;
+  }
+
+  return false;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -67,4 +70,8 @@ assertEquals(equalFraction, false);
 // What other scenarios could you test for?
 //we can test if the numerator is 0
 const zeroFraction = isProperFraction(0, 4);
-assertEquals(zeroFraction, false);
+assertEquals(zeroFraction, true);
+
+//we can test if the denominator is 0
+const indefiniteFraction = isProperFraction(3, 0);
+assertEquals(indefiniteFraction, `you cannot have zero as a denominator`);
