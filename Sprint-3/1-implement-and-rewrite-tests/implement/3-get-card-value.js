@@ -8,19 +8,12 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const chars = [...card];
-  const rank = chars.slice(0, -1).join('');
+  const rank = card.slice(0, -1);
 
-  if (rank === "A") {
-    return 11;
-  }
-  const parsed = Number(rank);
-  if (!Number.isNaN(parsed) && parsed >= 2 && parsed <= 9) {
-    return parsed;
-  }
-  if (rank === "10" || rank === "J" || rank === "Q" || rank === "K"){
-    return 10;
-  }
+  if (rank === "A") return 11; 
+  if (["K", "Q", "J", "10"].includes(rank)) return 10; 
+  if (["2","3","4","5","6","7","8","9"].includes(rank)) return Number(rank);
+
 throw new Error("invalid card rank.");
 }
 
