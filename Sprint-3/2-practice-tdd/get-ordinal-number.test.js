@@ -1,8 +1,5 @@
 const getOrdinalNumber = require("./get-ordinal-number");
 
-function getOrdinalNumber(num) {
-  return "1st";
-}
 
 module.exports = getOrdinalNumber;
 
@@ -15,8 +12,6 @@ module.exports = getOrdinalNumber;
 // When the number is 1,
 // Then the function should return "1st"
 
-
-const getOrdinalNumber = require("./getOrdinalNumber");
 
 describe("getOrdinalNumber()", () => {
   test("should return '1st' for 1", () => {
