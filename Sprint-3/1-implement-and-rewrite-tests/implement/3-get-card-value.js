@@ -8,22 +8,39 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  let rank = "";
-
-  for (let i = 0; i < card.length - 1; i++) {
-    rank += card[i];
+  function strictNumber(rank) {
+    if (/^(0|[1-9][0-9]*)$/.test(rank)) {
+      return true;
+    }
+    return false;
   }
 
-  if (Number.isInteger(Number(rank)) && Number(rank) > 1 && Number(rank) < 10) {
-    return Number(rank);
-  } else if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
+  let rank = card.slice(0, card.length - 1);
+
+  if (strictNumber(rank)) {
+    if (
+      Number.isInteger(Number(rank)) &&
+      Number(rank) > 1 &&
+      Number(rank) <= 10
+    ) {
+      return Number(rank);
+    }
+  }
+
+  if (rank.includes("J") || rank.includes("Q") || rank.includes("K")) {
     return 10;
-  } else if (rank === "A") {
+  } else if (rank.includes("A")) {
     return 11;
   } else {
     return "Invalid card rank.";
   }
 }
+
+console.log(
+  `some test values ${getCardValue("09♥")}, ${getCardValue(
+    "10.0♥"
+  )}, ${getCardValue("2♥")}, ${getCardValue("3.5♥")} `
+);
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
