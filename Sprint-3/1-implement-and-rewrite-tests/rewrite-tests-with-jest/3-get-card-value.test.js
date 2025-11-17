@@ -3,14 +3,18 @@
 const getCardValue = require("../implement/3-get-card-value");
 
 // Case 2: Handle Number Cards (2-10):
-test("should return a number matchig the rank value for number cards", () => {
-  const numberCard = getCardValue("5♠");
-  expect(numberCard).toEqual(5);
+test("should return a number matching the rank value for number cards", () => {
+  expect(getCardValue("2♠")).toEqual(2);
+  expect(getCardValue("3◆")).toEqual(3);
+  expect(getCardValue("10♥")).toEqual(10);
+  expect(getCardValue("9♠")).toEqual(9);
+  expect(getCardValue("7♥")).toEqual(7);
 });
 // Case 3: Handle Face Cards (J, Q, K):
 test("should return 10 for Face Cards", () => {
-  const faceCard = getCardValue("10♠");
-  expect(faceCard).toEqual(10);
+  expect(getCardValue("J♠")).toEqual(10);
+  expect(getCardValue("Q◆")).toEqual(10);
+  expect(getCardValue("K♥")).toEqual(10);
 });
 // Case 4: Handle Ace (A):
 test("should return 11 for Ace", () => {
@@ -19,11 +23,9 @@ test("should return 11 for Ace", () => {
 });
 // Case 5: Handle Invalid Cards:
 test("should return invalid card rank for cards that are not in the suite", () => {
-  const invalidCard = getCardValue("100♥");
-  expect(invalidCard).toEqual("Invalid card rank.");
-});
-
-test("should return invalid card rank for cards that are not in the suite", () => {
-  const invalidCard = getCardValue("3.1416♥");
-  expect(invalidCard).toEqual("Invalid card rank.");
+  expect(getCardValue("100♠")).toEqual("Invalid card rank.");
+  expect(getCardValue("3.1416◆")).toEqual("Invalid card rank.");
+  expect(getCardValue("10.9♥")).toEqual("Invalid card rank.");
+  expect(getCardValue("09♠")).toEqual("Invalid card rank.");
+  expect(getCardValue("7+♥")).toEqual("Invalid card rank.");
 });
