@@ -1,4 +1,4 @@
-function repeat(str, count) {
+function repeatStr(str, count) {
 
   if ( arguments.length !== 2) {
     throw new Error(`Function requires exactly two arguments: a string and a count. Received ${arguments.length} arguments`);
@@ -16,4 +16,4 @@ function repeat(str, count) {
   return str.repeat(count);
 }
 
-module.exports = repeat;
+module.exports = repeatStr;
