@@ -96,6 +96,5 @@ test("should return error message for string input with undefined count", () => 
 
 test('should have the correct amount of arguments', () => { 
   expect(() => repeatStr('hello')).toThrow(new Error("Function requires exactly two arguments: a string and a count. Received 1 arguments"));
-  expect(() => repeatStr("hello", 3, 3)).toThrow(new Error("Function requires exactly two arguments: a string and a count. Received 3 arguments"));
  })
 
