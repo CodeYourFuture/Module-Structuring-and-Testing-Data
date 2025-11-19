@@ -1,13 +1,7 @@
 function countChar(stringOfCharacters, findCharacter) {
-  let pattern = new RegExp(findCharacter, "g");
+  const totalChar = stringOfCharacters.split(findCharacter);
 
-  let matchingChars = stringOfCharacters.match(pattern);
-
-  if (matchingChars === null) {
-    return 0;
-  }
-
-  return matchingChars.length;
+  return totalChar.length - 1;
 }
 
 module.exports = countChar;

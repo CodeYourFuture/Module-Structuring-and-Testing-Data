@@ -15,6 +15,9 @@ test("should count multiple occurrences of a character", () => {
   const char = "a";
   const count = countChar(str, char);
   expect(count).toEqual(5);
+  expect(countChar("banana", "n")).toEqual(2);
+  expect(countChar("=^.^=", "^")).toEqual(2);
+  expect(countChar("=^.^=", ".")).toEqual(1);
 });
 
 // Scenario: No Occurrences
