@@ -4,7 +4,7 @@ function getOrdinalNumber(num){
     return num+ "th";
   }
   
-  const lastDigits = num %10;
+  const lastDigit = num %10;
 
   switch (lastDigit){
     case 1:
