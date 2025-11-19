@@ -20,3 +20,8 @@ test("should return true for a negative proper fraction", () => {
 test ("should return false when numerator equals denominator", () => {
   expect(isProperFraction(3, 3)).toEqual(false);
 });
+
+// Case 5: Identify Negative Improper Fractions: 
+test("should return false for a negative improper fraction", () => {
+  expect(isProperFraction(-4, 4)).toEqual(false);
+  expect(isProperFraction(10, -3)).toEqual(false);
