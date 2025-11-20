@@ -1,7 +1,7 @@
 name: Test Coverage Report
 
 on:
-  pull_request_target:
+  pull_request:
     branches:
       - main
     paths:
@@ -14,8 +14,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,6 +34,6 @@ jobs:
         uses: ArtiomTr/jest-coverage-report-action@v2
         if: always()
         with:
-          github-token: ${{ secrets.SECRET_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           coverage-file: ./report.json
           base-coverage-file: ./report.json
