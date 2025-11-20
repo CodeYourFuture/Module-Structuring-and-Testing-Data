@@ -4,9 +4,8 @@ on:
   pull_request:
     branches:
       - main
-  push:
-    branches:
-      - 'coursework/sprint-3-implement-and-rewrite*'
+    paths:
+      - 'Sprint-3/1-implement-and-rewrite-tests/**'
 
 jobs:
   test-coverage:
@@ -26,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Run Inline Assertion Tests & Verify Parity
-        run: ./scripts/run-inline-tests.sh
+        run: node scripts/run-inline-tests.js
 
       - name: Run Jest Tests with Coverage
         run: npx jest --config=jest.config.jest-tests.js --coverage --ci --json --testLocationInResults --outputFile=report.json
