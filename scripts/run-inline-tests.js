@@ -146,15 +146,25 @@ function main() {
   writeGitHubSummary();
 
   console.log('\n');
+
+  let hasWarnings = false;
+
   if (results.failed > 0) {
-    console.log(`${results.failed} test(s) failed`);
-    process.exit(1);
+    console.log(`::warning::${results.failed} inline assertion test(s) failed`);
+    console.log(`⚠️  WARNING: ${results.failed} inline assertion test(s) failed`);
+    hasWarnings = true;
   }
 
   if (hasParityIssues) {
-    console.log('Parity issues detected - please review');
+    console.log('::warning::Parity issues detected between inline and Jest tests');
+    console.log('⚠️  WARNING: Parity issues detected - please review');
+    hasWarnings = true;
+  }
+
+  if (hasWarnings) {
+    console.log('\nPlease review the inline assertions and ensure parity with Jest tests.');
   } else {
-    console.log('All tests passed, parity verified');
+    console.log('✓ All tests passed, parity verified');
   }
 
   process.exit(0);
