@@ -42,3 +42,22 @@ https://code.visualstudio.com/docs/editor/testing
 
 > [!TIP]
 > You can always run a single test file by running `npm test path/to/test-file.test.js`.
+
+## Automated Checks for This Exercise
+
+For **this specific exercise only**, when you create a pull request with changes to files in `Sprint-3/1-implement-and-rewrite-tests/`, automated checks will run:
+
+### What runs automatically:
+
+1. **Inline Assertion Tests** - Verifies your inline assertions (from the `implement` directory) match your Jest tests
+2. **Jest Test Coverage** - Runs your Jest tests from `rewrite-tests-with-jest` and reports coverage
+
+### How to view the results on your PR:
+
+1. Open your pull request on GitHub
+2. Scroll to the bottom - look for the **Checks** section
+3. Find "Test Coverage Report"
+4. Click **Details** to see the full output
+5. A coverage report comment will also be posted on your PR
+
+A ✅ green checkmark means all tests passed. A ❌ red X means something failed - click Details to see what went wrong.
