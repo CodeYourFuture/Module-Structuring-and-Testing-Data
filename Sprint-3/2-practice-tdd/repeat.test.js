@@ -45,8 +45,10 @@ test("should return an empty string", () => {
 test("should throw an error for invalid count", () => {
   const str = "hello";
   const count = -4;
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual(
+  function repeatedStr() {
+    repeat(str, count);
+  }
+  expect(repeatedStr).toThrow(
     "Error invalid count used, please use integers from 0 upwards."
   );
 });
