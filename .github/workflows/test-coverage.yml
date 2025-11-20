@@ -33,12 +33,10 @@ jobs:
       - name: Run Inline Assertion Tests & Verify Parity
         run: node scripts/run-inline-tests.js
 
-      - name: Run Jest Tests with Coverage
-        run: npx jest --config=jest.config.jest-tests.js --coverage --ci --json --testLocationInResults --outputFile=report.json
-
       - name: Jest Coverage Report
         uses: ArtiomTr/jest-coverage-report-action@v2
         if: always()
         with:
-          coverage-file: ./report.json
-          base-coverage-file: ./report.json
+          test-script: npx jest --config=jest.config.jest-tests.js --coverage
+          working-directory: ./
+          skip-step: install
