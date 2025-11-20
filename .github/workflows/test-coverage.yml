@@ -28,12 +28,4 @@ jobs:
         run: node scripts/run-inline-tests.js
 
       - name: Run Jest Tests with Coverage
-        run: npx jest --config=jest.config.jest-tests.js --coverage --ci --json --testLocationInResults --outputFile=report.json
-
-      - name: Jest Coverage Report
-        uses: ArtiomTr/jest-coverage-report-action@v2
-        if: always()
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          coverage-file: ./report.json
-          base-coverage-file: ./report.json
+        run: npx jest --config=jest.config.jest-tests.js --coverage --ci
