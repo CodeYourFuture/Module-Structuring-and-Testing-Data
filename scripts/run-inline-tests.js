@@ -163,11 +163,11 @@ function main() {
 
   if (hasWarnings) {
     console.log('\nPlease review the inline assertions and ensure parity with Jest tests.');
+    process.exit(1);
   } else {
     console.log('✓ All tests passed, parity verified');
+    process.exit(0);
   }
-
-  process.exit(0);
 }
 
 main();
