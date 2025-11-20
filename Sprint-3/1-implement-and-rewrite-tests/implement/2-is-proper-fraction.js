@@ -8,15 +8,13 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) {
+  if (denominator === 0) {
+    return false;
+  }
+  if (Math.abs(numerator) < Math.abs(denominator)) {
     return true;
   }
-  if (numerator > denominator) {
-    return false;
-  }
-  if (numerator === denominator) {
-    return false;
-  }
+  return false;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -69,7 +67,7 @@ assertEquals(equalFraction, false);
 // target output: false
 // Explanation: The fraction -4/-9 is equivalent to 4/9, which is a proper fraction. Function should return false.
 const bothNegative = isProperFraction(-4, -9);
-assertEquals(bothNegative, false);
+assertEquals(bothNegative, true);
 
 // Zero Numerator check:
 // Input: numerator = 0, denominator = 7
