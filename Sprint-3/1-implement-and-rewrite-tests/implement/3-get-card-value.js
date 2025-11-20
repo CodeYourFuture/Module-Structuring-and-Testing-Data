@@ -15,27 +15,26 @@ function getCardValue(card) {
     return false;
   }
 
+  const pattern = /^(?:[2-9]|10)$/;
   let rank = card.slice(0, card.length - 1);
 
   if (strictNumber(rank)) {
-    if (
-      Number.isInteger(Number(rank)) &&
-      Number(rank) > 1 &&
-      Number(rank) <= 10
-    ) {
+    if (pattern.test(Number(rank))) {
       return Number(rank);
     }
   }
 
-  if (rank.includes("J") || rank.includes("Q") || rank.includes("K")) {
+  const faceCardPattern = /^[JQK]$/;
+
+  if (faceCardPattern.test(rank)) {
     return 10;
-  } else if (rank.includes("A")) {
+  } else if (/^A$/.test(rank)) {
     return 11;
   } else {
     return "Invalid card rank.";
   }
 }
-
+console.log(`Jack will give ${getCardValue("J♥")}`);
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
