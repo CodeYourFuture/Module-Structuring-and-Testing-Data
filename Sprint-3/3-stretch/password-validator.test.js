@@ -56,4 +56,4 @@ test("password must not be a previous password", () => {
 });
 
 
-// Password-validator implemented and tested.
+// In Password-validator.test.js cases tested and passed. 
