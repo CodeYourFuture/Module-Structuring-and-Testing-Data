@@ -11,3 +11,5 @@ function isValidPassword(password, previousPasswords = []) {
 
 
 module.exports = isValidPassword;
+
+// In password-validator.js function implemented.
