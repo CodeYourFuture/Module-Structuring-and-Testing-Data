@@ -38,4 +38,4 @@ console.log(find("code your future", "z"));
 
    // As long as index is less than the length of the string, keep looping until the char is found.
 
-// Added explanation to the questions.
+// In find.js explanations given to the question. 
