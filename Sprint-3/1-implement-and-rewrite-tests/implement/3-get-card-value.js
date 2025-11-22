@@ -8,32 +8,48 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank = card.slice(0,-1)
-  const suit = card.slice(-1) 
-  if (!["♠","♥","♦","♣"].includes(suit)) {
-    return "Invalid card rank.";
+  console.log(card);
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+  const suits = ["♠", "♥", "♦", "♣"];
+  const ranks = [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+    "A",
+  ];
+  if (!suits.includes(suit) || !ranks.includes(rank)) {
+    throw new Error("Invalid card rank.");
   }
-switch(rank) {
-  case "2":
-  case "3":
-  case "4":
-  case "5":
-  case "6":
-  case "7":
-  case "8":
-  case "9":
-    return parseInt(rank);
-  case "10":
-  case "J":
-  case "Q":
-  case "K":
-    return 10;
-  case "A":
-    return 11;
-  default:
-    return "Invalid card rank.";
-}
 
+  switch (rank) {
+    case "1":
+    case "2":
+    case "3":
+    case "4":
+    case "5":
+    case "6":
+    case "7":
+    case "8":
+    case "9":
+      return parseInt(rank);
+    case "10":
+    case "J":
+    case "Q":
+    case "K":
+      return 10;
+    case "A":
+      return 11;
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -71,7 +87,7 @@ assertEquals(fiveofHearts, 5);
 const kingofDiamonds = getCardValue("K♦");
 assertEquals(kingofDiamonds, 10);
 
-const tenofClubs = getCardValue("10♣");  
+const tenofClubs = getCardValue("10♣");
 assertEquals(tenofClubs, 10);
 
 // Handle Ace (A):
@@ -85,14 +101,14 @@ assertEquals(aceofHearts, 11);
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 
-const invalidCard =  getCardValue("1♠");
+const invalidCard = getCardValue("1♠");
 assertEquals(invalidCard, "Invalid card rank.");
 
-const invalidCard2 =  getCardValue("B♦");
+const invalidCard2 = getCardValue("B♦");
 assertEquals(invalidCard2, "Invalid card rank.");
 
-const invalidCard3 =  getCardValue("11");
+const invalidCard3 = getCardValue("11");
 assertEquals(invalidCard3, "Invalid card rank.");
 
-const invalidCard4 =  getCardValue("3😄");
+const invalidCard4 = getCardValue("3😄");
 assertEquals(invalidCard4, "Invalid card rank.");
