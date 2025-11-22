@@ -14,14 +14,19 @@ function isProperFraction(numerator, denominator) {
   if (numerator >= denominator) {
     return false;
   }
-  if(numerator == 0 && denominator !== 0){
+  if (numerator == 0 && denominator !== 0) {
     return true;
   }
   if (denominator === 0) {
     return false;
   }
+  if (numerator == denominator) {
+    return false;
+  }
+  if (numerator < 0 && denominator > 0 && Math.abs(numerator) < denominator) {
+    return true;
+  }
 }
-
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
@@ -74,7 +79,7 @@ const zeroNumerator = isProperFraction(0, 5);
 // ====> complete with your assertion
 assertEquals(zeroNumerator, true);
 // Zero Denominator check:
-// Input: numerator = 4, denominator = 0 
+// Input: numerator = 4, denominator = 0
 // target output: false
 // Explanation: The fraction 4/0 is undefined because division by zero is not allowed. The function should return false.
 const zeroDenominator = isProperFraction(4, 0);
@@ -100,4 +105,4 @@ assertEquals(bothNegative, true);
 // Explanation: The fraction 0/0 is undefined. The function should return false.
 const zeroNumeratorDenominator = isProperFraction(0, 0);
 // ====> complete with your assertion
-assertEquals(zeroNumeratorDenominator, false);    
+assertEquals(zeroNumeratorDenominator, false);
