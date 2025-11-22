@@ -1,4 +1,4 @@
-function repeat(str, count) {
+function repeatStr(str, count) {
   if (count === 0) {
     return "";
   }
@@ -17,4 +17,4 @@ function repeat(str, count) {
   return repeatedStrCountTimes;
 }
 
-module.exports = repeat;
+module.exports = repeatStr;
