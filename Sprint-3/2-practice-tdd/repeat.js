@@ -1,6 +1,6 @@
 function repeat(str , count) {
   if (count < 0) {
-    return "Count must be a non-negative integer";
+    throw new Error("Count must be a non-negative integer");
   }
   if (count === 0) {
     return "";
@@ -11,6 +11,5 @@ function repeat(str , count) {
 }
   console.log(repeat("hello", -2));
   
-
 
 module.exports = repeat;
