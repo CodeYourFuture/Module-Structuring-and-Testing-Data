@@ -1,11 +1,11 @@
 function getOrdinalNumber(num) {
   const suffixes = ["th", "st", "nd", "rd"];
-  const date = num % 100;
+  const lastTwoDigits = num % 100;
 
-  if (date >= 11 && date <= 13) {
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
     return num + "th";
   }
-  const suffix = suffixes[(date % 10)] || "th";
+  const suffix = suffixes[(lastTwoDigits % 10)] || "th";
   return num + suffix;
 }
 
