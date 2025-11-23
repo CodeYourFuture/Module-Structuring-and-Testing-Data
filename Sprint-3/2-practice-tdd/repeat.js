@@ -4,12 +4,16 @@ function repeat(str , count) {
   }
   if (count === 0) {
     return "";
-  } 
-  for (let i = 0; i < count; i++) { 
-    return str.repeat(count);
-  } 
+  }
+
+  let result = "";
+  for (let i = 0; i < count; i++) {
+    result += str;   
+  }
+
+  return result;
 }
-  console.log(repeat("hello", -2));
+  console.log(repeat("hello", 2));
   
 
 module.exports = repeat;
