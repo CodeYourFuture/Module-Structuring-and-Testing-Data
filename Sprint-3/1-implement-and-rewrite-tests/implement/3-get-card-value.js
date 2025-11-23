@@ -13,9 +13,9 @@ function getCardValue(card) {
   if (rank === "A") {
     return 11;
   }
-  else if ( 2 <= rank && rank <= 9 ){
-    return Number(rank);
-  }
+  else if (["2","3","4","5","6","7","8","9"].includes(rank)) {
+  return Number(rank);
+}
   else if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
     return 10;
   }
