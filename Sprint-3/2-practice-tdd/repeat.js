@@ -33,4 +33,4 @@ function repeat() {
 //   return output;
 // }
 
-// module.exports = repeat;
+module.exports = repeat;
