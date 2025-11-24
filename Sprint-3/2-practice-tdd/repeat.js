@@ -16,7 +16,6 @@ function repeat(str, count) {
     );
     //return "Error invalid count used, please use integers from 0 upwards.";
   }
-  return true;
 }
 
 module.exports = repeat;
