@@ -2,19 +2,28 @@
 
 const repeat = require("./repeat");
 
-test("should repeat the string count times", () => {
-  expect(repeat("hello", 3)).toEqual("hellohellohello");
+// case: handle Count of 1:
+// When count = 1, return the original string unchanged
+test("should return original string when count is 1", () => {
+  const str = "hello";
+  const count = 1;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("hello");
 });
 
-test("should return the original string when count is 1", () => {
-  expect(repeat("hello", 1)).toEqual("hello");
-});
-
+// case: Handle Count of 0:
+// When count = 0, return empty string
 test("should return an empty string when count is 0", () => {
-  expect(repeat("hello", 0)).toEqual("");
+  const str = "world";
+  const count = 0;
+  const repeatedStr = repeat(str, count);
+  expect(repeatedStr).toEqual("");
 });
 
+// case: Negative Count:
+// When count < 0, throw an error
 test("should throw an error when count is negative", () => {
-  expect(() => repeat("hello", -2)).toThrow("Count must be non-negative");
+  const str = "test";
+  const count = -3;
+  expect(() => repeat(str, count)).toThrow("Count must be non-negative");
 });
-

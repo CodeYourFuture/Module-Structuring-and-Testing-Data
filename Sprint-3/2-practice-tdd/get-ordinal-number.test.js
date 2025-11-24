@@ -8,34 +8,31 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-test("should return '1st' for 1", () => {
+test("append 'st' to numbers ending in 1, except those ending in 11", () => {
   expect(getOrdinalNumber(1)).toEqual("1st");
+  expect(getOrdinalNumber(101)).toEqual("101st");
 });
 
-//identify ordinal for 2
-test("should return '2nd' for 2", () => {
+//identify ordinal for nd
+test("append 'nd' to numbers ending in 2, except those ending in 12", () => {
   expect(getOrdinalNumber(2)).toEqual("2nd");
+  expect(getOrdinalNumber(132)).toEqual("132nd");
 });
 
-//identify ordinal for 3
-test("should return '3rd' for 3", () => {
+//identify ordinal for rd
+test("append 'rd' to numbers ending in 3, except those ending in 13", () => {
   expect(getOrdinalNumber(3)).toEqual("3rd");
-});
-
-//identify ordinal for 4
-test("should return '4th' for 4", () => {
-  expect(getOrdinalNumber(4)).toEqual("4th");
+  expect(getOrdinalNumber(23)).toEqual("23rd");
 });
 
 //Special English Rule... 12, 13, 14 ending in "th"
-test("should return '11th' for 11", () => {
+test("append 'th' to numbers that end in 11, 12, or 13", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(113)).toEqual("113th");
 });
 
-test("should return '12th' for 12", () => {
-  expect(getOrdinalNumber(12)).toEqual("12th");
-});
-
-test("should return '13th' for 13", () => {
-  expect(getOrdinalNumber(13)).toEqual("13th");
+//All other numbers => th
+test("append 'th' to all other numbers", () => {
+  expect(getOrdinalNumber(4)).toEqual("4th");
+  expect(getOrdinalNumber(100)).toEqual("100th");
 });
