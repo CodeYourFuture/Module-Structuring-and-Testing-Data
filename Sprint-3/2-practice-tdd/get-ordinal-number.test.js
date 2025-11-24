@@ -33,9 +33,24 @@ test("should append 'rd' to numbers with 3 at the end except for those ending wi
 });
 
 test("should append 'th' to all other numbers which do not end in 1,2,3,11,12 or 13", () => {
-  expect(getOrdinalNumber(10)).toEqual("10th");
+  expect(getOrdinalNumber(0)).toEqual("0th");
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(212)).toEqual("212th");
   expect(getOrdinalNumber(113)).toEqual("113th");
   expect(getOrdinalNumber(17)).toEqual("17th");
+});
+
+test("should throw an error if the input anything other than a positive integer", () => {
+  expect(() => getOrdinalNumber(1.09)).toThrow(
+    "wrong input used please enter an integer from 0 upwards"
+  );
+  expect(() => getOrdinalNumber("thirteen")).toThrow(
+    "wrong input used please enter an integer from 0 upwards"
+  );
+  expect(() => getOrdinalNumber(0.9)).toThrow(
+    "wrong input used please enter an integer from 0 upwards"
+  );
+  expect(() => getOrdinalNumber(-10)).toThrow(
+    "wrong input used please enter an integer from 0 upwards"
+  );
 });

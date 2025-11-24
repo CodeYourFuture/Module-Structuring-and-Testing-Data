@@ -1,33 +1,33 @@
 function getOrdinalNumber(num) {
-  const lastDigit = num.toString()[num.toString().length - 1];
+  if (Number.isInteger(num) && num >= 0) {
+    const lastDigit = num % 10;
 
-  if (lastDigit === "1") {
-    if (num === 11) {
-      return `${num}th`;
-    }
-
-    return `${num}st`;
-  } else if (lastDigit === "2") {
-    if (num.toString().length > 1) {
-      const last2Digits = num.toString().slice(-2);
-
-      if (last2Digits === "12") {
+    if (lastDigit === 1) {
+      if (num === 11) {
         return `${num}th`;
       }
-    }
-    return `${num}nd`;
-  } else if (lastDigit === "3") {
-    if (num.toString().length > 1) {
-      const last2Digits = num.toString().slice(-2);
 
-      if (last2Digits === "13") {
-        return `${num}th`;
+      return `${num}st`;
+    } else if (lastDigit === 2) {
+      if (num > 10) {
+        if (num % 100 === 12) {
+          return `${num}th`;
+        }
       }
+      return `${num}nd`;
+    } else if (lastDigit === 3) {
+      if (num > 10) {
+        if (num % 100 === 13) {
+          return `${num}th`;
+        }
+      }
+      return `${num}rd`;
     }
-    return `${num}rd`;
+
+    return `${num}th`;
+  } else {
+    throw new Error("wrong input used please enter an integer from 0 upwards");
   }
-
-  return `${num}th`;
 }
 
 module.exports = getOrdinalNumber;
