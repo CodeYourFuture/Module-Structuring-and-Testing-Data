@@ -9,5 +9,5 @@ Write the tests _before_ the code that will make them pass.
 Recommended order:
 
 1. `count.test.js`
-1. `repeat.test.js`
+1. `repeat-str.test.js`
 1. `get-ordinal-number.test.js`
