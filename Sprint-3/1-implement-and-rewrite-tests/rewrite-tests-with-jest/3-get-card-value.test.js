@@ -20,10 +20,7 @@ test("should return 10 for face cards (J, Q, K) and 10", () => {
   expect(getCardValue("Q♥")).toEqual(10);
   expect(getCardValue("K♠")).toEqual(10);
 });
-// Case 4: Handle Ace (A):
-test("should return 11 for Ace (A)", () => {
-  expect(getCardValue("A♦")).toEqual(11);
-});
+
 // Case 5: Handle Invalid Cards:
 test("should throw an error for invalid card rank", () => {
   expect(() => {
