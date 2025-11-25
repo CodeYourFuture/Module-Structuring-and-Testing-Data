@@ -8,20 +8,22 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank = card.slice(0, -1); //everything except the suit
+  const rank = card.slice(0, -1);
+
+  // Numeric cards 2–10
+  if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(rank)) {
+    return Number(rank);
+  }
+
+  // Face cards
+  if (["J", "Q", "K"].includes(rank)) return 10;
+
+  // Ace
   if (rank === "A") return 11;
 
-  if (["J", "Q", "K", "10"].includes(rank)) {
-    return 10;
-  }
-
-  const num = Number(rank);
-  if (!isNaN(num) && num >= 2 && num <= 9) {
-    return num;
-  }
   throw new Error("Invalid card rank");
-  
 }
+
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
