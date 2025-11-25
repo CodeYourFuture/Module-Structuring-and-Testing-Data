@@ -8,18 +8,28 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-test("should return '1st' for 1",() =>{
-  expect(getOrdinalNumber(1)).toEqual("1st");
-});
-test("should return '2nd' for 2",() =>{
-  expect(getOrdinalNumber(2)).toEqual("2nd");
-});
-test("should return '3rd' for 3",() =>{
-  expect(getOrdinalNumber(3)).toEqual("3rd");
-});
-test("should return '11th' for 11",() =>{
-  expect(getOrdinalNumber(11)).toEqual("11th");
-});
-test("should return '13th' for 13",() =>{
-  expect(getOrdinalNumber(13)).toEqual("13th");
+describe("getOrdinalNumber (category-based tests)", () => {
+  test("uses 'th' for 11, 12, 13 (teen exceptions)", () => {
+    expect(getOrdinalNumber(11)).toBe("11th");
+    expect(getOrdinalNumber(12)).toBe("12th");
+    expect(getOrdinalNumber(13)).toBe("13th");
+  });
+  test("adds 'st' for numbers ending in 1 (except 11)", () => {
+    expect(getOrdinalNumber(1)).toBe("1st");
+    expect(getOrdinalNumber(21)).toBe("21st");
+  });
+  test("adds 'nd' for numbers ending in 2 (except 12)", () => {
+    expect(getOrdinalNumber(2)).toBe("2nd");
+    expect(getOrdinalNumber(22)).toBe("22nd");
+  });
+  test("adds 'rd' for numbers ending in 3 (except 13)", () => {
+    expect(getOrdinalNumber(3)).toBe("3rd");
+    expect(getOrdinalNumber(23)).toBe("23rd");
+  });
+  test("uses 'th' for other endings (0, 4-9)", () => {
+    expect(getOrdinalNumber(4)).toBe("4th");
+    expect(getOrdinalNumber(10)).toBe("10th");
+    expect(getOrdinalNumber(19)).toBe("19th");
+  });
+
 });

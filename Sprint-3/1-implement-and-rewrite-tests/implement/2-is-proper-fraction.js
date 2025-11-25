@@ -9,13 +9,17 @@
 
 function isProperFraction(numerator,denominator) {
 
-  if (numerator <denominator){
+  if (denominator=== 0) {
+
+    return false;
+  
+  } 
+  if (Math.abs(numerator)< Math.abs(denominator)){
 
     return true;
   } 
-  
-  else {
 
+  else {
     return false;
   }
 }
