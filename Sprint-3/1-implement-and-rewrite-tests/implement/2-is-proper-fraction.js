@@ -8,7 +8,8 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  return numerator < denominator;
+  if (denominator === 0) return false;
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -59,3 +60,9 @@ assertEquals(equalFraction, false);
 // Explanation: Should return true when numerator is zero
 const zeroFraction = isProperFraction(0, 5);
 assertEquals(zeroFraction, true);
+
+// New negative cases
+assertEquals(isProperFraction(-4, 3), false);
+assertEquals(isProperFraction(-2, 5), true);
+assertEquals(isProperFraction(-1, 1), false);
+assertEquals(isProperFraction(-2, -3), true);
