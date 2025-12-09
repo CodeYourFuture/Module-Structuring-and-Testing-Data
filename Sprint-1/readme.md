@@ -21,7 +21,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript
 In this section, you'll need to go to each file in `errors` directory and run the file with node to check what the error is. Your task is to interpret the error message and explain why it occurs. The [errors documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors) will help you figure out the solution.
 
 ## 3 Interpret
-
+s
 In these tasks, you have to interpret a slightly larger program with some syntax / operators / functions that may be unfamiliar.
 
 You must use documentation to make sense of anything unfamiliar - learning how to look things up this way is a fundamental part of being a developer!
