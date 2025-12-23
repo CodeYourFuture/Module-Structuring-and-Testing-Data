@@ -27,5 +27,3 @@ There are some tools that will help you to write code. One of these, [Prettier](
 
 - Open the terminal in Visual Studio Code
 - Run `npm install` in the root of this repository
-
-### random wrong commit
