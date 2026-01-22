@@ -18,4 +18,4 @@ function calculateBMI(weight, height) {
     return Number(weight/Math.pow(height,2)).toFixed(1)
 }
 
-console.log(calculateBMI(91,1.79));
+
