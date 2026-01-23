@@ -29,4 +29,4 @@ test("should repeat the string count times", () => {
 // case: Negative Count:
 // Given a target string str and a negative integer count,
 // When the repeatStr function is called with these inputs,
-// Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+// Then it should throw an error, as negative counts are not valid.
