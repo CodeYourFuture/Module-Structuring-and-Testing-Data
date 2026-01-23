@@ -1,14 +1,13 @@
 const getOrdinalNumber = require("./get-ordinal-number");
-// In this week's prep, we started implementing getOrdinalNumber
+// In this week's prep, we started implementing getOrdinalNumber.
 
-// continue testing and implementing getOrdinalNumber for additional cases
-// Write your tests using Jest - remember to run your tests often for continual feedback
-
+// Continue testing and implementing getOrdinalNumber for additional cases.
+// Write your tests using Jest — remember to run your tests often for continual feedback.
 
 // To ensure thorough testing, we need broad scenarios that cover all possible cases.
 // Listing individual values, however, can quickly lead to an unmanageable number of test cases.
 // Instead of writing tests for individual numbers, consider grouping all possible input values
-// into meaningful categories. Then, select representative samples from each category to test. 
+// into meaningful categories. Then, select representative samples from each category to test.
 // This approach improves coverage and makes our tests easier to maintain.
 
 // Case 1: Numbers ending with 1 (but not 11)
