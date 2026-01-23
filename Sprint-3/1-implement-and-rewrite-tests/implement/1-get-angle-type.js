@@ -1,13 +1,12 @@
 // Implement a function getAngleType
 //
 // When given an angle in degrees, it should return a string indicating the type of angle:
-// - "Acute angle" for angles greater than 0 and less than 90 degrees
-// - "Right angle" for exactly 90 degrees
-// - "Obtuse angle" for angles greater than 90 degrees and less than 180 degrees
-// - "Straight angle" for exactly 180 degrees
-// - "Reflex angle" for angles greater than 180 degrees and less than 360 degrees
-//
-// If the parameter is out of the valid range, the function should return "Invalid angle".
+// - "Acute angle" for angles greater than 0° and less than 90°
+// - "Right angle" for exactly 90°
+// - "Obtuse angle" for angles greater than 90° and less than 180°
+// - "Straight angle" for exactly 180°
+// - "Reflex angle" for angles greater than 180° and less than 360°
+// - "Invalid angle" for angles outside the valid range.
 
 // Assumption: The parameter is a valid number. (You do not need to handle non-numeric inputs.)
 
@@ -16,11 +15,7 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  if (angle === 90) {
-    return "Right angle";
-  }
-
-  // TODO: Compete the implementation
+  // TODO: Implement this function
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
@@ -40,4 +35,3 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
-
