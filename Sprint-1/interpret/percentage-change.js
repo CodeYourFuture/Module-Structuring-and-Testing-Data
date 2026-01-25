@@ -44,22 +44,20 @@ console.log(`The percentage change is ${percentageChange}`);
     //  now with the number cleaned we can convert this string in number with the method Number().
 
 
-
-
-
     
+// ---------- console.log each step to see the results ----------
 
-// let carPrice = "10,000";
-// let priceAfterOneYear = "8,543";
+    // let carPrice = "10,000";
+    // let priceAfterOneYear = "8,543";
 
-// carPrice = Number(carPrice.replaceAll(",", ""));
-// console.log(carPrice); // the commas are removed and the string is converted to a number
+    // carPrice = Number(carPrice.replaceAll(",", ""));
+    // console.log(carPrice); // the commas are removed and the string is converted to a number
 
-// priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
-// console.log(priceAfterOneYear); // the commas are removed and the string is converted to a number
+    // priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
+    // console.log(priceAfterOneYear); // the commas are removed and the string is converted to a number
 
-// const priceDifference = carPrice - priceAfterOneYear;
-// console.log(`The price difference is ${priceDifference}`);
+    // const priceDifference = carPrice - priceAfterOneYear;
+    // console.log(`The price difference is ${priceDifference}`);
 
-// const percentageChange = (priceDifference / carPrice) * 100;
-// console.log(`The percentage change is ${percentageChange}`);
+    // const percentageChange = (priceDifference / carPrice) * 100;
+    // console.log(`The percentage change is ${percentageChange}`);
