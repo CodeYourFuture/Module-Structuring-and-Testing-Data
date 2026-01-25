@@ -1,16 +1,18 @@
 # 🧭 Guide to week 3 exercises
 
-## 🔧 Implement
+> https://programming.codeyourfuture.io/structuring-data/sprints/3/prep/
 
-In the `implement` directory you've got a number of functions you'll need to implement.
-For each function, you also have a number of different cases you'll need to check for your function.
+> [!TIP]
+> You should always do the prep work _before_ attempting the coursework.
+> The prep shows you how to do the coursework.
+> There is often a step by step video you can code along with too.
+> Do the prep.
 
-Use the acceptance criteria as an aid to **_write tests_** for the different cases using Jest. Use your assertions to check the functionality you're building as you go along. Make sure you cover all edge-cases.
+This sprint you are expected to produce multiple different pull requests:
 
-Here is a recommended order:
+1. One pull request for the `1-implement-and-rewrite-tests` directory.
+2. One pull request for the `2-practice-tdd` directory.
+3. One pull request for the `3-dead-code` directory.
+4. Optionally, one pull request for the `4-stretch` directory.
 
-1. `get-angle-type.js`
-1. `is-proper-fraction.js`
-1. `get-card-value.js`
-1. `is-valid-triangle.js`
-1. `implement/rotate-char`
+Each directory contains a README.md file with instructions for that directory.
