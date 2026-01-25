@@ -25,3 +25,10 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2. Using the String.substring method, cuts the trailing p out of the string
+// 3. Using String.padStart method, makes the penceStringWithoutTrailingP to length of 3
+// by adding 0 to the left, if it is not length of 3
+// 4. Takes the first character of paddedPenceNumberString and assigns it to pounds
+// 5. Takes from position 1 of paddedPenceNumberString to the end and makes it the length of 2
+// by adding 0 to the end and assigns it to pence
+// 6. Prints the calculates pounds and pence
