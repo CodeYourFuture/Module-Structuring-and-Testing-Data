@@ -37,7 +37,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 
-    // This expresion will work in the parenthesis first, replacing all commas in the string carPrice
+    // This expression will work in the parenthesis first, replacing all commas in the string carPrice
     //  with an empty string, so basically returning the string 10000 instead of "10,000". 
     //  Then the Number() function will convert that string "10000" into a number 10000.
     //  secondly, js can not treat strings with commas as numbers, so we need to remove the commas
