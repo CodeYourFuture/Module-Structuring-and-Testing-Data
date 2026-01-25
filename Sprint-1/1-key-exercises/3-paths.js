@@ -16,7 +16,6 @@ const base = filePath.slice(lastSlashIndex + 1);
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-<<<<<<< HEAD:Sprint-1/exercises/paths.js
 const lastDot = filePath.lastIndexOf(".");
 console.log(`The indexDot is ${lastDot}`);
 
@@ -33,9 +32,3 @@ console.log(`The extension is 👉 ${ext}`);
 
 
 
-=======
-const dir = ;
-const ext = ;
-
-// https://www.google.com/search?q=slice+mdn
->>>>>>> main:Sprint-1/1-key-exercises/3-paths.js
