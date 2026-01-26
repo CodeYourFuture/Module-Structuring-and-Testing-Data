@@ -15,7 +15,7 @@ console.log(` Whole number = ${wholeNumberPart}`);
 const decimalPart = num - wholeNumberPart;
 console.log(` Decimal part = ${decimalPart.toFixed(4)}`); // toFixed(4) to show 4 decimal places instead of whole number
 
-console.log(typeof(wholeNumberPart)); //confirm that decimalPart is a number
+console.log(`type of parameter = ${typeof(wholeNumberPart)}`); //confirm that decimalPart is a number
 
-const roundedNum = Math.round(num);
+const roundedNum = Math.round(num); // rounds to nearest whole number
 console.log(` Rounded number = ${roundedNum}`);
