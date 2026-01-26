@@ -1,5 +1,5 @@
 // Predict and explain first...
-//  =============> write your prediction here
+//  =============> undefined will be printed
 
 function sum(a, b) {
   return;
@@ -8,6 +8,6 @@ function sum(a, b) {
 
 console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
 
-// =============> write your explanation here
+// =============> because the function returns nothing
 // Finally, correct the code to fix the problem
-//  =============> write your new code here
+//  =============> return a + b;
