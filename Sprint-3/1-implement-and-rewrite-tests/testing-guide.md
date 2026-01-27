@@ -46,6 +46,8 @@ Ask:
 These confirm that the function works in normal use.
 
 - What does a typical, ordinary input look like?
+- Are there multiple ordinary groups of inputs? e.g. for an age checking function, maybe there are "adults" and "children" as expected ordinary groups of inputs.
+
   
 #### Boundary Cases
 
