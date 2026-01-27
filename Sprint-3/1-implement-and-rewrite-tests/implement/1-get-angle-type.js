@@ -1,11 +1,18 @@
 // Implement a function getAngleType
-// Build up your function case by case, writing tests as you go
-// The first test and case is written for you. The next case has a test, but no code.
-// Execute this script in your terminal
-// node 1-get-angle-type.js
-// The assertion error will tell you what the expected output is
-// Write the code to pass the test
-// Then, write the next test! :) Go through this process until all the cases are implemented
+//
+// When given an angle in degrees, it should return a string indicating the type of angle:
+// - "Acute angle" for angles greater than 0° and less than 90°
+// - "Right angle" for exactly 90°
+// - "Obtuse angle" for angles greater than 90° and less than 180°
+// - "Straight angle" for exactly 180°
+// - "Reflex angle" for angles greater than 180° and less than 360°
+// - "Invalid angle" for angles outside the valid range.
+
+// Assumption: The parameter is a valid number. (You do not need to handle non-numeric inputs.)
+
+// Acceptance criteria:
+// After you have implemented the function, write tests to cover all the cases, and
+// execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
   if (angle === 180) {
@@ -31,8 +38,8 @@ function getAngleType(angle) {
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getAngleType;
 
-// we're going to use this helper function to make our assertions easier to read
-// if the actual output matches the target output, the test will pass
+// This helper function is written to make our assertions easier to read.
+// If the actual output matches the target output, the test will pass
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -40,15 +47,8 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// Acceptance criteria:
-
-// Given an angle in degrees,
-// When the function getAngleType is called with this angle,
-// Then it should:
-
-// Case 1: Identify Right Angles:
-// When the angle is exactly 90 degrees,
-// Then the function should return "Right angle"
+// TODO: Write tests to cover all cases, including boundary and invalid cases.
+// Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
 

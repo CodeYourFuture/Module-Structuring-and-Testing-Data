@@ -1,11 +1,14 @@
-// Implement a function isProperFraction
-// Write assertions for your function to check it works in different cases
-// Terms:
-// Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
-// Written here like this: 1/2 == Numerator/Denominator
-// the first test and first case is written for you
-// complete the rest of the tests and cases
-// write one test at a time, and make it pass, build your solution up methodically
+// Implement a function isProperFraction,
+// when given two numbers, a numerator and a denominator, it should return true if
+// the given numbers form a proper fraction, and false otherwise.
+
+// Assumption: The parameters are valid numbers (not NaN or Infinity).
+
+// Note: If you are unfamiliar with proper fractions, please look up its mathematical definition.
+
+// Acceptance criteria:
+// After you have implemented the function, write tests to cover all the cases, and
+// execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
   if (numerator < denominator) {
@@ -19,7 +22,7 @@ function isProperFraction(numerator, denominator) {
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
 
-// here's our helper again
+// Here's our helper again
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
