@@ -24,12 +24,13 @@ function getAngleType(angle) {
   if (angle === 90) {
     return "Right angle";
   }
-  if (angle < 90) {
+  if (angle > 0 && angle < 90) {
     return "Acute angle";
   }
   if (angle > 90 && angle < 180) {
     return "Obtuse angle";
   }
+  return "Invalid angle";
   // Run the tests, work out what Case 2 is testing, and implement the required code here.
   // Then keep going for the other cases, one at a time.
 }
