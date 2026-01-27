@@ -6,7 +6,7 @@
 Input  ──▶  Function  ──▶  Output
 ```
 
-A ***pure function***
+A function
 - Takes **input** (via **arguments**)
 - Does some work
 - Yields **one output** (via a **return value**)
