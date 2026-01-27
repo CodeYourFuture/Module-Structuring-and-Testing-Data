@@ -3,18 +3,18 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> The variable num is not declared
+// =============> write your prediction of the error here
 
 function square(3) {
     return num * num;
 }
 
-// =============>SyntaxError: Unexpected number
+// =============> write the error message here
 
-// =============> There must a variable declared, not just simply passing a number as an argument
+// =============> explain this error message here
 
 // Finally, correct the code to fix the problem
 
-// =============> function square(num) {
+// =============> write your new code here
 
 

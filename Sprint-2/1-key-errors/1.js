@@ -1,7 +1,7 @@
 // Predict and explain first...
 
 // Why will an error occur when this program runs?
-// =============> Instead of calling the function, a variable is called
+// =============> write your prediction here
 
 // Try playing computer with the example to work out what is going on
 
@@ -14,7 +14,7 @@ function convertToPercentage(decimalNumber) {
 
 console.log(decimalNumber);
 
-// =============> Also inside the function, decimalNumber is called again
+// =============> write your explanation here
 
 // Finally, correct the code to fix the problem
-// =============> decimalNumber = 0.5;
+// =============> write your new code here
