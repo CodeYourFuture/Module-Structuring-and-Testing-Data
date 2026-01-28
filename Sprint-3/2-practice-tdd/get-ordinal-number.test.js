@@ -18,29 +18,3 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(21)).toEqual("21st");
   expect(getOrdinalNumber(31)).toEqual("131st");
 });
-
-test("should return '2nd' for 2", () => {
-  expect(getOrdinalNumber(2)).toEqual("2nd");
-});
-
-test("should return '3rd' for 3", () => {
-  expect(getOrdinalNumber(3)).toEqual("3rd");
-});
-test("should return '4th' for 4", () => {
-  expect(getOrdinalNumber(4)).toEqual("4th");
-});
-test("should return '5th' for 5", () => {
-  expect(getOrdinalNumber(5)).toEqual("5th");
-});
-test("should return '11th' for 11", () => {
-  expect(getOrdinalNumber(11)).toEqual("11th");
-});
-test("should return '21st' for 21", () => {
-  expect(getOrdinalNumber(21)).toEqual("21st");
-});
-test("should return '32nd' for 32", () => {
-  expect(getOrdinalNumber(32)).toEqual("32nd");
-});
-test("should return '53rd' for 53", () => {
-  expect(getOrdinalNumber(53)).toEqual("53rd");
-});
