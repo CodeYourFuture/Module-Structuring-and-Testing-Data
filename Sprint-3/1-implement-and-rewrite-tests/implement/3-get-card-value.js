@@ -22,7 +22,16 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const rank = card.slice(0, card.length - 1);
+  if (rank === "A") {
+    return 11;
+  } else if (Number(rank) >= 2 && Number(rank) < 10) {
+    return Number(rank);
+  } else if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  } else {
+    return "Invalid card rank";
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -41,12 +50,31 @@ function assertEquals(actualOutput, targetOutput) {
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
 
-// Handling invalid cards
-try {
-  getCardValue("invalid");
+// Handle Number Cards (2-10):
+// Given a card with a rank between "2" and "9",
+// When the function is called with such a card,
+// Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
+const fiveofHearts = getCardValue("5♥");
+// ====> write your test here, and then add a line to pass the test in the function above
+assertEquals(fiveofHearts, 5);
 
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
+// Handle Face Cards (J, Q, K):
+// Given a card with a rank of "10," "J," "Q," or "K",
+// When the function is called with such a card,
+// Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const kingofDiamonds = getCardValue("K♦");
+assertEquals(kingofDiamonds, 10);
 
-// What other invalid card cases can you think of?
+// Handle Ace (A):
+// Given a card with a rank of "A",
+// When the function is called with an Ace,
+// Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const aceofClubs = getCardValue("A♣");
+assertEquals(aceofClubs, 11);
+
+// Handle Invalid Cards:
+// Given a card with an invalid rank (neither a number nor a recognized face card),
+// When the function is called with such a card,
+// Then it should throw an error indicating "Invalid card rank."
+const invalidCard = getCardValue("1♠");
+assertEquals(invalidCard, "Invalid card rank");
