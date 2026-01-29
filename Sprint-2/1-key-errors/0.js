@@ -1,5 +1,5 @@
 // Predict and explain first...
-//  =============> write your prediction here
+//  =============> Capitalises the first letter of the str
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
@@ -9,5 +9,7 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+capitalise("mohsen");
+
+// =============> variable str is declared again inside function
+// =============> str = `${str[0].toUpperCase()}${str.slice(1)}`;
