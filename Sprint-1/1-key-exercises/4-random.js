@@ -18,3 +18,9 @@ const scaled = decimal * range;
 const floored = Math.floor(scaled);
 // Shift the number up to start at the minimum
 const result = floored + minimum;
+// Log each part to understand the process
+console.log("decimal:", decimal);
+console.log("range:", range);
+console.log("scaled:", scaled);
+console.log("floored:", floored);
+console.log("result:", result);
