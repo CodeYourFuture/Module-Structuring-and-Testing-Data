@@ -8,5 +8,6 @@ let lastName = "Johnson";
 // + joins them in one string
 // [0] gets the first character of each string
 let initials = firstName[0] + middleName[0] +lastName[0]; 
+console.log(initials); // "CKJ"
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
