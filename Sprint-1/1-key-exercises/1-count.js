@@ -4,3 +4,6 @@ count = count + 1;
 
 // Line 1 is a variable declaration, creating the count variable with an initial value of 0
 // Describe what line 3 is doing, in particular focus on what = is doing
+
+// Line 3 is adding 1 to the variable count and assign it again to count using =.
+// So after line 3 the value of count is 1.
