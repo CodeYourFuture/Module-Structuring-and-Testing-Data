@@ -8,11 +8,16 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  let rank=card[0]
+  let rank=card.slice(0,-1)
   if (rank=== "A") {
     return 11;
   }
-  
+  if(rank>=2 && rank<=9){
+    return +rank
+  }
+  if(rank==="J") {
+    return 10
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -48,6 +53,8 @@ assertEquals(fiveOfHearts,5)
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const faceCards = getCardValue("J♠");
+assertEquals(faceCards,10)
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
