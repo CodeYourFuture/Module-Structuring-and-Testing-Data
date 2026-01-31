@@ -11,11 +11,7 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  numerator = Math.abs(numerator);
-  denominator = Math.abs(denominator);
-  if (numerator < denominator) return true;
-  else if (numerator > denominator) return false;
-  else if (numerator === denominator) return false;
+  // TODO: Implement this function
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -35,23 +31,3 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
-
-// Example: 5/2 is not a proper fraction
-const improperFraction = isProperFraction(5, 2);
-assertEquals(improperFraction, false);
-
-// Example: -4/7 is a proper fraction
-const negativeFraction = isProperFraction(-4, 7);
-assertEquals(negativeFraction, true);
-
-// Example: 3/3 is not a proper fraction
-const equalFraction = isProperFraction(3, 3);
-assertEquals(equalFraction, false);
-
-// Example: 4/-7 is a proper fraction
-const negativeFraction1 = isProperFraction(4, -7);
-assertEquals(negativeFraction1, true);
-
-// Example: -4/-7 is a proper fraction
-const negativeFraction2 = isProperFraction(4, 7);
-assertEquals(negativeFraction2, true);
