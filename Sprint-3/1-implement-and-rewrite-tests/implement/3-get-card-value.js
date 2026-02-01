@@ -9,18 +9,18 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 const assert = require("assert");
 function getCardValue(card) {
-  if(!/[♠♣♦♥]$/.test(card)){
-    throw new Error("Invalid card")
+  if (!/[♠♣♦♥]$/.test(card)) {
+    throw new Error("Invalid, card does not have a face");
   }
-  let rank=card.slice(0,-1)
-  if (rank=== "A") {
+  let rank = card.slice(0, -1);
+  if (rank === "A") {
     return 11;
   }
-  if(rank>=2 && rank<=9){
-    return +rank
+  if (rank >= 2 && rank <= 9) {
+    return +rank;
   }
-  if(/^(10|J|Q|K)$/.test(rank)) {
-    return 10
+  if (/^(10|J|Q|K)$/.test(rank)) {
+    return 10;
   }
   throw new Error("Invalid card rank");
 }
@@ -51,7 +51,7 @@ assertEquals(aceOfSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveOfHearts = getCardValue("5♥");
-assertEquals(fiveOfHearts,5)
+assertEquals(fiveOfHearts, 5);
 // ====> write your test here, and then add a line to pass the test in the function above
 
 // Handle Face Cards (J, Q, K):
@@ -59,10 +59,9 @@ assertEquals(fiveOfHearts,5)
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
 const faceCards = getCardValue("K♠");
-assertEquals(faceCards,10)
+assertEquals(faceCards, 10);
 const faceCards1 = getCardValue("10♠");
 assertEquals(faceCards1, 10);
-
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
@@ -76,8 +75,11 @@ assertEquals(aceOfSpades1, 11);
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 
- 
 assert.throws(() => getCardValue("L♠"), Error, /Invalid card rank/);
 assert.throws(() => getCardValue(), Error, /Invalid card rank/);
 assert.throws(() => getCardValue(["A♠"]), Error, /Invalid card rank/);
-assert.throws(() => getCardValue("A2"), Error, /Invalid card/);
+assert.throws(
+  () => getCardValue("A2"),
+  Error,
+  /Invalid, card does not have a face/
+);
