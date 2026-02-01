@@ -7,6 +7,7 @@
 // complete the rest of the tests and cases
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
+const assert = require("assert");
 function getCardValue(card) {
   let rank=card.slice(0,-1)
   if (rank=== "A") {
@@ -15,9 +16,10 @@ function getCardValue(card) {
   if(rank>=2 && rank<=9){
     return +rank
   }
-  if(rank==="J") {
+  if(/^(10|J|Q|K)$/.test(rank)) {
     return 10
   }
+  throw new Error("Invalid card");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -53,15 +55,25 @@ assertEquals(fiveOfHearts,5)
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
-const faceCards = getCardValue("J♠");
+const faceCards = getCardValue("K♠");
 assertEquals(faceCards,10)
+const faceCards1 = getCardValue("10♠");
+assertEquals(faceCards1, 10);
+
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const aceOfSpades1 = getCardValue("A♠");
+assertEquals(aceOfSpades1, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+ 
+assert.throws(() => getCardValue("L♠"), Error, /Invalid card/);
+assert.throws(() => getCardValue(), Error, /Invalid card/);
+assert.throws(() => getCardValue(["A♠"]), Error, /Invalid card/);
