@@ -9,6 +9,9 @@
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 const assert = require("assert");
 function getCardValue(card) {
+  if(!/[♠♣♦♥]$/.test(card)){
+    throw new Error("Invalid card")
+  }
   let rank=card.slice(0,-1)
   if (rank=== "A") {
     return 11;
@@ -19,7 +22,7 @@ function getCardValue(card) {
   if(/^(10|J|Q|K)$/.test(rank)) {
     return 10
   }
-  throw new Error("Invalid card");
+  throw new Error("Invalid card rank");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -74,6 +77,7 @@ assertEquals(aceOfSpades1, 11);
 // Then it should throw an error indicating "Invalid card rank."
 
  
-assert.throws(() => getCardValue("L♠"), Error, /Invalid card/);
-assert.throws(() => getCardValue(), Error, /Invalid card/);
-assert.throws(() => getCardValue(["A♠"]), Error, /Invalid card/);
+assert.throws(() => getCardValue("L♠"), Error, /Invalid card rank/);
+assert.throws(() => getCardValue(), Error, /Invalid card rank/);
+assert.throws(() => getCardValue(["A♠"]), Error, /Invalid card rank/);
+assert.throws(() => getCardValue("A2"), Error, /Invalid card/);
