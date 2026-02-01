@@ -14,7 +14,7 @@ function isProperFraction(numerator, denominator) {
   }
   if (
     Math.abs(numerator) > Math.abs(denominator) ||
-    numerator === denominator
+    Math.abs(numerator) === Math.abs(denominator)
   ) {
     return false;
   }
