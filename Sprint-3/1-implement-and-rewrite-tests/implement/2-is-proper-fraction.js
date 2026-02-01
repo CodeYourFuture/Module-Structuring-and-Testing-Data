@@ -8,6 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
+  
   if (Math.abs(numerator) < Math.abs(denominator)) {
     return true;
   }
@@ -17,9 +18,10 @@ function isProperFraction(numerator, denominator) {
   ) {
     return false;
   }
-  if(Number.isNaN(numerator) || Number.isNaN(denominator)){
-    throw new Error("Not a number")
+  if (typeof numerator === "number" && typeof denominator === "number") {
+    return true;
   }
+  
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -88,5 +90,5 @@ assertEquals(negativeDenominator,true)
 
 
 //got stuck on this one, don't know how to test
-//      const notANumber=isProperFraction("a",2)
- //      assertEquals(negativeFraction, "Not a number");
+  const notANumber=isProperFraction("a",2)
+  assertEquals(notANumber,false);
