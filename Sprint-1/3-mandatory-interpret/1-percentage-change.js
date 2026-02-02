@@ -2,7 +2,7 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
@@ -12,11 +12,37 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
+// carPrice.replaceAll(",", "") - line 4
+// Number(...) - line 4, wraps the result of replaceAll
+// priceAfterOneYear.replaceAll("," "") - line 5
+// Number(...) - line 5, wraps the second result of replaceAll
+// console.log(..) - line 9
+// Answer: There are 5 function calls in total, on lines 4, 5 and 9.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
+// Error: priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+// Answer: 
+// The red line on replaceAll("," "") indicates that there is a syntax error on line 5, as shown in the code.
+// A comma was missing between the two arguments inside the replaceAll function call.
+// To fix this, add a comma between the two arguments like this: replaceAll(",", "").
+
+// Error: SyntaxError: missing ) after argument list and price AfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+// The error appears on the console.log line because the string was written using smart quotes instead of normal JavaScript quotes.
+// Smart quotes break the strong syntax rules of JavaScript. 
+// To fix this, replace the smart quotes with straight quotes.
 
 // c) Identify all the lines that are variable reassignment statements
+// carPrice = Number(carPrice.replaceAll(",", ""));
+// priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
+// Answer: Lines 4 and 5 are variable reassignment statements.
 
 // d) Identify all the lines that are variable declarations
+// let carPrice = "10,000";
+// let priceAfterOneYear = "8,543";
+// const priceDifference = carPrice - priceAfterOneYear;
+// const percentageChange = (priceDifference / carPrice) * 100;
+// Answer: Lines 1, 2, 7 and 8 are variable declarations.
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+// The expression Number(carPrice.replaceAll(",", "")) is removing all the commas from carPrice string by replacing every comma with an empty string.
+// The purpose is to clean the value so that it can be converted to a proper number using Number().
