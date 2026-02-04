@@ -14,3 +14,22 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+// MDN References I used: 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+
+function toUpperSnakeCase(input) {
+  return input
+  // Removes extra spaces
+  .trim() 
+  // Converts everything to caps
+  .toUpperCase() 
+  // Replaces all spaces with underscores 
+  // g means global, so it applies to the whole string
+  // / / is a regular expression matching a space
+  .replace(/ /g, "_");
+}
+
+console.log(toUpperSnakeCase("hello there")); // HELLO_THERE
