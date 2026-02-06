@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// Answer: 5 in total (on lines 4, 5, and 10)
+// Answer: 6 in total (on lines 4, 5, and 10)
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // Prediction: it will generate an error. This is because the replaceAll function isn't syntactically correct as there is a comma separator missing
