@@ -1,2 +1,2 @@
-const 12HourClockTime = "20:53";
-const 24hourClockTime = "08:53";
+const clock_12H = "08:53 PM";
+const clock_24H = "20:53";
