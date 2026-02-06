@@ -11,5 +11,3 @@ const last4Digits = cardNumber.toString().slice(-4);
 // Prediction: running this will generate an error. This is because the slice method is a string method,
 // so it only works on strings. However, the cardNumber variable is an integer. To correct this, we
 // need to caste this integer into an string.
-
-console.log(last4Digits);
