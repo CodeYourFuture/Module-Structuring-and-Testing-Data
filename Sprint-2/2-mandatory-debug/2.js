@@ -1,24 +1,41 @@
-// Predict and explain first...
+//  =============> Prediction <=============
+// The script will run but not as intended. Each time the getLastDigit
+// function is ran, it will return "3". This is because it's using the
+// global variable num
 
-// Predict the output of the following code:
-// =============> Write your prediction here
+//  =============> Actual Results <=============
+// The last digit of 42 is 3
+// The last digit of 105 is 3
+// The last digit of 806 is 3
 
-const num = 103;
+//  =============> Explanation <=============
+// The getLastDigit is using the global num variable instead of an
+// input variable
 
-function getLastDigit() {
+//  =============> Corrected Script <=============
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 
-console.log(`The last digit of 42 is ${getLastDigit(42)}`);
-console.log(`The last digit of 105 is ${getLastDigit(105)}`);
-console.log(`The last digit of 806 is ${getLastDigit(806)}`);
+const actualResult_1 = getLastDigit(42);
+const actualResult_2 = getLastDigit(105);
+const actualResult_3 = getLastDigit(806);
 
-// Now run the code and compare the output to your prediction
-// =============> write the output here
-// Explain why the output is the way it is
-// =============> write your explanation here
-// Finally, correct the code to fix the problem
-// =============> write your new code here
+const expectedResult_1 = "2";
+const expectedResult_2 = "5";
+const expectedResult_3 = "6";
 
-// This program should tell the user the last digit of each number.
-// Explain why getLastDigit is not working properly - correct the problem
+console.assert(
+  actualResult_1 === expectedResult_1,
+  `actual result: ${actualResult_1}, expected result: ${expectedResult_1}`
+);
+
+console.assert(
+  actualResult_2 === expectedResult_2,
+  `actual result: ${actualResult_2}, expected result: ${expectedResult_2}`
+);
+
+console.assert(
+  actualResult_3 === expectedResult_3,
+  `actual result: ${actualResult_3}, expected result: ${expectedResult_3}`
+);
