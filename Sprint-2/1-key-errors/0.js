@@ -1,13 +1,23 @@
-// Predict and explain first...
-//  =============> write your prediction here
+//  =============> Prediction <=============
+// I think the code will work as expected. For example, if capitalise("andora")
+// is run, it should return "Andora".
 
-// call the function capitalise with a string input
-// interpret the error message and figure out why an error is occurring
+//  =============> Actual Results <=============
 
+// The code did not run successfully due to a syntax error. Since the variable
+// str was already declared when in the capitalise function input, it cannot
+// be declared again as was done on line 6.
+
+//  =============> Corrected Script <=============
 function capitalise(str) {
-  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
+  if (str === "") {
+    return "";
+  }
+
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+console.assert(
+  capitalise("andora") === "Andora",
+  `current output: ${capitalise("andora")}, expected output: Andora`
+);
