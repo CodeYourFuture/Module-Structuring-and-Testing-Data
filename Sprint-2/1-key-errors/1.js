@@ -1,20 +1,16 @@
-// Predict and explain first...
+//  =============> Prediction <=============
+// The script won't run because the decimalNumber variable is being declared
+// twice (first in the convertToPercentage input, and again inside the function)
 
-// Why will an error occur when this program runs?
-// =============> write your prediction here
+//  =============> Actual Results <=============
+// The script threw a syntax error due to the double variable declaration
 
-// Try playing computer with the example to work out what is going on
-
+//  =============> Corrected Script <=============
 function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
-
-  return percentage;
+  return `${decimalNumber * 100}%`;
 }
 
-console.log(decimalNumber);
-
-// =============> write your explanation here
-
-// Finally, correct the code to fix the problem
-// =============> write your new code here
+console.assert(
+  convertToPercentage(0.45) === "45%",
+  `current output: ${convertToPercentage(0.45)}, expected output: 45%`
+);
