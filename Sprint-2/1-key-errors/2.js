@@ -1,20 +1,22 @@
+//  =============> Prediction <=============
+// It will throw an error. This is because the variable num is being used without
+// being declared previously.
 
-// Predict and explain first BEFORE you run any code...
+//  =============> Actual Results <=============
+// Error message: function square(3) {
+//                ^
+// SyntaxError: Unexpected number
 
-// this function should square any number but instead we're going to get an error
+//  =============> Explanation <=============
+// An error was thrown because the because we cannot name a variable with a number
+// as has been done in the function input
 
-// =============> write your prediction of the error here
-
-function square(3) {
-    return num * num;
+//  =============> Corrected Script <=============
+function square(num) {
+  return num * num;
 }
 
-// =============> write the error message here
-
-// =============> explain this error message here
-
-// Finally, correct the code to fix the problem
-
-// =============> write your new code here
-
-
+console.assert(
+  square(3) === 9,
+  `actual result: ${square(3)}, expected result: 9`
+);
