@@ -14,3 +14,25 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function upperCaseSnake(str) {
+  const upperCaseSnake = str.toUpperCase().replaceAll(" ", "_");
+
+  return upperCaseSnake;
+}
+
+let returnedUpperCaseSnake = upperCaseSnake("hello_there");
+let actualUpperCaseSnake = "HELLO_THERE";
+
+console.assert(
+  returnedUpperCaseSnake === actualUpperCaseSnake,
+  `returned upperCaseSnake: ${returnedUpperCaseSnake}, actual upperCaseSnake: ${actualUpperCaseSnake}`
+);
+
+returnedUpperCaseSnake = upperCaseSnake("lord of the rings");
+actualUpperCaseSnake = "LORD_OF_THE_RINGS";
+
+console.assert(
+  returnedUpperCaseSnake === actualUpperCaseSnake,
+  `returned upperCaseSnake: ${returnedUpperCaseSnake}, actual upperCaseSnake: ${actualUpperCaseSnake}`
+);
