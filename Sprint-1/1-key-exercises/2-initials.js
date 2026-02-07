@@ -9,3 +9,7 @@ let initials = firstName[0] + middleName[0] + lastName[0];
 console.log(initials);
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
+// Explaning the solution: I assign 'initials' to a new string variable made by combining the 
+// first character of 'firstName', 'middleName' and 'lastName'.
+// Strings in JavaScript are indexable, so using [0] accesses the first 
+// character of each string.
