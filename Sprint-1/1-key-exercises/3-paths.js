@@ -24,3 +24,7 @@ const ext = filePath.slice(lastDotIndex + 1);
 console.log("Dir:", dir);
 console.log("Ext:", ext);
 // https://www.google.com/search?q=slice+mdn
+//Explaining the solution: lastIndexOf() is used to locate boundaries (/ and .)
+// slice() is used to extract the required parts of the string.
+// No values are hard-coded, so the solution works for similar file paths.
+// The result correctly seperats the path into dir and ext.
