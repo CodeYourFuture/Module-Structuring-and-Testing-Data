@@ -1,14 +1,26 @@
-// Predict and explain first...
+//  =============> Prediction <=============
+// The code will not throw an error -- it's syntactically fine. However, the
+// multiply function is missing a return call, so it will return undefined
+// by default. The function therefore simply prints the result of the
+// multiplication instead of actually returning it as a value.
 
-// =============> write your prediction here
+//  =============> Actual Results <=============
+// 320
+// The result of multiplying 10 and 32 is undefined
 
+//  =============> Explanation <=============
+// The 320 is printed in the terminal because of the console.log(). Because
+// no return was written, the default undefined is generated.
+
+//  =============> Corrected Script <=============
 function multiply(a, b) {
-  console.log(a * b);
+  return a * b;
 }
 
-console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
+const actualResult = multiply(10, 32);
+const expectedResult = 320;
 
-// =============> write your explanation here
-
-// Finally, correct the code to fix the problem
-//  =============> write your new code here
+console.assert(
+  actualResult === expectedResult,
+  `actual result: ${actualResult}, expected result: ${expectedResult}`
+);
