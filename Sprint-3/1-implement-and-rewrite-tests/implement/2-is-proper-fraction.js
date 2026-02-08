@@ -1,9 +1,8 @@
 function isProperFraction(numerator, denominator) {
+  if (numerator === 0 || denominator === 0) return false;
   return Math.abs(numerator) < Math.abs(denominator);
 }
 
-// The line below allows us to load the isProperFraction function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
 
 function assertEquals(actualOutput, targetOutput) {
