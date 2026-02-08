@@ -1,28 +1,43 @@
-// This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
-
-// Implement a function getCardValue, when given a string representing a playing card,
-// should return the numerical value of the card.
-
-// A valid card string will contain a rank followed by the suit.
-// The rank can be one of the following strings:
-//   "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
-// The suit can be one of the following emojis:
-//   "♠", "♥", "♦", "♣"
-// For example: "A♠", "2♥", "10♥", "J♣", "Q♦", "K♦".
-
-// When the card is an ace ("A"), the function should return 11.
-// When the card is a face card ("J", "Q", "K"), the function should return 10.
-// When the card is a number card ("2" to "10"), the function should return its numeric value.
-
-// When the card string is invalid (not following the above format), the function should
-// throw an error.
-
-// Acceptance criteria:
-// After you have implemented the function, write tests to cover all the cases, and
-// execute the code to ensure all tests pass.
-
 function getCardValue(card) {
-  // TODO: Implement this function
+  // Ensure that the last char is a suit, otherwise throw an error
+  const suits = ["♠", "♥", "♦", "♣"];
+  if (!suits.includes(card.slice(-1))) {
+    throw new Error("Please add the suit to the card face i.e. '5♥' ");
+  }
+
+  const rank = card.slice(0, -1);
+  const validRank = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+
+  // Throw an error if an invalid card is entered
+  if (!validRank.includes(rank)) {
+    throw new Error("Please enter a valid card face");
+  }
+
+  // Return value if card rank is a number
+  if (parseInt(rank)) {
+    return parseInt(rank);
+  }
+
+  // Return 11 for "A" and 10 for "J", "Q", "K"
+  if (rank === "A") {
+    return 11;
+  } else {
+    return 10;
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -37,16 +52,48 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
-// Examples:
+// ============= Valid Card Tests ===========
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("K♥"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("J♣"), 10);
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("2♥"), 2);
 
-// Handling invalid cards
+// ============= Invalid Card Tests ===========
+let invalidCard = "invalid";
 try {
-  getCardValue("invalid");
-
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card");
+  getCardValue(invalidCard);
+  console.error(`Error was not thrown for an invalid card (${invalidCard})`);
 } catch (e) {}
 
-// What other invalid card cases can you think of?
+invalidCard = 7;
+try {
+  getCardValue(invalidCard);
+  console.error(`Error was not thrown for an invalid card (${invalidCard})`);
+} catch (e) {}
+
+invalidCard = "";
+try {
+  getCardValue(invalidCard);
+  console.error(`Error was not thrown for an invalid card (${invalidCard})`);
+} catch (e) {}
+
+invalidCard = "AA♠";
+try {
+  getCardValue(invalidCard);
+  console.error(`Error was not thrown for an invalid card (${invalidCard})`);
+} catch (e) {}
+
+invalidCard = "10♠♦";
+try {
+  getCardValue(invalidCard);
+  console.error(`Error was not thrown for an invalid card (${invalidCard})`);
+} catch (e) {}
+
+invalidCard = "10";
+try {
+  console.log(getCardValue(invalidCard));
+  getCardValue(invalidCard);
+  console.error(`Error was not thrown for an invalid card (${invalidCard})`);
+} catch (e) {}
