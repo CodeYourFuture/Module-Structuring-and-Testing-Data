@@ -16,10 +16,12 @@ console.log(`The percentage change is ${percentageChange}`);
 // Number(carPrice), Number(priceAfterOneYear, console.log(`The percentage change is ${percentageChange}`);.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-// The syntax error is originating on line 5, this is due to a missing ',' in the function priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));.
+// The syntax error is originating on line 5, this is due to a missing ',' in the function priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));.
 
 // c) Identify all the lines that are variable reassignment statements
+// The lines that are vvariable declarations use let or const: carPrice, priceAfterOneYear.
 
 // d) Identify all the lines that are variable declarations
+// The lines that are vvariable declarations use let or const: let carPrice, let priceAfterOneYear, const priceDifference and const percentageChange.
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
