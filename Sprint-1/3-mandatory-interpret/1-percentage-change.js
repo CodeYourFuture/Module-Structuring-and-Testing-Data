@@ -16,6 +16,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Number(carPrice), Number(priceAfterOneYear, console.log(`The percentage change is ${percentageChange}`);.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
+// The syntax error is originating on line 5, this is due to a missing ',' in the function priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));.
 
 // c) Identify all the lines that are variable reassignment statements
 
