@@ -1,0 +1,10 @@
+{
+  "name": "implement-testing-with-jest",
+  "description": "Using the jest framework to test functions implemented",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
