@@ -17,3 +17,6 @@ console.log("range:", range);
 // Scale the random decimal to fit within the range
 const scaledNumber = randomDecimal * range;
 console.log("scaledNumber:", scaledNumber);
+// Round the scaled number down to the nearest whole number
+const wholeNumber = Math.floor(scaledNumber);
+console.log("wholeNumber:", wholeNumber);
