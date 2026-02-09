@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = -4382.3817; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -39,3 +39,5 @@ console.log(result);
 // A better variable name may be: movieDuration
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+// Upon experimenting with the const movieLength I have tested edge cases. The code works well for positive integer values.
+// Handling edge cases such as negative value, floats lead to confusing results.
