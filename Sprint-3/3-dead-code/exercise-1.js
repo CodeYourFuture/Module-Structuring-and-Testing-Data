@@ -5,9 +5,7 @@ let testName = "Jerry";
 const greeting = "hello";
 
 function sayHello(greeting, name) {
-  const greetingStr = greeting + ", " + name + "!";
   return `${greeting}, ${name}!`;
-  console.log(greetingStr);
 }
 
 testName = "Aman";
@@ -15,3 +13,6 @@ testName = "Aman";
 const greetingMessage = sayHello(greeting, testName);
 
 console.log(greetingMessage); // 'hello, Aman!'
+
+//it isn't very clear if I should change the way greeting is declared from "const"
+//to "let" so that any greeting can be used not just "hello"
