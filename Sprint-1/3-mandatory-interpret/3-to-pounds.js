@@ -25,3 +25,10 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+// 2. const penceStringWithoutTrailingP = penceString.substring( 0, penceString.length - 1);
+// penceString.length -1: points to the index just before the last character. The substring(0, ect) takes everything from the start up to the last character (but not including the last character)
+// The result removes th trailing "p" so the output becomes "399p" --> "399"
+
+// 3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");: 
+
