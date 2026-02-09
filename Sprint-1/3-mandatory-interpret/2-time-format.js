@@ -26,6 +26,7 @@ console.log(result);
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
+// The modulus operator returns the remainder after dividing movieLength by 60.
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 
