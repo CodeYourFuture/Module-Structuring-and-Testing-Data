@@ -14,9 +14,16 @@ console.log("randomDecimal:", randomDecimal);
 // Calculate how many numbers are in the range between minimum and maximum (inclusive)
 const range = maximum - minimum + 1;
 console.log("range:", range);
-// Scale the random decimal to fit within the range
+// Scale the random decimal to fit within the range...
 const scaledNumber = randomDecimal * range;
 console.log("scaledNumber:", scaledNumber);
 // Round the scaled number down to the nearest whole number
 const wholeNumber = Math.floor(scaledNumber);
 console.log("wholeNumber:", wholeNumber);
+// Shift the number so it starts from the minimum value...
+const finalNumber = wholeNumber + minimum;
+console.log("finalNumber:", finalNumber);
+
+// The variable num is a random whole number between minimum and maximum - inclusive
+console.log("num:", num);
+
