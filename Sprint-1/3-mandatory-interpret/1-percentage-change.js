@@ -25,3 +25,6 @@ console.log(`The percentage change is ${percentageChange}`);
 // The lines that are vvariable declarations use let or const: let carPrice, let priceAfterOneYear, const priceDifference and const percentageChange.
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+// This particular expression is doing two steps. First it takes "10,000" and removes the commas so the output then is "10000"
+// THe second step converts the the string into a number - this is likely because the next function then subtracts the number to find the difference between 
+// carPrice and priceAfterOneYear and stores it within priceDifference variable declaration. 
