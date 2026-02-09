@@ -38,3 +38,7 @@ console.log(`£${pounds}.${pence}`);
 // This takes everything except the last two digits
 // The last two digits represent the pence, so whatever is left over fro the calculation is the pounds.
 
+// 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
+// The substring(paddedPenceNumberString.length - 2) takes the last two characters as the pence part "399" and converts it into "99"
+// The .padEnd(2, "0") ensures the pence part is always 2 digits by adding trailing zeros if needed.
+// In most cases there are already two digits, however part of the code protects against edge cases such as "3" becoming "30" which would be an inaccurate outcome.
