@@ -31,4 +31,6 @@ console.log(`£${pounds}.${pence}`);
 // The result removes th trailing "p" so the output becomes "399p" --> "399"
 
 // 3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");: 
+// Ensures the pence int has at least 3 characters by adding leading zeros if required.
+// This is useful for values under 100p so the pounds/pence split works accurately.
 
