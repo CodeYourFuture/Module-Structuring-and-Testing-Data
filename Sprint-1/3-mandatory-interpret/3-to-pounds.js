@@ -42,3 +42,6 @@ console.log(`£${pounds}.${pence}`);
 // The substring(paddedPenceNumberString.length - 2) takes the last two characters as the pence part "399" and converts it into "99"
 // The .padEnd(2, "0") ensures the pence part is always 2 digits by adding trailing zeros if needed.
 // In most cases there are already two digits, however part of the code protects against edge cases such as "3" becoming "30" which would be an inaccurate outcome.
+
+// 6. console.log(`£${pounds}.${pence}`);
+// Prints the final formatted price in pounds and pence. An example would be "399p" would print as "£3.99
