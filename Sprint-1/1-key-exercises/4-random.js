@@ -8,6 +8,9 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
-// Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive)
+// Math.random() generates a random decimal number between 0 - inclusive and 1 (exclusive)
 const randomDecimal = Math.random();
 console.log("randomDecimal:", randomDecimal);
+// Calculate how many numbers are in the range between minimum and maximum (inclusive)
+const range = maximum - minimum + 1;
+console.log("range:", range);
