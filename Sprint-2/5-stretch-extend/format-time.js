@@ -2,13 +2,30 @@
 // Make sure to do the prep before you do the coursework
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
+// function formatAs12HourClock(time) {
+//   const hours = Number(time.slice(0, 2));
+//   if (hours > 12) {
+//     return `${hours - 12}:00 pm`;
+//   }
+//   return `${time} am`;
+// }
+
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
-  }
-  return `${time} am`;
+  let hours = Number(time.slice(0, 2));
+  let minutes = Number(time.slice(3, 5));
+  let ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12; 
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+
+  return `${hours}:${minutes} ${ampm}`
 }
+
+console.log(formatAs12HourClock("00:00"));
+console.log(formatAs12HourClock("23:59"));
+console.log(formatAs12HourClock("12:00"));
+console.log(formatAs12HourClock("21:20"));
+
 
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
