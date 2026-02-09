@@ -31,7 +31,7 @@ console.log(result);
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 // remainingSeconds removes leftover seconds 
 // movieLength - remainingSeconds leave only full seconds
-// Dividing by 60 converts secods to minutes 
+// Dividing by 60 converts seconds to minutes 
 // This expression converts the total movie length from seconds into whole minutes, excluding any leftover second. 
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
