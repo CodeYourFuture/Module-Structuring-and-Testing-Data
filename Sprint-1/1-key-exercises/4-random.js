@@ -14,3 +14,6 @@ console.log("randomDecimal:", randomDecimal);
 // Calculate how many numbers are in the range between minimum and maximum (inclusive)
 const range = maximum - minimum + 1;
 console.log("range:", range);
+// Scale the random decimal to fit within the range
+const scaledNumber = randomDecimal * range;
+console.log("scaledNumber:", scaledNumber);
