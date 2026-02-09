@@ -21,6 +21,8 @@ console.log(result);
 //const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 
 // b) How many function calls are there?
+// There is 1 function call within this program
+//1) console.log(result);
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
