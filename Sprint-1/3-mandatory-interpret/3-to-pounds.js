@@ -34,3 +34,7 @@ console.log(`£${pounds}.${pence}`);
 // Ensures the pence int has at least 3 characters by adding leading zeros if required.
 // This is useful for values under 100p so the pounds/pence split works accurately.
 
+// 4. const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2);
+// This takes everything except the last two digits
+// The last two digits represent the pence, so whatever is left over fro the calculation is the pounds.
+
