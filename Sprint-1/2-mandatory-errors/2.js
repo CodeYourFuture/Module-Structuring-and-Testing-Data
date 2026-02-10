@@ -2,4 +2,4 @@
 // what's the error ?
 const cityOfBirth = "Bolton";
 console.log(`I was born in ${cityOfBirth}`);
-// the constant was declared after the sentence that used it 
+// the constant was declared after the sentence that used it

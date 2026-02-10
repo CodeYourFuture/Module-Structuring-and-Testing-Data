@@ -35,6 +35,6 @@ console.log(`£${pounds}.${pence}`); // 397.72
 // 9.const pounds = paddedPenceNumberString.substring( 0, paddedPenceNumberString.length - 2);
 //     gets the ammout of pounds by making a sub string that starts at the firts character (0) to the paddedPenceNumberString length -2 to exclued the last 2 characters (the p)
 
-// 10. 
+// 10.
 // 18.console.log(`£${pounds}.${pence}`);
-//      gives the console the result using a string literal 
+//      gives the console the result using a string literal
