@@ -1,4 +1,4 @@
-const penceString = "39772p";
+const penceString = "392p";
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
