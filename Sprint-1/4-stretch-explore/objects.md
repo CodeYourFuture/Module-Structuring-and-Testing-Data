@@ -13,4 +13,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
+a console stores an object provided by the browser that contains methods for logging information, debugging, and interacting with the developer console.
+
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+The syntax console.log accesses a property called log on the console object. On the other hand, console.assert means access the assert method of the console object. Finally, the '.' is the member access operator.
