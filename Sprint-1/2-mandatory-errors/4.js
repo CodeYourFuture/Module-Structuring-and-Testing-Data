@@ -1,2 +1,3 @@
-const 12HourClockTime = "20:53";
-const 24hourClockTime = "08:53";
+const TwelveHourClockTime = "20:53";
+const TwentyfourHourClockTime = "08:53";
+//The errors in the code were that variables can't start with numbers.
