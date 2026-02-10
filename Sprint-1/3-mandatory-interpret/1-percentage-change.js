@@ -27,7 +27,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Reassignment means we change an existing variable's value (no let/const on the line)
 // Line 4: carPrice = Number(carPrice.replaceAll(",", ""));
 // Line 5: priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
-// Answer: lines 4 and 5
+// Answer: I think lines 4 and 5
 
 // d) Identify all the lines that are variable declarations
 // Declarations use let or const
