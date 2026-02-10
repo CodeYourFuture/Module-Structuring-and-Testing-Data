@@ -1,6 +1,6 @@
 // Predict and explain first...
 
-// =============> write your prediction here
+// =============> write your prediction here it should print "The result of multiplying 10 and 32 is 320"
 
 function multiply(a, b) {
   console.log(a * b);
