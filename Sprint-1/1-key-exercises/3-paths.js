@@ -11,13 +11,18 @@
 
 const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
 const lastSlashIndex = filePath.lastIndexOf("/");
-const base = filePath.slice(lastSlashIndex + 1);
+const base = filePath.slice(-8);
 console.log(`The base part of ${filePath} is ${base}`);
 
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-const dir = ;
-const ext = ;
+const dir = filePath.slice(0, -8);
+const ext = filePath.slice(filePath.length-3);
+
+console.log(`the dir part of filePath variable is ${dir}`);
+console.log(ext);
 
 // https://www.google.com/search?q=slice+mdn
+
+// After studying the slice() method I was able to do this task easily.

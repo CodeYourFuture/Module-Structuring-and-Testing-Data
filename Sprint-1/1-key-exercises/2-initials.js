@@ -5,7 +5,11 @@ let lastName = "Johnson";
 // Declare a variable called initials that stores the first character of each string.
 // This should produce the string "CKJ", but you must not write the characters C, K, or J in the code of your solution.
 
-let initials = ``;
+let initials = `${firstName.charAt(0)}${middleName.charAt(0)}${lastName.charAt(0)}`;
+console.log(initials);
+console.log(typeof initials);
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 
+// I used the mdn documentation to know how to get the first character of a string.
+// I used charAt() method that takes the index of a string and return the character of it.
