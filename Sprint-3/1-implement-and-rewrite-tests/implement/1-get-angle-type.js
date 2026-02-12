@@ -40,3 +40,25 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+
+// Case 2: Identify Acute Angles:
+const acute = getAngleType(45);
+assertEquals(acute, "Acute angle");
+
+// Case 3: Identify Obtuse Angles:
+const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angle");
+
+// Case 4: Identify Straight Angles:
+const straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
+
+// Case 5: Identify Reflex Angles:
+const reflex = getAngleType(300);
+assertEquals(reflex, "Reflex angle");
+
+//case 6: Identify Invalid angle:
+assertEquals(getAngleType(367),"Invalid angle");
+
+//case 7: Identify boundary angle:
+assertEquals(getAngleType(1), "Acute angle");
