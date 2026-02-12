@@ -3,7 +3,6 @@ function getOrdinalNumber(num) {
   if (["11", "12", "13"].includes(last2Digits)) return `${num}th`;
 
   const lastDigit = String(num).slice(-1);
-  const restOfNum = String(num).slice(0, -1);
   let ordinalResult = "";
   switch (lastDigit) {
     case "1":
