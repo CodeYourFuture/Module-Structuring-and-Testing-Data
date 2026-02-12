@@ -2,14 +2,14 @@
 
 // Why will an error occur when this program runs?
 // =============> write your prediction here
-// My prediction is that this will solution will fail due to the fact that the percentage declaration is being declared twice.
+// My prediction is that this will solution will fail due to the fact that the decimalNumber is being declared twice.
 // The second issue is the decimalNumber is being logged to the console, but this is parameter for convertToPercentage.
 // So to call the function accurately we need to call convertToPercentage not decimalNumber.
 
 // Try playing computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
-  const percentage = 0.5;
+  const decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
