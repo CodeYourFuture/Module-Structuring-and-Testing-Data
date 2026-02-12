@@ -35,6 +35,9 @@ test("should return 10 for face cards", () => {
 test("Should return 'Invalid card rank.' for invalid cards", () => {
   expect(() => getCardValue("KJ")).toThrow("Invalid card rank.");
   expect(() => getCardValue("AK")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("  ")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("S♠")).toThrow("Invalid card rank.");
+  expect(() => getCardValue("J♠♠")).toThrow("Invalid card rank.");
 });
 
 // Suggestion: Group the remaining test data into these categories:

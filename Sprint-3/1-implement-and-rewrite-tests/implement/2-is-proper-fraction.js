@@ -14,8 +14,7 @@ function isProperFraction(numerator, denominator) {
   numerator = Math.abs(numerator);
   denominator = Math.abs(denominator);
   if (numerator < denominator) return true;
-  else if (numerator > denominator) return false;
-  else if (numerator === denominator) return false;
+  return false;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.

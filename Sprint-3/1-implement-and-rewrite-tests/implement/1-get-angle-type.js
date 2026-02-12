@@ -58,5 +58,5 @@ assertEquals(reflex, "Reflex angle");
 const invalid1 = getAngleType(400);
 assertEquals(invalid1, "Invalid angle");
 
-const invalid2 = getAngleType("400");
+const invalid2 = getAngleType("510");
 assertEquals(invalid2, "Invalid angle");

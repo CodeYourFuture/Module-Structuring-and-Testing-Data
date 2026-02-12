@@ -17,8 +17,8 @@ test("should return false when both numerator and denominator are zero", () => {
   expect(isProperFraction(0, 0)).toEqual(false);
 });
 
-// Case 2: Identify Improper Fractions:
-test("should return false for improper fraction", () => {
+// Case 2: Identify proper Fractions:
+test("should return true for proper fraction", () => {
   expect(isProperFraction(2, 3)).toEqual(true);
 });
 
