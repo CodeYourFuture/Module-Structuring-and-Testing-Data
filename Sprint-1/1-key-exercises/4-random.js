@@ -8,17 +8,19 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum; // Ge
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
-// Generate a random decimal number between 0 and 1
+// Generates a random decimal number in the interval [0, 1)
+// (includes 0, excludes 1)
+// MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const decimal = Math.random();
-// Calculate the range size
+// Calculates the range size
 const range = maximum - minimum + 1;
-// Scale the decimal to the range
+// Scales the decimal to the range
 const scaled = decimal * range;
-// Round down to get a whole number
+// Rounds down to get a whole number
 const floored = Math.floor(scaled);
-// Shift the number up to start at the minimum
+// Shifts the number up to start at the minimum
 const result = floored + minimum;
-// Log each part to understand the process
+// Logs each part to understand the process
 console.log("decimal:", decimal);
 console.log("range:", range);
 console.log("scaled:", scaled);
