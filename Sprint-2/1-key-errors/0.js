@@ -14,9 +14,9 @@ function capitalise(str) {
 // but it is being accessed outside the function.
 
 // =============> write your new code here: 
-//  function capitalise(str) {
-//  let newStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-//  return newStr;
-//  }
-//  let newStr = capitalise("hello");
-//  console.log(newStr);
+  function capitalise(str) {
+  let newStr = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return newStr;
+  }
+   let newStr = capitalise("hello");
+   console.log(newStr);
