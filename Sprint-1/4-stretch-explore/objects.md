@@ -16,7 +16,8 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
-- The console stores a history of messages your code prints while it runs.
+- `console` is an object that contains methods for outputting messages to the browser console, such as `log()`, `error()`, `warn()`, `info()`, `debug()`, `assert()` and more.
+- It does **not** store the history of printed messages - the browser's console UI handles that history.
 
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 - You are accessing a function (a method) that belongs to the console object.
