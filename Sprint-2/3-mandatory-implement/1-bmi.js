@@ -14,6 +14,12 @@
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
 
+// solution 1
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+    const bmi = weight / (height ** 2);
+    return Number(bmi.toFixed(1));
 }
+console.log(`My BMI is: ${calculateBMI(55, 1.3)}`)
+
+// solution 2
+// To make this program fit for real world use, I would implement a conversion for various metrics used for height and weight.
