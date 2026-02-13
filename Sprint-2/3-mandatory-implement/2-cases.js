@@ -10,6 +10,12 @@
 // it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
 
 // Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
+function upperSnakeCase(str){
+let snakeCase = str.replaceAll(" ", "_").toUpperCase();
+console.log(snakeCase);
+return snakeCase;
+}
+upperSnakeCase("the vampire dairies"); // "THE_VAMPIRE_DAIRIES"
 
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
