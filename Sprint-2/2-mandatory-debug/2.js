@@ -16,7 +16,7 @@
 // Now run the code and compare the output to your prediction
 // =============> yes thay all give 3 
 // Explain why the output is the way it is
-// because the variable is a consrent 
+// because the variable is a const before the code block when num is called it can't be changed   
 // Finally, correct the code to fix the problem
 // =============> write your new code here
 

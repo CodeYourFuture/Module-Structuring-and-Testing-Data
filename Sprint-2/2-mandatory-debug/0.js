@@ -17,7 +17,6 @@
 // //  =============> write your new code here
 function multiply(a, b) {
   const result = a * b;
-  console.log(result);
   return result;
 }
 
