@@ -22,12 +22,11 @@ const pounds = paddedPenceNumberString.substring(
 // substring() method removes "3" from "399" and returns "99";
 // padEnd() method pads the "99" and the padding applied is from the end of this string.
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2);
 
 
 // In the log, backticks are used to output template literals ${pounds} and ${pence} with added '£' sign.
-console.log(`£${pounds}.${pence}`);
+// console.log(`£${pounds}.${pence}`);
 
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
@@ -37,3 +36,11 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+// We don't need .padEnd(2, "0");
+// However, using this function will simplify and work for all types of pence
+function toPounds(pence) {
+  return "£" + Number(pence.slice(0, -1) / 100).toFixed(2);
+}
+
+console.log(toPounds("9p"));  // £0.09

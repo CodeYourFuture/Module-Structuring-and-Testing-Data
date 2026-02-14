@@ -1,8 +1,9 @@
 let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
-carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
+// I hope this RegExp is taht programming term
+carPrice = Number(carPrice.replace(/,/g, ""));
+priceAfterOneYear = Number(priceAfterOneYear.replace(/,/g, ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
@@ -13,8 +14,8 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
         // There are 4 function calls.
-        // In line 4: Number() and replaceAll() are function calls.
-        // In line 5: Number() and replaceAll() are function calls.
+        // In line 4: Number() and replace(/,/g, "") are function calls.
+        // In line 5: Number() and replace(/,/g, "") are function calls.
         // Including console.log(), there are 5 function calls.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?

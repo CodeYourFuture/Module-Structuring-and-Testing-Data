@@ -19,4 +19,5 @@ What effect does calling the `prompt` function have?
 It opens a prompt asking for an input.
 
 What is the return value of `prompt`?
-'myName
+The return value of `prompt` will be the output of whatever was written in the input of the prompt
+If the input is empty, '' will be returned

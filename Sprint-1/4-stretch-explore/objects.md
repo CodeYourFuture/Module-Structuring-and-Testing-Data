@@ -16,7 +16,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
-It stores different data such as, debug, error, info, log, warn, and etc.
+It stores a temporary log of system messages, including errors, warnings, and informational output
 
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 `console.log` is a built-in function used to output messages or values in the console
