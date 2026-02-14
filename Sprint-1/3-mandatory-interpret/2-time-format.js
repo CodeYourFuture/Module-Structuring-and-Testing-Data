@@ -26,7 +26,7 @@ console.log(result);
 // d) This way, we find out how many full minutes the film lasts. 
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// e) This variable stores information about the exact length of the film (hours:minutes:seconds). I would call it “hoursMinutesSeconds”
+// e) This variable stores information about the exact length of the film (hours:minutes:seconds). I would call it “movieTime”
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // f) I tried several values where the length of the film is 0 or only a few minutes/seconds, etc. The code works in all the cases I tried and returns 0 as the result if the film, for example, is less than an hour long. 
