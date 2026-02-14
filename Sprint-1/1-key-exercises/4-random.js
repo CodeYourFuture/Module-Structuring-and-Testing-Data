@@ -10,6 +10,6 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 // Math.random() * (maximum - minimum + 1) + minimum;
 // Returns a random number between 1 and 100.
-// The returned value is bigger than (and may possibly equal) 1 and is less than (and may possibly equal) 100;
+// The returned value is between 1 and 100 (both included);
 
 // Lastly, Math.floor() rounds down and returns the largest integer between 1 and 100
