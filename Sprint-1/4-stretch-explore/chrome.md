@@ -18,4 +18,4 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 Answer: A window pops up in the browser with a text input field
 What is the return value of `prompt`?
-Answer: undefined
+Answer: the text that I entered in the input field that is stored in myName variable
