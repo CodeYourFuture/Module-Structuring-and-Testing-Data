@@ -1,4 +1,4 @@
-const penceString = "399p";
+const penceString = "104569p";
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
@@ -25,3 +25,8 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2. const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1): Removes the "p" from the end.
+// 3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"): Makes the string at least 3 letters long by adding "0"s to the front.
+// 4. const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2): Grabs everything except the last two digits to find the "pound" amount.
+// 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0"): Grabs exactly the last two digits.
+// 6. console.log(`£${pounds}.${pence}`): Combines the pounds and pence with a decimal point and a "£" symbol.
