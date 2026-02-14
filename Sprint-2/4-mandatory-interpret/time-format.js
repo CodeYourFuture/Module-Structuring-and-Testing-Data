@@ -7,6 +7,7 @@ function formatTimeDisplay(seconds) {
   const totalMinutes = (seconds - remainingSeconds) / 60;
   const remainingMinutes = totalMinutes % 60;
   const totalHours = (totalMinutes - remainingMinutes) / 60;
+  console.log(totalHours);
 
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
@@ -25,7 +26,7 @@ console.log(formatTimeDisplay(61))
 
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
-// "null"
+// "0"
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
