@@ -6,6 +6,5 @@ age = age + 1;
 //Answer:
 //we cannot re-assign variables with "const". 
 // We have use "let". let allows the variable to be re-assigned.
-
 let age = 33;
-age = 33 + 1;
+age = age + 1;
