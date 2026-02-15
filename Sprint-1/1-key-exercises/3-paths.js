@@ -18,7 +18,7 @@ console.log(`The base part of ${filePath} is ${base}`);
 // Create a variable to store the ext part of the variable
 
 //Answer:
-//**where the file lives^^ 
+//**where the file lives** 
 // It gives me everything from Index 0 to 
 // the last slash just before the filename.
 const dir = filePath.slice(0, lastSlashIndex); 
