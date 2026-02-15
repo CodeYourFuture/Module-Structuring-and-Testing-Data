@@ -21,7 +21,7 @@ console.log(toPounds("447p"));  // £4.47
 
 // Method 2
 function toPounds(penceString) {
-    let value = Number(penceString.slice(0, -1)) / 100;
+    const value = Number(penceString.slice(0, -1)) / 100;
     return `£${value.toFixed(2)}`
 }
 
