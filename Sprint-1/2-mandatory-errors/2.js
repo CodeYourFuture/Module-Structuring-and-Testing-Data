@@ -3,3 +3,10 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+//*Answer
+// The console.log is before the variable and it cannot see it. 
+// The console log needs to be blow the variable to compute the data.
+
+const cityOfBirth = "Bolton";
+console.log(`I was born in ${cityOfBirth}`);
