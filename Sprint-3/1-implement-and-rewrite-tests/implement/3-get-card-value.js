@@ -90,7 +90,7 @@ try { (fn)
   console.log('there was an error getting card value!',error)
 }}
 
-console.log(' we finished running getCardvValue')
+console.log(' we finished running getCardValue')
 
 // What other invalid card cases can you think of?
 
