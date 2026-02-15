@@ -31,7 +31,7 @@ console.log(result);
 // It is converting the seconds to minutes and rounding it to the last whole minute.
 
 // e) What do you think the variable result represents? 
-//*Answer
+// *Answer
 // The result is the duration of the film in hours, minutes and seconds - 2:26:24.
 
 // Can you think of a better name for this variable?

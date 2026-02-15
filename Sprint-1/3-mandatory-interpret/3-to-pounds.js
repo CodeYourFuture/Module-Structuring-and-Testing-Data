@@ -25,3 +25,9 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+// 2. const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1);
+// This takes the variable penceString from the start of the string index(0) to 1 before the end 
+// and stops ie index (-1). and drops the last indexed character "p".
+
+// 3.
