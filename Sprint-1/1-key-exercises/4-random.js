@@ -10,4 +10,5 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 console.log(num);
 
-// minimum <= num => maximum
+// num is a random number between 1 and 100(inclusive)
+// using Math.random which returns a number between 0(inclusive) and 1(exclusive)
