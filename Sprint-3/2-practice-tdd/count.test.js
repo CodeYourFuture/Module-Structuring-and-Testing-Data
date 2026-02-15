@@ -9,6 +9,14 @@ test("should count multiple occurrences of a character", () => {
   expect(countChar("* Star * TV *", "*")).toEqual(3);
 });
 
+// Scenario 2: Single Occurrence
+test("should count multiple occurrences of a character", () => {
+  expect(countChar("a", "a")).toEqual(1);
+  expect(countChar("Star Light", "i")).toEqual(1);
+  expect(countChar("!@#$%^&*()", "#")).toEqual(1);
+  expect(countChar("onomatopoeia", "t")).toEqual(1);
+});
+
 // Scenario: No Occurrences
 // Given the input string `str`,
 // And a character `char` that does not exist within `str`.
