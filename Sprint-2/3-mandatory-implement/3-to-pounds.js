@@ -7,10 +7,10 @@
 
 // Method 1
 function toPounds(penceString) {
-    let penceStringWithoutP = penceString.substring(0, penceString.length - 1);
-    let paddedPenceNumberString = penceStringWithoutP.padStart(3, "0");
-    let pound = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2); 
-    let pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2); 
+    const penceStringWithoutP = penceString.substring(0, penceString.length - 1);
+    const paddedPenceNumberString = penceStringWithoutP.padStart(3, "0");
+    const pound = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2); 
+    const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2); 
 
     return `£${pound}.${pence}`;
 
