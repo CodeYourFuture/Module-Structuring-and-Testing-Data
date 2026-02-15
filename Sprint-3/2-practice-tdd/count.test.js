@@ -10,15 +10,17 @@ test("should count multiple occurrences of a character", () => {
 });
 
 // Scenario 2: Single Occurrence
-test("should count multiple occurrences of a character", () => {
+test("should count single occurrence of a character", () => {
   expect(countChar("a", "a")).toEqual(1);
   expect(countChar("Star Light", "i")).toEqual(1);
   expect(countChar("!@#$%^&*()", "#")).toEqual(1);
   expect(countChar("onomatopoeia", "t")).toEqual(1);
 });
 
-// Scenario: No Occurrences
-// Given the input string `str`,
-// And a character `char` that does not exist within `str`.
-// When the function is called with these inputs,
-// Then it should return 0, indicating that no occurrences of `char` were found.
+// Scenario 3: No Occurrence
+test("should count single occurrence of a character", () => {
+  expect(countChar("The Rookie", "S")).toEqual(0);
+  expect(countChar("Angela Bassett", "r")).toEqual(0);
+  expect(countChar("Angela Bassett", "r")).toEqual(0);
+  expect(countChar("Better Off Ted", "9")).toEqual(0);
+});
