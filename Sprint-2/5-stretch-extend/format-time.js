@@ -17,6 +17,7 @@ function formatAs12HourClock(time) {
   hours = hours % 12; 
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? '0'+minutes : minutes;
+  hours = hours < 10 ? '0'+hours : hours;
 
   return `${hours}:${minutes} ${ampm}`
 }
