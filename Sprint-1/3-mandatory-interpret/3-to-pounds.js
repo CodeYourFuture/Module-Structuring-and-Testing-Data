@@ -39,9 +39,9 @@ console.log(`£${pounds}.${pence}`);
 
 // Step 5: The substring method is used to extract the pence part of the price and store it in the variable pence.
 // It uses the padEnd method to ensure that the pence string has at least 2 characters, padding it with "0" at the end if necessary.
-// const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2). The earlier version included dead code
-// (.padEnd(2, "0") which was unnecessary as Line 8 already ensures that the string is at least 3 chars long, so the last 2
-// digits of paddedPenceNumberString are already the 2 digits of the cent amount
+// const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2). The earlier version included  dead code which
+// has been deleted (.padEnd(2, "0"). It was unnecessary as Line 8 already ensures that the string is at least 3 chars long, so the
+// last 2 digits of paddedPenceNumberString are always the 2 digits of the cent amount -- no additional padding is needed.
 
 // Step 6: The console.log method is used to output the final price in pounds and pence format.
 // console.log(`£${pounds}.${pence}`);
