@@ -19,5 +19,5 @@ function toUpperSnakeCase(str) {
     return str.split(" ").map(item => item.toUpperCase()).join("_");
 }
 
-console.log(toUpperSnake("lord of the rings"));
+console.log(toUpperSnakeCase("lord of the rings"));
 // returns LORD_OF_THE_RINGS
