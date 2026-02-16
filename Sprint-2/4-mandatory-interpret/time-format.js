@@ -34,6 +34,9 @@ console.log(formatTimeDisplay(61));
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
+// The value is 1, when formatTimeDisplay(61) runs: 61 seconds = 1 minute and 1 second
+// remainingSeconds = 61 % 60 = 1
+// The last call to pad is pad(remainingSeconds), so num receives 1
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
