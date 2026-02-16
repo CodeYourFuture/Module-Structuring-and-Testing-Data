@@ -30,6 +30,7 @@ console.log(formatTimeDisplay(61));
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
+// The return value of pad for its first call is "00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
