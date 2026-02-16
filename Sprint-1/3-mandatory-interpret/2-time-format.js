@@ -1,4 +1,4 @@
-const movieLength = 4; // length of movie in seconds
+const movieLength = 8784; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -13,6 +13,12 @@ console.log(result);
 
 // a) How many variable declarations are there in this program?
 //      there are 6 declarations
+        // const movieLength
+        // const remainingSeconds
+        // const totalMinutes
+        // const remainingMinutes
+        // const totalHours
+        // const result
 
 // b) How many function calls are there?
 //      0

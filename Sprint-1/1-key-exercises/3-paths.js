@@ -17,7 +17,7 @@ const base = filePath.slice(lastSlashIndex + 1);
 // Create a variable to store the ext part of the variable
 
 const firstSlashIndex = filePath.indexOf("/");
-const dir = filePath.slice(firstSlashIndex + 1, lastSlashIndex - 1);
+const dir = filePath.slice(firstSlashIndex + 1, lastSlashIndex);
 
 const lastdotindex = filePath.lastIndexOf(".");
 const ext = filePath.slice(lastdotindex);
