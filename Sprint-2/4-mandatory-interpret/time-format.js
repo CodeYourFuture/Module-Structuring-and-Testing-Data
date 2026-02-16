@@ -40,3 +40,5 @@ console.log(formatTimeDisplay(61));
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
+// The return value is "01" - pad converts the number to a string and ensures it has at least 2 digits using padStart(2, "0")
+// Since "1" has only one digit, a leading zero is added so the value is then "01"
