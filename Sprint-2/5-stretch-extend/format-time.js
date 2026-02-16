@@ -13,7 +13,7 @@
 function formatAs12HourClock(time) {
   let hours = Number(time.slice(0, 2));
   let minutes = Number(time.slice(3, 5));
-  let ampm = hours >= 12 ? 'pm' : 'am';
+  const ampm = hours >= 12 ? 'pm' : 'am';
   hours = hours % 12; 
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? '0'+minutes : minutes;
