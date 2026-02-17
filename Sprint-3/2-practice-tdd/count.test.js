@@ -24,3 +24,58 @@ test("should count single occurrence of a character", () => {
   expect(countChar("Angela Bassett", "r")).toEqual(0);
   expect(countChar("Better Off Ted", "9")).toEqual(0);
 });
+
+// Scenario 4: Invalid Entries
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar("Courage, the Cowardly Dog", "dog");
+  }).toThrow();
+});
+
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar("Sheep in the Big City", 1);
+  }).toThrow();
+});
+
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar(-205, "a");
+  }).toThrow();
+});
+
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar(-205, 55.5);
+  }).toThrow();
+});
+
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar(true, "f");
+  }).toThrow();
+});
+
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar(undefined, "f");
+  }).toThrow();
+});
+
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar(null, true);
+  }).toThrow();
+});
+
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar(false, true);
+  }).toThrow();
+});
+
+test(`Should throw an error when given an invalid input`, () => {
+  expect(() => {
+    countChar([false], {});
+  }).toThrow();
+});
