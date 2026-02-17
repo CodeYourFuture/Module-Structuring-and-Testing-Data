@@ -5,7 +5,7 @@
 
 // the times are in the wrong places ie:-20:53 is not a twelve hour time and as they are const they cant be directly changed
 
-let twelveHourClockTime = "15.00";
+let twelveHourClockTime = "13.00";
 let twelthHour = twelveHourClockTime.substring(
   0,
   twelveHourClockTime.length - 3
@@ -14,10 +14,8 @@ let twelthHour = twelveHourClockTime.substring(
 
 let sufix =".AM"
   
-if (twelthHour === "00") {
-  twelthHour = "12";
-}
-if (twelthHour > 12) {
+
+if (twelthHour => 13) {
   twelthHour = twelthHour - 12;
   sufix =".PM"
 
