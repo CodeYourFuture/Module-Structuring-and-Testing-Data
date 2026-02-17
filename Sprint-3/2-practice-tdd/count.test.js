@@ -26,56 +26,22 @@ test("should count single occurrence of a character", () => {
 });
 
 // Scenario 4: Invalid Entries
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar("Courage, the Cowardly Dog", "dog");
-  }).toThrow();
-});
+const invalidEntries = [
+  { a: "Courage, the Cowardly Dog", b: "dog" },
+  { a: "Sheep in the Big City", b: 1 },
+  { a: -205, b: "a" },
+  { a: -205, b: 55.5 },
+  { a: true, b: "f" },
+  { a: undefined, b: "f" },
+  { a: null, b: true },
+  { a: false, b: true },
+  { a: [false], b: {} },
+];
 
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar("Sheep in the Big City", 1);
-  }).toThrow();
-});
-
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar(-205, "a");
-  }).toThrow();
-});
-
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar(-205, 55.5);
-  }).toThrow();
-});
-
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar(true, "f");
-  }).toThrow();
-});
-
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar(undefined, "f");
-  }).toThrow();
-});
-
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar(null, true);
-  }).toThrow();
-});
-
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar(false, true);
-  }).toThrow();
-});
-
-test(`Should throw an error when given an invalid input`, () => {
-  expect(() => {
-    countChar([false], {});
-  }).toThrow();
+describe.each(invalidEntries)("countChar($a, $b)", ({ a, b }) => {
+  test(`Should throw an error when given an invalid input (${a}, ${b})`, () => {
+    expect(() => {
+      countChar(a, b);
+    }).toThrow();
+  });
 });
