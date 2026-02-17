@@ -43,4 +43,4 @@ const percentageChange = (priceDifference / carPrice) * 100; */
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 /* This code is replacing all the comma characters with an empty character inside the carPrice String and then converting that String  to a Number
 The purpose of doing this is because in the later part of code we are doing some Math calculations on this number 
-and, therefore, we can't use String, we need to remove the commas in the String and convert that String into a number
+and, therefore, we can't use String, we need to remove the commas in the String and convert that String into a number*/
