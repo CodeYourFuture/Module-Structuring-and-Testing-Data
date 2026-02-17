@@ -9,10 +9,18 @@ Let's try an example.
 
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
+alert('Hello World!');
 
 What effect does calling the `alert` function have?
+A pop up modal box appears with "Hello World!"
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
+let myName = prompt("What is your name?");
 
 What effect does calling the `prompt` function have?
+It displays a modal dialog box with a text input field which can be completed.
+
 What is the return value of `prompt`?
+It is hidden, it does not display anything. The box closes.
+When I do a console.log(myName); it returns Angela.
+
