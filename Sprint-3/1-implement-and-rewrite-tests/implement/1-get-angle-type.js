@@ -51,7 +51,7 @@ function assertEquals(actualOutput, targetOutput) {
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
-console.log(assertEquals((getAngleType(320))), (Reflex));
+assertEquals(getAngleType(320), "Acute angle");
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
 // Example: Identify Right Angles
 const right = getAngleType(90);
