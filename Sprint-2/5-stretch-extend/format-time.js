@@ -4,9 +4,24 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+  const minutes = time.slice(3, 5);
+
+  // If midnight (00), convert to 12 am
+  if (hours === 0) {
+    return `12:${minutes} am`;
   }
+
+  // If noon (12), it stays 12 pm
+  if (hours === 12) {
+    return `12:${minutes} pm`;
+  }
+
+  // If greater than 12, subtract 12 and make it pm
+  if (hours > 12) {
+    return `${String(hours - 12).padStart(2, "0")}:${minutes} pm`;
+  }
+
+  // Otherwise it is morning (am)
   return `${time} am`;
 }
 
