@@ -15,52 +15,52 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
+test("should return false if password has fewer than 5 characters", () => {
   // Arrange
-  const password = "A1b2";
+  const password = "A1b&";
   // Act
   const result = isValidPassword(password);
   // Assert
   expect(result).toEqual(false);
 });
 
-test("password is not previously used", () => {
+test("should return false if password was previously used", () => {
   // Arrange
-  const password = "5B43n21";
+  const password = "5B43n21!";
+  // Act
+  const result = isValidPassword(password, "5B43n21!");
+  // Assert
+  expect(result).toEqual(false);
+});
+
+test("should return false if password does not contain an uppercase English letter", () => {
+  // Arrange
+  const password = "1a2345&";
   // Act
   const result = isValidPassword(password);
   // Assert
   expect(result).toEqual(false);
 });
 
-test("password contains at least one uppercase English letter", () => {
+test("should return false if password does not contain an lowercase English letter", () => {
   // Arrange
-  const password = "1a2345";
+  const password = "1B2345%";
   // Act
   const result = isValidPassword(password);
   // Assert
   expect(result).toEqual(false);
 });
 
-test("password contains at least one uppercase English letter", () => {
+test("should return false if password has no numbers(0-9)", () => {
   // Arrange
-  const password = "1B2345";
+  const password = "se!rjJN%Gk";
   // Act
   const result = isValidPassword(password);
   // Assert
   expect(result).toEqual(false);
 });
 
-test("password contains at least one number(0-9)", () => {
-  // Arrange
-  const password = "sdkerjJNGk";
-  // Act
-  const result = isValidPassword(password);
-  // Assert
-  expect(result).toEqual(false);
-});
-
-test('password contains at least one of "!", "#", "$", "%", ".", "*", "&"', () => {
+test('should return false if password has no special characters including "!", "#", "$", "%", ".", "*", "&"', () => {
   // Arrange
   const password = "sdkerjJNG23k";
   // Act
@@ -69,11 +69,11 @@ test('password contains at least one of "!", "#", "$", "%", ".", "*", "&"', () =
   expect(result).toEqual(false);
 });
 
-test("password meets all the condition for a valid password and passwordValidator returns true", () => {
+test("should return true if password meets all validation rules", () => {
   // Arrange
-  const password = "sdkerjJNG23k&";
+  const password = "sdkerj!JNG23k&";
   // Act
-  const result = isValidPassword(password);
+  const result = isValidPassword(password, ["se!rjJN%G6k", "1B2h345%a"]);
   // Assert
   expect(result).toEqual(true);
 });

@@ -6,19 +6,11 @@ function creditCardValidator(cardNum) {
   if (cardNumArray.length !== 16) return false;
 
   // checks if all digits are numbers
-  if (
-    !cardNumArray.every(
-      (num) => num.charCodeAt(0) >= 48 && num.charCodeAt(0) <= 57
-    )
-  )
-    return false;
+  if (!cardNumArray.every((num) => num >= 0 && num <= 9)) return false;
 
   // Checks if there are at least two different digits
-  const count = cardNumArray.reduce((acc, curr) => {
-    acc[curr] = acc[curr] ? acc[curr] + 1 : 1;
-    return acc;
-  }, {});
-  if (Object.keys(count).length < 2) return false;
+  const count = new Set(cardNumArray);
+  if (count.size < 2) return false;
 
   // Checks if the sum of all digits is greater than 16
   const sumOfDigits = cardNumArray.reduce((acc, curr) => acc + Number(curr), 0);
@@ -28,3 +20,4 @@ function creditCardValidator(cardNum) {
   if (cardNumArray[cardNumArray.length - 1] % 2 !== 0) return false;
   return true;
 }
+console.log(creditCardValidator("1111111111111111"));

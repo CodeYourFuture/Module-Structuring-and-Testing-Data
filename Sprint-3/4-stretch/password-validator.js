@@ -1,5 +1,4 @@
-const previousPasswords = ["5B43n21"];
-function passwordValidator(password) {
+function passwordValidator(password, previousPasswords = []) {
   if (password.length < 5) return false;
   if (previousPasswords.includes(password)) return false;
   previousPasswords.push(password);
