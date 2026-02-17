@@ -51,7 +51,7 @@ test("should return false if password does not contain an lowercase English lett
   expect(result).toEqual(false);
 });
 
-test("should return false if password has no numbers(0-9)", () => {
+test("should return false if password has no digit", () => {
   // Arrange
   const password = "se!rjJN%Gk";
   // Act

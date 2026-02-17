@@ -6,7 +6,7 @@ function creditCardValidator(cardNum) {
   if (cardNumArray.length !== 16) return false;
 
   // checks if all digits are numbers
-  if (!cardNumArray.every((num) => num >= 0 && num <= 9)) return false;
+  if (!cardNumArray.every((num) => num >= "0" && num <= "9")) return false;
 
   // Checks if there are at least two different digits
   const count = new Set(cardNumArray);
