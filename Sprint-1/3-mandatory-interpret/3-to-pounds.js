@@ -17,11 +17,22 @@ const pence = paddedPenceNumberString
 
 console.log(`£${pounds}.${pence}`);
 
-// This program takes a string representing a price in pence
-// The program then builds up a string representing the price in pounds
+// Step-by-step breakdown:
 
-// You need to do a step-by-step breakdown of each line in this program
-// Try and describe the purpose / rationale behind each step
+// 1. const penceString = "399p";
+// Initialises a string variable with the value "399p".
 
-// To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2. const penceStringWithoutTrailingP = ...
+// It removes the last character ('p') from the string to keep only the numbers.
+
+// 3. const paddedPenceNumberString = ...
+// It ensures the string has at least 3 characters by adding a "0" at the beginning if needed (e.g., "50" becomes "050").
+
+// 4. const pounds = ...
+// It extracts the pounds part by taking all characters except the last two.
+
+// 5. const pence = ...
+// It extracts the last two characters to represent the pence part and ensures it has two digits.
+
+// 6. console.log(`£${pounds}.${pence}`);
+// It prints the final result in the currency format: £3.99.
