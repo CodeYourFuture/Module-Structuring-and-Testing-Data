@@ -8,6 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
+  if (!numerator || !denominator) return "Incomplete fraction";
   if (typeof numerator !== "number" || typeof denominator !== "number")
     return "Use only numbers";
 
@@ -87,3 +88,6 @@ assertEquals(notANumber, "Use only numbers");
 //Explanation: the fraction only takes numbers
 const notANumber2 = isProperFraction(7, "q");
 assertEquals(notANumber2, "Use only numbers");
+
+const incompleteFraction = isProperFraction(2);
+assertEquals(incompleteFraction, "Incomplete fraction");
