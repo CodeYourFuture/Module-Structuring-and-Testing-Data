@@ -77,3 +77,12 @@ test("should return true if password meets all validation rules", () => {
   // Assert
   expect(result).toEqual(true);
 });
+
+test("should return false if previousPassword is not an array", () => {
+  // Arrange
+  const password = "sdkerj!JNG23k&";
+  // Act
+  const result = isValidPassword(password, "1B2h345%a");
+  // Assert
+  expect(result).toEqual(false);
+});

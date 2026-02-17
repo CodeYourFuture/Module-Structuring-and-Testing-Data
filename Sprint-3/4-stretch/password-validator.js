@@ -1,4 +1,6 @@
 function passwordValidator(password, previousPasswords = []) {
+  if (!Array.isArray(previousPasswords)) return false;
+
   if (password.length < 5) return false;
   if (previousPasswords.includes(password)) return false;
   previousPasswords.push(password);
