@@ -1,6 +1,7 @@
 // Predict and explain first...
 
 // Why will an error occur when this program runs?
+
 // =============> write your prediction here
 
 // Try playing computer with the example to work out what is going on
