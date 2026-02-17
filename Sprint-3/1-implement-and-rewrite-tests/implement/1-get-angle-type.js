@@ -1,29 +1,34 @@
 // Implement a function getAngleType
-//
-// When given an angle in degrees, it should return a string indicating the type of angle:
-// - "Acute angle" for angles greater than 0° and less than 90°
-// - "Right angle" for exactly 90°
-// - "Obtuse angle" for angles greater than 90° and less than 180°
-// - "Straight angle" for exactly 180°
-// - "Reflex angle" for angles greater than 180° and less than 360°
-// - "Invalid angle" for angles outside the valid range.
-
-// Assumption: The parameter is a valid number. (You do not need to handle non-numeric inputs.)
-
-// Acceptance criteria:
-// After you have implemented the function, write tests to cover all the cases, and
-// execute the code to ensure all tests pass.
+// Build up your function case by case, writing tests as you go
+// The first test and case is written for you. The next case has a test, but no code.
+// Execute this script in your terminal
+// node 1-get-angle-type.js
+// The assertion error will tell you what the expected output is
+// Write the code to pass the test
+// Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-  // TODO: Implement this function
+  if (angle === 90) {
+    return "Right angle";
+  }
+  if (angle < 90) {
+    return "Acute angle";
+  }
+  if (angle > 90 && angle < 180) {
+    return "Obtuse angle";
+  }
+  if (angle === 180) {
+    return "Straight angle";
+  }
+  return "Reflex angle";
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getAngleType;
 
-// This helper function is written to make our assertions easier to read.
-// If the actual output matches the target output, the test will pass
+// we're going to use this helper function to make our assertions easier to read
+// if the actual output matches the target output, the test will pass
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -31,7 +36,38 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all cases, including boundary and invalid cases.
-// Example: Identify Right Angles
+// Acceptance criteria:
+
+// Given an angle in degrees,
+// When the function getAngleType is called with this angle,
+// Then it should:
+
+// Case 1: Identify Right Angles:
+// When the angle is exactly 90 degrees,
+// Then the function should return "Right angle"
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+
+// Case 2: Identify Acute Angles:
+// When the angle is less than 90 degrees,
+// Then the function should return "Acute angle"
+const acute = getAngleType(45);
+assertEquals(acute, "Acute angle");
+
+// Case 3: Identify Obtuse Angles:
+// When the angle is greater than 90 degrees and less than 180 degrees,
+// Then the function should return "Obtuse angle"
+const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angle");
+
+// Case 4: Identify Straight Angles:
+// When the angle is exactly 180 degrees,
+// Then the function should return "Straight angle"
+const straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
+
+// Case 5: Identify Reflex Angles:
+// When the angle is greater than 180 degrees and less than 360 degrees,
+// Then the function should return "Reflex angle"
+const reflex = getAngleType(340);
+assertEquals(reflex, "Reflex angle");
