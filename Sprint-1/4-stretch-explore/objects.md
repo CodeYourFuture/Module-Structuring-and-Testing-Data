@@ -16,7 +16,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
-It does not store anything. Its purpose is to hold a collection of methods (functions) that help you debug, log, or inspect your code.
+It does not store anything. It's purpose is to hold a collection of methods (functions) that help you debug, log, or inspect your code.
 
 What does the syntax `console.log` or `console.assert` mean?,
 They print outputs.It provides methods for debugging, logging, and inspecting code.
