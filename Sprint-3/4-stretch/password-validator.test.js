@@ -16,67 +16,61 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 const isValidPassword = require("./password-validator");
 test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345Dpw%";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
-test("password has at least 5 characters", () => {
+  // Arrange
+  const password = "12345Dpw%";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(true);
+});
+test("should reject password with less than 5 characters", () => {
   const password = "1234";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
 
-
-
-test("password has at least one English uppercase letter (A-Z)",()=>{
-    const password ="12345Aaoe$"
-    const result=isValidPassword(password)
-    expect(result).toEqual(true)
-
+test("should require at least one uppercase letter", () => {
+  const password = "12345Aaoe$";
+  const result = isValidPassword(password);
+  expect(result).toEqual(true);
 });
-test("password has at least one English uppercase letter (A-Z)", () => {
+test("should reject password without uppercase letter", () => {
   const password = "12345";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
 
-
-test("password has at least one English lower case letter (a-z)", () => {
+test("should require at least one lowercase letter", () => {
   const password = "S12345h#";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
 });
-test("password has at least one English lower case letter (a-z)", () => {
+test("should reject password without lowercase letter", () => {
   const password = "S12345P";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
 
-test("password has at least one number (0-9)", () => {
+test("should require at least one number", () => {
   const password = "123456Aa%";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
 });
-test("password has at least one number (0-9)", () => {
+test("should reject password without number", () => {
   const password = "sgjjkdAa";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
 
-test("password has at least one of the following non-alphanumeric symbols: (!, #, $, %, ., *, &)", () => {
+test("should require at least one special symbol", () => {
   const password = "123Spdfe!";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
 });
-test("password has at least one of the following non-alphanumeric symbols: (!, #, $, %, ., *, &)", () => {
+test("should reject password without special symbol", () => {
   const password = "123Spdfe";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
-
 
 //don't know how to check if the password was used before, do i need to create a passwords array?
