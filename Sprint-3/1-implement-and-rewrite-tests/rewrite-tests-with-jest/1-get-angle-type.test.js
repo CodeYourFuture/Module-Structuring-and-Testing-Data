@@ -2,8 +2,15 @@
 // We will use the same function, but write tests for it using Jest in this file.
 const getAngleType = require("../implement/1-get-angle-type");
 
-test("should identify right angle (90°)", () => {
-  expect(getAngleType(90)).toEqual("Right angle");
+// TODO: Write tests in Jest syntax to cover all cases/outcomes,
+// including boundary and invalid cases.
+
+// Case 1: Acute angles
+test(`should return "Acute angle" when (0 < angle < 90)`, () => {
+  // Test various acute angles, including boundary cases
+  expect(getAngleType(1)).toEqual("Acute angle");
+  expect(getAngleType(45)).toEqual("Acute angle");
+  expect(getAngleType(89)).toEqual("Acute angle");
 });
 
 // REPLACE the comments with the tests
