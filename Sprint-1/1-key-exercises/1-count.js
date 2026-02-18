@@ -3,6 +3,6 @@ let count = 0;
 count = count + 1;
 
 // Line 1 is a variable declaration, creating the count variable with an initial value of 0
-// Describe what line 3 is doing, in particular focus on what = is doing
-// Line 3 updates the value of count.
-// The = means “set count to a new value”, which is the old value plus 1.
+// I see that line 3 performs an increment operation.
+// It increases the value of count by 1 and assigns the new value back to the variable.
+// The = is the assignment operator — it assigns the result of (count + 1) back to count.
