@@ -33,6 +33,8 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // Line 1: let carPrice = "10,000";
 // Line 2: let priceAfterOneYear = "8,543";
+// Line 7: const priceDifference = carPrice - priceAfterOneYear;
+// Line 8: const percentageChange = (priceDifference / carPrice) * 100;
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 // The expression `carPrice.replaceAll(",", "")` removes all commas from the string `carPrice`, converting it to a number that can be used in mathematical operations. This is necessary because the original value is a string with commas (e.g., "10,000"), which cannot be directly used in arithmetic calculations. The `Number()` function then converts the resulting string (e.g., "10000") into a numeric value.
