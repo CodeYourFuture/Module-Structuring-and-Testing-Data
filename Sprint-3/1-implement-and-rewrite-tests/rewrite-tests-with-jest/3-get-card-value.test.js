@@ -4,16 +4,16 @@ const suits = ["♠", "♥", "♦", "♣"];
 // Case 1: Ace (A)
 test(`Should return 11 when given an ace card`, () => {
   for (const suit of suits) {
-    ace = `A${suit}`;
+    const ace = `A${suit}`;
     expect(getCardValue(ace)).toEqual(11);
   }
 });
 
 // Case 2: Face Cards (J, Q, K)
 test(`Should return 10 when given a face card`, () => {
-  for (const suit of suits) {
-    const faceCards = ["J", "Q", "K"];
-    for (const faceCard of faceCards) {
+  const faceCards = ["J", "Q", "K"];
+  for (const faceCard of faceCards) {
+    for (const suit of suits) {
       expect(getCardValue(`${faceCard}${suit}`)).toEqual(10);
     }
   }
