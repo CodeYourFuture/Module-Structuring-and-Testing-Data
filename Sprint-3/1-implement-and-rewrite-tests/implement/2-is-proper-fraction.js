@@ -3,8 +3,6 @@ function isProperFraction(numerator, denominator) {
   if (typeof numerator != "number" || typeof denominator != "number")
     return false;
 
-  if (numerator === 0 || denominator === 0) return false;
-
   return Math.abs(numerator) < Math.abs(denominator);
 }
 
@@ -27,4 +25,4 @@ assertEquals(isProperFraction(3, 2), false);
 assertEquals(isProperFraction(-1, 2), true);
 
 // Zero numerator test
-assertEquals(isProperFraction(0, 2), false);
+assertEquals(isProperFraction(0, 2), true);
