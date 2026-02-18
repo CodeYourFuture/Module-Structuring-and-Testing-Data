@@ -1,5 +1,5 @@
 function validateNumber(number) {
-  let arrNumber = [...number.toString()];
+  const arrNumber = [...number.toString()];
 
   return arrNumber.length === 16 &&
     arrNumber.every((x) => x >= "0" && x <= "9") &&
