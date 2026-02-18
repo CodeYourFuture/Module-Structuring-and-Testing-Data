@@ -24,7 +24,7 @@ test("password has at least 5 characters", () => {
   expect(result).toEqual(true);
 });
 test("should reject password with less than 5 characters", () => {
-  const password = "1234";
+  const password = "1aS!";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
