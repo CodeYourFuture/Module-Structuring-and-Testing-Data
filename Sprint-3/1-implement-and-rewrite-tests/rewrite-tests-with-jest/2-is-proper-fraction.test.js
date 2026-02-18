@@ -2,7 +2,6 @@ const isProperFraction = require("../implement/2-is-proper-fraction");
 
 // Case 1: numerator/denominator is zero
 test(`should return false when either numerator or denominator is zero`, () => {
-  expect(isProperFraction(0, 1)).toEqual(false);
   expect(isProperFraction(1, 0)).toEqual(false);
   expect(isProperFraction(0, 0)).toEqual(false);
 });
@@ -12,6 +11,7 @@ test(`should return true when either numerator is smaller than denominator`, () 
   expect(isProperFraction(1, 2)).toEqual(true);
   expect(isProperFraction(1, 10)).toEqual(true);
   expect(isProperFraction(9, 100)).toEqual(true);
+  expect(isProperFraction(0, 1)).toEqual(true);
 });
 
 // Case 3: numerator and denominator are negative and make proper fractions
