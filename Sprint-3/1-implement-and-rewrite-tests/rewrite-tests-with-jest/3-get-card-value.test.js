@@ -2,12 +2,29 @@
 // We will use the same function, but write tests for it using Jest in this file.
 const getCardValue = require("../implement/3-get-card-value");
 
+
+
+// Case 2: Handle Number Cards (2-10):
+test("should return 5 for five of spades ",()=>{
+ const fiveOfSpades = getCardValue("5♠");
+ expect(fiveOfSpades).toEqual(5)
+})
+// Case 3: Handle Face Cards (J, Q, K):
+test("should return 10 for king of spades",()=>{
+  const kingOfSpades = getCardValue("K♠");
+  expect(kingOfSpades).toEqual(10)
+})
+// Case 4: Handle Ace (A):
 test("should return 11 for Ace of Spades", () => {
   const aceOfSpades = getCardValue("A♠");
   expect(aceOfSpades).toEqual(11);
 });
-
-// Case 2: Handle Number Cards (2-10):
-// Case 3: Handle Face Cards (J, Q, K):
-// Case 4: Handle Ace (A):
 // Case 5: Handle Invalid Cards:
+test("should through error for 1 of spades",()=>{
+  expect(()=> getCardValue("1♠")).toThrow('Invalid card rank: 1')
+})
+
+
+test("should throw error for five*",()=>{
+  expect(() => getCardValue("5*")).toThrow("Invalid card face: *");
+})
