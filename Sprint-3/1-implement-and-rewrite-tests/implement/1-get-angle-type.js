@@ -15,19 +15,7 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  if (angle === 90) {
-    return "Right angle";
-  }
-  if (angle < 90) {
-    return "Acute angle";
-  }
-  if (angle > 90 && angle < 180) {
-    return "Obtuse angle";
-  }
-  if (angle === 180) {
-    return "Straight angle";
-  }
-  return "Reflex angle";
+  // TODO: Implement this function
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
@@ -47,27 +35,3 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
-
-// Case 2: Identify Acute Angles:
-// When the angle is less than 90 degrees,
-// Then the function should return "Acute angle"
-const acute = getAngleType(45);
-assertEquals(acute, "Acute angle");
-
-// Case 3: Identify Obtuse Angles:
-// When the angle is greater than 90 degrees and less than 180 degrees,
-// Then the function should return "Obtuse angle"
-const obtuse = getAngleType(120);
-assertEquals(obtuse, "Obtuse angle");
-
-// Case 4: Identify Straight Angles:
-// When the angle is exactly 180 degrees,
-// Then the function should return "Straight angle"
-const straight = getAngleType(180);
-assertEquals(straight, "Straight angle");
-
-// Case 5: Identify Reflex Angles:
-// When the angle is greater than 180 degrees and less than 360 degrees,
-// Then the function should return "Reflex angle"
-const reflex = getAngleType(340);
-assertEquals(reflex, "Reflex angle");
