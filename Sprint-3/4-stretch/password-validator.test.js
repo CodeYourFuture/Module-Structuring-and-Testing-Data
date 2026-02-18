@@ -73,4 +73,9 @@ test("should reject password without special symbol", () => {
   expect(result).toEqual(false);
 });
 
-//don't know how to check if the password was used before, do i need to create a passwords array?
+test("should reject passwords which have been used before",()=>{
+  const password = "123Spdfe!";
+  const oldPasswords = ["hsqsgf", "123Spdfe!"];
+  const result=isValidPassword(password,oldPasswords)
+  expect(result).toEqual(false)
+})
