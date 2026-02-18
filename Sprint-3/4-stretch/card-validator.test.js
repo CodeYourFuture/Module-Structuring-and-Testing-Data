@@ -2,13 +2,13 @@ const validateNumber = require("./card-validator")
 const isValidNumber=require("./card-validator")
 
 
-test("number should be 16 digits long",()=>{
+test("should return true if the number is 16 digits long",()=>{
     expect(validateNumber(1029384756820562)).toEqual(true)
 })
-test("number should be 16 digits long", () => {
+test("should return false if the number is less than 16 digits", () => {
   expect(validateNumber(10293847568202)).toEqual(false);
 });
-test("number should be 16 digits long", () => {
+test("should return false if the number is more than 16 digits long", () => {
   expect(validateNumber(1029384756820512348)).toEqual(false);
 });
 
