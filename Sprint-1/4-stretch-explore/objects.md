@@ -14,3 +14,6 @@ Answer the following questions:
 
 What does `console` store?
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+
+
+Typing console.log shows a function definition (e.g. ƒ log() { [native code] }). This means console.log is a built-in function provided by the browser.

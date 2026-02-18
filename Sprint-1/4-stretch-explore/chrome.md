@@ -16,3 +16,8 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+// The returned value of prompt --> The string I typed or null if I press cancel.
+I typed Alasdair and when I called myName it was stored inside that variiable called myName.
+
+let myName = prompt("What is your name?");
