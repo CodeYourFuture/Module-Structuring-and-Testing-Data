@@ -89,5 +89,10 @@ assertEquals(notANumber, "Use only numbers");
 const notANumber2 = isProperFraction(7, "q");
 assertEquals(notANumber2, "Use only numbers");
 
+
+//Incomplete input
+//Input:2
+// target output: message
+//Explanation: the fraction needs both a numerator and a denominator
 const incompleteFraction = isProperFraction(2);
 assertEquals(incompleteFraction, "Incomplete fraction");
