@@ -22,7 +22,11 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const cardNum = card.slice(0, -1)
+  if (cardNum === "A") { return 11}
+  else if (["J", "Q", "K"].includes(cardNum)) { return 10}
+  else if (Number(cardNum) >= 2 && Number(cardNum) <= 10) {return Number(cardNum)}
+  else throw new Error("Invalid card");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,6 +44,12 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("2♥"), 2);
+assertEquals(getCardValue("10♥"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("♦Q"), "Invalid card");
+assertEquals(getCardValue("11♦"), "Invalid card");
 
 // Handling invalid cards
 try {
