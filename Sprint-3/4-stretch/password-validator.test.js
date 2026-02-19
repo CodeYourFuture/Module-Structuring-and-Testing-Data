@@ -15,67 +15,62 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
-  // Arrange
-  const password = "12345Dpw%";
-  // Act
-  const result = isValidPassword(password);
-  // Assert
-  expect(result).toEqual(true);
-});
-test("should reject password with less than 5 characters", () => {
-  const password = "1aS!";
-  const result = isValidPassword(password);
-  expect(result).toEqual(false);
+
+describe("Valid passwords", () => {
+  test("should return true for a valid password with all rules met", () => {
+    const password = "12345Dpw%";
+    const result = isValidPassword(password);
+    expect(result).toEqual(true);
+  });
+
+  test("should return true for another valid password", () => {
+    const password = "Abc123!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(true);
+  });
+
+  test("should return true for a valid password with different special symbol", () => {
+    const password = "MyPass#1";
+    const result = isValidPassword(password);
+    expect(result).toEqual(true);
+  });
 });
 
-test("should return true if the password has at least one uppercase english letter ", () => {
-  const password = "12345Aaoe$";
-  const result = isValidPassword(password);
-  expect(result).toEqual(true);
-});
-test("should reject password without an english uppercase letter", () => {
-  const password = "12345";
-  const result = isValidPassword(password);
-  expect(result).toEqual(false);
-});
+describe("Invalid passwords - each breaks one rule", () => {
+  test("should reject password with less than 5 characters", () => {
+    const password = "1aS!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+  });
 
-test("should return true if the password has  at least one english lowercase letter", () => {
-  const password = "S12345h#";
-  const result = isValidPassword(password);
-  expect(result).toEqual(true);
-});
-test("should return false if the  password doesn't have at least one english lowercase letter", () => {
-  const password = "S12345P!";
-  const result = isValidPassword(password);
-  expect(result).toEqual(false);
-});
+  test("should reject password without an uppercase letter", () => {
+    const password = "abcde1!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+  });
 
-test("should return true if the password hasn't got at  least one number ", () => {
-  const password = "123456Aa%";
-  const result = isValidPassword(password);
-  expect(result).toEqual(true);
-});
-test("should return false if the password doesn't have at least one number", () => {
-  const password = "sgjjkdAa%";
-  const result = isValidPassword(password);
-  expect(result).toEqual(false);
-});
+  test("should reject password without a lowercase letter", () => {
+    const password = "ABCDE1!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+  });
 
-test("should return true if the password has at least one special symbol(!, #, $, %, ., *, &)", () => {
-  const password = "123Spdfe!";
-  const result = isValidPassword(password);
-  expect(result).toEqual(true);
-});
-test("should return false if the password doesn't include a special symbol(!, #, $, %, ., *, &)", () => {
-  const password = "123Spdfe";
-  const result = isValidPassword(password);
-  expect(result).toEqual(false);
-});
+  test("should reject password without a number", () => {
+    const password = "abcdeFg!";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+  });
 
-test("should return false if the password has been used before",()=>{
-  const password = "123Spdfe!";
-  const oldPasswords = ["hsqsgf", "123Spdfe!"];
-  const result=isValidPassword(password,oldPasswords)
-  expect(result).toEqual(false)
-})
+  test("should reject password without a special symbol", () => {
+    const password = "abcde1FG";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+  });
+
+  test("should reject password if it was used before", () => {
+    const password = "12345Dpw%";
+    const oldPasswords = ["12345Dpw%"];
+    const result = isValidPassword(password, oldPasswords);
+    expect(result).toEqual(false);
+  });
+});
