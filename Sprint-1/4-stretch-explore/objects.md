@@ -4,17 +4,19 @@ In this activity, we'll explore some additional concepts that you'll encounter i
 
 Open the Chrome devtools Console, type in `console.log` and then hit enter
 
-What output do you get?
+What output do you get? 
+==> this is the output I got:   ƒ log() { [native code] }
 
 Now enter just `console` in the Console, what output do you get back?
+==> I got this:   console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}
 
-Try also entering `typeof console`
+Try also entering `typeof console` ===> I got : 'object'.
 
 Answer the following questions:
 
 What does `console` store?
 
-`Answer` => console stores methods(function) that you can call to      perform actions like logging, warning, or displaying error.
+`Answer` => console stores methods(function) that you can call to perform actions like logging, warning, or displaying error.
 
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 

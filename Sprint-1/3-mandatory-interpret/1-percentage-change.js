@@ -12,13 +12,17 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-    // line: 4 and line 5 and it is replaceAll().
+// ====> Function calls occur on lines 4 and 5 (Number() and replaceAll()), and on line 10 (console.log()).
+
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-    // error is coming from line 5. The error is because of not putting comma between the inputs of replaceAll function. 
-    // To fix the problem just add a comma between the inputs of replaceAll function.
+// ====> error is coming from line 5. The error is because of not putting comma between the parameter of replaceAll function. 
+// To fix the problem, add a comma between the two arguments of the replaceAll function, since this method requires two parameters.
+
 // c) Identify all the lines that are variable reassignment statements
-    // Line 4 and 5.
+// ===> Line 4 (carPrice) and line 5 (priceAfterOneYear).
+
 // d) Identify all the lines that are variable declarations
-    // we have variable declarations at lines 1, 2, 7 and 8.
+// ====> we have variable declarations at lines 1, 2 with let and with const at line 7 and 8.
+
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
-    // the purpose of that expression is to turn into number the string and replace all commas  with an empty space.
+// ===> the purpose of that expression is to remove all commas from the string "1,000" to "1000" and turn the string into number "1000" to 1000.
