@@ -39,7 +39,6 @@ test("should throw error for missing suit", () => {
 test("should throw error for completely invalid string", () => {
   expect(() => getCardValue("invalid")).toThrow();
 });
-
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
 //   Face Cards (J, Q, K)
