@@ -11,3 +11,8 @@ function capitalise(str) {
 
 // =============> write your explanation here
 // =============> write your new code here
+//str is being declared twice, once as a parameter and once as a variable inside the function. This causes a syntax error because we cannot redeclare a variable in the same scope. To fix this, we can simply remove the variable declaration and directly return the capitalised string.
+
+function capitalise(str) {
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
+}   
