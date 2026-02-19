@@ -4,4 +4,5 @@ count = count + 1;
 
 // Line 1 is a variable declaration, creating the count variable with an initial value of 0
 // Describe what line 3 is doing, in particular focus on what = is doing
-// The code adds 1 to the count variable.
+// Line 3 is an increment operation. The = operator is the assignment operator:
+// it evaluates the expression on the right (count + 1), then assigns the result back to count.
