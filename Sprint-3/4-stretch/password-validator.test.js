@@ -29,51 +29,51 @@ test("should reject password with less than 5 characters", () => {
   expect(result).toEqual(false);
 });
 
-test("should require at least one uppercase letter", () => {
+test("should return true if the password has at least one uppercase english letter ", () => {
   const password = "12345Aaoe$";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
 });
-test("should reject password without uppercase letter", () => {
+test("should reject password without an english uppercase letter", () => {
   const password = "12345";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
 
-test("should require at least one lowercase letter", () => {
+test("should return true if the password has  at least one english lowercase letter", () => {
   const password = "S12345h#";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
 });
-test("should reject password without lowercase letter", () => {
-  const password = "S12345P";
+test("should return false if the  password doesn't have at least one english lowercase letter", () => {
+  const password = "S12345P!";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
 
-test("should require at least one number", () => {
+test("should return true if the password hasn't got at  least one number ", () => {
   const password = "123456Aa%";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
 });
-test("should reject password without number", () => {
-  const password = "sgjjkdAa";
+test("should return false if the password doesn't have at least one number", () => {
+  const password = "sgjjkdAa%";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
 
-test("should require at least one special symbol", () => {
+test("should return true if the password has at least one special symbol(!, #, $, %, ., *, &)", () => {
   const password = "123Spdfe!";
   const result = isValidPassword(password);
   expect(result).toEqual(true);
 });
-test("should reject password without special symbol", () => {
+test("should return false if the password doesn't include a special symbol(!, #, $, %, ., *, &)", () => {
   const password = "123Spdfe";
   const result = isValidPassword(password);
   expect(result).toEqual(false);
 });
 
-test("should reject passwords which have been used before",()=>{
+test("should return false if the password has been used before",()=>{
   const password = "123Spdfe!";
   const oldPasswords = ["hsqsgf", "123Spdfe!"];
   const result=isValidPassword(password,oldPasswords)
