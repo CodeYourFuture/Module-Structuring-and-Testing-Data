@@ -16,6 +16,12 @@ test("should count multiple occurrences of a character", () => {
   const count = countChar(str, char);
   expect(count).toEqual(5);
 });
+test("No Occurrences", () => {
+  const str = "qwerty";
+  const char = "k";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+})
 
 // Scenario: No Occurrences
 // Given the input string `str`,
