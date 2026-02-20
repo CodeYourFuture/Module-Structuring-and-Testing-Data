@@ -27,4 +27,4 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initializes a string variable with the value "399p"
+// 1. const penceString = "399p": initializes a string variable with the value "399p".
