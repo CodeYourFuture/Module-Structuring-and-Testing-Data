@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 3434444; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -31,4 +31,6 @@ console.log(result);
 // A better name for it could be movieLengthFormatted.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-// If the seconds are a single digit like "5", the result will look something like 2:26:5. It makes it look unprofessional compared to say 02:26:05.
+// If any digit ends up being a single digit like "5", the result will look something like 2:26:5. It makes it look unprofessional compared to say 02:26:05.
+// If the movieLength is small like "44", the result will look like 0:0:44, instead of a personally preferable 00:00:44.
+// If the movieLength is huge like "3434444", the result will look like 954:0:44, maybe one solution here could be padding 0's to the highest count of digits, but that could cause further problems depending how this result is shown to the user, maybe instead another solution could be just only allow hours to max out at 99.
