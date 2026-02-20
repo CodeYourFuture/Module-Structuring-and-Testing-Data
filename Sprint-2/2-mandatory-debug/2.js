@@ -26,11 +26,10 @@
 // Explain why the output is the way it is
 // =============> write your explanation here
 
-// The function is not using the number that is passed into it.
-// Instead, it always uses the global variable 'num'
-// which is set to 103.
-// The last digit of 103 is 3
-// so the function always returns 3.
+// The function does not define a parameter,nso it cannot use the value that is passed into it.
+// Instead, it uses the global variable 'num',which is set to 103.
+// Even though getLastDigit is called with different numbers,those values are ignored because the function does not accept them.
+// That is why it always returns the last digit of 103, which is 3.
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
@@ -44,15 +43,9 @@ console.log(`The last digit of 105 is ${getLastDigit(105)}`);
 console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 
-// This program should tell the user the last digit of each number.
-// Explain why getLastDigit is not working properly - correct the problem
+// The function was not working properly because it did not define a parameter.
+// Even though values were passed into getLastDigit when it was called,the function could not use them.
+// Because there was no parameter, it always used the global variable 'num', which was set to 103. That is why it always returned 3.
+// To fix the problem, I added a parameter to the function so it uses the value passed into it instead of the global variable.
 
-// The function was not working properly because it did not use
-// the number that was passed into it.
-// Instead, it used the global variable 'num',
-// which was always 103.
-// That is why it always returned 3.
-//
-// To fix the problem, I added a parameter to the function
-// and used that parameter to calculate the last digit
 
