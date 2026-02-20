@@ -22,7 +22,7 @@ test("should return 0 when character does not occur in string", () => {
   const char = "z";
   const count = countChar(str, char);
   expect(count).toEqual(0);
-})
+});
 
 // Scenario: No Occurrences
 // Given the input string `str`,
