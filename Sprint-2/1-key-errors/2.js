@@ -3,18 +3,21 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> I am not sure but I do not think that (3) should be there in that way....
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> SyntaxError: Unexpected number
 
-// =============> explain this error message here
+// =============> It doesn't like there being a number in "function square(3)" I also noticed obviously that return of num was not being told what num was anywhere at all.
 
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here
 
-
+function square(num) {
+    return num * num;
+}
+console.log(square(50))
