@@ -30,11 +30,11 @@ function assertEquals(actualOutput, targetOutput) {
 // What combinations of numerators and denominators should you test?
 
 // Example: 1/2 is a proper fraction
-// assertEquals(isProperFraction(1, 2), true);
-// assertEquals(isProperFraction(7, 1), false);
-// assertEquals(isProperFraction(0, 5), true);
-// assertEquals(isProperFraction(-1, -2), true);
-// assertEquals(isProperFraction(-2, -1), false);
-// assertEquals(isProperFraction(-2, 5), true);
-// assertEquals(isProperFraction(5, -2), false);
-// assertEquals(isProperFraction(5, 5), false);
+assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(7, 1), false);
+assertEquals(isProperFraction(0, 5), true);
+assertEquals(isProperFraction(-1, -2), true);
+assertEquals(isProperFraction(-2, -1), false);
+assertEquals(isProperFraction(-2, 5), true);
+assertEquals(isProperFraction(5, -2), false);
+assertEquals(isProperFraction(5, 5), false);
