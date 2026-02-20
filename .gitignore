@@ -2,3 +2,9 @@ node_modules
 .DS_Store
 .vscode
 **/.DS_Store
+.github/FUNDING.yml
+.github/workflows/validate-pr-metadata.yml
+.npmrc
+.prettierrc
+.vscode/extensions.json
+
