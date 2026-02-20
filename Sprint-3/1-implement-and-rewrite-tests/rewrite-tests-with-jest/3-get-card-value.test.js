@@ -21,10 +21,10 @@ test(`Should return 10 when given an Q♦`, () => {
   expect(getCardValue("Q♦")).toEqual(10);
 });
 test(`Should return Error when given an ♦Q`, () => {
-  expect(getCardValue("♦Q")).toThrow("Invalid card");
+  expect(function() {getCardValue("♦Q");}).toThrow("Invalid card");
 });
 test(`Should return Error when given an 11♦`, () => {
-  expect(getCardValue("11♦")).toThrow("Invalid card");
+  expect(function() {getCardValue("11♦")}).toThrow("Invalid card");
 });
 
 
