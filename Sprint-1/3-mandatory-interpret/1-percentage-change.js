@@ -10,7 +10,7 @@ const percentageChange = (priceDifference / carPrice) * 100;
 console.log(`The percentage change is ${percentageChange}`);
 
 //a) There are 4 function calls in this file. They are on lines 1, 2, 4, and 5.
-//b) The error is in line 4 and 5. The error is occurring because the replaceAll function is being called on a string, 
+//b) The error is on line 5. The error is occurring because a comma is messing between the parameters., 
 // but the string has not been converted to a number.
 //c) The variable reassignment statements are in lines 4 and 5
 //d) The variable declarations are in lines 1,2,7, and 8.

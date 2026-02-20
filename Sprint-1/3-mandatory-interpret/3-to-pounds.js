@@ -14,7 +14,6 @@ const pounds = paddedPenceNumberString.substring(
 // Takes all digits except the last two to represent the pounds part of the price.
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
 // Takes the last two digits to represent the pence part of the price, ensuring it has two characters.
 console.log(`£${pounds}.${pence}`);
 // it logs the final price in pounds and pence format : "£3.99"

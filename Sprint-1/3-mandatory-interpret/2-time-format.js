@@ -15,7 +15,7 @@ console.log(result);
 //c) The expression movieLength % 60 represents the remainder when movieLength is divided by 60.
 //d) The expression convert the total movie length into minutes, ignoring the leftover seconds.
 //e) The variable result represents the total length of the movie in hours, minutes, and seconds. 
-// a better name is movieLength 
+// a better name is movieDurationHms
 //f) This code work perfectly for positive numbers> However, it doesn't work for negative or very large numbers, and decimals.
 
 
