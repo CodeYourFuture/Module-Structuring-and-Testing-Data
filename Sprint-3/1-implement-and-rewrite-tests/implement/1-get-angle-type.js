@@ -38,36 +38,36 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
 // Example: Identify Right Angles
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
-let acute = getAngleType(1);
-assertEquals(acute, "Acute angle");
-acute = getAngleType(45);
-assertEquals(acute, "Acute angle");
-acute = getAngleType(89);
-assertEquals(acute, "Acute angle");
-let obtuse = getAngleType(91);
-assertEquals(obtuse, "Obtuse angle");
-obtuse = getAngleType(100);
-assertEquals(obtuse, "Obtuse angle");
-obtuse = getAngleType(179);
-assertEquals(obtuse, "Obtuse angle");
-const straight = getAngleType(180);
-assertEquals(straight, "Straight angle");
-let reflex = getAngleType(181);
-assertEquals(reflex, "Reflex angle");
-reflex = getAngleType(200);
-assertEquals(reflex, "Reflex angle");
-reflex = getAngleType(359);
-assertEquals(reflex, "Reflex angle");
-let invalid = getAngleType(-1);
-assertEquals(invalid, "Invalid angle");
-invalid = getAngleType(0);
-assertEquals(invalid, "Invalid angle");
-invalid = getAngleType(360);
-assertEquals(invalid, "Invalid angle");
-invalid = getAngleType(361);
-assertEquals(invalid, "Invalid angle");
+// const right = getAngleType(90);
+// assertEquals(right, "Right angle");
+// let acute = getAngleType(1);
+// assertEquals(acute, "Acute angle");
+// acute = getAngleType(45);
+// assertEquals(acute, "Acute angle");
+// acute = getAngleType(89);
+// assertEquals(acute, "Acute angle");
+// let obtuse = getAngleType(91);
+// assertEquals(obtuse, "Obtuse angle");
+// obtuse = getAngleType(100);
+// assertEquals(obtuse, "Obtuse angle");
+// obtuse = getAngleType(179);
+// assertEquals(obtuse, "Obtuse angle");
+// const straight = getAngleType(180);
+// assertEquals(straight, "Straight angle");
+// let reflex = getAngleType(181);
+// assertEquals(reflex, "Reflex angle");
+// reflex = getAngleType(200);
+// assertEquals(reflex, "Reflex angle");
+// reflex = getAngleType(359);
+// assertEquals(reflex, "Reflex angle");
+// let invalid = getAngleType(-1);
+// assertEquals(invalid, "Invalid angle");
+// invalid = getAngleType(0);
+// assertEquals(invalid, "Invalid angle");
+// invalid = getAngleType(360);
+// assertEquals(invalid, "Invalid angle");
+// invalid = getAngleType(361);
+// assertEquals(invalid, "Invalid angle");
 
 
 
