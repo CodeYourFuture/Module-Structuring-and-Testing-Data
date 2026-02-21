@@ -8,22 +8,27 @@
 // - "Reflex angle" for angles greater than 180° and less than 360°
 // - "Invalid angle" for angles outside the valid range.
 
-// Assumption: The parameter is a valid number. (You do not need to handle non-numeric inputs.)
-
-// Acceptance criteria:
-// After you have implemented the function, write tests to cover all the cases, and
-// execute the code to ensure all tests pass.
+// Assumption: The parameter is a valid number.
 
 function getAngleType(angle) {
-  // TODO: Implement this function
+  if (angle > 0 && angle < 90) {
+    return "Acute angle";
+  } else if (angle === 90) {
+    return "Right angle";
+  } else if (angle > 90 && angle < 180) {
+    return "Obtuse angle";
+  } else if (angle === 180) {
+    return "Straight angle";
+  } else if (angle > 180 && angle < 360) {
+    return "Reflex angle";
+  } else {
+    return "Invalid angle";
+  }
 }
 
-// The line below allows us to load the getAngleType function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
 module.exports = getAngleType;
 
-// This helper function is written to make our assertions easier to read.
-// If the actual output matches the target output, the test will pass
+// Helper function for testing
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -31,7 +36,35 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all cases, including boundary and invalid cases.
-// Example: Identify Right Angles
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
+// ======================
+// Tests
+// ======================
+
+// Acute angles
+assertEquals(getAngleType(45), "Acute angle");
+assertEquals(getAngleType(1), "Acute angle");
+assertEquals(getAngleType(89), "Acute angle");
+
+// Right angle
+assertEquals(getAngleType(90), "Right angle");
+
+// Obtuse angles
+assertEquals(getAngleType(120), "Obtuse angle");
+assertEquals(getAngleType(179), "Obtuse angle");
+assertEquals(getAngleType(91), "Obtuse angle");
+
+// Straight angle
+assertEquals(getAngleType(180), "Straight angle");
+
+// Reflex angles
+assertEquals(getAngleType(200), "Reflex angle");
+assertEquals(getAngleType(359), "Reflex angle");
+assertEquals(getAngleType(181), "Reflex angle");
+
+// Invalid angles
+assertEquals(getAngleType(0), "Invalid angle");
+assertEquals(getAngleType(360), "Invalid angle");
+assertEquals(getAngleType(-10), "Invalid angle");
+assertEquals(getAngleType(400), "Invalid angle");
+
+console.log("All tests passed!");

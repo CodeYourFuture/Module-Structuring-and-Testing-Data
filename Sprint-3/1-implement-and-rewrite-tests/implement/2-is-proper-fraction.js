@@ -4,21 +4,27 @@
 
 // Assumption: The parameters are valid numbers (not NaN or Infinity).
 
-// Note: If you are unfamiliar with proper fractions, please look up its mathematical definition.
-
-// Acceptance criteria:
-// After you have implemented the function, write tests to cover all the cases, and
-// execute the code to ensure all tests pass.
+// A proper fraction is when |numerator| < |denominator|
 
 function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+
+  // A fraction cannot have denominator 0
+  if (denominator === 0) {
+    return false;
+  }
+
+  // Check if absolute value of numerator is less than denominator
+  if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-// The line below allows us to load the isProperFraction function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
+
 module.exports = isProperFraction;
 
-// Here's our helper again
+// Helper function for testing
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -26,8 +32,28 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all cases.
-// What combinations of numerators and denominators should you test?
 
-// Example: 1/2 is a proper fraction
+// Tests
+// ========================
+
+// Proper fractions
 assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(3, 4), true);
+assertEquals(isProperFraction(-1, 2), true);
+assertEquals(isProperFraction(2, -5), true);
+assertEquals(isProperFraction(-3, -7), true);
+
+// Not proper (equal values)
+assertEquals(isProperFraction(5, 5), false);
+assertEquals(isProperFraction(-4, -4), false);
+
+// Not proper (numerator larger)
+assertEquals(isProperFraction(7, 3), false);
+assertEquals(isProperFraction(-9, 4), false);
+assertEquals(isProperFraction(10, -2), false);
+
+// Denominator zero (invalid fraction)
+assertEquals(isProperFraction(1, 0), false);
+assertEquals(isProperFraction(0, 0), false);
+
+console.log("All tests passed!");
