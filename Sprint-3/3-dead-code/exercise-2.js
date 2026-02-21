@@ -14,8 +14,8 @@ function countAndCapitalisePets(petsArr) {
 
   petsArr.forEach((pet) => {
     const capitalisedPet = pet.toUpperCase();
-     if (petCount[capitalisedPet]) {
-       petCount[capitalisedPet] += 1;
+    if (petCount[capitalisedPet]) {
+      petCount[capitalisedPet] += 1;
     } else {
       petCount[capitalisedPet] = 1;
     }
