@@ -16,3 +16,9 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+
+line 13- when i ran the function on console tab, it showed a new word hello world in  the next line.
+
+line 17&18 - when i ran  the 'prompt' function it pop up a box for imputing my name  and it returned undefined.
+after i wrote myname in the next line it brought out my name.
