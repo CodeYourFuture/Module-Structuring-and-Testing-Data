@@ -4,3 +4,4 @@
 const cityOfBirth = "Bolton";
 console.log(`I was born in ${cityOfBirth}`);
 
+//// The error was a ReferenceError because the variable was used before declaration.
