@@ -25,3 +25,19 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+// 2. const penceStringWithoutTrailingP = ... 
+// Removes the last character (the "p") from the string using substring(), leaving just the numbers.
+
+// 3. const paddedPenceNumberString = ...
+// Uses padStart(3, "0") to make sure the string is at least 3 characters long by adding "0"s to the front. 
+
+// 4. const pounds = ...
+// Uses substring() to extract all characters EXCEPT the last two. This isolates the pound value.
+
+// 5. const pence = ...
+// Extracts exactly the last two characters for the pence value using substring(), 
+// and uses padEnd() as a safety measure to ensure it's exactly 2 digits long.
+
+// 6. console.log(...)
+// Uses template literals to piece the pounds and pence back together with a "£" and "." symbol, printing "£3.99".
