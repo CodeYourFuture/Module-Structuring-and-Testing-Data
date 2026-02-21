@@ -23,7 +23,6 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 //  Since 'num' is not changing based on the input, the function will always return the last digit of 103, which is 3, regardless of the input passed to the function. To fix this issue, we need to change the function to use the parameter 'number' instead of the variable 'num'.
 // Finally, correct the code to fix the problem
 // =============> write your new code here
-const num = 103;
 
 function getLastDigit(number) {
   return number.toString().slice(-1);
