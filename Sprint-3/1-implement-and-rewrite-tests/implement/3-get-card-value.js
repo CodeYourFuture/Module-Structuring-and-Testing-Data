@@ -48,9 +48,6 @@ assertEquals(getCardValue("A♠"), 11);
 assertEquals(getCardValue("2♥"), 2);
 assertEquals(getCardValue("10♥"), 10);
 assertEquals(getCardValue("Q♦"), 10);
-assertEquals(getCardValue("♦Q"), "Invalid card"); 
-assertEquals(getCardValue("11♦"), "Invalid card"); 
-
 // Handling invalid cards
 try {
   getCardValue("invalid");
@@ -58,5 +55,16 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
+try {
+  getCardValue("♦Q");
 
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+try {
+  getCardValue("11♦");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
 // What other invalid card cases can you think of?
