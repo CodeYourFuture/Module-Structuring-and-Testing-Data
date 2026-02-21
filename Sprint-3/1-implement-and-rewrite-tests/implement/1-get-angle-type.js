@@ -15,8 +15,28 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  // TODO: Implement this function
+  if (angle > 0 && angle < 90) {
+    return "Acute angle";
+  } else if (angle === 90) {
+    return "Right angle";
+  } else if (angle > 90 && angle < 180) {
+    return "Obtuse angle";
+  } else if (angle === 180) {
+    return "Straight angle";
+  } else if (angle > 180 && angle < 360) {
+    return "Reflex angle";
+  } else {
+    return "Invalid angle";
+  }
 }
+
+console.assert(getAngleType(45) === "Acute angle");
+console.assert(getAngleType(90) === "Right angle");
+console.assert(getAngleType(120) === "Obtuse angle");
+console.assert(getAngleType(180) === "Straight angle");
+console.assert(getAngleType(270) === "Reflex angle");
+console.assert(getAngleType(0) === "Invalid angle");
+console.assert(getAngleType(360) === "Invalid angle");
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -35,3 +55,27 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+
+// Example: Identify Acute Angles
+const acute = getAngleType(45);
+assertEquals(acute, "Acute angle");
+
+// Example: Identify Obtuse Angles
+const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angle");
+
+// Example: Identify Straight Angles
+const straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
+
+// Example: Identify Reflex Angles
+const reflex = getAngleType(270);
+assertEquals(reflex, "Reflex angle");
+
+// Example: Identify Invalid Angles
+const invalid1 = getAngleType(0);
+assertEquals(invalid1, "Invalid angle");
+
+// Example: Identify Invalid Angles
+const invalid2 = getAngleType(360);
+assertEquals(invalid2, "Invalid angle");
