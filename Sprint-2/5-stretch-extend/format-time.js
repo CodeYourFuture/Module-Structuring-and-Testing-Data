@@ -20,10 +20,24 @@ function formatAs12HourClock(time) {
 
   return `${time} am`;
 }
-console.log(formatAs12HourClock("00:00"));
-console.log(formatAs12HourClock("01:00"));
-console.log(formatAs12HourClock("11:00"));
-console.log(formatAs12HourClock("12:00"));
-console.log(formatAs12HourClock("13:00"));
-console.log(formatAs12HourClock("23:00"));
+console.assert(
+  formatAs12HourClock("08:00") === "08:00 am",
+  "08:00 should be 08:00 am"
+);
+console.assert(
+  formatAs12HourClock("00:00") === "12:00 am",
+  "00:00 should be 12:00 am"
+);
+console.assert(
+  formatAs12HourClock("12:00") === "12:00 pm",
+  "12:00 should be 12:00 pm"
+);
+console.assert(
+  formatAs12HourClock("13:45") === "01:45 pm",
+  "13:45 should be 01:45 pm"
+);
+console.assert(
+  formatAs12HourClock("01:30") === "01:30 am",
+  "01:30 should be 01:30 am"
+);
 
