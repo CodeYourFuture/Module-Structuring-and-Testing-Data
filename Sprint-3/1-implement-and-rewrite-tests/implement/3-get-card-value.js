@@ -20,9 +20,21 @@
 // Acceptance criteria:
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
-
 function getCardValue(card) {
-  // TODO: Implement this function
+  // Validate input type
+  if (typeof card !== "string") {
+    throw new Error("Card must be a string");
+  }
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const suit = card.slice(-1);
+  const rank = card.slice(0, card.length - 1);
+  if (!validSuits.includes(suit) || !validRanks.includes(rank)) {
+    throw new Error(`Invalid card format: ${card}`);
+  }
+  if (rank === "A") return 11;
+  if (["J", "Q", "K"].includes(rank)) return 10;
+  return parseInt(rank, 10);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -39,8 +51,13 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("2♥"), 2);
+assertEquals(getCardValue("10♦"), 10);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♠"), 10);
+assertEquals(getCardValue("K♥"), 10);
 assertEquals(getCardValue("9♠"), 9);
-
 // Handling invalid cards
 try {
   getCardValue("invalid");
@@ -50,3 +67,11 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
+  // "invalid",  / not following format
+  // "1♠",        invalid rank
+  // "11♣",       invalid rank
+  // "A",         missing suit
+  // "♠",        missing rank
+  // "A♦♦",      invalid format
+  // 5,           not a string
+  // "",          empty string
