@@ -2,12 +2,6 @@
 // The countAndCapitalisePets function should continue to work for any reasonable input it's given, and you shouldn't modify the pets variable.
 
 const pets = ["parrot", "hamster", "horse", "dog", "hamster", "cat", "hamster"];
-const capitalisedPets = pets.map((pet) => pet.toUpperCase());
-const petsStartingWithH = pets.filter((pet) => pet[0] === "h");
-
-function logPets(petsArr) {
-  petsArr.forEach((pet) => console.log(pet));
-}
 
 function countAndCapitalisePets(petsArr) {
   const petCount = {};
@@ -23,6 +17,6 @@ function countAndCapitalisePets(petsArr) {
   return petCount;
 }
 
-const countedPetsStartingWithH = countAndCapitalisePets(petsStartingWithH);
+const countedPets = countAndCapitalisePets(pets);
 
-console.log(countedPetsStartingWithH); // { 'HAMSTER': 3, 'HORSE': 1 } <- Final console log
+console.log(countedPets); // { 'PARROT': 1, 'HAMSTER': 3, 'HORSE': 1, 'DOG': 1, 'CAT': 1 }
