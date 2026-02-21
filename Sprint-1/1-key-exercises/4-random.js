@@ -12,4 +12,4 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 Math.floor is a method that rounds a number down to the nearest whole number.
 Math.random is a method returning any number that is greater than or equal to 0 and less than 1.
 first of all i will try to get a value from 0 to less than 1 from Math.random and multiple it by 100
-and apply Math.floor to the result which will give me the integer number and then add the minimum value i.e. 1   */
+and apply Math.floor to the result which will give me the integer number and then add the minimum value i.e. 1  */
