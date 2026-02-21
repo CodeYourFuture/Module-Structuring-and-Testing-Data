@@ -35,7 +35,7 @@ test("should return 0 when character does not appear in string", () => {
 // Then it should return 1.
 test("should return 1 when character appears exactly once", () => {
   expect(countChar("hello", "h")).toEqual(1);
-  expect(countChar("banana", "n")).toEqual(1);
+  expect(countChar("test", "e")).toEqual(1);
   expect(countChar("xyz", "y")).toEqual(1);
 });
 
