@@ -21,10 +21,50 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
+// TODO: Implement this function
 function getCardValue(card) {
-  // TODO: Implement this function
+    const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    const validSuits = ["♠", "♥", "♦", "♣"];
+    //Validation
+    // Must be a string
+    if (typeof card !== "string") {
+    throw Error("Invalid card");
+  }
+    // Must be at least 2 characters and maximum of 3
+    //
+    //
 }
+// ---------- INVALID CHECKS FIRST ----------
 
+  // 1. Must be a string
+  
+
+  // 2. Must have at least 2 characters (rank + suit)
+  if (card.length < 2) {
+    throw new Error("Invalid card");
+  }
+
+  // 3. Extract suit and rank
+  const suit = card.slice(-1);
+  const rank = card.slice(0, -1);
+
+  // 4. Suit must be valid
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card");
+  }
+
+  // 5. Rank must be valid
+  if (!validRanks.includes(rank)) {
+    throw new Error("Invalid card");
+  }
+
+  // ---------- ALL INPUT IS NOW VALID ----------
+
+  if (rank === "A") return 11;
+  if (["J", "Q", "K"].includes(rank)) return 10;
+
+  return Number(rank);
+}
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;

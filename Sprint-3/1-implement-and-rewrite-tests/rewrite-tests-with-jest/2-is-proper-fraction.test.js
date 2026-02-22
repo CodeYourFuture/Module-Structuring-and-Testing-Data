@@ -20,8 +20,3 @@ test(`should return false when denominator is smaller than the numerator (1)`, (
 test(`should return true when both values are valid numbers`, () => {
   expect(isProperFraction(-1, -2)).toEqual(true);
 });
-
-test(`should return false when a number is not an integer`, () => {
-  expect(isProperFraction("1", 2)).toEqual(false);
-});
-
