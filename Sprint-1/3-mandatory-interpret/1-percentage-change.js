@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// Answer: There are 5 function calls in total. They are located on lines 4, 5, and 10.
+// Answer: There are 2 function calls in total. They are both `Number()` and are located on lines 4 and 5.
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // Answer: The error comes from line 5. It occurs because we are trying to reassign a value to `priceAfterOneYear`, which was originally declared as a `const`. To fix it, change `const` to `let` on line 2.
 // c) Identify all the lines that are variable reassignment statements
