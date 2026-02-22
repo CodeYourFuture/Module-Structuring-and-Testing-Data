@@ -26,7 +26,7 @@ function formatTimeDisplay(seconds) {
 // =============> 0
 
 // c) What is the return value of pad is called for the first time?
-// =============> 00
+// =============> "00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> 1. The remainder operator (%) returns the remainder left after dividing one number by another number. 61 % 60
