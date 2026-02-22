@@ -23,48 +23,55 @@
 
 // TODO: Implement this function
 function getCardValue(card) {
-    const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-    const validSuits = ["♠", "♥", "♦", "♣"];
-    //Validation
-    // Must be a string
-    if (typeof card !== "string") {
-    throw Error("Invalid card");
+  // 1. declare variables in an array to use for validation
+  const validRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  //2. Check that input is a string
+  if (typeof card !== "string") {
+    throw new Error("Invalid card");
   }
-    // Must be at least 2 characters and maximum of 3
-    //
-    //
-}
-// ---------- INVALID CHECKS FIRST ----------
-
-  // 1. Must be a string
-  
-
-  // 2. Must have at least 2 characters (rank + suit)
-  if (card.length < 2) {
+  // 3. Must have at least 2 characters but 3 or less (rank and suit)
+  if (card.length < 2 || card.length > 3) {
     throw new Error("Invalid card");
   }
 
-  // 3. Extract suit and rank
+  // 4. Defining the suit and rank
+  //Select character index -1, the last character only.
   const suit = card.slice(-1);
+  //select everything from index 0 and stop before the last character
   const rank = card.slice(0, -1);
 
-  // 4. Suit must be valid
+  // 5. Checking suit validity
+  //Checks if suit is in the array
   if (!validSuits.includes(suit)) {
     throw new Error("Invalid card");
   }
-
-  // 5. Rank must be valid
+  // 6. Checking rank validity
+  //Checks if rank is in the array
   if (!validRanks.includes(rank)) {
     throw new Error("Invalid card");
   }
-
-  // ---------- ALL INPUT IS NOW VALID ----------
-
+  //7. Determines the output values for special cards
   if (rank === "A") return 11;
   if (["J", "Q", "K"].includes(rank)) return 10;
-
+  // 8. Otherwise it returns the number of the card
   return Number(rank);
 }
+
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -80,6 +87,10 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("Q♥"), 10);
+assertEquals(getCardValue("K♦"), 10);
+assertEquals(getCardValue("J♣"), 10);
 
 // Handling invalid cards
 try {
@@ -87,6 +98,32 @@ try {
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
+} catch (error) {}
 
 // What other invalid card cases can you think of?
+try {
+  getCardValue("789");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (error) {}
+
+try {
+  getCardValue("");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("♠♥♦♣");
+  console.error("Error was not thrown for invalid card");
+} catch (error) {}
+
+try {
+  getCardValue("5$");
+  console.error("Error was not thrown for invalid card");
+} catch (error) {}
+
+try {
+  getCardValue("£50");
+  console.error("Error was not thrown for invalid card");
+} catch (error) {}
