@@ -18,5 +18,5 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 It Will open the prompt and asking for the input.
 What is the return value of `prompt`?
-prompt() returns a string, or empty string, or null (if Cancel is pressed).
+prompt() returns a string, or empty string, or null (if Cancel is pressed). 
 
