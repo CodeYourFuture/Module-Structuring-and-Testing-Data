@@ -2,6 +2,11 @@ const minimum = 1;
 const maximum = 100;
 
 const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+//num can be any generated random number between 1 and 100, rounded down.
+
+
+
+
 
 // In this exercise, you will need to work out what num represents?
 // Try breaking down the expression and using documentation to explain what it means
