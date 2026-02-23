@@ -6,34 +6,35 @@ const isProperFraction = require("../implement/2-is-proper-fraction");
 
 // Special case: numerator is zero
 
-test(`should return true when numerator < denominator and both are integers`, () => {
+test(`should return true when the absolute value of the numerator is less than the absolute value of the denominator and the denominator is not 0`, () => {
   expect(isProperFraction(1, 2)).toEqual(true);
-  expect(isProperFraction(3, 9)).toEqual(true);
-  expect(isProperFraction(99, 100)).toEqual(true);
+  expect(isProperFraction(3.5, 4)).toEqual(true);
+  expect(isProperFraction(-99, -100)).toEqual(true);
+  expect(isProperFraction(0, -5)).toEqual(true);
+  expect(isProperFraction(8, 12.5)).toEqual(true);
+  expect(isProperFraction(-6, 12)).toEqual(true);
 });
 
-test(`should return false when denominator = zero`, () => {
-  expect(isProperFraction(1, 0)).toEqual(false);
-  expect(isProperFraction(5, 0)).toEqual(false);
+test(`should return false when the denominator is equal to zero`, () => {
+  expect(isProperFraction(-1, 0)).toEqual(false);
+  expect(isProperFraction(0, 0)).toEqual(false);
+  expect(isProperFraction(15, 0)).toEqual(false);
+  expect(isProperFraction(6.4, 0)).toEqual(false);
+  expect(isProperFraction(-8.5, 0)).toEqual(false);
 });
 
-test(`should return false when numerator = zero`, () => {
-  expect(isProperFraction(0, 5)).toEqual(false);
-  expect(isProperFraction(0, 7)).toEqual(false);
-});
-
-test(`should return false when numerator > denominator`, () => {
+test(`should return false when the absolute value of the numerator is greater than the absolute value of the denominator`, () => {
   expect(isProperFraction(3, 2)).toEqual(false);
-  expect(isProperFraction(9, 3)).toEqual(false);
-  expect(isProperFraction(36, 7)).toEqual(false);
+  expect(isProperFraction(-9, 3)).toEqual(false);
+  expect(isProperFraction(-15, -4)).toEqual(false);
+  expect(isProperFraction(36, -5)).toEqual(false);
+  expect(isProperFraction(3.8, 2.7)).toEqual(false);
 });
 
-test(`should return false when either numerator or denominator or both are float numbers`, () => {
-  expect(isProperFraction(1.5, 2)).toEqual(false);
-  expect(isProperFraction(6, 7.1)).toEqual(false);
-  expect(isProperFraction(3.56, 2.4)).toEqual(false);
-});
-
-test(`should return false when denominator is zero`, () => {
-  expect(isProperFraction(1, 0)).toEqual(false);
+test(`should return false when the absolute value of the numerator is equal to the absolute value of the denominator`, () => {
+  expect(isProperFraction(3, 3)).toEqual(false);
+  expect(isProperFraction(-19, -19)).toEqual(false);
+  expect(isProperFraction(7.45, 7.45)).toEqual(false);
+  expect(isProperFraction(67, -67)).toEqual(false);
+  expect(isProperFraction(-8, 8)).toEqual(false);
 });
