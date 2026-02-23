@@ -21,12 +21,30 @@ test("should repeat the string count times", () => {
 // When the repeatStr function is called with these inputs,
 // Then it should return the original `str` without repetition.
 
+test("should return the original string when count is 1", () => {
+  expect(repeatStr("hello", 1)).toEqual("hello");
+  expect(repeatStr("h", 1)).toEqual("h");
+  expect(repeatStr("", 1)).toEqual("");
+});
+
 // Case: Handle count of 0:
 // Given a target string `str` and a `count` equal to 0,
 // When the repeatStr function is called with these inputs,
 // Then it should return an empty string.
 
+test("should return empty string when count is 0", () => {
+  expect(repeatStr("hello", 0)).toEqual("");
+  expect(repeatStr("any", 0)).toEqual("");
+  expect(repeatStr("", 0)).toEqual("");
+});
+
 // Case: Handle negative count:
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
+
+test("should throw error when count is negative", () => {
+  expect(() => repeatStr("hello", -1)).toThrow();
+  expect(() => repeatStr("test", -5)).toThrow();
+  expect(() => repeatStr("", -3)).toThrow();
+});
