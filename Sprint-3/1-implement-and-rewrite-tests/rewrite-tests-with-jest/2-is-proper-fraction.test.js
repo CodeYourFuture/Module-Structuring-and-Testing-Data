@@ -11,11 +11,16 @@ test(`should return true when the absolute value of the numerator is less than t
   expect(isProperFraction(1, -3)).toEqual(true);
   expect(isProperFraction(3.5, 4)).toEqual(true);
   expect(isProperFraction(-99, -100)).toEqual(true);
-  expect(isProperFraction(0, -5)).toEqual(true);
-  expect(isProperFraction(0, 56)).toEqual(true);
   expect(isProperFraction(8, 12.5)).toEqual(true);
   expect(isProperFraction(-6, 12)).toEqual(true);
   expect(isProperFraction(0.03, 0.1)).toEqual(true);
+});
+
+test(`should return true when numerator is equal to 0 and denominator is either positive or negative`, () => {
+  expect(isProperFraction(0, -5)).toEqual(true);
+  expect(isProperFraction(0, 56)).toEqual(true);
+  expect(isProperFraction(0, 0.1)).toEqual(true);
+  expect(isProperFraction(0, -8.9)).toEqual(true);
 });
 
 test(`should return false when the denominator is equal to zero`, () => {
