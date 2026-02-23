@@ -6,6 +6,11 @@ let lastName = "Johnson";
 // This should produce the string "CKJ", but you must not write the characters C, K, or J in the code of your solution.
 
 let initials = ``;
+let firstNameInitials = firstName.charAt(0);
+let middleNameInitials = middleName.charAt(0);
+let lastNameInitials = lastName.charAt(0);
+initials= `${firstNameInitials}${middleNameInitials}${lastNameInitials}`
+console.log(initials);
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
 
