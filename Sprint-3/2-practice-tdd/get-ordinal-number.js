@@ -1,7 +1,9 @@
 function getOrdinalNumber(num) {
+
   if (num >=11 &&  num <= 19){
     return `${num}th`
   };
+
 
   const lastDigit = num % 10
   switch (lastDigit) {
@@ -15,4 +17,5 @@ function getOrdinalNumber(num) {
       return `${num}th`;
   }
 }
+
 module.exports = getOrdinalNumber;
