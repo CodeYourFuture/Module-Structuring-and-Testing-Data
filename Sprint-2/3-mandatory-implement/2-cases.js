@@ -18,4 +18,4 @@
 function toUpperSnakeCase(str) {
     return str.toUpperCase().replaceAll(" ","_");
 }
-console.log(ToUpperSnakeCase("hello there"));
+console.log(toUpperSnakeCase("hello there"));
