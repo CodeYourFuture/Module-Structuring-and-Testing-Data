@@ -31,3 +31,17 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+
+assertEquals(isProperFraction(9, 10), true);
+
+assertEquals(isProperFraction(0, 7), false);
+
+assertEquals(isProperFraction(5, 0), false);
+
+assertEquals(isProperFraction(3.5, 6), false);
+
+assertEquals(isProperFraction(2, 1), false);
+
+assertEquals(isProperFraction(9, 3), false);
+
+assertEquals(isProperFraction(4, 4.67), false);
