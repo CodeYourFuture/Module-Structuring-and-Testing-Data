@@ -25,10 +25,10 @@
 // what the problem is in this case "str" has already been declared.
 
 //Fix this code:
-// function capitalise(str) {
-//   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
-//   return str;
-// }
+//  function capitalise(str) {
+//    let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+//    return str;
+//  }
 
 // =============> write your explanation here
 //I have re-assigned the "str" variable and it now runs with no errors.
