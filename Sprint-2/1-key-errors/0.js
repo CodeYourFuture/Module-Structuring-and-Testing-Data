@@ -1,5 +1,5 @@
 // Predict and explain first...
-//  =============> write your prediction here
+//  =============> there are two declarations of the variable str. 
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
@@ -9,5 +9,10 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+// =============> str is declared twice in the function capitalise and using let. 
+
+// =============> we delete the 'let'
+function capitalise(str) {
+  str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return str;
+}
