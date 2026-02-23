@@ -80,7 +80,7 @@ assertThrow(()=>getCardValue("Q♠♠"))
 
 
 function assertThrow(fn){
-try { (fn)
+try { fn()
   // we try to run this function, if it throws, stop running this bit and run the catch below
 
   // This line will not be reached if an error is thrown as expected
