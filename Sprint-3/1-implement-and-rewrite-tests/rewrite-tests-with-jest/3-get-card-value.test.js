@@ -40,11 +40,11 @@ test('Should throw "Invalid card" for input "♠♥♦♣"', () => {
   expect(() => getCardValue("♠♥♦♣")).toThrow("Invalid card");
 });
 
-test('Should throw "Invalid card" for input "♠♥♦♣"', () => {
+test('Should throw "Invalid card" for input "5$"', () => {
   expect(() => getCardValue("5$")).toThrow("Invalid card");
 });
 
-test('Should throw "Invalid card" for input "♠♥♦♣"', () => {
+test('Should throw "Invalid card" for input "£50"', () => {
   expect(() => getCardValue("£50")).toThrow("Invalid card");
 });
 
