@@ -2,7 +2,7 @@
 //  =============> write your prediction here
 //  1.*Answer
 //  We have declared the "str" twice.It is already declared 
-//  in this function parameter, hence causing the conflict. 
+//  in this function's parameter, hence causing the conflict. 
 //  Although "let" allows re-assignment of variables, the issue is redeclaration, 
 //  not reassignment.
 
