@@ -10,7 +10,15 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-function isProperFraction(numerator, denominator) {}
+function isProperFraction(numerator, denominator) {
+  // console.log(numerator, denominator);
+  // console.log(Math.abs(numerator), Math.abs(denominator));
+  if (denominator !== 0 && Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
