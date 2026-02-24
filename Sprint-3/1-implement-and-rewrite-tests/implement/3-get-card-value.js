@@ -41,12 +41,147 @@ function assertEquals(actualOutput, targetOutput) {
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
 
+assertEquals(getCardValue("4♣"), 4);
+
+assertEquals(getCardValue("A♥"), 11);
+
+assertEquals(getCardValue("J♦"), 10);
+
+assertEquals(getCardValue("Q♣"), 10);
+
+assertEquals(getCardValue("K♠"), 10);
+
+assertEquals(getCardValue("K♦"), 10);
+
+assertEquals(getCardValue("10♥"), 10);
+
+assertEquals(getCardValue("2♦"), 2);
+
 // Handling invalid cards
 try {
   getCardValue("invalid");
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
+} catch (err) {
+  console.error(error);
+}
 
 // What other invalid card cases can you think of?
+
+try {
+  getCardValue("");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("1♥");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("11♠");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("0♦");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("4.8♣");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("G♦");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("9");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("K");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("9M");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("♠3");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue(6);
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("A♦!");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
+
+try {
+  getCardValue("♥");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (err) {
+  console.error(error);
+}
