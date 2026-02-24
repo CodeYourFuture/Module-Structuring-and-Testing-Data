@@ -1,6 +1,6 @@
 function repeatStr(str, count) {
-  if (count >= 0) return str.repeat(count);
-  else throw new Error("Invalid format: count cannot be");
+  if (count < 0) throw new Error("Invalid format: count cannot be negative");
+  return str.repeat(count);
 }
 
 module.exports = repeatStr;
