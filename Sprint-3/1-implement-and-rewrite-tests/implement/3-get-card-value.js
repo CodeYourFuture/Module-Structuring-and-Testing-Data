@@ -22,7 +22,49 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  if (typeof card !== "string")
+    throw new Error(
+      `Invalid card format: "${card}". Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣.`
+    );
+
+  let cardSuit = card.slice(-1);
+  let cardRank = card.slice(0, -1);
+
+  if (validSuits.find((suit) => suit === cardSuit)) {
+    console.log(cardSuit);
+    switch (cardRank) {
+      case "A":
+        console.log(cardRank, "ace rank");
+        return 11;
+
+      case "J":
+      case "Q":
+      case "K":
+        console.log(cardRank, "face rank");
+        return 10;
+
+      case "2":
+      case "3":
+      case "4":
+      case "5":
+      case "6":
+      case "7":
+      case "8":
+      case "9":
+      case "10":
+        console.log(cardRank, "number rank");
+        return Number(cardRank);
+
+      default:
+        throw new Error(
+          `Invalid card format: "${card}". Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣.`
+        );
+    }
+  } else
+    throw new Error(
+      `Invalid card format: "${card}". Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣.`
+    );
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -64,7 +106,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 // What other invalid card cases can you think of?
@@ -75,7 +117,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -84,7 +126,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -93,7 +135,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -102,7 +144,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -111,7 +153,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -120,7 +162,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -129,7 +171,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -138,7 +180,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -147,7 +189,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -156,7 +198,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -165,7 +207,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -174,7 +216,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }
 
 try {
@@ -183,5 +225,5 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (err) {
-  console.error(error);
+  console.error(err);
 }

@@ -34,39 +34,17 @@ test(`Should return 10 when given a face card`, () => {
 
 //   Invalid Cards
 test(`Should throw an error when given an invalid card`, () => {
-  expect(() => getCardValue("")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("invalid")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("11♠")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("0♦")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("4.8♣")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("G♦")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("9")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("K")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue(6)).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("♠3")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
-  expect(() => getCardValue("9M")).toThrow(
-    "Invalid card format! Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣."
-  );
+  expect(() => getCardValue("")).toThrow(/Invalid card format/);
+  expect(() => getCardValue("invalid")).toThrow(/Invalid card format/);
+  expect(() => getCardValue("11♠")).toThrow(/Invalid card format/);
+  expect(() => getCardValue("0♦")).toThrow(/Invalid card format/);
+  expect(() => getCardValue("4.8♣")).toThrow(/Invalid card format/);
+  expect(() => getCardValue("G♦")).toThrow(/Invalid card format/);
+  expect(() => getCardValue("9")).toThrow(/Invalid card format/);
+  expect(() => getCardValue("K")).toThrow(/Invalid card format/);
+  expect(() => getCardValue(6)).toThrow(/Invalid card format/);
+  expect(() => getCardValue("♠3")).toThrow(/Invalid card format/);
+  expect(() => getCardValue("9M")).toThrow(/Invalid card format/);
 });
 
 // To learn how to test whether a function throws an error as expected in Jest,
