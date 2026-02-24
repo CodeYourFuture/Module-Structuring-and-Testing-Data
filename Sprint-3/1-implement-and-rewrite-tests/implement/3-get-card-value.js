@@ -37,23 +37,24 @@ function getCardValue(card) {
     "Q",
     "K",
   ];
-  const suite = ["♠", "♥", "♦", "♣"];
+  const suit = ["♠", "♥", "♦", "♣"];
 
-  const cardFace = card.slice(0, -1);
+  const cardValue = card.slice(0, -1);
+  console.log("card value: " + cardValue);
   const cardSuit = card[card.length - 1];
 
-  if (!rank.includes(cardFace) || !suite.includes(cardSuit)) {
+  if (!rank.includes(cardValue) || !suit.includes(cardSuit)) {
     throw new Error("invalid input");
   }
 
-  if ("A" === cardFace) {
+  if ("A" === cardValue) {
     return 11;
   }
-  if (["J", "Q", "K"].includes(cardFace)) {
+  if (["J", "Q", "K"].includes(cardValue)) {
     return 10;
   }
 
-  return Number(cardFace);
+  return Number(cardValue);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
