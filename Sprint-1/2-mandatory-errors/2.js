@@ -3,3 +3,5 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+// The error is that we are trying to use the variable cityOfBirth before it has been declared and assigned a value.
