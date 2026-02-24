@@ -1,5 +1,6 @@
-function repeatStr() {
-  return "hellohellohello";
+function repeatStr(str, count) {
+  if (count >= 0) return str.repeat(count);
+  else throw new Error("Invalid format: count cannot be");
 }
 
 module.exports = repeatStr;

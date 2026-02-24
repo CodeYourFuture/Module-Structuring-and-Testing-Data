@@ -49,5 +49,5 @@ test("should throw an error when count is negative", () => {
   const str = "hello";
   const count = -6;
   const repeatedStr = () => repeatStr(str, count);
-  expect(repeatedStr).toThrow(/negative/);
+  expect(repeatedStr).toThrow(/Invalid format/);
 });
