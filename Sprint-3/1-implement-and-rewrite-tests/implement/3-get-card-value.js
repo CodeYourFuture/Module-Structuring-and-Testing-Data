@@ -24,24 +24,19 @@
 function getCardValue(card) {
   const validSuits = ["♠", "♥", "♦", "♣"];
   if (typeof card !== "string")
-    throw new Error(
-      `Invalid card format: "${card}". Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣.`
-    );
+    throw new Error(`Invalid card format: "${card}". Expected a string.`);
 
   let cardSuit = card.slice(-1);
   let cardRank = card.slice(0, -1);
 
-  if (validSuits.find((suit) => suit === cardSuit)) {
-    console.log(cardSuit);
+  if (validSuits.includes(cardSuit)) {
     switch (cardRank) {
       case "A":
-        console.log(cardRank, "ace rank");
         return 11;
 
       case "J":
       case "Q":
       case "K":
-        console.log(cardRank, "face rank");
         return 10;
 
       case "2":
@@ -53,17 +48,16 @@ function getCardValue(card) {
       case "8":
       case "9":
       case "10":
-        console.log(cardRank, "number rank");
         return Number(cardRank);
 
       default:
         throw new Error(
-          `Invalid card format: "${card}". Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣.`
+          `Invalid card format: "${card}" has an invalid rank "${cardRank}". Expected one of: A, 2–10, J, Q, K.`
         );
     }
   } else
     throw new Error(
-      `Invalid card format: "${card}". Expected rank followed by suit, for example A♠, 10♥, K♦, or 7♣.`
+      `Invalid card format: "${card}" has an invalid suit "${cardSuit}". Expected one of: ♠, ♥, ♦, ♣.`
     );
 }
 
