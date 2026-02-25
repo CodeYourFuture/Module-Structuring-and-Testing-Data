@@ -21,8 +21,47 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
+// TODO: Implement this function
 function getCardValue(card) {
-  // TODO: Implement this function
+   // Valid suits
+  const validSuits = ["♠", "♥", "♦", "♣"];
+
+  // Card must be at least 2 characters (e.g., "A♠")
+  if (typeof card !== "string" || card.length < 2) {
+    throw new Error("Invalid card");
+  }
+
+  // Suit is always the last character
+  const suit = card.slice(-1);
+
+  // Rank is everything except the last character
+  const rank = card.slice(0, -1);
+
+  // Validate suit
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card");
+  }
+
+  // Handle Ace
+  if (rank === "A") {
+    return 11;
+  }
+
+  // Handle face cards
+  if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  }
+
+  // Handle number cards (2–10)
+  const number = Number(rank);
+
+  if (number >= 2 && number <= 10) {
+    return number;
+  }
+
+  // If nothing matched → invalid
+  throw new Error("Invalid card");
+
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
