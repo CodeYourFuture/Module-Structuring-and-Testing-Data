@@ -29,6 +29,13 @@
 - Error shown:
 - Why it happens:
 - MDN link (optional):
+### 3.js
+
+- Error shown: `TypeError: cardNumber.slice is not a function`
+- Why it happens: The variable `cardNumber` is a number, and numbers do not have the `slice()` method. The `slice()` method is only available on strings and arrays.
+- Concept: Methods depend on data types in JavaScript.
+- MDN link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
 
 ## 4.js
 - Error shown:
