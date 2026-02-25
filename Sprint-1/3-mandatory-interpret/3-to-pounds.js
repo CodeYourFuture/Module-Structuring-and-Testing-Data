@@ -25,3 +25,9 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2. Line 3 Removes the letter p from the end of the string
+// 3. Line 8 keeps the length to 3 and adds a 0 if the length is smaller like 50p -> 050 or 5p -> 005
+// 4. Line 9 displays pounds from the 1st digit of the 3
+// 5. Line 14 displays the pence of the remaining 2 digits
+// 6. Line 18 converts and displays the output result on the terminal of the total in currency format of £whole with pence after the decimal
+
