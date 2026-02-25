@@ -1,7 +1,11 @@
 // Predict and explain first...
-//  =============> write your prediction here
+//   I thought it was going to work, however my prediction was wrong. =============> write your prediction here
 
 // call the function capitalise with a string input
+
+//SyntaxError: Identifier 'str' has already been declared
+
+
 // interpret the error message and figure out why an error is occurring
 
 function capitalise(str) {
@@ -9,5 +13,13 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+
+
+
+// The identifier "str" has already been declared as a parameter in the function and cannot be redeclared withing a block scope.// =============> write your explanation here
+
+
+  function capitalise(str) {
+   return `${str[0].toUpperCase()}${str.slice(1)}`;
+  }
+  //  =============> write your new code here
