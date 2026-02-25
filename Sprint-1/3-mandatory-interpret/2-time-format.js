@@ -44,5 +44,17 @@ console.log(result);
 // I changed the value to;
 // 1200 returned 0:20:00
 // 92383.7 returned 25:39:43.69999999999709
+//  Milliseconds appeared in the output because they were part of the 
+//  input and were not explicitly removed, even though they were not required 
+//  and it does make the output not what is expected.
+//  In this cases there was no validation to stop this from occurring.
+
 // -8784 returned -2:-26:-24
-// it worked with all numbers including decimals and negative numbers.
+//  Negative numbers passed the test. 
+//  In reality there should not be negative time in the movieLength and 
+//  it should throw an error. In this cases there was no validation to stop 
+//  this from occurring.
+
+//  It worked with all numbers including decimals and negative numbers.
+
+
