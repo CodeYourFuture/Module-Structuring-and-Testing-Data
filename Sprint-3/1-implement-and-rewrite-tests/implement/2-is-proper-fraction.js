@@ -47,3 +47,23 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(3, 5), true);
+
+// Equal numbers (not proper)
+assertEquals(isProperFraction(4, 4), false);
+
+// Improper fractions
+assertEquals(isProperFraction(5, 2), false);
+assertEquals(isProperFraction(10, 3), false);
+
+// Zero numerator (0 is less than denominator)
+assertEquals(isProperFraction(0, 5), true);
+
+// Zero denominator (invalid fraction)
+assertEquals(isProperFraction(5, 0), false);
+
+// Negative numbers
+assertEquals(isProperFraction(-1, 5), true);
+assertEquals(isProperFraction(1, -5), false);
+
+console.log("All tests executed.");
