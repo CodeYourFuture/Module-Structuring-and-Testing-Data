@@ -40,7 +40,8 @@
  *
  * The function getLastDigit() is not working properly because:
  * It's ignoring the parameter: The function is defined to take a parameter, but when calling the function it's using the global variable num (which is set to 103) instead of the parameter passed to it.
- * No parameters in function definition: The function is defined as function getLastDigit() without any parameters, so when we call getLastDigit(42), the 42 is ignored.
+ * There is no parameters in function definition.
+ * The function is defined as function getLastDigit() without any parameters, so when we call getLastDigit(42), the 42 is ignored.
  * Fixed value: The function always returns the last digit of 103 (which is "3"), regardless of what number is passed to it.
  * That's why all three console logs show "3" - they're all getting the last digit of 103, not the numbers 42, 105, and 806 passed.
  */
