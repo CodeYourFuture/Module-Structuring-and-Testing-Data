@@ -24,7 +24,7 @@ console.assert(
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
 
-// Test of existing fuction 
+// Test of existing 
 console.log("=== TESTING BUGGY FUNCTION ===");
 console.log(formatAs12HourClock("00:00"), "→ Expected: 12:00 am ❌"); // Bug: midnight
 console.log(formatAs12HourClock("12:00"), "→ Expected: 12:00 pm ❌"); // Bug: noon
