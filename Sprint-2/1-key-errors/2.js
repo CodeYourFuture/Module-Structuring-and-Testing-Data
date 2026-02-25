@@ -5,9 +5,9 @@
 
 // =============> write your prediction of the error here
 //we can't declare number as a variable 
-function square(3) {
-    return num * num;
-}
+// function square(3) {
+//     return num * num;
+// }
 
 // =============> write the error message here
 //Uncaught SyntaxError SyntaxError: Unexpected number
