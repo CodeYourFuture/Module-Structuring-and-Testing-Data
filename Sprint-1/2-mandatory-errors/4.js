@@ -7,5 +7,5 @@
 // When declaring a variable it must not start with a number, space or reserved word.
 // to fix this, we can rename them correctly.
 
-const twelve_HourClockTime = "20:53";
-const twentyFour_HourClockTime = "08:53";
+const twelveHourClockTime = "20:53";
+const twentyFourHourClockTime = "08:53";
