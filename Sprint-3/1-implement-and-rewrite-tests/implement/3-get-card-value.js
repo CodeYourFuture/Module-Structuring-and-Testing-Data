@@ -22,7 +22,22 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+  const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const validSuits = ["♠", "♥", "♦", "♣"];
+   if (!validRanks.includes(rank) || !validSuits.includes(suit)) {
+    throw new Error("Invalid card");
+  }
+  if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  }
+  if (rank === "A") {
+    return 11;
+  }
+  else if ( rank >= 2 && rank <= 10) {
+    return Number(rank);
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,13 +55,17 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♣"), 11);
+assertEquals(getCardValue("K♦"), 10);
+assertEquals(getCardValue("10♥"), 10);
 
 // Handling invalid cards
 try {
   getCardValue("invalid");
+  getCardValue("joker");
+  getCardValue("1♦");
+  getCardValue("A");
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
-
-// What other invalid card cases can you think of?
