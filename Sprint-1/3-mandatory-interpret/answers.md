@@ -64,3 +64,53 @@ priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 First, replaceAll(",", "") removes commas from the string "10,000", producing "10000".
 Then, Number(...) converts the string "10000" into the numeric value 10000.
 This ensures arithmetic operations can be performed correctly.
+
+
+
+## 2-time-format.js
+
+### a) How many variable declarations?
+There are 6 variable declarations:
+- movieLength
+- remainingSeconds
+- totalMinutes
+- remainingMinutes
+- totalHours
+- result
+
+---
+
+### b) How many function calls?
+There is 1 function call:
+- console.log(result)
+
+---
+
+### c) What does movieLength % 60 represent?
+The % operator returns the remainder after division.
+movieLength % 60 gives the number of seconds left after converting full minutes.
+In this example, it returns 24 seconds.
+
+---
+
+### d) Interpret line 4 (totalMinutes)
+const totalMinutes = (movieLength - remainingSeconds) / 60;
+
+This subtracts the leftover seconds from the total seconds and divides by 60.
+The result is the total number of full minutes in the movie.
+
+---
+
+### e) What does result represent? Better name?
+The variable result represents the formatted movie duration in hours:minutes:seconds.
+A better name could be:
+- formattedTime
+- movieDuration
+- durationString
+
+---
+
+### f) Will this work for all values of movieLength?
+Yes, it works for any positive number of seconds.
+However, if movieLength is negative, a decimal, or not a number, the result would be incorrect.
+Also, minutes and seconds are not padded with leading zeros, so values like 2:3:5 may appear instead of 02:03:05.
