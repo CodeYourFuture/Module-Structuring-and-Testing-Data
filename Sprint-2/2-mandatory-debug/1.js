@@ -13,7 +13,8 @@ console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
 */
 
 // =============> write your explanation here
- /** The arguments "a + b" should be on the same line as the return so the sum returns that value instead of "undefined"
+ /** Explanation:
+  * The arguments "a + b" should be on the same line as the return so the sum returns that value instead of "undefined"
   */
 
 // Finally, correct the code to fix the problem
