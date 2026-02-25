@@ -1,5 +1,11 @@
 // Predict and explain first...
 //  =============> write your prediction here
+// why?
+//the computer reads the values in the second console.log and
+//the first console.log only prints the value, it does not store it.
+//the second console.log outputs the template literals and undefined
+// as it has no value to reach.
+
 
 function sum(a, b) {
   return;

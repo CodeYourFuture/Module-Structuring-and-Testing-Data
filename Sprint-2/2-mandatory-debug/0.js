@@ -12,9 +12,9 @@
 // It return the following output:
 // 320
 // The result of multiplying 10 and 32 is undefined
-// I am not sure why?
 
-//the computer reads the values in the second console.log and
+// why?
+//the computer reads the values in the second console.log "multiply(10, 32)" and
 //the first console.log only prints the value, it does not store it.
 //the second console.log outputs the template literals and undefined
 // as it has no value to reach.
