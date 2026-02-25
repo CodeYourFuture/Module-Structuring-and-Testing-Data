@@ -22,7 +22,39 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const rank = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+  const suit = ["♠", "♥", "♦", "♣"];
+
+  const cardValue = card.slice(0, -1);
+  console.log("card value: " + cardValue);
+  const cardSuit = card[card.length - 1];
+
+  if (!rank.includes(cardValue) || !suit.includes(cardSuit)) {
+    throw new Error("invalid input");
+  }
+
+  if ("A" === cardValue) {
+    return 11;
+  }
+  if (["J", "Q", "K"].includes(cardValue)) {
+    return 10;
+  }
+
+  return Number(cardValue);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,6 +72,13 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("J♠"), 10);
+assertEquals(getCardValue("K♠"), 10);
+assertEquals(getCardValue("Q♠"), 10);
+assertEquals(getCardValue("2♠"), 2);
+assertEquals(getCardValue("5♠"), 5);
+assertEquals(getCardValue("10♠"), 10);
 
 // Handling invalid cards
 try {
