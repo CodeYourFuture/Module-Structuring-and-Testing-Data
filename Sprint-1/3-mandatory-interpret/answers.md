@@ -120,8 +120,6 @@ Also, minutes and seconds are not padded with leading zeros, so values like 2:3:
 
 ## 3-to-pounds.js
 
-### Step-by-step breakdown (line by line)
-
 1) `const penceString = "399p";`
 - Declares a string containing a price in pence, with a trailing `p` character.
 
