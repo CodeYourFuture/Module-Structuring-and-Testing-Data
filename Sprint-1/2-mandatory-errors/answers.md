@@ -12,6 +12,9 @@
 - Error shown:
 - Why it happens:
 - MDN link (optional):
+- Error shown: `TypeError: Assignment to constant variable.` on line 4.
+- Why it happens: The variable `age` was declared with `const`, which prevents reassignment. The statement `age = age + 1` attempts to update the value, causing the error.
+- MDN link (optional): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 
 ## 2.js
 - Error shown:
