@@ -26,7 +26,7 @@ console.log(`£${pounds}.${pence}`);
 // To begin, we can start with
 //
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
-//
+
 // This represents a price in pence (the "p" at the end indicates pence in UK pricing style).
 
 /**
@@ -34,7 +34,7 @@ console.log(`£${pounds}.${pence}`);
  *
  * penceString.length is 4 (characters: '3', '9', '9', 'p').
  * penceString.length - 1 is 3.
- * penceString.substring(0, 3) extracts characters from index 0 up to but not including index 3: characters at indices 0, 1, 2 → '3', '9', '9'.
+ * penceString.substring(0, 3) extracts characters from index 0 up to but not including index 3.
  * Removes the trailing 'p' so the numeric part "399" can be processed.
  */
 
@@ -44,7 +44,7 @@ console.log(`£${pounds}.${pence}`);
  * penceStringWithoutTrailingP is "399".
  * "399".padStart(3, "0") ensures the string is at least 3 characters long, padding from the left with '0' if needed.
  * Since "399" is already length 3, it stays "399".
- * Objective: It normalizes pence values like "99p" (which becomes "099") so pounds/pence splitting works correctly.
+ * Objective: It normalizes in UK currrency such that the pence values like "99p" (which becomes "099") so pounds/pence splitting works correctly.
  */
 
 /**
@@ -67,7 +67,7 @@ console.log(`£${pounds}.${pence}`);
  * paddedPenceNumberString.substring(1) extracts from index 1 to end → "99".
  * "99".padEnd(2, "0"): it ensures string is at least length 2, padding at end with '0' if needed.
  * In this case, it's already length 2, so stays "99".
- * If pence part were "5", it would become "50" (pence always shown as 2 digits).
+ * If pence part were "5", it would become "50" (pence shown as 2 digits).
  */
 
 /**
@@ -76,5 +76,4 @@ console.log(`£${pounds}.${pence}`);
  * Uses template literal to format output as £3.99.
  * Joins pounds and pence with a decimal point.
  */
-
 
