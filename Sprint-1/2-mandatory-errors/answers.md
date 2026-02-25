@@ -20,6 +20,10 @@
 - Error shown:
 - Why it happens:
 - MDN link (optional):
+- Error shown: `ReferenceError: Cannot access 'cityOfBirth' before initialization`.
+- Why it happens: The variable `cityOfBirth` is declared later in the file using `let` or `const`, but it is used before that declaration. JavaScript does not allow access to `let`/`const` variables before initialization (temporal dead zone).
+- MDN link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
+
 
 ## 3.js
 - Error shown:
