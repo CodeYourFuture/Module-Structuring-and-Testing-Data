@@ -29,7 +29,7 @@ console.log(result);
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 /**
- * 1. This line calculates the total number of whole minutes in the movie by subtracting the remainder seconds from the total seconds and giving the number of seconds that cna be evenly divided into minutes (a multiple of 60) - movieLength - remainingSeconds
+ * 1. This line calculates the total number of whole minutes in the movie by subtracting the remainder seconds from the total seconds and giving the number of seconds that can be evenly divided into minutes (a multiple of 60) - movieLength - remainingSeconds
  * 2. Then divides that result by 60 to convert from seconds to minutes - / 60
  */
 
@@ -46,7 +46,7 @@ console.log(result);
  * No leading zeros for single digits:
  *
  * Current output: "2:5:7" for 2 hours, 5 minutes, 7 seconds
- * Standard time format expects: "02:05:07"
+ * Normally standard time format expects: "02:05:07"
  * 
  * No validation for invalid inputs:
  * 
