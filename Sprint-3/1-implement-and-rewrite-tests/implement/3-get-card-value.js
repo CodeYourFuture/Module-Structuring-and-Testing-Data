@@ -77,15 +77,47 @@ function assertEquals(actualOutput, targetOutput) {
 }
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
+// Test: Ace, face cards, number cards, invalid suit, invalid rank, completely invalid string.
 // Examples:
+// Number cards:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("2♠"), 2);
+assertEquals(getCardValue("10♦"), 10);
+
+// Face card:
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♠"), 10);
+
+// Ace
+assertEquals(getCardValue("A♥"), 11);
 
 // Handling invalid cards
 try {
   getCardValue("invalid");
-
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card");
+ console.error("Error was not thrown for invalid string");
 } catch (e) {}
 
+// Invalid rank
+try {
+  getCardValue("1♠");
+  console.error("Error wasnot thrown for invalid rank");
+} catch (e) {}
+
+// Invalid suit
+try {
+  getCardValue("A?");
+  console.error("Error wasnot thrown for invalid suit");
+} catch (e) {}
+
+// Missing suit
+try {
+  getCardValue("A");
+  console.error("Error wasnot thrown for missing suit");
+} catch (e) {}
+
+console.log("All tests executed.");
+
+
 // What other invalid card cases can you think of?
+// Test: Ace, face cards, number cards, invalid suit, invalid rank, completely invalid string.
