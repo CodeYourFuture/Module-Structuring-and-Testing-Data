@@ -1,6 +1,6 @@
 // Predict and explain first...
 //  =============> write your prediction here
-
+//Should return error as str was already declared?
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
 
@@ -10,4 +10,11 @@ function capitalise(str) {
 }
 
 // =============> write your explanation here
+//The parameter name str is already declared as a variable
 // =============> write your new code here
+function capitalise(str) {
+  str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return str;
+}
+
+console.log(capitalise("string"));
