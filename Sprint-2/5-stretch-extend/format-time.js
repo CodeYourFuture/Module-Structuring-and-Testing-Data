@@ -23,3 +23,27 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+
+// Test of existing fuction 
+console.log("=== TESTING BUGGY FUNCTION ===");
+console.log(formatAs12HourClock("00:00"), "→ Expected: 12:00 am ❌"); // Bug: midnight
+console.log(formatAs12HourClock("12:00"), "→ Expected: 12:00 pm ❌"); // Bug: noon
+console.log(formatAs12HourClock("14:30"), "→ Expected: 02:30 pm ❌"); // Bug: minutes lost
+console.log(formatAs12HourClock("08:15"), "→ Expected: 08:15 am ❌"); // Bug: minutes lost
+console.log(formatAs12HourClock("23:59"), "→ Expected: 11:59 pm ❌"); // Bug: minutes lost
+
+
+// Fixed function
+
+function formatAs12HourClockFixed(time) {
+  const hours = Number(time.slice(0, 2));
+  const minutes = time.slice(3, 5);
+ 
+  if (hours === 0) return `12:${minutes} am`;      // Midnight
+  if (hours === 12) return `12:${minutes} pm`;     // Noon
+  if (hours > 12) {
+    const h = (hours - 12).toString().padStart(2, "0");
+    return `${h}:${minutes} pm`;
+  }
+  return `${time.slice(0, 5)} am`;
+}
