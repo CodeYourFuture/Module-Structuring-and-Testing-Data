@@ -5,7 +5,8 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 // In this exercise, you will need to work out what num represents?
 //*Answer:
-//Number returns a random whole number between 1 and 100.
+//Number returns a random whole number between 1 and 100 inclusive.
+//It can never go below 1 or over 100.
 
 // Try breaking down the expression and using documentation to explain what it means
 /*Answer:
