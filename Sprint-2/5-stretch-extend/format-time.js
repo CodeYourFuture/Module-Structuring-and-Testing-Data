@@ -47,3 +47,4 @@ function formatAs12HourClockFixed(time) {
   }
   return `${time.slice(0, 5)} am`;
 }
+
