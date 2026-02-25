@@ -17,7 +17,7 @@ console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
 /** Explanation:
  * 
- * The following function takes two arguments as input and display the multiplication result.
+ * The following function takes two arguments a and b as input and display the multiplication result.
  * But instead of using the function "console.log" it shoudl use the function "return (a * b)".
  * That's the reason it displays "undefined".
  */
