@@ -33,7 +33,7 @@ console.log(formatAs12HourClock("08:15"), "→ Expected: 08:15 am ❌"); // Bug:
 console.log(formatAs12HourClock("23:59"), "→ Expected: 11:59 pm ❌"); // Bug: minutes lost
 
 
-// Fixed function
+// Fixed function to get result 
 
 function formatAs12HourClockFixed(time) {
   const hours = Number(time.slice(0, 2));
