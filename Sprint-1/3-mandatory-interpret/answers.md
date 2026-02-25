@@ -114,3 +114,44 @@ A better name could be:
 Yes, it works for any positive number of seconds.
 However, if movieLength is negative, a decimal, or not a number, the result would be incorrect.
 Also, minutes and seconds are not padded with leading zeros, so values like 2:3:5 may appear instead of 02:03:05.
+
+
+
+
+## 3-to-pounds.js
+
+### Step-by-step breakdown (line by line)
+
+1) `const penceString = "399p";`
+- Declares a string containing a price in pence, with a trailing `p` character.
+
+2) `const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1);`
+- Takes a substring from index 0 up to (but not including) the last character.
+- Purpose: remove the trailing `"p"`.
+- For `"399p"`, this becomes `"399"`.
+
+3) `const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");`
+- Pads the string on the left until it is at least length 3, using `"0"`.
+- Purpose: make sure we always have enough digits to represent pounds + pence.
+- Example: `"5"` becomes `"005"`, `"50"` becomes `"050"`, `"399"` stays `"399"`.
+
+4) `const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2);`
+- Takes everything except the last 2 digits.
+- Purpose: the part before the last 2 digits is the pounds.
+- For `"399"`, length is 3, so substring(0, 1) → `"3"`.
+
+5) `const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");`
+- First, `substring(length - 2)` takes the last 2 digits.
+- Then `padEnd(2, "0")` ensures it’s at least 2 characters (adds zeros on the right if needed).
+- Purpose: get exactly two pence digits.
+- For `"399"`, last two digits are `"99"` → stays `"99"`.
+
+6) `console.log(\`£${pounds}.${pence}\`);`
+- Uses a template literal to format the final currency string as pounds and pence.
+- For pounds `"3"` and pence `"99"` → outputs `£3.99`.
+
+### Unfamiliar syntax (docs)
+- substring: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
+- padStart: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+- padEnd: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
+- template literals: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
