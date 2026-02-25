@@ -25,6 +25,7 @@ console.assert(
 );
 
 // Test of existing 
+// Test of existing function
 console.log("=== TESTING BUGGY FUNCTION ===");
 console.log(formatAs12HourClock("00:00"), "→ Expected: 12:00 am ❌"); // Bug: midnight
 console.log(formatAs12HourClock("12:00"), "→ Expected: 12:00 pm ❌"); // Bug: noon
