@@ -41,3 +41,9 @@
 - Error shown:
 - Why it happens:
 - MDN link (optional):
+### 4.js
+
+- Error shown: `SyntaxError: Invalid or unexpected token`
+- Why it happens: The variable name `12HourClockTime` starts with a number. JavaScript identifiers cannot begin with a digit, so the parser throws a syntax error.
+- Concept: Variable naming rules (identifiers must start with a letter, `_`, or `$`)
+- MDN link: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
