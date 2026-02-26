@@ -4,3 +4,32 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
+
+
+function toPounds(penceString) {
+  const penceStringWithoutTrailingP = penceString.substring(
+    0,
+    penceString.length - 1
+  );
+
+  const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+
+  const pounds = paddedPenceNumberString.substring(
+    0,
+    paddedPenceNumberString.length - 2
+  );
+
+  const pence = paddedPenceNumberString
+    .substring(paddedPenceNumberString.length - 2)
+    .padEnd(2, "0");
+
+  return `£${pounds}.${pence}`;
+}
+
+console.log (toPounds("399p")); //£3.99
+console.log (toPounds("156p")); //£1.56
+console.log (toPounds("10p")); //£0.10
+console.log (toPounds("56p")); //£0.56
+console.log (toPounds("25p"));  // £0.25
+
+// After running node it printed the above respectively.
