@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 9; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -6,7 +6,7 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+const result = `${totalHours}:${String(remainingMinutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`;
 console.log(result);
 
 // For the piece of code above, read the code and then answer the following questions
@@ -34,3 +34,4 @@ console.log(result);
 // No. Not for all possible values of movieLength, some EdgeCases are: 
 //1. when movieLength is of negative value, the maths produces negative time and its illogical for a movie duration
 //2. if movieLength is not a number, its produces "NAN" and this breaks mathematically
+//3. what if movieLength is less than 10? if movieLength is let say 9 , without proper formatting it will look like this 0:0:9 but with 0 padding it looks better like this 0:00:09

@@ -24,4 +24,7 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+/* 1. const penceString = "399p": initializes a string variable with the value "399p"
+   2. const penceStringWithoutTrailingP = This stores the substring of penceString without a trailing p, so "399p" becomes "399"
+   3. const paddedPenceNumberString= 
+*/
