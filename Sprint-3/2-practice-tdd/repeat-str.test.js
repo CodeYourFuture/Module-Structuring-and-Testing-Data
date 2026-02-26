@@ -9,7 +9,7 @@ const repeatStr = require("./repeat-str");
 // When the repeatStr function is called with these inputs,
 // Then it should return a string that contains the original `str` repeated `count` times.
 
-test("should repeat the string count times", () => {
+test("should return 'hellohellohello' when called with str='hello' and count=3", () => {
   const str = "hello";
   const count = 3;
   const repeatedStr = repeatStr(str, count);
@@ -20,7 +20,7 @@ test("should repeat the string count times", () => {
 // Given a target string `str` and a `count` equal to 1,
 // When the repeatStr function is called with these inputs,
 // Then it should return the original `str` without repetition.
-test("should repeat string count times", () => {
+test("should return 'bye' when called with str='bye' and count=1", () => {
   const str = "bye";
   const count = 1;
   const repeatedStr = repeatStr(str, count);
@@ -31,7 +31,7 @@ test("should repeat string count times", () => {
 // Given a target string `str` and a `count` equal to 0,
 // When the repeatStr function is called with these inputs,
 // Then it should return an empty string.
-test("should repeat string count times", () => {
+test("should return an empty string when called with str='no' and count=0", () => {
   const str = "no";
   const count = 0;
   const repeatedStr = repeatStr(str, count);
