@@ -1,7 +1,7 @@
 function getOrdinalNumber(num) {
   let numberToString = String(num);
-  let numberLastDigit = numberToString[numberToString.length - 1];
-  let numberLast2Digits = numberToString.slice(numberToString.length - 2);
+  let numberLastDigit = numberToString.slice(-1);
+  let numberLast2Digits = numberToString.slice(-2);
 
   if (numberLastDigit === "1" && numberLast2Digits !== "11")
     return numberToString + "st";
@@ -11,5 +11,6 @@ function getOrdinalNumber(num) {
     return numberToString + "rd";
   return numberToString + "th";
 }
+
 
 module.exports = getOrdinalNumber;
