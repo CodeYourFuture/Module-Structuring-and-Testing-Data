@@ -13,7 +13,15 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+// bmi = weight / height**2).
 
+ // return the BMI of someone based off their weight and height
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+    return  (weight/(Math.pow(height, 2))).toFixed(1);
+   
 }
+console.log(calculateBMI(100, 1.6)); //print 39.1
+console.log(calculateBMI(55, 1.6)); //print 21.5
+
+// I used Math.pow to raise the height to the power of 2 and .toFixed
+//for the number of decimal places.
