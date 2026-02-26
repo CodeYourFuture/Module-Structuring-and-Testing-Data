@@ -15,8 +15,13 @@
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 function changeToUpperCaseSnake(string) {
-    return string.toUpperCase();
+    return string.toUpperCase().replaceAll(" ", "_");
 }
 
 console.log(changeToUpperCaseSnake("hello there"));
 console.log(changeToUpperCaseSnake("lord of the rings"));
+console.log(changeToUpperCaseSnake("learning to love Javascript"));
+
+// 1.Capitalise = .toUpperCase
+// 2.Find blank space = .replaceAll ("", ...)
+// 3.replace with _  = ,replaceAll (..., "_")
