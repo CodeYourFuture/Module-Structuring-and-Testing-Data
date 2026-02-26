@@ -49,3 +49,15 @@ function formatAs12HourClockFixed(time) {
   return `${time.slice(0, 5)} am`;
 }
 
+console.log("=== Test for fixed function ===\n");
+
+console.log(formatAs12HourClockFixed("00:00"), "→ Expected: 12:00 am");
+console.log(formatAs12HourClockFixed("00:30"), "→ Expected: 12:30 am");
+console.log(formatAs12HourClockFixed("01:00"), "→ Expected: 01:00 am");
+console.log(formatAs12HourClockFixed("08:15"), "→ Expected: 08:15 am");
+console.log(formatAs12HourClockFixed("11:59"), "→ Expected: 11:59 am");
+console.log(formatAs12HourClockFixed("12:00"), "→ Expected: 12:00 pm");
+console.log(formatAs12HourClockFixed("12:30"), "→ Expected: 12:30 pm");
+console.log(formatAs12HourClockFixed("13:00"), "→ Expected: 01:00 pm");
+console.log(formatAs12HourClockFixed("14:45"), "→ Expected: 02:45 pm");
+console.log(formatAs12HourClockFixed("23:59"), "→ Expected: 11:59 pm");
