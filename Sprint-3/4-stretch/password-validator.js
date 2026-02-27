@@ -4,7 +4,7 @@ function passwordValidator(password) {
   // Rule 1: Minimum length
   if (password.length < 5) return false;
 
-  // Rule 2: Uppercase
+  // Rule 2: Uppercases 
   if (!/[A-Z]/.test(password)) return false;
 
   // Rule 3: Lowercase
