@@ -50,3 +50,42 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
+// Invalid cards
+
+// Invalid string
+try {
+  getCardValue("invalid");
+  console.error("Error not thrown for invalid string");
+} catch (e) {}
+
+// Invalid suit
+try {
+  getCardValue("A?");
+  console.error("Error not thrown for invalid suit");
+} catch (e) {}
+
+// Invalid rank
+try {
+  getCardValue("1♠");
+  console.error("Error not thrown for invalid rank");
+} catch (e) {}
+
+// Missing suit
+try {
+  getCardValue("A");
+  console.error("Error not thrown for missing suit");
+} catch (e) {}
+
+// Empty string
+try {
+  getCardValue("");
+  console.error("Error not thrown for empty string");
+} catch (e) {}
+
+// Not a string
+try {
+  getCardValue(123);
+  console.error("Error not thrown for non-string input");
+} catch (e) {}
+
+console.log("All tests executed");

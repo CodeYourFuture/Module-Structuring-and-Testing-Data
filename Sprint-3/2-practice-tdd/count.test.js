@@ -1,5 +1,15 @@
 // implement a function countChar that counts the number of times a character occurs in a string
+
 const countChar = require("./count");
+
+test("should count multiple occurrences of a character", () => {
+  expect(countChar("aaaaa", "a")).toEqual(5);
+});
+
+test("should return 0 when character is not found", () => {
+  expect(countChar("hello", "z")).toEqual(0);
+});
+
 // Given a string `str` and a single character `char` to search for,
 // When the countChar function is called with these inputs,
 // Then it should:
