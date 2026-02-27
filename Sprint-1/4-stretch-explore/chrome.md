@@ -16,3 +16,14 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+
+//What effect does calling the `alert` function have?
+a pop up appered  saying hello world
+
+Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
+
+What effect does calling the `prompt` function have?
+it give a pop up with a text input 
+What is the return value of `prompt`?
+the return is what is entered into the text input if it is blank you will get ''
+
