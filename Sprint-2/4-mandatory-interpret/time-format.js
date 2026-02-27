@@ -20,12 +20,12 @@ console.log(formatTimeDisplay(61));
 
 // a) When formatTimeDisplay is called how many times will pad be called?
 // =============> write your answer here
-//  It will be called 3 times. 1 for hours, 1 for minutes, 1 for seconds.
-//  return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
+//    It will be called 3 times. 1 for hours, 1 for minutes, 1 for seconds.
+//    return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 
-//  Call formatTimeDisplay with an input of 61, now answer the following:
-//  [Running] node "/home/justice/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-2/4-mandatory-interpret/time-format.js"
-//   00:01:01
+//    Call formatTimeDisplay with an input of 61, now answer the following:
+//    [Running] node "/home/justice/Documents/CYF/Module-Structuring-and-Testing-Data/Sprint-2/4-mandatory-interpret/time-format.js"
+//    00:01:01
 
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
