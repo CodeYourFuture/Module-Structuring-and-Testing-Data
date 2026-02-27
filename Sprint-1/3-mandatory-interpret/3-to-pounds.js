@@ -22,6 +22,13 @@ console.log(`£${pounds}.${pence}`);
 
 // You need to do a step-by-step breakdown of each line in this program
 // Try and describe the purpose / rationale behind each step
+// 1. Stores "399p" as a string
+// 2. removes the "p" at the end 
+// 3.  adds zeros at the start if needed to make it 3 digits.
+// 4. Takes everything except the last 2 digits as pounds.
+// 5. Prints the result in this format: £3.99
 
-// To begin, we can start with
+// I also tested it by changing 399p to 50p and the result was £0.50 thats shows diffrent numbers well have diffrent outputs
+
+// To begin, we can start wit
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
