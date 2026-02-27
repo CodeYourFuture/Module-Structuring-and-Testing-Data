@@ -20,3 +20,23 @@ console.log(`The percentage change is ${percentageChange}`);
 // d) Identify all the lines that are variable declarations
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+
+// a) there are 5 function calls in this file,// Line 4: replaceAll(",", "") and Number()
+// Line 5: replaceAll(",", "") and Number()
+// Line 9: console.log()
+
+// b) The error is coming from line 4 and line 5.
+//  The error occurs because the replaceAll method is being called on a string that contains a comma, which is not a valid number.
+//  To fix this problem, we can remove the commas from the strings before converting them to numbers. 
+
+// c) The variable reassignment statements are on line 4 and line 5, where carPrice and 
+// priceAfterOneYear are being reassigned to the result of the Number() function.
+
+// d) The variable declarations are on line 1 and line 2, where carPrice and priceAfterOneYear are declared and initialized with string values.
+
+// e) The expression Number(carPrice.replaceAll(",","")) is doing the following:
+// 1. This part of the expression takes the string value of carPrice (which is "10,000") and removes all comma, resulting in the string "10000".
+// 2. Number(...): This part takes the resulting string "10000" and converts it into a number (10000). 
+
