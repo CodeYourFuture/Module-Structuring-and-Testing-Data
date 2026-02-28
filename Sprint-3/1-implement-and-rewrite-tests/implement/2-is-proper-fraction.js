@@ -12,8 +12,19 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
-}
 
+  if (denominator === 0) {
+    return false; // A fraction with a denominator of 0 is undefined, so it's not a proper fraction.
+  }
+  if (numerator === 0) {
+    return true; // A fraction with a numerator of 0 is a proper fraction (0/1 = 0).
+  }
+  if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true; // If the absolute value of the numerator is less than the absolute value of the denominator,
+    // it's a proper fraction.
+  }
+  return false; // Otherwise, it's not a proper fraction.
+}
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
@@ -31,3 +42,15 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+
+// Example: 2/1 is not a proper fraction
+assertEquals(isProperFraction(2, 1), false);
+
+// Example: 0/5 is a proper fraction
+assertEquals(isProperFraction(0, 5), true);
+
+// Example: -5/10 is a proper fraction
+assertEquals(isProperFraction(-5, 10), true);
+
+// Example: 0/0 is not a proper fraction
+assertEquals(isProperFraction(0, 0), false);
