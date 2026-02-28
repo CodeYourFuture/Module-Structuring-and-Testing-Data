@@ -14,15 +14,3 @@ function getOrdinalNumber(num) {
 // console.log(getOrdinalNumber(13));// prints 13th
 
 module.exports = getOrdinalNumber;
-
-
-// function assertEquals(actualOutput, targetOutput) {
-//   console.assert(
-//     actualOutput === targetOutput,
-//     `Expected ${actualOutput} to equal ${targetOutput}`
-//   );
-// }
-
-// assertEquals(getOrdinalNumber("13" ), "13th");
-// //assertEquals(countChar("venue", "b" ), 0);
-// //assertEquals(countChar("", "x" ), 0); 
