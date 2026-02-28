@@ -12,8 +12,8 @@ function calculateBMI(weight, height) {
   // 2. Divide weight by height squared (الوزن تقسيم الطول المربع)
   const bmi = weight / heightSquared;
 
-  // 3. Return the result to 1 decimal place (إرجاع النتيجة بخانة عشرية واحدة)
-  return bmi.toFixed(1);
+  // 3. Return the result to 1 decimal place as a NUMBER (إرجاع النتيجة بخانة عشرية واحدة كرقم)
+  return Number(bmi.toFixed(1));
 }
 
 // === Let's test the function to see if it works! ===

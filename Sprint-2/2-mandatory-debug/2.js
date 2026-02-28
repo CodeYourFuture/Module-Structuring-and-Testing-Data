@@ -4,9 +4,6 @@
 // ===========> Write your prediction here
 // Prediction: The output will incorrectly say the last digit is "3" for all numbers, because the function uses the global variable 'num' (103) instead of accepting a parameter.
 
-// We don't need this global variable, so I commented it out:
-// const num = 103;
-
 // We added 'num' as a parameter inside the parentheses
 function getLastDigit(num) {
   return num.toString().slice(-1);
