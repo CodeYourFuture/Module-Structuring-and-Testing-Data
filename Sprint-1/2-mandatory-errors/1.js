@@ -7,6 +7,7 @@ age = age + 1;
 
 /**
  * There's a problem with your code. It's trying to reassign a value to a const variable, which is not allowed in JavaScript as const variables cannot be changed after they're declared.
+ * It returns a 'TypeError: Assignment to constant variable'
  * To fix this, you should use let instead:
 */
 
