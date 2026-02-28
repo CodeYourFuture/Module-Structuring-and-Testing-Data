@@ -1,4 +1,4 @@
-// Implement a function repeatStr
+// Implement a function repeatStr.
 const repeatStr = require("./repeat-str");
 // Given a target string `str` and a positive integer `count`,
 // When the repeatStr function is called with these inputs,
