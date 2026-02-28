@@ -8,7 +8,9 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
-// Answer
+
+
+Answer
 
 // 1. 
 // The num in this scenario represent any integer between 1 and 100
