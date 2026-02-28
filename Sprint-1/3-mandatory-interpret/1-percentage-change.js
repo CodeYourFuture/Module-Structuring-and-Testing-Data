@@ -2,7 +2,7 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
@@ -16,7 +16,6 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // Error occurs on line 5 because the second argument to replaceAll is missing quotes.
-// Fix: Change `replaceAll("," ""))` to `replaceAll(",", ""))`
 
 // c) Identify all the lines that are variable reassignment statements
 // Line 4: carPrice = Number(carPrice.replaceAll(",", ""));
