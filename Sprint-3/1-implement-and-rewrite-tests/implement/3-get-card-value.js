@@ -130,3 +130,14 @@ try {
   getCardValue("");
   console.error("Error was not thrown for empty string");
 } catch (e) {}
+
+// Invalid extra characters in rank
+try {
+  getCardValue("2.♠");
+  console.error("Should have thrown for '2.♠'");
+} catch (e) {}
+
+try {
+  getCardValue("+2♠");
+  console.error("Should have thrown for '+2♠'");
+} catch (e) {}
