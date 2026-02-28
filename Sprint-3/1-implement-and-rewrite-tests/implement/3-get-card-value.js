@@ -70,6 +70,10 @@ assertEquals(getCardValue("9♠"), 9);
 const twoofHearts = getCardValue("2♥");
 assertEquals(twoofHearts, 2);
 
+// Added: test for 2♠, returns 2
+const twoofSpades = getCardValue("2♠");
+assertEquals(twoofSpades, 2);
+
 const fiveofDiamonds = getCardValue("5♦");
 assertEquals(fiveofDiamonds, 5);
 
