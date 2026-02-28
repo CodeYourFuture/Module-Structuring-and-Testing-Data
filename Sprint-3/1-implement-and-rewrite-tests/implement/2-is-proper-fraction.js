@@ -11,14 +11,13 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
-  if (denominator <= 0) {
-    return false; // not a valid fraction
+  // Denominator cannot be zero
+  if (denominator === 0) {
+    return false; 
   }
-  if (numerator < denominator && numerator >= 0) {
-    return true;
-  }
-  return false;
+  // A proper fraction satisfies: numerator < denominator 
+  // This correctly handles all sign combinations
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -63,15 +62,15 @@ assertEquals(numeratorLarger, false);
 const zeroDenominator = isProperFraction(5, 0);
 assertEquals(zeroDenominator, false);
 
-// Example: 2/-6 is an invalid fraction
-// Negative denominator makes fraction invalid
+// Example: 2/-6 is a proper fraction
+// Negative denominator is now allowed 
 const negativeDenominator = isProperFraction(2, -6);
-assertEquals(negativeDenominator, false);
+assertEquals(negativeDenominator, true);
 
 // Example: -1/4 is an invalid fraction
-// Negative numerator makes fraction negative
+// Negative numerator is now allowed
 const negativeNumerator = isProperFraction(-1, 4);
-assertEquals(negativeNumerator, false);
+assertEquals(negativeNumerator, true);
 
 // Example: 1/100 is a positive fraction
 // Small numerator with large denominator
