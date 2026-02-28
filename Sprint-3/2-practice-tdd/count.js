@@ -9,18 +9,18 @@ function countChar(stringOfCharacters, findCharacter) {
 }
 //console.log(countChar("please work for me", "e" )) //output is: 3
 
-// module.exports = countChar;
+module.exports = countChar;
 
-// function assertEquals(actualOutput, targetOutput) {
-//   console.assert(
-//     actualOutput === targetOutput,
-//     `Expected ${actualOutput} to equal ${targetOutput}`
-//   );
-// }
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected ${actualOutput} to equal ${targetOutput}`
+  );
+}
 
-// assertEquals(countChar("aaaaa", "a" ), 5);
-// assertEquals(countChar("venue", "b" ), 0);
-// assertEquals(countChar("", "x" ), 0); 
+assertEquals(countChar("aaaaa", "a" ), 5);
+assertEquals(countChar("venue", "b" ), 0);
+assertEquals(countChar("", "x" ), 0); 
 
 // try {
 //   countChar(12);
