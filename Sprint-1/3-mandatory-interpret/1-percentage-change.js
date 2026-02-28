@@ -2,7 +2,7 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
@@ -14,7 +14,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 // Answer: There are 5 function calls in total. They are located on lines 4, 5, and 10.
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-// Answer: The error comes from line 4. Since JavaScript executes from top to bottom, it crashes on line 4 because we are trying to reassign a new value to `carPrice`, which was originally declared as a `const`. To fix it, change `const` to `let` on lines 1 and 2.
+// Answer: The error comes from line 5. The error was that there was a comma missing in the replaceAll function.
 // c) Identify all the lines that are variable reassignment statements
 // Answer: Lines 4 and 5.
 // d) Identify all the lines that are variable declarations
