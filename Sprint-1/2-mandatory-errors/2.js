@@ -3,3 +3,4 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+Because the const varibale is decalred after it is used in the console={.log} statement and it should be decalred befor to be executed. 
