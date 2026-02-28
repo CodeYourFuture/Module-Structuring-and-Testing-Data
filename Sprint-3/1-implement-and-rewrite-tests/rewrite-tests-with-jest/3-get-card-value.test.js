@@ -44,6 +44,13 @@ test(`Should throw error for invalid cards`, () => {
   expect(() => getCardValue("")).toThrow();
 });
 
+test(`Should throw error for extra characters in rank`, () => {
+  // trailing dot
+  expect(() => getCardValue("2.♠")).toThrow();
+  // leading +  
+  expect(() => getCardValue("+2♠")).toThrow();   
+});
+
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
