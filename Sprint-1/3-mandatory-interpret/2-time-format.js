@@ -6,7 +6,12 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+// helper to ensure two‑digit formatting
+function twoDigits(n) {
+    return String(n).padStart(2, '0');
+}
+
+const result = `${twoDigits(totalHours)}:${twoDigits(remainingMinutes)}:${twoDigits(remainingSeconds)}`;
 console.log(result);
 
 // For the piece of code above, read the code and then answer the following questions
