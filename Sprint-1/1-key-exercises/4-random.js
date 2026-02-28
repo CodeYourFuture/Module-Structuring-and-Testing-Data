@@ -13,5 +13,8 @@ console.log(num);
 // Math.floor https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
 // mdn order of operations javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence
 
-
-// It generates a random whole number between 1 and 100
+// Math.random() generates a decimal number greater than or equal to 0
+// and less than 1 (0 <= n < 1).
+// Multiplying by 100 gives a number from 0 up to (but not including) 100.
+// Math.floor() rounds this down to a whole number from 0 to 99.
+// Adding 1 shifts the range to 1–100 inclusive.
