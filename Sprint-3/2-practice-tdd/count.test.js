@@ -32,7 +32,6 @@ test("should return 0 when the character does not occur in the string", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
-
 // Scenario: Case Sensitivity
 test("should be case sensitive", () => {
   const str = "Hello World";
