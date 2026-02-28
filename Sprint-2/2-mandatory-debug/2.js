@@ -24,7 +24,7 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 // =============> the variable num is assigned to the value 103 in the global scope and not assigned to any value in the function scope
 // Finally, correct the code to fix the problem
 // =============> write your new code here
-function getLastDigit(num) { // we add the identier num as parameter to the function getLastDigit
+function getLastDigit(num) { // we add the identifier num as parameter to the function getLastDigit
   return num.toString().slice(-1);
 }
 
