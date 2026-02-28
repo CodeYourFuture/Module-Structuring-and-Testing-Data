@@ -45,7 +45,7 @@ assertEquals(getCardValue("9♠"), 9);
 try {
   getCardValue("invalid");
 
-  // This line will not be reached if an error is thrown as expected.
+  // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
 
