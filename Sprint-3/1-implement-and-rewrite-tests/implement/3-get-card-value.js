@@ -40,14 +40,13 @@ function getCardValue(card) {
   if (rank === 'A') return 11;
   // Special case: Face cards (Jack, Queen, King) are worth 10
   if (rank === 'J' || rank === 'Q' || rank === 'K') return 10;
-  // For number cards (2-10): converts rank string into number
-  const value = Number(rank);
-  // Makes sure it's actually a valid number between 2 and 10
-  if (isNaN(value) || value < 2 || value > 10) {
+  // Strict validation: only accept exact number rank strings ("2" to "10")
+  // Reject anything with extra characters (dots, +, spaces, leading zeros, etc.)
+  const allowedNumberRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  if (!allowedNumberRanks.includes(rank)) {
     throw new Error('Invalid rank');
-  }
-  // Return the numeric value for 2-10
-  return value;
+}
+return Number(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
