@@ -1,7 +1,7 @@
 // Predict and explain first...
 
 // Predict the output of the following code:
-// =============> Write your prediction here
+// =============> 
 
 const num = 103;
 
