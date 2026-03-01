@@ -22,9 +22,25 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
-}
+   if (typeof card !== "string") {
+    throw new Error("Invalid card");
+  }
+  let rank = card.slice(0, -1); // Get everything except the last character
+  let suit = card.slice(-1);    //  Get the last character
+  
+  const validSuits = ["♠", "♥", "♦", "♣"]; // check if suit is valid
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card");
+  }
 
+  if (rank === "A"){
+    return 11;
+  }else if(rank.match(/J|Q|K/)){
+    return 10;
+  }else if(rank.match(/^(10|[2-9])$/)){
+    return Number(rank);
+  }else throw new Error("Invalid card");
+}
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -36,17 +52,48 @@ function assertEquals(actualOutput, targetOutput) {
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
-
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
-// Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♦"), 11);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♥"), 10);
+assertEquals(getCardValue("K♠"), 10);
+assertEquals(getCardValue("3♦"), 3);
 
-// Handling invalid cards
 try {
-  getCardValue("invalid");
+  getCardValue("J");
 
-  // This line will not be reached if an error is thrown as expected
+  // The below line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
-
+} catch (e) {
+  console.log('Test passed for "J": caught error ->', e.message);
+}
 // What other invalid card cases can you think of?
+
+try {
+  getCardValue("9X");   // invalid suit
+  console.error('Test failed for "9X": error was not thrown');
+} catch (e) {
+  console.log('Test passed for "9X": caught error ->', e.message);
+}
+
+try {
+  getCardValue("1♠");   // invalid rank
+  console.error('Test failed for "1♠": error was not thrown');
+} catch (e) {
+  console.log('Test passed for "1♠": caught error ->', e.message);
+}
+
+try {
+  getCardValue("0♥");   // invalid rank
+  console.error('Test failed for "0♥": error was not thrown');
+} catch (e) {
+  console.log('Test passed for "0♥": caught error ->', e.message);
+}
+
+try {
+  getCardValue("ABC");  // completely wrong format
+  console.error('Test failed for "ABC": error was not thrown');
+} catch (e) {
+  console.log('Test passed for "ABC": caught error ->', e.message);
+}
