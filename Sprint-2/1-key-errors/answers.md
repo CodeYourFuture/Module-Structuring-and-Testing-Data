@@ -64,3 +64,29 @@
 }
 
 console.log(convertToPercentage(0.5));
+
+
+
+
+## 2.js
+
+- Predicted error: SyntaxError (invalid function parameter)
+
+- Actual error: SyntaxError: Unexpected number
+
+- Why it happens:  
+  The function is declared as `function square(3)`.  
+  Function parameters must be variable names (identifiers), not literal values.  
+  The number `3` is not a valid parameter name, so JavaScript throws a syntax error.
+
+- Concept tested:  
+  Function declaration syntax and valid parameter identifiers.
+
+- Minimal fix:
+
+```js
+function square(number) {
+  return number * number;
+}
+
+console.log(square(3));
