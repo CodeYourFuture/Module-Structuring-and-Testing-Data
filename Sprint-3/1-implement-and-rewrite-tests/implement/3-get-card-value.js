@@ -25,28 +25,28 @@ function getCardValue(card) {
   // TODO: Implement this function
   // Checks that input is a string and has correct length,
   // 2 chars for 2-9/A/J/Q/K, 3 chars for 10
-  if (typeof card !== 'string' || (card.length !== 2 && card.length !==3)) {
-    throw new Error('Invalid card format');
+  if (typeof card !== "string" || (card.length !== 2 && card.length !== 3)) {
+    throw new Error("Invalid card format");
   }
   // Get the suit, always the last character
   const suit = card.slice(-1);
   // Get the rank, everything except the last character
   const rank = card.slice(0, -1);
   // Checks if suit is one of the four allowed symbols
-  if (!'♠♥♦♣'.includes(suit)) {
-    throw new Error('Invalid suit');
+  if (!"♠♥♦♣".includes(suit)) {
+    throw new Error("Invalid suit");
   }
   // Special case: Ace is worth 11
-  if (rank === 'A') return 11;
+  if (rank === "A") return 11;
   // Special case: Face cards (Jack, Queen, King) are worth 10
-  if (rank === 'J' || rank === 'Q' || rank === 'K') return 10;
+  if (rank === "J" || rank === "Q" || rank === "K") return 10;
   // Strict validation: only accept exact number rank strings ("2" to "10")
   // Reject anything with extra characters (dots, +, spaces, leading zeros, etc.)
   const allowedNumberRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
   if (!allowedNumberRanks.includes(rank)) {
-    throw new Error('Invalid rank');
-}
-return Number(rank);
+    throw new Error("Invalid rank");
+  }
+  return Number(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
