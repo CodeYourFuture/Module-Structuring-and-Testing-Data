@@ -49,10 +49,22 @@ function assertEquals(actualOutput, targetOutput) {
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
 
-// Tests
-assertEquals(getAngleType(45), "Acute angle");
-assertEquals(getAngleType(0), "Invalid angle");
-assertEquals(getAngleType(91), "Obtuse angle");
-assertEquals(getAngleType(180), "Straight angle");
+// acute angles
+const acute = getAngleType(45);
+assertEquals(acute, "Acute angle");
+
+// invalid angle
+const invalid = getAngleType(0);
+assertEquals(invalid, "Invalid angle");
+
+// obtuse angle
+const obtuse = getAngleType(91);
+assertEquals(obtuse, "Obtuse angle");
+
+// straight angle
+const straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
+
+// other invalid angles
 assertEquals(getAngleType(360), "Invalid angle");
 assertEquals(getAngleType(-180), "Invalid angle");
