@@ -21,8 +21,8 @@ console.log(result);
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 // % 60 is a remainder operator which in this case divides the total by 60 and shares the remainder (seconds / minutes)
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
-// The expression assigned to total minutes is the difference of the total movie time in seconds less the remainder of the seconds divided by 60 which gives the total length of the movie in minutes
+// It gives the total number of minutes in the movie, ignoring any leftover seconds.
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // The variable result represents the time of the movie in Hours Mintutes and seconds. We could use time instead of result
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-// Yes. This code will work for all values of movie length. I tried with 8400 seconds and 8405 seconds
+// Yes. This code will work for all values of movie length. Decimal numbers or string, NAN, undefined or Null could break the code.
