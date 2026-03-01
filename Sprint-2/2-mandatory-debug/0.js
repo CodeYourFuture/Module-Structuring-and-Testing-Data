@@ -5,11 +5,11 @@
 // but the final console.log will show "undefined"
 // because multiply does not return a value.
 
-function multiply(a, b) {
-  console.log(a * b);
-}
+// function multiply(a, b) {
+//   console.log(a * b);
+// }
 
-console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
+// console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
 // =============> write your explanation here
 // The function multiply only logs the result using console.log,
@@ -25,4 +25,5 @@ function multiply(a, b) {
 }
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
+
 
