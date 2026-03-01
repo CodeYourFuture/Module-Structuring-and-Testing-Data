@@ -3,7 +3,7 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 // --- > Debugging this code was not easy for me, I could solve this by the help of AI Explaining each step and conditions and finally we made it work well with different inputs, I mean string with number character.
 
-function formatAs12HourClock(time) {
+/*function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(2);
 
@@ -27,7 +27,37 @@ function formatAs12HourClock(time) {
   } else {
     return `${formattedHours}${minutes} am`;
   }
+} */
+
+function formatAs12HourClock(time) {
+  let parts = time.split(":");
+  let hours = Number(parts[0]);
+  let minutes = parts[1];
+  
+  let period = "am";
+  if (hours >= 12) {
+    period = "pm";
+  }
+  if (hours === 0) {
+    hours = 12;
+  } else if (hours >= 12) {
+    hours = hours - 12;
+  }
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (typeof time !== "string" || !time.includes(":")) {
+    return "Invalid input: please enter time in HH:MM format"
+  } if (
+    isNaN(hours) || hours < 0 || hours > 23 
+    || isNaN(Number(minutes)) || Number(minutes) < 0 
+    || Number(minutes) > 59
+  ) {
+    return "Invalid input: hours must be 0-23 and minutes 0-59";
+  }
+  return `${hours}:${minutes} ${period}`;
 }
+console.log(formatAs12HourClock("19"));
 
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
@@ -47,3 +77,5 @@ console.assert(formatAs12HourClock("12:00") === "12:00 pm");
 console.assert(formatAs12HourClock("13:05") === "01:05 pm");
 console.assert(formatAs12HourClock("01:05") === "01:05 am");
 console.assert(formatAs12HourClock("23:59") === "11:59 pm");
+
+// after receiving the feedback I wrote the function from scratch and at the end added an other condition to check the input for validation or correct input. if the user puts incorrect input then he will receive a message to correct his input.

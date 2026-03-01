@@ -17,7 +17,8 @@
 function calculateBMI(weight, height) {
     let heightSquare = height * height;
     let bmi = weight / heightSquare;
-    console.log(`Your BMI is ${bmi.toFixed(1)}`)
-    return bmi;
+    return bmi.toFixed(1);
 }
-calculateBMI(65, 1.73); // ==> 21.7
+console.log(calculateBMI(65, 1.73)); // ==> 21.7
+
+// Thanks for mentioning the issue! Indeed its not a good idea to have the console.log() inside our function block.

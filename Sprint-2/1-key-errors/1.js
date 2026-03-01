@@ -20,7 +20,8 @@ console.log(decimalNumber);*/
 // =============> write your new code here
 function convertToPercentage(decimalNumber) {
   const percentage = `${decimalNumber * 100}%`;
-  console.log(`Your Decimal number will be ${percentage}.`);
   return percentage;
 }
-convertToPercentage(0.9);
+console.log(convertToPercentage(0.9));
+
+// I have removed the log inside the function, as we did not need to print that message each time we call the function.
