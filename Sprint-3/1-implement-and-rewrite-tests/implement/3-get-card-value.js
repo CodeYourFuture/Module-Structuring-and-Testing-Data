@@ -71,5 +71,19 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
-assertEquals(getCardValue("♦♦"), "invalid");  // throws an error for this example
-assertEquals(getCardValue("12"), "Error");
+// Handling invalid cards
+function assertThrows(testFunction) {
+  let threw = false;
+
+  try {
+    testFunction();
+  } catch (error) {
+    threw = true;
+  }
+
+  console.assert(threw, "Expected function to throw an error.")
+}
+
+assertThrows(() => getCardValue("1♣"));
+assertThrows(() => getCardValue("12"));
+assertThrows(() => getCardValue("♦3"));
