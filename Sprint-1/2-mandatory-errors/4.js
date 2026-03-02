@@ -1,7 +1,7 @@
-const Hour12ClockTime = "20:53";
+const hour12ClockTime = "20:53";
 const hour24ClockTime = "08:53";
 
-console.log(Hour12ClockTime); //"20;53"
+console.log(hour12ClockTime); //"20;53"
 console.log(hour24ClockTime); // "08:53"
 
 // SyntaxError: Invalid or unexpected token.
