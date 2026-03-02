@@ -33,4 +33,4 @@
     return `${decimalNumber * 100}%`;
   }
 
-  console.log(decimalNumber);
+  console.log(convertToPercentage(0.5));//returns 50%
