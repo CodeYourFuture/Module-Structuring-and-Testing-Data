@@ -2,8 +2,6 @@ const cardNumber = 4533787178994213;
 const last4Digits = cardNumber.toString().slice(-4);
 console.log(last4Digits);
 
-
-
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
 // Before running the code, make and explain a prediction about why the code won't work
@@ -13,6 +11,6 @@ console.log(last4Digits);
 
 /*
 Prediction: It wont work because cardNumber is a number and slice() only works on strings.
-Error: TypeError - cardnumber.slice is not a function. 
+Error: TypeError - cardnumber.slice is not a function.
 Explanation: Numbers dont have the slice method.
 */
