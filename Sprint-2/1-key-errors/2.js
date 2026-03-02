@@ -5,9 +5,9 @@
 // =============> write your prediction of the error here
 // SyntaxError: Unexpected number
 
-function square(3) {
-    return num * num;
-}
+// function square(3) {
+//     return num * num;
+// }
 
 // =============> write the error message here
 // SyntaxError: Unexpected number
@@ -26,3 +26,4 @@ function square(num) {
 }
 
 console.log(square(3));
+
