@@ -56,4 +56,5 @@ assertEquals(isProperFraction(10, -2), false);
 assertEquals(isProperFraction(1, 0), false);
 assertEquals(isProperFraction(0, 0), false);
 
-console.log("All tests passed!");
+
+
