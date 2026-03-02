@@ -24,9 +24,15 @@
 function getCardValue(card) {
   const cardNum = card.slice(0, -1)
   const cardSuit = card.slice(-1)
-  if (cardNum === "A" && "♠♥♦♣".includes(cardSuit)) { return 11}
-  else if (["J", "Q", "K"].includes(cardNum)) { return 10}
-  else if (Number(cardNum) >= 2 && Number(cardNum) <= 10) {return Number(cardNum)}
+  if (cardNum === "A" && "♠♥♦♣".includes(cardSuit)) { 
+    return 11
+  }
+  else if (["J", "Q", "K"].includes(cardNum) && "♠♥♦♣".includes(cardSuit)) {
+    return 10
+  }
+  else if (Number(cardNum) >= 2 && Number(cardNum) <= 10 && "♠♥♦♣".includes(cardSuit)) {
+    return Number(cardNum)
+  }
   else throw new Error("Invalid card");
 }
 
@@ -57,24 +63,50 @@ try {
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
+} catch (e) {
+  assertEquals(e.message, "Invalid card")
+}
 try {
   getCardValue("♦Q");
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
+} catch (e) {
+  assertEquals(e.message, "Invalid card")
+}
 try {
   getCardValue("11♦");
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
+} catch (e) {
+  assertEquals(e.message, "Invalid card")
+}
 
 try {
   getCardValue("AX");
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
+} catch (e) {
+  assertEquals(e.message, "Invalid card")
+}
+
+try {
+  getCardValue("KX");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (e) {
+  assertEquals(e.message, "Invalid card")
+}
+
+try {
+  getCardValue("5X");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (e) {
+  assertEquals(e.message, "Invalid card")
+}
 // What other invalid card cases can you think of?

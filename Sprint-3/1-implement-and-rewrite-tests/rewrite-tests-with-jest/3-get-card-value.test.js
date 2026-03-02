@@ -32,6 +32,12 @@ test(`Should return Error when given an 11♦`, () => {
 test(`Should return Error when given an AX`, () => {
   expect(function() {getCardValue("AX")}).toThrow("Invalid card");
 });
+test(`Should return Error when given an KX`, () => {
+  expect(function() {getCardValue("KX")}).toThrow("Invalid card");
+});
+test(`Should return Error when given an 5X`, () => {
+  expect(function() {getCardValue("5X")}).toThrow("Invalid card");
+});
 
 
 // Suggestion: Group the remaining test data into these categories:
