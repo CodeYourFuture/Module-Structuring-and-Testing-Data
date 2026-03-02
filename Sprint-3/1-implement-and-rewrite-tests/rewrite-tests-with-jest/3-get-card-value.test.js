@@ -27,7 +27,7 @@ test(`Should return Error when given an 11♦`, () => {
   expect(function() {getCardValue("11♦")}).toThrow("Invalid card");
 });
 test(`Should return Error when given an AX`, () => {
-  expect(function() {getCardValue("11♦")}).toThrow("Invalid card");
+  expect(function() {getCardValue("AX")}).toThrow("Invalid card");
 });
 
 
