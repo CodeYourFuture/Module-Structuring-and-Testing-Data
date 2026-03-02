@@ -63,3 +63,5 @@ assertEquals(straightAngle, "Straight angle");
 assertEquals(invalid1, "Invalid angle");
 assertEquals(invalidAngle, "Invalid angle");
 assertEquals(reflexAngle2, "Reflex angle");
+assertEquals(acute3, "Acute angle");
+

@@ -12,6 +12,11 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
+  if(numerator>denominator) {
+    return false
+  }else{
+    return true
+  }
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -31,3 +36,12 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(1, 10000), true);
+assertEquals(isProperFraction(100, 2), false);
+assertEquals(isProperFraction(1, 0.005), false);
+assertEquals(isProperFraction(1e2, 1e3), true);
+assertEquals(isProperFraction(1e4, 1e0), false);
+assertEquals(isProperFraction(-1, 1), true);
+assertEquals(isProperFraction(1, -1), false);
+assertEquals(isProperFraction(0, -1), false);
+assertEquals(isProperFraction(-1, 0), true);
