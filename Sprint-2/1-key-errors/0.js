@@ -7,8 +7,8 @@ capitalise("hello world");
 // Error message: SyntaxError: Identifier 'str' has already been declared. The error is because the variable str has already been declared.
 
 function capitalise(str) {
-  let newStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return newStr;
+  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return str;
 }
 
 // =============> I've given the variable a new name, newStr, to avoid redclaring the variable.
