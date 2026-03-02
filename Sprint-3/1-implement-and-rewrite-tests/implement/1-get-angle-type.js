@@ -67,4 +67,3 @@ assertEquals(getAngleType(360), "Invalid angle");
 assertEquals(getAngleType(-10), "Invalid angle");
 assertEquals(getAngleType(400), "Invalid angle");
 
-console.log("All tests passed!");
