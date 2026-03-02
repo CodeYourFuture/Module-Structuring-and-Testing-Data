@@ -14,3 +14,18 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toUpperSnakeCase(str) {
+ 
+    return str.toUpperCase().split('').map(function(c) {  
+    // splits string into individual characters and maps each character to a new value
+   
+        return /[A-Z0-9]/.test(c) ? c : '_';
+        // checks if the character is an uppercase letter or a digit
+ 
+    }).join('');
+  // joins the array of characters back into a single string with underscores instead of spaces
+}
+
+console.log(toUpperSnakeCase("there-once was/a young lady from+London"));
+console.log(toUpperSnakeCase("hello.world! test+123"));
