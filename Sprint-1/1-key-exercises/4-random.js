@@ -20,8 +20,8 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 // Math.floor usually rounds the number down  to the nearest integer. 
 
-console.log (num); // first print is 24
-console.log (num); // second print 3
-console.log (num); // third print is 17
-console.log (num); // fourth print is 70
-console.log (num); // fifth print is 7
+console.log(num); // first print is 24
+console.log(num); // second print 3
+console.log(num); // third print is 17
+console.log(num); // fourth print is 70
+console.log(num); // fifth print is 7
