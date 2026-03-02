@@ -22,4 +22,4 @@ const ext = filePath.slice(filePath.lastIndexOf("."))       ;
 
 console.log("dir:", dir);
 console.log("ext:", ext);
-// https://www.google.com/search?q=slice+mdn
+// https://www.google.com/search?q=slice+mdns

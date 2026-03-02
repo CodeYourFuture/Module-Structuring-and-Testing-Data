@@ -17,7 +17,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // line 10 has a function call
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-// I have spotted the error in line 5 becouse there was a missing comma inside the brackets.
+// I have spotted the error on line 5 there was a missing coma between the two arguments of replaceAll() specifically between "," and "".
 
 // c) Identify all the lines that are variable reassignment statements
 // Line 4 and line 5 are variable reassignment statements.
@@ -29,5 +29,5 @@ console.log(`The percentage change is ${percentageChange}`);
 // line 8
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
-// The purpose of this expression is to remove the commas from the string value using the replaceAll().
+// replaceAll() removes commas and Number() converts the cleaned string into a number.
 

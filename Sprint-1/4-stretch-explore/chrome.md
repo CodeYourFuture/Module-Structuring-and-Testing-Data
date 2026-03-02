@@ -16,4 +16,4 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have? The prompt function displays a popup box asking you to enter a text and pausing the page until you click ok or cancel.
 
-What is the return value of `prompt`? Prompt returns the text entered by the user as a string if the user clicks cancel.
+What is the return value of `prompt`? Prompt returrns the text enterend by the user as a string if the user clicks OK, and returns null if the user clicks cancel.
