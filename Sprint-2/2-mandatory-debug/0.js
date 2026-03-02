@@ -1,6 +1,6 @@
 // Predict and explain first...
 
-// =============> write your prediction here
+// =============> write your prediction here: The function does not return any value so instead of 320 being printed, undefined will be printed instead.
 
 function multiply(a, b) {
   console.log(a * b);
@@ -8,7 +8,10 @@ function multiply(a, b) {
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
-// =============> write your explanation here
+// =============> write your explanation here: It is a logic error as it prints out an unexpected value, undefined.
 
 // Finally, correct the code to fix the problem
 //  =============> write your new code here
+//function multiply(a, b) {
+//   return a * b;
+//}
