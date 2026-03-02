@@ -6,6 +6,11 @@ function sayHello(greeting, name) {
   return `${greeting}, ${name}!`;
 }
 
-testName = "Aman";
-const greetingMessage = sayHello(greeting, testName);
-console.log(greetingMessage); // 'hello, Aman!'
+// Avoid polluting the global scope by keeping example data local
+function demo() {
+  const testName = "Aman"; // local variable
+  const greetingMessage = sayHello(greeting, testName);
+  console.log(greetingMessage); // 'hello, Aman!'
+}
+
+demo();
