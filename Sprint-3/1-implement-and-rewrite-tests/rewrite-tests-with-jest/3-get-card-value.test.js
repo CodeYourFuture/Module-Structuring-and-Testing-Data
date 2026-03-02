@@ -17,8 +17,11 @@ test(`Should return 2 when given an 2♥`, () => {
 test(`Should return 10 when given an 10♥`, () => {
   expect(getCardValue("10♥")).toEqual(10);
 });
-test(`Should return 10 when given an Q♦`, () => {
-  expect(getCardValue("Q♦")).toEqual(10);
+test(`Should return 10 when given an J♣`, () => {
+  expect(getCardValue("J♣")).toEqual(10);
+});
+test(`Should return 10 when given an K♠`, () => {
+  expect(getCardValue("K♠")).toEqual(10);
 });
 test(`Should return Error when given an ♦Q`, () => {
   expect(function() {getCardValue("♦Q");}).toThrow("Invalid card");
