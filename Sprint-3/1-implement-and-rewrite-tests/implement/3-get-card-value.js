@@ -22,7 +22,22 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const suits = ["♠", "♥", "♦", "♣"];
+  const rankPart = card.slice(0, card.length - 1);
+  const suitPart = card.slice(-1);
+
+  if (ranks.includes(rankPart) && suits.includes(suitPart)) {
+    if (rankPart == "A") {
+      return 11;
+    } else if (rankPart == "J" || rankPart == "Q" || rankPart == "K") {
+      return 10;
+    } else {
+      return Number(rankPart);
+    }
+  } else {
+    throw new Error("Error"); 
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -41,6 +56,12 @@ function assertEquals(actualOutput, targetOutput) {
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
 
+assertEquals(getCardValue("10♣"), 10);
+assertEquals(getCardValue("J♥"), 10);
+assertEquals(getCardValue("K♥"), 10);
+assertEquals(getCardValue("A♦"), 11);
+assertEquals(getCardValue("2♦"), 2);
+
 // Handling invalid cards
 try {
   getCardValue("invalid");
@@ -50,3 +71,5 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
+assertEquals(getCardValue("♦♦"), "invalid");  // throws an error for this example
+assertEquals(getCardValue("12"), "Error");
