@@ -23,7 +23,8 @@
 
 function getCardValue(card) {
   const cardNum = card.slice(0, -1)
-  if (cardNum === "A") { return 11}
+  const cardSuit = card.slice(-1)
+  if (cardNum === "A" && "♠♥♦♣".includes(cardSuit)) { return 11}
   else if (["J", "Q", "K"].includes(cardNum)) { return 10}
   else if (Number(cardNum) >= 2 && Number(cardNum) <= 10) {return Number(cardNum)}
   else throw new Error("Invalid card");
@@ -63,6 +64,13 @@ try {
 } catch (e) {}
 try {
   getCardValue("11♦");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("AX");
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");

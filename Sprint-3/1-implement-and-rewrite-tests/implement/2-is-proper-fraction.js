@@ -11,9 +11,14 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  return Math.abs(numerator) < Math.abs(denominator)
+  if (denominator === 0) {
+    return false;
+  }
+  else {
+    return Math.abs(numerator) < Math.abs(denominator);
+  }
 }
-
+``
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
@@ -38,3 +43,6 @@ assertEquals(isProperFraction(-2, -1), false);
 assertEquals(isProperFraction(-2, 5), true);
 assertEquals(isProperFraction(5, -2), false);
 assertEquals(isProperFraction(5, 5), false);
+assertEquals(isProperFraction(5, 0), false);
+assertEquals(isProperFraction(-2, 0), false);
+``

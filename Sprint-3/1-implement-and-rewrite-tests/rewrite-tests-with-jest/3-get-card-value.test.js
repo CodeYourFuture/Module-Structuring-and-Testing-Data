@@ -26,6 +26,9 @@ test(`Should return Error when given an ♦Q`, () => {
 test(`Should return Error when given an 11♦`, () => {
   expect(function() {getCardValue("11♦")}).toThrow("Invalid card");
 });
+test(`Should return Error when given an AX`, () => {
+  expect(function() {getCardValue("11♦")}).toThrow("Invalid card");
+});
 
 
 // Suggestion: Group the remaining test data into these categories:
