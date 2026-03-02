@@ -17,8 +17,8 @@
 
  // return the BMI of someone based off their weight and height
 function calculateBMI(weight, height) {
-    return  (weight/(Math.pow(height, 2))).toFixed(1);
-   
+    return Number((weight / (height ** 2)).toFixed(1));// returns a number
+   // return  (weight/(Math.pow(height, 2))).toFixed(1);// returns a string
 }
 console.log(calculateBMI(100, 1.6)); //print 39.1
 console.log(calculateBMI(55, 1.6)); //print 21.5
