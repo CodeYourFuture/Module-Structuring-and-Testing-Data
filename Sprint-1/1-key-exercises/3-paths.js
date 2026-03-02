@@ -20,4 +20,3 @@ console.log(`The base part of ${filePath} is ${base}`);
 const dir = ;
 const ext = ;
 
-// https://www.google.com/search?q=slice+mdn
