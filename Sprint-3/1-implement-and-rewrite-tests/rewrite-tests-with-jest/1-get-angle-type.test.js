@@ -12,7 +12,6 @@ test(`should return "Acute angles" when (0 < angle < 90)`, () => {
   expect(getAngleType(45)).toBe("Acute angle");
   expect(getAngleType(89)).toBe("Acute angle");
 });
-
 // Case 2: Right angle
 test(`should return "Right angle" when (angle === 90)`, () => {
   // Test various acute angles, including boundary cases

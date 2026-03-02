@@ -23,7 +23,6 @@ function getAngleType(angle) {
   else if (180 < angle && angle < 360) return "Reflex angle";
   else return "Invalid angle";
 }
-
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getAngleType;

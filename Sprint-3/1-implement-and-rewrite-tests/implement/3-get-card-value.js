@@ -20,7 +20,6 @@
 // Acceptance criteria:
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
-
 function getCardValue(card) {
   // TODO: Implement this function
   if (typeof card !== "string") {
