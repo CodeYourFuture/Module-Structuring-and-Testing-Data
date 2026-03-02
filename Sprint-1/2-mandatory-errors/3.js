@@ -14,5 +14,5 @@ const cardNumber = 4533787178994213;
 //After running the code, I have realized that the code is not working because cardNumber is a number and the slice is a method in String class
 //so, in order to make it work, we need to change cardNumber to String before calling the slice method
 
-const last4Digits = (cardNumber + "").slice(-4);
+const last4Digits = String(cardNumber).slice(-4);
 console.log("Last four digits of card are : " + last4Digits);
