@@ -1,5 +1,5 @@
 // Predict and explain first...
-// I think this function is meant to make the first letter of a string into uppercase then return the string
+// I think this function capitalise is meant to make the first letter of a string into uppercase then return the string
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
