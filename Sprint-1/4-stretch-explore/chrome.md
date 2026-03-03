@@ -18,5 +18,5 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 let myName = prompt("What is your name?"); 
 
 
-What effect does calling the `prompt` function have?A modal appears with the "What is your name?" with an input field to enter your name. The input is then stored in the variable myName
+What effect does calling the `prompt` function have?A modal appears with the "What is your name?" with an input field to enter your name. The input is then stored in the variable myName. When you click ok string stored in myName appears on the console and when clicked cancel it returns null
 What is the return value of `prompt`? My name stored in the variable myName
