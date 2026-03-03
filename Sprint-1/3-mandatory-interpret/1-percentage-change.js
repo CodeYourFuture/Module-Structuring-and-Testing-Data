@@ -15,7 +15,7 @@ console.log(`The percentage change is ${percentageChange}`);
 //There are 5 function calls in this file. On line 4,5 and 10. 
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-//Syntax error on line 5 which has been fixed. 
+//Syntax error on line 5 which has been fixed. A comma is missing between the arguments. 
 // c) Identify all the lines that are variable reassignment statements
 // Lines 4 and 5. 
 // d) Identify all the lines that are variable declarations
