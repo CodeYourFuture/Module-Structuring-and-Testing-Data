@@ -6,6 +6,5 @@ count = count + 1;
 // Describe what line 3 is doing, in particular focus on what = is doing
 
 /*
-Line 3 is re-assigning the variable "count" with a new value that increases the previous value by 1
-
+count = count + 1 increases the value of count by one, which is known as incrementing.
 */
