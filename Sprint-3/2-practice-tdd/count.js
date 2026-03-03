@@ -1,5 +1,5 @@
 function countChar(stringOfCharacters, findCharacter) {
-totalCount=stringOfCharacters.split("");
+const totalCount=stringOfCharacters.split("");
 Count=0
 for(i=0; i<totalCount.length; i++){
     if(totalCount[i]===findCharacter){
@@ -8,7 +8,7 @@ for(i=0; i<totalCount.length; i++){
 }
 return Count
 }
-console.log(countChar("AAA","A"))
+console.log(countChar("aaaa","a"))
 module.exports = countChar;
 
 
