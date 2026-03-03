@@ -77,16 +77,12 @@ assertEquals(getCardValue("10♦"), 10);
 // Handling invalid cards
 try {
   getCardValue("invalid");
-
-  // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {
-  console.log("Correctly threw error for invalid card");
-}
+} catch (e) {}
 
 // What other invalid card cases can you think of?
 
-// Invliad suit
+// Invalid suit
 try { getCardValue("A?"); console.error("No error thrown"); } catch(e) {}
 
 // Invalid rank
