@@ -23,4 +23,13 @@ console.log prints the value of whatever you ask it to print ie console.log(port
 
 console.assert tests for a condition but only returns a message if the condition is false.  For instance it may be used to check the age of a person to restrict access to a site for adults only.
 
-the full stop is used to separate the object from the method.  Console is the object and log and assert are methods
+the full stop is used to separate an object from its method.  
+In console.log and console.assert console is the object and log and assert are methods.
+The full stop is called the 'dot operator' or 'member access operator'
+The dot operator accesses a property or method of an object 
+For example console.log means access the log method from the console object 
+and console.assert means access the assert method from the console object
+
+
+
+
