@@ -10,7 +10,7 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 console.log(num);
 
-//num is a random number between 1 and 100
+//num is a random number [1,100]
 //Math.floor rounds the decimal number to nearest lower number
 // Math.random() generates a random decimal number between 0 and 1
 // when max – min need to add +1 or not all the numbers will be 
