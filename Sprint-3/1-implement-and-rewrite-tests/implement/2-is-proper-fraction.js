@@ -11,10 +11,7 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-
-  let fraction = (numerator >= denominator ) ? false : true;
-  return fraction
-
+ return (numerator >= denominator ) ? false : true  
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
