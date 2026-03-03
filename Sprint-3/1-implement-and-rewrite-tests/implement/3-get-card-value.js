@@ -1,3 +1,6 @@
+/**
+ * Original file:
+ *
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
 // Implement a function getCardValue, when given a string representing a playing card,
@@ -50,3 +53,124 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
+*
+*/
+
+// Implementation 
+
+function getCardValue(card) {
+  // Validate input type
+  if (typeof card !== 'string' || card.length < 2) {
+    throw new Error('Invalid card format');
+  }
+
+  // Define valid ranks and suits
+  const validRanks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+  const validSuits = ['♠', '♥', '♦', '♣'];
+
+  // Extract rank and suit
+  let rank, suit;
+
+  // Handle '10' which is 2 characters
+  if (card.startsWith('10') && card.length === 3) {
+    rank = '10';
+    suit = card[2];
+  } else if (card.length === 2) {
+    rank = card[0];
+    suit = card[1];
+  } else {
+    throw new Error('Invalid card format');
+  }
+
+  // Validate rank and suit
+  if (!validRanks.includes(rank) || !validSuits.includes(suit)) {
+    throw new Error('Invalid card format');
+  }
+
+  // Return value based on rank
+  if (rank === 'A') {
+    return 11;
+  } else if (['J', 'Q', 'K'].includes(rank)) {
+    return 10;
+  } else {
+    return parseInt(rank, 10);
+  }
+}
+
+module.exports = getCardValue;
+
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected ${actualOutput} to equal ${targetOutput}`
+  );
+}
+
+// Helper function to test error throwing
+function assertThrowsError(fn, expectedErrorMessage) {
+  try {
+    fn();
+    console.error(`Error was not thrown. Expected: ${expectedErrorMessage}`);
+  } catch (e) {
+    console.assert(
+      e.message === expectedErrorMessage,
+      `Expected error message "${expectedErrorMessage}" but got "${e.message}"`
+    );
+  }
+}
+
+// Tests for valid cards
+console.log('Testing valid cards:');
+assertEquals(getCardValue('A♠'), 11);
+assertEquals(getCardValue('A♥'), 11);
+assertEquals(getCardValue('A♦'), 11);
+assertEquals(getCardValue('A♣'), 11);
+
+assertEquals(getCardValue('2♠'), 2);
+assertEquals(getCardValue('3♥'), 3);
+assertEquals(getCardValue('4♦'), 4);
+assertEquals(getCardValue('5♣'), 5);
+assertEquals(getCardValue('6♠'), 6);
+assertEquals(getCardValue('7♥'), 7);
+assertEquals(getCardValue('8♦'), 8);
+assertEquals(getCardValue('9♣'), 9);
+assertEquals(getCardValue('10♠'), 10);
+assertEquals(getCardValue('10♥'), 10);
+assertEquals(getCardValue('10♦'), 10);
+assertEquals(getCardValue('10♣'), 10);
+
+assertEquals(getCardValue('J♠'), 10);
+assertEquals(getCardValue('Q♥'), 10);
+assertEquals(getCardValue('K♦'), 10);
+assertEquals(getCardValue('J♣'), 10);
+
+// Tests for invalid cards
+console.log('\nTesting invalid cards:');
+
+// Invalid format
+assertThrowsError(() => getCardValue(''), 'Invalid card format');
+assertThrowsError(() => getCardValue('A'), 'Invalid card format');
+assertThrowsError(() => getCardValue('10'), 'Invalid card format');
+assertThrowsError(() => getCardValue('A♠♠'), 'Invalid card format');
+assertThrowsError(() => getCardValue('10♠♠'), 'Invalid card format');
+
+// Invalid rank
+assertThrowsError(() => getCardValue('1♠'), 'Invalid card format');
+assertThrowsError(() => getCardValue('11♠'), 'Invalid card format');
+assertThrowsError(() => getCardValue('B♠'), 'Invalid card format');
+assertThrowsError(() => getCardValue('X♠'), 'Invalid card format');
+
+// Invalid suit
+assertThrowsError(() => getCardValue('A♤'), 'Invalid card format'); // Using ♤ instead of ♠
+assertThrowsError(() => getCardValue('A♡'), 'Invalid card format'); // Using ♡ instead of ♥
+assertThrowsError(() => getCardValue('A♢'), 'Invalid card format'); // Using ♢ instead of ♦
+assertThrowsError(() => getCardValue('A♧'), 'Invalid card format'); // Using ♧ instead of ♣
+
+// Invalid type
+assertThrowsError(() => getCardValue(123), 'Invalid card format');
+assertThrowsError(() => getCardValue(null), 'Invalid card format');
+assertThrowsError(() => getCardValue(undefined), 'Invalid card format');
+assertThrowsError(() => getCardValue({}), 'Invalid card format');
+
+console.log('\nAll tests completed!');
+
