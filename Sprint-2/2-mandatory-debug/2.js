@@ -22,7 +22,7 @@
 
 // Explain why the output is the way it is
 // =============> write your explanation here
-// The function getLastDigit is not taking any parameters, so it always returns the last digit of the global variable 'num', which is 103. The function should take a number as a parameter and return the last digit of that number.
+// The function getLastDigit Twill ignore the arguments passed in and always return the last digit of the global variable num, which is 103. The function should take a number as a parameter and return the last digit of that number.
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
