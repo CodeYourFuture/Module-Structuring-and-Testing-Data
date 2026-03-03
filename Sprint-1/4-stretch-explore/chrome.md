@@ -17,4 +17,4 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 It displays the question and asks for your input. 
 What is the return value of `prompt`?
-The name the user enters. 
+The name the user enters. When the user clicks "Cancel" a null value will be returned by when you click "OK" it will record it as a string even though it is empty. 
