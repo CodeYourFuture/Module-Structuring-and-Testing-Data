@@ -76,8 +76,8 @@ function assertEquals(actualOutput, targetOutput) {
 * End of original file
 */
 
-// This helper function is written to make our assertions easier to read.
-// If the actual output matches the target output, the test will pass
+// Implementation 
+
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -135,10 +135,6 @@ assertEquals(getAngleType(400), "Invalid angle");
 assertEquals(getAngleType(720), "Invalid angle");
 
 console.log("\nAll tests completed!");
-
-
-// getAngleType.test.js
-// const getAngleType = require('./path-to-your-file');
 
 describe('getAngleType', () => {
   test('should return "Acute angle" for angles between 0 and 90 exclusive', () => {
