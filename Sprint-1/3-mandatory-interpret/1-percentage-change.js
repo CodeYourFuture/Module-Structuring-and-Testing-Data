@@ -19,7 +19,10 @@ console.log(`The percentage change is ${percentageChange}`);
 // Line 5- 
 // priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
 //                                                         ^^^
-// SyntaxError: missing ) after argument list
+// SyntaxError: missing ) after argument list- The error occurred because there is a missing comma
+// The error is  a missing comma " , " inside replaceAll( ) and not a closing parenthesis ). 
+// JavaScript expects two arguments separated by a comma, but there are two strings with no comma between them. 
+// That makes the parser think the argument list is broken → hence the syntax error.
 
 // c) Identify all the lines that are variable reassignment statements
 // carPrice an priceAfterOneYear - lines 4 and 5
