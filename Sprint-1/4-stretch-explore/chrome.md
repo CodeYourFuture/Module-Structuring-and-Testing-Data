@@ -11,21 +11,23 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
-a pop up box appears saying thecharitych.com says this is an alert
+A pop up box appears saying thecharitych.com says this is an alert, the function returns undefined.
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
-a pop up box appears saying thecharitych.com says What is your name
+A pop up box appears saying thecharitych.com says What is your name
+with the options to complete name, press ok or press cancel
 
 What is the return value of `prompt`?
 
 Using:
 const myName = prompt("What is your name?");
-console.log(myName);
+myName;
 
-If I click ok without entering my name the prompt goes off the screen and console.log returns undefined
+If I click ok without entering my name the prompt goes off the screen and an empty string ("") is returned
 
-If I click cancel without entering my name the promptgoes off the screen and console.log null undefined
+If I click cancel without entering my name the prompt goes off the screen and null is returned
 
-If I put my name Hayriye in and click ok then it goes off the screen and console.log returns Hayriye
+If I put my name Hayriye in and click ok then it goes off the screen and a string containing the users input 
+(in this case Hayriye) is returned
