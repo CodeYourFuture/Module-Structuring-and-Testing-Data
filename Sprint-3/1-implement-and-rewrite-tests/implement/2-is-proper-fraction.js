@@ -35,9 +35,11 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
 *
+* End of the original file
 */
 
-// Implementation of a function isProperFraction,
+// Implementation of a function isProperFraction
+
 // when given two numbers, a numerator and a denominator, it should return true if
 // the given numbers form a proper fraction, and false otherwise.
 
@@ -60,7 +62,7 @@ function isProperFraction(numerator, denominator) {
 
 module.exports = isProperFraction;
 
-// Here's our helper again
+// Here's our helper function again
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
