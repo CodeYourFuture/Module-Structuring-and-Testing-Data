@@ -23,19 +23,19 @@ test(`Should return 10 when given an J♣`, () => {
 test(`Should return 10 when given an K♠`, () => {
   expect(getCardValue("K♠")).toEqual(10);
 });
-test(`Should return Error when given an ♦Q`, () => {
+test(`Should throw Error when given an ♦Q`, () => {
   expect(function() {getCardValue("♦Q");}).toThrow("Invalid card");
 });
-test(`Should return Error when given an 11♦`, () => {
+test(`Should throw Error when given an 11♦`, () => {
   expect(function() {getCardValue("11♦")}).toThrow("Invalid card");
 });
-test(`Should return Error when given an AX`, () => {
+test(`Should throw Error when given an AX`, () => {
   expect(function() {getCardValue("AX")}).toThrow("Invalid card");
 });
-test(`Should return Error when given an KX`, () => {
+test(`Should throw Error when given an KX`, () => {
   expect(function() {getCardValue("KX")}).toThrow("Invalid card");
 });
-test(`Should return Error when given an 5X`, () => {
+test(`Should throw Error when given an 5X`, () => {
   expect(function() {getCardValue("5X")}).toThrow("Invalid card");
 });
 
