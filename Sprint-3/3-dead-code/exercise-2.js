@@ -3,13 +3,10 @@
 
 
 const pets = ["parrot", "hamster", "horse", "dog", "hamster", "cat", "hamster"];
-// const capitalisedPets = pets.map((pet) => pet.toUpperCase()); - redundant
+
 const petsStartingWithH = pets.filter((pet) => pet[0] === "h");
 
 
-// function logPets(petsArr) {
-//   petsArr.forEach((pet) => console.log(pet));
-// } - redundant
 
 
 function countAndCapitalisePets(petsArr) {
