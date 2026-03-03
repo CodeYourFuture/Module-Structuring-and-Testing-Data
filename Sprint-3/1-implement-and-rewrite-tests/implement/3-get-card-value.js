@@ -8,7 +8,7 @@
 //   "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
 // The suit can be one of the following emojis:
 //   "♠", "♥", "♦", "♣"
-// For example: "A♠", "2♥", "10♥", "J♣", "Q♦", "K♦".
+// For example: "A♠", "2♥", "10♥", "J"2♠"", "Q♦", "K♦".
 
 // When the card is an ace ("A"), the function should return 11.
 // When the card is a face card ("J", "Q", "K"), the function should return 10.
@@ -28,7 +28,7 @@ function getCardValue(card) {
     !card.includes("♦") &&
     !card.includes("♣")
   ){
-    return "Invalid String";
+    throw new Error("Invalid String");
   }
   const rank = card.slice(0, -1);
 
@@ -39,12 +39,12 @@ function getCardValue(card) {
     !card.includes("K") &&
     !(rank >= 2 && rank <= 10)
   ) {
-    return "Invalid String";
+    throw new Error("Invalid String");
   }
 
-  if (card.includes("A")) {
+  if (rank==="A") {
     return 11;
-  } else if (card.includes("J") || card.includes("Q") || card.includes("K")) {
+  } else if (rank==="J" || rank==="Q" || rank==="K") {
     return 10;
   } else if (rank >= 2 && rank <= 10) {
     return rank;
@@ -77,6 +77,7 @@ assertEquals(getCardValue("  6 ♠"), "Invalid String");
 assertEquals(getCardValue("   ♠"), "Invalid String");
 assertEquals(getCardValue(" **♠"), "Invalid String");
 assertEquals(getCardValue("10 **"), "Invalid String");
+assertEquals(getCardValue("A10♠"), "Invalid String");
 
 // Handling invalid cards
 try {
