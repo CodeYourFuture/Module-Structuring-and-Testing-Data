@@ -19,4 +19,13 @@ What effect does calling the `prompt` function have?
 a pop up box appears saying thecharitych.com says What is your name
 
 What is the return value of `prompt`?
-when I do console.log(answer); it returns the value myName
+
+Using:
+const myName = prompt("What is your name?");
+console.log(myName);
+
+If I click ok without entering my name the prompt goes off the screen and console.log returns undefined
+
+If I click cancel without entering my name the promptgoes off the screen and console.log null undefined
+
+If I put my name Hayriye in and click ok then it goes off the screen and console.log returns Hayriye
