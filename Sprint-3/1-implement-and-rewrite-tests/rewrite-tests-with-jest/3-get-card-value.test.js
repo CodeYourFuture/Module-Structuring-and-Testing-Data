@@ -21,6 +21,7 @@ test(`Should return 11 when given an ace card`, () => {
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
 *
+* End of original file
 */
 
 // Implementation
