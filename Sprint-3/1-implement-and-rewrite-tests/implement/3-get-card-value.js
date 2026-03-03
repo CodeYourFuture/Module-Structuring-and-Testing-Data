@@ -23,6 +23,50 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+
+  // 1. Define valid suits and ranks
+  const suits = ["♠", "♥", "♦", "♣"];
+  const ranks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+
+  // 2. Basic validation: ensure card is a string and not empty
+  if (typeof card !== "string" || card.length === 0) {
+    throw new Error("Card must be a non-empty string");
+  }
+
+  // 3. Extract rank and suit from the card string
+  const rank = card.substring(0, card.length - 1);
+  const suit = card.substring(card.length - 1);
+
+  // 4. Validate rank and suit
+  if (!ranks.includes(rank)) {
+    throw new Error("Invalid rank");
+  }
+  if (!suits.includes(suit)) {
+    throw new Error("Invalid suit");
+  }
+
+  // 5. Return the appropriate value based on the rank
+  if (rank === "A") {
+    return 11;
+  } else if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  } else {
+    return parseInt(rank);
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -50,3 +94,53 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
+
+try {
+  getCardValue("11♠");
+  console.error("Error was not thrown for invalid rank");
+} catch (e) {}
+
+try {
+  getCardValue("A♤");
+  console.error("Error was not thrown for invalid suit");
+} catch (e) {}
+
+try {
+  getCardValue("");
+  console.error("Error was not thrown for empty string");
+} catch (e) {}
+
+try {
+  getCardValue(123);
+  console.error("Error was not thrown for non-string input");
+} catch (e) {}
+
+try {
+  getCardValue("10");
+  console.error("Error was not thrown for missing suit");
+} catch (e) {}
+
+try {
+  getCardValue("♠");
+  console.error("Error was not thrown for missing rank");
+} catch (e) {}
+
+try {
+  getCardValue("A");
+  console.error("Error was not thrown for missing suit");
+} catch (e) {}
+
+try {
+  getCardValue("1♠");
+  console.error("Error was not thrown for invalid rank");
+} catch (e) {}
+
+try {
+  getCardValue("10XX");
+  console.error("Error was not thrown for extra characters");
+} catch (e) {}
+
+try {
+  getCardValue("Z♦");
+  console.error("Error was not thrown for invalid rank");
+} catch (e) {}
