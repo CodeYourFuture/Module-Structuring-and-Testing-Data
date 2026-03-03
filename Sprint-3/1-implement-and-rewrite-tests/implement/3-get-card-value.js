@@ -37,13 +37,8 @@ function getCardValue(card) {
   // Extract rank (everything except last character)
   const rank = card.slice(0, -1);
   
-  // Validate suit
-  if (!validSuits.includes(suit)) {
-    throw new Error('Invalid card');
-  }
-  
-  // Validate rank
-  if (!validRanks.includes(rank)) {
+  // Validate suit and rank
+  if (!validSuits.includes(suit) || !validRanks.includes(rank)) {
     throw new Error('Invalid card');
   }
   
@@ -61,15 +56,17 @@ function getCardValue(card) {
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
 
-// Helper functions to make our assertions easier to read.
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
+// Only run tests if this file is executed directly (not imported as a module)
+if (require.main === module) {
+  // Helper functions to make our assertions easier to read.
+  function assertEquals(actualOutput, targetOutput) {
+    console.assert(
+      actualOutput === targetOutput,
+      `Expected ${actualOutput} to equal ${targetOutput}`
+    );
+  }
 
-// TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
+  // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 
 // Test all Ace cards (should return 11)
 assertEquals(getCardValue("A♠"), 11);
@@ -155,3 +152,5 @@ try {
 } catch (e) {}
 
 console.log("All tests completed!");
+
+} // End of: if (require.main === module)
