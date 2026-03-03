@@ -10,9 +10,14 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-function isProperFraction(numerator, denominator) {
+//function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
+//}
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) return false;  // Handle zero denominator case
+  return numerator < denominator;  // Normal fraction check
 }
+
 
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.

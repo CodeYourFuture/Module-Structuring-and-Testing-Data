@@ -21,9 +21,16 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-function getCardValue(card) {
+//function getCardValue(card) {
   // TODO: Implement this function
+//}
+
+function getCardValue(card) {
+  if (card === 'A♠' || card === 'A♥' || card === 'A♦' || card === 'A♣') return 11;  // Ace value
+  // handle other card values...
+  return undefined;  // Handle invalid cards
 }
+
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
