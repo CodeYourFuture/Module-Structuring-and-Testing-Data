@@ -19,4 +19,4 @@ What does `console` store?
 Console is an object that lets you print messages, errors, warnings etc
 
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
-console.log allows you to print messages while assert checks a condition. 
+console.log allows you to print messages while assert checks a condition. The dot is called the dot operator and it is used for property access. It is used to call the method inside the function. 
