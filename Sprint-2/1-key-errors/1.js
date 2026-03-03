@@ -1,7 +1,7 @@
 // Predict and explain first...
-
 // Why will an error occur when this program runs?
 // =============> write your prediction here
+// I predict that the error will be a SyntaxError because we are trying to declare a variable with the same name as a parameter.  In JavaScript, you cannot declare a variable with the same name as a parameter within the same function scope.  This will cause a SyntaxError because it creates a conflict in variable naming.
 
 // Try playing computer with the example to work out what is going on
 
@@ -18,3 +18,10 @@ console.log(decimalNumber);
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
+function convertToPercentage(decimalNumber) {
+  const percentage = `${decimalNumber * 100}%`;
+  return percentage;
+}
+
+console.log(convertToPercentage(0.5));
+
