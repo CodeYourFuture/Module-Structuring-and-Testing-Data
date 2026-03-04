@@ -22,14 +22,47 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  if (typeof card !== "string" || card.length < 2) {
+    throw new Error("Invalid card format");
+  }
+
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+
+  const suit = card.slice(-1);
+  const rank = card.slice(0, -1);
+
+  if (!validSuits.includes(suit) || !validRanks.includes(rank)) {
+    throw new Error("Invalid card format");
+  }
+
+  if (rank === "A") {
+    return 11;
+  } else if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  } else {
+    return Number(rank);
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
 
-// Helper functions to make our assertions easier to read.
+// Helper function for value assertions
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -37,16 +70,43 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
-// Examples:
+// Helper function to assert that an error is thrown
+function assertThrowsError(invalidInput) {
+  let errorThrown = false;
+  try {
+    getCardValue(invalidInput);
+  } catch (e) {
+    errorThrown = true;
+  }
+  console.assert(
+    errorThrown,
+    `Expected an error to be thrown for input: "${invalidInput}"`
+  );
+}
+
+console.log("Starting tests for getCardValue...");
+
+// --- Number cards ---
+assertEquals(getCardValue("2♥"), 2);
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("10♥"), 10);
 
-// Handling invalid cards
-try {
-  getCardValue("invalid");
+// --- Face cards ---
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♦"), 10);
 
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
+// --- Ace card ---
+assertEquals(getCardValue("A♠"), 11);
 
-// What other invalid card cases can you think of?
+// --- Invalid cards ---
+assertThrowsError("invalid"); // random string
+assertThrowsError("10"); // missing suit
+assertThrowsError("A"); // missing suit
+assertThrowsError("♠"); // missing rank
+assertThrowsError("1♠"); // invalid rank
+assertThrowsError("11♠"); // invalid rank
+assertThrowsError("AX"); // invalid suit
+assertThrowsError(""); // empty string
+
+console.log("All tests completed!");
