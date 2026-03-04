@@ -14,31 +14,29 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-function getAngleType(angle){
-  if(angle >0 && angle <90){
+function getAngleType(angle) {
+  if (angle > 0 && angle < 90) {
     return "Acute angle";
   }
-  if(angle === 90){
+  if (angle === 90) {
     return "Right angle";
   }
 
-  if(angle >90 && angle <180){
+  if (angle > 90 && angle < 180) {
     return "Obtuse angle";
   }
 
-  if(angle === 180){
+  if (angle === 180) {
     return "Straight angle";
   }
 
-  if(angle >180 && angle <360){
+  if (angle > 180 && angle < 360) {
     return "Reflex angle";
   }
-  return "Invalid angle found"
+  return "Invalid angle";
 }
 
-
-  // TODO: Implement this function
-
+// TODO: Implement this function
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -71,14 +69,14 @@ const reflex = getAngleType(275);
 assertEquals(reflex, "Reflex angle");
 // test invalid cases
 
-const invalidAngleCase1 = getAngleType (0);
-assertEquals(invalidAngleCase1, "Invalid angle found");
+const invalidAngleCase1 = getAngleType(0);
+assertEquals(invalidAngleCase1, "Invalid angle");
 
-const invalidAngleCase2 = getAngleType (-15);
-assertEquals(invalidAngleCase2, "Invalid angle found");
+const invalidAngleCase2 = getAngleType(-15);
+assertEquals(invalidAngleCase2, "Invalid angle");
 
-const invalidAngleCase3 = getAngleType (360);
-assertEquals(invalidAngleCase3, "Invalid angle found");
+const invalidAngleCase3 = getAngleType(360);
+assertEquals(invalidAngleCase3, "Invalid angle");
 
-const invalidAngleCase4 = getAngleType (400);
-assertEquals(invalidAngleCase4, "Invalid angle found");
+const invalidAngleCase4 = getAngleType(400);
+assertEquals(invalidAngleCase4, "Invalid angle");

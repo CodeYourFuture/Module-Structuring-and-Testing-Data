@@ -9,9 +9,9 @@ const getAngleType = require("../implement/1-get-angle-type");
 // Case 1: Acute angles
 // When angle is greater that 0 and less than 90
 test(`should return "Acute angle" when (angle >0 angle < 90)`, () => {
- expect(getAngleType(1)).toEqual("Acute angle");
- expect(getAngleType(45)).toEqual("Acute angle");
- expect(getAngleType(89)).toEqual("Acute angle");
+  expect(getAngleType(1)).toEqual("Acute angle");
+  expect(getAngleType(45)).toEqual("Acute angle");
+  expect(getAngleType(89)).toEqual("Acute angle");
 });
 
 // Case 2: Right angles
@@ -44,9 +44,9 @@ test(`should return "Reflex angle" when (angle >180 & angle <360)`, () => {
 
 // Case 6: Invalid angles
 // When angle is equal to or less than 0 and is equal to or greater than 360
-test(`should return "Invalid angle found" when (angle <= 0 or angle >= 360)`, () => {
-  expect(getAngleType(0)).toEqual("Invalid angle found");
-  expect(getAngleType(-1)).toEqual("Invalid angle found");
-  expect(getAngleType(360)).toEqual("Invalid angle found");
-  expect(getAngleType(520)).toEqual("Invalid angle found");
+test(`should return "Invalid angle" when (angle <= 0 or angle >= 360)`, () => {
+  expect(getAngleType(0)).toEqual("Invalid angle");
+  expect(getAngleType(-1)).toEqual("Invalid angle");
+  expect(getAngleType(360)).toEqual("Invalid angle");
+  expect(getAngleType(520)).toEqual("Invalid angle");
 });
