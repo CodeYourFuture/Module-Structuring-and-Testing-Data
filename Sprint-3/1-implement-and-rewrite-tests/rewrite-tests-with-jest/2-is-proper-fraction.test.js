@@ -21,5 +21,6 @@ test(`should return false when the (numerator > denominator)`,()=>{
 test(`Should return a true when the (numerator < denominator)`,()=>{
   expect(isProperFraction(1,2)).toEqual(true)
   expect(isProperFraction(6,8)).toEqual(true)
-  expect(isProperFraction(-1,2)).toEqual(true)
+  expect(isProperFraction(-3,2)).toEqual(true)
 });
+
