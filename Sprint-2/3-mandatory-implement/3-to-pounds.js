@@ -14,4 +14,4 @@ return `£${pounds}.${pence}`;
 }
 
 console.log(getPenceString("399p"));
-    // tested with 123p 1200p 24589p 89p 9p 0p
+    // tested with 123p 1200p 24589p 89p 9p and 0p

@@ -22,7 +22,7 @@
  }
  console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
-// I removed the first console.log because it didn't seem necessary to print out 320 but
+// I removed the first console.log because it didn't seem necessary to print out 320
 // if you need to print 320 as well as the final console-log statement then console.log(a * b) 
 // can be added back in but it would need to be before the return statement because if it is
 // after the return statement it will never be reached and the value will not be printed out

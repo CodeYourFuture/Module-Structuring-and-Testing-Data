@@ -34,7 +34,7 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 // console.log(`The last digit of 105 is ${getLastDigit(105)}`);
 // console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
-// removed  const num = 103; and added num as a parameter to the function 
+// removed  const num = 103; and then added num as a parameter to the function 
 // getLastDigit so that it can take in the value of num when the function is 
 // called and return the last digit of that number instead of always using 
 // the global value of num which was 103.
