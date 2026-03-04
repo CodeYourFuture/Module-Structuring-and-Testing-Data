@@ -25,7 +25,10 @@ test(`Should return a true when the (numerator < denominator)`,()=>{
 });
 test(`Should return the correct answer for negative numerators (numerator < denominator)`,()=>{
     expect(isProperFraction(-1,2)).toEqual(true)
-    expect(isProperFraction(-100,2)).toEqual(true)
     expect(isProperFraction(-7,8)).toEqual(true)
+    expect(isProperFraction(-100,2)).toEqual(false)
+    expect(isProperFraction(-60,10)).toEqual(false)
+    expect(isProperFraction(-5,4)).toEqual(false)
+
 
 });
