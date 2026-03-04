@@ -16,6 +16,24 @@
 
 function getAngleType(angle) {
   // TODO: Implement this function
+  if (angle <= 0 || angle >=360) {
+    return "Invalid angle";
+  }
+  if (angle >= 0 && angle < 90) {
+    return "Acute angle";
+  }
+  if (angle === 90) {
+    return "Right angle";
+  }
+  if (angle > 90 && angle < 180) {
+    return "Obtuse angle";
+  }
+  if (angle === 180) {
+    return "Straight angle";
+  }
+  if (angle > 180 && angle < 360) {
+    return "Reflex angle";
+  }
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
@@ -35,3 +53,39 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+
+// Acute Angles
+let acute = getAngleType(1);
+assertEquals(acute, "Acute angle");
+acute = getAngleType(45);
+assertEquals(acute, "Acute angle");
+acute = getAngleType(89);
+assertEquals(acute, "Acute angle");
+
+// Obtuse Angles
+let obtuse = getAngleType(91);
+assertEquals(obtuse, "Obtuse angle");
+obtuse = getAngleType(135);
+assertEquals(obtuse, "Obtuse angle");
+obtuse = getAngleType(179);
+assertEquals(obtuse, "Obtuse angle");
+
+// Straight Line Angles
+let straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
+
+// Reflex Angles
+let reflex = getAngleType(181);
+assertEquals(reflex, "Reflex angle");
+reflex = getAngleType(287);
+assertEquals(reflex, "Reflex angle");
+reflex = getAngleType(359);
+assertEquals(reflex, "Reflex angle");
+
+// Invalid Angles
+let invalid = getAngleType(0);
+assertEquals(invalid, "Invalid angle");
+invalid = getAngleType(360);
+assertEquals(invalid, "Invalid angle");
+invalid = getAngleType(-20);
+assertEquals(invalid, "Invalid angle");

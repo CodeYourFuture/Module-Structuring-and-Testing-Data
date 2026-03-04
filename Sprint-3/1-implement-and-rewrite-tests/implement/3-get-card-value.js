@@ -23,6 +23,26 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  const cardSuit = card.slice(-1);
+  const cardRank = card.slice(0, -1);
+
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+  if (!validSuits.includes(cardSuit) || !validRanks.includes(cardRank)) {
+    throw new Error("Invalid card");
+  }
+
+  switch (cardRank) {
+    case "A":
+      return 11;
+    case "K":
+    case "Q":
+    case "J":
+      return 10;
+    default:
+      return Number(cardRank);
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,13 +60,44 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("3♣"), 3);
+assertEquals(getCardValue("10♦"), 10);
+assertEquals(getCardValue("J♥"), 10);
+assertEquals(getCardValue("Q♠"), 10);
+assertEquals(getCardValue("K♦"), 10);
+assertEquals(getCardValue("A♣"), 11);
 
 // Handling invalid cards
 try {
-  getCardValue("invalid");
-
-  // This line will not be reached if an error is thrown as expected
+  getCardValue("11♠"); // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
-
+try {
+  getCardValue("01♦");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+try {
+  getCardValue("1♣");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+try {
+  getCardValue("");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+try {
+  getCardValue("K♠♠");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+try {
+  getCardValue("QQ♣");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+try {
+  getCardValue("♦");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+try {
+  getCardValue("J");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
 // What other invalid card cases can you think of?
