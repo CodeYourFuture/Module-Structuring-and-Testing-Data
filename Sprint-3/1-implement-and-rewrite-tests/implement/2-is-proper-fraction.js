@@ -13,9 +13,8 @@
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
   if (denominator === 0) return false;
-  if (denominator < 0) return false;
 
-  return Math.abs(numerator) < denominator;
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -52,7 +51,7 @@ assertEquals(isProperFraction(-3, 2), false);
 
 // Denominator edge cases
 assertEquals(isProperFraction(1, 0), false);  
-assertEquals(isProperFraction(1, -2), false); 
-assertEquals(isProperFraction(-1, -2), false);
+assertEquals(isProperFraction(1, -2), true); 
+assertEquals(isProperFraction(-1, -2), true);
 
 console.log ("All tests passed!")
