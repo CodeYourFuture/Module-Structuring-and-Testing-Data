@@ -22,23 +22,34 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  
-  const rank = card.slice(0, -1); 
-  const suit = card.slice(-1);    
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
 
-  const validRanks = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+  const validRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
   const validSuits = ["♠", "♥", "♦", "♣"];
-  
 
-  if (!validRanks.includes(rank) ||!validSuits.includes(suit) ) {
+  if (!validRanks.includes(rank) || !validSuits.includes(suit)) {
     throw new Error("Invalid card");
   }
 
   if (rank === "A") return 11;
-  if (["J","Q","K"].includes(rank)) return 10;
+  if (["J", "Q", "K"].includes(rank)) return 10;
 
   return Number(rank);
-
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -56,10 +67,12 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
-assertEquals(getCardValue("A♠"));  // 11
-assertEquals(getCardValue("10♦")); // 10
-assertEquals(getCardValue("3♥"));  // 3
-assertEquals(getCardValue("K♣"));  // 10
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("10♦"), 10);
+assertEquals(getCardValue("3♥"), 3);
+assertEquals(getCardValue("K♣"), 10);
+assertEquals(getCardValue("J♠"), 10);
+assertEquals(getCardValue("Q♦"), 10);
 
 // Handling invalid cards
 try {
@@ -70,4 +83,17 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
-try { getCardValue("2$"); } catch(e) { console.log(e.message); }   // "Invalid card"
+try {
+  getCardValue("2$");
+  console.error("Error not thrown");
+} catch (e) {} // "Invalid card"
+
+try {
+  getCardValue("11♠");
+  console.error("Error not thrown");
+} catch (e) {}
+
+try {
+  getCardValue("B♠");
+  console.error("Error not thrown");
+} catch (e) {}
