@@ -9,14 +9,14 @@ test(`should return false when denominator is zero`, () => {
   expect(isProperFraction(1, 0)).toEqual(false);
 });
 
-test(`should return true when denominator is greater than numerator (2)`, () => {
-  expect(isProperFraction(1, 2)).toEqual(true);
-});
-
-test(`should return false when denominator is smaller than the numerator (1)`, () => {
+test("should return false when absolute numerator is greater than or equal to absolute denominator", () => {
   expect(isProperFraction(2, 1)).toEqual(false);
 });
 
-test(`should return true when both values are valid numbers`, () => {
+test("should return true when absolute numerator is less than absolute denominator", () => {
+  expect(isProperFraction(1, 2)).toEqual(true);
+});
+
+test("should correctly handle negative numbers using absolute values", () => {
   expect(isProperFraction(-1, -2)).toEqual(true);
 });

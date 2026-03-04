@@ -10,14 +10,14 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-  function isProperFraction(numerator, denominator) {
+function isProperFraction(numerator, denominator) {
   // Denominator cannot be 0 because it won't make a fraction.
- if (denominator === 0) {
-        return false;
-    }
-    // Compare absolute values to eliminate negative values
-    //Proper fraction = absolute value of numerator < absolute value of denominator
-    return Math.abs(numerator) < Math.abs(denominator);
+  if (denominator === 0) {
+    return false;
+  }
+  // Compare absolute values to eliminate negative values
+  //Proper fraction = absolute value of numerator < absolute value of denominator
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -36,7 +36,7 @@ function assertEquals(actualOutput, targetOutput) {
 // What combinations of numerators and denominators should you test?
 
 // Example: 1/2 is a proper fraction
-assertEquals(isProperFraction(1, 2), true);
-assertEquals(isProperFraction(2, 1), false);
-assertEquals(isProperFraction(-1, -2), true);
 assertEquals(isProperFraction(1, 0), false);
+assertEquals(isProperFraction(2, 1), false);
+assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(-1, -2), true);
