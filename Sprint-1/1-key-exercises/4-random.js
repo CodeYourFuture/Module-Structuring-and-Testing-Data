@@ -14,4 +14,4 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 //The random number will always be an integer because Math.floor() is used to round
 //down the result.
 //At the end the value "minimum" is added to guarantee that the generated "num" is at least 1
-//"num" is a random number generator with results between 1 and 100. 
+//"num" is a random number generator with results between 1 and 100, including 1 but excluding 100 

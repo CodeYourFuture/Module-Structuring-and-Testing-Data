@@ -19,7 +19,7 @@ console.log(result);
 
 // b) How many function calls are there?
 
-// There are 2: console.log and the template literal for the result string 
+// There is 1: console.log 
 
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
@@ -41,7 +41,9 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 
 // "result" represents the result of the calculations, being the total length of the movie 
 // transcribed to hours/minutes/seconds. It would have been much clearer to not give the mathematical 
-// output as the name but instead the usability of this output, such as "movieLengthInHours"
+// output as the name but instead the usability of this output, such as "movieLengthHMS" or the clearer 
+// but rather lengthy movieLengthHoursMinutesSeconds
+
 
 
 

@@ -17,14 +17,14 @@ console.log(`The percentage change is ${percentageChange}`);
 
 carPrice = Number(carPrice.replaceAll(",", ""));
 priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
-
+Number; //called twice
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
 
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
-// There is a comma missing in: replaceAll("," ""));  
+// There is a comma missing between te arguments in: replaceAll("," ""));  
 // It should be: replaceAll(",", "")); 
 
 
