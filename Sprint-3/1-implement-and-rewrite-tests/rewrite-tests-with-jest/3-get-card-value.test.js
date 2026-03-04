@@ -3,13 +3,19 @@
 const getCardValue = require("../implement/3-get-card-value");
 
 
+
 // TODO: Write tests in Jest syntax to cover all possible outcomes.
 
 
+
 // Case 1: Ace (A)
-test(`Should return 11 when given an ace card`, () => {
+test("should return 11 for any ace (all suits)", () => {
   expect(getCardValue("A♠")).toEqual(11);
+  expect(getCardValue("A♥")).toEqual(11);
+  expect(getCardValue("A♦")).toEqual(11);
+  expect(getCardValue("A♣")).toEqual(11);
 });
+
 
 
 // Suggestion: Group the remaining test data into these categories:
@@ -18,48 +24,39 @@ test(`Should return 11 when given an ace card`, () => {
 //   Invalid Cards
 
 
+
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // [https://jestjs.io/docs/expect#tothrowerror](https://jestjs.io/docs/expect#tothrowerror)
 
 
+
 // Number Cards (2–10)
-test(`Should return 2 when given "2♦"`, () => {
-  expect(getCardValue("2♦")).toEqual(2);
-});
-
-test(`Should return 5 when given "5♣"`, () => {
-  expect(getCardValue("5♣")).toEqual(5);
-});
-
-test(`Should return 10 when given "10♥"`, () => {
+test("should return the numeric value of number cards (2-10)", () => {
+  expect(getCardValue("2♣")).toEqual(2);
+  expect(getCardValue("5♠")).toEqual(5);
   expect(getCardValue("10♥")).toEqual(10);
+  // Loop to verify all values 2–10 across one suit
+  for (let n = 2; n <= 10; n++) {
+    expect(getCardValue(`${n}♠`)).toEqual(n);
+  }
 });
+
 
 
 // Face Cards (J, Q, K)
-test(`Should return 10 when given "J♣"`, () => {
+test("should return 10 for all face cards (J, Q, K)", () => {
   expect(getCardValue("J♣")).toEqual(10);
-});
-
-test(`Should return 10 when given "Q♦"`, () => {
   expect(getCardValue("Q♦")).toEqual(10);
-});
-
-test(`Should return 10 when given "K♥"`, () => {
   expect(getCardValue("K♥")).toEqual(10);
 });
 
 
+
 // Invalid Cards
-test(`Should throw an error when given an invalid card symbol like "Z♠"`, () => {
-  expect(() => getCardValue("Z♠")).toThrowError();
+test("should throw an error for invalid cards", () => {
+  expect(() => getCardValue("Z♠")).toThrow();
+  expect(() => getCardValue("")).toThrow();
+  expect(() => getCardValue(null)).toThrow();
 });
 
-test(`Should throw an error when given an empty string`, () => {
-  expect(() => getCardValue("")).toThrowError();
-});
-
-test(`Should throw an error when given null`, () => {
-  expect(() => getCardValue(null)).toThrowError();
-});
