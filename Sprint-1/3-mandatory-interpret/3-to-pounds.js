@@ -25,3 +25,8 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2.Removes the "p" at the end, leaving "399".
+// 3. Makes sure the number has at least 3 digits .
+// 4, takes the first part as pounds.
+// 5. Takes the last two digits as pence.
+// 6. Prints the price in punds  format ( for example, £3.99).
