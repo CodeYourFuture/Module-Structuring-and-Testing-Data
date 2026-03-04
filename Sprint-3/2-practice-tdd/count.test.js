@@ -22,3 +22,20 @@ test("should count multiple occurrences of a character", () => {
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
+test("it should return 0 because the character doesn't occurrences", () => {
+  const str = "The character have no match";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+// Scenario: 1 Occurrences
+// Given the input string `str`,
+// And a character `char` that have 1 character exist in `str`.
+// When the function is called with these inputs,
+// Then it should return 1, indicating that 1 occurrences of `char` were found.
+test("it should return 1 because the character occurrences 1 time", () => {
+  const str = "code your future";
+  const char = "f";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
