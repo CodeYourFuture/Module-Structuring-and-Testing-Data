@@ -32,7 +32,7 @@ console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 // As a result, the correct value is displayed instead of undefined.
 //  =============> write your new code here
 function multiply(a, b) {
-  return (a * b);
+  return a * b;
 
 }
 
