@@ -1,7 +1,8 @@
 // Predict and explain first...
 //  =============> write your prediction here
-// the semicolon after "return" will hamper the return statement because it 
-// will end the statement before it has been defined what it needs to return.
+// the semicolon after "return" will hamper the return statement because this 
+// character will end the statement before receiving a definition of what it 
+// needs to return.
 
 
 function sum(a, b) {
