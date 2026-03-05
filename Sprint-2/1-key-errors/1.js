@@ -2,6 +2,11 @@
 
 // Why will an error occur when this program runs?
 // =============> write your prediction here
+// An error will occur because the variable decimalNumber is being declared as both 
+// a parameter and as a local variable inside the function. This will cause a 
+// syntax error. Additionally, the variable decimalNumber is not defined 
+// outside the function, so it will throw a ReferenceError when trying to log it 
+// to the console.
 // The percentage sign is not seen as a text character but instead as code for 
 // the function to calculate the remainder after a division operation: the modulo. 
 // It will therefore not return a percentage as desired

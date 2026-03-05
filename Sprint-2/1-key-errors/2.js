@@ -4,7 +4,7 @@
 // this function should square any number but instead we're going to get an error
 
 // =============> write your prediction of the error here
-// num has not been defined and the parameter is not used in the function;
+// "num" has not been defined and the parameter is not used in the function;
 // it has a number instead
 
 
