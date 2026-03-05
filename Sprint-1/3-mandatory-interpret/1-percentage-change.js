@@ -2,7 +2,7 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
@@ -13,17 +13,17 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
-// 1. carPrice.replaceAll(",", "") 
-// 2. priceAfterOneYear.replaceAll(",", "") 
-// 3. Number(...) 
-// 4. console.log(...) - 
+// 1. carPrice.replaceAll(",", "")
+// 2. priceAfterOneYear.replaceAll(",", "")
+// 3. Number(...)
+// 4. console.log(...) -
 // 5. (priceDifference / carPrice) * 100 - line 7 (this is an expression that involves division and multiplication, but it does not involve a function call)
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
-// The error is on line 5 where `priceAfterOneYear.replaceAll(",", "")` is called. The syntax error is due to a missing closing quote in the `replaceAll` method.
-// Fix: Change `priceAfterOneYear.replaceAll(",", "")` to `priceAfterOneYear.replaceAll(",", "")`
-
+//// The error is on line 5 where `priceAfterOneYear.replaceAll("," "")` is called.
+// The syntax error occurs because there is a missing comma between the arguments in the `replaceAll` method.
+// Fix: Change `priceAfterOneYear.replaceAll("," "")` to `priceAfterOneYear.replaceAll(",", "")`
 // c) Identify all the lines that are variable reassignment statements
 
 // Line 4: carPrice = Number(carPrice.replaceAll(",", ""));
