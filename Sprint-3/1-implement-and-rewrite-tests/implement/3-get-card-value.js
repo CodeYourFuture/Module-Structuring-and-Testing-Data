@@ -88,10 +88,14 @@ try {
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
+} catch (e) {
+  console.log("Error was thrown for invalid card as expected");
+}
 
 // What other invalid card cases can you think of?
 try {
   getCardValue("1♠");
 console.error("Error was not thrown for invalid card");}
-catch (e) {}
+catch (e) {
+  console.log("Error was thrown for invalid card as expected");
+}
