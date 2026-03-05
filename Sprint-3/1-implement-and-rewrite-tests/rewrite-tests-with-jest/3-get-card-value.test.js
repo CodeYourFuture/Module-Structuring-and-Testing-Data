@@ -25,8 +25,8 @@ test(`Should return the numeric value when given a number card`, () => {
   expect(getCardValue("10♠")).toEqual(10);
 });
 test ('Should return invalid card error when given invalid cards', () => {
-  expect(() => getCardValue("1♠")).toThrow();
-  expect(() => getCardValue("11♥")).toThrow();
+  expect(() => getCardValue("1♠")).toThrow("Invalid card");
+  expect(() => getCardValue("11♥")).toThrow("Invalid card");
 });
 
 
