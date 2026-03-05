@@ -16,8 +16,16 @@ The output i get 'object'
 Answer the following questions:
 
 What does `console` store?
-console does NOT store values.
-It is used to output.
+The console object contains several methods (properties) such as:
+
+log
+error
+warn
+info
+debug
+assert
+
+These methods are used to print messages or information to the console.
 
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 console.log is use print the output.
