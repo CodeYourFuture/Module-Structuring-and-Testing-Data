@@ -20,4 +20,4 @@ Try also entering `typeof console`'object'
 Answer the following questions:What does `console` store?the console stores objects
 What does the syntax `console.log` or `console.assert` mean?
 In particular, what does the `.` mean?
-the . denotes what kind of object the console is being told to use and what to do with the data it has been given
+the . denotes what kind of object the console is being told to use and what to do with the data it has been given , the . operator called dot operator or property access operator and it is used to access properties or methods of an object.

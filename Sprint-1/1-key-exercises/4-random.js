@@ -9,8 +9,9 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
 //Breakdown
-// Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive).
+// Math.random() generates a random decimal number in the interval (0, 1).
 // (maximum - minimum + 1) calculates the range of numbers which is 100 - 1 + 1 = 100.
-// Multiplying Math.random() by (maximum - minimum + 1) scales the random decimal to a range of 0 (inclusive) to 100 (exclusive).
-// The Math.floor() rounds down the number to the nearest whole number, giving us an integer between 0 and 99.
-// Adding minimum (which is 1) shifts the range from 0-99 to 1-100.
+// Multiplying Math.random() by (maximum - minimum + 1) scales the random decimal to the interval [0, 100).
+// The Math.floor() rounds down the number to the nearest whole number, giving us an integer in [0, 99].
+// Adding minimum (which is 1) shifts the interval from [0, 99] to [1, 100].
+// Therefore, num is a random integer in the interval [1, 100].

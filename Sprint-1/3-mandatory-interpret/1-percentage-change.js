@@ -27,9 +27,9 @@ priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
 // Line 5: replaceAll(",", "") and Number()
 // Line 9: console.log()
 
-// b) The error is coming from line 4 and line 5.
-//  The error occurs because the replaceAll method is being called on a string that contains a comma, which is not a valid number.
-//  To fix this problem, we can remove the commas from the strings before converting them to numbers. 
+// b) The error is coming from line 4 and line 5.  
+// The error occurred because a comma was missing between the arguments while redefining priceAfterOneYear variable at line 4 and 24.(",", "")
+//  To fix this problem, we need to put comma between the arguments or we can remove the commas from the strings before converting them to numbers. 
 
 // c) The variable reassignment statements are on line 4 and line 5, where carPrice and 
 // priceAfterOneYear are being reassigned to the result of the Number() function.
