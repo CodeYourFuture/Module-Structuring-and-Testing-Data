@@ -26,7 +26,7 @@ console.log(result);
 //This expression calculates the total full minutes in the movie by removing leftover seconds and converting seconds to minutes.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//result represent the total movie length using hours,minutes and seconds,the better name can be totalMovieDuration.
+//result represent the total movie length using hours,minutes and seconds,the better name can be movieRunTime.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 /*the code works for different values of movieLength it present the input movieLength by calculating the remainder and subtracting 
