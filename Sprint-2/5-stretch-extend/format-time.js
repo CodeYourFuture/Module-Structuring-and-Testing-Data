@@ -5,8 +5,8 @@
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   if (hours > 12) {
-  time = hours - 12;
-  return `${time.toString().padStart(2 , "0")}:00 pm`
+  const convertedHours= hours - 12;
+  return `${convertedHours.toString().padStart(2 , "0")}:00 pm`
   }
   return `${time} am`;
 }
