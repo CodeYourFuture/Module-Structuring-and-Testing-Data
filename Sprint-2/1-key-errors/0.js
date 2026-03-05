@@ -20,8 +20,8 @@ function capitalise(str) {
 // This avoids the redeclaration error and the code runs correctly.
 // =============> write your new code here
 function capitalise(str) {
-  str = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
+  const capitalised  = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return capitalised;
 }
 let str = capitalise("Arun");
 console.log(str);
