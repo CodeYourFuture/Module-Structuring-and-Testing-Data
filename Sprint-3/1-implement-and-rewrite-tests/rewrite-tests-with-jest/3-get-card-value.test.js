@@ -18,6 +18,15 @@ test(`Should return 10 when given a 10 card`, () => {
   expect(getCardValue("10♠")).toEqual(10);
 });
 //   Face Cards (J, Q, K)
+test(`Should return 10 when given a Jack card`, () => {
+  expect(getCardValue("J♠")).toEqual(10);
+});
+test(`Should return 10 when given a Queen card`, () => {
+  expect(getCardValue("Q♠")).toEqual(10);
+});
+test(`Should return 10 when given a King card`, () => {
+  expect(getCardValue("K♠")).toEqual(10);
+});
 //   Invalid Cards
 test(`Should throw an error when given an invalid card`, () => {
   expect(() => getCardValue("11♠")).toThrow("Invalid card: Invalid rank");
