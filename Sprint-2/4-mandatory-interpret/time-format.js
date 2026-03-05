@@ -25,11 +25,11 @@ function formatTimeDisplay(seconds) {
 // =============> 1 because the first operation is 61 % 60 which gives us 1
 
 // c) What is the return value of pad is called for the first time?
-// =============> 00 because the first operation is totalHours which is 0 and it is padded to 2 digits with a 0 in front of it.
+// =============> "00" because the first operation is totalHours which is 0 and it is padded to 2 digits with a 0 in front of it.
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> 1 because the last operation is 1 % 60 which gives us 1 
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> 01 because the last operation on the return line is remainingSeconds which is 1 and it is padded to 2 digits with a 0 in front of it.
+// =============> "01" because the last operation on the return line is remainingSeconds which is 1 and it is padded to 2 digits with a 0 in front of it.
 
