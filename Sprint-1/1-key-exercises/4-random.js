@@ -9,8 +9,7 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
 // math.floor will make the number as a whole and remove any decimals or more likely to round the the nearest whole number
-// math.random will generate a random number between (0,1) inclusivly
+// math.random returns a random number in [0,1) 
 // (maximum - minimum + 1) provide a range of generated random number 
-// num is a random whole number (1,100) inclusivly 
-
+// num is a random whole number [1,100) 
 console.log(num);
