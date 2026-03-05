@@ -48,4 +48,5 @@ console.log(formatTimeDisplay(61));
 
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> For the input 61, remaining_seconds will be 1. So, pad(1) will return "01". Therefore, the value assigned to num is 1.
+// =============> For the input 61, remaining_seconds will be 1. So, pad(1) will return "01". 
+// Therefore, the value assigned to num is 1.
