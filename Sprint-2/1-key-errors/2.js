@@ -40,5 +40,5 @@ function square(3) {
 function square(num) {
     return num * num;
 }
-let num =  square(3);
-console.log(num);
+const squaredValue =  square(3);
+console.log(squaredValue);
