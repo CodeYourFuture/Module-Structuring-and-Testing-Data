@@ -28,7 +28,7 @@ console.log(result);
 
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// results present length of movie formatted as Hours:Minutes:Seconds and a better name could be movieDuration
+// results present length of movie formatted as Hours:Minutes:Seconds and a better name could be fromatedMovieDuration
 
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
