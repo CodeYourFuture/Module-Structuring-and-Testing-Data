@@ -5,16 +5,23 @@
 
 // =============> write your prediction of the error here
 
+// For function square the variable inside the parameter will have a error, because number cant be used when name a variable and num variable is undefine.
+/*
 function square(3) {
     return num * num;
 }
-
+*/
 // =============> write the error message here
+// SyntaxError: Unexpected number
 
 // =============> explain this error message here
+//Because number cant be used when name a variable.
 
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here
 
-
+function square(num) {
+    return num * num; 
+};
+console.log(square(3));
