@@ -36,5 +36,5 @@ function convertToPercentage(decimalNumber) {
   return percentage;
 }
 
-const decimalNumber = convertToPercentage(0.5) ;
-console.log(decimalNumber);
+const percentageValue = convertToPercentage(0.5) ;
+console.log(percentageValue);
