@@ -20,6 +20,6 @@ const secondCharacterIndex = 1;
 const startingPointForExtension = filePath.lastIndexOf(".");
 
 const dir = filePath.slice(secondCharacterIndex, lastSlashIndex);
-const ext = filePath.slice(startingPointForExtension + 1, filePath.length);
+const ext = filePath.slice(startingPointForExtension + 1);
 console.log(`The dir part of ${filePath} is ${dir} and the ext part is ${ext}`);
 // https://www.google.com/search?q=slice+mdn
