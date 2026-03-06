@@ -40,6 +40,18 @@ test("should return 0 when both the input string and character are empty", () =>
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+test("should be case sensitive when counting characters", () => {
+  const str = "AaAaA";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+});
+test("should count non-alphabet characters", () => {
+  const str = "12345!";
+  const char = "1";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
 // Scenario: Empty String
 // Given an empty input string `str`,
 // And any character `char` (e.g., 'a'),
