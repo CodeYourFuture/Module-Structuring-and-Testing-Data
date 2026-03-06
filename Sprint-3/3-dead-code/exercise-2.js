@@ -23,3 +23,4 @@ const countedPetsStartingWithH = countAndCapitalisePets(petsStartingWithH);
 console.log(countedPetsStartingWithH); // { 'HAMSTER': 3, 'HORSE': 1 } <- Final console log
 
 //added a new comment
+//adding comment in exercise 2
