@@ -30,8 +30,12 @@ test("should append 'rd' for numbers ending with 3, except those ending with 13"
 test("should append 'th' for numbers ending with 11, 12, or 13", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(13)).toEqual("13th");
+  expect(getOrdinalNumber(111)).toEqual("111th");
+  expect(getOrdinalNumber(112)).toEqual("112th");
+  expect(getOrdinalNumber(113)).toEqual("113th");
 });
-test("should append 'th' for other numbers", () => {
+test("should append 'th' for numbers not ending with 1, 2, or 3", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(10)).toEqual("10th");
-}); 
+});
