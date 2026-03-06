@@ -40,3 +40,27 @@ test("should count non-contiguous occurrences of a character", () => {
   const count = countChar(str, char);
   expect(count).toEqual(6);
 });
+
+// Scenario: Same character in upper and lower case.
+// Given the input string 'str'
+// And a character 'char' that apears in both lower case and upper case.
+// When the function is called with these inputs,
+// Then it should only count when the cases match
+test("should be case sensitive", () => {
+  const str = "Hello, how are you";
+  const char = "H";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
+
+// Scenario: Non-alphabetical chars in the string.
+// Given the input string 'str'
+// And a character 'char' that is not in the alphabet
+// When the function is called with these inputs,
+// Then it should match as usual
+test("should match non-alphabetical chars", () => {
+  const str = "Incredible news! We've joined Code Your Future!";
+  const char = "!";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+});
