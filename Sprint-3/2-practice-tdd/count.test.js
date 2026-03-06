@@ -29,4 +29,26 @@ test("should return 0 when character does not occur in string", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+// Scenario: Case Sensitivity
+// Given the input string `str`,
+// And a character `char` that exists in `str` but with different case (e.g., 'A' in 'aAaAa'),
+// When the function is called with these inputs,
+// Then it should count occurrences of `char` in a case-sensitive manner, meaning 'A' and 'a' are treated as distinct characters.
+test("should count characters in a case-sensitive manner", () => {
+  const str = "aAaAa";
+  const char = "A";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+}); 
 
+// Scenario: non-alphanumeric Characters
+// Given the input string `str`,
+// And a character `char` that is a non-alphanumeric character (e.g., '!' in 'Hello, World!'),
+// When the function is called with these inputs,
+// Then it should correctly count occurrences of `char`, demonstrating that the function can handle special characters as well.
+test("should count non-alphanumeric characters", () => {
+  const str = "Hello, World!";
+  const char = "!";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+}); 
