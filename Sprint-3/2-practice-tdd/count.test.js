@@ -22,6 +22,29 @@ test ("should return 0 when the character does not exist in the string", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+test("should return 0 when the input string is empty", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+test("should return 0 when the input character is an empty string", () => {
+  const str = "test";
+  const char = "";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+test("should return 0 when both the input string and character are empty", () => {
+  const str = "";
+  const char = "";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+// Scenario: Empty String
+// Given an empty input string `str`,
+// And any character `char` (e.g., 'a'),
+// When the function is called with these inputs,
+// Then it should return 0, indicating that no occurrences of `char` were found in the empty string.
 
 // Scenario: No Occurrences
 // Given the input string `str`,
