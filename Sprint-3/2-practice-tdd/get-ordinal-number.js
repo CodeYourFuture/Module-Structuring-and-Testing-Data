@@ -1,8 +1,10 @@
 function getOrdinalNumber(num) {
-  // 11 is a special case
-  if (num === 11) {
-    return "11th";
+  const lastTwoDigits = num % 100;
+
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+    return String(num) + "th";
   }
+
   const lastDigit = num % 10;
   switch (lastDigit) {
     case 1:

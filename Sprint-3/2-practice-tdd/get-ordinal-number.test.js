@@ -19,7 +19,7 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(131)).toEqual("131st");
 });
 
-// Case 2: Numbers ending with 2
+// Case 2: Numbers ending with 2, except those ending with 12
 // When the number ends with 2
 // Then the function should return a string by appending "nd" to the number.
 test("should append 'nd' for numbers ending with 2", () => {
@@ -28,7 +28,7 @@ test("should append 'nd' for numbers ending with 2", () => {
   expect(getOrdinalNumber(132)).toEqual("132nd");
 });
 
-// Case 3: Numbers ending with 3
+// Case 3: Numbers ending with 3, except those ending in 13
 // When the number ends with 3
 // Then the function should return a string by appending "rd" to the number.
 test("should append 'rd' for numbers ending with 3", () => {
@@ -37,7 +37,7 @@ test("should append 'rd' for numbers ending with 3", () => {
   expect(getOrdinalNumber(223)).toEqual("223rd");
 });
 
-// Case 4: the general(ish) case
+// Case 4: the general case
 // When numbers end with 0, 4, 5, 6, 7, 8, 9
 // The function should return a string by appending "th" to the number
 test("should append 'th' for numbers ending with 0, 4, 5, 6, 7, 8, 9", () => {
@@ -48,11 +48,20 @@ test("should append 'th' for numbers ending with 0, 4, 5, 6, 7, 8, 9", () => {
   expect(getOrdinalNumber(57)).toEqual("57th");
   expect(getOrdinalNumber(78)).toEqual("78th");
   expect(getOrdinalNumber(89)).toEqual("89th");
+  expect(getOrdinalNumber(189)).toEqual("189th");
 });
 
-// Case 5: The special case of 11
-// When the number is 11
+// Case 5: The special cases when last two digits are 11, 12 13
+// When the last two digits are 11, 12, or 13
 // Then the function should return a string by appending "th" to the number.
-test("should append 'th' for 11", () => {
+test("should append 'th' for number whose last two digits are 11, 12, 13", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(13)).toEqual("13th");
+  expect(getOrdinalNumber(111)).toEqual("111th");
+  expect(getOrdinalNumber(112)).toEqual("112th");
+  expect(getOrdinalNumber(113)).toEqual("113th");
+  expect(getOrdinalNumber(211)).toEqual("211th");
+  expect(getOrdinalNumber(212)).toEqual("212th");
+  expect(getOrdinalNumber(313)).toEqual("313th");
 });
