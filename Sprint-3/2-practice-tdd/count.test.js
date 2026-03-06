@@ -22,3 +22,28 @@ test("should count multiple occurrences of a character", () => {
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
+
+function countChar(stringOfCharacters, findCharacter) {
+  //return 5
+  // function countChar(str, char) {
+  let count = 0;
+
+  for (let i = 0; i < stringOfCharacters.length; i++) {
+    if (stringOfCharacters[i] === char) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+
+module.exports = countChar;
+
+
+test("should count multiple occurrences of a character", () => {
+  const str = "aaaaa";
+  const char = "a";
+  const count = countCharA(str, char);
+  expect(count).toEqual(5);
+});

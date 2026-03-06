@@ -18,3 +18,19 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(21)).toEqual("21st");
   expect(getOrdinalNumber(131)).toEqual("131st");
 });
+
+function getOrdinalNumber(num) {
+  nonStr = num.toString();
+  if (nonStr.endsWith("1") && nonStr !== "11") {
+    return nonStr.concat("st");
+  } else if (nonStr.endsWith("2")) {
+    return nonStr.concat("nd");
+  } else if (nonStr.endsWith("3")) {
+    return nonStr.concat("rd");
+  } else {
+    return "Invalid";
+  }
+
+}
+
+
