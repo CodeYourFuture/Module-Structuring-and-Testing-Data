@@ -23,3 +23,4 @@ What effect does calling the `prompt` function have?
 it invokes a modal window, and allows me to enter an input value
 What is the return value of `prompt`?
 it returns the value i entered "Edak"
+It will return null.

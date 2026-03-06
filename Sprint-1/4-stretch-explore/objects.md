@@ -22,4 +22,4 @@ What does the syntax `console.log` or `console.assert` mean? In particular, what
 console.log: Output a message to the console
 
 console.assert: Log an error message to the console if the first argument is false.
-`.` console is the class the . helps you to access the methods or properties of the class console.
+`.` the console stored methods.

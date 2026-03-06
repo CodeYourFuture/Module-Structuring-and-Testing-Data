@@ -14,7 +14,6 @@ console.log(result);
 // a) How many variable declarations are there in this program?
 // there are 6 variable declaration.
 
-
 // b) How many function calls are there?
 // One function call
 
@@ -29,7 +28,7 @@ console.log(result);
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // the variable result represent total movie duration in hours,minute and seconds.
-// const=movieLength
+// const=movieDuration
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // this code works for all movie length and integer values.
