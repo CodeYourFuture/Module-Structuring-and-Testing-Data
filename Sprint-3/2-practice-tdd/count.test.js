@@ -29,3 +29,19 @@ test("should count 0 occurrences of a character", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+test("should be case sensitive and return only occurrences of same case characters", () => {
+  const str = "Dodgers";
+  const char = "D";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
+
+test("should count occurrences of regex metacharacters", () => {
+  const str = "a*b*c";
+  const char = "*";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+});
+
+// metacharacters . ^ $ * + ? { } [ ] \ | ( )
