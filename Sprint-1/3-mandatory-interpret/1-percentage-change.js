@@ -2,12 +2,12 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
-const PriceDifference = carPrice - priceAfterOneYear;
-const PercentageChange = (PriceDifference / carPrice) * 100;
+const priceDifference = carPrice - priceAfterOneYear;
+const percentageChange = (priceDifference / carPrice) * 100;
 
-console.log(`The percentage change is ${PercentageChange}`);
+console.log(`The percentage change is ${percentageChange}`);
 
 // Read the code and then answer the questions below
 
@@ -23,8 +23,8 @@ Number(priceAfterOneYear.replaceAll(",", ""))
 // the error is comin from this line 
 
 priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
-// the error happens becuae there is missing comma inside reaplaceAll().
-//The correct line should be 
+// The error happens because a comma is missing between the arguments in the replaceAll() function.
+// The correct line should be
 priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 // c) Identify all the lines that are variable reassignment statements

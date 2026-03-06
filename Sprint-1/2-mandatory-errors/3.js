@@ -12,4 +12,4 @@ const last4Digits = cardNumber.slice(-4);
 // The code will not work because slice() cannot be used on numbers.
 // Slice() only works on strings or arrays.
 //We need to convert the number to string first 
-const last4Digits = cardNumber.to String().slice(-4);
+const last4Digits = cardNumber.toString().slice(-4);
