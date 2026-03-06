@@ -6,8 +6,8 @@ function getOrdinalNumber(num) {
   if (lastTwo === 11 || lastTwo === 12 || lastTwo === 13) {
     return str + "th";
   }
- const lastDigit = num % 10;
-if (lastDigit === 1) {
+  const lastDigit = num % 10;
+  if (lastDigit === 1) {
     return str + "st";
   } else if (lastDigit === 2) {
     return str + "nd";
@@ -16,8 +16,6 @@ if (lastDigit === 1) {
   } else {
     return str + "th";
   }
-
-
 }
 
 module.exports = getOrdinalNumber;
