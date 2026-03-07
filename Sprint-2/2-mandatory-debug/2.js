@@ -27,7 +27,7 @@
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
 //Every call ignores the number that is passed in the argument and just returns "3"
-const num = 103;
+
 
 function getLastDigit(num) {
   return num.toString().slice(-1);
