@@ -4,7 +4,7 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  const minutes = time.slice(3, 5);
+  const minutes = time.slice(-2);
 
   if (hours === 0) {
     return `12:${minutes} am`;
