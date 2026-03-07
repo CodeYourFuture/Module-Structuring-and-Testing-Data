@@ -17,7 +17,7 @@
 
 // =============> write your explanation here
 // SyntaxError: Identifier 'decimalNumber' has already been declared
-// This error occurs because we have declared the variable decimalNumber twice, 
+// This error occurs because we have declared the variable decimalNumber twice,
 // once as a parameter and once as a variable inside the function.
 
 // apparently there is another error that we only console logged the variable decimalNumber which is not declared in the global scope,
