@@ -24,7 +24,8 @@ function toUpperSnakeCase(str) {
         // checks if the character is an uppercase letter or a digit
  
     }).join('');
-  // joins the array of characters back into a single string and replaces spaces with underscores
+  // joins the array of characters back into a single string and replaces spaces or special 
+  // characters such as "?" with underscores
 }
 
 console.log(toUpperSnakeCase("there-once was/a young lady from+London"));
