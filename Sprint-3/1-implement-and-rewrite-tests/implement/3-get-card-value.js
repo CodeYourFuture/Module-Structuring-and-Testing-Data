@@ -23,6 +23,15 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+  if (rank === "A") {
+    return 11;
+  }
+  if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  }
+  return parseInt(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -50,3 +59,12 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
+assertEquals(getCardValue("A"), 11); // Missing suit
+try {
+  getCardValue("11♠"); // Invalid rank
+  console.error("Error was not thrown for invalid rank");
+} catch (e) {}
+
+try {  getCardValue("9X"); // Invalid suit
+  console.error("Error was not thrown for invalid suit");
+} catch (e) {}
