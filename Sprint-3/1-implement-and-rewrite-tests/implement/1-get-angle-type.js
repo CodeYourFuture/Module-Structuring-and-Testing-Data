@@ -15,6 +15,9 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
+  if (angle <= 0) {
+    return "Invalid angle";
+  }
   if (angle < 90) {
     return "Acute angle";
   }
@@ -27,7 +30,7 @@ function getAngleType(angle) {
   if (angle === 180) {
     return "Straight angle";
   }
-  if (angle <= 360) {
+  if (angle < 360) {
     return "Reflex angle";
   }
   return "Invalid angle";
@@ -63,5 +66,8 @@ assertEquals(straight, "Straight angle");
 const reflex = getAngleType(280);
 assertEquals(reflex, "Reflex angle");
 
-const invalid = getAngleType(180);
+const invalid = getAngleType(-10);
 assertEquals(invalid, "Invalid angle");
+
+const invalid2 = getAngleType(360);
+assertEquals(invalid2, "Invalid angle");
