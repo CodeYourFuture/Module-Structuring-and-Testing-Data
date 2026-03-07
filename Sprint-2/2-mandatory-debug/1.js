@@ -10,7 +10,8 @@ function sum(a, b) {
 console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
 
 // =============> write your explanation here
-// the function above throw error because it is terminated by the return statement even before it gets to the operation
+// the function above returns undefined because the return statement terminates
+// the code before it gets to the operation (a+b)
 // Finally, correct the code to fix the problem
 
 //  =============> write your new code here

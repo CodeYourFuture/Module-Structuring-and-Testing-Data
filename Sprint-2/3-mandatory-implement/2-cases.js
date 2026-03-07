@@ -22,3 +22,9 @@ function snakeCasing(str) {
 }
 
 console.log(snakeCasing("ofonime edak"));
+
+function snakeCasingAlt(str) {
+  return str.toUpperCase().replaceAll(" ", "_");
+}
+
+console.log(snakeCasingAlt("ofonime edak Sunday"));
