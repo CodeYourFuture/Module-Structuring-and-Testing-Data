@@ -30,3 +30,4 @@ console.log(`£${pounds}.${pence}`);
 // line 9: using substring method to take only the integer part
 // line 14: using substring method to take only the decimal part and padend method to make the minimum length of pence to 2 characters by adding zero to the right
 // line 18: calling console function to print the integer part that represents the pound and the decimal part that represents the pence seprated by point
+//
