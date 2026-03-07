@@ -11,7 +11,9 @@
   */
 
 // =============> write your explanation here
-// The error is occurring because we are trying to declare a variable with the same name as the function parameter 'str'. This causes a conflict and results in a SyntaxError. To fix this, we can simply remove the 'let' keyword and assign the new value to 'str' directly, since 'str' is already defined as a parameter.
+/* The error is occurring because we are trying to declare a variable with the same name as the function parameter 'str'. 
+This causes a conflict and results in a SyntaxError. To fix this, we can simply remove the 'let' keyword and assign
+ the new value to 'str' directly, since 'str' is already defined as a parameter.*/
 
 
 // =============> write your new code here
