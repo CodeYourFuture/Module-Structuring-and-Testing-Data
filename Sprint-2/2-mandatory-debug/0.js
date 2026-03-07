@@ -26,4 +26,3 @@ function multiply(a, b) {
   );
 }
 multiply(10, 32);
-//
