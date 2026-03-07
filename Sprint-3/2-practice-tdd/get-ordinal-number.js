@@ -4,13 +4,14 @@ function getOrdinalNumber(num) {
   const lastTwoDigits = num % 100;
   if (lastTwoDigits >= 11 && lastTwoDigits <= 13) return num + "th";
 
-  if (num % 10 === 1) {
+ const lastDigit = num % 10;
+  if (lastDigit === 1) {
     return num + "st";
   }
-  if (num % 10 === 2) {
+  if (lastDigit === 2) {
     return num + "nd";
   }
-  if (num % 10 === 3) {
+  if (lastDigit === 3) {
     return num + "rd";
   }
   return num + "th";
