@@ -29,7 +29,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // d) Identify all the lines that are variable declarations
 // the lines that are variable declarations: -line 1 -line 2 -line 7 -line 8
-
+//
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 // the expression calls the replace method to replace the comma with empty string
 // converting the new string to a number to be able to perform math operations
