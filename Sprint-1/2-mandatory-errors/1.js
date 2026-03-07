@@ -6,4 +6,4 @@ age = age + 1;
 console.log (age);
 
 
-//I had to change the variable (conts) to (let) because a value assigned to (conts) can not be assign again, while with (let) it can be reassigned
+//I had to change the variable (const) to (let) because a value assigned to (const) can not be assign again, while with (let) it can be reassigned
