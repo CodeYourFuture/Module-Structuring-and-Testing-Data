@@ -18,9 +18,9 @@ console.log(decimalNumber);
 // =============> Identifier 'decimalNumber' has already been declared is the error msg thrown by the code
 
 // Finally, correct the code to fix the problem
-// =============> 
+// =============>
 function convertToPercentage(decimalNumber) {
-//  const decimalNumber = 0.5; this line must be deleted
+  //  const decimalNumber = 0.5; this line must be deleted
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
