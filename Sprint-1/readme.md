@@ -8,7 +8,7 @@
 > There is often a step by step video you can code along with too.
 > Do the prep.
 
-This README will guide you through the different sections for this week.
+This README will guide you through the different sections for this week.   
 
 ## 1 Exercises
 
