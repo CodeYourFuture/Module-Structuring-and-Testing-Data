@@ -19,7 +19,7 @@ test(`Should return 10 when given a K, Q or J card`, () => {
   expect(getCardValue("J♠")).toEqual(10);
 });
 
-test(`Should return the number of the card given a numeric card card`, () => {
+test(`Should return the number of the card given a number card`, () => {
   expect(getCardValue("10♠")).toEqual(10);
   expect(getCardValue("2♠")).toEqual(2);
   expect(getCardValue("3♠")).toEqual(3);
