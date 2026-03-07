@@ -25,3 +25,22 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+//For line 3 and 5 (const penceStringWithoutTrailingP = penceString.substring 0, penceString.length - 1)= substring(start, end) extracts part of a string.
+
+//0 means start at the beginning.
+
+//penceString.length - 1 means stop before the last character.
+
+//For "399p":
+
+//length = 4
+
+//4 - 1 = 3
+
+//substring from 0 to 3 → "399"
+
+// The purpose is to;
+
+//Removes the "p" at the end of the string.
+
+//Leaves only the numeric value "399"
