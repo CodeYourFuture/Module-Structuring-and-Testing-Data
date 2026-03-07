@@ -1,6 +1,6 @@
 // Predict and explain first...
 //  =============> write your prediction here
-// The function when called was supposed to capitalise the first letter of a string by calling the first character of the string and then transforming 
+// The function when called was supposed to capitalise the first letter of a string by calling the first character of the string and then transforming
 // to uppercase character and adding it back to the string, but because the variable "str" had already been declared it going to throw a syntaxerror
 
 // call the function capitalise with a string input
@@ -23,4 +23,4 @@ function capitalise(str) {
   let capitalisedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
   return capitalisedStr;
 }
-console.log(capitalise("tell me about yourself"))
+console.log(capitalise("tell me about yourself"));

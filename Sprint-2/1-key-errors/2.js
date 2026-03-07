@@ -23,6 +23,6 @@
 // =============> write your new code here
 
 function square(num) {
-    return num * num;
+  return num * num;
 }
 console.log(square(10));

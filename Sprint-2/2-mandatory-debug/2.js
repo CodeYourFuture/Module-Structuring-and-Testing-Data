@@ -19,7 +19,7 @@
 // Explain why the output is the way it is
 // =============> write your explanation here
 //getLastDigit takes no parameters.
-//Inside the function, will always return the last digit of the global variable num, which is "3". 
+//Inside the function, will always return the last digit of the global variable num, which is "3".
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
@@ -27,7 +27,6 @@
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
 //Every call ignores the number that is passed in the argument and just returns "3"
-
 
 function getLastDigit(num) {
   return num.toString().slice(-1);

@@ -24,16 +24,16 @@ console.log(formatTimeDisplay(61));
 // Call formatTimeDisplay with an input of 61, now answer the following:
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
-// The first call to pad() is 0, for totalHours which is 0
+// The first call to pad() is "0", for totalHours which is "0"
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
-// The return value is 00
+// The return value is "00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-// 1: -> pad() was called from line 11. Given that num is 0, the first call to pad() (for totalHours which is 0). There were two more calls to pad()(for remainingLastMinutes and remaining LastSeconds) and the value assigned to num for the last call is 0
+// 1: -> pad() was called from line 11. Given that num is "0", the first call to pad() (for totalHours which is "0"). There were two more calls to pad()(for remainingLastMinutes and remaining LastSeconds) and the value assigned to num for the last call is "0"
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
-//01 -> Given that num is 1, the last call to pad() (for remainingSeconds is 1) and the return value is 01, 
+//01 -> Given that num is 1, the last call to pad() (for remainingSeconds is 1) and the return value is "01"
