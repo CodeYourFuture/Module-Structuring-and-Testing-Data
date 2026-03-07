@@ -5,9 +5,10 @@
 
 // You should call this function a number of times to check it works for different inputs
 
-function toPounds(kilograms) {
-    return +(kilograms * 2.20462).toFixed(1);
+function toPounds(penceString) {
+  const pence = Number(penceString.slice(0, -1));
+  return `£${(pence / 100).toFixed(2)}`;
 }
-console.log(toPounds(1)); // should return 2.2
-console.log(toPounds(5)); // should return 11
-console.log(toPounds(10)); // should return 22
+console.log(toPounds("100p")); // should return £1.00
+console.log(toPounds("399p")); // should return £3.99
+console.log(toPounds("10p")); // should return £0.10
