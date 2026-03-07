@@ -40,7 +40,6 @@ function getCardValue(card) {
   const suit = ["♠", "♥", "♦", "♣"];
 
   const cardValue = card.slice(0, -1);
-  console.log("card value: " + cardValue);
   const cardSuit = card[card.length - 1];
 
   if (!rank.includes(cardValue) || !suit.includes(cardSuit)) {
