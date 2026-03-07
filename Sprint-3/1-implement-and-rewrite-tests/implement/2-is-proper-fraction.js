@@ -12,6 +12,11 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
+  // A proper fraction is a fraction where the absolute value of the numerator is less than the absolute value of the denominator. Additionally, the denominator cannot be zero. Therefore, we can check if the absolute value of the numerator is less than the absolute value of the denominator and if the denominator is not zero to determine if it is a proper fraction.
+  if (denominator === 0) {
+    return false; // A fraction cannot have a denominator of zero
+  }
+  return Math.abs(numerator) < Math.abs(denominator); 
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -31,3 +36,18 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+// Example: 2/1 is not a proper fraction
+assertEquals(isProperFraction(2, 1), false);
+// Example: -1/2 is a proper fraction
+assertEquals(isProperFraction(-1, 2), true);
+// Example: 1/-2 is a proper fraction
+assertEquals(isProperFraction(1, -2), true);
+// Example: -1/-2 is a proper fraction
+assertEquals(isProperFraction(-1, -2), true);
+// Example: 0/5 is a proper fraction
+assertEquals(isProperFraction(0, 5), true);
+// Example: 5/0 is not a proper fraction
+assertEquals(isProperFraction(5, 0), false);
+// Example: 5/5 is not a proper fraction
+assertEquals(isProperFraction(5, 5), false);    
+

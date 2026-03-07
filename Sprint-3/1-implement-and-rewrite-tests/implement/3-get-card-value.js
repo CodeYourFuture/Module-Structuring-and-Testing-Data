@@ -23,6 +23,27 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  const rank = card.slice(0, -1); // Get the rank by slicing off the last character (the suit)
+  const suit = card.slice(-1); // Get the suit by taking the last character
+
+  // Define valid ranks and suits
+  const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const validSuits = ["♠", "♥", "♦", "♣"];
+
+  // Check if the rank and suit are valid
+  if (!validRanks.includes(rank) || !validSuits.includes(suit)) {
+    throw new Error("Invalid card");
+  }
+
+  // Determine the value based on the rank
+  if (rank === "A") {
+    return 11;
+  } else if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  } else {
+    return parseInt(rank); // Convert number cards to their numeric value
+  }     
+
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,6 +61,12 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♥"), 11);
+assertEquals(getCardValue("J♦"), 10);
+assertEquals(getCardValue("Q♣"), 10);
+assertEquals(getCardValue("K♠"), 10);
+
+// You should also test the boundary cases, such as "10♥", and invalid cases, such as "11♠" or "A" or "♠".
 
 // Handling invalid cards
 try {
@@ -49,4 +76,25 @@ try {
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
 
+
 // What other invalid card cases can you think of?
+try {
+  getCardValue("11♠");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("A");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("♠");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}  
