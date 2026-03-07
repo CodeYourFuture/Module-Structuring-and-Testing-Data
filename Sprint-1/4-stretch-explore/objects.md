@@ -8,9 +8,10 @@ What output do you get?
 I get `f log(){[native code]}` in return
 
 Now enter just `console` in the Console, what output do you get back?
- I get`console{debug: f,error:f,info:f,log:f....}`
+I get`console{debug: f,error:f,info:f,log:f....}`
 
 Try also entering `typeof console`
+
 I get `object`
 Answer the following questions:
 
@@ -22,4 +23,5 @@ What does the syntax `console.log` or `console.assert` mean? In particular, what
 console.log: Output a message to the console
 
 console.assert: Log an error message to the console if the first argument is false.
-`.` the console stored methods.
+`.` This is a member access operator used to access methods and properties of objects
+console store methods and functions

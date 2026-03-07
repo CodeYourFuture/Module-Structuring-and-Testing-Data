@@ -10,9 +10,9 @@ const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
 
 // For the piece of code above, read the code and then answer the following questions
-
 // a) How many variable declarations are there in this program?
 // there are 6 variable declaration.
+
 
 // b) How many function calls are there?
 // One function call
@@ -28,8 +28,7 @@ console.log(result);
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // the variable result represent total movie duration in hours,minute and seconds.
-// const=movieDuration
-
+// const=runningTime
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-// this code works for all movie length and integer values.
-// for movie length which are multiples of 60 it returns hours with 0 minutes and 0 seconds
+// this code works for all movie running time and integer values.
+// for movie running time which are multiples of 60 it returns hours with 0 minutes and 0 seconds

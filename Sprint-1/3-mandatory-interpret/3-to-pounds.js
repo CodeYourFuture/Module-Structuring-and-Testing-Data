@@ -6,9 +6,14 @@ const penceStringWithoutTrailingP = penceString.substring(
 );
 
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
-const pounds = paddedPenceNumberString.substring(0,paddedPenceNumberString.length - 2);
+const pounds = paddedPenceNumberString.substring(
+  0,
+  paddedPenceNumberString.length - 2
+);
 
-const pence = paddedPenceNumberString .substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
+const pence = paddedPenceNumberString
+  .substring(paddedPenceNumberString.length - 2)
+  .padEnd(2, "0");
 
 console.log(`£${pounds}.${pence}`);
 
@@ -27,5 +32,4 @@ console.log(`£${pounds}.${pence}`);
 // from every length character of the padded string
 // 5.const pence = paddedPenceNumberString .substring(paddedPenceNumberString.length - 2).padEnd(2, "0");: This expression add '0' to the end if the paddedString is not 
 // upto 2 characters
-// 6.  this line is a function call to log the argument inside it to the console. it use template literals to get the values of the variables
-
+// // 6.  this line is a function call to log the argument inside it to the console. it use template literals to get the values of the variables
