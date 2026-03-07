@@ -1,10 +1,9 @@
 function getOrdinalNumber(num) {
   // return "1st";
-``
+
   const lastTwoDigits = num % 100;
-  if  (lastTwoDigits >= 11 && lastTwoDigits<= 13) 
- return num + "th";
-  
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) return num + "th";
+
   if (num % 10 === 1) {
     return num + "st";
   }
