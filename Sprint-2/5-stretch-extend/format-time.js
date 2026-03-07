@@ -15,7 +15,7 @@ function formatAs12HourClock(time) {
   }
 
   if (hours > 12) {
-  return `${hours - 12}:${minutes} pm`;
+  return `${String(hours - 12).padStart(2, "0")}:${minutes} pm`;
 }
 
   return `${time} am`;
