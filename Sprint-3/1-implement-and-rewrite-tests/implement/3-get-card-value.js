@@ -39,9 +39,15 @@ function getCardValue(card) {
   }
 
   // Compute value
- if (rank === "A") return 11;
-if (["J","Q","K"].includes(rank)) return 10;
-return parseInt(rank);
+if (rank === "A") {
+  return 11;
+}
+
+if (["J", "Q", "K"].includes(rank)) {
+  return 10;
+}
+
+return parseInt(rank); 
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -77,5 +83,4 @@ try {
 
 try {  getCardValue("9X"); // Invalid suit
   console.error("Error was not thrown for invalid suit");
-} catch (e) {}
-*/
+} catch (e) {} */
