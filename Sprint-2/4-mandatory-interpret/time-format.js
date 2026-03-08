@@ -27,10 +27,10 @@ console.log(formatTimeDisplay(61))
 // =============> 0, there are no hours in 61 seconds. (first is totalHours)
 
 // c) What is the return value of pad is called for the first time?
-// =============> 00, as there are 0 hours it pads it to 00 at least.
+// =============> "00", as there are 0 hours it pads it to 00 at least.
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> 1, as it is 1 over 60 and the 60 gets turned into remainingMinutes
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> 01, the last call is "${pad(remainingSeconds)}" which is the previous 1 padded into 01.
+// =============> "01", the last call is "${pad(remainingSeconds)}" which is the previous 1 padded into 01.
