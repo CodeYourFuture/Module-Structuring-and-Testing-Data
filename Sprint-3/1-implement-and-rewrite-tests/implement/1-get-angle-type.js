@@ -15,6 +15,10 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
+  if (angle < 0 || angle > 360) {
+    return "Invalid angle";
+  }
+
   if (angle > 0 && angle < 90) {
     return "Acute angle";
   }
@@ -30,6 +34,7 @@ function getAngleType(angle) {
   if (angle > 180 && angle < 360) {
     return "Reflex angle";
   }
+
   return "Invalid angle";
 }
 
