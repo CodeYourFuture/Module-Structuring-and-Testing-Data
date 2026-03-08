@@ -28,7 +28,7 @@ console.log(formatTimeDisplay(61));
 // =============> write your answer here:"00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here: pad(00):pad(01):pad(01) because it will take the value of totalHours,remainingMinutes,remainingSeconds.
+// =============> write your answer here: 1 because remainingSeconds of the return value is the last time pad will be called for console.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here: the return value will be 1 because 61 seconds has 1 second left after converting to minutes.
+// =============> write your answer here: the return value will be "01" because 61 seconds has 1 second left after converting to minutes.
