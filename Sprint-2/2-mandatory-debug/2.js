@@ -2,7 +2,7 @@
 
 // Predict the output of the following code:
 // =============> Write your prediction here
-// I predict that because the num variable has been given a constant value, the program will give undefiened when the getLastDigt function called after.
+I predict that because the num variable has been given a constant value, the program will give undefiened when the getLastDigt function called after.
 
 
 const num = 103;
@@ -36,4 +36,4 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
-// because it hasn't been gevine a paramater when it declared but when the num added as a paramater the program give the xpeacted outputs.
+because it hasn't been gevine a paramater when it declared but when the num added as a paramater the program give the xpeacted outputs.

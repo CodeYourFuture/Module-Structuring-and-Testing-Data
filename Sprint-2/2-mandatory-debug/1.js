@@ -1,6 +1,6 @@
 // Predict and explain first...
 //  =============> write your prediction here
-// I predicted that the function will not return the correct result because the return statment is not correctly declared. 
+I predicted that the function will not return the correct result because the return statment is not correctly declared. 
 
 function sum(a, b) {
   return;
