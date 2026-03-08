@@ -42,6 +42,6 @@ This line extracts the pounds part by taking all characters except the last two 
   .substring(paddedPenceNumberString.length - 2)
   .padEnd(2, "0");
 This line extracts the last two characters (representing pence) and ensures they are exactly two digits long by padding with trailing zeros if necessary, resulting in "99".
-
+however the padEnd is not necessary in this case because the substring will alwayes return 2 characters since we have already padded the string to be at least 3 characters long in the previouse Step.
 6. console.log(`£${pounds}.${pence}`);
 This line logs the formatted price in pounds and pence, e.g., £03.99.
