@@ -4,18 +4,18 @@
 // this function should square any number but instead we're going to get an error
 
 // =============> write your prediction of the error here
-//  the error will occur because the paramater of the function is not a valid variable name as it is a number. 
-// also the variable num is not declared in the function and this will give an error when the program run because the function will not know what the value of the num is.
+ the error will occur because the paramater of the function is not a valid variable name as it is a number. 
+also the variable num is not declared in the function and this will give an error when the program run because the function will not know what the value of the num is.
 
 function square(3) {
     return num * num;
 }
 
 // =============> write the error message here 
-// function square(3) {
-//                 ^
+function square(3) {
+                ^
 
-// SyntaxError: Unexpected number
+SyntaxError: Unexpected number
 
 // =============> explain this error message here it means that the paramater of the function is an unexpected number (3) and this is not a valid variable number. 
 I deleted the paramater of the function and run the programe and I get this error:
