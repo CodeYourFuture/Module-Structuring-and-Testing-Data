@@ -28,3 +28,27 @@ test("should return 0 when the character does not occur in the string", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 }); 
+
+// Case: Case sensitivity
+test("should count characters in a case-sensitive way", () => {
+  const str = "Hello World";
+  const char = "h"; // lowercase 'h' does not match 'H'
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Case: Non-alphabet characters
+test("should count non-alphabet characters", () => {
+  const str = "123!@#123!";
+  const char = "1";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+});
+
+// Case: Spaces
+test("should count spaces correctly", () => {
+  const str = "a b c d e f g";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(6);
+});
