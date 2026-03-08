@@ -35,9 +35,7 @@ function getCardValue(card) {
   if (rank === "A") {
     return 11;
   }
-  else if ( rank >= 2 && rank <= 10) {
-    return Number(rank);
-  }
+  return Number(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
