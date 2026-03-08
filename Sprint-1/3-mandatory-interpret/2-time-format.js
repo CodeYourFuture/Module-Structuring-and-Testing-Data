@@ -26,7 +26,7 @@ console.log(result);
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // it represents the length of the movie in hours, minutes and seconds format
-// a better name would be: movieTimeVolume
+// a better name would be: formattedTime
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // no it will not work for negative input values as it gives negative results
