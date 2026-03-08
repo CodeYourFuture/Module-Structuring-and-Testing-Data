@@ -47,7 +47,14 @@ test("should append 'th' for numbers ending with 11, 12, or 13", () => {
 });
 
 // Case 4: All other numbers
-test("should append 'th' for numbers that do not follow the 1, 2, 3 rule (e.g., 4, 5, 6...)", () => {
+
+ test("should append 'th' for numbers that do not follow the 1, 2, 3 rule", () => {
+  // Single digits 4-10
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(5)).toEqual("5th");
-});
+  expect(getOrdinalNumber(6)).toEqual("6th");
+  expect(getOrdinalNumber(7)).toEqual("7th");
+  expect(getOrdinalNumber(8)).toEqual("8th");
+  expect(getOrdinalNumber(9)).toEqual("9th");
+  expect(getOrdinalNumber(10)).toEqual("10th"); 
+ });
