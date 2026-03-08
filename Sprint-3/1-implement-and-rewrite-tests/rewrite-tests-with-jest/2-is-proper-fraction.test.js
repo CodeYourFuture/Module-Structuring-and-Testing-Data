@@ -15,9 +15,15 @@ test("should return false when numerator is equal to or greater than denominator
   expect(isProperFraction(10, 3)).toEqual(false);
 });
 
-test("should return false when numerator or denominator is negative", () => {
-  expect(isProperFraction(-1, 2)).toEqual(false);
-  expect(isProperFraction(1, -2)).toEqual(false);
+test("should return true for proper fractions with negative numbers", () => {
+  expect(isProperFraction(-1, 2)).toEqual(true);
+  expect(isProperFraction(1, -2)).toEqual(true);
+  expect(isProperFraction(-4, -5)).toEqual(true);
+});
+
+test("shold return false for improper fractions with negative numbers", () => {
+  expect(isProperFraction(-9, 5)).toEqual(false);
+  expect(isProperFraction(4, -3)).toEqual(false);
 });
 
 // Special case: numerator is zero
