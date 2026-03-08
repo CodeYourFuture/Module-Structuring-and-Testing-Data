@@ -12,8 +12,7 @@ const pounds = paddedPenceNumberString.substring(
 );
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .substring(paddedPenceNumberString.length - 2);
 
 console.log(`£${pounds}.${pence}`);
 
@@ -88,35 +87,22 @@ console.log(`£${pounds}.${pence}`);
 //    (paddedPenceNumberString.length - 2) which is 4 - 2 = 2, which is "9" therefore it will return a new string that starts from index 0
 //    and ends at index 1 which is "13"
 
-// 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0") : initialises a variable
-//    with the value of the last two characters of the paddedPenceNumberString variable with padding added to the end of the string
-//    until it reaches a total length of 2 characters.
+// 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2) : initialises a variable
+//    with the value of the last two characters of the paddedPenceNumberString variable
 
-// a. This is achieved by using the substring method on the paddedPenceNumberString variable to extract the last two characters of the string,
-//    and then using the padEnd method to add padding to the end of the string until it reaches a specified length.
+// a. This is achieved by using the substring method on the paddedPenceNumberString variable to extract the last two characters of the string.
 
 // b. The first argument of the substring method indicates the starting index which is (paddedPenceNumberString.length - 2)
 //    which targets the last two characters in the string. The ending index is not provided, so it will extract until the end of the string.
-//
 
-// c. The padEnd method is then used on the resulting string from the substring method to add padding to the end of the string
-//    until it reaches a total length of 2 characters.
+// c. Because paddedPenceNumberString was padded to a minimum length of 3 in step 3, this operation is guaranteed to
+//    return exactly two characters, making further padding unnecessary.
 
-// d. The first argument of the padEnd method indicates the target length of the resulting string which is 2 in this case.
+// d. For example, if paddedPenceNumberString is "399", the substring method will extract the last two characters "99".
+//    therefore pence will be "99".
 
-// e. The second argument of the padEnd method indicates the string to use to fill or pad which is "0" in this case.
-
-// f. Therefore, if the paddedPenceNumberString variable has a length of less than 2 characters, the padEnd method will add "0" characters
-//    to the end of the string until it reaches a total length of 2 characters.
-//    In this case, since paddedPenceNumberString is "399" which has a length of 3 characters,
-//    the substring method will extract the last two characters "99"
-//    and then the padEnd method will not add any padding since the length of the resulting string is already 2 characters.
-//    therefore pence will be "99"
-
-// g. if penceString = "9p" ; const penceStringWithoutTrailingP = "9" ; const paddedPenceNumberString = "009" ;
-//    const pounds = "0" ; const pence = "09" because the substring method will extract the last two characters "09"
-//    and then the padEnd method will not add any padding since the length of the resulting string is already 2 characters.
-//    therefore pence will be "09"
+// e. if penceString = "9p" ; const penceStringWithoutTrailingP = "9" ; const paddedPenceNumberString = "009" ;
+//    const pounds = "0" ; const pence = "09" because the substring method will extract the last two characters "09".
 
 // 6. console.log(`£${pounds}.${pence}`) : outputs the final result to the console in the format of "£pounds.pence"
 //    where pounds and pence are the values of the pounds and pence variables respectively.
