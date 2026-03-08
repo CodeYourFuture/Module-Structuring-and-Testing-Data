@@ -43,7 +43,7 @@ test("should append 'th' for numbers ending with 3 that are also ending with 13"
 });
 
 // Case 4: All other numbers
-test("should append 'th' for all other numbers", () => {
+test("should append 'th' for numbers that do not follow the 1, 2, 3 rule (e.g., 4, 5, 6...)", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(5)).toEqual("5th");
 });
