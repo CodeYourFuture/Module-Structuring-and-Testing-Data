@@ -13,8 +13,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
-// Function calls are determined by the presence of parentheses "()" after a function name.
-// Therefore in this file, there are 6 function calls:
+//There are 4 function calls in this file.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
