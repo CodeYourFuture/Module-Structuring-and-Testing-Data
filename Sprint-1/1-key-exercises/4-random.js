@@ -16,10 +16,11 @@ console.log(num);
 // The order of operations is as follows:
 
 // 1. The expression inside the parentheses is evaluated first: (maximum - minimum + 1) which gives us 100 - 1 + 1 = 100
-// 2. Then Math.random() is called, which generates a random decimal number between 0 and 1.
-// 3. The result of Math.random() is multiplied by the result of step 1, giving us a random decimal number between 0 and 100.
-// 4. Math.floor() is then called on the result of step 3, which rounds it down to the nearest whole number, giving us a random integer between 0 and 99.
-// 5. Finally, the minimum value (1) is added to the result of step 4, giving us a random integer between 1 and 100.
+// 2. Then Math.random() is called, which generates a random decimal number the range [0, 1).
+// 3. The result of Math.random() is multiplied by the result of step 1, giving us a random decimal number in the range [0, 100).
+// 4. Math.floor() is then called on the result of step 3, which rounds it down to the nearest integer, 
+//    resulting in a value from the set {0, 1, ..., 99\}
+// 5. Finally, the minimum value (1) is added to the result of step 4, giving us a random integer in the range [1, 100].
 
 // When num = 99
 // math.random gives us 0.98 (or something close to it)
