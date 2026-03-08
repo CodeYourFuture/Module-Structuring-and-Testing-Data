@@ -4,12 +4,12 @@
 //and logically there is no need for initializing decimalNumber again with 0.5 value as in that case the method would return 50% always
 // Try playing computer with the example to work out what is going on
 
-function convertToPercentage(decimalNumber) {
+/*function convertToPercentage(decimalNumber) {
   const decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
-}
+}*/
 
 console.log(decimalNumber);
 
@@ -18,8 +18,8 @@ console.log(decimalNumber);
 // Finally, correct the code to fix the problem
 // =============> the correct code would be as follows:-
 
-/*function convertToPercentage(decimalNumber) {
+function convertToPercentage(decimalNumber) {
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
-}*/
+}

@@ -6,9 +6,9 @@
 // =============> In the parameters of function we can write the name of the variable but not the actual value.
 //we write actual value when we call the function.
 
-function square(3) {
+/*function square(3) {
     return num * num;
-}
+}*/
 
 // =============> write the error message here
 /*
@@ -24,9 +24,8 @@ SyntaxError: Unexpected number
 
 // =============> write your new code here
 
-/*
+
 function square(num) {
     return num * num;
 }
-*/
 
