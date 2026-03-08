@@ -17,18 +17,18 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+Three times, once for the hours, minutes and seconds. 
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+ The value assighned to num when the pad function called for the first time is 0, because the total hours is 0.
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+ the return value of pad when it is called for the first time is '00' because the pad function add a '0' to the left of the num to make it 2 characters long. AS the num is 0 the return value is also ' 0'.
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+the value assighned to num when the pad function is called for the last time is 1 , because the remaining seconds is 1, as 61 seconds os equal to 1 minute and 1 second.
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+the return value of pad when it is called for the last time is '01' because the pad function adds a '0' to the left of the num to make it 2 characters long. As the num is 1, the return value is '01'.
