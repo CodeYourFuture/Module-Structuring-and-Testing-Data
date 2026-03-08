@@ -1,14 +1,18 @@
-// Implement a function isProperFraction,
-// when given two numbers, a numerator and a denominator, it should return true if
-// the given numbers form a proper fraction, and false otherwise.
+// Implement a function isProperFraction.
+// When given two numbers, a numerator and a denominator, it should return true
+// if the given numbers form a proper fraction, and false otherwise.
 
 // Assumption: The parameters are valid numbers (not NaN or Infinity).
 
-// Note: If you are unfamiliar with proper fractions, please look up its mathematical definition.
+// Definition:
+// A proper fraction is a fraction where:
+// - the denominator is not zero
+// - both numbers are non-negative
+// - the numerator is smaller than the denominator
 
 // Acceptance criteria:
-// After you have implemented the function, write tests to cover all the cases, and
-// execute the code to ensure all tests pass.
+// After implementing the function, write tests to cover all cases
+// and run the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
   // A fraction with denominator 0 is invalid
@@ -16,11 +20,17 @@ function isProperFraction(numerator, denominator) {
     return false;
   }
 
-  // A proper fraction has absolute numerator smaller than absolute denominator
-  if (Math.abs(numerator) < Math.abs(denominator)) {
+  // Negative values are not allowed
+  if (numerator < 0 || denominator < 0) {
+    return false;
+  }
+
+  // A proper fraction must have numerator smaller than denominator
+  if (numerator < denominator) {
     return true;
   }
 
+  // All other cases are not proper fractions
   return false;
 }
 
@@ -28,7 +38,7 @@ function isProperFraction(numerator, denominator) {
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
 
-// Here's our helper again
+// Helper function for simple assertions in this file
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
@@ -36,24 +46,25 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all cases.
-// What combinations of numerators and denominators should you test?
+// Tests to cover different combinations of numerators and denominators
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
 
-// Proper fractions
+// Proper fractions (numerator smaller than denominator)
 assertEquals(isProperFraction(3, 5), true);
-assertEquals(isProperFraction(-2, 7), true);
-assertEquals(isProperFraction(2, -7), true);
+assertEquals(isProperFraction(2, 7), true);
 
-// Improper fractions
+// Improper fractions (numerator greater than or equal to denominator)
 assertEquals(isProperFraction(5, 5), false);
 assertEquals(isProperFraction(7, 3), false);
-assertEquals(isProperFraction(-8, 4), false);
 
-// Zero numerator
+// Negative numbers should return false
+assertEquals(isProperFraction(-2, 7), false);
+assertEquals(isProperFraction(2, -7), false);
+
+// Zero numerator is allowed if denominator is positive
 assertEquals(isProperFraction(0, 5), true);
 
-// Invalid fraction (denominator 0)
+// Invalid fraction (denominator is zero)
 assertEquals(isProperFraction(2, 0), false);
