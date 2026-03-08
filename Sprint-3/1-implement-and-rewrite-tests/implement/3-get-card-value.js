@@ -39,15 +39,15 @@ function getCardValue(card) {
   }
 
   // Compute value
-if (rank === "A") {
-  return 11;
-}
+  if (rank === "A") {
+    return 11;
+  }
 
-if (["J", "Q", "K"].includes(rank)) {
-  return 10;
-}
+  if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  }
 
-return parseInt(rank); 
+  return parseInt(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
