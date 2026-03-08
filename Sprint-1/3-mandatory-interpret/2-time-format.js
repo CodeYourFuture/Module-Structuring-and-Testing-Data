@@ -41,7 +41,7 @@ by subtracting the remaining seconds and dividing by 60.
 
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-variable result represents the formatted remaining movielength time in hours, minutes, and seconds (HH:MM:SS). 
+variable result represents the formatted remaining movielength time in hours, minutes, and seconds (HH:MM:SS). we can change the varible name to formattedTime or formattedMovieLength to make it more descriptive.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 yes this code will work for all values of movieLength asa long as it is a non- negative integers.
