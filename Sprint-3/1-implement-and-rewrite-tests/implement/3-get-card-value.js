@@ -22,15 +22,25 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
-  const rank = card.slice(0, -1);
+  const validRanks = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+  const validSuits = ["♠","♥","♦","♣"];
+
+  // Check type
+  if (typeof card !== "string") {
+    throw new Error("Invalid card string");
+  }
+
   const suit = card.slice(-1);
-  if (rank === "A") {
-    return 11;
+  const rank = card.slice(0, -1);
+
+  // Validate rank and suit
+  if (!validRanks.includes(rank) || !validSuits.includes(suit)) {
+    throw new Error("Invalid card string");
   }
-  if (rank === "J" || rank === "Q" || rank === "K") {
-    return 10;
-  }
+
+  // Compute value
+  if (rank === "A") return 11;
+  if (["J","Q","K"].includes(rank)) return 10;
   return parseInt(rank);
 }
 
@@ -48,7 +58,7 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
-assertEquals(getCardValue("9♠"), 9);
+/* assertEquals(getCardValue("9♠"), 9);
 
 // Handling invalid cards
 try {
@@ -68,3 +78,4 @@ try {
 try {  getCardValue("9X"); // Invalid suit
   console.error("Error was not thrown for invalid suit");
 } catch (e) {}
+*/
