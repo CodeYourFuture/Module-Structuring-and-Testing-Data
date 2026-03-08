@@ -22,9 +22,32 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
-}
+   
+  if (typeof card !== "string" || card.length < 2) {
+    throw new Error("Invalid card"); 
+  }
+// Handle "10" which is 2 characters
+  if (card.startsWith("10")) {
+    return 10;
+  }
 
+  const firstChar = card[0];
+
+  // check if picture cards
+  if (firstChar === "A") return 11;
+  if (firstChar === "J" || firstChar === "Q" || firstChar === "K" ) return 10;
+
+  // check if number is between 2 and 9, 10 has already been checked for and there should be no other valid cards
+
+  const num = Number(firstChar);
+
+  if (!isNaN(num) && num >= 2 && num <= 9) {
+    return num;
+      // for everything else
+      } else { 
+        throw new Error("Invalid card");
+      }
+}
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -40,13 +63,59 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("10♥"), 10);
+assertEquals(getCardValue("J♥"), 10);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♣"), 10);
 
 // Handling invalid cards
 try {
+  getCardValue("♠J");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+    
+try {
   getCardValue("invalid");
-
-  // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
 
+// Handling invalid cards
+try {
+  getCardValue("♠J");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("invalid");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+
+try {
+  getCardValue("♠J");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {
+  console.log("Invalid card detected");
+}
+
+try {
+  getCardValue("invalid");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+console.log(getCardValue("9♠"));
+console.log(getCardValue("10♥"));
+console.log(getCardValue("J♥"));
+console.log(getCardValue("A♠"));
+console.log(getCardValue("Q♦"));
+console.log(getCardValue("K♣"));
+ 
+  // This line will not be reached if an error is thrown as expected
+try {
+sole.error("Error was not thrown for invalid card");
+} catch (e) {}
+
 // What other invalid card cases can you think of?
+// There could be cards with special characters 
+// There could be cards with two numbers rather than a number and a suite
