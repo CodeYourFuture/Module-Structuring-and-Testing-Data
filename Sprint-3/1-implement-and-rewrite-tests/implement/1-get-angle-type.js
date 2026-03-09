@@ -29,7 +29,6 @@ function getAngleType(angle) {
   } else {
     return "Invalid angle";
   }
-
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
@@ -69,5 +68,3 @@ assertEquals(reflex, "Reflex angle");
 // Example: Identify Invalid Angles
 const invalid = getAngleType(-45);
 assertEquals(invalid, "Invalid angle");
-
-

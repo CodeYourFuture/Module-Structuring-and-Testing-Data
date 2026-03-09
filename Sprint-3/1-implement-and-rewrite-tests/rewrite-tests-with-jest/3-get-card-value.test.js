@@ -34,6 +34,8 @@ test(`Should throw an error for invalid cards`, () => {
   expect(() => getCardValue("invalid")).toThrow();
   expect(() => getCardValue("AinvalidSuit")).toThrow();
   expect(() => getCardValue("InvalidRank♠")).toThrow();
+  expect(() => getCardValue("A♤")).toThrow("Invalid card: Invalid suit");
+  expect(() => getCardValue("11♠")).toThrow("Invalid card: Invalid rank");
 });
 
 // Suggestion: Group the remaining test data into these categories:

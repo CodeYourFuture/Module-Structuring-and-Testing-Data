@@ -13,12 +13,12 @@
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
   if (denominator === 0) {
-    return false; // A fraction with a denominator of 0 is undefined, so it's not a proper fraction.
+    return false;
   }
   if (Math.abs(numerator) < Math.abs(denominator)) {
-    return true; // A proper fraction has an absolute value of the numerator less than the absolute value of the denominator.
+    return true;
   }
-  return false; // If none of the above conditions are met, it's not a proper fraction.
+  return false;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -64,4 +64,4 @@ assertEquals(isProperFraction(1, 0), false);
 assertEquals(isProperFraction(-1, 0), false);
 
 // Example: 0/0 is not a proper fraction (undefined)
-assertEquals(isProperFraction(0, 0), false);  
+assertEquals(isProperFraction(0, 0), false);
