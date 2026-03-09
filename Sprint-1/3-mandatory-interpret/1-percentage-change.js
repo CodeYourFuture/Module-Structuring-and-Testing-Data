@@ -13,7 +13,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
-//There are 4 function calls in this file.
+//There are 5 function/method calls in this file. Lines 4, 5 and 10.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
