@@ -32,5 +32,5 @@ test("should return an empty string", () => {
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
 test("should throw and error when count is a negative number", () => {
-  expect(()=> repeatStr("Love", -3)).toThrow("Negative counts are not valid");
+  expect(() => repeatStr("Love", -3)).toThrow("Negative counts are not valid");
 });
