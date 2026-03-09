@@ -60,5 +60,8 @@ assertEquals(invalidZero, "Invalid angle");
 const invalidNegative = getAngleType(-45);
 assertEquals(invalidNegative, "Invalid angle");
 
-const invalidOver = getAngleType(361);
+const invalidOver = getAngleType(360);
 assertEquals(invalidOver, "Invalid angle");
+
+const invalidOver2 = getAngleType(361);
+assertEquals(invalidOver2, "Invalid angle");
