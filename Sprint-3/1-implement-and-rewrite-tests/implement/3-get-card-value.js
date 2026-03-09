@@ -23,31 +23,39 @@
 
 function getCardValue(card) {
   // Handling invalid cards
-  try{
-  const rank = card.slice(0,-1); //rank of the card is everything except the last character of card string
-  const suit = card.slice(-1); // suit is the last character of the card string
-  if((card.length != 2 && card.length !=3) || !isValidCard(rank, suit)){
-    throw new Error("Invalid card");
-  }
-  if(rank === "J" || rank === "Q" || rank == "K")
-    return 10
-  else if(rank == "A")
-    return 11;
-  else
-    return Number(rank);
-  }
-  catch(e){
+  try {
+    const rank = card.slice(0, -1); //rank of the card is everything except the last character of card string
+    const suit = card.slice(-1); // suit is the last character of the card string
+    if (!isValidCard(rank, suit)) {
+      throw new Error("Invalid card");
+    }
+    if (rank === "J" || rank === "Q" || rank == "K") return 10;
+    else if (rank == "A") return 11;
+    else return Number(rank);
+  } catch (e) {
     return e.message;
   }
 }
 
-function isValidCard(rank,suit){
-  const ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+function isValidCard(rank, suit) {
+  const ranks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
   const suits = ["♠", "♥", "♦", "♣"];
-  if(ranks.includes(rank) && suits.includes(suit))
-    return true;
-  else
-    return false;
+  if (ranks.includes(rank) && suits.includes(suit)) return true;
+  else return false;
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -65,7 +73,6 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
-
 assertEquals(getCardValue("10♠"), 10);
 assertEquals(getCardValue("Q♠"), 10);
 assertEquals(getCardValue("A♣"), 11);
