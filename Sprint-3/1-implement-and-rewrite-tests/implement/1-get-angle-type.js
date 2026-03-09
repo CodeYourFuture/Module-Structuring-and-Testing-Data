@@ -33,6 +33,9 @@ function getAngleType(angle) {
   if (angle === 360) {
     return "Straight angle"; 
   }
+  if (angle === 1) {
+    return "Acute angle"; 
+  }
   return "Invalid angle";
 }
 
