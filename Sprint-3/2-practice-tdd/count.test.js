@@ -59,6 +59,5 @@ test("should count multiple occurrences of a character", () => {
 });
 
 //handling invalid input
-//the tests work assuming that only letters are in the string - no numbers or special characters
-
-
+//the tests work assuming that only letters are in the string
+// numbers or special characters are not tested for
