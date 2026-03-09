@@ -3,22 +3,16 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> identifier not declared (unknown)
+// =============> write your prediction of the error here
 
 function square(3) {
     return num * num;
 }
 
-// =============> Unexpected number
+// =============> write the error message here
 
-// =============> the parameter shouldn't be given an argument in the function definition
+// =============> explain this error message here
 
 // Finally, correct the code to fix the problem
 
-// =============> my new code
-function square(num) {
-    return num * num;
-}
-console.log(square(3));
-
-
+// =============> write your new code here
