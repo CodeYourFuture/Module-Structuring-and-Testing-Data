@@ -32,3 +32,9 @@ test(`should evaluate correctly with various negative number combinations`, () =
   expect(isProperFraction(-5, 2)).toEqual(false);
   expect(isProperFraction(5, -2)).toEqual(false);
 });
+
+test(`should handle edge cases with mixed signs correctly`, () => {
+  expect(isProperFraction(4, -7)).toEqual(true);
+  expect(isProperFraction(-4, -7)).toEqual(true);
+  expect(isProperFraction(-4, 7)).toEqual(true);
+});
