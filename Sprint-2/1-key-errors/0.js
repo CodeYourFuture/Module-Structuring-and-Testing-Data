@@ -13,6 +13,6 @@ function capitalise(str) {
 // but it creates a new one.
 // =============> my new code: 
 function capitalise(str) {
-  result = `${str[0].toUpperCase()}${str.slice(1)}`;
+  let result = `${str[0].toUpperCase()}${str.slice(1)}`;
   return resault;
 }
