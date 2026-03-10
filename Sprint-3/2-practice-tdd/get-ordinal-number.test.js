@@ -39,9 +39,10 @@ test("should append 'th' for the exceptions 11, 12, and 13", () => {
   expect(getOrdinalNumber(111)).toEqual("111th");
 });
 
-test("should append 'th' for all other numbers", () => {
+test("should append 'th' for numbers ending with 0, 4, 5, 6, 7, 8, or 9", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(10)).toEqual("10th");
   expect(getOrdinalNumber(35)).toEqual("35th");
   expect(getOrdinalNumber(99)).toEqual("99th");
   expect(getOrdinalNumber(100)).toEqual("100th");
+});
