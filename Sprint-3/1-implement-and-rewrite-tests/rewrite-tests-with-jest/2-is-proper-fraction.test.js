@@ -22,7 +22,7 @@ test("should return true when numerator is less than denominator", () => {
 });
 
 // Category 3: Improper fractions (numerator >= denominator)
-test("should return false when numerator is greater than or equal to denominator", () => {
+test("should return false when abs(numerator) >= abs(denominator)", () => {
   expect(isProperFraction(2, 1)).toBe(false);
   expect(isProperFraction(5, 5)).toBe(false);
   expect(isProperFraction(-3, 2)).toBe(false);
