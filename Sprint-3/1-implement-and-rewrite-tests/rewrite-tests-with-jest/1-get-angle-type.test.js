@@ -38,16 +38,9 @@ test(`should return "Reflex angle" for angles greater than 180° and less than 3
 });
 
 // Case 6: Invalid angles
-test(`should return "Invalid angle" for angles less than 1°`, () => {
+test(`should return "Invalid angle" when angle ≤ 0° or angle ≥ 360°`, () => {
   expect(getAngleType(-1)).toEqual("Invalid angle");
-});
-
-test(`should return "Invalid angle" for angles greater than 360°`, () => {
+  expect(getAngleType(0)).toEqual("Invalid angle");   // boundary case
+  expect(getAngleType(360)).toEqual("Invalid angle"); // boundary case
   expect(getAngleType(361)).toEqual("Invalid angle");
 });
-
-
-test(`should return "Invalid angle" for angles equal to 360°`, () => {
-  expect(getAngleType(360)).toEqual("Invalid angle");
-});
- 
