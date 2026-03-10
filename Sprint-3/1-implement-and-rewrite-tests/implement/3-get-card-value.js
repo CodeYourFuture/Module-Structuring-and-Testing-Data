@@ -23,18 +23,12 @@
 
 function getCardValue(card) {
   // Handling invalid cards
-  try {
-    const rank = card.slice(0, -1); //rank of the card is everything except the last character of card string
-    const suit = card.slice(-1); // suit is the last character of the card string
-    if (!isValidCard(rank, suit)) {
-      throw new Error("Invalid card");
-    }
-    if (rank === "J" || rank === "Q" || rank == "K") return 10;
-    else if (rank == "A") return 11;
-    else return Number(rank);
-  } catch (e) {
-    return e.message;
-  }
+  const rank = card.slice(0, -1); //rank of the card is everything except the last character of card string
+  const suit = card.slice(-1); // suit is the last character of the card string
+  if (!isValidCard(rank, suit)) throw new Error("Invalid card");
+  if (rank === "J" || rank === "Q" || rank == "K") return 10;
+  else if (rank == "A") return 11;
+  else return Number(rank);
 }
 
 function isValidCard(rank, suit) {
@@ -70,6 +64,15 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
+function assertThrows(fnGetCardValue) {
+  try {
+    fnGetCardValue(); // run the function
+    console.assert(false, "Expected function to throw an error");
+  } catch (err) {
+    console.assert(err instanceof Error, "Expected an Error to be thrown");
+  }
+}
+
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
@@ -79,8 +82,11 @@ assertEquals(getCardValue("A♣"), 11);
 assertEquals(getCardValue("2♠"), 2);
 assertEquals(getCardValue("J♦"), 10);
 assertEquals(getCardValue("K♠"), 10);
-assertEquals(getCardValue("Invalid"), "Invalid card");
-assertEquals(getCardValue("1Q"), "Invalid card");
-assertEquals(getCardValue("-10♦"), "Invalid card");
-assertEquals(getCardValue("♦K"), "Invalid card");
-assertEquals(getCardValue("Q♦♦"), "Invalid card");
+
+// using function wrapper in the below lines of code so instead of passing teh result of function I can pass the function here,
+// and it is being called in try block of assertThrows function
+assertThrows(() => getCardValue("Invalid"));
+assertThrows(() => getCardValue("1Q"));
+assertThrows(() => getCardValue("-10♦"));
+assertThrows(() => getCardValue("♦K"));
+assertThrows(() => getCardValue("Q♦♦"));
