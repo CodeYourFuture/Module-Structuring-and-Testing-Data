@@ -28,6 +28,12 @@ test("Should return Invalid card", ()=>{
   expect(() => getCardValue("1X")).toThrow("Invalid card");
   expect(() => getCardValue("0♥")).toThrow("Invalid card");
 });
+// Invalid card format
+test("Should throw error for tricky invalid card formats", () => {
+  expect(() => getCardValue("0x02♠")).toThrow("Invalid card");
+  expect(() => getCardValue("QQ♠")).toThrow("Invalid card");
+  expect(() => getCardValue("2.1♠")).toThrow("Invalid card");
+});
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
