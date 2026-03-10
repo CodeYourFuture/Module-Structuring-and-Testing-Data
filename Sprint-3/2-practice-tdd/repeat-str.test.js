@@ -45,8 +45,6 @@ test("should return an empty string when count == 0", () => {
 test("should throw an error", () => {
   const str = "responsibility";
   const count = -5;
-  // const repeatedStr = repeatStr(str, count);
-  // In order for it to work, 'the fuction' itself should directly be passed to 'expect'.
-  // Moreover, the function should be wrapped in a function call so jest can run it
+  
   expect(() => repeatStr(str, count)).toThrow();
 })
