@@ -46,9 +46,9 @@ test(`should return "Invalid angle" for angles greater than 360°`, () => {
   expect(getAngleType(361)).toEqual("Invalid angle");
 });
 
-// Largest valid angle(boundary case)
-test(`should return "Straight angle" when angle is the maximum valid value (360)`, () => {
-  expect(getAngleType(360)).toEqual("Straight angle");
+
+test(`should return "Invalid angle" for angles equal to 360°`, () => {
+  expect(getAngleType(360)).toEqual("Invalid angle");
 });
  // Smallest valid angle(boundary case)
 test(`should return "Acute angle" when angle is the minimum valid value (1)`, () => {
