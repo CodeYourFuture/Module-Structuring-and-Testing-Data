@@ -35,7 +35,7 @@ function getCardValue(card) {
 
   if (rank === "A"){
     return 11;
-  }else if(rank.match(/J|Q|K/)){
+  }else if(/^[JQK]$/.test(rank)){
     return 10;
   }else if(rank.match(/^(10|[2-9])$/)){
     return Number(rank);
