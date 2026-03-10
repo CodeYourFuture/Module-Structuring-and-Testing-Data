@@ -22,10 +22,48 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const rankList = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+  const suitList = ["♠", "♥", "♦", "♣"];
+
+  const faceCard = rankList.slice(-3);
+
+  const cardRank = card.slice(0, -1);
+  const cardSuit = card.charAt(card.length - 1);
+
+  const validCard = rankList.includes(cardRank) && suitList.includes(cardSuit);
+
+  if (!validCard) {
+    throw new Error("Invalid card");
+  }
+
+  if (cardRank === "A") {
+    return 11;
+  }
+
+  if (faceCard.includes(cardRank)) {
+    return 10;
+  }
+
+  return Number(cardRank);
 }
 
-// The line below allows us to load the getCardValue function into tests in other files.
+console.log(getCardValue("J♥"));
+
+// The line below allows us to load the getCard Value function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
 
@@ -37,9 +75,11 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
-// Examples:
+
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♥"), 11);
+assertEquals(getCardValue("K♦"), 10);
+assertEquals(getCardValue("10♣"), 10);
 
 // Handling invalid cards
 try {
@@ -49,4 +89,19 @@ try {
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
 
+
 // What other invalid card cases can you think of?
+try {
+  getCardValue("♠9");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("1♠");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("♠");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
