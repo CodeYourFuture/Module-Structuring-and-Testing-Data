@@ -2,9 +2,35 @@
 // We will use the same function, but write tests for it using Jest in this file.
 const isProperFraction = require("../implement/2-is-proper-fraction");
 
-// TODO: Write tests in Jest syntax to cover all combinations of positives, negatives, zeros, and other categories.
+// Write tests in Jest syntax to cover all combinations of positives, negatives, zeros, and other categories.
 
 // Special case: numerator is zero
 test(`should return false when denominator is zero`, () => {
   expect(isProperFraction(1, 0)).toEqual(false);
+});
+
+// Normal case: 
+test(`should return false when denominator is zero`, () => {
+  expect(isProperFraction(5, 10)).toEqual(true);
+});
+// Boundary Value
+test(`should return false when denominator is zero`, () => {
+  expect(isProperFraction(1, 0)).toEqual(false);
+});
+// Improper Fraction
+test(`should return false when denominator is zero`, () => {
+  expect(isProperFraction(1, 1)).toEqual(false);
+});
+// Negative Value
+test(`should return false when denominator is zero`, () => {
+  expect(isProperFraction(-3, 8)).toEqual(false);
+  
+});
+// Very Small
+test(`should return false when denominator is zero`, () => {
+  expect(isProperFraction(0.0001, 999999)).toEqual(true);
+});
+// very large
+test(`should return false when denominator is zero`, () => {
+  expect(isProperFraction(999999, 0.0001)).toEqual(false);
 });
