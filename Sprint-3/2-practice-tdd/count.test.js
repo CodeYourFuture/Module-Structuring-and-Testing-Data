@@ -28,3 +28,19 @@ test(`should return 0 for no occurances of 'char' in 'str'`, () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 })
+
+test(`in case sensitive case, should also return the number of character in the string`, () => {
+  expect(countChar("Code Your Future!", "Y")).toEqual(1);
+});
+
+test(`should return the count of character for non-alphabests`, () => {
+  expect(countChar("86421", "1")).toEqual(1);
+});
+
+test(`should return 0 for empty strings`, () => {
+  expect(countChar("code your future", "")).toEqual(0)
+});
+
+test(`should return the count for unusual characters`, () => {
+  expect(countChar("code& $future £your", "$")).toEqual(1)
+})

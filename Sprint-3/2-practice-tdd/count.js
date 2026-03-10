@@ -1,5 +1,10 @@
 function countChar(stringOfCharacters, findCharacter) {
-  return stringOfCharacters.split(findCharacter).length - 1;
+  if (findCharacter == "") return 0;
+  
+  const string = stringOfCharacters.toLowerCase();
+  const char = findCharacter.toLowerCase();
+
+  return string.split(char).length - 1;
 }
 
 module.exports = countChar;
