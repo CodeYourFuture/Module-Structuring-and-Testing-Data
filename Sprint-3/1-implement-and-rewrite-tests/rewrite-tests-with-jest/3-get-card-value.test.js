@@ -11,9 +11,23 @@ test(`Should return 11 when given an ace card`, () => {
 
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
+test("Should return the value of rank variable as a number when we are given 2-10", ()=>{
+  expect(getCardValue("2♠")).toEqual(2);
+  expect(getCardValue("9♠")).toEqual(9);
+  expect(getCardValue("10♠")).toEqual(10);
+});
 //   Face Cards (J, Q, K)
+test(`Should return 10 when given J or Q or K`, () => {
+  expect(getCardValue("K♠")).toEqual(10);
+  expect(getCardValue("J♠")).toEqual(10);
+  expect(getCardValue("Q♠")).toEqual(10);
+})
 //   Invalid Cards
-
+test("Should return Invalid card", ()=>{
+  expect(() => getCardValue(0)).toThrow("Invalid card");
+  expect(() => getCardValue("1X")).toThrow("Invalid card");
+  expect(() => getCardValue("0♥")).toThrow("Invalid card");
+});
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
