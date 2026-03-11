@@ -22,18 +22,35 @@
 // execute the code to ensure all tests pass.
 function getCardValue(card) {
   // TODO: Implement this function
-  if (typeof card !== "string") {
+  if (!card || typeof card !== "string") {
     throw new Error("Invalid card");
   }
+  //
   const validSuits = ["♠", "♥", "♦", "♣"];
-  const suit = card.slice(-1);
-  const rank = card.slice(0, -1);
+  const suit = card.slice(-1); //takes the last character of the string.
+  const rank = card.slice(0, -1); //takes everything except the last character.
+
   if (!validSuits.includes(suit)) {
-    throw new Error("Invalid card");
-  } else if (rank === "A") return 11;
-  else if (["J", "Q", "K"].includes(rank)) return 10;
-  const number = Number(rank);
-  if (number >= 2 && number <= 10) return number;
+    throw new Error("Invalid card"); // This if statement checks the suit is valid with the Array of suit we assigned
+  }
+  // Based on the question i get form mentor i changed the function if statement for better experience of the code.
+  const cardValues = {
+    A: 11,
+    J: 10,
+    Q: 10,
+    K: 10,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+  }; // This is java script object that act as like lookup table for the valid card value input.
+
+  if (cardValues[rank] !== undefined) return cardValues[rank];
   throw new Error("Invalid card");
 }
 

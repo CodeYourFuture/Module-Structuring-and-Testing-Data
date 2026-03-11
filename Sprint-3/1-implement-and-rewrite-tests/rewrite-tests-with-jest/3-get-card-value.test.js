@@ -27,6 +27,9 @@ test(`Should throw "Invalid card" for invalid cards`, () => {
   expect(() => getCardValue("B♠")).toThrow("Invalid card");
   expect(() => getCardValue("A$")).toThrow("Invalid card");
   expect(() => getCardValue("10X")).toThrow("Invalid card");
+  expect(() => getCardValue("0x02♠")).toThrow("Invalid card");
+  expect(() => getCardValue("2.1♠")).toThrow("Invalid card");
+  expect(() => getCardValue("0002♠")).toThrow("Invalid card");
 });
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
