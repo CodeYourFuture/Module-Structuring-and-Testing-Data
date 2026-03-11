@@ -11,8 +11,7 @@ function capitalise(str) {
   return str;
 }
 
-// =============> I've given the variable a new name, newStr, to avoid redclaring the variable.
-// =============> function capitalise(str) {
-//  let newStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-//  return newStr;
-//}
+// //function capitalise(str) {
+//   return str[0].toUpperCase() + str.slice(1);
+// }
+// //}
