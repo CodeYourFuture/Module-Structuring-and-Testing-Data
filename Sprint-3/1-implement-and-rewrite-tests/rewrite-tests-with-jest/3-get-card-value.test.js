@@ -19,7 +19,7 @@ test(`Should return 11 when given an ace card`, () => {
 // https://jestjs.io/docs/expect#tothrowerror
 
 // Number Cards (2-10)
-test(`should return the number (numeric value)`, () => {
+test(`should return the numeric value of number cards`, () => {
   expect(getCardValue("2♠")).toEqual(2);
   expect(getCardValue("10♥")).toEqual(10);
   expect(getCardValue("9♦")).toEqual(9);

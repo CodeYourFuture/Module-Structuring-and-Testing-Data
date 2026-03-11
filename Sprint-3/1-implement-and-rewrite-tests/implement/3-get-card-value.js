@@ -36,7 +36,7 @@ function getCardValue(card) {
       return Number(rankPart);
     }
   } else {
-    throw new Error("Error"); 
+    throw new Error("Invalid card. A valid card should contain a rank followed by the suit"); 
   }
 }
 
