@@ -24,15 +24,31 @@ test(`Should return 10 when given a face card`, () => {
 });
 
 // Case 4: Invalid Cards
-test(`Should return Invalid Card when given an invalid card`, () => {
-  expect(getCardValue("Aas♠")).toEqual("Invalid card");
-  expect(getCardValue("What")).toEqual("Invalid card");
-  expect(getCardValue("Q10")).toEqual("Invalid card");
-  expect(getCardValue("11")).toEqual("Invalid card");
-  expect(getCardValue("♠11")).toEqual("Invalid card");
-  expect(getCardValue("10*")).toEqual("Invalid card");
-  expect(getCardValue("Q_")).toEqual("Invalid card");
-  expect(getCardValue("A10")).toEqual("Invalid card");
+test(`Should return Error when given an invalid card`, () => {
+  expect(() => {
+    getCardValue("Aas♠");
+  }).toThrow();
+  expect(() => {
+    getCardValue("What");
+  }).toThrow();
+  expect(() => {
+    getCardValue("Q10");
+  }).toThrow();
+  expect(() => {
+    getCardValue("11");
+  }).toThrow();
+  expect(() => {
+    getCardValue("♠11");
+  }).toThrow();
+  expect(() => {
+    getCardValue("10*");
+  }).toThrow();
+  expect(() => {
+    getCardValue("Q_");
+  }).toThrow();
+  expect(() => {
+    getCardValue("A10");
+  }).toThrow();
 });
 
 // Suggestion: Group the remaining test data into these categories:
