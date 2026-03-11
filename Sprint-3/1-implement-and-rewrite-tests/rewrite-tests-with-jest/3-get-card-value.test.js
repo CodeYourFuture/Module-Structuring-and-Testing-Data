@@ -27,28 +27,28 @@ test(`Should return 10 when given a face card`, () => {
 test(`Should return Error when given an invalid card`, () => {
   expect(() => {
     getCardValue("Aas♠");
-  }).toThrow();
+  }).toThrow("Invalid Card");
   expect(() => {
     getCardValue("What");
-  }).toThrow();
+  }).toThrow("Invalid Card");
   expect(() => {
     getCardValue("Q10");
   }).toThrow();
   expect(() => {
     getCardValue("11");
-  }).toThrow();
+  }).toThrow("Invalid Card");
   expect(() => {
     getCardValue("♠11");
-  }).toThrow();
+  }).toThrow("Invalid Card");
   expect(() => {
     getCardValue("10*");
-  }).toThrow();
+  }).toThrow("Invalid Card");
   expect(() => {
     getCardValue("Q_");
-  }).toThrow();
+  }).toThrow("Invalid Card");
   expect(() => {
     getCardValue("A10");
-  }).toThrow();
+  }).toThrow("Invalid Card");
 });
 
 // Suggestion: Group the remaining test data into these categories:

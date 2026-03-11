@@ -25,7 +25,7 @@ function getCardValue(card) {
   // Handling invalid cards
   const rank = card.slice(0, -1); //rank of the card is everything except the last character of card string
   const suit = card.slice(-1); // suit is the last character of the card string
-  if (!isValidCard(rank, suit)) throw new Error("Invalid card");
+  if (!isValidCard(rank, suit)) throw new Error("Invalid Card");
   if (rank === "J" || rank === "Q" || rank == "K") return 10;
   else if (rank == "A") return 11;
   else return Number(rank);
