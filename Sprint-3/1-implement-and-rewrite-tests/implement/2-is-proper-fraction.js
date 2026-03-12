@@ -11,8 +11,7 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  const properFraction = numerator / denominator;
-  return properFraction > 0 && properFraction < 1;
+ return Math.abs(numerator) < Math.abs(denominator)
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -41,7 +40,7 @@ assertEquals(isProperFraction(1, 1), false);
 assertEquals(isProperFraction(8, 3), false)
 
 // Negative Values
-assertEquals(isProperFraction(-3, 8), false);
+assertEquals(isProperFraction(-3, 8), true);
 assertEquals(isProperFraction(-8, -3), false);
 assertEquals(isProperFraction(-3, -8), true);
 
