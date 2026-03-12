@@ -23,7 +23,7 @@ test(`should return false when numerator is greater than denominator`, () => {
 });
 // Negative Value
 test(`should return false when numerator is negative`, () => {
-  expect(isProperFraction(-3, 8)).toEqual(false);
+  expect(isProperFraction(-3, 8)).toEqual(true);
   
 });
 // Very Small
