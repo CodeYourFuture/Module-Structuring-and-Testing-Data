@@ -11,12 +11,21 @@ test(`should return false when denominator is zero`, () => {
 });
 
 // When numerator is greater than the denominator
-test(`should return false when numerator > denominator`, () => {
+test(`should return false when |numerator| >= |denominator|`, () => {
   expect(isProperFraction(5, 3)).toEqual(false);
   expect(isProperFraction(140, 7)).toEqual(false);
   expect(isProperFraction(-16, -5)).toEqual(false);
   expect(isProperFraction(-70, 14)).toEqual(false);
   expect(isProperFraction(100, -11)).toEqual(false);
+  expect(isProperFraction(-13, -13)).toEqual(false);
+});
+
+// When the numerator or denominator is not an integer
+test(`should return false when numerator or denominator is not an integer`, () => {
+  expect(isProperFraction(-1.5, 2)).toEqual(false);
+  expect(isProperFraction(2.3, 4)).toEqual(false);
+  expect(isProperFraction(3.7, 7)).toEqual(false);
+  expect(isProperFraction(102.8, -103.2)).toEqual(false);
 });
 
 // When the fraction is correct
