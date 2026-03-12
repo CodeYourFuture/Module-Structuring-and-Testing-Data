@@ -17,6 +17,6 @@
 function upperSnakeCase(wordsSet) {
   let wsSnakeCase = wordsSet.replaceAll(" ", "_");
   let wsupperSnakeCase = wsSnakeCase.toUpperCase();
-  return console.log(wsupperSnakeCase);
+  return wsupperSnakeCase;
 }
 upperSnakeCase("i do not know"); // evaluates to: "I_DO_NOT_KNOW"
