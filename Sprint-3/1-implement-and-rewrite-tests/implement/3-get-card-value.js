@@ -22,17 +22,17 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  const suits = ["♠", "♥", "♦", "♣"];
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validNumberRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
-  // Card must be a string
-  if (typeof card !== "string") {
+  if (typeof card !== "string" || card.length < 2) {
     throw new Error("Invalid card");
   }
 
   const suit = card.slice(-1);
   const rank = card.slice(0, -1);
 
-  if (!suits.includes(suit)) {
+  if (!validSuits.includes(suit)) {
     throw new Error("Invalid card");
   }
 
@@ -44,10 +44,8 @@ function getCardValue(card) {
     return 10;
   }
 
-  const number = Number(rank);
-
-  if (number >= 2 && number <= 10) {
-    return number;
+  if (validNumberRanks.includes(rank)) {
+    return Number(rank);
   }
 
   throw new Error("Invalid card");
@@ -103,5 +101,20 @@ try {
 
 try {
   getCardValue("♠");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("0x02♠");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("2.1♠");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("0002♠");
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
