@@ -22,7 +22,35 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+
+  if (!validSuits.includes(suit) || !validRanks.includes(rank)) {
+    throw new Error("Invalid card");
+  }
+  if (rank === "A") {
+    return 11;
+  }
+  if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  }
+  return parseInt(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
