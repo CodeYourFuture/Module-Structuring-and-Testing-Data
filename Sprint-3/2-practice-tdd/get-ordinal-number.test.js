@@ -14,11 +14,6 @@ test("should append 'nd' for numbers ending with 2, except those ending with 12"
   expect(getOrdinalNumber(132)).toEqual("132nd");
 });
 
-// In this week's prep, we started implementing getOrdinalNumber.
-// This function takes a number as input and returns a string with the appropriate ordinal suffix ("st", "nd", "rd", "th").
-// For example:
-// - getOrdinalNumber(1) should return "1st"
-
 // Continue testing and implementing getOrdinalNumber for additional cases.
 // Write your tests using Jest — remember to run your tests often for continual feedback.
 test("should append 'rd' for numbers ending with 3, except those ending with 13", () => {
@@ -35,7 +30,7 @@ test("should append 'rd' for numbers ending with 3, except those ending with 13"
 // Case 1: Numbers ending with 1 (but not 11)
 // When the number ends with 1, except those ending with 11,
 // Then the function should return a string by appending "st" to the number.
-test("should append 'th' for numbers ending with 11, 12, or 13", () => {
+test("should append 'th' for special cases 11, 12, or 13", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(12)).toEqual("12th");
   expect(getOrdinalNumber(13)).toEqual("13th");
