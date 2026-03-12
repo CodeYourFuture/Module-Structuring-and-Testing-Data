@@ -9,30 +9,17 @@ test(`should return false when denominator is zero`, () => {
   expect(isProperFraction(1, 0)).toEqual(false);
 });
 
-test(`should return true when (numerator < denominator)`, () => {
+test(`should return true when abs(numerator) < abs(denominator)`, () => {
   expect(isProperFraction(0, 1)).toEqual(true);
-})
-
-test(`should return true when (numerator < denominator)`, () => {
-  expect(isProperFraction(-6, -3)).toEqual(true);
-})
-
-test(`should return true when (numerator < denominator)`, () => {
+  expect(isProperFraction(-3, -6)).toEqual(true);
   expect(isProperFraction(1, 2)).toEqual(true);
 })
 
-test(`should return false when (numerator > denominator)`, () => {
+test(`should return false when abs(numerator) > abs(denominator)`, () => {
   expect(isProperFraction(2, 1)).toEqual(false);
+  expect(isProperFraction(-2, -1)).toEqual(false);
 })
 
 test(`should return false when (numerator == denominator)`, () => {
   expect(isProperFraction(0, 0)).toEqual(false);
-})
-
-test(`should return false when (numerator > denominator)`, () => {
-  expect(isProperFraction(-1, -2)).toEqual(false);
-})
-
-test(`should return false when (numerator > denominator)`, () => {
-  expect(isProperFraction(0, -1)).toEqual(false);
 })
