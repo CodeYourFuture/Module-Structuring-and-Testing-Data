@@ -4,6 +4,30 @@ const repeatStr = require("./repeat-str");
 // When the repeatStr function is called with these inputs,
 // Then it should:
 
+// Case: Handle count of 0:
+// Given a target string `str` and a `count` equal to 0,
+// When the repeatStr function is called with these inputs,
+// Then it should return an empty string.
+
+test("should return empty string on count of 0", () => {
+  const str = "hello";
+  const count = 0;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("");
+});
+
+// Case: Handle count of 0:
+// Given a target string `str` and a `count` equal to 0,
+// When the repeatStr function is called with these inputs,
+// Then it should return an empty string.
+
+test("should return empty string on count of 0", () => {
+  const str = "hello";
+  const count = 0;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("");
+});
+
 // Case: handle multiple repetitions:
 // Given a target string `str` and a positive integer `count` greater than 1,
 // When the repeatStr function is called with these inputs,
@@ -26,18 +50,6 @@ test("should return the original string when count is 1", () => {
   const count = 1;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hello");
-});
-
-// Case: Handle count of 0:
-// Given a target string `str` and a `count` equal to 0,
-// When the repeatStr function is called with these inputs,
-// Then it should return an empty string.
-
-test("should return empty string on count of 0", () => {
-  const str = "hello";
-  const count = 0;
-  const repeatedStr = repeatStr(str, count);
-  expect(repeatedStr).toEqual("");
 });
 
 // Case: Handle negative count:
