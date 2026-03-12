@@ -1,7 +1,12 @@
-// A small list of previous passwords that must not be reused.
+// A list of previously used passwords that cannot be reused.
 const previousPasswords = ["Password1!", "Welcome2#", "Strong3$"];
 
 function passwordValidator(password) {
+  // Ensure a password value is provided and that it is a string.
+  if (typeof password !== "string") {
+    return false;
+  }
+
   // Password must be at least 5 characters long.
   if (password.length < 5) {
     return false;

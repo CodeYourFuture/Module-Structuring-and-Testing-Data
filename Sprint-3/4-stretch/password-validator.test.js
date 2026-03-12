@@ -68,3 +68,15 @@ test("password is invalid when it has been used before", () => {
 
   expect(result).toEqual(false);
 });
+
+test("password is invalid when no password is provided", () => {
+  const result = isValidPassword();
+
+  expect(result).toEqual(false);
+});
+
+test("password is invalid when the value is not a string", () => {
+  const result = isValidPassword(12345);
+
+  expect(result).toEqual(false);
+});
