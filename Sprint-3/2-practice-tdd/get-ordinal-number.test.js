@@ -24,14 +24,17 @@ test("should append 'rd' for numbers ending with 3", () => {
 });
 
 // Case 4: The 'Teens' exceptions (11, 12, 13)
-test("should append 'th' for 11, 12, and 13", () => {
+test("should append 'th' for numbers ending with 11, 12, and 13", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(12)).toEqual("12th");
   expect(getOrdinalNumber(13)).toEqual("13th");
+  expect(getOrdinalNumber(111)).toEqual("111th");
+  expect(getOrdinalNumber(212)).toEqual("212th");
+  expect(getOrdinalNumber(313)).toEqual("313th");
 });
 
 // Case 5: General 'th' cases
-test("should append 'th' for other numbers", () => {
+test("should append 'th' for numbers ending in 0, 4, 5, 6, 7, 8, and 9", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(10)).toEqual("10th");
 });
