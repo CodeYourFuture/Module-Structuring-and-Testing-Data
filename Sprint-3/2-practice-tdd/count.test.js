@@ -39,3 +39,10 @@ test("should be case sensitive", () => {
   const count = countChar(str, char);
   expect(count).toEqual(1);
 });
+
+test("should count non-alphabet characters", () => {
+  const str = "hello!!!";
+  const char = "!";
+  const count = countChar(str, char);
+  expect(count).toEqual(3);
+});
