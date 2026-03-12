@@ -3,7 +3,7 @@ function getOrdinalNumber(num) {
   const lastDigit = num % 10;
 
   if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
-    return number + "th";
+    return num + "th";
   }
 
   if (lastDigit === 1) {
