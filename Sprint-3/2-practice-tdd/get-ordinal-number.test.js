@@ -41,10 +41,10 @@ test("should append 'th' for numbers ending with 11, 12, or 13", () => {
   expect(getOrdinalNumber(13)).toEqual("13th");
 });
 
-// Case 4: All other numbers
-// When the number does not end with 1, 2, or 3 (or ends with 11, 12, or 13),
-// Then the function should return a string by appending "th" to the number.
-test("should append 'th' for all other numbers", () => {
+// Case 4: Numbers ending with 0 or 4–9
+// When the number ends with 0 or digits 4–9,
+// Then the function should return a string by appending "th".
+test("should append 'th' for numbers ending with 0 or 4–9", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(10)).toEqual("10th");
   expect(getOrdinalNumber(14)).toEqual("14th");
