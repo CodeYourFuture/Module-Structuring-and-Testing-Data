@@ -23,6 +23,17 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  if (
+    card.length < 2 ||
+    card.length > 3 ||
+    !["♠", "♥", "♦", "♣"].includes(card.slice(-1))
+  )
+    throw new Error("invalid suit");
+  if (card[0] === "A") return 11;
+  if (["J", "Q", "K"].includes(card[0])) return 10;
+  if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(card[0]))
+    return card[0]; // the parseint() or Number() can be used to convert the string to a number
+  throw new Error("invalid rank");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -41,6 +52,11 @@ function assertEquals(actualOutput, targetOutput) {
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
 
+assertEquals(getCardValue("A♥"), 11);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♠"), 10);
+assertEquals(getCardValue("2♦"), 2);
+
 // Handling invalid cards
 try {
   getCardValue("invalid");
@@ -50,3 +66,37 @@ try {
 } catch (e) {}
 
 // What other invalid card cases can you think of?
+try {
+  getCardValue("S");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("AJKP");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("A❦");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("29");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("♦,♣");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("2345");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("");
+  console.error("Error was not thrown for invalid card");
+} catch (e) {}
