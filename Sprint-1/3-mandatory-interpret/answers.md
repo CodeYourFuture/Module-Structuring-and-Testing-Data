@@ -139,10 +139,11 @@ Also, minutes and seconds are not padded with leading zeros, so values like 2:3:
 - For `"399"`, length is 3, so substring(0, 1) → `"3"`.
 
 5) `const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");`
-- First, `substring(length - 2)` takes the last 2 digits.
-- Then `padEnd(2, "0")` ensures it’s at least 2 characters (adds zeros on the right if needed).
-- Purpose: get exactly two pence digits.
-- For `"399"`, last two digits are `"99"` → stays `"99"`.
+- First, `substring(paddedPenceNumberString.length - 2)` takes the last 2 characters.
+- Because `paddedPenceNumberString` has already been padded earlier with `padStart(3, "0")`, it will always be at least 3 characters long.
+- That means the substring operation already returns exactly 2 characters for any valid `penceString`.
+- So `.padEnd(2, "0")` is not actually needed in this script.
+- For `"399"`, the last two digits are `"99"`, so the result stays `"99"`.
 
 6) `console.log(\`£${pounds}.${pence}\`);`
 - Uses a template literal to format the final currency string as pounds and pence.
