@@ -13,6 +13,7 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // Case 1: Numbers ending with 1 (but not 11)
 // When the number ends with 1, except those ending with 11,
 // Then the function should return a string by appending "st" to the number.
+
 test("should append 'st' for numbers ending with 1, except those ending with 11", () => {
   expect(getOrdinalNumber(1)).toEqual("1st");
   expect(getOrdinalNumber(21)).toEqual("21st");
