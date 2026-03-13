@@ -25,7 +25,7 @@ function getCardValue(card) {
   // TODO: Implement this function
   if (
     card.length < 2 ||
-    card.length >= 3 ||
+    card.length > 3 ||
     !["♠", "♥", "♦", "♣"].includes(card.slice(-1))
   )
     throw new Error("invalid suit");
