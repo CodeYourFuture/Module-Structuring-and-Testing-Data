@@ -15,8 +15,30 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  // TODO: Implement this function
+  if (angle <= 0 || angle >= 360) return "invalid angle";
 }
+
+if (angle < 90) {
+  return "acute angle";
+}
+
+if (angle === 90) {
+  return "right angle";
+}
+
+if (angle < 180) {
+  return "obtuse angle";
+}
+
+if (angle === 180) {
+  return " straight angle";
+}
+
+if (angle < 360) {
+  return "reflext angle";
+}
+
+// TODO: Implement this function
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -30,6 +52,13 @@ function assertEquals(actualOutput, targetOutput) {
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
+// Test
+assertEquals(getAngleType(45), "Acute angle");
+assertEquals(getAngleType(90), "Right angle");
+assertEquals(getAngleType(120), "Obtuse angle");
+assertEquals(getAngleType(180), "Straight angle");
+assertEquals(getAngleType(270), "Reflex angle");
+assertEquals(getAngleType(390), "invalid angle");
 
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
 // Example: Identify Right Angles
