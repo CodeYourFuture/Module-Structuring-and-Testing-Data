@@ -17,6 +17,7 @@ function isProperFraction(numerator, denominator) {
     return true;
   } else return false;
 }
+module.exports = isProperFraction;
 
 // Here's our helper again
 function assertEquals(actualOutput, targetOutput) {
