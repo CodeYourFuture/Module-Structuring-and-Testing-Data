@@ -14,17 +14,7 @@ function isProperFraction(numerator, denominator) {
   if (denominator === 0) {
     return false; // A fraction with a zero denominator is undefined, so we return false.
   }
-
-  if (numerator === 0) {
-    return true; // A fraction with a zero numerator is a proper fraction (0/denominator).
-  }
-  if (numerator < 0 && denominator > 0) {
-    return false;
-    // Negative numerator, positive denominator
-  }
   return Math.abs(numerator) < Math.abs(denominator);
-
-  return numerator < denominator && numerator > 0 && denominator > 0;
 }
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
