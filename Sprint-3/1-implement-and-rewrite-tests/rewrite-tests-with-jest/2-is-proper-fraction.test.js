@@ -9,6 +9,7 @@ test("should Throw new error for abs(denominator) == 0", () => {
   expect(() => isProperFraction(0, 0)).toThrow("Denominator cannot be zero");
   expect(() => isProperFraction(7, 0)).toThrow("Denominator cannot be zero");
 });
+// It should return true  when the numerator is 0
 test("should return true when abs(numerator) == 0", () => {
   expect(isProperFraction(0, -1)).toEqual(true);
   expect(isProperFraction(0, 3)).toEqual(true);
