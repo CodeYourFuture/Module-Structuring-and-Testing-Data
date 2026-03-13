@@ -18,3 +18,64 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(21)).toEqual("21st");
   expect(getOrdinalNumber(131)).toEqual("131st");
 });
+
+// Case 2: Numbers ending with 2 (but not 12)
+// When the number ends with 2, except those ending with 12,
+// Then the function should return a string by appending "nd".
+test("should append 'nd' for numbers ending with 2, except those ending with 12", () => {
+  expect(getOrdinalNumber(2)).toEqual("2nd");
+  expect(getOrdinalNumber(22)).toEqual("22nd");
+  expect(getOrdinalNumber(142)).toEqual("142nd");
+});
+
+// Case 3: Numbers ending with 3 (but not 13)
+// When the number ends with 3, except those ending with 13,
+// Then the function should return a string by appending 'rd'.
+test("should append 'rd' for numbers ending with 3, except those ending with 13", () => {
+  expect(getOrdinalNumber(3)).toEqual("3rd");
+  expect(getOrdinalNumber(33)).toEqual("33rd");
+  expect(getOrdinalNumber(153)).toEqual("153rd");
+});
+
+// Case 4: Special cases 11, 12, 13
+// When the number ends with 11, 12, or 13,
+// Then the function should always append "th".
+test("should append 'th' for special cases 11, 12, 13", () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(13)).toEqual("13th");
+  expect(getOrdinalNumber(111)).toEqual("111th");
+  expect(getOrdinalNumber(212)).toEqual("212th");
+});
+
+// Case 5: All other numbers
+// When the number does not end with 1, 2, or 3,
+// Then the function should append "th".
+test("should append 'th' for all other numbers", () => {
+  expect(getOrdinalNumber(4)).toEqual("4th");
+  expect(getOrdinalNumber(10)).toEqual("10th");
+  expect(getOrdinalNumber(100)).toEqual("100th");
+  expect(getOrdinalNumber(204)).toEqual("204th");
+});
+
+// Case 6: Float numbers should be rounded to nearest integer
+// When the input is a float,
+// Then the function should round it and return the correct ordinal.
+test("should round float numbers and return correct ordinal", () => {
+  expect(getOrdinalNumber(1.2)).toEqual("1st");   // rounds to 1
+  expect(getOrdinalNumber(1.8)).toEqual("2nd");   // rounds to 2
+  expect(getOrdinalNumber(2.5)).toEqual("3rd");   // rounds to 3
+  expect(getOrdinalNumber(10.51)).toEqual("11th"); // rounds to 11
+  expect(getOrdinalNumber(12.49)).toEqual("12th"); // rounds to 12
+  expect(getOrdinalNumber(12.5)).toEqual("13th");  // rounds to 13
+});
+
+// Case 7: Invalid inputs should throw an error
+// When the input is not a number,
+// Then the function should throw an error.
+test("should throw an error for invalid inputs", () => {
+  expect(() => getOrdinalNumber("10")).toThrow("Invalid input");
+  expect(() => getOrdinalNumber(null)).toThrow("Invalid input");
+  expect(() => getOrdinalNumber(undefined)).toThrow("Invalid input");
+  expect(() => getOrdinalNumber(NaN)).toThrow("Invalid input");
+});
