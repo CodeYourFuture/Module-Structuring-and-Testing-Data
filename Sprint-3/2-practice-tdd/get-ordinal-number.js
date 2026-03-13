@@ -19,3 +19,4 @@ function getOrdinalNumber(num) {
 }
 
 module.exports = getOrdinalNumber;
+
