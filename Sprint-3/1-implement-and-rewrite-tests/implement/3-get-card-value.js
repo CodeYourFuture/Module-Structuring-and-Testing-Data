@@ -23,42 +23,51 @@
 
 function getCardValue(card) {
   const validSuits = ["♠", "♥", "♦", "♣"];
+  const validRanks = [
+    "A",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
   if (typeof card !== "string")
     throw new Error(`Invalid card format: "${card}". Expected a string.`);
 
-  let cardSuit = card.slice(-1);
-  let cardRank = card.slice(0, -1);
+  const cardSuit = card.slice(-1);
+  const cardRank = card.slice(0, -1);
 
-  if (validSuits.includes(cardSuit)) {
-    switch (cardRank) {
-      case "A":
-        return 11;
-
-      case "J":
-      case "Q":
-      case "K":
-        return 10;
-
-      case "2":
-      case "3":
-      case "4":
-      case "5":
-      case "6":
-      case "7":
-      case "8":
-      case "9":
-      case "10":
-        return Number(cardRank);
-
-      default:
-        throw new Error(
-          `Invalid card format: "${card}" has an invalid rank "${cardRank}". Expected one of: A, 2–10, J, Q, K.`
-        );
-    }
-  } else
+  if (!validSuits.includes(cardSuit)) {
     throw new Error(
       `Invalid card format: "${card}" has an invalid suit "${cardSuit}". Expected one of: ♠, ♥, ♦, ♣.`
     );
+  }
+  if (!validRanks.includes(cardRank)) {
+    throw new Error(
+      `Invalid card format: "${card}" has an invalid rank "${cardSuit}". Expected one of: ♠, ♥, ♦, ♣.`
+    );
+  }
+
+  switch (cardRank) {
+    case "A":
+      return 11;
+
+    case "J":
+    case "Q":
+    case "K":
+      return 10;
+
+    default:
+      return Number(cardRank);
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
