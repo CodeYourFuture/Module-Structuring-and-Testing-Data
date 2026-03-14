@@ -24,3 +24,10 @@ const convertToUpperSnakeCase = (str) =>
   str.toUpperCase().trim().split(" ").join("_");
 
 console.log(convertToUpperSnakeCase("hello there")); // "HELLO_THERE"
+
+// Four functions are implemented because each one performs a specific task.
+// This makes the code easier to read, reuse, and maintain.
+//
+// The penceToPounds function was updated to handle a pence string like "399p".
+// It removes the "p", converts the value to a number, and divides by 100
+// so the function correctly returns "£3.99".s
