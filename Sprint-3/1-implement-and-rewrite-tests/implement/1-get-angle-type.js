@@ -43,7 +43,6 @@ module.exports = getAngleType;
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 
-
 // This helper function is written to make our assertions easier to read.
 // If the actual output matches the target output, the test will pass
 function assertEquals(actualOutput, targetOutput) {
