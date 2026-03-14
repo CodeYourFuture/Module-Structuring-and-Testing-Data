@@ -22,13 +22,16 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
+  if (card.length >= 4) {
+    throw new Error ("Invalid String");
+  }
   if (
     !card.includes("♠") &&
     !card.includes("♥") &&
     !card.includes("♦") &&
     !card.includes("♣")
-  ){
-    throw new Error("Invalid String");
+  ) {
+    throw new Error('Invalid String');
   }
   const rank = card.slice(0, -1);
 
@@ -42,12 +45,12 @@ function getCardValue(card) {
     throw new Error("Invalid String");
   }
 
-  if (rank==="A") {
+  if (rank === "A") {
     return 11;
-  } else if (rank==="J" || rank==="Q" || rank==="K") {
+  } else if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
   } else if (rank >= 2 && rank <= 10) {
-    return rank;
+    return Number(rank);
   }
 }
 
@@ -72,20 +75,33 @@ assertEquals(getCardValue("K♠"), 10);
 assertEquals(getCardValue("Q♠"), 10);
 assertEquals(getCardValue("2♠"), 2);
 assertEquals(getCardValue("10♠"), 10);
-assertEquals(getCardValue("   ♠"), "Invalid String");
-assertEquals(getCardValue("  6 ♠"), "Invalid String");
-assertEquals(getCardValue("   ♠"), "Invalid String");
-assertEquals(getCardValue(" **♠"), "Invalid String");
-assertEquals(getCardValue("10 **"), "Invalid String");
-assertEquals(getCardValue("A10♠"), "Invalid String");
+
+
 
 // Handling invalid cards
-try {
-  getCardValue("invalid");
+function throwInvalidStringError(card){
 
+try {
+  getCardValue(card)
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
-} catch (e) {}
+} catch (e) {
+  assertEquals(e.message,"Invalid String")
+}
+}
+
+throwInvalidStringError("invalid");
+throwInvalidStringError("   ♠");
+throwInvalidStringError("  6 ♠");
+throwInvalidStringError("   ♠");
+throwInvalidStringError(" **♠");
+throwInvalidStringError("10 **");
+throwInvalidStringError("A10♠");
+throwInvalidStringError("0x02♠");
+throwInvalidStringError("2.1♠");
+throwInvalidStringError("0002♠");
+throwInvalidStringError("22");
+throwInvalidStringError("♠2");
 
 // What other invalid card cases can you think of?
 // card with a mix of suit

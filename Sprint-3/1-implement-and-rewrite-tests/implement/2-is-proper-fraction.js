@@ -12,10 +12,12 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
-  if(numerator>denominator) {
-    return false
-  }else{
-    return true
+  if ( Math.abs(numerator) >= Math.abs(denominator)) {
+    return false;
+  } else if (Math.abs(denominator) === 0) {
+    return false;
+  } else {
+    return true;
   }
 }
 
@@ -38,10 +40,17 @@ function assertEquals(actualOutput, targetOutput) {
 assertEquals(isProperFraction(1, 2), true);
 assertEquals(isProperFraction(1, 10000), true);
 assertEquals(isProperFraction(100, 2), false);
-assertEquals(isProperFraction(1, 0.005), false);
 assertEquals(isProperFraction(1e2, 1e3), true);
-assertEquals(isProperFraction(1e4, 1e0), false);
-assertEquals(isProperFraction(-1, 1), true);
+assertEquals(isProperFraction(1e4, 1), false);
+assertEquals(isProperFraction(-1, 1), false);
 assertEquals(isProperFraction(1, -1), false);
-assertEquals(isProperFraction(0, -1), false);
-assertEquals(isProperFraction(-1, 0), true);
+assertEquals(isProperFraction(0, -1), true);
+assertEquals(isProperFraction(-1, -2), true);
+assertEquals(isProperFraction(1, -2), true);
+assertEquals(isProperFraction(-1, 2), true);
+assertEquals(isProperFraction(1, 0), false);
+assertEquals(isProperFraction(-1, 0), false);
+
+  
+
+
