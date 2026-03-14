@@ -3,26 +3,26 @@
 const isProperFraction = require("../implement/2-is-proper-fraction");
 
 // Special case: numerator is zero
-test(`should return true when numerator is zero`, () => {
+test(`should return true when the numerator is zero`, () => {
   expect(isProperFraction(0, 1)).toEqual(true);
 });
 
-test(`should return true when denominator is bigger then numerator` => {
+test(`should return true when the denominator is bigger then the numerator` => {
   expect(isProperFraction(1, 2)).toEqual(true);
 });
 
-test(`should return false when denominator is equal to numerator`, () => {
+test(`should return false when the denominator is equal to the numerator`, () => {
   expect(isProperFraction(2, 2)).toEqual(false);
 });
 
-test(`should return false when denominator is smaller than numerator`, () => {
+test(`should return false when the denominator is smaller than the numerator`, () => {
   expect(isProperFraction(2, 1)).toEqual(false);
 });
 
-test(`should return false when denominator and numerator are both zero`, () => {
+test(`should return false when the denominator and the numerator are both zero`, () => {
   expect(isProperFraction(0, 0)).toEqual(false);
 });
 
-test(`should return false when denominator is zero`, () => {
+test(`should return false when the denominator is zero`, () => {
   expect(isProperFraction(1, 0)).toEqual(false);
 });
