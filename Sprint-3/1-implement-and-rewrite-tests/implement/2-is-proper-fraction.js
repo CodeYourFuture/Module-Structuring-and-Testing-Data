@@ -11,15 +11,8 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  if (denominator >numerator && denominator !==0) {
-    return ture ;
-    
-  }
-  else{
-    return false;
-  }
+  if (denominator === 0) return false; // matches your test expectation
   return Math.abs(numerator) < Math.abs(denominator);
-  // TODO: Implement this function
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
