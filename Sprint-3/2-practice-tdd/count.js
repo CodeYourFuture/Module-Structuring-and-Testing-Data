@@ -5,7 +5,6 @@ function countChar(stringOfCharacters, findCharacter) {
   for (let i = 0; i < str; i++) {
     if (stringOfCharacters[i] === findCharacter) {
       count += 1;
-      console.log(stringOfCharacters[i]);
     }
   }
   return count;
