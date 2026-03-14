@@ -15,7 +15,7 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  if (angle >= 0 && angle < 90) {
+  if (angle > 0 && angle < 90) {
     return "Acute angle";
   } else if (angle === 90) {
     return "Right angle";
@@ -28,7 +28,6 @@ function getAngleType(angle) {
   }
   return "Invalid angle";
 }
-
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getAngleType;
