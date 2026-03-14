@@ -30,7 +30,6 @@ test("should return 0 if there are no occurrences of a character", () => {
   expect(count).toEqual(0);
 });
 
-
 // Scenario 3: Single Occurrence
 // Given the input string `str`,
 // And a character `char` that exists only once within `str`.
@@ -70,7 +69,6 @@ test("should return multiple occurrences of empty spaces in the string", () => {
   expect(count).toEqual(10);
 });
 
-
 // Scenario 6: No occurrences if the char is just an empty char
 // Given the input string `str` that contains any number of characters or no characters at all,
 // And a character `char` which is empty ''.
@@ -78,7 +76,8 @@ test("should return multiple occurrences of empty spaces in the string", () => {
 // Then it should return 0 as there is nothing to count as the char is just empty.
 
 test("should return 0 as the char is just empty", () => {
-  const str = "Hi I am a string that can be empty or not empty but I can't count empty characters.";
+  const str =
+    "Hi I am a string that can be empty or not empty but I can't count empty characters.";
   const char = "";
   const count = countChar(str, char);
   expect(count).toEqual(0);

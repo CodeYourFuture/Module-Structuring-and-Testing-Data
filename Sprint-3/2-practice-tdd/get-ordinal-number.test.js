@@ -41,7 +41,6 @@ test("should append 'st' for numbers ending with 2", () => {
   expect(getOrdinalNumber(-82)).toEqual("-82nd");
 });
 
-
 // Case 4: Numbers ending with 3
 // When the number is ending with 3,
 // Then the function should return a string by appending "rd" to the number.
@@ -49,7 +48,7 @@ test("should append 'st' for numbers ending with 3", () => {
   expect(getOrdinalNumber(3)).toEqual("3rd");
   expect(getOrdinalNumber(33)).toEqual("33rd");
   expect(getOrdinalNumber(183)).toEqual("183rd");
-    expect(getOrdinalNumber(-903)).toEqual("-903rd");
+  expect(getOrdinalNumber(-903)).toEqual("-903rd");
 });
 
 // Case 5: Numbers not ending 1, 2 and 3 except 11
@@ -63,6 +62,4 @@ test("should append 'th' for numbers not ending with 1, 2 and 3 except those end
   expect(getOrdinalNumber(1000)).toEqual("1000th");
   expect(getOrdinalNumber(87939)).toEqual("87939th");
   expect(getOrdinalNumber(-780987)).toEqual("-780987th");
-
 });
-
