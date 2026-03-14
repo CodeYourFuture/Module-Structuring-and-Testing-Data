@@ -40,7 +40,7 @@ function getCardValue(card) {
   }
   if (!["♠", "♥", "♦", "♣"].includes(cardFace)) {
   }
-  throw new Error(`Invalid card rank: ${rank}`);
+  throw new Error(`Invalid card`);
 }
 
 
