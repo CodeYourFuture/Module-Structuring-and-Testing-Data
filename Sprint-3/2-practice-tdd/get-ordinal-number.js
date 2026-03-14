@@ -1,6 +1,7 @@
 function getOrdinalNumber(num) {
-  // 1. Handle the 11, 12, 13 exceptions first
-  if (num === 11 || num === 12 || num === 13) {
+  const lastTwoDigits = num % 100;
+
+  if (lastTwoDigits === 11 || lastTwoDigits === 12 || lastTwoDigits === 13) {
     return num + "th";
   }
 
