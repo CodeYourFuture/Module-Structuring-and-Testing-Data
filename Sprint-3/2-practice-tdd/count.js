@@ -10,6 +10,5 @@ function countChar(stringOfCharacters, findCharacter) {
   }
   return count;
 }
-console.log(countChar("little", "t"));
 
 module.exports = countChar;
