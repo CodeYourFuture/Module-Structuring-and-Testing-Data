@@ -40,7 +40,7 @@ test("should return an empty string when the number of times is 0", () => {
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
-test("should return a string 'negative number not allowed' when negative number passed", () => {
+test("should throw an error when a negative number is passed", () => {
   let word = "hello";
   let times = -1;
   expect(() => {
