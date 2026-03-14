@@ -28,3 +28,15 @@ test("should return 0 when the character is not found", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+test("should return 0 when the character is case sensitive", () => {
+  const str = "Hello";
+  const char = "h";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+test("should count multiple occurrences of a symbols", () => {
+  const str = "Brilliant!!!";
+  const char = "!";
+  const count = countChar(str, char);
+  expect(count).toEqual(3);
+});
