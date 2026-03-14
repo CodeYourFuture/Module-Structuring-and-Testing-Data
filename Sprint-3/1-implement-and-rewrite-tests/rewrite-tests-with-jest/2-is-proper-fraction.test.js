@@ -7,7 +7,7 @@ test(`should return true when numerator is zero`, () => {
   expect(isProperFraction(0, 1)).toEqual(true);
 });
 
-test(`should return true when denominator is bigger then numerator => {
+test(`should return true when denominator is bigger then numerator` => {
   expect(isProperFraction(1, 2)).toEqual(true);
 });
 
