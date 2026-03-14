@@ -32,7 +32,7 @@ test("should append '3rd' for numbers ending with 3", () => {
   expect(getOrdinalNumber(153)).toEqual("153rd");
 });
 // Case 4: All other numbers → add th → (4th, 6th, 20th, 100th)
-test("should append 'th' for numbers ending with 4", () => {
+test("should append 'th' for numbers ending with 4,5,6,7,8,9 and 0", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(20)).toEqual("20th");
   expect(getOrdinalNumber(100)).toEqual("100th");
