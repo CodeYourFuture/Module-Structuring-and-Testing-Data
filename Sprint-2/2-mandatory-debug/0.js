@@ -2,7 +2,7 @@
 
 // =============> write your prediction here
 // The program will print 320 first.
-// Then it will " The result of mutiplying 10 and 32 is undefined".
+// Then it will " The result of mutiplying 10 and 32 is 320".
 
 
 function multiply(a, b) {
@@ -23,4 +23,5 @@ console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 function multiply(a,b){
   return a*b;
   }
+  
   console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)} `);

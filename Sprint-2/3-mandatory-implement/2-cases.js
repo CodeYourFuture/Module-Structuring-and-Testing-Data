@@ -16,5 +16,7 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function convertToUpperSnakeCase(str) {
-  return str.toUpperCase().trim().split("").join("_");
+  return str.toUpperCase().trim().split(" ").join("_");
 }
+
+console.log(convertToUpperSnakeCase("hello there")); // "HELLO_THERE"
