@@ -37,12 +37,12 @@ if (angle === 180) {
 if (angle < 360) {
   return "reflext angle";
 }
-
+module.exports = getAngleType;
 // TODO: Implement this function
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
-module.exports = getAngleType;
+
 
 // This helper function is written to make our assertions easier to read.
 // If the actual output matches the target output, the test will pass
