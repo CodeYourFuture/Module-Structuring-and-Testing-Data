@@ -12,10 +12,13 @@ test("should return true when numerator is less than denominator", () => {
 });
 
 // Case 2: Improper fractions (numerator >= denominator)
-test("should return false when numerator is greater than or equal to denominator", () => {
+test("should return false when |numerator| >= |denominator|", () => {
   expect(isProperFraction(2, 1)).toEqual(false);
   expect(isProperFraction(4, 3)).toEqual(false);
   expect(isProperFraction(5, 5)).toEqual(false);
+  expect(isProperFraction(-2, 1)).toEqual(false);
+  expect(isProperFraction(2, -1)).toEqual(false);
+  expect(isProperFraction(-5, -5)).toEqual(false);
 });
 
 // Case 3: Negative numbers
