@@ -9,7 +9,7 @@ const repeatStr = require("./repeat-str");
 // When the repeatStr function is called with these inputs,
 // Then it should return a string that contains the original `str` repeated `count` times.
 
-test("should repeat the string count times", () => {
+test("should return the string the given number of count when count is a positive number", () => {
   let word = "hello";
   let times = 3;
   const repeatedStr = repeatStr(word, times);
@@ -20,7 +20,7 @@ test("should repeat the string count times", () => {
 // Given a target string `str` and a `count` equal to 1,
 // When the repeatStr function is called with these inputs,
 // Then it should return the original `str` without repetition.
-test("should repeat the string count times", () => {
+test("should return the original string without repetition when count is 1", () => {
   let word = "code your future";
   let times = 1;
   const repeatedStr = repeatStr(word, times);
@@ -30,7 +30,7 @@ test("should repeat the string count times", () => {
 // Given a target string `str` and a `count` equal to 0,
 // When the repeatStr function is called with these inputs,
 // Then it should return an empty string.
-test("should repeat the string is empty ", () => {
+test("should return an empty string when the number of times is 0", () => {
   let word = "hello";
   let times = 0;
   const repeatedStr = repeatStr(word, times);
@@ -40,7 +40,7 @@ test("should repeat the string is empty ", () => {
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
-test("should repeat the string return negative number not allowed ", () => {
+test("should return a string 'negative number not allowed' when negative number passed", () => {
   let word = "hello";
   let times = -3;
   const repeatedStr = repeatStr(word, times);

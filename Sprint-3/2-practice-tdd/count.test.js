@@ -22,7 +22,7 @@ test("should count multiple occurrences of a character", () => {
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
-test("it should return 0 because the character doesn't occurrences", () => {
+test("returns 0 when the character does not exist in the string", () => {
   const str = "The character have no match";
   const char = "z";
   const count = countChar(str, char);
@@ -33,7 +33,7 @@ test("it should return 0 because the character doesn't occurrences", () => {
 // And a character `char` that have 1 character exist in `str`.
 // When the function is called with these inputs,
 // Then it should return 1, indicating that 1 occurrences of `char` were found.
-test("it should return 1 because the character occurrences 1 time", () => {
+test("returns 1 when the character appears once in the string", () => {
   const str = "code your future";
   const char = "f";
   const count = countChar(str, char);
