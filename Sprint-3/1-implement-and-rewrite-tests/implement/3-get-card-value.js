@@ -83,22 +83,13 @@ try {
 
 
 // What other invalid card cases can you think of?
-try {
-  getCardValue("1♠"); // invalid rank
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
 
-try {
-  getCardValue("B♣"); // invalid rank
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
-
-try {
-  getCardValue("10?"); // invalid suit
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
-
-try {
-  getCardValue("Z♠"); // invalid rank
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
+const invalidCards = ["invalid", "1♠", "B♣", "10?", "Z♠"];
+for (const card of invalidCards) {
+  try {
+    getCardValue(card);
+    console.error(`Error was not thrown for invalid card: ${card}`);
+  } catch (e) {
+    // Expected error, do nothing
+  }
+}
