@@ -42,7 +42,8 @@ test("should return an empty string when the number of times is 0", () => {
 // Then it should throw an error, as negative counts are not valid.
 test("should return a string 'negative number not allowed' when negative number passed", () => {
   let word = "hello";
-  let times = -3;
-  const repeatedStr = repeatStr(word, times);
-  expect(repeatedStr).toBe("Error:negative number not allowed");
+  let times = -1;
+  expect(() => {
+    repeatStr("hello", -1);
+  }).toThrow("negative number is not allowed");
 });
