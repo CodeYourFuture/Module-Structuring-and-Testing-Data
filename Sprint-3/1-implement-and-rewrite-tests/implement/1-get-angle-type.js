@@ -15,6 +15,23 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
+  if (angle > 0 && angle < 90) {
+    return 'Acute';
+  }
+  else if (angle===90) {
+    return 'Right';
+  }
+  else if ( angle > 90 && angle < 180){
+    return 'Obtuse';
+  }
+  else if( angle === 180) {
+    return ' Stright';
+  }
+  else if (angle > 180 && angle < 360) {
+    return 'reflex';
+  }
+  else {return 'Invalid';}
+
   // TODO: Implement this function
 }
 
