@@ -7,9 +7,9 @@
 // =============> write your prediction of the error here
 // My perdiction is that program will not run and show a SyntaxError because 3 is not a valid variable name.
 
-function square(3) {
-    return num * num;
-}
+// function square(3) {
+//     return num * num;
+// }
 
 // =============> write the error message here
 // SyntaxError: Unexpected number
