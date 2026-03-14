@@ -9,41 +9,24 @@ test(`Should return 11 when given an ace card`, () => {
 });
 
 // Case 2: Face Cards (J, Q, K)
-test(`Should return 10 when given a Jack card`, () => {
+test(`Should return 10 when given a Jack, Queen or King card`, () => {
   expect(getCardValue("J♥")).toEqual(10);
-});
-
-test(`Should return 10 when given a Queen card`, () => {
   expect(getCardValue("Q♦")).toEqual(10);
-});
-
-test(`Should return 10 when given a King card`, () => {
   expect(getCardValue("K♣")).toEqual(10);
 });
 
 // Case 3: Number Cards (2-10)
-test(`Should return 2 when given a 2 card`, () => {
+test(`Should return the value of number cards (2-10)`, () => {
   expect(getCardValue("2♠")).toEqual(2);
-});
-
-test(`Should return 10 when given a 10 card`, () => {
+  expect(getCardValue("5♥")).toEqual(5);
   expect(getCardValue("10♥")).toEqual(10);
 });
 
 // Case 4: Invalid Cards
 test(`Should throw an error when given an invalid card`, () => {
   expect(() => getCardValue("♠J")).toThrow();
-});
-
-test(`Should throw an error when given an invalid card`, () => {
   expect(() => getCardValue("invalid")).toThrow();
-});
-
-test(`Should throw an error when given an invalid card`, () => {
   expect(() => getCardValue("12♠")).toThrow();
-});
-
-test(`Should throw an error when given an invalid card`, () => {
   expect(() => getCardValue("1")).toThrow();
 });
 
