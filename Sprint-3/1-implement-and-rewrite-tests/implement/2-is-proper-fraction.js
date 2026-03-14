@@ -11,6 +11,11 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
+  if( numerator <  denominator) {
+    return true;
+  }
+  else {return false; }
+
   // TODO: Implement this function
 }
 
