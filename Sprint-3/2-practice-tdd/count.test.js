@@ -24,53 +24,13 @@ test("should count multiple occurrences of a character", () => {
 // Then it should return 0, indicating that no occurrences of `char` were found.
 
 test("should count multiple occurrences of a character", () => {
-  const str = "aaaaa";
-  const char = "a";
-  const count = countChar(str, char);
-  expect(count).toEqual(5);
-});
-
-test("should count multiple occurrences of a character", () => {
-  const str = "blind";
-  const char = "a";
-  const count = countChar(str, char);
-  expect(count).toEqual(0);
-});
-
-test("should count multiple occurrences of a character", () => {
-  const str = "blood";
-  const char = "o";
-  const count = countChar(str, char);
-  expect(count).toEqual(2);
-});
-
-test("should count multiple occurrences of a character", () => {
-  const str = "blood";
-  const char = "o";
-  const count = countChar(str, char);
-  expect(count).toEqual(2);
-});
-
-test("should count multiple occurrences of a character", () => {
-  const str = "blood";
-  const char = "l";
-  const count = countChar(str, char);
-  expect(count).toEqual(1);
-});
-
-test("should count multiple occurrences of a character", () => {
-  const str = "bbbrf";
-  const char = "b";
-  const count = countChar(str, char);
-  expect(count).toEqual(3);
-});
-
-test("should count multiple occurrences of a character", () => {
-  const str = "ooooa";
-  const char = "o";
-  const count = countChar(str, char);
-  expect(count).toEqual(4);
-});
+    expect(countChar("aaaaa", 'b")).toEqual(5);
+    expect(countChar("blind", 'a)).toEqual(0); 
+     expect(countChar("blood", 'o")).toEqual(2); 
+      expect(countChar("bbbrf", 'b")).toEqual(3);  
+    expect(countChar("ooooa", 'o")).toEqual(4);  
+}); 
+  
 
 // handling invalid input
 // the tests work assuming that only letters are in the string
