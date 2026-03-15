@@ -10,6 +10,3 @@ const greeting = "hello";
 
 const greetingMessage = sayHello(greeting, testName);
 console.log(greetingMessage); // 'hello, Aman!'
-
-
-// adding comment in exercise 1
