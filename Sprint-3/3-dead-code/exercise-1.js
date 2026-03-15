@@ -4,7 +4,7 @@
 const greeting = "hello";
 const testName = "Aman";
 
-const sayHello = (greeting, name) => {
+function sayHello(greeting, name) {
   return `${greeting}, ${name}!`;
 };
 
