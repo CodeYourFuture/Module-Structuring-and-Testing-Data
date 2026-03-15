@@ -24,13 +24,12 @@ test("should count multiple occurrences of a character", () => {
 // Then it should return 0, indicating that no occurrences of `char` were found.
 
 test("should count multiple occurrences of a character", () => {
-    expect(countChar("aaaaa", 'b")).toEqual(5);
-    expect(countChar("blind", 'a)).toEqual(0); 
-     expect(countChar("blood", 'o")).toEqual(2); 
-      expect(countChar("bbbrf", 'b")).toEqual(3);  
-    expect(countChar("ooooa", 'o")).toEqual(4);  
-}); 
-  
+  expect(countChar("aaaaa", "b")).toEqual(5);
+  expect(countChar("blind", "a")).toEqual(0);
+  expect(countChar("blood", "o")).toEqual(2);
+  expect(countChar("bbbrf", "b")).toEqual(3);
+  expect(countChar("ooooa", "o")).toEqual(4);
+});
 
 // handling invalid input
 // the tests work assuming that only letters are in the string
