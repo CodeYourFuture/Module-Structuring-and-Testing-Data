@@ -16,17 +16,15 @@ test("should return true when numerator is zero and denominator is positive", ()
 
 // Proper fractions
 test("should return true when abs(numerator) < abs(denominator)", () => {
-  expect(isProperFraction(1, 2)).toEqual(true);
-  expect(isProperFraction(-1, 2)).toEqual(true);
-  expect(isProperFraction(1, -2)).toEqual(true);
-  expect(isProperFraction(-1, -2)).toEqual(true);
+  expect(isProperFraction(1, 2)).toBe(true);
+  expect(isProperFraction(-1, 2)).toBe(true);
+  expect(isProperFraction(1, -2)).toBe(true);
+  expect(isProperFraction(-1, -2)).toBe(true);
 });
 
 // Improper fractions
-test("should return false when numerator is equal to denominator", () => {
-  expect(isProperFraction(2, 2)).toEqual(false);
-});
-
-test("should return false when numerator is greater than denominator", () => {
-  expect(isProperFraction(3, 2)).toEqual(false);
+test("should return false when abs(numerator) >= abs(denominator)", () => {
+  expect(isProperFraction(2, 2)).toBe(false);
+  expect(isProperFraction(3, 2)).toBe(false);
+  expect(isProperFraction(-3, 2)).toBe(false);
 });
