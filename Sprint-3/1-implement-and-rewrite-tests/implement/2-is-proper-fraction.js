@@ -49,3 +49,6 @@ assertEquals (isProperFraction (-3,-5), false);
 
 // special case
 assertEquals(isProperFraction(1,0) , false);
+
+assertEquals (isProperFraction (0,5), true);
+
