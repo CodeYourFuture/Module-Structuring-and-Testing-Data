@@ -27,8 +27,8 @@ function getCardValue(card) {
  const suit = card.slice(-1);
 
  const validSuits = ["♠", "♥", "♦", "♣"];
- const faceCards = ["10", "J", "Q", "K"];
- const numberCards = ["2", "3", "4", "5", "6", "7", "8", "9"];
+ const faceCards = ["J", "Q", "K"];
+ const numberCards = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
   if (!validSuits.includes(suit)) {
     throw new Error("Invalid card suit");
