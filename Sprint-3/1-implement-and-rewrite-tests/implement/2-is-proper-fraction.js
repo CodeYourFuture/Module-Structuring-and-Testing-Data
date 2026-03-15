@@ -45,3 +45,5 @@ assertEquals (isProperFraction(4, 4), false );
 // negative numbers
 assertEquals (isProperFraction(-2, 4), true );
 assertEquals (isProperFraction(5, -4), false );
+// special case
+assertEquals(isProperFraction(1,0) , false);
