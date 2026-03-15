@@ -9,7 +9,7 @@ const repeatStr = require("./repeat-str");
 // If a string is "hello" and count is 3 then
 // the hello will be output 3 times with no spaces between
 
-test("should repeat the string count times", () => {
+test("when count equals 3 it should repeat the string 3 times without spaces", () => {
   const str = "hello";
   const count = 3;
   const repeatedStr = repeatStr(str, count);
@@ -21,7 +21,7 @@ test("should repeat the string count times", () => {
 // will be output for example if the string is "Hello"
 // then the output will be "Hello"
 
-test("should repeat the string count times", () => {
+test("when count equals 1 it produce the string", () => {
   const str = "hello";
   const count = 1;
   const repeatedStr = repeatStr(str, count);
@@ -32,7 +32,7 @@ test("should repeat the string count times", () => {
 // If the the string is empty then count will be 0
 // and an empty string will be returned
 
-test("should repeat the string count times", () => {
+test("when count equals 0 it should produce an empty string", () => {
   const str = "hello";
   const count = 0;
   const repeatedStr = repeatStr(str, count);
