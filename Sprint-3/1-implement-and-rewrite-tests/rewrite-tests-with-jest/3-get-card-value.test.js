@@ -16,7 +16,6 @@ test("Should return the numeric value for number cards", () => {
   expect(getCardValue("10♦")).toEqual(10);
 });
 
-
 //   Face Cards (J, Q, K)
 test("Should return 10 for face cards (J, Q, K)", () => {
   expect(getCardValue("J♠")).toEqual(10);
@@ -24,14 +23,14 @@ test("Should return 10 for face cards (J, Q, K)", () => {
   expect(getCardValue("K♠")).toEqual(10);
 });
 
-
 //   Invalid Cards
 test("Should throw an error for invalid cards", () => {
   expect(() => getCardValue(null)).toThrow();
   expect(() => getCardValue(undefined)).toThrow();
-})
+  expect(() => getCardValue("11")).toThrow();
+  expect(() => getCardValue("happy")).toThrow();
+});
 
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
-
