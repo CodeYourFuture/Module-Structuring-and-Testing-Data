@@ -11,19 +11,19 @@ test(`should return false when denominator is zero`, () => {
 
 
 // Case 2: positive proper fractions
-test(`should return true for positive proper fractions (numerator < denominator)`, () => {
+test(`should return true when |numerator| < |denominator|`, () => {
   expect(isProperFraction(1, 2)).toEqual(true);
   expect(isProperFraction(2, 4)).toEqual(true);
 })
 
 // Case 3: negative proper fractions
-test(`should return true for negative proper fractions (numerator < denominator)`, () => {
+test(`should return true when |numerator| < |denominator|`, () => {
   expect(isProperFraction(-1, -2)).toEqual(true);
   expect(isProperFraction(-2, -4)).toEqual(true);
 })
 
 // Case 4: improper fractions (numerator >= denominator)
-test(`should return false for improper fractions`, () => {
+test(`should return false when |numerator| >= |denominator|`, () => {
   expect(isProperFraction(4, 2)).toEqual(false);
   expect(isProperFraction(4, 4)).toEqual(false);
   expect(isProperFraction(-6, 4)).toEqual(false);
