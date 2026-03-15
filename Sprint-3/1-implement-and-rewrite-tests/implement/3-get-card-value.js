@@ -23,6 +23,27 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  if (typeof card !== "string") {
+    throw new Error("Card must be a string");
+  }
+
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+
+  const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const validSuits = ["♠", "♥", "♦", "♣"];
+
+  if (!validRanks.includes(rank) || !validSuits.includes(suit)) {
+    throw new Error("Invalid card format");
+  }
+
+  if (rank === "A") {
+    return 11;
+  } else if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  } else {
+    return parseInt(rank, 10);
+  }     
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -39,14 +60,31 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
-assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("9♠"), 9); 
+assertEquals(getCardValue("A♠"), 11); 
+assertEquals(getCardValue("J♠"), 10);    
 
 // Handling invalid cards
 try {
-  getCardValue("invalid");
+  getCardValue("invalid");  
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
 
 // What other invalid card cases can you think of?
+try {
+  getCardValue("11♠");
+  console.error("Error was not thrown for invalid rank");
+} catch (e) {}
+
+try {
+  getCardValue("A♤");
+  console.error("Error was not thrown for invalid suit");
+} catch (e) {}
+
+try {
+  getCardValue(123);
+  console.error("Error was not thrown for non-string input");
+} catch (e) {}    
+  
