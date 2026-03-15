@@ -23,17 +23,15 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
-  if (
-    card.length < 2 ||
-    card.length > 3 ||
-    !["♠", "♥", "♦", "♣"].includes(card.slice(-1))
-  )
-    throw new Error("invalid suit");
-  if (card[0] === "A") return 11;
-  if (["J", "Q", "K"].includes(card[0])) return 10;
-  if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(card[0]))
-    return card[0]; // the parseint() or Number() can be used to convert the string to a number
-  throw new Error("invalid rank");
+  const cardRank = card.slice(0, -1);
+  const cardSuit = card.slice(-1);
+  if (card.length < 2 || !["♠", "♥", "♦", "♣"].includes(cardSuit))
+    throw new Error("invalid card suit");
+  if (cardRank === "A") return 11;
+  if (["J", "Q", "K"].includes(cardRank)) return 10;
+  if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(cardRank))
+    return cardRank; // the parseint() or Number() can be used to convert the string to a number
+  throw new Error("invalid card rank");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
