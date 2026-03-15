@@ -17,6 +17,8 @@ test(`Should return the correct number for number cards`, () => {
   expect(getCardValue("10♦")).toEqual(10);
 });
 //   Face Cards (J, Q, K)
+
+test(Should return 10 for face cards, () => {
 expect(getCardValue("J♣")).toEqual(10);
   expect(getCardValue("Q♦")).toEqual(10);
   expect(getCardValue("K♠")).toEqual(10);
