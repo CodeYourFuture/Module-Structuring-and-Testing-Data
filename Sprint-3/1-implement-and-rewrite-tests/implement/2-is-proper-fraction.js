@@ -11,11 +11,11 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-       if (denominator === 0){
-        return false;
-       }
-       
-        return Math.abs(numerator) < Math.abs(denominator);
+  if (denominator === 0) {
+    return false;
+  }
+
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -36,28 +36,22 @@ function assertEquals(actualOutput, targetOutput) {
 assertEquals(isProperFraction(1, 2), true);
 
 // Proper fraction
-assertEquals(isProperFraction(2,4), true);
+assertEquals(isProperFraction(2, 4), true);
 
 // Improper fraction
-assertEquals(isProperFraction(5,3), false);
+assertEquals(isProperFraction(5, 3), false);
 
 // Equal numerator & denominator
-assertEquals(isProperFraction(5,5), false);
+assertEquals(isProperFraction(5, 5), false);
 
 // Negative numbers
-assertEquals(isProperFraction(-1,-2), true);
+assertEquals(isProperFraction(-1, -2), true);
 
 // Zero numerator
-assertEquals(isProperFraction(0,5), true);
+assertEquals(isProperFraction(0, 5), true);
 
 // Zero denominator (invalid)
-assertEquals(isProperFraction(2,0), false);
-
-
-
-
-
-
+assertEquals(isProperFraction(2, 0), false);
 
 // What combinations of numerators and denominators should you test?
 
@@ -72,5 +66,3 @@ assertEquals(isProperFraction(2,0), false);
 // Zero numerator
 
 // Zero denominator (invalid)
-
-
