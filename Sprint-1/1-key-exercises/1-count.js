@@ -1,8 +1,7 @@
 let count = 0;
 
 count = count + 1;
-/* in line three, the variable count is combining the variable count original value of 0 with new value of 1 with the used of plus operator. 
-The equal operator is this case helping to re-assign the new value back to the count variable
+/* in line three, the variable count is reassign new value by increment it current value by 1.
 */
 console.log(count);
 
