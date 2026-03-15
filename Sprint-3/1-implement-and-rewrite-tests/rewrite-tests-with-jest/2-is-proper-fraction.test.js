@@ -32,10 +32,13 @@ test(`should return true when numerator is zero and denominator is non-zero`, ()
 });
 
 // Negative numbers
-test(`should handle negative numbers correctly`, () => {
-  expect(isProperFraction(-1, 2)).toEqual(true);
-  expect(isProperFraction(1, -2)).toEqual(true);
-  expect(isProperFraction(-3, -2)).toEqual(false);
+test("should return true when |numerator| < |denominator| and signs differ", () => {
+  expect(isProperFraction(-1, 2)).toBe(true);
+  expect(isProperFraction(1, -2)).toBe(true);
+});
+
+test("should return false when |numerator| > |denominator| and both are negative", () => {
+  expect(isProperFraction(-3, -2)).toBe(false);
 });
 
 // Both zero
