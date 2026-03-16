@@ -20,12 +20,12 @@ test(`should return false when both numerator and denominator are zero`, () => {
 });
 
 // case: both values are positive and the value of the numerater is less than the value of the denominater (proper fraction)
-test(`should return true for positive proper fraction`, () => {
+test(`should return true for proper fraction`, () => {
   expect(isProperFraction(1, 2)).toEqual(true);
 });
 
 // case: both values are positive and the value of the denominater is less than the value of the numerater (improper fraction)
-test(`should return false for positive improper fraction`, () => {
+test(`should return false for improper fraction`, () => {
   expect(isProperFraction(2, 1)).toEqual(false);
 });
 
