@@ -48,10 +48,11 @@ test("should append 'th' for numbers ending with 11, 12, or 13", () => {
 });
 
 // Case 5: numbers that ends with 0, 4, 5, 6, 7, 8, or 9
-// When the number does not end with 1, 2, or 3
+// When the number ends with 0, 4, 5, 6, 7, 8, or 9
 // Then the function should return a string by appending "th" to the number.
 
-test("should append 'th' for all other numbers", () => {
+test("should append 'th' for numbers ending with 0, 4, 5, 6, 7, 8, or 9", () => {
+  expect(getOrdinalNumber(0)).toEqual("0th");
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(10)).toEqual("10th");
   expect(getOrdinalNumber(11)).toEqual("115th");
