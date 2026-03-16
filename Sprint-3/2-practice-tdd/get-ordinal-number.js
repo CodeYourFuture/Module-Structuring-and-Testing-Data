@@ -1,17 +1,13 @@
 function getOrdinalNumber(num) {
-  if( num%10 === 1 && num%100 !== 11)
-  {
+  const lastDigit = num % 10; 
+  const lastTwoDigits = num % 100; 
+  if (lastDigit === 1 && lastTwoDigits !== 11) {
     return `${num}st`;
-  }
-  else if (num%10 === 2 && num%100 !== 12)
-  {
+  } else if (lastDigit === 2 && lastTwoDigits !== 12) {
     return `${num}nd`;
-  }
-  else if(num%10===3 && num%100 !==13)
-     {
+  } else if (lastDigit === 3 && lastTwoDigits !== 13) {
     return `${num}rd`;
-  }
-  else{
+  } else {
     return `${num}th`;
   }
 }
