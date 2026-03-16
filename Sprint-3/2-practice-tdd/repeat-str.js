@@ -1,9 +1,5 @@
 function repeatStr(str, count) {
-  if (count === 0) {
-    return "";
-  } else if (count === 1) {
-    return str;
-  } else if (count > 1) {
+  if (count >= 0) {
     return str.repeat(count);
   } else {
     throw new Error("Count cannot be a negative number");
