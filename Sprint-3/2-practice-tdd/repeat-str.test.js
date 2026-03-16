@@ -25,10 +25,10 @@ test("should return empty string", ()=>{
   expect(repeatStr(str, count)).toEqual("");
 
 });
-test("should throw negative counts are not valid Error", ()=>{
-const str = "hello";
+test("should throw an error when count is negative", () => {
+  const str = "hello";
   const count = -1;
-  expect(()=> repeatStr(str, count)).toThrow();
+  expect(() => repeatStr(str, count)).toThrow();
 });
 
 // Case: handle count of 1:
