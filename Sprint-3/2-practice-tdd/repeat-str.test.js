@@ -9,17 +9,17 @@ const repeatStr = require("./repeat-str");
 // When the repeatStr function is called with these inputs,
 // Then it should return a string that contains the original `str` repeated `count` times.
 
-test("should repeat the string count times", () => {
+test("should repeat the string count times when count is greater than 1", () => {
   const str = "hello";
   const count = 3;
   expect(repeatStr(str, count)).toEqual("hellohellohello");
 });
-test(" should return original 'str' without repetition", () => {
+test(" should return original string when count is 1", () => {
   const str = "hello";
   const count = 1;
   expect(repeatStr(str, count)).toEqual("hello");
 });
-test("should return empty string", () => {
+test("should return empty string when count is 0", () => {
   const str = "hello";
   const count = 0;
   expect(repeatStr(str, count)).toEqual("");
