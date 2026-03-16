@@ -7,14 +7,8 @@ const getCardValue = require("../implement/3-get-card-value");
 // Case 1: Ace (A)
 test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♠")).toEqual(11);
-});
-test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♥")).toEqual(11);
-});
-test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♦")).toEqual(11);
-});
-test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♣")).toEqual(11);
 });
 
