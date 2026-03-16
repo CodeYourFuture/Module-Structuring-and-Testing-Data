@@ -6,16 +6,16 @@ function getOrdinalNumber(num) {
   const lastTwoDigits = num % 100;
   const lastDigit = num % 10;
 
-  switch (true) {
-    case lastTwoDigits === 11:
-    case lastTwoDigits === 12:
-    case lastTwoDigits === 13:
-      return `${num}th`;
-    case lastDigit === 1:
+  if (lastTwoDigits === 11 || lastTwoDigits === 12 || lastTwoDigits === 13) {
+    return `${num}th`;
+  }
+
+  switch (lastDigit) {
+    case 1:
       return `${num}st`;
-    case lastDigit === 2:
+    case 2:
       return `${num}nd`;
-    case lastDigit === 3:
+    case 3:
       return `${num}rd`;
     default:
       return `${num}th`;
