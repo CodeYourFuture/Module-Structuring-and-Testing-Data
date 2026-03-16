@@ -22,40 +22,39 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  if (typeof card !== "string" || card.length < 2) {
-    throw new Error("Invalid card");
-  }
-  // Handle "10" which is like "10♥"
-  if (card.startsWith("10")) {
-    return 10;
-  }
-  //if more than 2 characters and not starting with a 10 card
-  if (card.length > 2) {
-    throw new Error("Invalid card");
-  }
+  // if card is less than 2 characters or more than 3 characters it is invalid
+  // and check if not a string
 
-  // remaining cards must be 2 characters long
+  if (typeof card !== "string" || card.length < 2 || card.length > 3) {
+    throw new Error("Invalid card");
+  }
 
   const validSuits = ["♠", "♥", "♦", "♣"];
-  const suit = card[card.length - 1];
 
-  const firstChar = card[0];
+  let firstChar, suit;
+
+  if (card.startsWith("10")) {
+    firstChar = "10";
+    suit = card[2]; //if it starts with 10 the third character is the suit
+  } else {
+    firstChar = card[0]; //otherwise
+    suit = card[1]; //the second character is the suit
+  }
+  if (!suit || !validSuits.includes(suit)) {
+    throw new Error("Invalid suit");
+  }
 
   // check if picture cards
-  if (firstChar === "A") return 11;
-  if (firstChar === "J" || firstChar === "Q" || firstChar === "K") return 10;
-
-  // check if number is between 2 and 9, 10 has already been checked for and there should be no other valid cards
+  if (firstChar === "A") return 11; // if Ace return 11
+  if (["J", "Q", "K"].includes(firstChar)) return 10; // if Jack, Queen or King return 10
 
   const num = Number(firstChar);
+  if (num >= 2 && num <= 10) return num; //checks number is between 2 and 10
 
-  if (!isNaN(num) && num >= 2 && num <= 9) {
-    return num;
-    // for everything else
-  } else {
-    throw new Error("Invalid card");
-  }
+  // for everything else that is invalid
+  throw new Error("Invalid number");
 }
+
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -80,17 +79,19 @@ assertEquals(getCardValue("K♣"), 10);
 // Handling invalid cards
 try {
   getCardValue("♠J");
-  console.error("Error was not thrown for invalid card");
+  console.error("Error was not thrown for invalid suit first");
 } catch (e) {}
 
 try {
   getCardValue("invalid");
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
+  console.error("Test failed: invalid card accepted");
+} catch (e) {
+  console.log("Test passed: Invalid card rejected");
+}
 
 try {
   getCardValue("22");
-  console.error("Error was not thrown for invalid card");
+  console.error("Error was not thrown for invalid number");
 } catch (e) {}
 
 console.log(getCardValue("9♠"));
@@ -100,16 +101,11 @@ console.log(getCardValue("A♠"));
 console.log(getCardValue("Q♦"));
 console.log(getCardValue("K♣"));
 
-// This line will not be reached if an error is thrown as expected
-try {
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
-
 // What other invalid card cases can you think of?
 
 // There could be cards with special characters.
 
-// There could be cards with two numbers rather than a number and a suite
+// There could be cards with two numbers rather than a number and a suit
 // These will not be picked up because the code only checks for if starts with 10 or if the first character
 // is a number between 2 and 9, so cards like "22" would be valid because the first number
 // is 2, but the second character is not checked for validity.  It is also 2 characters
@@ -118,5 +114,5 @@ try {
 // Since the second character is not checked it could be 2D which is not a valid card but
 // would be accepted because the first character is 2 and the second character is not checked for validity
 
-// When the card is checked if it begins with 10 it does check if it has a valid suite
+// When the card is checked if it begins with 10 it does not check if it has a valid suit
 // as only the first 2 characters are checked so it could be 10DEVON or 10♥♥.
