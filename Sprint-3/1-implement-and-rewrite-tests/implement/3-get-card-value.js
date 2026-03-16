@@ -22,36 +22,44 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  if (card.length >= 4) {
-    throw new Error ("Invalid String");
-  }
   if (
-    !card.includes("♠") &&
-    !card.includes("♥") &&
-    !card.includes("♦") &&
-    !card.includes("♣")
+    typeof card !== "string" ||
+    card.length < 2 ||
+    card.length > 3 ||
+    card.includes(" ")
   ) {
-    throw new Error('Invalid String');
+    throw new Error("Invalid string");
   }
+
+  const suit = card.slice(-1);
   const rank = card.slice(0, -1);
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validRanks = [
+    "A",
+    "J",
+    "Q",
+    "K",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+  ];
 
-  if (
-    !card.includes("A") &&
-    !card.includes("J") &&
-    !card.includes("Q") &&
-    !card.includes("K") &&
-    !(rank >= 2 && rank <= 10)
-  ) {
-    throw new Error("Invalid String");
-  }
-
-  if (rank === "A") {
+  if (!validSuits.includes(suit) || !validRanks.includes(rank)) {
+    throw new Error("Invalid string");
+  } else if (rank === "A") {
     return 11;
   } else if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
-  } else if (rank >= 2 && rank <= 10) {
+  } else if (rank) {
     return Number(rank);
   }
+  throw new Error("Invalid string");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -76,18 +84,15 @@ assertEquals(getCardValue("Q♠"), 10);
 assertEquals(getCardValue("2♠"), 2);
 assertEquals(getCardValue("10♠"), 10);
 
-
-
 // Handling invalid cards
-function throwInvalidStringError(card){
-
-try {
-  getCardValue(card)
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card");
-} catch (e) {
-  assertEquals(e.message,"Invalid String")
-}
+function throwInvalidStringError(card) {
+  try {
+    getCardValue(card);
+    // This line will not be reached if an error is thrown as expected
+    console.error("Error was not thrown for invalid card");
+  } catch (e) {
+    assertEquals(e.message, "Invalid string");
+  }
 }
 
 throwInvalidStringError("invalid");
@@ -102,6 +107,10 @@ throwInvalidStringError("2.1♠");
 throwInvalidStringError("0002♠");
 throwInvalidStringError("22");
 throwInvalidStringError("♠2");
+throwInvalidStringError("2 ♠");
+throwInvalidStringError("2.♠");
+throwInvalidStringError("+2♠");
+throwInvalidStringError("♠A");
 
 // What other invalid card cases can you think of?
 // card with a mix of suit

@@ -34,7 +34,7 @@ test(`should return "Straight angle" when (angle===180)`, () => {
 });
 
 // Case 5: Reflex angles
-test(`Should return "Reflex angle" when (360<angle>180)`, () => {
+test(`Should return "Reflex angle" when (angle > 180 && angle < 360)`, () => {
   expect(getAngleType(181)).toEqual("Reflex angle");
   expect(getAngleType(270)).toEqual("Reflex angle");
   expect(getAngleType(350)).toEqual("Reflex angle");
