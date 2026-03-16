@@ -32,7 +32,7 @@ test("when count equals 1 it produce the string", () => {
 // If the the string is empty then count will be 0
 // and an empty string will be returned
 
-test("when count equals 0 it should produce an empty string", () => {
+test("should return an empty string when count = 0 ", () => {
   const str = "hello";
   const count = 0;
   const repeatedStr = repeatStr(str, count);
