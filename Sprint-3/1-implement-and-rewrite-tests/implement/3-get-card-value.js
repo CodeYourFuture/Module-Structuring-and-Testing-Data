@@ -30,7 +30,7 @@ function getCardValue(card) {
   if (cardRank === "A") return 11;
   if (["J", "Q", "K"].includes(cardRank)) return 10;
   if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(cardRank))
-    return cardRank; // the parseint() or Number() can be used to convert the string to a number
+    return Number(cardRank); // the parseint() or Number() can be used to convert the string to a number
   throw new Error("invalid card rank");
 }
 
