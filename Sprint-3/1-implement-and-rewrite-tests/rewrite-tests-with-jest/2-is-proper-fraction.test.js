@@ -29,6 +29,7 @@ test(`should return false for improper fraction`, () => {
   expect(isProperFraction(2, 1)).toEqual(false);
 });
 
+// testing negative cases
 // case: the value of the numerater is negative and its absolute value is less than the value of the denominater (roper fraction)
 test(`should return false for proper fraction`, () => {
   expect(isProperFraction(-1, 2)).toEqual(true);
