@@ -19,14 +19,42 @@ test(`should return false when both numerator and denominator are zero`, () => {
   expect(isProperFraction(0, 0)).toEqual(false);
 });
 
-// case: the absolute value of the numerater is less than the absolute value of the denominater (proper fraction)
+// case: both values are positive and the value of the numerater is less than the value of the denominater (proper fraction)
 test(`should return true for positive proper fraction`, () => {
   expect(isProperFraction(1, 2)).toEqual(true);
 });
 
-// case: the absolute value of the denominater is less than the absolute value of the numerater (improper fraction)
+// case: both values are positive and the value of the denominater is less than the value of the numerater (improper fraction)
 test(`should return false for positive improper fraction`, () => {
   expect(isProperFraction(2, 1)).toEqual(false);
 });
 
-// no need to test the cases where the denominator or numerator or both are negative as I used their absolute value in the function.
+// case: the value of the numerater is negative and its absolute value is less than the value of the denominater (roper fraction)
+test(`should return false for proper fraction`, () => {
+  expect(isProperFraction(-1, 2)).toEqual(true);
+});
+
+// case: the value of the numerater is negative and its absolute value is greater than the value of the denominater (improper fraction)
+test(`should return false for improper fraction`, () => {
+  expect(isProperFraction(-2, 1)).toEqual(false);
+});
+
+// case: the value of the denominator is negative and its absolute value is greater than the value of the numerator (proper fraction)
+test(`should return true for proper fraction`, () => {
+  expect(isProperFraction(1, -2)).toEqual(true);
+});
+
+// case: the value of the denominator is negative and its absolute value is less than the value of the numerator (improper fraction)
+test(`should return false for improper fraction`, () => {
+  expect(isProperFraction(2, -1)).toEqual(false);
+});
+
+// case: both values of the numerator and denominator are negative and the absolute value of the numerator is less than the absolute value of the denominator (proper fraction)
+test(`should return true for proper fraction`, () => {
+  expect(isProperFraction(-1, -2)).toEqual(true);
+});
+
+// case: both values of the numerator and denominator are negative and the absolute value of the numerator is greater than the absolute value of the denominator (improper fraction)
+test(`should return false for improper fraction`, () => {
+  expect(isProperFraction(-2, -1)).toEqual(false);
+});
