@@ -45,12 +45,15 @@ test("should append 'th' for numbers ending with 13", () => {
   expect(getOrdinalNumber(113)).toEqual("113th");
   expect(getOrdinalNumber(213)).toEqual("213th");
 });
-test("should append 'th' for numbers ending with 4", () => {
+test("should append 'th' for numbers ending with 0, 4–9", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
-  expect(getOrdinalNumber(14)).toEqual("14th");
-  expect(getOrdinalNumber(134)).toEqual("134th");
+  expect(getOrdinalNumber(10)).toEqual("10th");
+  expect(getOrdinalNumber(25)).toEqual("25th");
+  expect(getOrdinalNumber(36)).toEqual("36th");
+  expect(getOrdinalNumber(48)).toEqual("48th");
+  expect(getOrdinalNumber(27)).toEqual("27th");
+  expect(getOrdinalNumber(9)).toEqual("9th");
 });
-
 
 
 
