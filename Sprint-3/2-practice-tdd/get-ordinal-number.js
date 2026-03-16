@@ -3,6 +3,8 @@ function getOrdinalNumber(num) {
   const numLength = numStr.length;
   if (numStr[numLength - 2] === "1" && numStr[numLength - 1] === "1") {
     return num + "th";
+  } else if (numStr[numLength - 2] === "1" && numStr[numLength - 1] === "2") {
+    return num + "th";
   } else if (numStr[numLength - 1] === "1") {
     return num + "st";
   } else if (numStr[numLength - 2] === "1" && numStr[numLength - 1] === "3") {

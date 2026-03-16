@@ -41,14 +41,22 @@ test(" should return 'th' for numbers ending with 13", () => {
   expect(getOrdinalNumber(413)).toEqual("413th");
   expect(getOrdinalNumber(613)).toEqual("613th");
 });
-//case 4: expect number ending with 2 to return nd
+
+//case:5 expect Numbers ending with 12 to return th
+test(" should return 'th' for numbers ending with 12", () => {
+  expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(41)).toEqual("412th");
+  expect(getOrdinalNumber(612)).toEqual("612th");
+});
+
+//case 6: expect number ending with 2 to return nd
 test(" should return 'nd' for numbers ending with 2", () => {
   expect(getOrdinalNumber(22)).toEqual("22nd");
   expect(getOrdinalNumber(42)).toEqual("42nd");
   expect(getOrdinalNumber(102)).toEqual("102nd");
 });
 
-// case 5: expect number not included in the above case to return th
+// case 7: expect number not included in the above case to return th
 test("should return 'th' for numbers ending with 4, 5,6,7,8,9,0", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(5)).toEqual("5th");
