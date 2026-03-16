@@ -22,37 +22,27 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  const validSuits = ["♠", "♥", "♦", "♣"];
-  const validRanks = [
-    "A",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "J",
-    "Q",
-    "K",
-  ];
   if (typeof card !== "string")
     throw new Error(`Invalid card format: "${card}". Expected a string.`);
 
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const letterRanks = ["A", "J", "Q", "K"];
+
   const cardSuit = card.slice(-1);
   const cardRank = card.slice(0, -1);
+  const numericRank = Number(cardRank);
+
+  const validNumericRank =
+    Number.isInteger(numericRank) && numericRank >= 2 && numericRank <= 10;
 
   if (!validSuits.includes(cardSuit)) {
     throw new Error(
       `Invalid card format: "${card}" has an invalid suit "${cardSuit}". Expected one of: ♠, ♥, ♦, ♣.`
     );
   }
-  if (!validRanks.includes(cardRank)) {
+  if (!letterRanks.includes(cardRank) && !validNumericRank) {
     throw new Error(
-      `Invalid card format: "${card}" has an invalid rank "${cardSuit}". Expected one of: ♠, ♥, ♦, ♣.`
+      `Invalid card format: "${card}" has an invalid rank "${cardRank}".`
     );
   }
 
@@ -66,7 +56,7 @@ function getCardValue(card) {
       return 10;
 
     default:
-      return Number(cardRank);
+      return numericRank;
   }
 }
 
