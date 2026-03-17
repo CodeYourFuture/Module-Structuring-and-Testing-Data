@@ -30,6 +30,5 @@ test(`should return false when the absolute value of the numerator is greater th
 test(`should return true when the numerator is zero and the denominator is non-zero`, () => {
   expect(isProperFraction(0, 5)).toEqual(true);
   expect(isProperFraction(0, -5)).toEqual(true);
-}
-);  
+});  
 
