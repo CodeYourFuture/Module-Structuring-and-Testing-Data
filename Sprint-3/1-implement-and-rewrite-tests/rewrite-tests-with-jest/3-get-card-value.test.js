@@ -30,6 +30,8 @@ test(`Should throw an error for invalid card strings`, () => {
   expect(() => getCardValue("11♠")).toThrow("Invalid card format");
   expect(() => getCardValue("A♤")).toThrow("Invalid card format");
   expect(() => getCardValue(123)).toThrow("Card must be a string");
+  expect(() => getCardValue(1)).toThrow("Card must have at least two characteristics");
+  expect(() => getCardValue("")).toThrow("Card must have at least two characteristics");
 });
 
 // https://jestjs.io/docs/expect#tothrowerror

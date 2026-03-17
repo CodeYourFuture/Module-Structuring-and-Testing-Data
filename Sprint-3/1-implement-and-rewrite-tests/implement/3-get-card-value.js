@@ -22,9 +22,13 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  
   if (typeof card !== "string") {
     throw new Error("Card must be a string");
+  }
+
+   if (card.length < 2) {
+    throw new Error("Card must have at least two characteristics");
   }
 
   const rank = card.slice(0, -1);
