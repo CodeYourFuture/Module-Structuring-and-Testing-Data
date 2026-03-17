@@ -15,6 +15,9 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
+  if (angle === 0) {    
+    return "Zero angle";
+  }
   if (angle > 0 && angle < 90) {
     return "Acute angle";
   }
@@ -33,9 +36,7 @@ function getAngleType(angle) {
   if (angle === 360) {    
     return "This is a circle, not an angle";
   }
-  if (angle === 0) {    
-    return "";
-  }
+  
   return "Invalid angle"; 
   
 }

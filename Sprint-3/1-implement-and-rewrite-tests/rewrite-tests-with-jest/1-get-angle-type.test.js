@@ -47,7 +47,7 @@ test(`should return "This is a circle, not an angle" when angle is exactly 360`,
   expect(getAngleType(360)).toEqual("This is a circle, not an angle");
 });
 // Case 8: Zero angle
-test(`should return an empty string when angle is exactly 0`, () => {
-  expect(getAngleType(0)).toEqual("");
+test(`should return "Zero angle" when angle is exactly 0`, () => {
+  expect(getAngleType(0)).toEqual("Zero angle");
 }); 
 
