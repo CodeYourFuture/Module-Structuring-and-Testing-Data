@@ -33,6 +33,9 @@ function getAngleType(angle) {
   if (angle === 360) {    
     return "This is a circle, not an angle";
   }
+  if (angle === 0) {    
+    return "";
+  }
   return "Invalid angle"; 
   
 }
