@@ -7,7 +7,7 @@ function sayHello(greeting, name) {
   return `${greeting}, ${name}!`;
 }
 
-testName = "Aman";
+let testName = "Aman";
 
 const greetingMessage = sayHello(greeting, testName);
 
