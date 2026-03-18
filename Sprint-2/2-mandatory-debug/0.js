@@ -18,10 +18,7 @@ The result of multiplying 10 and 32 is undefined
 
 320: the out put for the console.log inside the function 
 
-while the ouout the out put for the console.log function out of the function returned the string provided in the function and an undefiened because the function multibly doesn't return any value. 
-to fix this error we need to change the console.log function inside the multiply function to return. 
-
-
+to fix this issue 'return' function should be used rather than 'console.log'
 // Finally, correct the code to fix the problem
 //  =============> write your new code here
 function multiply(a, b) {
