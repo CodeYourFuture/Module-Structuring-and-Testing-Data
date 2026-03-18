@@ -1,5 +1,8 @@
 function passwordValidator(password) {
-    return password.length < 5 ? false : true
+    if (password.length< 8)
+        
+    {return  'Password must be at least 8 characters long'};
+
 }
 
 
