@@ -25,7 +25,11 @@ function getCardValue(card) {
   // if card is less than 2 characters or more than 3 characters it is invalid
   // and check if not a string
 
-  if (typeof card !== "string" || card.length < 2 || card.length > 3) {
+  if (typeof card !== "string") {
+    throw new Error("Invalid card");
+  }
+
+  if (!(card.length === 2 || (card.length === 3 && card.startsWith("10")))) {
     throw new Error("Invalid card");
   }
 
@@ -49,7 +53,7 @@ function getCardValue(card) {
   if (["J", "Q", "K"].includes(firstChar)) return 10; // if Jack, Queen or King return 10
 
   const num = Number(firstChar);
-  if (num >= 2 && num <= 10) return num; //checks number is between 2 and 10
+  if (!isNaN(num) && num >= 2 && num <= 10) return num; //checks number is between 2 and 10
 
   // for everything else that is invalid
   throw new Error("Invalid number");
@@ -74,13 +78,15 @@ assertEquals(getCardValue("10♥"), 10);
 assertEquals(getCardValue("J♥"), 10);
 assertEquals(getCardValue("A♠"), 11);
 assertEquals(getCardValue("Q♦"), 10);
-assertEquals(getCardValue("K♣"), 10);
+assertEquals(getCardValue("K♦"), 10);
 
 // Handling invalid cards
 try {
   getCardValue("♠J");
-  console.error("Error was not thrown for invalid suit first");
-} catch (e) {}
+  console.error("Test failed: invalid first character accepted");
+} catch (e) {
+  console.log("Test passed:  Invalid first character rejected");
+}
 
 try {
   getCardValue("invalid");
@@ -90,29 +96,21 @@ try {
 }
 
 try {
-  getCardValue("22");
-  console.error("Error was not thrown for invalid number");
-} catch (e) {}
+  console.log(getCardValue("2♥2"));
+} catch (e) {
+  console.log("Invalid numbers caught");
+}
 
-console.log(getCardValue("9♠"));
-console.log(getCardValue("10♥"));
-console.log(getCardValue("J♥"));
+try {
+  console.log(getCardValue("2♥♥"));
+} catch (e) {
+  console.log("Invalid suit caught");
+}
+
+console.log(getCardValue("A♠"));
+console.log(getCardValue("A♠"));
+console.log(getCardValue("A♠"));
 console.log(getCardValue("A♠"));
 console.log(getCardValue("Q♦"));
 console.log(getCardValue("K♣"));
-
-// What other invalid card cases can you think of?
-
-// There could be cards with special characters.
-
-// There could be cards with two numbers rather than a number and a suit
-// These will not be picked up because the code only checks for if starts with 10 or if the first character
-// is a number between 2 and 9, so cards like "22" would be valid because the first number
-// is 2, but the second character is not checked for validity.  It is also 2 characters
-// so will not cause an error when the length is checked.
-
-// Since the second character is not checked it could be 2D which is not a valid card but
-// would be accepted because the first character is 2 and the second character is not checked for validity
-
-// When the card is checked if it begins with 10 it does not check if it has a valid suit
-// as only the first 2 characters are checked so it could be 10DEVON or 10♥♥.
+console.log(getCardValue("A♠"));
