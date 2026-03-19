@@ -8,9 +8,6 @@ function countChar(stringOfCharacters, findCharacter) {
     if (wantedChar === findCharacter) {
       numberOfChar++;
     }
-    if (numberOfChar === 0) {
-      return 0;
-    }
   }
   return numberOfChar;
 }
