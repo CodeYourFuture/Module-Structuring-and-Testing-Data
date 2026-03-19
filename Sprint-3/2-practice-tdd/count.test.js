@@ -26,5 +26,5 @@ test("should return 0 if there is not a character occurrence", () => {
   const str = "aaaaa";
   const char = "b";
   const count = countChar(str, char);
-  expect(count).toEqual(`0 ${char} found.`);
+  expect(count).toEqual(0);
 });

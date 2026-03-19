@@ -9,7 +9,7 @@ function countChar(stringOfCharacters, findCharacter) {
       numberOfChar++;
     }
     if (numberOfChar === 0) {
-     return `0 ${findCharacter} found.`
+      return 0;
     }
   }
   return numberOfChar;
