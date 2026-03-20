@@ -29,7 +29,7 @@ const vaildSuits = [""♠", "♥", "♦", "♣"];
   const vailRanks = ["A","2","3","4","5","6","7","8","9","10","J","Q","k"];
 
   if (!vaildSuits.includes) || !validRanks.inculdes(rank){
-    trow new Error("Invaild card");
+    throw new Error("Invaild card");
   }
   if (rank === "A") return 11;
   if (rank === "J" || rank === "Q" || rank === "K") return 10;
