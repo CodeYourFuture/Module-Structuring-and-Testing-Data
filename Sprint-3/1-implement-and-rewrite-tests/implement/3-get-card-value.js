@@ -22,12 +22,7 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  if (
-    typeof card !== "string" ||
-    card.length < 2 ||
-    card.length > 3 ||
-    card.includes(" ")
-  ) {
+  if (typeof card !== "string") {
     throw new Error("Invalid string");
   }
 
@@ -56,10 +51,9 @@ function getCardValue(card) {
     return 11;
   } else if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
-  } else if (rank) {
+  } else {
     return Number(rank);
   }
-  throw new Error("Invalid string");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
