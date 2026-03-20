@@ -29,10 +29,21 @@ test("should return 0 if the character does not exist in the string", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
-
-test("should return 0 if the character does not exist in the string", () => {
-  const str = "hello";
-  const char = "z";
-  const count = countChar(str, char);
-  expect(count).toEqual(0);
+test("should be case-sensitive", () => {
+  const str = "Hello";
+  const char = "h";
+  const result = countChar(str, char);
+  expect(result).toBe(0);
+});
+test("should count non-alphabet characters", () => {
+  const str = "hello!!!";
+  const char = "!";
+  const result = countChar(str, char);
+  expect(result).toBe(3);
+});
+test("should count multiple occurrences correctly", () => {
+  const str = "banana";
+  const char = "a";
+  const result = countChar(str, char);
+  expect(result).toBe(3);
 });
