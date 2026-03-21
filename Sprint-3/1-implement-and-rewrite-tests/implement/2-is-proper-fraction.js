@@ -1,4 +1,4 @@
-// Implement a function isProperFraction,
+(properfraction (// Implement a function isProperFraction,
 // when given two numbers, a numerator and a denominator, it should return true if
 // the given numbers form a proper fraction, and false otherwise.
 
@@ -36,15 +36,17 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
 //Test
-// Proper fraction 3/5
+// Proper fraction 
 assertEqual(isproperFraction(3,5), true);
-assertEual(isProperFraction(4/8), true);
+assertEual(isProperFraction(4,8), true);
+assertEqual(isproperfraction (-1,-2) false);
+
 
 //Not
-assertEqual(isproperFraction(9,7),false);
+assertEqual(isproperFraction(9/7),false);
 assertEqual(isproperFracton(13/11),false);
 
 //Edge case
-assertEqual(isperoperFractio(0,5),true);
+assertEqual(isperoperFractio(0/5),true);
 
 
