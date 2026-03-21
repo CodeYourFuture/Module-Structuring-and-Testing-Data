@@ -51,7 +51,7 @@ function getCardValue(card) {
   return Number(rank);
 }
 
-module.exports = getCardValue;
+export default getCardValue;
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
