@@ -25,11 +25,25 @@ function getCardValue(card) {
   const rank = card.slice(0, -1);
   const suit = card.slice(-1);
 
-const vaildSuits = ["♠", "♥", "♦", "♣"];
-  const vailRanks = ["A","2","3","4","5","6","7","8","9","10","J","Q","k"];
+  const vaildSuits = ["♠", "♥", "♦", "♣"];
+  const vailRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
 
-  if (!vaildSuits.includes(suit) || !validRanks.inculdes(rank)){
-    throw new Error("Invaild card");
+  if (!vaildSuits.includes(suit) || !vailRanks.includes(rank)) {
+    throw new Error("Invalid card");
   }
   if (rank === "A") return 11;
   if (rank === "J" || rank === "Q" || rank === "K") return 10;
@@ -39,10 +53,8 @@ const vaildSuits = ["♠", "♥", "♦", "♣"];
 
 module.exports = getCardValue;
 
-
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
-
 
 // Helper functions to make our assertions easier to read.
 function assertEquals(actualOutput, targetOutput) {
@@ -56,14 +68,13 @@ function assertEquals(actualOutput, targetOutput) {
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
 //Test
-assertEquals(getCardvalue("A♠"), 11);
-assertEquals(getCardEqual("J♣), 10);
-assertEquals(getCardequal("10♥"), 10);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("10♥"), 10);
 
 // Handling invalid cards
 try {
   getCardValue("invalid");
-  
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
