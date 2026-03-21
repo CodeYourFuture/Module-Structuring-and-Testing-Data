@@ -47,6 +47,9 @@ assertEqual(ispProperFraction(1,-2), true)
 //Not
 assertEqual(isproperFraction(9/7), false);
 assertEqual(isproperFracton(13/11), false);
+assertEqual(isproperFracton (19/10), false);
+assertEqual(isproperFracton  (17/3 ), false);
+
 
 
 //Edge case
