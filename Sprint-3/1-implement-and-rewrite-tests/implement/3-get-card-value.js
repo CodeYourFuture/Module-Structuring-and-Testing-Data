@@ -25,10 +25,10 @@ function getCardValue(card) {
   const rank = card.slice(0, -1);
   const suit = card.slice(-1);
 
-const vaildSuits = [""♠", "♥", "♦", "♣"];
+const vaildSuits = ["♠", "♥", "♦", "♣"];
   const vailRanks = ["A","2","3","4","5","6","7","8","9","10","J","Q","k"];
 
-  if (!vaildSuits.includes) || !validRanks.inculdes(rank){
+  if (!vaildSuits.includes(suit) || !validRanks.inculdes(rank)){
     throw new Error("Invaild card");
   }
   if (rank === "A") return 11;
