@@ -40,13 +40,14 @@ assertEquals(isProperFraction(1, 2), true);
 assertEqual(isProperFraction(3,5), true);
 assertEual(isProperFraction(4,8), true);
 assertEqual(isproperFraction(-1,2), true);
+assertEqual(isProperFraction(-1,-2), true);
+assertEqual(ispProperFraction(1,-2), true)
 
 
 //Not
 assertEqual(isproperFraction(9/7), false);
 assertEqual(isproperFracton(13/11), false);
-assertEqual(isProperFraction(-1,-2), false);
-assertEqual(ispProperFraction(1,-2), false)
+
 
 //Edge case
 assertEqual(isperoperFractio(0/5), true);
