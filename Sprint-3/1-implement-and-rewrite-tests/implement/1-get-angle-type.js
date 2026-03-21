@@ -20,7 +20,7 @@ function getAngleType(angle) {
     }
 
   if (angle < 90) {
-    return "actue angle";
+    return "acute angle";
   }
  if (angle === 90) {
    return "right angle";
@@ -32,7 +32,7 @@ function getAngleType(angle) {
      return "straight angle";
    }
 if (angle < 360){
-  return "reflext angle";
+  return "reflex angle";
 }
 module.exports = getAngleType;
 
