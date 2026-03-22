@@ -23,35 +23,10 @@ const ext =filePath.slice(slashIndex + 49, 53);
 console.log(`The dir part of ${filePath} is ${dir}`);
 console.log(`The ext part of ${filePath} is ${ext}`);
 */
-
-function pathFinder(userInput, filePath){
-  // 1. Check if the user input exists inside the full path
-  if (!fullPath.includes(userInput)) {
-    console.log("Input not found in path");
-    return;
-  }
-
-  // 2. Split the path into parts
-  const parts = filePath.split("/");
-
-  // 3. Base = last element
-  const base = parts[parts.length - 1];
-
-  // 4. Dir = everything except the last element
-  const dir = parts.slice(0, parts.length - 1).join("/");
-
-  // 5. Extension logic
-  const dotIndex = base.lastIndexOf(".");
-  const ext = dotIndex === -1 ? "" : base.slice(dotIndex);
-
-  // 6. Print everything
-  console.log(`Full path: ${filePath}`);
-  console.log(`Directory: ${dir}`);
-  console.log(`Base: ${base}`);
-  console.log(`Extension: ${ext}`);
-
-}
-
-console.log(pathFinder(filePath));
+ 
+let dirDirectory = filePath.slice(filePath.indexOf("/"),filePath.lastIndexOf("/"));
+let extDirectory = filePath.slice(filePath.lastIndexOf("/"));
+console.log(`The dir part of the file is ${dirDirectory}.`);
+console.log(`The ext part of the file is ${extDirectory}.`);
 
 // https://www.google.com/search?q=slice+mdn
