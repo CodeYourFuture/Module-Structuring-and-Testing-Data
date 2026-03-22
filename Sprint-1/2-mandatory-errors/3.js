@@ -1,4 +1,4 @@
-const cardNumber = 4533787178990001;
+const cardNumber = 4533787178994213;
 const last4Digits = cardNumber.toString().slice(-4);
 console.log(last4Digits);
 console.log(typeof last4Digits);
