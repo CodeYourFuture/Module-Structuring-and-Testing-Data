@@ -32,7 +32,7 @@ they are call:
   - the console.log is a function calls
 So the total amount of function call in this code is 5
 
-b) The main error for the when the running this line of code if for the missing right parameter after the double quote, so fix this 
+b) The main error for the when the running this line of code if for the missing right parameter between the arguments, so fix this 
 just add the coma right after the double quote.
 
 c) There are 2 reassign variable statement at line 4 and line 5.

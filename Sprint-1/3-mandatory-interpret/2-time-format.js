@@ -44,7 +44,7 @@ d)In line 4, the the expression that is assigned to totalMinutes
 represent the value after the math operation if movieLength value and remainingSeconds then divine by 60;
 
 e)For the variable result it represent the combine total time length of the movie in hour/minutes/second template, for better name for this variable
-I would to rename it to totalMovieLength.
+I would to rename it to formattedMovieDuration.
 
 f) After the experimenting with different values of movieLength. As Long as the value in movieLength is a positive integer of second. It will 
 correctly produce the correct value in hours/minutes/second format. However for to the other value such as float number, string, negative integer
