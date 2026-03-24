@@ -39,15 +39,17 @@ function getCardValue(card) {
     "K",
   ];
   const cardSuits = ["♠", "♥", "♦", "♣"];
+  let rank = card.slice(0,-1);
+  let suit = card.slice(-1);
   if (
     typeof card !== "string" ||
-    !cardRanks.includes(card.slice(0,-1)) ||
-    !cardSuits.includes(card.slice(-1))
+    !cardRanks.includes(rank) ||
+    !cardSuits.includes(suit)
   ) {
     throw new Error("Invalid card");
   }
 
-  switch (card.slice(0, -1)) {
+  switch (rank) {
     case "A":
       return 11;
     case "J":
@@ -55,7 +57,7 @@ function getCardValue(card) {
     case "K":
       return 10;
     default:
-      return Number(card.slice(0, -1));
+      return Number(rank);
   }
 }
 
