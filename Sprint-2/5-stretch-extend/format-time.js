@@ -21,11 +21,14 @@ function formatAs12HourClock(time) {
 
   if (hours == 0 || hours == 24) {
     return `12:${pad(minutes)} am`;
-  } else if (hours > 12) {
+  }
+  if (hours > 12) {
     return `${pad(hours - 12)}:00 pm`;
-  } else if (hours == 12) {
+  }
+  if (hours == 12) {
     return `${time} pm`;
-  } else return `${time} am`;
+  }
+  return `${time} am`;
 }
 
 let currentOutput = formatAs12HourClock("08:00");
