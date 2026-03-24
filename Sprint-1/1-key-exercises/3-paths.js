@@ -17,8 +17,8 @@ console.log(`The base part of ${filePath} is ${base}`);
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-let dirDirectory = filePath.slice(filePath.indexOf("Users"),filePath.lastIndexOf("/"));
-let extDirectory = filePath.slice(filePath.lastIndexOf("."));
+const dirDirectory = filePath.slice(1,filePath.lastIndexOf("/"));
+const extDirectory = filePath.slice(filePath.lastIndexOf("."));
 console.log(`The dir part of the file is ${dirDirectory}.`);
 console.log(`The ext part of the file is ${extDirectory}.`);
 
