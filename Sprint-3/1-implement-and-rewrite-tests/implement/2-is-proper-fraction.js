@@ -12,7 +12,11 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
- if ( numerator > 0 && denominator > 0 && denominator !==0 && numerator < denominator){
+  if(typeof numerator === "bigint"|| typeof denominator === "bigint"){
+    return false;
+  }
+
+ if ( numerator >= 0 && denominator >= 0 && denominator !==0 && numerator < denominator){
   return true;
  } else {
   return false

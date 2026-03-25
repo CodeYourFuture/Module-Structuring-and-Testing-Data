@@ -51,6 +51,9 @@ test("Should throw error for undefined", () => {
   expect(() => getCardValue(undefined)).toThrow("Invalid card");
 });
 
+test("Should throw error for the card value is number", () => {
+  expect(() => getCardValue(5)).toThrow("Invalid card");
+});
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
