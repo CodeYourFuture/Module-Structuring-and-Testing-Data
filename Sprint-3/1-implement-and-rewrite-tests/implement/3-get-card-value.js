@@ -46,7 +46,6 @@ function getCardValue(card) {
   let rank = card.slice(0, -1);
   let suit = card.slice(-1);
   if (
-    typeof card !== "string" ||
     !cardRanks.includes(rank) ||
     !cardSuits.includes(suit)
   ) {

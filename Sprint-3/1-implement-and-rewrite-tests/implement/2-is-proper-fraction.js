@@ -12,15 +12,17 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
-  if(typeof numerator === "bigint"|| typeof denominator === "bigint"){
+
+  if (
+    numerator >= 0 &&
+    denominator >= 0 &&
+    denominator !== 0 &&
+    numerator < denominator
+  ) {
+    return true;
+  } else {
     return false;
   }
-
- if ( numerator >= 0 && denominator >= 0 && denominator !==0 && numerator < denominator){
-  return true;
- } else {
-  return false
- }
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -43,6 +45,6 @@ assertEquals(isProperFraction(1, 2), true);
 assertEquals(isProperFraction("2", 2), false);
 assertEquals(isProperFraction(3, 4), true);
 assertEquals(isProperFraction(5, 10), true);
-assertEquals(isProperFraction(- 4, 2), false);
-assertEquals(isProperFraction(- 4, 10), false);
+assertEquals(isProperFraction(-4, 2), false);
+assertEquals(isProperFraction(-4, 10), false);
 assertEquals(isProperFraction(123123213n, 0), false);
