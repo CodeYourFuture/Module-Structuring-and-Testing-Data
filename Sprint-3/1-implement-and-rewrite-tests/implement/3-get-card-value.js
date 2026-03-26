@@ -76,8 +76,6 @@ assertEquals(getCardValue("A♠"), 11);
 assertEquals(getCardValue("J♣"), 10);
 assertEquals(getCardValue("10♥"), 10);
 
-
-  
 // What other invalid card cases can you think of?
 
 // Invalid cases
