@@ -22,11 +22,14 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
+  if (!card || typeof card !== "string") {
+    throw new Error("Invalid card");
+  }
   const rank = card.slice(0, -1);
   const suit = card.slice(-1);
 
-  const vaildSuits = ["♠", "♥", "♦", "♣"];
-  const vailRanks = [
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validRanks = [
     "A",
     "2",
     "3",
@@ -42,7 +45,7 @@ function getCardValue(card) {
     "K",
   ];
 
-  if (!vaildSuits.includes(suit) || !vailRanks.includes(rank)) {
+  if (!validSuits.includes(suit) || !validRanks.includes(rank)) {
     throw new Error("Invalid card");
   }
   if (rank === "A") return 11;
@@ -66,18 +69,34 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
+
+// Valid cards
 assertEquals(getCardValue("9♠"), 9);
-//Test
 assertEquals(getCardValue("A♠"), 11);
 assertEquals(getCardValue("J♣"), 10);
 assertEquals(getCardValue("10♥"), 10);
 
-// Handling invalid cards
+
+  
+// What other invalid card cases can you think of?
+
+// Invalid cases
 try {
   getCardValue("invalid");
+  console.log("fail invalid");
+} catch (e) {
+  console.log("pass invalid");
+}
 
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card");
-} catch (e) {}
-
-// What other invalid card cases can you think of?
+try {
+  getCardValue("1♠");
+  console.log("fail 1♠");
+} catch (e) {
+  console.log("pass 1♠");
+}
+try {
+  getCardValue("A");
+  console.log("fail A");
+} catch (e) {
+  console.log("pass A");
+}

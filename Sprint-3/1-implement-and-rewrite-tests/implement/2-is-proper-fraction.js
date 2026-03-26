@@ -11,7 +11,9 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  return numerator < denominator;
+  if (denominator === 0) return false;
+
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -30,18 +32,18 @@ module.exports = isProperFraction;
 // What combinations of numerators and denominators should you test?
 
 //Test
-// Proper fraction
-assertEquals(isProperFraction(3, 5), true);
-assertEquals(isProperFraction(4, 8), true);
-assertEquals(isProperFraction(-1, 2), true);
+// Proper fraction with negatives
+assertEquals(isProperFraction(7, 9), true);
+assertEquals(isProperFraction(-7, 9), true);
+assertEquals(isProperFraction(7, -9), true);
 assertEquals(isProperFraction(-1, -2), true);
-assertEquals(isProperFraction(1, -2), true);
+assertEquals(isProperFraction(0, -5), true);
 
-//Not
-assertEquals(isProperFraction(9, 7), false);
-assertEquals(isProperFraction(13, 11), false);
-assertEquals(isProperFraction(19, 10), false);
+// Improper fractions
+assertEquals(isProperFraction(9, -7), false);
+assertEquals(isProperFraction(-9, 7), false);
+assertEquals(isProperFraction(-9, -7), false);
 assertEquals(isProperFraction(17, 3), false);
 
 //Edge case
-assertEquals(isProperFraction(0, 5), true);
+assertEquals(isProperFraction(1, 0), false);
