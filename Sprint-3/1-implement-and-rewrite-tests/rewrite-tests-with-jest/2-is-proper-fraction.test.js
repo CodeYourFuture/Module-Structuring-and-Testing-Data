@@ -16,7 +16,7 @@ test(`should return true when numerator is zero`, () => {
 
 // Special case: positive numerator and denominator
 test(`should return true when numerator is less than denominator`, () => {
-  expect(isProperFraction(7, 9)).toEqual(true);
+  expect(isProperFraction(5, 9)).toEqual(true);
 });
 
 // Special case; negative numerator and positive denominatore
@@ -26,15 +26,15 @@ test(` should return true when numertaor is negative and less than demoniator`, 
 
 // special case: postive numerator and negative deminator
 test(`should return true when numerator is positive and less than denominator`, () => {
-  expect(isProperFraction(5, -7)).toEqual(true);
+  expect(isProperFraction(5, -9)).toEqual(true);
 });
 
 // Special case: negative numerator and negative denominator
 test(`should return true when both are negative`, () => {
-  expect(isProperFraction(-5, -7)).toEqual(true);
+  expect(isProperFraction(-5, -9)).toEqual(true);
 });
 
 // Special case: Equal values
 test(`should return false when numerator and denominator are equal`, () => {
-  expect(isProperFraction(5, 5)).toEqual(false);
+  expect(isProperFraction(4, 4)).toEqual(false);
 });
