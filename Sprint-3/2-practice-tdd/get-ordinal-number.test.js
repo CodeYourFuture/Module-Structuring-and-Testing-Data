@@ -48,7 +48,7 @@ test("should append 'th' for special cases 11, 12, 13", () => {
   expect(getOrdinalNumber(212)).toEqual("212th");
 });
 
-// Case 5: All other numbers
+// Case 5: All other numbers that is not end in 1,2 or 3.
 // When the number does not end with 1, 2, or 3,
 // Then the function should append "th".
 test("should append 'th' for all other numbers", () => {
@@ -58,16 +58,16 @@ test("should append 'th' for all other numbers", () => {
   expect(getOrdinalNumber(204)).toEqual("204th");
 });
 
-// Case 6: Float numbers should be rounded to nearest integer
+// Case 6: Float numbers should be giving a error since the function do nut accept float number input
 // When the input is a float,
 // Then the function should round it and return the correct ordinal.
-test("should round float numbers and return correct ordinal", () => {
-  expect(getOrdinalNumber(1.2)).toEqual("1st");   // rounds to 1
-  expect(getOrdinalNumber(1.8)).toEqual("2nd");   // rounds to 2
-  expect(getOrdinalNumber(2.5)).toEqual("3rd");   // rounds to 3
-  expect(getOrdinalNumber(10.51)).toEqual("11th"); // rounds to 11
-  expect(getOrdinalNumber(12.49)).toEqual("12th"); // rounds to 12
-  expect(getOrdinalNumber(12.5)).toEqual("13th");  // rounds to 13
+test("should return error for invalid input", () => {
+  expect(() =>getOrdinalNumber(1.2)).toThrow("Invalid input");   
+  expect(() =>getOrdinalNumber(1.8)).toThrow("Invalid input");   
+  expect(() =>getOrdinalNumber(2.5)).toThrow("Invalid input");   
+  expect(() =>getOrdinalNumber(10.51)).toThrow("Invalid input"); 
+  expect(() =>getOrdinalNumber(12.49)).toThrow("Invalid input"); 
+  expect(() =>getOrdinalNumber(12.5)).toThrow("Invalid input"); 
 });
 
 // Case 7: Invalid inputs should throw an error

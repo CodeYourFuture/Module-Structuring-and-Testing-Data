@@ -23,5 +23,23 @@ test("should count multiple occurrences of a character", () => {
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
 test( "should return count of zero occurrences of a character", () =>{
-   expect(countChar("go home and study","c")).toEqual(0)
+   expect(countChar("go home and study","c")).toEqual(0);
+});
+
+// Scenario: Case-sensitive matching
+// Given a string containing both uppercase and lowercase versions of a letter,
+// When the function is called with a lowercase character,
+// Then it should only count the lowercase occurrences.
+
+test("should treat character matching as case-sensitive", () => {
+ expect(countChar("AaAa","A")).toEqual(2);
+});
+
+// Scenario: Non-alphabet characters
+// Given a string containing digits and symbols,
+// When the function is called with a non-alphabet character,
+// Then it should correctly count occurrences of that character.
+
+test("should count occurrences of non-alphabet characters", () => {
+  expect(countChar("1-2-3-1-1","1")).toEqual(3);
 });

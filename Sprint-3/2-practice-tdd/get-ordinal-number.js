@@ -1,19 +1,20 @@
 function getOrdinalNumber(num) {
 // This is for num argument validation that go inside the function.
-if(typeof num !== "number" || Number.isNaN(num)){
+if(typeof num !== "number" || Number.isNaN(num) || !Number.isInteger(num)){
   throw new Error ("Invalid input: the value must be a number");
 }
 
 // This allow float number to be round into it nearest integer.
-num = Math.round(num);
+const mainReminder = num % 100;
+const secondReminder = num % 10;
 
- if(num % 100 === 11 ||num % 100 === 12 || num % 100 === 13 ){
+ if(mainReminder === 11 ||mainReminder  === 12 || mainReminder  === 13 ){
   return `${num}th`;
  }
 switch( true ){
-  case num % 10 === 1 : return `${num}st`;
-  case num % 10 === 2 : return `${num}nd`;
-  case num % 10 === 3 : return `${num}rd`;
+  case secondReminder === 1 : return `${num}st`;
+  case secondReminder=== 2 : return `${num}nd`;
+  case secondReminder=== 3 : return `${num}rd`;
   default : return `${num}th`;
 }
 }
@@ -43,8 +44,8 @@ testAssert(getOrdinalNumber(43), "43rd");
 //Normal number and float number test.
 testAssert(getOrdinalNumber(101), "101st");
 testAssert(getOrdinalNumber(202), "202nd");
-testAssert(getOrdinalNumber(1.2), "1st");   
-testAssert(getOrdinalNumber(10.51), "11th"); 
+testAssert(() =>getOrdinalNumber(1.2),"Invalid input" );   
+testAssert(() =>getOrdinalNumber(10.51),"Invalid input"); 
 
 
 

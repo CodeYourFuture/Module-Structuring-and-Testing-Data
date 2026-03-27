@@ -5,7 +5,7 @@ function countChar(fullString,findCharacters) {
     throw new Error("Invalid input");
   };
   
-  if (findCharacters.length < 1) {
+  if (findCharacters.length !== 1) {
     throw new Error("findCharacters must be a single character");
   }
 

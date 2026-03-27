@@ -3,10 +3,8 @@ function repeatStr(fullString,repeatCount) {
   throw new Error("repeatCount cannot be negative")
  };
 
- switch (true){
-  case repeatCount === 0 : return "";
-  default: return fullString.repeat(repeatCount) ;
- };
+ if (repeatCount === 0) return "";
+ return fullString.repeat(repeatCount)
 };
 
 module.exports = repeatStr;
