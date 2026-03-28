@@ -15,6 +15,23 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
+  if (angle > 0 && angle < 90) {
+    return 'Acute angle';
+  }
+  else if (angle===90) {
+    return 'Right angle';
+  }
+  else if ( angle > 90 && angle < 180){
+    return 'Obtuse angle';
+  }
+  else if( angle === 180) {
+    return 'Stright angle';
+  }
+  else if (angle > 180 && angle < 360) {
+    return 'Reflex angle';
+  }
+  else {return 'Invalid angle';}
+
   // TODO: Implement this function
 }
 
@@ -33,5 +50,33 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
 // Example: Identify Right Angles
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
+// const right = getAngleType(90);
+// assertEquals(right, "Right angle");
+assertEquals (getAngleType(90), "Right angle");
+
+// const acute = getAngleType(45);
+// assertEquals(acute, "Acute angle");
+assertEquals (getAngleType(45),"Acute angle");
+
+// const obtuse = getAngleType(120);
+// assertEquals(obtuse, "Obtuse angle");
+assertEquals (getAngleType(120),"Obtuse angle");
+
+// const stright = getAngleType(180);
+// assertEquals(stright, "Stright angle");
+assertEquals (getAngleType(180),"Stright angle");
+// const reflex = getAngleType(270);
+// assertEquals(reflex, "Reflex angle");
+assertEquals (getAngleType(270),"Reflex angle");
+
+// const invalid = getAngleType(360);
+// assertEquals(invalid, "Invalid angle");
+assertEquals (getAngleType(360),"Invalid angle");
+//Boundary cases
+//  const invalid = getAngleType(0);
+// assertEquals(invalid, "Invalid angle");
+assertEquals (getAngleType(0),"Invalid angle");
+//Outside range 
+// const invalid = getAngleType(-10 , 400);
+// assertEquals(invalid, "Invalid angle");
+assertEquals (getAngleType(-10 , 400),"Invalid angle");
