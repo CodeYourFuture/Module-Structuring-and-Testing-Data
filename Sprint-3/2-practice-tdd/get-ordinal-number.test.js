@@ -16,5 +16,33 @@ const getOrdinalNumber = require("./get-ordinal-number");
 test("should append 'st' for numbers ending with 1, except those ending with 11", () => {
   expect(getOrdinalNumber(1)).toEqual("1st");
   expect(getOrdinalNumber(21)).toEqual("21st");
-  expect(getOrdinalNumber(131)).toEqual("131st");
-}); 
+  expect(getOrdinalNumber(41)).toEqual("41st");
+});
+
+// Case 2: Numbers ending with 2 (but not 12)
+test("should append 'nd' for number ending with 2  except those ending with 12", () => {
+  expect(getOrdinalNumber(2)).toEqual("2nd");
+  expect(getOrdinalNumber(22)).toEqual("22nd");
+  expect(getOrdinalNumber(42)).toEqual("42nd");
+});
+
+// Case 3: Numbers ending with 3 (but not 13)
+test("should append 'rd' for number anding with 3 expect those ending with 13", () => {
+  expect(getOrdinalNumber(3)).toEqual("3rd");
+  expect(getOrdinalNumber(33)).toEqual("33rd");
+  expect(getOrdinalNumber(43)).toEqual("43rd");
+});
+
+// Case 4: Number ending with 4  (but not 14)
+test("should append 'th' for number ending with 4 expcet those ending with 14", () => {
+  expect(getOrdinalNumber(4)).toEqual("4th");
+  expect(getOrdinalNumber(44)).toEqual("44th");
+  expect(getOrdinalNumber(54)).toEqual("54th");
+});
+
+// Case 5: Number ending with 5 (but not 15)
+test("should append 'th' for number ending with 5 except those ending with 15", () => {
+  expect(getOrdinalNumber(5)).toEqual("5th");
+  expect(getOrdinalNumber(55)).toEqual("55th");
+  expect(getOrdinalNumber(65)).toEqual("65th");
+});
