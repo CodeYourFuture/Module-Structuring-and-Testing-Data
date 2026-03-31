@@ -1,5 +1,7 @@
-function repeatStr(n, str) {
-  return str.repeat(n);
-}
+function repeatStr(str, count) {
+  if (count < 0) {
+    throw new Error("Count cannot be negative");
+  }
 
-module.exports = repeatStr;
+  return str.repeat(count);
+}
