@@ -7,4 +7,4 @@ age = age + 1;
 
 // Solution:
 let age = 33;
-let age = age + 1;
+age += 1;
