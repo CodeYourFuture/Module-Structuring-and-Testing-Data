@@ -11,8 +11,14 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
-
+## Got a popup - "chrome://new-tab-page says" 
+## Hello world!
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+## Got Got a popup "chrome://new-tab-page says" 
+## Title is  "What is your name?"
+## Got a box for input
 What is the return value of `prompt`?
+## Return value of promptis a string 'Ayo'
+## It user clicks "Cancel" instead of "OK"?, the retun valuu is null
