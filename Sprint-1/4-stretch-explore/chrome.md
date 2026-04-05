@@ -21,4 +21,4 @@ What effect does calling the `prompt` function have?
 ## Got a box for input
 What is the return value of `prompt`?
 ## Return value of promptis a string 'Ayo'
-## It user clicks "Cancel" instead of "OK"?, the retun valuu is null
+## It user clicks "Cancel" instead of "OK"?, the retun value is null
