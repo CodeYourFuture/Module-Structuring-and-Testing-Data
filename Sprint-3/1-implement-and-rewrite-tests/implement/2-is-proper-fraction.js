@@ -46,6 +46,9 @@ assertEquals(isProperFraction(4, 4), false);
 assertEquals(isProperFraction(-2, 4), true);
 assertEquals(isProperFraction(5, -4), false);
 assertEquals(isProperFraction(-3, -5), false);
+assertEquals(isProperFraction(-1, 2), true);
+assertEquals(isProperFraction(-1, 2), true);
+
 
 // special case
 assertEquals(isProperFraction(1, 0), false);
