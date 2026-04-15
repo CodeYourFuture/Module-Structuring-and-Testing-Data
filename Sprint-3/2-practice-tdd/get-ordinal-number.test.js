@@ -46,8 +46,11 @@ test("should append 'th' for numbers ending with 11, 12, or 13", () => {
 });
 
 // Case 5: All other numbers should end with "th"
-test("should append 'th' for all other numbers", () => {
+test("should append 'th' for numbers ending in 0, 4–9 (excluding 11, 12, 13)", () => {
+  expect(getOrdinalNumber(0)).toEqual("0th");
   expect(getOrdinalNumber(4)).toEqual("4th");
+  expect(getOrdinalNumber(5)).toEqual("5th");
+  expect(getOrdinalNumber(9)).toEqual("9th");
   expect(getOrdinalNumber(10)).toEqual("10th");
   expect(getOrdinalNumber(100)).toEqual("100th");
 });
