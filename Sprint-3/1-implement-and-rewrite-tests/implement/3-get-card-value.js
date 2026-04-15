@@ -38,13 +38,14 @@ function getCardValue(card) {
   }
 
   if (rank === "A") return 11;
-  if (rank === "J" || rank === "Q" || rank === "K") return 10;
+  if (["J", "Q", "K"].includes(rank)) return 10;
 
-  const numberValue = Number(rank);
-
-  if (numberValue >= 2 && numberValue <= 10) {
-    return numberValue;
+  const validNumbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  
+  if (!validNumbers.includes(rank)) {
+    return Number(rank);
   }
+
 
   throw new Error("Invalid card");
 }
