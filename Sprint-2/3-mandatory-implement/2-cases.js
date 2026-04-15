@@ -14,7 +14,15 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-function upCase(strCar) {
-    let result = strCar.toUpperCase().replaceAll(" ", "_");
-    return result;
+
+
+function toUpperSnakeCase(text) {
+    // 1. replaceAll(' ', '_') swaps every space for an underscore
+    // 2. toUpperCase() converts the letters to all caps
+    return text.replaceAll(' ', '_').toUpperCase();
 }
+
+// Examples:
+console.log(toUpperSnakeCase("hello there"));         // "HELLO_THERE"
+console.log(toUpperSnakeCase("lord of the rings"));  // "LORD_OF_THE_RINGS"
+console.log(toUpperSnakeCase("javascript is fun"));   // "JAVASCRIPT_IS_FUN"
