@@ -1,20 +1,44 @@
-// This statement loads the getCardValue function you wrote in the implement directory.
-// We will use the same function, but write tests for it using Jest in this file.
 const getCardValue = require("../implement/3-get-card-value");
 
-// TODO: Write tests in Jest syntax to cover all possible outcomes.
+describe("getCardValue", () => {
+  // Ace
+  test("returns 11 for Ace", () => {
+    expect(getCardValue("A♠")).toBe(11);
+  });
 
-// Case 1: Ace (A)
-test(`Should return 11 when given an ace card`, () => {
-  expect(getCardValue("A♠")).toEqual(11);
+  // Face cards
+  test("returns 10 for face cards", () => {
+    expect(getCardValue("J♥")).toBe(10);
+    expect(getCardValue("Q♦")).toBe(10);
+    expect(getCardValue("K♣")).toBe(10);
+  });
+
+  // Number cards
+  test("returns correct value for number cards", () => {
+    expect(getCardValue("2♠")).toBe(2);
+    expect(getCardValue("10♥")).toBe(10);
+  });
+
+  // Invalid format
+  test("throws error for invalid strings", () => {
+    expect(() => getCardValue("invalid")).toThrow();
+    expect(() => getCardValue("A")).toThrow();
+  });
+
+  // Invalid numbers (REVIEWER CHECK 🔥)
+  test("throws error for invalid numeric formats", () => {
+    expect(() => getCardValue("0x02♠")).toThrow();
+    expect(() => getCardValue("2.1♠")).toThrow();
+    expect(() => getCardValue("0002♠")).toThrow();
+  });
+
+  // Invalid rank
+  test("throws error for invalid rank", () => {
+    expect(() => getCardValue("11♠")).toThrow();
+  });
+
+  // Invalid suit
+  test("throws error for invalid suit", () => {
+    expect(() => getCardValue("A?")).toThrow();
+  });
 });
-
-// Suggestion: Group the remaining test data into these categories:
-//   Number Cards (2-10)
-//   Face Cards (J, Q, K)
-//   Invalid Cards
-
-// To learn how to test whether a function throws an error as expected in Jest,
-// please refer to the Jest documentation:
-// https://jestjs.io/docs/expect#tothrowerror
-

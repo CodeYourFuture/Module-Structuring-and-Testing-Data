@@ -1,20 +1,33 @@
-// This statement loads the getAngleType function you wrote in the implement directory.
-// We will use the same function, but write tests for it using Jest in this file.
 const getAngleType = require("../implement/1-get-angle-type");
 
-// TODO: Write tests in Jest syntax to cover all cases/outcomes,
-// including boundary and invalid cases.
+describe("getAngleType", () => {
+  test("returns Acute angle", () => {
+    expect(getAngleType(1)).toBe("Acute angle");
+    expect(getAngleType(45)).toBe("Acute angle");
+    expect(getAngleType(89)).toBe("Acute angle");
+  });
 
-// Case 1: Acute angles
-test(`should return "Acute angle" when (0 < angle < 90)`, () => {
-  // Test various acute angles, including boundary cases
-  expect(getAngleType(1)).toEqual("Acute angle");
-  expect(getAngleType(45)).toEqual("Acute angle");
-  expect(getAngleType(89)).toEqual("Acute angle");
+  test("returns Right angle", () => {
+    expect(getAngleType(90)).toBe("Right angle");
+  });
+
+  test("returns Obtuse angle", () => {
+    expect(getAngleType(100)).toBe("Obtuse angle");
+    expect(getAngleType(179)).toBe("Obtuse angle");
+  });
+
+  test("returns Straight angle", () => {
+    expect(getAngleType(180)).toBe("Straight angle");
+  });
+
+  test("returns Reflex angle", () => {
+    expect(getAngleType(200)).toBe("Reflex angle");
+    expect(getAngleType(359)).toBe("Reflex angle");
+  });
+
+  test("returns Invalid angle", () => {
+    expect(getAngleType(0)).toBe("Invalid angle");
+    expect(getAngleType(360)).toBe("Invalid angle");
+    expect(getAngleType(-10)).toBe("Invalid angle");
+  });
 });
-
-// Case 2: Right angle
-// Case 3: Obtuse angles
-// Case 4: Straight angle
-// Case 5: Reflex angles
-// Case 6: Invalid angles
