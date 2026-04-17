@@ -3,3 +3,11 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+
+//ANS:
+//"Cannot access 'cityOfBirth' before initialization."
+//SOlution:
+
+const cityOfBirth = "Bolton"; // 1. Define it first
+console.log(`I was born in ${cityOfBirth}`); // 2. Use it second

@@ -11,13 +11,26 @@
 
 const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
 const lastSlashIndex = filePath.lastIndexOf("/");
+// 1. Get the 'base' (file.txt)
 const base = filePath.slice(lastSlashIndex + 1);
 console.log(`The base part of ${filePath} is ${base}`);
 
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-const dir = ;
-const ext = ;
+//const dir = ;
+//const ext = ;
+
+// 2. Get the 'dir' (/Users/mitch/cyf/Module-JS1/week-1/interpret)
+// We slice from the start up to the last slash
+const dir = filePath.slice(0, lastSlashIndex);
+
+// 3. Get the 'ext' (.txt)
+// We find the last dot and slice from there to the end
+const lastDotIndex = filePath.lastIndexOf(".");
+const ext = filePath.slice(lastDotIndex);
+
+console.log(`Dir: ${dir}`);
+console.log(`Ext: ${ext}`);
 
 // https://www.google.com/search?q=slice+mdn
