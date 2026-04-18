@@ -37,15 +37,14 @@ function getCardValue(card) {
     return 10;
   }
 
-  if (rank >= "2" && rank <= "10") {
+  if (Number(rank) >= 2 && Number(rank) <= 10) {
     return Number(rank);
   }
 
   throw new Error("Invalid card");
 }
 
-  // TODO: Implement this function
-
+// TODO: Implement this function
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -80,7 +79,6 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
 } catch (e) {}
-
 
 // What other invalid card cases can you think of?
 
