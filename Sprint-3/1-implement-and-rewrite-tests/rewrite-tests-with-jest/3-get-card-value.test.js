@@ -1,43 +1,46 @@
-// This statement loads the isProperFraction function you wrote in the implement directory.
-// We will use the same function, but write tests for it using Jest in this file.
-const isProperFraction = require("../implement/2-is-proper-fraction");
+const getCardValue = require("../implement/3-get-card-value");
 
-// denominator is zero
-test("should return false when denominator is zero", () => {
-  expect(isProperFraction(1, 0)).toEqual(false);
+// Ace
+test("Should return 11 when given an ace card", () => {
+  expect(getCardValue("A♠")).toBe(11);
 });
 
-// proper fraction (numerator < denominator)
-test("should return true when numerator < denominator", () => {
-  expect(isProperFraction(1, 2)).toEqual(true);
+// Number cards
+test("Should return the numeric value for number cards", () => {
+  expect(getCardValue("2♠")).toBe(2);
+  expect(getCardValue("5♥")).toBe(5);
+  expect(getCardValue("9♦")).toBe(9);
+  expect(getCardValue("10♣")).toBe(10);
 });
 
-// improper fraction (numerator > denominator)
-test("should return false when numerator > denominator", () => {
-  expect(isProperFraction(5, 3)).toEqual(false);
+// Face cards
+test("Should return 10 for face cards", () => {
+  expect(getCardValue("J♠")).toBe(10);
+  expect(getCardValue("Q♥")).toBe(10);
+  expect(getCardValue("K♦")).toBe(10);
 });
 
-// equal numbers
-test("should return false when numerator === denominator", () => {
-  expect(isProperFraction(4, 4)).toEqual(false);
+// Invalid cards (basic)
+test("Should throw error for invalid cards", () => {
+  expect(() => getCardValue("1♠")).toThrow();
+  expect(() => getCardValue("B♣")).toThrow();
+  expect(() => getCardValue("10?")).toThrow();
+  expect(() => getCardValue("invalid")).toThrow();
 });
 
-// numerator is zero
-test("should return true when numerator is zero and denominator is positive", () => {
-  expect(isProperFraction(0, 5)).toEqual(true);
+// Invalid numeric formats (IMPORTANT for your strict function)
+test("Should throw error for malformed numeric ranks", () => {
+  expect(() => getCardValue("0x02♠")).toThrow();
+  expect(() => getCardValue("2.1♠")).toThrow();
+  expect(() => getCardValue("0002♠")).toThrow();
 });
 
-// negative numerator
-test("should return false when numerator is negative", () => {
-  expect(isProperFraction(-2, 4)).toEqual(false);
-});
-
-// negative denominator
-test("should return false when denominator is negative", () => {
-  expect(isProperFraction(5, -4)).toEqual(false);
-});
-
-// both negative
-test("should return false when both numerator and denominator are negative", () => {
-  expect(isProperFraction(-3, -5)).toEqual(false);
+// Invalid structure cases
+test("Should throw error for malformed card structure", () => {
+  expect(() => getCardValue("")).toThrow();
+  expect(() => getCardValue("♠")).toThrow();
+  expect(() => getCardValue("10")).toThrow();
+  expect(() => getCardValue("A♠♠")).toThrow();
+  expect(() => getCardValue(" 2♠")).toThrow();
+  expect(() => getCardValue("2♠ ")).toThrow();
 });
