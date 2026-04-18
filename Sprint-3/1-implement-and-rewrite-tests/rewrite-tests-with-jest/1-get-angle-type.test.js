@@ -55,5 +55,6 @@ describe("Invalid angle", () => {
     expect(getAngleType(0)).toBe("Invalid angle");
     expect(getAngleType(400)).toBe("Invalid angle");
     expect(getAngleType(-10)).toBe("Invalid angle");
+    expect(getAngleType(360)).toBe("Invalid angle");
   });
 });
