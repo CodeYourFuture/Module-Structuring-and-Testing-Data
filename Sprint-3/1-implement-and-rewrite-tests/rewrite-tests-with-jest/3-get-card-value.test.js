@@ -1,45 +1,43 @@
-// This statement loads the getCardValue function you wrote in the implement directory.
+// This statement loads the isProperFraction function you wrote in the implement directory.
 // We will use the same function, but write tests for it using Jest in this file.
-const getCardValue = require("../implement/3-get-card-value");
+const isProperFraction = require("../implement/2-is-proper-fraction");
 
-// TODO: Write tests in Jest syntax to cover all possible outcomes.
-
-// Case 1: Ace (A)
-test(`Should return 11 when given an ace card`, () => {
-  expect(getCardValue("A♠")).toEqual(11);
+// denominator is zero
+test("should return false when denominator is zero", () => {
+  expect(isProperFraction(1, 0)).toEqual(false);
 });
 
-
-// Case 2: Number Cards (2–10)
-test("Should return the numeric value for number cards", () => {
-  expect(getCardValue("2♠")).toEqual(2);
-  expect(getCardValue("5♥")).toEqual(5);
-  expect(getCardValue("9♦")).toEqual(9);
-  expect(getCardValue("10♣")).toEqual(10);
+// proper fraction (numerator < denominator)
+test("should return true when numerator < denominator", () => {
+  expect(isProperFraction(1, 2)).toEqual(true);
 });
 
-// Case 3: Face Cards (J, Q, K)
-test("Should return 10 for face cards", () => {
-  expect(getCardValue("J♠")).toEqual(10);
-  expect(getCardValue("Q♥")).toEqual(10);
-  expect(getCardValue("K♦")).toEqual(10);
+// improper fraction (numerator > denominator)
+test("should return false when numerator > denominator", () => {
+  expect(isProperFraction(5, 3)).toEqual(false);
 });
 
-// Case 4: Invalid Cards
-test("Should throw an error for invalid cards", () => {
-  expect(() => getCardValue("1♠")).toThrowError();
-  expect(() => getCardValue("B♣")).toThrowError();
-  expect(() => getCardValue("10?")).toThrowError();
-  expect(() => getCardValue("invalid")).toThrowError();
+// equal numbers
+test("should return false when numerator === denominator", () => {
+  expect(isProperFraction(4, 4)).toEqual(false);
 });
 
+// numerator is zero
+test("should return true when numerator is zero and denominator is positive", () => {
+  expect(isProperFraction(0, 5)).toEqual(true);
+});
 
+// negative numerator
+test("should return false when numerator is negative", () => {
+  expect(isProperFraction(-2, 4)).toEqual(false);
+});
 
-// Suggestion: Group the remaining test data into these categories:
-//   Number Cards (2-10)
-//   Face Cards (J, Q, K)
-//   Invalid Cards
+// negative denominator
+test("should return false when denominator is negative", () => {
+  expect(isProperFraction(5, -4)).toEqual(false);
+});
 
-// To learn how to test whether a function throws an error as expected in Jest,
-// please refer to the Jest documentation:
-// https://jestjs.io/docs/expect#tothrowerror
+// both negative
+test("should return false when both numerator and denominator are negative", () => {
+  expect(isProperFraction(-3, -5)).toEqual(false);
+});
