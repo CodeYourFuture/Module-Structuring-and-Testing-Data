@@ -11,11 +11,11 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  if (denominator === 0) return false;
+  if (denominator <= 0) return false;
+  if (numerator < 0) return false;
 
-  return Math.abs(numerator) < Math.abs(denominator);
+  return numerator < denominator;
 }
-
 // TODO: Implement this function
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -26,7 +26,7 @@ module.exports = isProperFraction;
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
+    `Expected ${actualOutput} toBe ${targetOutput}`
   );
 }
 
