@@ -38,5 +38,7 @@ test("should append 'th' for numbers ending with 0, 4-9, except those ending wit
   expect(getOrdinalNumber(0)).toEqual("0th");
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(10)).toEqual("10th");
-  expect(getOrdinalNumber(14)).toEqual("14th");
+  expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(13)).toEqual("13th");
 });
