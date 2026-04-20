@@ -44,7 +44,7 @@ describe("getOrdinalNumber", () => {
   });
 
   // Case 5: All other numbers (Ending in 0, 4, 5, 6, 7, 8, 9)
-  test("should append 'th' for all other numbers", () => {
+  test("should append 'th' for numbers ending in 0, or 4 through 9", () => {
     expect(getOrdinalNumber(0)).toBe("0th");
     expect(getOrdinalNumber(4)).toBe("4th");
     expect(getOrdinalNumber(9)).toBe("9th");
