@@ -57,7 +57,7 @@ function getCardValue(card) {
   const validNumericRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
   if (validNumericRanks.includes(rank)) {
     return Number(rank);
-  } cd
+  }
 
   throw new Error("Invalid card: unknown rank");
 }
