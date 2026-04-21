@@ -38,9 +38,12 @@ describe("getAngleType", () => {
   });
 
   // Case 6: Invalid angles
-  test('should return "Invalid angle" for values out of range', () => {
+  test('should return "Invalid angle" for values ≤ 0 or > 360', () => {
     expect(getAngleType(0)).toBe("Invalid angle");
     expect(getAngleType(-10)).toBe("Invalid angle");
+    expect(getAngleType(-1)).toBe("Invalid angle");
+
+    expect(getAngleType(360)).toBe("Invalid angle");
     expect(getAngleType(361)).toBe("Invalid angle");
   });
 });
