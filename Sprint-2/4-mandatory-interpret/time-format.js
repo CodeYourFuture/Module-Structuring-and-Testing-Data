@@ -37,6 +37,6 @@ console.log(formatTimeDisplay(61));
 // =============> write your answer here
 // The last call is pad(remainingSeconds) and i worked out that remainingSeconds = 1, so because 61 seconds leaves 1 second after dividing by 60.
 
-// e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+// e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
 // =============> write your answer here
 // "01" the reason being: padStart(2, "0") adds a zero to the front because the string length is only 1. 
