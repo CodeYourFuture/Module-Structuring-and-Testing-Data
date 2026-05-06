@@ -33,12 +33,16 @@ console.log(formatTimeDisplay(61));
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
 
+<<<<<<< comparisons-assertions-breaking-down-problems-sprint-2
 /*The assign value to num when the function pad when it 
 last called will be 1. Because when the pad function called for the third time, it will
 receive the value from the variable remainingSeconds(seconds % 60 = 1);
 */
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+=======
+// e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
+>>>>>>> main
 // =============> write your answer here
 /*
 the assign return value to num when the function pad when it last called will be 01,
