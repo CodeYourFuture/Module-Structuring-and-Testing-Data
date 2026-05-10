@@ -27,6 +27,7 @@ console.log(result);
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // The exact runtime of the movie, converted from seconds into hours, minutes and seconds format.
+// One possible name for this variable: formattedMovieLength
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // It works with all positive values of movieLength. For negative values, it produces negative hours, minutes, and seconds.
