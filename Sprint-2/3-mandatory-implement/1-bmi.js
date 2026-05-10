@@ -17,5 +17,3 @@
 function calculateBMI(weight, height) {
   return Number((Number(weight) / Number(height) ** 2).toFixed(1));
 }
-
-console.log(calculateBMI("12", "12"));
