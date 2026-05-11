@@ -19,7 +19,7 @@ function toPounds(penceString) {
 
   const pence = paddedPenceNumberString
     .substring(paddedPenceNumberString.length - 2)
-    .padEnd(2, "0");
+    // I removed this line because the value of the pence variable is always padded to two digits.
 
   return `£${pounds}.${pence}`; // the function is expected to return the converted value, not output the converted value to the console.
 }
