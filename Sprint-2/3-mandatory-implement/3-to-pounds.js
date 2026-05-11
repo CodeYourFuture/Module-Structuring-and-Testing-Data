@@ -21,7 +21,7 @@ function toPounds(penceString) {
     .substring(paddedPenceNumberString.length - 2)
     .padEnd(2, "0");
 
-  return console.log(`£${pounds}.${pence}`);
+  return `£${pounds}.${pence}`; // the function is expected to return the converted value, not output the converted value to the console.
 }
 toPounds("399p"); // £3.99
 toPounds("1095p"); // £10.95
