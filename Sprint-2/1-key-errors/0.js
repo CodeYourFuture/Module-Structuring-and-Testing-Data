@@ -9,7 +9,7 @@ function capitalise(str) {
   return str;
 }
 
-// =============> the error message 'Identifier 'str' has already been declared', diplays because the toUpperCase function does not change the value of the varible declared
+// =============> the error message 'Identifier 'str' has already been declared', diplays because the toUpperCase function does not change the value of the variable declared
 // but it creates a new one.
 // =============> my new code:
 function capitalise(str) {
