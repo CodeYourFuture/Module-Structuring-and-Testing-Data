@@ -39,7 +39,7 @@ function getCardValue(card) {
   ];
   const suit = ["♠", "♥", "♦", "♣"];
 
-  const cardValue = card.slice(0, -1);
+  const cardValue = card.slice(-1);
   const cardSuit = card[card.length - 1];
 
   if (!rank.includes(cardValue) || !suit.includes(cardSuit)) {
