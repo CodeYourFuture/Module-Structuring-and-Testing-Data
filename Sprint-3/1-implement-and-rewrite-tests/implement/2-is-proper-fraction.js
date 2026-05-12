@@ -35,5 +35,5 @@ assertEquals(isProperFraction(1, 2), true);
 assertEquals(isProperFraction(2, 1), false);
 assertEquals(isProperFraction(0, 0), false);
 assertEquals(isProperFraction(-0, 0), false);
-assertEquals(isProperFraction(-5, 4), true);
-assertEquals(isProperFraction(-4, -5), false);
+assertEquals(isProperFraction(-5, 4), false);
+assertEquals(isProperFraction(-4, -5), true);
