@@ -17,7 +17,6 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
-
 // Error: SyntaxError: missing ) after argument list   (Line 5)
 // The arguments in the replaceAll function need to be comma separated, the difference can be seen from line 4 where the code
 // did not hit an error, adding in that comma will solve the error
@@ -32,14 +31,14 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 
-// It looks like the function is removing the commas (by replacing them with nothing) from the string 
+// It looks like the function is removing the commas (by replacing them with nothing) from the string
 // so there are only numbers left and then converting it into a Number data type
 
-console.log(carPrice)
+console.log(carPrice);
 
 // I commented out the line of code with an error and ran the code to confirm, it returned 10000
 // I can check it is a number by running a math operation on it
 
-console.log(carPrice*2)
+console.log(carPrice * 2);
 
 // result as expected

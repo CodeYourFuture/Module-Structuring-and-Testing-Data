@@ -24,7 +24,7 @@ console.log(result);
 
 // % is a modulus operator
 // It acts as a divisor, but instead of returning the resultant division, it returns the remainder
-// So movieLength % 60 divides the movieLength into whole minutes and returns however many seconds remain 
+// So movieLength % 60 divides the movieLength into whole minutes and returns however many seconds remain
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 

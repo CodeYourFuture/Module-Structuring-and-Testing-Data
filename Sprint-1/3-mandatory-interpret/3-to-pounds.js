@@ -26,7 +26,7 @@ console.log(`£${pounds}.${pence}`);
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
 
-console.log(penceStringWithoutTrailingP)
+console.log(penceStringWithoutTrailingP);
 
 // 3. const penceStringWithoutTrailingP = penceString.substring(
 // initialises a string variable with value "399" by using function substring on penceString
@@ -41,7 +41,7 @@ console.log(penceStringWithoutTrailingP)
 // 6. );
 // closes the arguments for the function
 
-console.log(paddedPenceNumberString)
+console.log(paddedPenceNumberString);
 
 // 8. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
 // Ensures the string is at least 3 in length, and if not adds zeros to the front
@@ -61,7 +61,6 @@ console.log(paddedPenceNumberString)
 // 15.  .substring(paddedPenceNumberString.length - 2)
 // performing substring function on the padded string this time for pence by starting the substring
 // from the penultimate (-2) character of the padded string length
-
 
 // 16. .padEnd(2, "0");
 // ensures the pence string is at least 2 characters long, adding a zero to the start if not
