@@ -15,12 +15,21 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  if (angle > 0 && angle < 90) {return "Acute angle";}
-  if (angle == 90) {return "Right angle";}
-  if (angle > 90 && angle < 180) {return "Obtuse angle";}
-  if (angle == 180) {return "Straight angle";}
-  if (angle > 180 && angle < 360) {return "Reflex angle";}
-  else return "Invalid angle"
+  if (angle > 0 && angle < 90) {
+    return "Acute angle";
+  }
+  if (angle == 90) {
+    return "Right angle";
+  }
+  if (angle > 90 && angle < 180) {
+    return "Obtuse angle";
+  }
+  if (angle == 180) {
+    return "Straight angle";
+  }
+  if (angle > 180 && angle < 360) {
+    return "Reflex angle";
+  } else return "Invalid angle";
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
@@ -58,4 +67,3 @@ assertEquals(getAngleType(180), "Straight angle");
 
 assertEquals(getAngleType(181), "Reflex angle");
 assertEquals(getAngleType(359), "Reflex angle");
-

@@ -37,33 +37,46 @@ test(`Should return 10 when given a King "K♦" card`, () => {
 
 //   Invalid Cards
 test(`Should return error when given a string`, () => {
-  expect(() => { getCardValue("invalid");}).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("invalid");
+  }).toThrow("Invalid card");
 });
 
 test(`Should return error when given a wrong letter`, () => {
-  expect(() => { getCardValue("L♦");}).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("L♦");
+  }).toThrow("Invalid card");
 });
 
 test(`Should return error when given a wrong letter`, () => {
-  expect(() => { getCardValue("L♦");}).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("L♦");
+  }).toThrow("Invalid card");
 });
 
 test(`Should return error when given a wrong number`, () => {
-  expect(() => { getCardValue("11♦");}).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("11♦");
+  }).toThrow("Invalid card");
 });
 
 test(`Should return error when given a wrong order`, () => {
-  expect(() => { getCardValue("♦2");}).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("♦2");
+  }).toThrow("Invalid card");
 });
 
 test(`Should return error when given no suit`, () => {
-  expect(() => { getCardValue("3");}).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("3");
+  }).toThrow("Invalid card");
 });
 
 test(`Should return error when given only suit`, () => {
-  expect(() => { getCardValue("♦");}).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("♦");
+  }).toThrow("Invalid card");
 });
-
 
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:

@@ -23,14 +23,23 @@
 
 function getCardValue(card) {
   const suits = ["♠", "♥", "♦", "♣"];
-  if (!suits.includes(card.slice(-1))) {throw new Error("Invalid card");}
-  
+  if (!suits.includes(card.slice(-1))) {
+    throw new Error("Invalid card");
+  }
+
   const value = card.slice(0, -1);
-  if (value == 10) {return 10;}
-  if (value >= 2 && value <= 9) {return Number(value);}
-  if (value == "J" || value == "Q" || value == "K") {return 10;}
-  if (value == "A") {return 11;}
-  else throw new Error("Invalid card");
+  if (value == 10) {
+    return 10;
+  }
+  if (value >= 2 && value <= 9) {
+    return Number(value);
+  }
+  if (value == "J" || value == "Q" || value == "K") {
+    return 10;
+  }
+  if (value == "A") {
+    return 11;
+  } else throw new Error("Invalid card");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
