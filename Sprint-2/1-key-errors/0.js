@@ -4,16 +4,13 @@
 // str is already a declared variable fed into the capitalise function, the function attempts
 // to declare the variable again, this may throw an error.
 
-
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
-
 
 // Error:
 
 // let str = `${str[0].toUpperCase()}${str.slice(1)}`;
 // SyntaxError: Identifier 'str' has already been declared
-
 
 /* Original Code:
 
@@ -33,4 +30,3 @@ function capitalise(str) {
   str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
-

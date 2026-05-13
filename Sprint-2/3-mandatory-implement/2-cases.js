@@ -16,8 +16,8 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function upperSnakeCase(str) {
-    const upperCaseStr = str.toUpperCase();
-    return upperCaseStr.replaceAll(" ","_");
+  const upperCaseStr = str.toUpperCase();
+  return upperCaseStr.replaceAll(" ", "_");
 }
 
 //tests
@@ -26,5 +26,6 @@ console.log(upperSnakeCase("hello       world"));
 console.log(upperSnakeCase("h e l l o w o r l d "));
 console.log(upperSnakeCase("   hello world    "));
 console.log(upperSnakeCase("hello 5555 world 6666 "));
-console.log(upperSnakeCase("hello world the quick brown fox jumps over the lazy dog"));
-
+console.log(
+  upperSnakeCase("hello world the quick brown fox jumps over the lazy dog")
+);

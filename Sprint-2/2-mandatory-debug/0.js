@@ -2,7 +2,7 @@
 
 // =============> write your prediction here
 // The multiple function doesn't return anything
-// the console log that calls the multiple function will not receive anything back, this 
+// the console log that calls the multiple function will not receive anything back, this
 // may cause an error
 
 /* Original code:
@@ -21,7 +21,7 @@ console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
 //  =============> write your new code here
 function multiply(a, b) {
-  return (a * b);
+  return a * b;
 }
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
