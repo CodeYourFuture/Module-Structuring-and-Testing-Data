@@ -41,3 +41,4 @@ assertEquals(isProperFraction(2, 0.1), false);
 assertEquals(isProperFraction(2, -1), false);
 assertEquals(isProperFraction(-2, 1), false);
 assertEquals(isProperFraction(200000, 100000), false);
+assertEquals(isProperFraction(10, 0), false);

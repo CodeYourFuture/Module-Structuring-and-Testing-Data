@@ -28,10 +28,7 @@ function getCardValue(card) {
   }
 
   const value = card.slice(0, -1);
-  if (value == 10) {
-    return 10;
-  }
-  if (value >= 2 && value <= 9) {
+  if (value >= 2 && value <= 10) {
     return Number(value);
   }
   if (value == "J" || value == "Q" || value == "K") {
