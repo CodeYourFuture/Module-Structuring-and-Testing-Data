@@ -3,8 +3,8 @@ function getOrdinalNumber(num) {
     throw new Error("Invalid number");
   }
 
-  const lastTwoDigits = num.toString().slice(-2);
-  const lastDigit = lastTwoDigits.slice(-1);
+  const lastTwoDigits = Number(num.toString().slice(-2));
+  const lastDigit = Number(num.toString().slice(-1));
   if (lastTwoDigits === 11 || lastTwoDigits === 12 || lastTwoDigits === 13) {
     return `${num}th`;
   }
