@@ -18,11 +18,11 @@ function getCardValue(card) {
   // Face cards
   if (["J", "Q", "K"].includes(rank)) return 10;
 
-  // Number cards
-  const validNumbers = ["2","3","4","5","6","7","8","9","10"];
+  // Number cards (2–10)
+  const num = Number(rank);
 
-  if (validNumbers.includes(rank)) {
-    return Number(rank);
+  if (!isNaN(num) && num >= 2 && num <= 10) {
+    return num;
   }
 
   throw new Error("Invalid card");
