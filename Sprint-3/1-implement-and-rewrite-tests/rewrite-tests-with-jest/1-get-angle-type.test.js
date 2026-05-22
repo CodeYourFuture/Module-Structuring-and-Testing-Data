@@ -2,6 +2,9 @@
 // We will use the same function, but write tests for it using Jest in this file.
 const getAngleType = require("../implement/1-get-angle-type");
 
+// Jest docs: https://jestjs.io/docs/getting-started
+// freeCodeCamp intro to testing: https://www.freecodecamp.org/news/how-to-start-unit-testing-javascript
+
 // TODO: Write tests in Jest syntax to cover all cases/outcomes,
 // including boundary and invalid cases.
 
@@ -14,7 +17,33 @@ test(`should return "Acute angle" when (0 < angle < 90)`, () => {
 });
 
 // Case 2: Right angle
+test(`should return "Right angle" when angle is exactly 90`, () => {
+  expect(getAngleType(90)).toEqual("Right angle");
+});
+
 // Case 3: Obtuse angles
+test(`should return "Obtuse angle" when (90 < angle < 180)`, () => {
+  expect(getAngleType(91)).toEqual("Obtuse angle"); // boundary: just above 90
+  expect(getAngleType(120)).toEqual("Obtuse angle"); // normal obtuse angle
+  expect(getAngleType(179)).toEqual("Obtuse angle"); // boundary: just below 180
+});
+
 // Case 4: Straight angle
+test(`should return "Straight angle" when angle is exactly 180`, () => {
+  expect(getAngleType(180)).toEqual("Straight angle");
+});
+
 // Case 5: Reflex angles
+test(`should return "Reflex angle" when (180 < angle < 360)`, () => {
+  expect(getAngleType(181)).toEqual("Reflex angle"); // boundary: just above 180
+  expect(getAngleType(270)).toEqual("Reflex angle"); // normal reflex angle
+  expect(getAngleType(359)).toEqual("Reflex angle"); // boundary: just below 360
+});
+
 // Case 6: Invalid angles
+test(`should return "Invalid angle" for angles outside valid range`, () => {
+  expect(getAngleType(0)).toEqual("Invalid angle"); // boundary: exactly 0
+  expect(getAngleType(360)).toEqual("Invalid angle"); // boundary: exactly 360
+  expect(getAngleType(-10)).toEqual("Invalid angle"); // negative number
+  expect(getAngleType(400)).toEqual("Invalid angle"); // over 360
+});
