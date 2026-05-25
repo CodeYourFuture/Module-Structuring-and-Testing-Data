@@ -1,7 +1,26 @@
-function repeatStr() {
-  // Your implementation of this function must *not* call String.prototype.repeat (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat).
-  // The goal is to re-implement that function, not to use it.
-  return "hellohellohello";
+/**
+ * Repeats a string a given number of times.
+ * This re-implements String.prototype.repeat without using it.
+ *
+ * @param {string} str - The string to repeat.
+ * @param {number} count - How many times to repeat it. Must be 0 or greater.
+ * @returns {string} The string repeated count times, or "" if count is 0.
+ * @throws {Error} If count is negative.
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+ */
+function repeatStr(str, count) {
+  if (count < 0) {
+    throw new Error("count must be 0 or greater");
+  }
+
+  let result = "";
+
+  for (let i = 1; i < count; i++) {
+    result = result + str;
+  }
+
+  return result;
 }
 
 module.exports = repeatStr;
