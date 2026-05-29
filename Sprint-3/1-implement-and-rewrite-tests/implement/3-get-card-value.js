@@ -22,7 +22,30 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  if (card.length < 2 || card.length > 3) {
+    throw new Error("Invalid card");
+  }
+
+  const suit = card.slice(-1);
+  const rank = card.slice(0, -1);
+
+  if (!"♥♦♣♠".includes(suit)) {
+    throw new Error("Invalid card");
+  }
+
+  if (/^[2-9]$/.test(rank) || rank === "10") {
+    return Number(rank);
+  }
+
+  if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  }
+
+  if (rank === "A") {
+    return 11;
+  }
+
+  throw new Error("Invalid card");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
