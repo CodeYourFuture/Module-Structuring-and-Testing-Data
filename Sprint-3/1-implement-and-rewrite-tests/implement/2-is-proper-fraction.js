@@ -11,7 +11,7 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -31,3 +31,31 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+
+// Basic non-proper examples
+assertEquals(isProperFraction(2, 1), false);
+
+// Negative numerators or denominators should still use absolute values
+assertEquals(isProperFraction(-1, 2), true);
+assertEquals(isProperFraction(1, -2), true);
+assertEquals(isProperFraction(-1, -2), true);
+
+// Zero numerator is a proper fraction when denominator != 0
+assertEquals(isProperFraction(0, 5), true);
+
+// Equal magnitude (including signs) is not proper
+assertEquals(isProperFraction(5, 5), false);
+assertEquals(isProperFraction(-5, 5), false);
+
+// Denominator zero (no division here, but should be considered invalid/proper=false)
+assertEquals(isProperFraction(0, 0), false);
+assertEquals(isProperFraction(3, 0), false);
+
+// Larger values and decimals
+assertEquals(isProperFraction(100, 101), true);
+assertEquals(isProperFraction(101, 100), false);
+assertEquals(isProperFraction(0.5, 1), true);
+assertEquals(isProperFraction(0.9999, 1), true);
+assertEquals(isProperFraction(1, 1.0001), true);
+
+console.log("Completed tests in 2-is-proper-fraction.js");
