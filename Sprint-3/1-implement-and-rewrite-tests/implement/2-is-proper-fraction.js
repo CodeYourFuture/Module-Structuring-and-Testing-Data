@@ -57,5 +57,3 @@ assertEquals(isProperFraction(101, 100), false);
 assertEquals(isProperFraction(0.5, 1), true);
 assertEquals(isProperFraction(0.9999, 1), true);
 assertEquals(isProperFraction(1, 1.0001), true);
-
-console.log("Completed tests in 2-is-proper-fraction.js");

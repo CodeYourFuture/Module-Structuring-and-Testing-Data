@@ -21,42 +21,25 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
+const validSuits = ["♠", "♣", "♥", "♦"];
+
 function getCardValue(card) {
-  // Student-friendly step-by-step parsing and validation.
-  // 1) Expect a string like "A♠", "10♥", "K♦" where the last character is the suit emoji
-  // 2) The rank is everything before the final character (so "10" or "A")
-  // 3) Check the suit is one of the four allowed suits, and the rank is valid
-
-  if (typeof card !== "string") {
-    throw new Error('Card must be a string, e.g. "A♠"');
+  if (typeof card !== "string" || card.length < 2) {
+    throw new Error("Invalid card");
   }
 
-  const text = card.trim();
-  if (text.length < 2) {
-    throw new Error(
-      'Invalid card: too short. Expect a rank and a suit, e.g. "10♠"'
-    );
+  const suit = card.slice(-1);
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card");
   }
 
-  // The suit is the last character, the rank is the rest
-  const suit = text[text.length - 1];
-  const rank = text.slice(0, -1);
-
-  const validSuits = new Set(["♠", "♥", "♦", "♣"]);
-  if (!validSuits.has(suit)) {
-    throw new Error(`Invalid suit "${suit}". Use one of: ♠ ♥ ♦ ♣`);
-  }
-
-  // Handle special ranks first
+  const rank = card.slice(0, -1);
   if (rank === "A") return 11;
   if (rank === "J" || rank === "Q" || rank === "K") return 10;
 
-  // Otherwise expect a number between 2 and 10
-  const n = Number(rank);
-  if (Number.isInteger(n) && n >= 2 && n <= 10) return n;
-
-  // If we get here, the rank wasn't recognised
-  throw new Error(`Invalid rank "${rank}". Use A, 2-10, J, Q or K`);
+  const num = Number(rank);
+  if (Number.isInteger(num) && num >= 2 && num <= 10) return num;
+  throw new Error("Invalid card");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -73,8 +56,14 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
+assertEquals(getCardValue("2♠"), 2);
+assertEquals(getCardValue("3♣"), 3);
 assertEquals(getCardValue("9♠"), 9);
-
+assertEquals(getCardValue("10♦"), 10);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♦"), 10);
+assertEquals(getCardValue("A♥"), 11);
 // Handling invalid cards
 try {
   getCardValue("invalid");
@@ -86,26 +75,6 @@ try {
 }
 
 // What other invalid card cases can you think of?
-
-// === Student-friendly examples ===
-// These examples show how the function behaves. Run the file with node to see messages.
-console.log("\nRunning student-friendly examples for getCardValue:");
-
-// Good cards
-console.log("A♠ =>", getCardValue("A♠"), "(expected 11)");
-console.log("K♦ =>", getCardValue("K♦"), "(expected 10)");
-console.log("10♥ =>", getCardValue("10♥"), "(expected 10)");
-console.log("3♣ =>", getCardValue("3♣"), "(expected 3)");
-
-// Examples that should throw (wrapped in try/catch so the script keeps running)
-const examples = ["invalid", "9x", "a♠", ""];
-examples.forEach((example) => {
-  try {
-    const v = getCardValue(example);
-    console.log(`${example} => ${v} (unexpected: should have thrown)`);
-  } catch (e) {
-    console.log(`${example} => throws: ${e.message}`);
-  }
-});
-
-console.log("\nCompleted student-friendly examples");
+// lowercase rank
+// invalid suit
+// non-string input
