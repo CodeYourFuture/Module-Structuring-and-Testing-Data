@@ -37,8 +37,23 @@ function getCardValue(card) {
   const rank = card.slice(0, -1);
   if (rank === "A") return 11;
   if (rank === "J" || rank === "Q" || rank === "K") return 10;
+}
 
- 
+if (
+    rank === "2" ||
+    rank === "3" ||
+    rank === "4" ||
+    rank === "5" ||
+    rank === "6" ||
+    rank === "7" ||
+    rank === "8" ||
+    rank === "9" ||
+    rank === "10"
+  ) {
+    return Number(rank);
+  }
+
+  throw new Error("Invalid card");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
