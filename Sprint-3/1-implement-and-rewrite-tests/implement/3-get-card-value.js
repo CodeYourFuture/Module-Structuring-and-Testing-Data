@@ -22,6 +22,7 @@
 // execute the code to ensure all tests pass.
 
 const validSuits = ["♠", "♣", "♥", "♦"];
+const validRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 
 function getCardValue(card) {
   if (typeof card !== "string" || card.length < 2) {
@@ -37,9 +38,7 @@ function getCardValue(card) {
   if (rank === "A") return 11;
   if (rank === "J" || rank === "Q" || rank === "K") return 10;
 
-  const num = Number(rank);
-  if (Number.isInteger(num) && num >= 2 && num <= 10) return num;
-  throw new Error("Invalid card");
+ 
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
