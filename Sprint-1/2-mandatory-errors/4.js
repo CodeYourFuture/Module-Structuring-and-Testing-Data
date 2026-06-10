@@ -1,2 +1,4 @@
-const 12HourClockTime = "8:53pm";
-const 24hourClockTime = "20:53";
+const twelveHourClockTime = "8:53pm";
+const twentyfourHourClockTime = "20:53";
+
+//changed '12' to 'twelve' and '24' to 'twentyfour' in order to fix the error.
