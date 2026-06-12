@@ -31,7 +31,7 @@ test(`Should return 10 for face cards (J, Q, K)`, () => {
 });
 
 //   Invalid Cards
-test(`Should throw an error for invalid cards`, () => {
+test(`Should throw an error for invalid cards, including invalid suits`, () => {
   expect(() => getCardValue("1♠")).toThrow("Invalid card");
   expect(() => getCardValue("A")).toThrow("Invalid card");
   expect(() => getCardValue("J")).toThrow("Invalid card");
