@@ -1,5 +1,16 @@
 const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.slice(-4);
+const last4Digits = cardNumber.toString().slice(-4);
+console.log(last4Digits);
+
+/*
+The error occurs because slice() only works on strings, but cardNumber is a number.
+To fix this, the number must be converted into a string first before using slice().
+
+One way is to use:
+(cardNumber + '').slice(-4)
+or:
+cardNumber.toString().slice(-4)
+*/
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
