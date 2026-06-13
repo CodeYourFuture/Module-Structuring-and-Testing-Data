@@ -31,6 +31,5 @@ const dir = dirString(filePath);
 const ext = extString(filePath);
 console.log(dir);
 console.log(ext);
-//const ext = ;
 
 // https://www.google.com/search?q=slice+mdn
