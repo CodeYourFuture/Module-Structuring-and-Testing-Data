@@ -1,4 +1,4 @@
-function repeatStr() {
+function repeatStr(n,s) {
   return string.repeat(repeat);
 }
 
