@@ -15,5 +15,9 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+  // return the BMI of someone based off their weight and height
+  const height_squared = Math.pow(height, 2);
+  return (weight / height_squared).toFixed(1);
 }
+
+console.log(calculateBMI(80, 1.8));
