@@ -1,7 +1,7 @@
 function getOrdinalNumber(num) {
     const asString = String(num);
 
-    if (n === 0) {
+    if (num === 0) {
         return "0";
     } else if (
         asString.endsWith("11") ||
