@@ -1,5 +1,5 @@
 function getOrdinalNumber(num) {
-    const asString = String(n);
+    const asString = String(num);
 
     if (n === 0) {
         return "0";
