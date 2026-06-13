@@ -1,16 +1,17 @@
-const penceString = "399p";
+const penceString = "399p";// initialises a string variable with the value "399p"
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
-);
+);// removes the last character "p" from the penceString and stores the result in a new variable called penceStringWithoutTrailingP. The substring method is used to extract a portion of the string, starting from index 0 and ending at the second-to-last index (length - 1).
 
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+//padStart method is used to add leading zeros to the penceStringWithoutTrailingP until it reaches a length of 3 characters. The result is stored in a new variable called paddedPenceNumberString.
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
 );
-
+//
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
   .padEnd(2, "0");
