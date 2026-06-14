@@ -1,4 +1,4 @@
-eeeOpen a new window in Chrome,
+Open a new window in Chrome,
 
 then locate the **Console** tab.
 
