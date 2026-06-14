@@ -1,5 +1,7 @@
-const cardNumber = 4533787178994213;
+const cardNumber = "4533787178994213";
 const last4Digits = cardNumber.slice(-4);
+
+console.log(`The last 4 digits of the card number are ${last4Digits}`);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
@@ -7,3 +9,7 @@ const last4Digits = cardNumber.slice(-4);
 // Then run the code and see what error it gives.
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
+
+//When I ran the code I got: TypeError: cardNumber.slice is not a function
+//I understand this happens because .slice() only works on strings, not numbers
+//To fix this I converted the number into a string so .slice() works
