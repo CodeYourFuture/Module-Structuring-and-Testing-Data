@@ -1,20 +1,22 @@
 
-// Predict and explain first BEFORE you run any code...
 
-// this function should square any number but instead we're going to get an error
-
-// =============> write your prediction of the error here
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
 
-// =============> explain this error message here
+    It shows the syntax error which is an unexpected number;
+    because we should not put 3 insides the variable, because it will lead to variable: num not defined
+insides the function, so the 3 doesn't work insides the function.
 
-// Finally, correct the code to fix the problem
+We need to put num instead of 3 insides the();
+That way when we call the function by using console.log.The 3 will go into the num variable.
 
-// =============> write your new code here
+
+function square(num) {
+    return num * num;
+}
+
 
 
