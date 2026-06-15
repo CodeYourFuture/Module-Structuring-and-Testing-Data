@@ -14,3 +14,6 @@ Answer the following questions:
 
 What does `console` store?
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+
+Answer: I don't think 'console' itself stores anything. Variables store values. 'console' is an object. 
+'.' after the 'console' allows to add one of the methods like console.log() or console.clear()
