@@ -9,6 +9,7 @@ console.log(last4Digits);
 //const last4Digits = cardNumber.slice(-4);
                                
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
-// The error comes up cause the value of the cardNumber is not a string it's a number
-//Once you change the value to a string the .slice()
-// Then try updating the expression last4Digits is assigned to, in order to get the correct value
+
+// The error comes up cause the value of the cardNumber is not a string, it's a number
+// Once you change the value to a string, the .slice() method will work, and the console log will show the last 4 characters of the string.
+
