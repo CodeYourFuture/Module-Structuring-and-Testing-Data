@@ -11,8 +11,10 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
+I Don't get it, When you say an input string "Hello World" do you meaan as a parameter, do you mean it suppose to return "Hello World", or what ?
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+Is it suppose to prompt me?
