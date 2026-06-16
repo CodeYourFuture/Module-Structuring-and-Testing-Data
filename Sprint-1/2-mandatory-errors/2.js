@@ -3,3 +3,6 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+//ReferenceError: Cannot access 'cityOfBirth' before initialization
+//this occurred because the variable 'cityOfBirth' was accessed on line 4, but before line 5 - where it was initialised.
