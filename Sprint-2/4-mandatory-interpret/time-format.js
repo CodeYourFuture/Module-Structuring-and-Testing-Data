@@ -15,24 +15,43 @@ function formatTimeDisplay(seconds) {
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
 
+
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
 
-// Questions
+console.log(formatTimeDisplay(61));
 
-// a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
 
-// Call formatTimeDisplay with an input of 61, now answer the following:
 
-// b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
 
-// c) What is the return value of pad is called for the first time?
-// =============> write your answer here
 
-// d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+ Questions
 
-// e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+ a) When formatTimeDisplay is called how many times will pad be called?
+3 time. 
+
+
+b) What is the value assigned to num when pad is called for the first time?
+ =============> parameter
+
+
+
+ c) What is the return value of pad is called for the first time?
+ =============> numString variable
+
+
+
+ d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
+ =============> 
+
+
+
+e) What is the return value of pad when it is called for the last time in this program? 
+
+
+The three functions of pad are called 
+ in three variables totalMinutes, remainingMinutes and totalHours.
+The last variable in the pad function is called remainingSeconds;
+
+
+// =============> 
