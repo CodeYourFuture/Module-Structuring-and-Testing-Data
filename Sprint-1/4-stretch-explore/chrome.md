@@ -11,8 +11,12 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
+\\alert("message") will pop up a message on the page - it will have only an ok button - the script will pause until the OK is clicked
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
-What is the return value of `prompt`?
+What is the return value of `prompt`?ur 
+
+\\prompt("message") - pop up a message or a question - the user receives an input field where the data can provide script pauses until the OK field is clicked 
+\\once the data is passed on, you can use this data for your work
