@@ -26,13 +26,14 @@ console.log(result);
 
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
-// the expression evaluates to total number of movie minutes by subtracting the number of seconds.
+// The expression evaluates to total number of movie minutes by subtracting the number of seconds.
 
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // The variable result represent the duration of thr movie in hours,minutes and seconds. 
 // A better name fot this variable is movieDuration
 
+
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-// The code will work for all the values of movieLength. But if we use negative numbers ut will gie us an invalid duration.
+// The code will work for all the values of movieLength. But if we use negative numbers it will give us an invalid duration.
 // Ex movieLength = -8784  movieDuration = -2: -26: -24
