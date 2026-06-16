@@ -4,6 +4,16 @@
 // UPPER_SNAKE_CASE means taking a string and writing it in all caps with underscores instead of spaces.
 
 // Implement a function that:
+function convertToUpperCase(text) {
+const result = text.toUpperCase();
+return result;
+} 
+
+console.log(convertToUpperCase("hello"));
+
+
+
+
 
 // Given a string input like "hello there"
 // When we call this function with the input string
