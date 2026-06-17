@@ -21,18 +21,20 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// =============> Pad's called three times, per hours, minutes and seconds each.
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// =============> Answer is zero, due to 61 seconds being less than an hour.
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// =============> The function returns 00, after running twice. 
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> When it runs for the last time it's calculating remaining seconds, with value of 61, after dedicting minutues the answer
+//is 1. 
 
 // e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> Answer is 01, because numString convert 1 to "1", then loop runs again, now it's "01", because of "while (numString.length < 2) {
+// numString = "0" + numString;}" , then the loop stops. 
