@@ -23,3 +23,45 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+
+// i am runnign the following tests, since morning and afternoon times were done already,
+// noon, different minutes.
+function formatAs12HourClock(time) {
+  const hours = Number(time.slice(0, 2));
+  if (hours > 12) {
+    return `${hours - 12}:00 pm`;
+  }
+  return `${time} am`;
+}
+
+const currentOutput3 = formatAs12HourClock("12:00");
+const targetOutput3 = "12:00 pm";
+console.assert(currentOutput3 === targetOutput3);
+
+console.log(formatAs12HourClock("12:00"));
+
+//i have run this code in dev tools , the asnwer was 12:00am , bug found. 
+
+function formatAs12HourClock(time) {
+  const hours = Number(time.slice(0, 2));
+  if (hours > 12) {
+    return `${hours - 12}:00 pm`;
+  }
+  return `${time} am`;
+}
+
+const currentOutput3 = formatAs12HourClock("12:00");
+const targetOutput3 = "12:00 pm";
+console.assert(currentOutput3 === targetOutput3);
+
+console.log(formatAs12HourClock("15:29"));
+
+//Answer was 3:00pm, bug found. 
+
+
+
+
+
+
+
+
