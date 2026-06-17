@@ -24,6 +24,8 @@ console.log(convertPenceToPounds("299p"));
 console.log(convertPenceToPounds("499p"));
 console.log(convertPenceToPounds("25p"));
 console.log(convertPenceToPounds("79p"));
+console.log(convertPenceToPounds("2p"));
+
 
 
 
