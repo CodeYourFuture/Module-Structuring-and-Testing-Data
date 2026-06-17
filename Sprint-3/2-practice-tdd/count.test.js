@@ -18,6 +18,46 @@ test("should count multiple occurrences of a character", () => {
 });
 
 // Scenario: No Occurrences
+test("should return 0 when character is not present", () => {
+  const str = "hello";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toBe(0);
+});
+
+// Scenario: Single Occurrence
+test("should count a single occurrence of a character", () => {
+  const str = "hello";
+  const char = "h";
+  const count = countChar(str, char);
+  expect(count).toBe(1);
+});
+
+// Scenario: Mixed string
+test("should count occurrences in a mixed string", () => {
+  const str = "banana";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toBe(3);
+});
+
+// Scenario: Empty string
+test("should return 0 for empty string", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toBe(0);
+});
+
+// Scenario: Case sensitivity
+test("should be case sensitive", () => {
+  const str = "AaAa";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toBe(2);
+});
+
+// Scenario: No Occurrences
 // Given the input string `str`,
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
