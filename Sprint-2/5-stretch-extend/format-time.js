@@ -1,25 +1,33 @@
-// This is the latest solution to the problem from the prep.
-// Make sure to do the prep before you do the coursework
-// Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
-
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
-  }
-  return `${time} am`;
+  const timeParts = time.split(":");
+  const mins = timeParts[1].padStart(2, "0");
+  const hoursInt = Number(timeParts[0]);
+  if (hoursInt === 0) return `${12}:${mins} am`;
+  if (hoursInt < 12) return `${timeParts[0].padStart(2, "0")}:${mins} am`;
+  if (hoursInt === 12)
+    return `${timeParts[0]}:${timeParts[1].padStart(2, "0")} pm`;
+  return `${(hoursInt - 12).toString().padStart(2, "0")}:${mins} pm`;
 }
 
-const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
-console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
-);
+console.log(formatAs12HourClock("0:0"));
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
-);
+const testValues = [
+  ["0:0", "12:00 am"],
+  ["00:00", "12:00 am"],
+  ["08:00", "08:00 am"],
+  ["8:25", "08:25 am"],
+  ["11:59", "11:59 am"],
+  ["12:00", "12:00 pm"],
+  ["12:01", "12:01 pm"],
+  ["13:00", "01:00 pm"],
+  ["16:5", "04:05 pm"],
+  ["23:00", "11:00 pm"],
+];
+
+for (const [input, expectedOutput] of testValues) {
+  const actualOutput = formatAs12HourClock(input);
+  console.assert(
+    actualOutput === expectedOutput,
+    `Current output is ${actualOutput}. Expected outout is ${expectedOutput}`
+  );
+}
