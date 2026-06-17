@@ -1,9 +1,12 @@
-const cardNumber = 4533787178994213;
+const cardNumber = "4533787178994213";
 const last4Digits = cardNumber.slice(-4);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
 // Before running the code, make and explain a prediction about why the code won't work
+// First the code doesn't have console.log()to print the value of last four digits. Second, the slice can't be negative.
 // Then run the code and see what error it gives.
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
+// The error is that slice is not a function. This is because cardNumber is a number and slice is a string method. To fix this, we need to convert cardNumber to a string before using slice.
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
+console.log(last4Digits);
