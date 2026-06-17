@@ -4,10 +4,8 @@
 let testName = "Jerry";
 const greeting = "hello";
 
-function sayHello(greeting, name) {
-  const greetingStr = greeting + ", " + name + "!";
-  return `${greeting}, ${name}!`;
-  console.log(greetingStr);
+function sayHello(greeting, name) {  
+  return `${greeting}, ${name}!`;  
 }
 
 testName = "Aman";
