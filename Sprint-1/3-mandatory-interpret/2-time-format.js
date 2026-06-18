@@ -12,14 +12,27 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
+// This program contains 6 variable declarations.
 
 // b) How many function calls are there?
+// There is only 1 function call in this program.
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
+/* The expression represent that by dividing the movieLength with 60 returns the remainder and % represent 
+   operator returns the remainder after division */
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
+/* The expression have two operation the first one is subtracting the remainingSecondes from the movieLength 
+   then dividing the result with 60 to get the minutes of the movie */
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
+// result represent the total movie length using hours,minutes and seconds,the better name can be movieRunTime.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+/* The code converts a movie length given in seconds into hours, minutes, and seconds. It uses the remainder operator (%) to find 
+  the leftover seconds after dividing by 60. It then converts the remaining seconds into minutes and uses % 60 again to find the leftover minutes. 
+The remaining minutes are converted into hours. 
+
+    The code works correctly for positive whole numbers of seconds. However, it may not work as expected 
+for negative numbers, decimal values, or invalid inputs such as strings.*/
