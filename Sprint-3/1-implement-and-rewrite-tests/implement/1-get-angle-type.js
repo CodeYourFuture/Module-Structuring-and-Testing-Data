@@ -31,6 +31,30 @@ assertEquals(getAngleType(360), "Invalid angle");
 
 console.log("All tests finished");
 
+//I have written some tests, passed them all on Devtools. Wrote some more below.
+
+
+const acute = getAngleType(45);
+assertEquals(acute, "Acute angle");
+const right = getAngleType(90);
+assertEquals(right, "Right angle");
+const obtuse = getAngleType(120);
+assertEquals(obtuse, "Obtuse angle");
+const straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
+const reflex = getAngleType(270);
+assertEquals(reflex, "Reflex angle");
+const zero = getAngleType(0);
+assertEquals(zero, "Invalid angle");
+const negative = getAngleType(-10);
+assertEquals(negative, "Invalid angle");
+const fullTurn = getAngleType(360);
+assertEquals(fullTurn, "Invalid angle");
+const tooLarge = getAngleType(400);
+assertEquals(tooLarge, "Invalid angle");
+
+console.log("All tests finished");
+
 
 
 
