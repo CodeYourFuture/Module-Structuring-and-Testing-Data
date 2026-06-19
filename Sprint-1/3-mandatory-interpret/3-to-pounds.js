@@ -25,3 +25,10 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+// line 1 creating a string containing price in pence and this is starting value that programme will convert into pound.
+// line 3 removing p from the end of 399p because p is not needed when converting into pound or pence.
+// line 8 making sure string  has at least 3 digit by adding zero if needed and this makes easier to separate pound and pence consistently.
+// line 9 extract everything except last two digit .
+// line 14 extract last two digit and padEnd() ensures the pence part always has 2 digits.
+// line 18 to print value for checking .
