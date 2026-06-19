@@ -12,8 +12,11 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// There are 3 function calls in this file.
+// There are 5 function calls in this file.
 // They are on lines 4, 5, 10.
+// Line 4: Number(), replaceAll()
+// Line 5: Number(), replaceAll()
+// Line 10: console.log()
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // The error is coming from line 5. This happens because there is a syntax error in the replaceAll function call.
