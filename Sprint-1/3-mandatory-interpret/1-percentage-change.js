@@ -28,4 +28,6 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 
-// Martin answer - the purpose of this expression is to use the replace all method to replace the comma in the carPrice price expression with a blank so that the expression reads "10000".  This is converted to a number using the number function converting the string "10000" to a number 10000
+/*
+Martin answer - the purpose of this expression is to use the replaceAll method using a search string and replacement string. In this case all commas are removed from carPrice (",") and replaced with a blank (""), converting the formatted number of "10,000" to "10000". This is passed into a Number() method which converts the string to a number - 10000
+*/
