@@ -1,20 +1,33 @@
+// Predict and explain :
+// The code will throw a SyntaxError because a number is used as a parameter name.
 
-// Predict and explain first BEFORE you run any code...
+//----------------------------------------------------------------------------------------------------------
 
-// this function should square any number but instead we're going to get an error
+// My prediction of the error :
+//SyntaxError: Unexpected identifier
 
-// =============> write your prediction of the error here
+//----------------------------------------------------------------------------------------------------------
 
-function square(3) {
-    return num * num;
+// Original code :
+/*function square(3) {
+  return num * num;
+}*/
+
+//----------------------------------------------------------------------------------------------------------
+
+// The error message :
+//SyntaxError: Unexpected number
+
+//----------------------------------------------------------------------------------------------------------
+
+// Explaination of the error message :
+// Function parameters must be valid variable names (identifiers).
+// The code uses the number 3 as a parameter, but numbers cannot be used as parameter names.
+
+//----------------------------------------------------------------------------------------------------------
+
+// Corrected code :
+function square(num) {
+  return num * num;
 }
-
-// =============> write the error message here
-
-// =============> explain this error message here
-
-// Finally, correct the code to fix the problem
-
-// =============> write your new code here
-
-
+console.log(square(5));
