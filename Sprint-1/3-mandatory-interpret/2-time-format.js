@@ -23,3 +23,17 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+
+// answer
+
+// a) 6 variables: movieLength, remainingSeconds, totalMinutes, remainingMinutes, totalHours and result
+
+// b) 1 function calls: console.log(result)
+
+// c) Reminder operator: movieLength (8784 seconds)is divided by 60 and converted into minutes. The reminder value then stored as seconds.
+
+// d) It calculates how many full minutes (60 seconds) in movieLength are there excluding the seconds. 
+
+// e) total movie length in hours, minuets and seconds. movieDuration can be an alternative variable. 
+
+// f) I tried negative and decimal number. The code works but it doesn't make any sense to represent with this type of values other than integers.
