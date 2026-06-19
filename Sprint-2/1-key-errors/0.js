@@ -16,4 +16,4 @@ function capitalise(str) {
   return capitalisedStr;
 }
 console.log(capitalise("hello"));
-console.log(capitalise("iloveyou"));
+console.log(capitalise("how are you?"));
