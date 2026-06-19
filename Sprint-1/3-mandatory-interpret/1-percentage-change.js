@@ -23,10 +23,13 @@ console.log(`The percentage change is ${percentageChange}`);
 
 //answers
 
-/* a) there are there three
+/* a) there are there five
      carPrice.replaceAll(",", "")
      Number(carPrice.replaceAll(",", ""))
-     Number(priceAfterOneYear.replaceAll(",", ""))*/
+     Number(priceAfterOneYear.replaceAll(",", ""))
+     console.log(...) -
+     (priceDifference / carPrice) * 100 - line 7 (this is an expression that involves division and multiplication, but it does not involve a function call)*/
+    
 
 /* b) priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", "")); 
 The issue is  a syntax mistake in the brackets/quotes, and JavaScript throws a SyntaxError before running.
