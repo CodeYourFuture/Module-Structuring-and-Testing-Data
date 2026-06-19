@@ -28,6 +28,9 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // It represents the final time format of the movie in hours, minutes, and seconds.
 // A clearer name would be something like movieDuration.
+// movieLength is the total time in seconds.
+// movieDuration is the final time written as hours:minutes:seconds.
+// movieLength is the raw number, movieDuration is the readable version.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // I tried running different numbers and it still works, even when the value is negative.
