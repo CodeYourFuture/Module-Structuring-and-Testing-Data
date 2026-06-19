@@ -13,4 +13,6 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
+Console stores an object.
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+The dot is used to access something inside an object. console.log means access the log function that is stored inside the console object.
