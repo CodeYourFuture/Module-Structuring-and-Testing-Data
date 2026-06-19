@@ -1,5 +1,5 @@
 const movieLength = 8784; // length of movie in seconds
-
+// 9237,  8784, -5897...
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
 
@@ -23,3 +23,10 @@ console.log(result);
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+
+// a) there are 6 variable declaration.
+// b) there is zero function call . (only one is console.log but it is not part code execution)
+// c)represents the number of seconds left over after converting the movie length into whole minutes.
+// d) It calculates how many whole minutes are in the movie after taking away extra second that don't make full minutes.
+//  e) it represents time format like hours : minutes: second and I think MovieLengthDuration or short MovieDuration
+// I think all value will work except negative value because negative value gives negative outcome.
