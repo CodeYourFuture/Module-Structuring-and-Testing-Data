@@ -8,4 +8,5 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
-//step 1: Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive).so it can be any number from 0 up to but not including 1.e.g 0.5, 0.75, 0.25, 0.1, 0.9, etc. and not 1.0
+//step 1: Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive).so it can be any number from 0 up to but not including 1.e.g 0.5, 0.75, 0.25, 0.1, 0.9, etc. and not 1.0.
+//step 2: (maximum - minimum + 1) calculates the range of numbers we want to generate. In this case, it calculates the difference between the maximum and minimum values (100 - 1 = 99) and adds 1 to include both endpoints of the range. So, it becomes 100.i.e how many numbers are there from 1 to 100 inclusive.e.g 1,2,3,4,5,6,7,8,9,10,...100. so the range is 100.
