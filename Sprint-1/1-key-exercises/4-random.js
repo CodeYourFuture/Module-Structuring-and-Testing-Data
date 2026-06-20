@@ -13,4 +13,5 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 //step 3: Math.random() * (maximum - minimum + 1) multiplies the random decimal number generated in step 1 by the range calculated in step 2. This scales the random number to be within the desired range. So, it can be any number from 0 up to but not including 100.e.g 0, 50, 75, 25, 10, 90, etc. and not 100.
 //step 4: Math.floor(...) rounds down the result of step 3 to the nearest whole number. This ensures that we get an integer value. so it can be any whole number from 0 up to but not including 100.e.g 0, 50, 75, 25, 10, 90, etc. and not 100.
 //step 5: Math.floor(Math.random() * (maximum - minimum + 1)) + minimum adds the minimum value to the result of step 4. This shifts the range of numbers to start from the minimum value. So, it can be any whole number from 1 up to and including 100.e.g 1, 50, 75, 25, 10, 90, etc. and not 0 or 100.
+// In summary, the expression generates a random whole number between the minimum and maximum values (inclusive). In this case, it generates a random whole number between 1 and 100 (inclusive).which is what num represents.
 
