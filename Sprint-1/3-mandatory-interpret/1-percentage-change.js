@@ -28,7 +28,13 @@ console.log(`The percentage change is ${percentageChange}`);
 // Line 5: priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ,""));
 
 // d) Identify all the lines that are variable declarations
+// The variable declaration statements are on the following lines:
 // Line 1: let carPrice = "10,000";
 // Line 2: let priceAfterOneYear = "8,543";
+// Line 7: const priceDifference = carPrice - priceAfterOneYear;
+// Line 8: const percentageChange = (priceDifference / carPrice) * 100;
+// A declaration is when a variable is created, using let or const.
+
+
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
