@@ -10,3 +10,5 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 //step 1: Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive).so it can be any number from 0 up to but not including 1.e.g 0.5, 0.75, 0.25, 0.1, 0.9, etc. and not 1.0.
 //step 2: (maximum - minimum + 1) calculates the range of numbers we want to generate. In this case, it calculates the difference between the maximum and minimum values (100 - 1 = 99) and adds 1 to include both endpoints of the range. So, it becomes 100.i.e how many numbers are there from 1 to 100 inclusive.e.g 1,2,3,4,5,6,7,8,9,10,...100. so the range is 100.
+//step 3: Math.random() * (maximum - minimum + 1) multiplies the random decimal number generated in step 1 by the range calculated in step 2. This scales the random number to be within the desired range. So, it can be any number from 0 up to but not including 100.e.g 0, 50, 75, 25, 10, 90, etc. and not 100.
+
