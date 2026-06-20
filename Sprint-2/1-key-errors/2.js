@@ -6,9 +6,9 @@
 // function parameter should not be a number, it should be a variable name that holds a number.
 // the parameter is a placeholder for the number.
 
-function square(3) {
+/*function square(3) {
     return num * num;
-}
+}*/
 
 // SyntaxError: Unexpected number
 
