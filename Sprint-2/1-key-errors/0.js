@@ -9,5 +9,10 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+// The error is on line 8.
+// The parameter 'str' has already been declared in the function.
+// Declaring 'let str' again causes the error.
+function capitalise(str) {
+  let capitalisedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return capitalisedStr;
+}
