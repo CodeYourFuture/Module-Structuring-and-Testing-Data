@@ -7,3 +7,5 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
+
+//step 1: Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive).so it can be any number from 0 up to but not including 1.e.g 0.5, 0.75, 0.25, 0.1, 0.9, etc. and not 1.0
