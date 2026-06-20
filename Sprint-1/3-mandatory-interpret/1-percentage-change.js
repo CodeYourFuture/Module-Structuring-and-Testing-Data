@@ -23,7 +23,12 @@ console.log(`The percentage change is ${percentageChange}`);
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // The error is occurring on line 5., and it's a SyntaxError: missing , The error is due to a missing comma in the replaceAll() method. The correct syntax should be replaceAll(",", ""). To fix this problem, we need to add the missing comma in the replaceAll() method on line 5
 // c) Identify all the lines that are variable reassignment statements
+// The variable reassignment statements are on the following lines:
+// Line 4: carPrice = Number(carPrice.replaceAll(",", ""));
+// Line 5: priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ,""));
 
 // d) Identify all the lines that are variable declarations
+// Line 1: let carPrice = "10,000";
+// Line 2: let priceAfterOneYear = "8,543";
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
