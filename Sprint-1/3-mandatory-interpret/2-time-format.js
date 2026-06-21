@@ -32,6 +32,7 @@ console.log(result);
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
+// The expression assigned to totalMinutes calculates the total number of minutes in the movie length. It does this by first subtracting the remaining seconds (calculated in line 3) from the total movie length (movieLength), which gives us the total number of seconds that can be fully converted into minutes. Then, it divides that result by 60 to convert those seconds into minutes. This gives us the total number of complete minutes in the movie length, excluding any remaining seconds.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
