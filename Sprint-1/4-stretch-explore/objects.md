@@ -5,6 +5,7 @@ In this activity, we'll explore some additional concepts that you'll encounter i
 Open the Chrome devtools Console, type in `console.log` and then hit enter
 
 What output do you get? // I got 'console.log'
+// ƒ log() { [native code] }
 
 Now enter just `console` in the Console, what output do you get back?
 
