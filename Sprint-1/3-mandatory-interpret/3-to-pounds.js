@@ -27,4 +27,5 @@ console.log(`£${pounds}.${pence}`);
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
 //2. const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1): removes the trailing "p" from the pence string to isolate the numeric value.
 //3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"): ensures that the numeric value has at least three digits by padding with 3 leading zeros if necessary, .padStart(target Length, padString), adds strings to the start of the string until it reaches the target length, in this case 3, and if the string is already 3 or more characters long, it will not add any padding.
+/*4. const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2): extracts the pounds portion of the price ,paddedPenceNumberString.length =3, so paddedPenceNumberString.length - 2 = 1, so paddedPenceNumberString.substring(0, 1) = "3" it took characters from index 0 to 1*/
 
