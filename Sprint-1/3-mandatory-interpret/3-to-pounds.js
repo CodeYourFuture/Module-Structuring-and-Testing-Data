@@ -24,4 +24,17 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+line 1. const penceString = "399p": initialises a string variable with the value "399p"
+line 3. You define a penceStringWithoutTrailingP variable and call a function to cut a line, you use penceString.length -1 because 
+you want to cut the p. 
+
+line 8: You define a variable paddedPenceNumberString and call a function to add 0 into the letters, if the words are not three characters long.
+line 9: You want to take the pound out of 399, so you call the function substring and only wants before the index 1, which is calculated by (0 , length -2); 
+
+line 14: You call a variable function and you subtract the value from index 1 to the end. 
+line 18: print the variable pound and the variable pence with the . 
+
+
+
+
