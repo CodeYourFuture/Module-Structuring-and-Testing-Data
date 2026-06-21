@@ -22,7 +22,26 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  if (card === "A♠" || card === "A♥" || card === "A♦" || card === "A♣") {
+    return 11;
+  }
+  if (card === "J♠" || card === "J♥" || card === "J♦" || card === "J♣") {
+    return 10;
+  }
+  if (card === "Q♠" || card === "Q♥" || card === "Q♦" || card === "Q♣") {
+    return 10;
+  }
+  if (card === "K♠" || card === "K♥" || card === "K♦" || card === "K♣") {
+    return 10;
+  }
+  // Check for number cards
+  const rank = card.slice(0, -1);
+  const value = parseInt(rank);
+  if (!isNaN(value) && value >= 2 && value <= 10) {
+    return value;
+  }
+  // If we reach here, the card is invalid
+  throw new Error("Invalid card format");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,6 +59,10 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("J♠"), 10);
+assertEquals(getCardValue("Q♠"), 10);
+assertEquals(getCardValue("K♠"), 10);
 
 // Handling invalid cards
 try {
