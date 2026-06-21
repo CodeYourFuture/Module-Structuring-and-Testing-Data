@@ -27,6 +27,8 @@ console.log(result);
 
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
+// The expression movieLength % 60 represents the remainder of the division of movieLength by 60. In this case, it calculates the number of seconds remaining after converting the total length of the movie (in seconds) into minutes. The modulo operator (%) is used to find the remainder when one number is divided by another. So, if movieLength is 8784 seconds, movieLength % 60 will give us the number of seconds that do not make up a full minute. 
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
