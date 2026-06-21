@@ -35,5 +35,6 @@ console.log(result);
 // The expression assigned to totalMinutes calculates the total number of minutes in the movie length. It does this by first subtracting the remaining seconds (calculated in line 3) from the total movie length (movieLength), which gives us the total number of seconds that can be fully converted into minutes. Then, it divides that result by 60 to convert those seconds into minutes. This gives us the total number of complete minutes in the movie length, excluding any remaining seconds.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
+// The variable result represents the formatted string that shows the total length of the movie in hours, minutes, and seconds. A better name for this variable could be "formattedMovieLength" or "movieDuration" to more clearly indicate that it holds the duration of the movie in a human-readable format.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
