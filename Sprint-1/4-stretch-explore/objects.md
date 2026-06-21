@@ -12,8 +12,5 @@ Try also entering `typeof console`
 
 Answer the following questions:
 
-What does `console` store? it is an object it let you access the debugging console insides to see what it happens insides.
-
-What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean? `.` means reach to. you need to reach to the console to grab the logs.
-
-console.assert means that you need to evaluate the value inside the console whether it is true, if it is true, nothing will happen; if it is wrong, the function will alert you.
+What does `console` store?
+What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
