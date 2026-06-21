@@ -22,6 +22,9 @@ console.log(result);
 
 
 // b) How many function calls are there?
+// There is 1 function call in this program. The function call is made on the following line:
+// Line 10: console.log(result);
+
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
