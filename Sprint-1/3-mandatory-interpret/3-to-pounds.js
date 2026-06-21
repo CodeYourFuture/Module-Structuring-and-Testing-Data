@@ -26,4 +26,5 @@ console.log(`£${pounds}.${pence}`);
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
 //2. const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1): removes the trailing "p" from the pence string to isolate the numeric value.
-//3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"): ensures that the numeric value has at least three digits by padding with 3 leading zeros if necessary.
+//3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"): ensures that the numeric value has at least three digits by padding with 3 leading zeros if necessary, .padStart(target Length, padString), adds strings to the start of the string until it reaches the target length, in this case 3, and if the string is already 3 or more characters long, it will not add any padding.
+
