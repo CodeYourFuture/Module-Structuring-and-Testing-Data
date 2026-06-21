@@ -96,3 +96,4 @@ Answer the following questions:
 What does `console` store?
 /* Console is a globally available Object provided by the browser environment to store debugging tools functions in one convienient place*/
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+/*`console.log` or `console.assert` mean? i.e console.log go inside the console Object and print out whatever you have on the console to see, log() is a method which does the action on the object , and for console.assert means check whether something is true and if it's not true show the error message on the console. the '.' is called the property accessor or dot Notation and what it does is to dig inside an object and grab a specific piece of data or functionality stored within it.*/
