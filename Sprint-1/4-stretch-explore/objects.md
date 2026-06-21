@@ -94,4 +94,5 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
+/* Console is a globally available Object provided by the browser environment to store debugging tools functions in one convienient place*/
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
