@@ -1,12 +1,12 @@
 // Find the instances of unreachable and redundant code - remove them!
 // The sayHello function should continue to work for any reasonable input it's given.
 
-const greeting = "hello";
-const testName = "Aman";
-
 function sayHello(greeting, name) {
   return `${greeting}, ${name}!`;
 }
+
+const testName = "Aman";
+const greeting = "hello";
 
 const greetingMessage = sayHello(greeting, testName);
 
