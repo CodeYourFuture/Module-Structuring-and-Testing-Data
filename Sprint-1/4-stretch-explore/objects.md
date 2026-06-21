@@ -89,6 +89,7 @@ Symbol(Symbol.toStringTag)
 "console"*/
 
 Try also entering `typeof console`
+// got: object
 
 Answer the following questions:
 
