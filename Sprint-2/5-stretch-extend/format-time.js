@@ -55,13 +55,14 @@ console.log(formatAs12HourClock("12:00"));
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-
+  const minutes = time.slice(3);
+  
   if (hours === 12) {
     return `${time} pm`;
   }
 
   if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+     return `${hours - 12}:${minutes} pm`;
   }
   return `${time} am`;
 }
@@ -73,6 +74,8 @@ console.assert(currentOutput3 === targetOutput3);
 console.log(formatAs12HourClock("15:29"));
 
 //Answer was 3:00pm, bug found. 
+
+//PS: fixed the bug by adding a seperate variable for minutes. Tested it again and it works now. 
 
 
 
