@@ -10,9 +10,18 @@ Let's try an example.
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
+Answer: A modal window pop up showing Hello World! on it.
+
 What effect does calling the `alert` function have?
+
+Answer: When the modal window pop up, user would see message "Hello World!" and has to click OK on the window.
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+
+Answer: A modal window pop up showing a question 'What is your name?' on it and a input field in shown under it for user to insert the name.
+
 What is the return value of `prompt`?
+
+Answer: 'Undefined' is shown in the return value.
