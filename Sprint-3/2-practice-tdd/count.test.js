@@ -10,11 +10,41 @@ const countChar = require("./count");
 // When the function is called with these inputs,
 // Then it should correctly count occurrences of `char`.
 
-test("should count multiple occurrences of a character", () => {
+/*test("should count multiple occurrences of a character", () => {
   const str = "aaaaa";
   const char = "a";
   const count = countChar(str, char);
   expect(count).toEqual(5);
+});*/
+
+describe("countChar", () => {
+  test("counts repeated characters in a simple string", () => {
+    expect(countChar("aaaaa", "a")).toEqual(5);
+  });
+
+  test("counts characters in a mixed string", () => {
+    expect(countChar("absankama", "a")).toEqual(4);
+  });
+
+  test("counts characters including spaces", () => {
+    expect(countChar("ab san kama", "a")).toEqual(4);
+  });
+
+  test("counts characters in string with symbols", () => {
+    expect(countChar("a-+&£$%?/|b san kama", "a")).toEqual(4);
+  });
+
+  test("returns 0 when character is not found", () => {
+    expect(countChar("-+&£$%?/|b sn km", "a")).toEqual(0);
+  });
+
+  test("returns 0 for empty string", () => {
+    expect(countChar("", "a")).toEqual(0);
+  });
+
+  test("is case sensitive", () => {
+    expect(countChar("AaAa", "a")).toEqual(2);
+  });
 });
 
 // Scenario: No Occurrences
