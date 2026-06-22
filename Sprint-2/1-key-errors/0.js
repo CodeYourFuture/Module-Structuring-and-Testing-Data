@@ -9,5 +9,10 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
+// =============> SyntaxError: Identifier 'str' has already been declared. This error occurs because the variable 'str' is being declared again within the function,
+// which is not allowed. To fix this, we can simply remove the 'let' declaration.
 // =============> write your new code here
+function capitalise(str) {
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
+}
+console.log(capitalise("brother"));
