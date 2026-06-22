@@ -1,5 +1,5 @@
 // Predict and explain first...
-//  =============> write your prediction here
+//  =============> An error is likely to occur due to repeat of "str"
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
