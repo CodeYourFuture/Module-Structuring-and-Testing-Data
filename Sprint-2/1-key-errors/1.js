@@ -16,4 +16,19 @@ function convertToPercentage(decimalNumber) {
 
 
 console.log(decimalNumber);
+// =============> it says decimalNumber has aleady been declared for the above reason.
+
+
+// Finally, correct the code to fix the problem
+/* ===========> function convertToPercentage(decimalNumber) {
+  let decimalNum = 0.5;
+  const percentage = `${decimalNum * 100}%`;
+
+
+  return percentage;
+}
+const result = convertToPercentage();
+console.log(result);
+*/
+
 
