@@ -28,6 +28,15 @@ console.assert(
 // noon, different minutes.
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
+ /*  
+  Since we know what the bug is, i shall handle it as a special case, and add the following code.
+  
+  if (hours === 12) {
+    return `${time} pm`;
+  }
+
+  Tested it again and it works now. 
+  */
   if (hours > 12) {
     return `${hours - 12}:00 pm`;
   }
@@ -42,8 +51,15 @@ console.log(formatAs12HourClock("12:00"));
 
 //i have run this code in dev tools , the asnwer was 12:00am , bug found. 
 
+
+
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
+
+  if (hours === 12) {
+    return `${time} pm`;
+  }
+
   if (hours > 12) {
     return `${hours - 12}:00 pm`;
   }
