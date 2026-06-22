@@ -12,9 +12,10 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// There are 4 function calls in this file.
+// There are 5 function calls in this file.
 // Line 4 are being called the functions Number() and replaceAll()
 // Line 5 are being called the functions Number() and replaceAll()
+// Line 10 is being called console.log().Where console is an object log is the method and console.log() is the function call.
 
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
