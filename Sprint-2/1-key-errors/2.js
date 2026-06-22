@@ -1,20 +1,30 @@
-
 // Predict and explain first BEFORE you run any code...
+
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+
+// =============> It is going to throw an error message as 3 is written in incorrect position. That position is set only for parameters, not arguments.
+
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
 
-// =============> explain this error message here
+// =============> in the node repl, it says unexpected number, as the function always expects a parameter to be declared in its definition.
+
+
+// =============> The error is already described above.
+
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+
+/* ===========> function square(num) {
+return num * num;
+}
+*/
+
 
 
