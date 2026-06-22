@@ -12,9 +12,10 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// There are 4 fucntion calls 
+// There are 5 fucntion calls 
   //Number(carPrice.replaceAll(",", "")); 2 calls Function Number and Function replaceAll
   //Number(priceAfterOneYear.replaceAll(",""")); 2 calls Function Number and Function replaceAll 
+// line 9 console.log()  to sisplay on screen
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // line 5 priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
 //  ^^^SyntaxError: missing ) after argument list
