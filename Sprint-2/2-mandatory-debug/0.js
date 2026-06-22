@@ -1,6 +1,6 @@
 // Predict and explain first...
 
-// =============> write your prediction here
+// =============> will show undefined because the function does not return a value
 
 function multiply(a, b) {
   console.log(a * b);
@@ -8,7 +8,12 @@ function multiply(a, b) {
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
-// =============> write your explanation here
+// =============> the function only uses console.log() so it prints the result but does not return it when a function has no return, JavaScript returns undefined,which is why undefined appears in the final sentence
 
 // Finally, correct the code to fix the problem
-//  =============> write your new code here
+//  =============>
+function multiply(a, b) {
+  return a * b;
+}
+
+console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);

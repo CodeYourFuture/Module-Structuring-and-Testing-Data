@@ -21,18 +21,18 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// =============> 3 times hours minutes and seconds
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// =============> 0
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// =============> 00
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> The remaining seconds are calculated using % 60, so when the input is 61, the result is 1 second left over
 
 // e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> 01 function adds a leading zero to any number that is less than 10 and time will be in two digits
