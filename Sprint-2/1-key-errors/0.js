@@ -1,7 +1,5 @@
 // Predict and explain first...
 //  =============> I presume the str is repeatedly declared, first as a parameter and again as a variable.
-
-
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
 
@@ -19,3 +17,4 @@ OR
 function capitalise(str) {
 return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
+*/

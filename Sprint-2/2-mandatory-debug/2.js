@@ -12,6 +12,7 @@ function getLastDigit(num) {
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
 console.log(`The last digit of 105 is ${getLastDigit(105)}`);
 console.log(`The last digit of 806 is ${getLastDigit(806)}`);
+console.log(`The last digit of 7247 is ${getLastDigit(7274)}`);
 
 // Now run the code and compare the output to your prediction
 /* ===========> function getLastDigit() {
