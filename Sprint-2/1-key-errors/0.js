@@ -9,10 +9,10 @@
 
 
 
-// function capitalise(str) {
-//   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
-//   return str;
-// }
+function capitalise(str) {
+  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return str;
+}
 
 // =============> write your explanation here// 
 // SyntaxError: Identifier 'str' has already been declared
@@ -21,7 +21,6 @@
 
 function capitalize(str){
   let car = `${str[0].toUpperCase()}${str.slice(1)}`;
- 
   return car;  
 }
 capitalize("hello")
