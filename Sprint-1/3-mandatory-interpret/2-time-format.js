@@ -25,7 +25,7 @@ console.log(result);
 // Line 4 is calculating the quotient of the calculation (8784-remainder) divided by 60 to find the movie length in minute. That will be later used to find the display minute in the Hour:Minute:Second format.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// I think the original movie length is in second and this code is to calculate the display of movie length in the Hour:Minute:Second format like what what we see in a normal movie information.
+// I think the original movie length is in second and this code is to calculate the display of movie length in the Hour:Minute:Second format like what what we see in a normal movie information. I would suggest using durationFormatted as the variable name as it could explain to others clearly what it contains.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 //When testing the output with different values of movie length, the output seems right. No matter a 0 value, small or large value, it can display the the Hour:Minute:Second format well. 
