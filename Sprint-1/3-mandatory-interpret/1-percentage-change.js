@@ -12,7 +12,8 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// There is 3 function calls in line 4, 5 and 10. Number() and console.log() both are the function.
+// There is 5 function calls in line 4, 5 and 10. Number() and console.log() both are the function.
+// And XXX.replaceAll(",", "") is another function call. So in total there are 5 function calls in this code.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // It shows "SyntaxError: missing ) after argument list" point at the end of line 5. I can see there is a missing comma in method .replaceAll() comparing to line method structure. By adding the comma after the ",", the error is solved.
