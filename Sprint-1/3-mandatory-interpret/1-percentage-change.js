@@ -12,6 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 // Answer to a): There are 4 function calls in this file, which are on the lines 4, 5, 6 and 7 . 
+//and additionally, there is a function call on line 9, which is the console.log() statement. So 5 function calls in total.
 //
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // Answer to b): The error is coming from line 5, where coma is missing in "replaceAll()"" function.
