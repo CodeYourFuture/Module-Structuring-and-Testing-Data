@@ -23,6 +23,14 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  const ranks = "A,2,3,4,5,6,7,8,9,10,J,Q,K".split(",");
+  const suites = "♠,♥,♦,♣".split(",");
+  const validCards = new Set();
+  for (const rank of ranks) {
+    for (const suite of suites) {
+      validCards.add(rank + suite);
+    }
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,6 +48,12 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A"), 11);
+assertEquals(getCardValue("Q"), 10);
+assertEquals(getCardValue("5"), 5);
+assertEquals(getCardValue(true), "invalid");
+assertEquals(getCardValue("A♠"), 11);
+// assertEquals(getCardValue("invalid"), 9);
 
 // Handling invalid cards
 try {
