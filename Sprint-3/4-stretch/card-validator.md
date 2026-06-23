@@ -4,8 +4,8 @@ In this project you'll write a script that validates whether or not a credit car
 
 Here are the rules for a valid number:
 
-- Number must be 16 digits, all of them must be numbers.
-- You must have at least two different digits represented (all of the digits cannot be the same).
+- Number must be 16 digits, all of them must be numbers. checked
+- You must have at least two different digits represented (all of the digits cannot be the same). 
 - The final digit must be even.
 - The sum of all the digits must be greater than 16.
 
@@ -33,3 +33,5 @@ These are the requirements your project needs to fulfill:
 - Return a boolean from the function to indicate whether the credit card number is valid.
 
 Good luck!
+
+function 
