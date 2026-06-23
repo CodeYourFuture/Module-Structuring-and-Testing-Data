@@ -1,5 +1,7 @@
 function getOrdinalNumber(num) {
-  return "1st";
+  if (num % 10 === 1 && num % 100 !== 11) {
+    return num + "st";  
+  }
 }
 
 module.exports = getOrdinalNumber;
