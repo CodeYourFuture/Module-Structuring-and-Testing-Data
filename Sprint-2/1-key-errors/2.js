@@ -26,5 +26,3 @@ function square(3) {
 function square(num) {
     return num * num;
 }
-
-
