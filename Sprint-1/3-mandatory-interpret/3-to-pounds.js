@@ -27,6 +27,8 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
+
+// Answers
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
 // 2. const penceStringWithoutTrailingP = penceString.substring(0, penceString.length-1): this 
 // variable creates a new string that cuts the penceSting to 399,so it basically creates a new
@@ -43,7 +45,7 @@ console.log(`£${pounds}.${pence}`);
 // this variable creates a new string from the paddedPenceNumberString variable using the subString 
 // function. This time it creates a new string from the last 2 indexes. Furthermore it sets the target 
 // length for this new variable to 2 and if is is less than 2 it sets a condition to add
-// a "0" in front
+// a "0" at the end by using the padEnd() function
 
 
 //6. console.log(`£${pounds}.${pence}`); this is a function call that displays the final amount in 
