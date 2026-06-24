@@ -39,6 +39,7 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);*/
 //----------------------------------------------------------------------------------------------------------
 
 //new code :
+const num = 103;
 function getLastDigit(num) {
   return num.toString().slice(-1);
 }
