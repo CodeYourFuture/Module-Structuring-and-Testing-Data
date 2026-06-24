@@ -2,7 +2,7 @@ let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""));
+priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ,""));
 
 const priceDifference = carPrice - priceAfterOneYear;
 const percentageChange = (priceDifference / carPrice) * 100;
@@ -12,11 +12,30 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
+// There are 5 function calls in this file. The function calls are made on the following lines:
+// Line 1: replaceAll()
+// Line 2: replaceAll()
+// Line 5: Number()
+// Line 6: Number()
+// Line 9: console.log()
+
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-
+// The error is occurring on line 5., and it's a SyntaxError: missing , The error is due to a missing comma in the replaceAll() method.//The error occurs on line 5. A SyntaxError is thrown because a comma is missing between the two arguments passed to the replaceAll() method. JavaScript uses commas to separate arguments in a function call. The  programming term that belongs to the blank is call arguments as that  is the actual value passed during a function call.  The correct syntax should be replaceAll(",", ""). To fix this problem, we need to add the missing comma in the replaceAll() method on line 5
 // c) Identify all the lines that are variable reassignment statements
+// The variable reassignment statements are on the following lines:
+// Line 4: carPrice = Number(carPrice.replaceAll(",", ""));
+// Line 5: priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ,""));
 
 // d) Identify all the lines that are variable declarations
+// The variable declaration statements are on the following lines:
+// Line 1: let carPrice = "10,000";
+// Line 2: let priceAfterOneYear = "8,543";
+// Line 7: const priceDifference = carPrice - priceAfterOneYear;
+// Line 8: const percentageChange = (priceDifference / carPrice) * 100;
+// A declaration is when a variable is created, using let or const.
+
+
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+/* The expression Number(carPrice.replaceAll(",","")) is converting the string value of carPrice, which contains a comma, into a number. The replaceAll() method is used to remove all commas from the string, and then the Number() function is used to convert the resulting string into a number. This allows for mathematical operations to be performed on the value of carPrice without any issues caused by the presence of commas in the string.*/
