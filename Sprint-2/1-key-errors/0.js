@@ -10,4 +10,12 @@ function capitalise(str) {
 }
 
 // =============> write your explanation here
+// The error occurred because str is declared twice. Instead the expression is returned directly without declaring a new variable 
+
 // =============> write your new code here
+
+function capitalise(str) {
+   return `${str[0].toUpperCase()}${str.slice(1)}`;
+}
+const newName = capitalise("");
+console.log(newName);
