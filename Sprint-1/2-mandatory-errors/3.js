@@ -1,5 +1,7 @@
 const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.slice(-4);
+// I fixed the error by replacing the original expression instead of declaring
+// last4Digits a second time. Declaring a const twice causes a SyntaxError.
+const last4Digits = cardNumber % 10000;
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
@@ -14,4 +16,4 @@ const last4Digits = cardNumber.slice(-4);
 // The error is what I predicted. The slice method is not a function that can be used on numbers, only strings.
 
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
-const last4Digits = cardNumber % 10000;
+

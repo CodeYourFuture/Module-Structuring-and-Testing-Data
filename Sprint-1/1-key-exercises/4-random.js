@@ -10,5 +10,8 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
 
-// Math.random() generates a random decimal, 
-// Math.floor() rounds it down, and the expression produces a random whole number between 1 and 100.
+// Math.random() creates a random decimal number.
+// The number will always be between 0 and 1, but it will never actually reach 1.
+
+// Math.floor() rounds down the decimal number that is created after
+// Math.random() is multiplied by the range.

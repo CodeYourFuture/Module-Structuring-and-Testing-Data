@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 3665; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -32,8 +32,10 @@ result */
 // This gives us the total number of whole minutes in the movie length.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// The variable result represents the total length of the movie in hours, minutes, and seconds.
-// A better name for this variable could be "movieDuration".
+// The variable result stores the movie duration as a formatted string (hours:minutes:seconds).
+// A better name would be "formattedMovieLength".
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-// The code works for non-negative whole numbers. Negative or decimal values may produce incorrect or unexpected results.
+// The code works when movieLength is 3665. It outputs "1:1:5", which is correct,
+// but the formatting is not ideal. A better formatted output would be "1:01:05".
+// The code works for whole numbers, but it does not pad single-digit minutes and seconds with leading zeros.

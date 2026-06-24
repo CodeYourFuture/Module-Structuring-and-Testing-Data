@@ -18,15 +18,14 @@ console.log(`The percentage change is ${percentageChange}`);
 // Line 10 calls console.log().
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-// The error was on line 5. The replaceAll() function call was missing the correct closing bracket/parenthesis.
-// I fixed it by making the line: priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
+// I changed the value from a string to a number by wrapping the replaceAll() result in Number().
 
 // c) Identify all the lines that are variable reassignment statements
 // Lines 4 and 5 are variable reassignment statements because its declared on lines 1 and 2.
 
 
 // d) Identify all the lines that are variable declarations
-// line 1 and 2 are variable declarations because they are declared using the let keyword.
+// Lines 1, 2, 7, and 8 are variable declarations because they declare variables using let and const.
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 //// Removes commas and converts the string to a number.
