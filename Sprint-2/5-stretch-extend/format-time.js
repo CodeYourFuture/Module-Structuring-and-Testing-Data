@@ -1,11 +1,16 @@
 function formatAs12HourClock(time) {
-  const timeParts = time.split(":");
-  const mins = timeParts[1].padStart(2, "0");
-  const hoursInt = Number(timeParts[0]);
-  if (hoursInt === 0) return `${12}:${mins} am`;
-  if (hoursInt < 12) return `${timeParts[0].padStart(2, "0")}:${mins} am`;
-  if (hoursInt === 12)
-    return `${timeParts[0]}:${timeParts[1].padStart(2, "0")} pm`;
+  const [hours, minutes] = time.split(":");
+  const mins = minutes.padStart(2, "0");
+  const hoursInt = Number(hours);
+  if (hoursInt === 0) {
+    return `${12}:${mins} am`;
+  }
+  if (hoursInt < 12) {
+    return `${hours.padStart(2, "0")}:${mins} am`;
+  }
+  if (hoursInt === 12) {
+    return `${hours}:${mins} pm`;
+  }
   return `${(hoursInt - 12).toString().padStart(2, "0")}:${mins} pm`;
 }
 
