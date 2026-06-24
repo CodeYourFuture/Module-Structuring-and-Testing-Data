@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// There are three function call in this file it is on line 4,5 and 10.
+// There are five function call in this file it is on line 4 and 5 two times which is replacing the comma and changing the string to the number and on line 10.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // The error is coming from line 5 and it is because it miss a comma between two argument.
