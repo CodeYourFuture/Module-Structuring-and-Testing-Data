@@ -15,5 +15,11 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
+    return (weight / (height * height)).toFixed(1);
     // return the BMI of someone based off their weight and height
 }
+
+console.log(` Your Body Mass Index is: ${calculateBMI(70, 1.73)}`);
+
+// On line 19 after weight and heigh are calculated to give the BMI. 
+// The .toFixed(1) method is used to round the BMI to 1 decimal place.
