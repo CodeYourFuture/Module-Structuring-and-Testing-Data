@@ -1,2 +1,2 @@
 const twelveHourClockTime = "8:53pm";
-const _hourClockTime = "20:53";
+const twentyFourHourClockTime = "20:53";
