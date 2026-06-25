@@ -35,3 +35,42 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+
+//
+
+function getAngleType(angle) {
+  if (angle > 0 && angle < 90) {
+    return "Acute angle";
+  } else if (angle === 90) {
+    return "Right angle";
+  } else if (angle > 90 && angle < 180) {
+    return "Obtuse angle";
+  } else if (angle === 180) {
+    return "Straight angle";
+  } else if (angle > 180 && angle < 360) {
+    return "Reflex angle";
+  } else {
+    return "Invalid angle";
+  }
+}
+
+module.exports = getAngleType;
+
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected ${actualOutput} to equal ${targetOutput}`
+  );
+}
+
+// Tests
+assertEquals(getAngleType(45), "Acute angle");
+assertEquals(getAngleType(90), "Right angle");
+assertEquals(getAngleType(120), "Obtuse angle");
+assertEquals(getAngleType(180), "Straight angle");
+assertEquals(getAngleType(270), "Reflex angle");
+
+assertEquals(getAngleType(0), "Invalid angle");
+assertEquals(getAngleType(-10), "Invalid angle");
+assertEquals(getAngleType(360), "Invalid angle");
+assertEquals(getAngleType(500), "Invalid angle");
