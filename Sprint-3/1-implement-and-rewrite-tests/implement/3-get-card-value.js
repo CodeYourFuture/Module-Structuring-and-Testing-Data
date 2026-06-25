@@ -52,6 +52,7 @@ module.exports = getCardValue;
 // Helper functions to make our assertions easier to read.
 function assertEquals(card, targetOutput) {
   try {
+    console.log(`Card: ${card}`);
     const actualOutput = getCardValue(card);
     console.assert(
       actualOutput === targetOutput,
@@ -65,7 +66,6 @@ function assertEquals(card, targetOutput) {
 }
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
-
 assertEquals("9♠", 9);
 assertEquals("A", 11);
 assertEquals("Q", 10);
