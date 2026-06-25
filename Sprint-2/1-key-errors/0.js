@@ -7,7 +7,9 @@
 function capitalise(str) {
   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
+  
 }
+capitalise("Tobias");
 
-// =============> write your explanation here
+// =============> write your explanation here /* when the function  `capitalise` is called with the argument "Tobias", it tries to declare a new variable `str` inside the function body using `let`. However, `str` is already declared as a parameter of the function. In JavaScript, you cannot declare a variable with the same name in the same scope, which leads to a syntax error.*/ 
 // =============> write your new code here
