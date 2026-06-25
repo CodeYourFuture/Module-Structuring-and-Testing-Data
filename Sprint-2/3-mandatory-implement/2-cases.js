@@ -14,3 +14,11 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+//
+function upper_snake_case(word) {
+    let new_word = word.toUpperCase();// capitalises string
+    let split_word = new_word.split(" ");// turns string into array in order to to use "join()" method
+    let joined_word = split_word.join("_")// joins strings with "_" to make it UPPER_SNAKE
+    return joined_word; 
+}
+console.log(upper_snake_case("hello there"));
