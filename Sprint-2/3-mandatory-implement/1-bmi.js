@@ -19,4 +19,4 @@ function calculateBMI(weight, height) {
   return (weight / height ** 2).toFixed(1);
 }
 
-console.log(calculateBMI(105, 1.67)); //38.0
+console.log(calculateBMI(105, 1.67)); //37.6
