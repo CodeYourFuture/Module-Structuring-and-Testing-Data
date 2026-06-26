@@ -3,18 +3,21 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> I predict the error will be indicated to line 8 function square(3) as a value should not be input in the function declaration. If we need to input a value in the function expression. 
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> 'SyntaxError: Unexpected number' is shown and it indicates line 8 at number 3.
 
-// =============> explain this error message here
+// =============> I think the value 3 should not be input in the function declaration and instead it there should a parameter so the error will not be shown.
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+// =============> function square(num) {
+// =============>     return num * num;
+// =============> }
+// =============> console.log(square(3));
 
 
