@@ -15,6 +15,11 @@ function convertToPercentage(decimalNumber) {
 console.log(decimalNumber);
 
 // =============> write your explanation here
+/* /home/tobi/CYF/Module-Structuring-and-Testing-Data/Sprint-2/1-key-errors/1.js:9
+  const decimalNumber = 0.5;
+        ^
+
+SyntaxError: Identifier 'decimalNumber' has already been declared*/
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
