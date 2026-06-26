@@ -14,7 +14,7 @@ console.log(`The last digit of 105 is ${getLastDigit(105)}`);
 console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // Now run the code and compare the output to your prediction
-// =============> write the output here
+// =============> write the output here// The out put is 3 for the three console.log calls as predicted 
 // Explain why the output is the way it is
 // =============> write your explanation here
 // Finally, correct the code to fix the problem
