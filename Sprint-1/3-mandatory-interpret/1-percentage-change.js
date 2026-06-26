@@ -17,7 +17,7 @@ console.log(`The percentage change is ${percentageChange}`);
     //3. Line 8: console.log(`The percentage change is ${percentageChange}`)
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-    //The error is in line 5, the error is occurring because there was a comma missing here; ("," "").
+    //The error is in line 5, the error is occurring because "comma missing "," and "" for priceAfterOneYear.replaceAll("," "") function call.
 
 // c) Identify all the lines that are variable reassignment statements
     //carPrice = Number(carPrice.replaceAll(",", ""));
