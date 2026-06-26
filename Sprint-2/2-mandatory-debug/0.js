@@ -1,7 +1,6 @@
 // Predict and explain first...
 
-// =============> write your prediction here
-
+// =============> write your prediction here// The code will print 320 and undefine  secondly.
 function multiply(a, b) {
   console.log(a * b);
 }
