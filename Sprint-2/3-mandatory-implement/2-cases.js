@@ -14,3 +14,13 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+//FUNCTION NAME: upperSnakeCase
+
+function upperSnakeCase(string) {
+    const upperCaseString = string.toUpperCase();
+    return upperCaseString.replace(' ', '_');
+}
+
+console.log(upperSnakeCase("ultimate team")); // should return "ULTIMATE_TEAM"
+console.log(upperSnakeCase(("grand theft auto VI")); // should return "GRAND_THEFT_AUTO_VI"
