@@ -1,7 +1,7 @@
 // Predict and explain first...
 
 // Predict the output of the following code:
-// =============> Write your prediction here
+// =============> Write your prediction here./* The output will be 3 because the function getLastDigit is not using the argument passed to it, instead it is using the global variable num which is set to 103. Therefore, the last digit of 103 is 3 and that is what will be printed for all three console.log statements.*/
 
 const num = 103;
 
