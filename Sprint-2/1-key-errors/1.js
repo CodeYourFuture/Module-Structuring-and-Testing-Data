@@ -14,7 +14,7 @@ function convertToPercentage(decimalNumber) {
 
 console.log(decimalNumber);
 
-// =============> write your explanation here
+// =============> write your explanation /* the first error SyntaxError pointed at line 9 as to where the error occurred  and explained that the identifier-decimalNumber has already been declared. The second error ReferenceError pointed at line 15 as to where the error occurred and explained that the identifier-decimalNumber is not defined in the global scope. */
 /* /home/tobi/CYF/Module-Structuring-and-Testing-Data/Sprint-2/1-key-errors/1.js:9
   const decimalNumber = 0.5;
         ^
