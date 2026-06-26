@@ -1,6 +1,5 @@
 // Predict and explain first...
-//  =============> write your prediction here
-
+//  =============> write your prediction here // will print undefined.
 function sum(a, b) {
   return;
   a + b;
