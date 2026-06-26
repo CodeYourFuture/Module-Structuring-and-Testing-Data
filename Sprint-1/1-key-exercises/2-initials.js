@@ -5,15 +5,12 @@ let firstName = "Creola";
 let middleName = "Katherine";
 let lastName = "Johnson";
 
-
 function getInitials() {
-  return `${firstName[0]}${middleName[0]}${lastName[0]}`;
+  let initials = `${firstName[0]}${middleName[0]}${lastName[0]}`;
+  return initials;
 }
 
-console.log(getInitials()); 
+console.log(getInitials());
 
 // Export the initials for testing instead of returning at top-level
 module.exports = getInitials;
-
-
-
