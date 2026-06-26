@@ -14,3 +14,9 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function UpperSnake(string) {
+  let upper = string.toUpperCase().split(" ").join("_");
+  return upper;
+}
+console.log(UpperSnake("hello py"));
