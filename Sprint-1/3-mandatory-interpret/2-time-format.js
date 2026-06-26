@@ -38,6 +38,7 @@ console.log(result);
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 //It will do the math perfectly for most normal positive numbers, but there are a few situations where the code will act wierdly.
-//1. Visual problems
+//1. The "Single Digit" Visual Bug (Zero-Padding)
 //2. Negative numbers
-//3.Decimal numbers
+//3.Decimal numbers (floats and non integers)
+//4. invalid data types (like strings, objects, etc.)
