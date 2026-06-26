@@ -19,7 +19,7 @@ console.log(`The base part of ${filePath} is ${base}`);
 
 const lastindex1 = filePath.lastIndexOf("/");
 const dir1 = filePath.slice(0,lastindex1);
-console.log(`The variable contains directory path of a file: ${dir1}`);
+console.log(`The variable contains directory path of a file: ${dir1}`); 
 const dir = filePath.slice(0,44);
 console.log(`This variable stores directory path of a file: ${dir}`);
 //I did from both ways just to clear my concepts.
