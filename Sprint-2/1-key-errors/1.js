@@ -6,7 +6,7 @@
 // Try playing computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
+   decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
@@ -20,6 +20,11 @@ console.log(decimalNumber);
         ^
 
 SyntaxError: Identifier 'decimalNumber' has already been declared*/
+/* /home/tobi/CYF/Module-Structuring-and-Testing-Data/Sprint-2/1-key-errors/1.js:15
+console.log(decimalNumber);
+            ^
+
+ReferenceError: decimalNumber is not defined*/
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
