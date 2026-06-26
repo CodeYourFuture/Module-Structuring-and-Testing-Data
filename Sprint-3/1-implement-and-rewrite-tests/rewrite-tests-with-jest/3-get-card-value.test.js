@@ -11,6 +11,11 @@ test(`Should return 11 when given an ace card`, () => {
 
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
+test(`Should throw an error when given an invalid suit`, () => {
+  expect(() => getCardValue("2X")).toThrow("Invalid card");
+  expect(() => getCardValue("5Z")).toThrow("Invalid card");
+});
+
 test(`Should return the numeric value for number cards`, () => {
   expect(getCardValue("2♠")).toEqual(2);
   expect(getCardValue("3♠")).toEqual(3);
