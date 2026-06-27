@@ -5,13 +5,12 @@
 
 // Try playing computer with the example to work out what is going on
 
-
 function convertToPercentage(decimalNumber) {
-  return `${decimalNumber * 100}%`;
+  const decimalNumber = 0.5;
+  const percentage = `${decimalNumber * 100}%`;
+
+  return percentage;
 }
-
-console.log(convertToPercentage(0.1));
-
 
 console.log(decimalNumber);
 // =============> it says decimalNumber has aleady been declared for the above reason.
@@ -19,14 +18,10 @@ console.log(decimalNumber);
 
 // Finally, correct the code to fix the problem
 /* ===========> function convertToPercentage(decimalNumber) {
-  let decimalNum = 0.5;
-  const percentage = `${decimalNum * 100}%`;
-
-
-  return percentage;
+  const result = `${decimalNumber * 100}%`;
+  return result;
 }
-const result = convertToPercentage();
-console.log(result);
+console.log(convertToPercentage(0.1));
 */
 
 
