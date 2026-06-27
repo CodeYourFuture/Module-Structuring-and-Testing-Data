@@ -15,5 +15,6 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
+    return`The BMI of someone with a weight of ${weight}kg and a height of ${height}m is ${(weight / (height * height)).toFixed(1)}`;
     // return the BMI of someone based off their weight and height
 }
