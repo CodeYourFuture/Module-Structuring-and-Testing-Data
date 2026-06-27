@@ -18,6 +18,7 @@ describe("getCardValue", () => {
     test("Number cards return their value", () => {
       expect(getCardValue("2♠")).toEqual(2);
       expect(getCardValue("10♣")).toEqual(10);
+      expect(getCardValue("0002♣")).toEqual(2);
     });
   });
 
@@ -27,6 +28,8 @@ describe("getCardValue", () => {
       expect(() => getCardValue("B♣")).toThrow("Invalid card");
       expect(() => getCardValue("1♦")).toThrow("Invalid card");
       expect(() => getCardValue("11♣")).toThrow("Invalid card");
+      expect(() => getCardValue("0x02♠")).toThrow("Invalid card");
+      expect(() => getCardValue("2.1♠")).toThrow("Invalid card");
     });
   });
 });
