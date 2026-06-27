@@ -31,6 +31,10 @@ describe("isProperFraction", () => {
     expect(isProperFraction(7, -4)).toEqual(false);
   });
 
+  test("returns true when numerator and denomenator are negative", () => {
+    expect(isProperFraction(-7, -4)).toEqual(false);
+  });
+
   test("returns false when numerator equals denominator", () => {
     expect(isProperFraction(4, 4)).toEqual(false);
   });
