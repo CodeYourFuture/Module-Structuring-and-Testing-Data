@@ -14,3 +14,12 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toUpperSnakeCase(inString) {
+    const outPutString = inString.toUpperCase().replaceAll(" ","_");
+  return outPutString;
+}
+let output1 = toUpperSnakeCase("hello there");
+let output2 = toUpperSnakeCase("lord of the rings");
+console.log(`The result for output1 is : ${output1}. 
+The result for output2 is : ${output2}.`)
