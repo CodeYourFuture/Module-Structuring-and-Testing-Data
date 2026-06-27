@@ -11,7 +11,16 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+  if (numerator === 0) {
+    return false;
+  }
+  if (denominator === 0) {
+    return false;
+  }
+  if (Number.isNaN(numerator) || Number.isNaN(denominator)) {
+    return false;
+  }
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -25,6 +34,25 @@ function assertEquals(actualOutput, targetOutput) {
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
+// Proper fractions
+assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(3, 4), true);
+assertEquals(isProperFraction(-1, 5), true);
+assertEquals(isProperFraction(1, -5), true);
+
+// Improper fractions
+assertEquals(isProperFraction(5, 3), false);
+assertEquals(isProperFraction(10, 10), false);
+assertEquals(isProperFraction(-7, 3), false);
+
+// Zero cases
+assertEquals(isProperFraction(0, 5), false);
+assertEquals(isProperFraction(3, 0), false);
+
+// NaN cases
+assertEquals(isProperFraction(NaN, 5), false);
+assertEquals(isProperFraction(3, NaN), false);
+assertEquals(isProperFraction(NaN, NaN), false);
 
 // TODO: Write tests to cover all cases.
 // What combinations of numerators and denominators should you test?
