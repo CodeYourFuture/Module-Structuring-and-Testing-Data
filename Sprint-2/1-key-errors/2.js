@@ -3,18 +3,22 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// =============> num is not defined which causes an error.
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// =============> 1. "Uncaught SyntaxError: Unexpected number" Means the "3" is not valid there.
+// 2. Uncaught SyntaxError: Illegal return statement. Means "num" has no idea of what it should be 
 
-// =============> explain this error message here
 
 // Finally, correct the code to fix the problem
 
-// =============> write your new code here
+// =============> by adding square(num) the function will work when given a number 
+function square(num) {
+    return num * num;
+}
+console.log(square(3))
 
 
