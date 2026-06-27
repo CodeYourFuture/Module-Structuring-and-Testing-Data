@@ -12,7 +12,12 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
+- It activates a pop-up window with the text "Hello world!" with "OK" as the button text. The execution is paued until the user clicks the "OK" button.
+
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
-What is the return value of `prompt`?
+
+- It activates a pop-up window with the text "What is your name?" with input field and "OK" and "Cancel" buttons. The execution is paused until the user enters a value and clicks the "OK" button.
+  What is the return value of `prompt`?
+- The return value of the prompt function is the value entered by the user in the input field.
