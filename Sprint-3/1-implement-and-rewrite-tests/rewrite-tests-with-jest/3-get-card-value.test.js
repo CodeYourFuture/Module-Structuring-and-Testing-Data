@@ -24,7 +24,7 @@ test(`Should return number when given an a face card (>= 2 && < 10)`, () => {
 test(`Should return an error for an invalid card`, () => {
   expect(getCardValue("2")).toThrowError();
   expect(getCardValue("Q")).toThrowError();
-  // expect(getCardValue("5")).toThrowError();
+  expect(getCardValue("5")).toThrowError();
 });
 
 // Suggestion: Group the remaining test data into these categories:
