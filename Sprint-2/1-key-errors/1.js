@@ -7,12 +7,10 @@
 
 
 function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
-
-
-  return percentage;
+  return `${decimalNumber * 100}%`;
 }
+
+console.log(convertToPercentage(0.1));
 
 
 console.log(decimalNumber);
