@@ -3,3 +3,6 @@
 
 console.log(`I was born in ${cityOfBirth}`);
 const cityOfBirth = "Bolton";
+
+// The variable const cityOfBirth = "Bolton"; needs to be declared at first. 
+// As it is not declared, JavaScript cannot find out the variable cityofBirth in console.log.
