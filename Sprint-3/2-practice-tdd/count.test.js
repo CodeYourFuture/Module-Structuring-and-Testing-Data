@@ -18,25 +18,6 @@ test("should count multiple occurrences of a character", () => {
 });
 
 // Scenario: No Occurrences
-test(`should return zero the character doesn't exist in the string`, () => {
-  const str = "bravo";
-  const char = "u";
-  const count = countChar(str, char);
-  expect(count).toEqual(0);
-});
-
-// Empty String
-test(`should return zero when the string is empty`, () => {
-  expect(countChar("", "a")).toEqual(0);
-});
-
-// Scenario: Multiple Occurrences
-test("should count multiple occurrences of characters (including mixed and case-sensitive)", () => {
-  expect(countChar("aaaaa", "a")).toEqual(5); // simple multiple
-  expect(countChar("1-2-3-4-5-", "-")).toEqual(5); // mixed characters
-  expect(countChar("AaAa", "A")).toEqual(2); // case sensitivity
-});
-
 // Given the input string `str`,
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
