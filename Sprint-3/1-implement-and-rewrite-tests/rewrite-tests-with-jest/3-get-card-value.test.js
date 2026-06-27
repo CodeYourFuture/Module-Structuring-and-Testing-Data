@@ -24,13 +24,12 @@ test(`Should return number when given an a face card (>= 2 && < 10)`, () => {
   expect(getCardValue("9♠")).toEqual(9);
 });
 
-test(`Should return an error for an invalid card`, () => {
-  expect(getCardValue("2")).toThrowError();
-  expect(getCardValue("Q")).toThrowError();
-  expect(getCardValue("5")).toThrowError();
-  expect(getCardValue("")).toThrowError();
-  expect(getCardValue("11♠")).toThrowError();
-  expect(getCardValue("S♠")).toThrowError();
+test(`Should throw for invalid cards`, () => {
+  expect(() => getCardValue("A")).toThrowError();
+  expect(() => getCardValue("11♠")).toThrowError();
+  expect(() => getCardValue("N♠")).toThrowError();
+  expect(() => getCardValue("7K")).toThrowError();
+  expect(() => getCardValue("")).toThrowError();
 });
 
 // Suggestion: Group the remaining test data into these categories:
