@@ -40,7 +40,7 @@ describe("getOrdinalNumber", () => {
     expect(getOrdinalNumber(3)).toEqual("3rd");
     expect(getOrdinalNumber(33)).toEqual("33rd");
   });
-  test("appends th for all other numbers", () => {
+  test("appends th for numbers ending in 0 or 4–9", () => {
     expect(getOrdinalNumber(20)).toEqual("20th");
     expect(getOrdinalNumber(24)).toEqual("24th");
     expect(getOrdinalNumber(100)).toEqual("100th");
