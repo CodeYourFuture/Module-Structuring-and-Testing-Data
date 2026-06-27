@@ -10,7 +10,8 @@ Let's try an example.
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
-What effect does calling the `alert` function have?
+What effect does calling the `alert` function have? 
+// The alert function stops the previous input, citing errors and requires it to be fixed 
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
