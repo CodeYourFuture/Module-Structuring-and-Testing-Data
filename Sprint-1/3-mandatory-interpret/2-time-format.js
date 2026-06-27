@@ -12,14 +12,23 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
+// There are 6 variable declarations.
 
 // b) How many function calls are there?
+// There is one function call.
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
+// The expression movieLength % 60 devides the movieLength by 60 seconds and return the reminder 
+// which will be stroed in the const remainingSeconds.
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
+// Firstly, Removes the leftover seconds from movieLength and then converts the remaining seconds 
+// into whole minutes which will be stored into totalMinutes.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
+// The variable result reprents the movieLength in hours:minutes:seconds. The variable should be renamed by totalDuration.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+// I have tried with 3 variables, 1515, 9999 & 70052. I observed that this code works succesfully with all the values
+// and gave me results for all the different movieLength in hours:minutes:seconds.
