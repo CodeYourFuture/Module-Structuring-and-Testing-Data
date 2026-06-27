@@ -17,6 +17,12 @@ test("should count multiple occurrences of a character", () => {
   expect(count).toEqual(5);
 });
 
+test("counts single character occurrences (case sensitive)", () => {
+  expect(countChar("aAaA", "a")).toEqual(2);
+  expect(countChar("aAaA", "A")).toEqual(2);
+  expect(countChar("hello", "l")).toEqual(2);
+});
+
 // Scenario: No Occurrences
 // Given the input string `str`,
 // And a character `char` that does not exist within `str`.
