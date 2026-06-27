@@ -21,18 +21,18 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// =============> It will be called 3 times in line 15.
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// =============> 0 will be assigned to num when pad is called for the first time.
 
 // c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// =============> 00 will be the return value when pad is called the first time.
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> When pad is being called for the last time, it is on line 15 'pad(remainingSeconds)'. So a value of 1 will be assigned to it as remainingSeconds in line 10 was declared as 1.
 
 // e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// =============> When pad is being called for the last time, it is on line 15 'pad(remainingSeconds)'. So a value of 1 will be assigned to function pad(num) where num is in value of 1. In line 3, as this string is smaller than 2 which means it is only in 1 digit, we add a '0' in front of it. So it return a numString '01' to the line 15.
