@@ -19,7 +19,7 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 
 // the output is 3 for everything
 // Explain why the output is the way it is
-// firstly because num is constant and it is a global variable outside the function. The last digit on 103 remain =s 3. It does not change
+// firstly because num is constant and it is a global variable outside the function. The last digit on 103 remains 3. It does not change
 // =============> write your explanation here
 // Finally, correct the code to fix the problem
 // =============> write your new code here
