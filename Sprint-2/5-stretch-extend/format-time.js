@@ -10,6 +10,9 @@ function formatAs12HourClock(time) {
   if (hours===12){
     return `${hours}:00 pm`;
 }
+ if (hours===0){
+  return `${12}:00 am `;
+ }  
   return `${time} am`;
 }
 
@@ -38,6 +41,6 @@ const currentOutput4 = formatAs12HourClock("00:00");
 const targetOutput4 = "12:00 am";   
 console.assert(
 currentOutput4 === targetOutput4,
-`current output: ${currentOutput4}, targetOutput: ${targetOutput4}`
+`current output: ${currentOutput4}, target output: ${targetOutput4}`
 );
 
