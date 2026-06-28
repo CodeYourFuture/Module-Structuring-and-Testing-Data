@@ -43,6 +43,7 @@ console.assert(
 currentOutput4 === targetOutput4,
 `current output: ${currentOutput4}, target output: ${targetOutput4}`
 );
+// Testing for leading zeros
 
 const currentOutput5 = formatAs12HourClock("13:00");
 const targetOutput5 = "01:00 pm";
