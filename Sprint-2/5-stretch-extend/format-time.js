@@ -33,5 +33,11 @@ console.assert(
   currentOutput3 === targetOutput3,
   `current output: ${currentOutput3}, target output: ${targetOutput3}`
 );
-
+//Testing for Midnight
+const currentOutput4 = formatAs12HourClock("00:00");
+const targetOutput4 = "12:00 am";   
+console.assert(
+currentOutput4 === targetOutput4,
+`current output: ${currentOutput4}, targetOutput: ${targetOutput4}`
+);
 
