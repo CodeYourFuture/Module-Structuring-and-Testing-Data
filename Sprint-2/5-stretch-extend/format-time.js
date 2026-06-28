@@ -7,6 +7,9 @@ function formatAs12HourClock(time) {
   if (hours > 12) {
     return `${hours - 12}:00 pm`;
   }
+  if (hours===12){
+    return `${hours}:00 pm`;
+}
   return `${time} am`;
 }
 
