@@ -82,4 +82,6 @@ const lessThanOrEqualToZero = getAngleType(-1);
 assertEquals(lessThanOrEqualToZero,"Invalid angle");
 const equalToZero = getAngleType(0);
 assertEquals(equalToZero, "Invalid angle");// Testing for when angle is zero 
+const equal360 = getAngleType(360); // Testing whn angle is 360
+assertEquals(equal360,"Invalid angle");
 
