@@ -74,4 +74,7 @@ const reflex1 = getAngleType(270);
 assertEquals(reflex1,"Reflex angle");
 const reflex2 = getAngleType(359.9)// testing upper limit of reflex angle 
 assertEquals(reflex2,"Reflex angle");
+//Testing invalid lower angle numbers 
+const lessThanOrEqualToZero = getAngleType(-1);
+assertEquals(lessThanOrEqualToZero,"Invalid angle");
 
