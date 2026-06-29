@@ -18,10 +18,12 @@ console.log(`The percentage change is ${percentageChange}`);
 // Line 10 calls console.log().
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-// The error was on line 5.
-// After using replaceAll(), priceAfterOneYear was still a string instead of a number.
-// I fixed it by wrapping the result in Number(), so it was converted to a number before doing the calculation.
+// The error occurs on line 5.
+// The replaceAll() function call is missing a comma between its two arguments.
+// Because the function call is not valid JavaScript syntax, JavaScript throws a SyntaxError and cannot run the code.
+// I fixed it by adding the missing comma:
 
+// priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 // c) Identify all the lines that are variable reassignment statements
 // Lines 4 and 5 are variable reassignment statements because its declared on lines 1 and 2.
 
