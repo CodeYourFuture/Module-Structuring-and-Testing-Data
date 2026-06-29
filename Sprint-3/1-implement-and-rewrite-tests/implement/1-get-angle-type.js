@@ -26,6 +26,8 @@ function getAngleType(angle) {
     return "Straight angle";
   }else if (angle > 180 && angle < 360){
     return "Reflex angle";
+  }else if (angle <=0){
+    return "Invalid angle"
   }
     
 
@@ -72,3 +74,4 @@ const reflex1 = getAngleType(270);
 assertEquals(reflex1,"Reflex angle");
 const reflex2 = getAngleType(359.9)// testing upper limit of reflex angle 
 assertEquals(reflex2,"Reflex angle");
+
