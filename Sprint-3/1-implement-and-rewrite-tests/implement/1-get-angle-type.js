@@ -87,3 +87,5 @@ assertEquals(equal360,"Invalid angle");
 const over360 = getAngleType(360.1); // Testing when angle is over 360
 assertEquals(over360, "Invalid angle");
 
+console.log("All test passed!");
+
