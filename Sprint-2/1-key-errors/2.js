@@ -3,18 +3,21 @@
 
 // this function should square any number but instead we're going to get an error
 
-// =============> write your prediction of the error here
+// Variable and parameter names must be identifiers (like words, e.g., num, x, myNumber).
+//They cannot be literal values or specific numbers like 3.
 
 function square(3) {
     return num * num;
 }
 
-// =============> write the error message here
+// the error message is: SyntaxError: Unexpected number. 
 
-// =============> explain this error message here
+// The error message SyntaxError: Unexpected number means that JavaScript encountered a raw number,
+// where it was strictly expecting to see a variable name.
 
 // Finally, correct the code to fix the problem
-
 // =============> write your new code here
-
-
+function square(num) {
+    return num * num;
+}
+console.log(square(3));
