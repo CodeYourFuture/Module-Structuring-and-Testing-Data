@@ -22,3 +22,40 @@ test("should count multiple occurrences of a character", () => {
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
+test("should return 0 if no occurences of a character", () => {
+  const str = "fruit";
+  const char = "p";
+  const count = countChar(str, char);
+  expect(count).toBe(0);
+});
+
+// Scenario: Empty String
+test("should return 0 if the string is empty", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toBe(0);
+});
+
+// Scenario: Empty character
+test("should return 0 if the character is empty", () => {
+  const str = "fruit";
+  const char = "";
+  const count = countChar(str, char);
+  expect(count).toBe(0);
+});
+
+// Scenario: Single character found
+test("should return 1 if single occurrence of a character", () => {
+  const str = "fruit";
+  const char = "r";
+  const count = countChar(str, char);
+  expect(count).toBe(1);
+});
+
+test("should be case sensitive", () => {
+  const str = "coMmand";
+  const char = "m";
+  const count = countChar(str, char);
+  expect(count).toBe(1);
+});
