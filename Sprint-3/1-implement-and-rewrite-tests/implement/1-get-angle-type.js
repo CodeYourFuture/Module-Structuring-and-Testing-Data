@@ -65,3 +65,6 @@ assertEquals(obtuse2,"Obtuse angle");
 // Testing for a straight angle
 const straight = getAngleType(180);
 assertEquals(straight,"Straight angle");
+//Testing for Reflex angles
+const reflex = getAngleType(180.1);
+assertEquals(reflex,"Reflex angle");// testing for the lower limit reflex angle 
