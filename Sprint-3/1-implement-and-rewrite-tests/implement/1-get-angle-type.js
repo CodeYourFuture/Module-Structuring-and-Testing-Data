@@ -20,7 +20,10 @@ function getAngleType(angle) {
     return "Acute angle";//Implement condition to execute acute angle
   }else if (angle === 90){
     return "Right angle";// checking for right angle
+  }else if (angle > 90 && angle < 180){
+    return "Obtuse angle";
   }
+
   // TODO: Implement this function
 }
 
