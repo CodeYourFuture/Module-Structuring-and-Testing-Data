@@ -5,11 +5,15 @@
 
 // Implement a function that:
 function convertToUpperCase(text) {
-const result = text.toUpperCase();
-return result;
+
+const result = text.split(' ').join("_");
+
+return result.toUpperCase();       
 } 
 
-console.log(convertToUpperCase("hello"));
+
+
+console.log(convertToUpperCase("hello there"));
 
 
 

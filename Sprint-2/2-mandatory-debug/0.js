@@ -14,7 +14,7 @@ Instead, we should define the expression a * b
 and return the expression.
 
 / function multiply(a, b) {
-    return (a * b);
+    return a * b;
   }
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);

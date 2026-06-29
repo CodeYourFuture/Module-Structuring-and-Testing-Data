@@ -13,12 +13,12 @@ function formatAs12HourClock(time) {
     return `${paddedHour}:${minutes} pm`;
   }
 
-  else if(hours=== 0o0){
+  else if(hours=== 0){
     const newHour= hours+ 12;
     return `${newHour}:${minutes} am`;}
   
   else if(hours=== 12){
-    return `12:00 pm`;
+    return `12:${minutes} pm`;
 
   }
 
