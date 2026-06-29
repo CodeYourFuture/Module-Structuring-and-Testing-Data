@@ -11,6 +11,7 @@ function capitalise(str) {
 }
 
 // =============> str has already been declared as a parameter function, so it cannot be redeclared within the function body. This will cause a syntax error. To fix this, we should use a different variable name for the new string we are creating.
-// =============> function capitalise(str) {
-//  str = `${str[0].toUpperCase()}${str.slice(1)}`;
-//  return str;
+// =============> 
+  function capitalise(str) {
+  str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return str;
