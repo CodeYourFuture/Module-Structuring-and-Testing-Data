@@ -1,7 +1,6 @@
 // Predict and explain first...
-//  =============> write your prediction here
-
-// call the function capitalise with a string input
+//  =============> We use a string template when we want to join different character sets together but by casing the first letter
+// to uppercase we're assuming that it is formed of letters
 // interpret the error message and figure out why an error is occurring
 
 function capitalise(str) {
@@ -9,5 +8,9 @@ function capitalise(str) {
   return str;
 }
 
-// =============> write your explanation here
-// =============> write your new code here
+// he error message says 'str' has already been declared so we can use another name for our 
+//output to solve that error we change the output variable name
+// function capitalise(str) {
+ // let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+ // return str;
+//}
