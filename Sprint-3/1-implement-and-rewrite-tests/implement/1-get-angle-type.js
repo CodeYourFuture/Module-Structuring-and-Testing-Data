@@ -41,3 +41,5 @@ const acute = getAngleType(1);// Test just above zero
 assertEquals(acute, "Acute angle");
 const acute2 = getAngleType(45); // Test acute angle just at the middle
 assertEquals(acute2, "Acute angle");
+const acute3 = getAngleType(89.9); // Test just above zero
+assertEquals(acute3, "Acute angle");
