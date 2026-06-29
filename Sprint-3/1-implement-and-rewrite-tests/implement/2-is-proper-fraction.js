@@ -10,28 +10,29 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-function isProperFraction(numerator, denominator) {
-  if ( numerator < denominator && numerator > 0 && denominator > 0) {
-    return true;
-  }
-  return false;
-}
+
 
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
 
 // Here's our helper again
+function isProperFraction(numerator, denominator) {
+  return (
+    denominator !== 0 &&
+    numerator !== 0 &&
+    Math.abs(numerator) < Math.abs(denominator)
+  );
+}
+
+// TODO: Write tests to cover all cases.
+// What combinations of numerators and denominators should you test?
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
 }
-
-// TODO: Write tests to cover all cases.
-// What combinations of numerators and denominators should you test?
-
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
 assertEquals(isProperFraction(3, 4), true);
@@ -39,3 +40,6 @@ assertEquals(isProperFraction(5, 5), false);
 assertEquals(isProperFraction(7, 3), false);
 assertEquals(isProperFraction(0, 5), false);
 assertEquals(isProperFraction(5, 0), false);
+assertEquals(isProperFraction(1, -2), true);
+assertEquals(isProperFraction(-1, -2), true);
+assertEquals(isProperFraction(-7, 3), false);
