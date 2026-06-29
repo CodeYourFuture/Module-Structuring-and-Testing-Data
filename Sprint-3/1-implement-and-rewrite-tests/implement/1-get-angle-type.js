@@ -14,7 +14,11 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-function getAngleType(angle) {
+function getAngleType(angle) { 
+
+  if (angle > 0 && angle < 90) {
+    return "Acute angle";//Implement condition to execute acute angle
+  }
   // TODO: Implement this function
 }
 
