@@ -60,3 +60,6 @@ const obtuse1 = getAngleType(136);
 assertEquals(obtuse1,"Obtuse angle");
 const obtuse2 = getAngleType(179.9);
 assertEquals(obtuse2,"Obtuse angle");
+// Testing for a straight angle
+const straight = getAngleType(180);
+assertEquals(straight,"Straight angle");
