@@ -55,3 +55,5 @@ const obtuse = getAngleType(90.1);
 assertEquals(obtuse, "Obtuse angle");
 const obtuse1 = getAngleType(136);
 assertEquals(obtuse1,"Obtuse angle");
+const obtuse2 = getAngleType(179.9);
+assertEquals(obtuse2,"Obtuse angle");
