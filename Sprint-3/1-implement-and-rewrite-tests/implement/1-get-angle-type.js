@@ -28,6 +28,9 @@ function getAngleType(angle) {
     return "Reflex angle";
   }else if (angle <=0){
     return "Invalid angle"
+  } else {
+    // Anything else must be 360 or greater than 360
+    return "Invalid angle"; 
   }
     
 
