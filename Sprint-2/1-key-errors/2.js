@@ -6,9 +6,9 @@
 // Variable and parameter names must be identifiers (like words, e.g., num, x, myNumber).
 //They cannot be literal values or specific numbers like 3.
 
-function square(3) {
-    return num * num;
-}
+//function square(3) {
+    //return num * num;
+//}
 
 // the error message is: SyntaxError: Unexpected number. 
 
