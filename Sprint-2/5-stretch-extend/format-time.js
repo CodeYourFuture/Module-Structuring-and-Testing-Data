@@ -1,15 +1,19 @@
 // This is the latest solution to the problem from the prep.
 // Make sure to do the prep before you do the coursework
-// Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
+// Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any
+// bugs you find.
 
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
-  }
+    if (Number(time.slice(0, 2)) === 12) {
+        return `${time} pm` // if time is "12:00" it will show 
+        //12:00 pm
+    } else if (Number(time.slice(0, 2))=== 24) {
+        return `00:00 am`;
+    } else if (Number(time.slice(0, 2)) > 12) {
+        return `${Number(time.slice(0, 2)) - 12}:00 pm`;
+    }
   return `${time} am`;
 }
-
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
 console.assert(
@@ -23,3 +27,24 @@ console.assert(
   currentOutput2 === targetOutput2,
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
+const currentOutput3 = formatAs12HourClock("00:00");// 
+const targetOutput3 = "00:00 am";// expecting new test to return "00:00 am"
+console.assert(
+  currentOutput3 === targetOutput3, 
+  `current output: ${currentOutput3}, target output: ${targetOutput3}`
+); // if currentOutput3 and targetOutput3 do not match, the assertion message will be given.
+
+const currentOutput4 = formatAs12HourClock("12:00");//
+const targetOutput4 = "12:00 pm"; // expected output for "12:00" is "12:00 pm"
+console.assert(
+  currentOutput4 === targetOutput4,
+  `current output: ${currentOutput4}, target output: ${targetOutput4}`
+);// if currentOutput and targetOutput do not match, the assertion message will be given.
+const currentOutput5 = formatAs12HourClock("24:00");
+const targetOutput5 = "00:00 am";
+console.assert(
+    currentOutput5 === targetOutput5,
+    `current output5: ${currentOutput5}, target output5: ${targetOutput5}`
+  ); // if 24:00 is entered and the output is not "00:00 am" the assertion message will be given
+
+
