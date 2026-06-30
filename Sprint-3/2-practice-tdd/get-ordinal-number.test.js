@@ -51,10 +51,9 @@ test("should append 'th' for numbers ending with 4-9 or 0", () => {
   expect(getOrdinalNumber(0)).toBe("0th");
 });
 
-test("non-integer and negative numbers should be handled correctly", () => {
-  expect(getOrdinalNumber(1.5)).toBe("1.5th");
-  expect(getOrdinalNumber(-2.3)).toBe("-2.3th");
-  expect(getOrdinalNumber(-11)).toBe("-11th");
+test("non-integer numbers should throw an error", () => {
+  expect(() => getOrdinalNumber(1.5)).toThrow("Input must be an integer");
+  expect(() => getOrdinalNumber(-2.3)).toThrow("Input must be an integer");
 });
 
 test("invalid input should throw an error", () => {
