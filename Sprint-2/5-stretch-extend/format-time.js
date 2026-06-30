@@ -4,22 +4,34 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+  if (hours === 0 || hours === 24) {
+    return `12:${time.slice(3, 5)} am`;
+  } else if (hours > 12) {
+    return `${(hours - 12).toString().padStart(2, "0")}:${time.slice(3, 5)} pm`;
+  } else if (hours < 12) {
+    return `${time.slice(0, 2)}:${time.slice(3, 5)} am`;
+  } else {
+    return `${time.slice(0, 2)}:${time.slice(3, 5)} pm`;
   }
-  return `${time} am`;
 }
 
-const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
-console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
-);
+//
+const testInputOutputPairs = [
+  { input: "08:00", expectedOutput: "08:00 am" },
+  { input: "23:00", expectedOutput: "11:00 pm" },
+  { input: "12:00", expectedOutput: "12:00 pm" },
+  { input: "13:00", expectedOutput: "01:00 pm" },
+  { input: "00:00", expectedOutput: "12:00 am" },
+  { input: "24:00", expectedOutput: "12:00 am" },
+  { input: "01:17", expectedOutput: "01:17 am" },
+  { input: "21:20", expectedOutput: "09:20 pm" },
+];
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
-);
+for (const { input, expectedOutput } of testInputOutputPairs) {
+  const currentOutput = formatAs12HourClock(input);
+  const targetOutput = expectedOutput;
+  console.assert(
+    currentOutput === targetOutput,
+    `current output: ${currentOutput}, target output: ${targetOutput}`
+  );
+}
