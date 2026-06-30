@@ -22,20 +22,17 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  if (card === "A♠" || card === "A♥" || card === "A♦" || card === "A♣") {
-    return 11;
-  }
-  if (card === "J♠" || card === "J♥" || card === "J♦" || card === "J♣") {
-    return 10;
-  }
-  if (card === "Q♠" || card === "Q♥" || card === "Q♦" || card === "Q♣") {
-    return 10;
-  }
-  if (card === "K♠" || card === "K♥" || card === "K♦" || card === "K♣") {
-    return 10;
-  }
+  
   // Check for number cards
   const rank = card.slice(0, -1);
+
+  if (rank === "A"){
+    return 11;
+  }
+
+  if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  }
   const value = parseInt(rank);
   if (!isNaN(value) && value >= 2 && value <= 10) {
     return value;
