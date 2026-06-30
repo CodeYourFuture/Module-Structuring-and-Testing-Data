@@ -37,5 +37,5 @@ function formatTimeDisplay(seconds) {
 
 // e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
 // =============> Answer "01".
-// Explaination: The return value of pad when it is called for the last time in this program is '01'. This is because the value of num is 1 (the remaining seconds after calculating 61 % 60).
+// Explanation: The return value of pad when it is called for the last time in this program is '01'. This is because the value of num is 1 (the remaining seconds after calculating 61 % 60).
 // Since the length of the string representation of 1 is less than 2, the pad function adds a "0" to the front, resulting in "01".
