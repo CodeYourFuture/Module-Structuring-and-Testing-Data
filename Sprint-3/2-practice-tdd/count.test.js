@@ -47,3 +47,10 @@ test("handles null or undefined source string", () => {
   expect(countChar(null, char)).toEqual(0);
   expect(countChar(undefined, char)).toEqual(0);
 });
+
+test("returns 0 when stringOfCharacters is null or undefined", () => {
+  const char = "a";
+
+  expect(countChar(null, char)).toEqual(0);
+  expect(countChar(undefined, char)).toEqual(0);
+});
