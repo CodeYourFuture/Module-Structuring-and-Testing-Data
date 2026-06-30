@@ -21,7 +21,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // c) Identify all the lines that are variable reassignment statements
 // Line 4 and line 5 are variable reassignment statements. In line 4, carPrice is being reassigned with the new value after removing the comma and converting it to a number. In line 5, priceAfterOneYear is being reassigned in the same way.
-
+// line 7 and 8 are also variable reassignment statements. In line 7, priceDifference is being assigned the value of the difference between carPrice and priceAfterOneYear. In line 8, percentageChange is being assigned the value of the percentage change calculated from priceDifference and carPrice.
 // d) Identify all the lines that are variable declarations
 // Line 1 and line 2 are variable declarations. In line 1, carPrice is declared and initialized with the string value "10,000". In line 2, priceAfterOneYear is declared and initialized with the string value "8,543".
 
