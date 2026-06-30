@@ -12,7 +12,7 @@ console.log(square(5))*/
 // =============> write the error message here
 // Unexpected number
 // =============> explain this error message here
-// I think it
+// I think it function expects parameter as a variable rather than  a number.
 // Finally, correct the code to fix the problem
 // ===========correction=========
 // to correct the code we need to introduce parameter as a variable, rather than a number.
