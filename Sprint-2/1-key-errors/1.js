@@ -1,3 +1,10 @@
+// Predict and explain first...
+
+// Why will an error occur when this program runs?
+// =============> write your prediction here
+
+// Try playing computer with the example to work out what is going on
+
 function convertToPercentage(decimalNumber) {
   const decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
@@ -7,19 +14,7 @@ function convertToPercentage(decimalNumber) {
 
 console.log(decimalNumber);
 
-The terminal shows the syntax error because decimal number has been declared.
-because the decimal number is a variable which is not supposed to define in the function, 
-but the decimal number has been defined insides the functon, so it will forever return 50 %.
-  Also, when we call the fucnton, we should name the function convertToPercentage.
+// =============> write your explanation here
 
-
-
-function convertToPercentage(decimalNumber) {
-
-  const percentage = `${decimalNumber * 100}%`;
-
-  return percentage;
-}
-
-console.log(convertToPercentage(0.5));
-
+// Finally, correct the code to fix the problem
+// =============> write your new code here
