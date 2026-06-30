@@ -3,6 +3,10 @@ function getOrdinalNumber(num) {
   if (typeof num !== "number" || Number.isNaN(num)) {
     throw new TypeError("Input must be a number");
   }
+  // Strict: only allow integers
+  if (!Number.isInteger(num)) {
+    throw new TypeError("Input must be an integer");
+  }
 
   const abs = Math.abs(num);
   const lastTwoDigits = abs % 100;
