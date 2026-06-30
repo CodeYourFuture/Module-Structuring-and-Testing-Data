@@ -10,7 +10,7 @@ const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
 
 // testing different cases
-function movieLengthToDuration(movieLength) {
+function movieLengthFormatter(movieLength) {
   const remainingSeconds = movieLength % 60;
   const totalMinutes = (movieLength - remainingSeconds) / 60;
 
@@ -21,18 +21,18 @@ function movieLengthToDuration(movieLength) {
   return result;
 }
 
-console.log(movieLengthToDuration(0));
-console.log(movieLengthToDuration(59));
-console.log(movieLengthToDuration(10000));
-console.log(movieLengthToDuration(-100));
-console.log(movieLengthToDuration(200.4));
+console.log(movieLengthFormatter(0));
+console.log(movieLengthFormatter(59));
+console.log(movieLengthFormatter(10000));
+console.log(movieLengthFormatter(-100));
+console.log(movieLengthFormatter(200.4));
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
 // There are 6 variable declarations.
 
 // b) How many function calls are there?
-// There are no function calls.
+// There is `console.log` as a function call.
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
@@ -45,7 +45,7 @@ console.log(movieLengthToDuration(200.4));
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 // The variable result represents the final result of the movie duration in the format of H:M:S.
-// The better name fort this variable could be  movieDuration.
+// The better name for this variable could be movieLengthFormatted.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // There are a couple of edge cases that this code will not work for:
