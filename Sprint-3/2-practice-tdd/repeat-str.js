@@ -6,11 +6,7 @@ function repeatStr(str, count) {
     throw new Error("Number must be 0 or greater");
   }
 
-  let repeatedStr = "";
-  for (let i = 0; i < count; i++) {
-    repeatedStr += str;
-  }
-  return repeatedStr;
+  return new Array(count).fill(str).join("");
 }
 
 module.exports = repeatStr;
