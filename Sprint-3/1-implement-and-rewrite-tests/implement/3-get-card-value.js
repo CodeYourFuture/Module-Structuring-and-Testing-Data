@@ -23,6 +23,45 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+
+  let rank = card.slice(0, -1);
+  let suit = card.slice(-1);
+
+  // Validate rank 
+  if (rank !== "A" &&
+      rank !== "2" &&
+      rank !== "3" &&
+      rank !== "4" &&
+      rank !== "5" &&
+      rank !== "6" &&
+      rank !== "7" &&
+      rank !== "8" &&
+      rank !== "9" &&
+      rank !== "10" &&
+      rank !== "J" &&
+      rank !== "Q" &&
+      rank !== "K")
+       {
+        throw new Error("Invalid Rank");
+       }
+
+// Validate suit
+      if(suit  !== "♠" &&
+         suit  !== "♥" &&
+         suit  !== "♦" &&
+         suit  !== "♣" )
+      {
+        throw new Error("Invalid Suit")
+      }
+
+  if(rank == "A"){
+    return 11;
+  }
+  else if(rank == "J"  || rank == "Q" || rank == "K"){
+    return 10;
+  }
+  else return Number(rank);
+
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -39,7 +78,30 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
+
+assertEquals(getCardValue("8♠"), 8);
+
+assertEquals(getCardValue("7♠"), 7);
+
+assertEquals(getCardValue("6♠"), 6);
+
+assertEquals(getCardValue("5♠"), 5);
+
+assertEquals(getCardValue("4♠"), 4);
+
+assertEquals(getCardValue("3♠"), 3);
+
+assertEquals(getCardValue("2♠"), 2);
+
 assertEquals(getCardValue("9♠"), 9);
+
+assertEquals(getCardValue("J♠"), 10);
+
+assertEquals(getCardValue("Q♠"), 10);
+
+assertEquals(getCardValue("K♠"), 10);
+
+assertEquals(getCardValue("A♠"), 11);
 
 // Handling invalid cards
 try {
@@ -51,4 +113,23 @@ try {
   console.log("Error thrown for invalid card 🎉");
 }
 
+
 // What other invalid card cases can you think of?
+try {
+  getCardValue("24♠");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid rank 🎉");
+}
+
+
+try {
+  getCardValue("44");
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid suit 🎉");
+}
