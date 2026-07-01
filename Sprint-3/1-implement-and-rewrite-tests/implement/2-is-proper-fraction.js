@@ -12,6 +12,10 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
+  if (denominator === 0 || numerator / denominator > 1) {
+    return false;
+  }
+  return true;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -30,4 +34,27 @@ function assertEquals(actualOutput, targetOutput) {
 // What combinations of numerators and denominators should you test?
 
 // Example: 1/2 is a proper fraction
-assertEquals(isProperFraction(1, 2), true);
+// Test Cases
+// testCases is an array of arrays
+// [
+//   [numerator, denominator, output]...
+// ]
+const testCases = [
+  [1, 2, true],
+  [2, 4, true],
+  [3, 6, true],
+  [4, 8, true],
+  [5, 10, true],
+  [2, 0, false],
+  [5, 4, false],
+  [6, 3, false],
+  [8, 4, false],
+  [10, 5, false],
+];
+
+// loop through each case and assert that the output is correct
+for (const [numerator, denominator, expected] of testCases) {
+  const actual = isProperFraction(numerator, denominator);
+  assertEquals(actual, expected);
+}
+//
