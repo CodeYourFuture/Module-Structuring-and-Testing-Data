@@ -42,3 +42,7 @@ assertEquals(isProperFraction(5, 0), false);
 assertEquals(isProperFraction(-1, 2), true);
 // Write a test for 1/-2, which is a proper fraction
 assertEquals(isProperFraction(1, -2), true);
+// Write a test for -3/-4, which is a proper fraction
+assertEquals(isProperFraction(-3, -4), true);
+
+
