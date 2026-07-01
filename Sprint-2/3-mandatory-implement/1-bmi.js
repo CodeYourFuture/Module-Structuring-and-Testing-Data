@@ -15,5 +15,10 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-    // return the BMI of someone based off their weight and height
+  const squaredHeight = height * height;
+  const originalBMI = (weight / squaredHeight).toString();
+  let dotIndex = originalBMI.indexOf(".");
+  let bmiWithOneDecimal = originalBMI.slice(0, dotIndex + 2);
+  return bmiWithOneDecimal;
 }
+console.log(`The calculated BMI is ${calculateBMI(78.4, 1.71)}`);
