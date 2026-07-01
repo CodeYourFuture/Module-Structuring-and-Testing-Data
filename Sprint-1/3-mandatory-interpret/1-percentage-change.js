@@ -12,12 +12,12 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-//The function call are made twice
-//line  4, 5, 
+//The function call are five
+//line  4, 5, 10
 
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-
+// Line 5, it was missing a comma between the characters that are to be replaced so to fix the problem, include a comma
 
 // c) Identify all the lines that are variable reassignment statements
 //Lines 7 & 8
@@ -25,3 +25,4 @@ console.log(`The percentage change is ${percentageChange}`);
 // d) Identify all the lines that are variable declarations
 //Lines 1 & 2
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+//This expression replaces every instance of "," with "".
