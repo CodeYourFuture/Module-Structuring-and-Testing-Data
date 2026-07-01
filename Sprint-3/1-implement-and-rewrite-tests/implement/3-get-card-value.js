@@ -87,6 +87,7 @@ const testCases = [
   ["3", undefined],
   ["44", undefined],
   ["AA1", undefined],
+  ["♣♣", undefined],
   ["", undefined],
 ];
 
