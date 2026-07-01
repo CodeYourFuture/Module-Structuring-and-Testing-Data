@@ -2,4 +2,6 @@
 // what's the error ?
 
 console.log(`I was born in ${cityOfBirth}`);
+// what's the error ? You cannot access a variable before initialization.
 const cityOfBirth = "Bolton";
+console.log(`I was born in ${cityOfBirth}`);
