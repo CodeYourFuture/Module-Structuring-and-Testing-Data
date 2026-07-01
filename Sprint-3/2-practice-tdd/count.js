@@ -7,10 +7,6 @@ function countChar(str, char) {
   }
   return count;
 }
-const str = "aaaaa";
-const char = "a";
-const count = countChar(str, char);
-console.log(countChar("aaaaa", "a"));
-console.log(countChar("aaaaa", "b"));
+
 
 module.exports = countChar;
