@@ -46,5 +46,7 @@ assertEquals(isProperFraction(1, -2), true);
 assertEquals(isProperFraction(-3, -4), true);
 // Write a test for 3/3, which is not a proper fraction
 assertEquals(isProperFraction(3, 3), false);
+console.log("All tests passed!");
+
 
 
