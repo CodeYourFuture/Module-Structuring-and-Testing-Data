@@ -14,3 +14,8 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+function caseToUpperS(string){
+    return string.toUpperCase().replaceAll(" ", "_");
+
+}
+console.log(`Your new word is ${caseToUpperS("i love cyf so much")}`)

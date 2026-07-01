@@ -4,3 +4,36 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
+function toPounds(penceString){
+
+    let penceStringWithoutTrailingP = penceString.substring(
+    0,
+    penceString.length - 1
+    );
+
+    let paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+    let pounds = paddedPenceNumberString.substring(
+    0,
+    paddedPenceNumberString.length - 2
+    );
+
+    let pence = paddedPenceNumberString
+    .substring(paddedPenceNumberString.length - 2)
+    .padEnd(2, "0");
+
+    return {pounds, pence};
+}
+const { pounds, pence } = toPounds("10390p");
+
+console.log(`£${pounds}.${pence}`);
+
+
+
+// This program takes a string representing a price in pence
+// The program then builds up a string representing the price in pounds
+
+// You need to do a step-by-step breakdown of each line in this program
+// Try and describe the purpose / rationale behind each step
+
+// To begin, we can start with
+// 1. const penceString = "399p": initialises a string variable with the value "399p"
