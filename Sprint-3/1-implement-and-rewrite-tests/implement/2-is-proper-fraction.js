@@ -36,3 +36,5 @@ assertEquals(isProperFraction(1, 2), true);
 assertEquals(isProperFraction(2, 1), false);
 // Write a test for 0/5, which is a proper fraction
 assertEquals(isProperFraction(0, 5), true);
+// Write a test for 5/0, which is not a proper fraction (denominator cannot be zero)
+assertEquals(isProperFraction(5, 0), false);
