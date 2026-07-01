@@ -51,7 +51,6 @@ function assertEquals(actualOutput, targetOutput) {
 //   - The second element is the expected output
 
 const testCases = [
-  [0, "Invalid angle"],
   [45, "Acute angle"],
   [90, "Right angle"],
   [135, "Obtuse angle"],
@@ -59,6 +58,7 @@ const testCases = [
   [225, "Reflex angle"],
   [270, "Reflex angle"],
   [360, "Invalid angle"],
+  [0, "Invalid angle"],
 ];
 
 // loop through each case and assert that the output is correct
