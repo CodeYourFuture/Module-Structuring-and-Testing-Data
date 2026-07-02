@@ -38,6 +38,12 @@ function getCardValue(card) {
     throw new Error("Invalid rank");
   }
   
+  if (rank === "A") return 11;
+  if (["J", "Q", "K"].includes(rank)) return 10;
+  
+    return Number(rank);
+  
+  
   // TODO: Implement this function
 }
 
