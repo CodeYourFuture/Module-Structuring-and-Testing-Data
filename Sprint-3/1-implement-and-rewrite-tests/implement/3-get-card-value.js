@@ -23,6 +23,32 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  if (typeof card !== "string" || card.length < 2) {
+    throw new Error("Invalid card format");
+  }
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid suit");
+  }
+  if (rank === "A") {
+    return 11;
+  }
+  if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  }
+  const numericValue = parseInt(rank, 10);
+  if (
+    !isNaN(numericValue) &&
+    numericValue >= 2 &&
+    numericValue <= 10 &&
+    String(numericValue) === rank
+  ) {
+    return numericValue;
+  }
+  throw new Error("Invalid rank");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -52,3 +78,18 @@ try {
 }
 
 // What other invalid card cases can you think of?
+assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("2♥"), 2);
+assertEquals(getCardValue("10♥"), 10);
+assertEquals(getCardValue("A♣"), 11);
+assertEquals(getCardValue("J♦"), 10);
+assertEquals(getCardValue("Q♠"), 10);
+assertEquals(getCardValue("K♣"), 10);
+
+assertThrows("invalid"); 
+assertThrows("A"); 
+assertThrows("♠"); 
+assertThrows("1♥"); 
+assertThrows("Z♠"); 
+assertThrows("10"); 
+assertThrows("A♥♠");
