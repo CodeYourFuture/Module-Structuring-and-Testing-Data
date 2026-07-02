@@ -38,4 +38,6 @@ function assertEquals(actualOutput, targetOutput) {
 assertEquals(isProperFraction(1, 2), true);
 assertEquals(isProperFraction(2, 1), false);
 assertEquals(isProperFraction(-2, 1), false);
+assertEquals(isProperFraction(1, -2), true);
 assertEquals(isProperFraction(-2, -4), true);
+assertEquals(isProperFraction(-4, -2), false);
