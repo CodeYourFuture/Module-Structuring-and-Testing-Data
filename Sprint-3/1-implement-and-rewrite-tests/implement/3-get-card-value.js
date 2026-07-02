@@ -46,7 +46,7 @@ function getCardValue(card) {
   }
   if (rank === "A") {
     return 11;
-  } else if ((rank === "J", rank === "Q", rank === "K")) {
+  } else if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
   } else {
     return Number(rank);
@@ -67,7 +67,18 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
+// Number cards
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("2♥"), 2);
+assertEquals(getCardValue("10♦"), 10);
+
+// Ace
+assertEquals(getCardValue("A♠"), 11);
+
+// Face cards
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♥"), 10);
 
 // Handling invalid cards
 try {
@@ -80,3 +91,34 @@ try {
 }
 
 // What other invalid card cases can you think of?
+
+try {
+  getCardValue("1♠"); // "1" isn't a valid rank
+  console.error("Error was not thrown for invalid rank 😢");
+} catch (e) {
+  console.log("Error thrown for invalid rank 🎉");
+}
+
+// Invalid suit
+try {
+  getCardValue("9♦️"); // wrong/extra character in suit
+  console.error("Error was not thrown for invalid suit 😢");
+} catch (e) {
+  console.log("Error thrown for invalid suit 🎉");
+}
+
+// Completely invalid string
+try {
+  getCardValue("invalid");
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+// Empty string
+try {
+  getCardValue("");
+  console.error("Error was not thrown for empty string 😢");
+} catch (e) {
+  console.log("Error thrown for empty string 🎉");
+}
