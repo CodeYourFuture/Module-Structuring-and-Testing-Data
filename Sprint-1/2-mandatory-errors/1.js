@@ -1,5 +1,7 @@
 // trying to create an age variable and then reassign the value by 1
-function X(num){
-const age = num +1; 
-return age;}
-console.log(X(33));
+
+let age = 0; // Initialize the age variable
+age = age + 1; // Reassign the value by 1
+console.log(age);
+
+
