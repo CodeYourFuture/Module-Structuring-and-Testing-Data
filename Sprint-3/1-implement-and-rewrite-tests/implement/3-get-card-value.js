@@ -66,14 +66,46 @@ assertEquals(getCardValue("K♣"), 10);
 
 console.log("All valid card tests passed");
 
+// What other invalid card cases can you think of?
 
 try {
-  getCardValue("invalid");
-
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card 😢");
+  getCardValue("1♠");
+  console.error("Error was not thrown for 1♠ 😢");
 } catch (e) {
-  console.log("Error thrown for invalid card 🎉");
+  console.log("Error thrown for 1♠ 🎉");
 }
 
-// What other invalid card cases can you think of?
+try {
+  getCardValue("11♠");
+  console.error("Error was not thrown for 11♠ 😢");
+} catch (e) {
+  console.log("Error thrown for 11♠ 🎉");
+}
+
+try {
+  getCardValue("A");
+  console.error("Error was not thrown for A 😢");
+} catch (e) {
+  console.log("Error thrown for A 🎉");
+}
+
+try {
+  getCardValue("♠");
+  console.error("Error was not thrown for ♠ 😢");
+} catch (e) {
+  console.log("Error thrown for ♠ 🎉");
+}
+
+try {
+  getCardValue("KH");
+  console.error("Error was not thrown for KH 😢");
+} catch (e) {
+  console.log("Error thrown for KH 🎉");
+}
+
+try {
+  getCardValue("");
+  console.error("Error was not thrown for empty string 😢");
+} catch (e) {
+  console.log("Error thrown for empty string 🎉");
+}
