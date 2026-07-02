@@ -52,9 +52,4 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
 // Example: Identify Right Angles
 const right = getAngleType(90);
-<<<<<<< HEAD
-assertEquals(right, "Right angle");
-//for committing//
-=======
 assertEquals(getAngleType(90), "Right angle");
->>>>>>> 5ef4721 (sprint3/implement task-2)
