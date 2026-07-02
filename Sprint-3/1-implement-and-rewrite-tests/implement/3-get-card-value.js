@@ -1,6 +1,4 @@
-// This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
-
-// Implement a function getCardValue, when given a string representing a playing card,
+/// Implement a function getCardValue, when given a string representing a playing card,
 // should return the numerical value of the card.
 
 // A valid card string will contain a rank followed by the suit.
@@ -22,9 +20,25 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
-}
+ const rank = card.slice(0, -1);
 
+
+
+  if (rank === "A"){
+  return 11 ;  
+  }
+  else if (rank === "J" || rank === "Q" || rank === "K"){
+  return 10 ;  
+  };
+
+
+const value = Number(rank);
+
+  if( value>=2 && value <= 10 ){
+  return value};
+
+  throw new Error("invalid card!");
+}
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -39,7 +53,7 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
-assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("9♥"), 9);
 
 // Handling invalid cards
 try {
@@ -50,6 +64,22 @@ try {
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
 }
+ 
 
+try { 
+  getCardValue("null");
+
+  console.error("Error was not thrown for null card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉")
+}
+
+try { 
+  getCardValue("0");
+
+  console.error("Error was not thrown for 0 card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉")
+}
 // What other invalid card cases can you think of?
-//for committing//
+
