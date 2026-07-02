@@ -26,6 +26,8 @@ function getCardValue(card) {
     throw new Error("Invalid card format");
   }
   const validSuits = ["♠", "♥", "♦", "♣"];
+  const suit = card.slice(-1); // getting the last character as suit
+  
   
   // TODO: Implement this function
 }
