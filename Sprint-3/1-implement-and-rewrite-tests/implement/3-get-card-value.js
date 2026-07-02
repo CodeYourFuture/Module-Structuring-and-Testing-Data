@@ -22,6 +22,9 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
+  if (typeof card !== "string" || card.length < 2) {
+    throw new Error("Invalid card format");
+  }
   // TODO: Implement this function
 }
 
