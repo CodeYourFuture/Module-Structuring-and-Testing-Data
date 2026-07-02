@@ -25,6 +25,8 @@ function getCardValue(card) {
   if (typeof card !== "string" || card.length < 2) {
     throw new Error("Invalid card format");
   }
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  
   // TODO: Implement this function
 }
 
