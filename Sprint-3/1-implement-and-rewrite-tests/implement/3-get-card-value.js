@@ -27,6 +27,7 @@ function getCardValue(card) {
   }
   const validSuits = ["♠", "♥", "♦", "♣"];
   const suit = card.slice(-1); // getting the last character as suit
+  const rank = card.slice(0, -1); // getting the rest as rank
   
   
   // TODO: Implement this function
