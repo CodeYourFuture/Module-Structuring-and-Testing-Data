@@ -29,6 +29,10 @@ function getCardValue(card) {
   const suit = card.slice(-1); // getting the last character as suit
   const rank = card.slice(0, -1); // getting the rest as rank
   
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid suit");
+  }
+  
   
   // TODO: Implement this function
 }
