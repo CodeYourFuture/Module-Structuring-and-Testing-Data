@@ -15,7 +15,7 @@
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
-function toCapitalizedSnakeCase(str) {
+function toUpperSnakeCase(str) {
   const toCapitalized = str.toUpperCase().replace(/ /g, "_");
   return toCapitalized;
 }
