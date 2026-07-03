@@ -13,7 +13,7 @@
 function isProperFraction(numerator, denominator) {
   if (!Number.isInteger(numerator) || !Number.isInteger(denominator)) {
     return false;
-  } // provided that the numerator and denominator are integers, not fintite numbers based on the assumption that the parameters are valid numbers (not NaN or Infinity, or any other non-integer numbers)
+  }
   if (denominator === 0) {
     return false;
   }
