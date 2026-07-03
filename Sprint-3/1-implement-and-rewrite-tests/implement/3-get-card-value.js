@@ -88,3 +88,11 @@ try {
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
 }
+try {
+  getCardValue("1♠");// invalid rank
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid rank");
+}
