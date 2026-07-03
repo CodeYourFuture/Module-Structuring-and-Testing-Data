@@ -11,18 +11,22 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  if (numerator === 0) {
+  if (!Number.isFinite(numerator) || !Number.isFinite(denominator)) {
+    return false;
+  }
+  if (!Number.isInteger(numerator) || !Number.isInteger(denominator)) {
     return false;
   }
   if (denominator === 0) {
     return false;
   }
-  if (Number.isNaN(numerator) || Number.isNaN(denominator)) {
-    return false;
-  }
   return Math.abs(numerator) < Math.abs(denominator);
 }
-
+/* new code for trial
+numerator = Number(numerator);
+denominator = Number(denominator);
+if (isNaN(numerator) || isNaN(denominator) {
+return false;})
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
@@ -46,7 +50,7 @@ assertEquals(isProperFraction(10, 10), false);
 assertEquals(isProperFraction(-7, 3), false);
 
 // Zero cases
-assertEquals(isProperFraction(0, 5), false);
+assertEquals(isProperFraction(0, 5), true);
 assertEquals(isProperFraction(3, 0), false);
 
 // NaN cases
