@@ -8,13 +8,13 @@
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
-//PREDICTION:
-//the code wont work because the card number isnt in ("") and the computer wont be able to apply the .slice due to this.
+/*PREDICTION:
+the code wont work because the card number is not in ("") and the computer wont be able to apply the .slice due to this.
 
-//THE ERROR:
-//cardNumber.slice is not a function
+THE ERROR:
+cardNumber.slice is not a function
 
-//YES! the error is what i predicted.
+YES! the error is what i predicted.*/
 
 //FIX:
 const cardnumber = "4533787178994213";
