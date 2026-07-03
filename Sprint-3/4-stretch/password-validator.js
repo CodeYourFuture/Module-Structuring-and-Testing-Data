@@ -1,6 +1,8 @@
 function passwordValidator(password) {
-    return password.length < 5 ? false : true
+  if (password.length < 5) {
+    return false;
+  }
+  return true;
 }
-
 
 module.exports = passwordValidator;
