@@ -8,7 +8,11 @@ function passwordValidator(password) {
         - Must not be any previous password in the passwords array. 
   */
 
-  if (password.length < 5 || !/[A-Z]/.test(password)) {
+  if (
+    password.length < 5 ||
+    !/[A-Z]/.test(password) ||
+    !/[a-z]/.test(password)
+  ) {
     return false;
   }
   return true;
