@@ -124,3 +124,9 @@ try {
 } catch (e) {
   console.log("Error thrown for empty string ");
 }
+try {
+  getCardValue(123);
+  console.error("Error was not thrown for non-string input 😢");
+} catch (e) {
+  console.log("Error thrown for non-string input ");
+}
