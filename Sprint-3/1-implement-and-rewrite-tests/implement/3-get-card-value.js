@@ -80,3 +80,11 @@ try {
 }
 
 // What other invalid card cases can you think of?
+try {
+  getCardValue("A?");// invalid suit
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
