@@ -41,3 +41,12 @@ test("password has at least one English lowercase letter (a-z)", () => {
   // Assert
   expect(result).toEqual(true);
 });
+
+test("password has at least one number (0-9)", () => {
+  // Arrange
+  const password = "1234Aa";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(true);
+});

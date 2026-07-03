@@ -11,7 +11,8 @@ function passwordValidator(password) {
   if (
     password.length < 5 ||
     !/[A-Z]/.test(password) ||
-    !/[a-z]/.test(password)
+    !/[a-z]/.test(password) ||
+    !/[0-9]/.test(password)
   ) {
     return false;
   }
