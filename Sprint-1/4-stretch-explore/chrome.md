@@ -16,11 +16,3 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
-
-MY RESULTS:
-
-After running the alert function the browser to immediately open a pop up box at the top of the screen displaying what i inputted 'Hello World!'.
-
-After running the prompt 'let myName = prompt("what is your name") the browser opened a pop up window that allowed me to type in my name and it was saved after clicking OK.
-
-Running the 'prompt' "myName" the browser displayed the name i inputted in the console immediately.
