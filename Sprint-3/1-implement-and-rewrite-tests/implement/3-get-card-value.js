@@ -130,3 +130,9 @@ try {
 } catch (e) {
   console.log("Error thrown for non-string input ");
 }
+try {
+  getCardValue("A♠♠");
+  console.error("Error was not thrown for extra characters 😢");
+} catch (e) {
+  console.log("Error thrown for extra characters ");
+}
