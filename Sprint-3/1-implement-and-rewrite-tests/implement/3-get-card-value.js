@@ -28,22 +28,35 @@ function getCardValue(card) {
   const validSuits = ["♠", "♥", "♦", "♣"];
   const suit = card.slice(-1); // getting the last character as suit
   const rank = card.slice(0, -1); // getting the rest as rank
-  
+
   if (!validSuits.includes(suit)) {
     throw new Error("Invalid suit");
   }
-  
-  const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+  const validRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
   if (!validRanks.includes(rank)) {
     throw new Error("Invalid rank");
   }
-  
+
   if (rank === "A") return 11;
   if (["J", "Q", "K"].includes(rank)) return 10;
-  
-    return Number(rank);
-  
-  
+
+  return Number(rank);
+
   // TODO: Implement this function
 }
 
@@ -81,7 +94,7 @@ try {
 
 // What other invalid card cases can you think of?
 try {
-  getCardValue("A?");// invalid suit
+  getCardValue("A?"); // invalid suit
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
@@ -89,10 +102,18 @@ try {
   console.log("Error thrown for invalid card 🎉");
 }
 try {
-  getCardValue("1♠");// invalid rank
+  getCardValue("1♠"); // invalid rank
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
   console.log("Error thrown for invalid rank");
+}
+try {
+  getCardValue("A"); // invalid rank
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for missing suit");
 }
