@@ -117,3 +117,10 @@ try {
 } catch (e) {
   console.log("Error thrown for missing suit");
 }
+
+try {
+  getCardValue("");
+  console.error("Error was not thrown for empty string 😢");
+} catch (e) {
+  console.log("Error thrown for empty string ");
+}
