@@ -11,10 +11,13 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  if (denominator === 0) {
+  if (!Number.isFinite(numerator) || !Number.isFinite(denominator)) {
     return false;
   }
-  if (Number.isNaN(numerator) || Number.isNaN(denominator)) {
+  if (!Number.isInteger(numerator) || !Number.isInteger(denominator)) {
+    return false;
+  }
+  if (denominator === 0) {
     return false;
   }
   return Math.abs(numerator) < Math.abs(denominator);
