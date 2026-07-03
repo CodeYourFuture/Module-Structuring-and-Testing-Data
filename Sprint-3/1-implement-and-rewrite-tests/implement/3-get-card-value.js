@@ -67,6 +67,7 @@ assertEquals(getCardValue("10♦"), 10);
 assertEquals(getCardValue("J♣"), 10);
 assertEquals(getCardValue("Q♥"), 10);
 assertEquals(getCardValue("K♦"), 10);
+assertEquals(getCardValue("2♣"), 2);
 
 // Handling invalid cards
 try {
