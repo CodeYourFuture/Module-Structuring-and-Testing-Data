@@ -1,6 +1,6 @@
 function getOrdinalNumber(num) {
   
-   if(num===11){
+   if(num%100===11 || num%100===12 || num%100===13){
   return num + "th";
  }
    if(num%10===1){
@@ -18,10 +18,8 @@ function getOrdinalNumber(num) {
 
 module.exports = getOrdinalNumber;
 
-
-
-
-
-
-
-//for committing//
+console.log(getOrdinalNumber(11));
+console.log(getOrdinalNumber(23));
+console.log(getOrdinalNumber(22));
+console.log(getOrdinalNumber(21));
+console.log(getOrdinalNumber(111));
