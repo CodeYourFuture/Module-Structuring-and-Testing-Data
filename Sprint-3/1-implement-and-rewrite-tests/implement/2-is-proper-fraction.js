@@ -11,11 +11,8 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  if (!Number.isFinite(numerator) || !Number.isFinite(denominator)) {
-    return false;
-  }
   if (!Number.isInteger(numerator) || !Number.isInteger(denominator)) {
-    return false;
+    return false; // provided that the numerator and denominator are integers, not fintite numbers based on the assumption that the parameters are valid numbers (not NaN or Infinity, or any other non-integer numbers)
   }
   if (denominator === 0) {
     return false;
