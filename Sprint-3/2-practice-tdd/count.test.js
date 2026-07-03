@@ -17,7 +17,14 @@ test("should count multiple occurrences of a character", () => {
   expect(count).toEqual(5);
 });
 
-// Scenario: No Occurrences
+//Scenario: No Occurrences
+test("should return 0 when the character does not exist in the string", () => {
+  const str = "hello";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
 // Given the input string `str`,
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
