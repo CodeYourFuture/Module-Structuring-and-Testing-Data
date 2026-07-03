@@ -24,6 +24,15 @@ test("password has at least 5 characters", () => {
   expect(result).toEqual(true);
 });
 
+test("password with less than 5 characters is invalid", () => {
+  // Arrange
+  const password = "1Aa%";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
+});
+
 test("password has at least one English uppercase letter (A-Z)", () => {
   // Arrange
   const password = "1234bA$";
@@ -31,6 +40,15 @@ test("password has at least one English uppercase letter (A-Z)", () => {
   const result = isValidPassword(password);
   // Assert
   expect(result).toEqual(true);
+});
+
+test("password with no uppercase letters is invalid", () => {
+  // Arrange
+  const password = "1234ab$";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
 });
 
 test("password has at least one English lowercase letter (a-z)", () => {
@@ -42,6 +60,15 @@ test("password has at least one English lowercase letter (a-z)", () => {
   expect(result).toEqual(true);
 });
 
+test("password with no lowercase letters is invalid", () => {
+  // Arrange
+  const password = "1234AB$";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
+});
+
 test("password has at least one number (0-9)", () => {
   // Arrange
   const password = "1234Aa&";
@@ -51,6 +78,15 @@ test("password has at least one number (0-9)", () => {
   expect(result).toEqual(true);
 });
 
+test("password with no numbers is invalid", () => {
+  // Arrange
+  const password = "passWord!";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
+});
+
 test("password has at least one non-alphanumeric symbol: (!, #, $, %, ., *, &)", () => {
   // Arrange
   const password = "1234aA#";
@@ -58,4 +94,22 @@ test("password has at least one non-alphanumeric symbol: (!, #, $, %, ., *, &)",
   const result = isValidPassword(password);
   // Assert
   expect(result).toEqual(true);
+});
+
+test("must not be any previous password in the passwords array.", () => {
+  // Arrange
+  const password = "pas$W0rd";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(true);
+});
+
+test("previous passwords in the passwords array are invalid", () => {
+  // Arrange
+  const password = "Qwerty1#";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
 });
