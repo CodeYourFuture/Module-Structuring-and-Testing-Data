@@ -17,7 +17,7 @@ You must breakdown this problem in order to solve it. Find one test case first a
 const isValidPassword = require("./password-validator");
 test("password has at least 5 characters", () => {
   // Arrange
-  const password = "12345cA";
+  const password = "12345cA!";
   // Act
   const result = isValidPassword(password);
   // Assert
@@ -26,7 +26,7 @@ test("password has at least 5 characters", () => {
 
 test("password has at least one English uppercase letter (A-Z)", () => {
   // Arrange
-  const password = "1234bA";
+  const password = "1234bA$";
   // Act
   const result = isValidPassword(password);
   // Assert
@@ -35,7 +35,7 @@ test("password has at least one English uppercase letter (A-Z)", () => {
 
 test("password has at least one English lowercase letter (a-z)", () => {
   // Arrange
-  const password = "1234Aa";
+  const password = "1234Aa%";
   // Act
   const result = isValidPassword(password);
   // Assert
@@ -44,7 +44,16 @@ test("password has at least one English lowercase letter (a-z)", () => {
 
 test("password has at least one number (0-9)", () => {
   // Arrange
-  const password = "1234Aa";
+  const password = "1234Aa&";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(true);
+});
+
+test("password has at least one non-alphanumeric symbol: (!, #, $, %, ., *, &)", () => {
+  // Arrange
+  const password = "1234aA#";
   // Act
   const result = isValidPassword(password);
   // Assert
