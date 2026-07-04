@@ -22,8 +22,9 @@ function isProperFraction(numerator, denominator) {
 /* new code for trial
 numerator = Number(numerator);
 denominator = Number(denominator);
-if (isNaN(numerator) || isNaN(denominator) {
-return false;})
+if (isNaN(numerator) || isNaN(denominator)) {
+  return false;
+}
 */
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
