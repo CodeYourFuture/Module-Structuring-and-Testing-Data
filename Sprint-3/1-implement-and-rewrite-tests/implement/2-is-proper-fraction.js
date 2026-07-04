@@ -12,7 +12,8 @@
 
 function isProperFraction(numerator, denominator) {
   switch (true) {
-    case Math.abs(numerator / denominator) < 1:
+    case Math.abs(numerator / denominator) < 1 &&
+      Math.abs(numerator / denominator) > 0:
       return true;
     default:
       return false;
