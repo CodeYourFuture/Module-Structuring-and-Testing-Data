@@ -14,3 +14,4 @@ Answer the following questions:
 
 What does `console` store?
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+// Console stores an object containing different methods such as log(), error(), warn() and assert(). The dot(.) is used to access a property of an object. Console.log access the log method, and the console.assert access the assert method of the console.
