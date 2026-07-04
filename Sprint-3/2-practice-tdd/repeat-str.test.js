@@ -1,5 +1,5 @@
 // Implement a function repeatStr
-
+const repeatStr = require("./repeat-str");
 // Given a target string `str` and a positive integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should:
@@ -9,15 +9,7 @@
 // When the repeatStr function is called with these inputs,
 // Then it should return a string that contains the original `str` repeated `count` times.
 
-function repeatStr(str, count) {
-  if (count < 0) {
-    throw new Error("Count must be a non-negative integer");
-  } else if (count === 0) {
-    return "";
-  } else {
-    return str.repeat(count);
-  }
-} 
+
 
 test("should repeat the string count times", () => {
   const str = "hello";
