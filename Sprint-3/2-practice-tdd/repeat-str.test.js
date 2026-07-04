@@ -11,7 +11,7 @@ const repeatStr = require("./repeat-str");
 
 test("should repeat the string count times", () => {
   const str = "hello";
-  const count = -5;
+  const count = 3;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hellohellohello");
 });
