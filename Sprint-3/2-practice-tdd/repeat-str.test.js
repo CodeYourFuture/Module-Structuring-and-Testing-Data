@@ -42,7 +42,7 @@ test("should repeat the string count of 0", () => {
 
 // Case: Handle negative count:
 test(`should throw an error for negative count`, () => {
-  expect(() => repeatedStr("fella", -2)).toThrowError();
+  expect(() => repeatStr("fella", -2)).toThrowError();
 });
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
