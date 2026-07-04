@@ -42,8 +42,8 @@ test("should append 'th' for numbers ending with 11, 12, 13", () => {
 });
 
 // Case 5: Numbers ending with larger numbers of 111, 121, 131
-test("should append 'th' for numbers ending with 111, 121, 131", () => {
+test("should append 'th' for numbers ending with 111, 112, 113", () => {
   expect(getOrdinalNumber(111)).toEqual("111th");
-  expect(getOrdinalNumber(121)).toEqual("121th");
-  expect(getOrdinalNumber(131)).toEqual("131th");
+  expect(getOrdinalNumber(112)).toEqual("112th");
+  expect(getOrdinalNumber(113)).toEqual("113th");
 });
