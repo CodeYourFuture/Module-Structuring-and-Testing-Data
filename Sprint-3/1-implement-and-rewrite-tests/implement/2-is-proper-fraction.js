@@ -11,7 +11,14 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+  if (isNaN(numerator) && isNaN(denominator)) {
+    return false;
+  }
+
+  if (numerator < denominator) {
+    return true;
+  }
+  return false;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -26,8 +33,11 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all cases.
 // What combinations of numerators and denominators should you test?
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(2, 2), false);
+assertEquals(isProperFraction(3, 2), false);
+assertEquals(isProperFraction(4312, 5000), true);
+assertEquals(isProperFraction("Invalid", "data"), false);

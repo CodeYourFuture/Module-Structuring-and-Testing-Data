@@ -22,7 +22,31 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const lastChar = card.length - 1;
+  const rank = card.slice(0, lastChar);
+  const suit = card.slice(lastChar);
+
+  if (rank === "10") {
+    return 10;
+  }
+
+  if (card.length > 2) {
+    throw new Error("Invalid input length");
+  }
+
+  if (!(suit === "♠" || suit === "♥" || suit === "♦" || suit === "♣")) {
+    throw new Error("Invalid suit ", suit);
+  }
+
+  if (rank == "A") {
+    return 11;
+  } else if (rank == "J" || rank == "Q" || rank == "K") {
+    return 10;
+  } else if (!isNaN(rank)) {
+    return Number(rank);
+  } else {
+    throw new Error("Invalid card");
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
