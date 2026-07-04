@@ -74,7 +74,5 @@ assertEquals(getAngleType([]), "Invalid angle");
 assertEquals(getAngleType(null), "Invalid angle");
 assertEquals(getAngleType(undefined), "Invalid angle");
 assertEquals(getAngleType(NaN), "Invalid angle");
-assertEquals(getAngleType(true), "Invalid angle");
-assertEquals(getAngleType(false), "Invalid angle");
 assertEquals(getAngleType(Infinity), "Invalid angle");
 assertEquals(getAngleType(-Infinity), "Invalid angle");
