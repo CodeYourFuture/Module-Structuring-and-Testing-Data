@@ -30,6 +30,9 @@ function getAngleType(angle) {
   if (angle > 180 && angle < 360) {
     return "Reflex angle";
   }
+  if (angle === 360) {
+    return "Full rotation angle";
+  }
   return "Invalid angle";
 }
 
@@ -46,16 +49,32 @@ function assertEquals(actualOutput, targetOutput) {
 }
 
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
-// Example: Identify Right Angles
-const acute = getAngleType(45);
-assertEquals(acute, "Acute angle");
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
-const obtuse = getAngleType(135);
-assertEquals(obtuse, "Obtuse angle");
-const straight = getAngleType(180);
-assertEquals(straight, "Straight angle");
-const reflex = getAngleType(270);
-assertEquals(reflex, "Reflex angle");
-const invalidAngle = getAngleType(-10);
-assertEquals(invalidAngle, "Invalid angle");
+// Acute boundaries
+assertEquals(getAngleType(0), "Invalid angle");
+assertEquals(getAngleType(1), "Acute angle");
+assertEquals(getAngleType(89), "Acute angle");
+// Right angle
+assertEquals(getAngleType(90), "Right angle");
+// Obtuse boundaries
+assertEquals(getAngleType(91), "Obtuse angle");
+assertEquals(getAngleType(179), "Obtuse angle");
+// Straight angle
+assertEquals(getAngleType(180), "Straight angle");
+// Reflex boundaries
+assertEquals(getAngleType(181), "Reflex angle");
+assertEquals(getAngleType(270), "Reflex angle");
+assertEquals(getAngleType(279), "Reflex angle");
+// Full rotation
+assertEquals(getAngleType(360), "Full rotation angle");
+// Invalid angles
+assertEquals(getAngleType(-10), "Invalid angle");
+assertEquals(getAngleType(361), "Invalid angle");
+assertEquals(getAngleType("hello"), "Invalid angle");
+assertEquals(getAngleType([]), "Invalid angle");
+assertEquals(getAngleType(null), "Invalid angle");
+assertEquals(getAngleType(undefined), "Invalid angle");
+assertEquals(getAngleType(NaN), "Invalid angle");
+assertEquals(getAngleType(true), "Invalid angle");
+assertEquals(getAngleType(false), "Invalid angle");
+assertEquals(getAngleType(Infinity), "Invalid angle");
+assertEquals(getAngleType(-Infinity), "Invalid angle");
