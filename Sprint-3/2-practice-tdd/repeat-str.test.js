@@ -42,8 +42,23 @@ test("should repeat the string count of 0", () => {
 
 // Case: Handle negative count:
 test(`should throw an error for negative count`, () => {
-  expect(() => repeatStr("fella", -2)).toThrowError();
+  expect(() => repeatStr("fella", -2)).toThrowError(
+    "Invalid input: count must be a non-negative integer"
+  );
 });
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
+test("should return empty string for non-string input", () => {
+  expect(repeatStr([], 3)).toEqual("");
+  expect(repeatStr(null, 3)).toEqual("");
+});
+test("should handle large repeat counts", () => {
+  expect(repeatStr("a", 1000).length).toEqual(1000);
+});
+test("should repeat a multi-character string multiple times", () => {
+  expect(repeatStr("ab", 3)).toEqual("ababab");
+});
+test("should return an empty string when repeating an empty string", () => {
+  expect(repeatStr("", 5)).toEqual("");
+});
