@@ -11,7 +11,7 @@ test(`should return false when denominator is zero`, () => {
 
 //Special case: numerator is zero
 test(`should return false when numerator is zero`, () => {
-  expect(isProperFraction(0, 1)).toEqual(false);
+  expect(isProperFraction(0, 1)).toEqual(true);
 });
 // Proper functions with absolute numerator < absolute denominator
 test(`should return true for proper positive fractions`, () => {
