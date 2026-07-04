@@ -28,3 +28,26 @@ test("should return 0 when the character does not occur in the string", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+// Single occurrence
+test("should count a single occurrence of a character", () => {
+  const str = "hello";
+  const char = "e";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
+
+// Empty string
+test("should return 0 for an empty string", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Case sensitivity
+test("should treat uppercase and lowercase letters as different", () => {
+  const str = "AaAa";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+});
