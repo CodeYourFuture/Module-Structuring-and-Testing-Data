@@ -24,8 +24,8 @@ function formatAs12HourClock(time) {
 
 // Existing tests
 console.assert(
-  formatAs12HourClock("08:00") === "08:00 am",
-  "08:00 should be 08:00 am"
+  formatAs12HourClock("8:00") === "8:00 am",
+  "8:00 should be 8:00 am"
 );
 
 console.assert(
@@ -37,8 +37,8 @@ console.assert(
 
 // Midnight
 console.assert(
-  formatAs12HourClock("00:00") === "12:00 am",
-  "00:00 should be 12:00 am"
+  formatAs12HourClock("0:00") === "12:00 am",
+  "0:00 should be 12:00 am"
 );
 
 // Noon
@@ -55,8 +55,8 @@ console.assert(
 
 // AM with minutes
 console.assert(
-  formatAs12HourClock("09:45") === "09:45 am",
-  "09:45 should be 09:45 am"
+  formatAs12HourClock("9:45") === "9:45 am",
+  "9:45 should be 9:45 am"
 );
 
 // Last minute of the day
