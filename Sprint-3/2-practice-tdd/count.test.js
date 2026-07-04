@@ -24,7 +24,7 @@ test("should count multiple occurrences of a character", () => {
 // Then it should return 0, indicating that no occurrences of `char` were found.
 test("should not find any occurrences", () => {
   const str = "aaaaaaaa";
-  const char = "something";
+  const char = "b";
 
   const count = countChar(str, char);
   expect(count).toEqual(0);
