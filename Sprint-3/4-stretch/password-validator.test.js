@@ -11,6 +11,7 @@ To be valid, a password must:
 - Have at least one number (0-9)
 - Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
 - Must not be any previous password in the passwords array. 
+-Must not contain any spaces.
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
@@ -22,5 +23,53 @@ test("password has at least 5 characters", () => {
     const result = isValidPassword(password);
     // Assert
     expect(result).toEqual(true);
+}
+test("password has at least one English uppercase letter (A-Z)", () => {
+    // Arrange
+    const password = "1A345";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+}
+test("password has at least one English lowercase letter (a-z)", () => {
+    // Arrange
+    const password = "1a345";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+}
+test("password has at least one number (0-9)", () => {
+    // Arrange
+    const password = "Abcd5";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+}
+test("password has at least one special character", () => {
+    // Arrange
+    const password = "1234!";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(true);
+}
+test("password has no spaces", () => {
+    // Arrange
+    const password = "Abc 5$";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(false);
+}
+test("password is not a previous password", () => {
+    // Arrange
+    const password = "12345";
+    // Act
+    const result = isValidPassword(password);
+    // Assert
+    expect(result).toEqual(false);
 }
 );
