@@ -42,6 +42,7 @@ The last 2 digits represent pence.
 
 Everything before that represents pounds.
 So we take from the start (0) up to (but not including) the position where the last 2 digits begin.
+*/
 /* line 14 Extract the pence part and make sure it’s always 2 digits.
 
 length is 3.
@@ -59,3 +60,4 @@ For "99" → stays "99".
 Pence must always be shown as two digits (like £3.05, not £3.5).
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+*/

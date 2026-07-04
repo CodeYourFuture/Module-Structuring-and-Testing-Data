@@ -12,6 +12,6 @@ const last4Digits = `${cardNumber.slice(-4)}`;
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // At first I thought the error would be that last4Digits is not defined, but I learned that the error is actually because the slice method is being called on a number, which doesn't have that method.
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
-const last4Digits = cardNumber.toString().slice(-4); // first option
-const last4Digits = String(cardNumber).slice(-4); // second option
-const last4Digits = `${cardNumber}`.slice(-4); // third option
+const last4Digits = cardNumber.toString().slice(-4); // as slice is a string method, we need to convert the number to a string so that we can use the slice method on it. This can be done by using the toString() method or by using String(cardNumber) or by using template literals as shown in the code snippet
+const last4Digits = String(cardNumber).slice(-4);
+const last4Digits = `${cardNumber}`.slice(-4);
