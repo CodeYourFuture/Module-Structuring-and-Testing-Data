@@ -16,8 +16,8 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function touppersneakers (input){
-    return input.trim().replace(/\s+/g, "_").touppercase();
+    return input.toUpperCase();
 }
-console.log(touppersneakers("hello there"));//Hello There
-console.log(touppersneakers("lord of the rings")); // lord of the rings
-console.log(touppersneakers("good morning")); // GOOD MORNING
+console.log(touppersneakers("hello there").toUpperCase());//Hello There
+console.log(touppersneakers("lord of the rings").toUpperCase()); // LORD_OF_THE_RINGS
+console.log(touppersneakers("good morning").toUpperCase()); // GOOD MORNING

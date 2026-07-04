@@ -4,7 +4,7 @@
 
 
 function multiply(a, b) {
-concole.lpg( a* b);
+concole.log( a* b);
 
 }
 
@@ -18,5 +18,6 @@ console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 function multiply (a,b){
   if (a===10 && b===32){
     let result =a * b ;
+    return result;
   }
 }
