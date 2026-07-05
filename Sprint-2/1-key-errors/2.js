@@ -1,20 +1,9 @@
 
-// Predict and explain first BEFORE you run any code...
+// Prediction: SyntaxError — a function parameter must be a valid identifier, not a literal number.
+// Error: SyntaxError: Unexpected number
+// Explanation: `3` is a number literal and cannot be used as a parameter name.
+// Fix: use a named parameter like `num`.
 
-// this function should square any number but instead we're going to get an error
-
-// =============> write your prediction of the error here
-
-function square(3) {
-    return num * num;
+function square(num) {
+  return num * num;
 }
-
-// =============> write the error message here
-
-// =============> explain this error message here
-
-// Finally, correct the code to fix the problem
-
-// =============> write your new code here
-
-
