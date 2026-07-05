@@ -1,7 +1,7 @@
 const cardNumber = 4533787178994213;
 console.log(cardNumber.toString());
-const formatcardNumber = cardNumber.toString();
-const last4Digits = formatcardNumber.slice(-4); 
+const formatCardNumber = cardNumber.toString();
+const last4Digits = formatCardNumber.slice(-4); 
 console.log(last4Digits);
 
 // The last4Digits variable should store the last 4 digits of cardNumber
