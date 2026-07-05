@@ -11,7 +11,7 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
-// `alert` function deisplays a popup dialogue box with a message and the user have to click 'ok' button. 
+// `alert` function displays a popup dialogue box with a message and the user have to click 'ok' button. 
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
