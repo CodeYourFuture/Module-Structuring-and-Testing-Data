@@ -24,3 +24,9 @@ test(`should return false when numerator is greater than denominator`, () => {
   expect(isProperFraction(2, 1)).toEqual(false);
 });
 
+// Special case: numerator is less than denominator
+test(`should return true when numerator is less than denominator`, () => {
+  expect(isProperFraction(1, 2)).toEqual(true);
+});
+
+
