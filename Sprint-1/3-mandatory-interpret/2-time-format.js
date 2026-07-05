@@ -19,7 +19,7 @@ console.log(result);
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
-// The expression movieLength % 60 devides the movieLength by 60 seconds and return the reminder 
+// The expression movieLength % 60 divides the movieLength by 60 seconds and return the reminder 
 // which will be stroed in the const remainingSeconds.
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
