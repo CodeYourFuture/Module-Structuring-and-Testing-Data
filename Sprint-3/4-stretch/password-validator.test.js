@@ -17,7 +17,7 @@ You must breakdown this problem in order to solve it. Find one test case first a
 const isValidPassword = require("./password-validator");
 test("password has at least 5 characters", () => {
   // Arrange
-  const password = "12345";
+  const password = "Pen5!";
   // Act
   const result = isValidPassword(password);
   // Assert
@@ -49,5 +49,5 @@ test("returns false if there is no symbol", () => {
 });
 
 test("returns false if password is a previous password", () => {
-  expect(isValidPassword("HeLlo5.")).toBe(false);
+  expect(isValidPassword("heLlo5.")).toBe(false);
 });
