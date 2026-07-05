@@ -20,7 +20,7 @@ console.log(result);
 //The expression assigned to totalMinutes means that the remaining seconds are subtracted from the movieLength and then divided by 60 to get the total number of minutes in the movie length.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//The variable result represents the total time of the movie, in hours minutes and seconds. A better name for this variable could be totaltime
+//The variable result represents the total time of the movie, in hours minutes and seconds. A better name for this variable could be totalTimeStr
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 //Yes it would work, we have accommodated for all length

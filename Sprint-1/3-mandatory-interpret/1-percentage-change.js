@@ -18,7 +18,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
-// Line 5, it was missing a comma between the characters that are to be replaced so to fix the problem, include a comma
+// Line 5, A comma was missing between the arguments. Include a comma between the arguments to fix the error.
 
 // c) Identify all the lines that are variable reassignment statements
 //Lines 7 & 8

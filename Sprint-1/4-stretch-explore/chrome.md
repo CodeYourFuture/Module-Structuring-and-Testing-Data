@@ -18,4 +18,5 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 It brings up a input tab to enter an answer
 What is the return value of `prompt`?
-the input entered
+the input entered and sent by pressing ok, else it would return null
+

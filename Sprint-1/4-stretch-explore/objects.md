@@ -19,3 +19,4 @@ What does `console` store? The console object provides access to the debugging c
 What does the syntax `console.log` or `console.assert` mean?
 The assert() method writes a message to the console if an expression evaluates to false. The log() method writes (logs) a message to the console.
 In particular, what does the `.` mean?
+This is a Dot Notation, it is used to access an object's properties or methods
