@@ -39,4 +39,9 @@ test(`should return true when numerator is positive and denominator is negative`
   expect(isProperFraction(1, -2)).toEqual(true);
 });
 
+// Special case: negative numerator and negative denominator
+test(`should return true when numerator and denominator are both negative`, () => {
+  expect(isProperFraction(-3, -4)).toEqual(true);
+});
+
 
