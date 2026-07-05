@@ -8,3 +8,8 @@ const isProperFraction = require("../implement/2-is-proper-fraction");
 test(`should return false when denominator is zero`, () => {
   expect(isProperFraction(1, 0)).toEqual(false);
 });
+
+// Special case: numerator is zero
+test(`should return true when numerator is zero and denominator is non-zero`, () => {
+  expect(isProperFraction(0, 5)).toEqual(true);
+});
