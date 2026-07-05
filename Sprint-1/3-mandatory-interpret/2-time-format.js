@@ -12,14 +12,21 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
+//[ChunYanWong] 6
 
 // b) How many function calls are there?
+//[ChunYanWong] 1
 
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
+// [ChunYanWong] the remainder - remaining seconds
+
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
+// [ChunYanWong] the movielength rounded to the neatest minutes
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
+// [ChunYanWong] the novie length in hours, minutes and seconds and resultHHMMSS may be better
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+// [ChunYanWong] No, decimal number cannot be handled correctly
