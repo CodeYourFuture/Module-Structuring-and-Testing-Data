@@ -15,9 +15,13 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  // TODO: Implement this function
+  if (angle <= 0 || angle >= 360) return "Invalid angle";
+  if (angle < 90) return "Acute angle";
+  if (angle === 90) return "Right angle";
+  if (angle < 180) return "Obtuse angle";
+  if (angle === 180) return "Straight angle";
+  if (angle < 360) return "Reflex angle";
 }
-
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getAngleType;
@@ -35,3 +39,47 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+
+const straight = getAngleType(180);
+assertEquals(straight, "Straight angle");
+
+const acute_upper_boundary = getAngleType(89);
+assertEquals(acute_upper_boundary, "Acute angle");
+
+const acute_lower_boundary = getAngleType(1);
+assertEquals(acute_lower_boundary, "Acute angle");
+
+const invalid_negative = getAngleType(-1);
+assertEquals(invalid_negative, "Invalid angle");
+
+const invalid_zero = getAngleType(0);
+assertEquals(invalid_zero, "Invalid angle");
+
+const invalid_full = getAngleType(360);
+assertEquals(invalid_full, "Invalid angle");
+
+const invalid_big = getAngleType(361);
+assertEquals(invalid_big, "Invalid angle");
+
+const obtuse_lower_boundary = getAngleType(91);
+assertEquals(obtuse_lower_boundary, "Obtuse angle");
+
+const obtuse_upper_boundary = getAngleType(179);
+assertEquals(obtuse_upper_boundary, "Obtuse angle");
+
+const reflex_lower_boundary = getAngleType(181);
+assertEquals(reflex_lower_boundary, "Reflex angle");
+
+const reflex_upper_boundary = getAngleType(359);
+assertEquals(reflex_upper_boundary, "Reflex angle");
+
+//decimal test cases
+
+const acute_decimal = getAngleType(89.9);
+assertEquals(acute_decimal, "Acute angle");
+
+const obtuse_decimal = getAngleType(179.9);
+assertEquals(obtuse_decimal, "Obtuse angle");
+
+const reflex_decimal = getAngleType(180.1);
+assertEquals(reflex_decimal, "Reflex angle");
