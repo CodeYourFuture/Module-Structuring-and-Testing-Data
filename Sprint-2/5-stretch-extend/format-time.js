@@ -3,7 +3,7 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 function pad(num) {
   let numString = num.toString();
-  while (numString.length < 2) {
+  if (numString.length < 2) {
     numString = "0" + numString;
   }
   return numString;
@@ -11,11 +11,13 @@ function pad(num) {
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  const minute = pad(Number(time.slice(3,5)));
+  const minute = time.slice(3,5);
   if (hours > 12) {
-    return `${hours - 12}:${minute} pm`;
-  } else if (hours == 12 & minute == '00'){
-    return `${time} pm`;
+    return `${pad(hours - 12)}:${minute} pm`;
+  } else if (hours == 12){
+    return `12:${minute} pm`;
+  } else if (hours == 00){
+    return `12:${minute} am`;
   }
   return `${time} am`;
 }
@@ -49,7 +51,7 @@ console.assert(
 );
 
 const currentOutput5 = formatAs12HourClock("00:00");
-const targetOutput5 = "00:00 am";
+const targetOutput5 = "12:00 am";
 console.assert(
   currentOutput5 === targetOutput5,
   `current output: ${currentOutput5}, target output: ${targetOutput5}`
@@ -60,4 +62,46 @@ const targetOutput6 = "12:00 pm";
 console.assert(
   currentOutput6 === targetOutput6,
   `current output: ${currentOutput6}, target output: ${targetOutput6}`
+);
+
+const currentOutput7 = formatAs12HourClock("15:25");
+const targetOutput7 = "03:25 pm";
+console.assert(
+  currentOutput7 === targetOutput7,
+  `current output: ${currentOutput7}, target output: ${targetOutput7}`
+);
+
+const currentOutput8 = formatAs12HourClock("00:08");
+const targetOutput8 = "12:08 am";
+console.assert(
+  currentOutput8 === targetOutput8,
+  `current output: ${currentOutput8}, target output: ${targetOutput8}`
+);
+
+const currentOutput9 = formatAs12HourClock("08:35");
+const targetOutput9 = "08:35 am";
+console.assert(
+  currentOutput9 === targetOutput9,
+  `current output: ${currentOutput9}, target output: ${targetOutput9}`
+);
+
+const currentOutput10 = formatAs12HourClock("20:35");
+const targetOutput10 = "08:35 pm";
+console.assert(
+  currentOutput10 === targetOutput10,
+  `current output: ${currentOutput10}, target output: ${targetOutput10}`
+);
+
+const currentOutput11 = formatAs12HourClock("12:34");
+const targetOutput11 = "12:34 pm";
+console.assert(
+  currentOutput11 === targetOutput11,
+  `current output: ${currentOutput11}, target output: ${targetOutput11}`
+);
+
+const currentOutput12 = formatAs12HourClock("00:34");
+const targetOutput12 = "12:34 am";
+console.assert(
+  currentOutput12 === targetOutput12,
+  `current output: ${currentOutput12}, target output: ${targetOutput12}`
 );
