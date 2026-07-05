@@ -8,4 +8,5 @@ let lastName = "Johnson";
 let initials = ``;
 
 // https://www.google.com/search?q=get+first+character+of+string+mdn
-
+// added by ChunYanWong for the solution
+initials = firstName.substring(0,1) + middleName.substring(0,1) + lastName.substring(0,1);
