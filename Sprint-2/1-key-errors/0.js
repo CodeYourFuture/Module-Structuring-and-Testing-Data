@@ -12,3 +12,6 @@ function capitalise(str) {
 // =============> write your explanation here
 // =============> write your new code here
 // [ChunYanWong]The uncaught type error will occur if the string is empty
+// if (str.length > 0) {
+//    let str = ...
+// 
