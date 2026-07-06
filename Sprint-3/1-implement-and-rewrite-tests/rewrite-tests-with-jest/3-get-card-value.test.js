@@ -15,6 +15,11 @@ test(`Should return 11 when given an ace card`, () => {
 test(`Should return 2 when given a 2 card`, () => {
   expect(getCardValue("2♠")).toEqual(2);
 });
+test(`Should return 3 when given a 3 card`, () => {
+  expect(getCardValue("3♠")).toEqual(3);
+});
+  
+
 //   Face Cards (J, Q, K)
 //   Invalid Cards
 
