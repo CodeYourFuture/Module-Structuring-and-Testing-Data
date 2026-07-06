@@ -34,6 +34,11 @@ function getCardValue(card) {
 
   const faceCardValues = {'A': 11, 'J': 10, 'Q': 10, 'K': 10};
 
+  if(faceCardValues[value] === undefined && (Number(value) < 2 || Number(value) > 10)) {
+    throw new Error("Invalid card");
+  }
+
+
   if (faceCardValues[value] !== undefined) {
     return faceCardValues[value];
   } 
