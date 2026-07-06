@@ -121,7 +121,7 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
-  console.log("Error thrown for invalid rank 🎉");
+  console.log("Error thrown for invalid card  🎉");
 }
 
 
@@ -131,5 +131,5 @@ try {
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
-  console.log("Error thrown for invalid suit 🎉");
+  console.log("Error thrown for invalid card 🎉");
 }
