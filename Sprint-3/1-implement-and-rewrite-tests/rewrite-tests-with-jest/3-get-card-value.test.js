@@ -21,6 +21,10 @@ test(`Should return 3 when given a 3 card`, () => {
 test(`Should return 4 when given a 4 card`, () => {
   expect(getCardValue("4♠")).toEqual(4);
 });
+test(`Should return 5 when given a 5 card`, () => {
+  expect(getCardValue("5♠")).toEqual(5);
+});
+
   
 
 //   Face Cards (J, Q, K)
