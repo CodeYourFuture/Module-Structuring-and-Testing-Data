@@ -15,7 +15,31 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  // TODO: Implement this function
+ // first converting conditions into variables
+  const acuteAngle = (angle > 0 && angle < 90);
+  const rightAngle = (angle === 90);
+  const obtuseAngle = (angle > 90 && angle < 180);
+  const straightAngle = (angle === 180);
+  const reflexAngle = (angle > 180 && angle < 360);
+  const zeroAngle = (angle === 0);
+  
+  
+  if (rightAngle) {
+    // checking for conditions
+      return  "Right angle";
+  } else if (zeroAngle) {
+      return "Invalid angle";
+  }else if (obtuseAngle) {
+      return "Obtuse angle";
+  } else if (straightAngle) {
+      return "Straight angle";
+  } else if (reflexAngle) {
+      return "Reflex angle";
+  } else if (acuteAngle) {
+      return "Acute angle";
+  } else if (angle === zeroAngle || angle != acuteAngle || angle != rightAngle || angle != obtuseAngle || angle != straightAngle || angle != reflexAngle) {
+        return "Invalid angle"; 
+  }
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
@@ -35,3 +59,4 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+
