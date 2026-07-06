@@ -11,10 +11,17 @@ function square(3) {
 
 // =============> write the error message here
 
+// [ChunYanWong] Uncaught SyntaxError SyntaxError: Unexpected number
+
 // =============> explain this error message here
+
+// [ChunYanWong] number 3 cannot be parameter
 
 // Finally, correct the code to fix the problem
 
 // =============> write your new code here
+
+// [ChunYanWong] function square(num) {
+// ...
 
 
