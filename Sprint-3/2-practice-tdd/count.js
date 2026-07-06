@@ -1,5 +1,9 @@
 function countChar(stringOfCharacters, findCharacter) {
-  return 5
+  const regEx = new RegExp(`[^${findCharacter}]`, "g");
+  const numOfMatchedChar = stringOfCharacters.replaceAll(regEx, "").length;
+  return numOfMatchedChar;
 }
+
+console.log(countChar("dafsadf", "a"));
 
 module.exports = countChar;
