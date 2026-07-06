@@ -12,7 +12,7 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
-  if (denominator === 0 || numerator / denominator > 1) {
+  if (denominator === 0 || Math.abs(numerator / denominator) > 1) {
     return false;
   }
   return true;
@@ -50,6 +50,12 @@ const testCases = [
   [6, 3, false],
   [8, 4, false],
   [10, 5, false],
+  [-1, 2, true],
+  [2, -4, true],
+  [-3, -6, true],
+  [-4, 0, false],
+  [0, 5, true],
+  [-5, 4, false],
 ];
 
 // loop through each case and assert that the output is correct
