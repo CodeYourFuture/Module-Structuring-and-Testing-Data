@@ -23,6 +23,27 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  const rank = card.slice(0, card.length - 1);
+
+  if (
+    rank !== "A" &&
+    rank !== "K" &&
+    rank !== "Q" &&
+    rank !== "J" &&
+    isNaN(rank)
+  ) {
+    throw new Error("Invalid card");
+  }
+
+  if (rank === "A") {
+    return 11;
+  }
+
+  if (rank === "K" || rank === "Q" || rank === "J") {
+    return 10;
+  }
+
+  return Number(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,6 +61,13 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("K♥"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("10♠"), 10);
+assertEquals(getCardValue("2♥"), 2);
+assertEquals(getCardValue("9♣"), 9);
 
 // Handling invalid cards
 try {
@@ -52,3 +80,30 @@ try {
 }
 
 // What other invalid card cases can you think of?
+try {
+  getCardValue("1♠");
+  console.error("Should throw error");
+} catch (e) {
+  console.log("Error thrown correctly");
+}
+
+try {
+  getCardValue("11♠");
+  console.error("Should throw error");
+} catch (e) {
+  console.log("Error thrown correctly");
+}
+
+try {
+  getCardValue("A");
+  console.error("Should throw error");
+} catch (e) {
+  console.log("Error thrown correctly");
+}
+
+try {
+  getCardValue("♠A");
+  console.error("Should throw error");
+} catch (e) {
+  console.log("Error thrown correctly");
+}
