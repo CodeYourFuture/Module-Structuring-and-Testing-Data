@@ -15,6 +15,10 @@ function convertToPercentage(decimalNumber) {
 console.log(decimalNumber);
 
 // =============> write your explanation here
+// [ChunYanWong] decimalNumber is undefined in the main function so error will occur
+
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
+// [ChunYanWong] Add const decimalNumber = 0.5 in the main function 
+
