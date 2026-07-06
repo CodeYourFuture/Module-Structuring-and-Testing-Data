@@ -14,7 +14,35 @@ test(`should return "Acute angle" when (0 < angle < 90)`, () => {
 });
 
 // Case 2: Right angle
+
+test(`Right angle`, () => {
+  expect(getAngleType(90)).toEqual("Right angle");
+});
+
 // Case 3: Obtuse angles
+
+test(`Obtuse angle`, () => {
+  expect(getAngleType(91)).toEqual("Obtuse angle");
+  expect(getAngleType(135)).toEqual("Obtuse angle");
+  expect(getAngleType(179)).toEqual("Obtuse angle");
+});
+
 // Case 4: Straight angle
+
+test(`Straight angle`, () => {
+  expect(getAngleType(180)).toEqual("Straight angle");
+});
+
 // Case 5: Reflex angles
+
+test("reflex angle", () => {
+  expect(getAngleType(181)).toEqual("Reflex angle");
+  expect(getAngleType(270)).toEqual("Reflex angle");
+  expect(getAngleType(359)).toEqual("Reflex angle");
+});
+
 // Case 6: Invalid angles
+test("invalid angle", () => {
+  expect(getAngleType(-10)).toEqual("Invalid angle");
+  expect(getAngleType(361)).toEqual("Invalid angle");
+});

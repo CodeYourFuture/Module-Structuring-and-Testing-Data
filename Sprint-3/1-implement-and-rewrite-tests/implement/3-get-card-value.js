@@ -20,24 +20,21 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
- const rank = card.slice(0, -1);
+  const rank = card.slice(0, -1);
 
-
-
-  if (rank === "A"){
-  return 11 ;  
+  if (rank === "A") {
+    return 11;
+  } else if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
   }
-  else if (rank === "J" || rank === "Q" || rank === "K"){
-  return 10 ;  
-  };
 
+  const value = Number(rank);
 
-const value = Number(rank);
+  if (value >= 2 && value <= 10) {
+    return value;
+  }
 
-  if( value>=2 && value <= 10 ){
-  return value};
-
-  throw new Error("invalid card!");
+  throw new Error("Invalid card!");
 }
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -64,22 +61,20 @@ try {
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
 }
- 
 
-try { 
+try {
   getCardValue("null");
 
   console.error("Error was not thrown for null card 😢");
 } catch (e) {
-  console.log("Error thrown for invalid card 🎉")
+  console.log("Error thrown for invalid card 🎉");
 }
 
-try { 
+try {
   getCardValue("0");
 
   console.error("Error was not thrown for 0 card 😢");
 } catch (e) {
-  console.log("Error thrown for invalid card 🎉")
+  console.log("Error thrown for invalid card 🎉");
 }
 // What other invalid card cases can you think of?
-
