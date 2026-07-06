@@ -16,7 +16,7 @@
 //
 function calculateBMI(weight, height) {
     let bmi = weight / (height **2 )// weight divided by height squared.
-    return  `Your Body Mass Index is ${bmi.toFixed(1)} units`// toFixed(1) insures that result is displayed 
-    // with 1 decimal point
-}
+    return  `Your Body Mass Index is ${bmi.toFixed(1)} units`// toFixed(1) insures that result is displayed with 1 decimal place
+}                                                           
+//
 console.log(calculateBMI(87, 1.86))
