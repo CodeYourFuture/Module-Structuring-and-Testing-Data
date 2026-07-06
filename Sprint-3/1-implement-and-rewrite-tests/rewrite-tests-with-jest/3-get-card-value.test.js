@@ -27,6 +27,9 @@ test(`Should return 5 when given a 5 card`, () => {
 test(`Should return 6 when given a 6 card`, () => {
   expect(getCardValue("6♠")).toEqual(6);
 });
+test(`Should return 7 when given a 7 card`, () => {
+  expect(getCardValue("7♠")).toEqual(7);
+});
 
   
 
