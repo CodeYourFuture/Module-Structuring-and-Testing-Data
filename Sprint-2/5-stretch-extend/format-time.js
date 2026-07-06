@@ -4,14 +4,15 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
+  const minutes = Number(time.slice(3, 5)).toString().padStart(2, "0");
   if (hours === 0 || hours === 24) {
-    return `12:${time.slice(3, 5)} am`;
+    return `12:${minutes} am`;
   } else if (hours > 12) {
-    return `${(hours - 12).toString().padStart(2, "0")}:${time.slice(3, 5)} pm`;
+    return `${(hours - 12).toString().padStart(2, "0")}:${minutes} pm`;
   } else if (hours < 12) {
-    return `${time.slice(0, 2)}:${time.slice(3, 5)} am`;
+    return `${hours.toString().padStart(2, "0")}:${minutes} am`;
   } else {
-    return `${time.slice(0, 2)}:${time.slice(3, 5)} pm`;
+    return `${hours.toString().padStart(2, "0")}:${minutes} pm`;
   }
 }
 
