@@ -38,9 +38,36 @@ console.assert(
   `current output: ${currentOutput4}, target output: ${targetOutput4}`
 );
 
+const currentOutput5 = formatAs12HourClock("14:30");
+const targetOutput5 = "2:30 pm";
+console.assert(
+  currentOutput5 === targetOutput5,
+  `current output: ${currentOutput5}, target output: ${targetOutput5}`
+);
+
 console.log(formatAs12HourClock("08:00"));
 console.log(formatAs12HourClock("23:00"));
 console.log(formatAs12HourClock("00:00"));
 console.log(formatAs12HourClock("12:00"));
+console.log(formatAs12HourClock("14:30"));
 
 //The function did not handle the edge cases 00:00 and 12:00.
+// The correct function should be like this
+function formatAs12HourClock(time) {
+  const hours = Number(time.slice(0, 2));
+  const minutes = time.slice(2);
+
+  if (hours === 0) {
+    return `12${minutes} am`;
+  }
+
+  if (hours === 12) {
+    return `12${minutes} pm`;
+  }
+
+  if (hours > 12) {
+    return `${hours - 12}${minutes} pm`;
+  }
+
+  return `${time} am`;
+}
