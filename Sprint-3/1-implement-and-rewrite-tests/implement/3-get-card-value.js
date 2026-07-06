@@ -27,32 +27,18 @@ function getCardValue(card) {
   let rank = card.slice(0, -1);
   let suit = card.slice(-1);
 
-  // Validate rank 
-  if (rank !== "A" &&
-      rank !== "2" &&
-      rank !== "3" &&
-      rank !== "4" &&
-      rank !== "5" &&
-      rank !== "6" &&
-      rank !== "7" &&
-      rank !== "8" &&
-      rank !== "9" &&
-      rank !== "10" &&
-      rank !== "J" &&
-      rank !== "Q" &&
-      rank !== "K")
-       {
-        throw new Error("Invalid Rank");
-       }
+  const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const validSuits = ["♠", "♥", "♦", "♣"];
 
-// Validate suit
-      if(suit  !== "♠" &&
-         suit  !== "♥" &&
-         suit  !== "♦" &&
-         suit  !== "♣" )
-      {
-        throw new Error("Invalid Suit")
-      }
+  let isValidRank = validRanks.includes(rank);
+  let isValidSuit = validSuits.includes(suit);
+
+
+
+// Invalid  Card
+if( !isValidRank || !isValidSuit ){
+  throw new Error("Invalid Card")
+}
 
   if(rank == "A"){
     return 11;
