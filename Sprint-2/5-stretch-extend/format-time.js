@@ -4,10 +4,10 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  const minutes = time.slice(3, 5);
+  const minutes = time.slice(3, 5);  // The minute variable is added to manipulate the minutes by storing the original minutes as we are converting only the hours not the minutes.  
 
   if (hours > 12) {
-    return `${String(hours - 12).padStart(2, "0")}:${minutes} pm`;
+    return `${String(hours - 12).padStart(2, "0")}:${minutes} pm`; // Here String object is added to convert hours into strings so the padStart can be used. This is because the padStart method only works with strings.
   } else if (hours === 12) {
     return `12:${minutes} pm`;
   } else if (hours === 0) {
