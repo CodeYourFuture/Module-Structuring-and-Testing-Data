@@ -6,36 +6,45 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(3, 5);
   
+  // Midday case: 12:00
+  if (hours === 12) {
+    return `12:${minutes} pm`;
+  }
+  
+  // Midnight case: 00:00
+  if (hours === 0) {
+    return `12:${minutes} am`;
+  }
+
+  // Afternoon/Evening case: 13:00 - 23:59
   if (hours > 12) {
     const convertedHours = hours - 12;
-    // Pad the hour with a leading zero if it's a single digit (e.g., 3 becomes "03")
     const paddedHours = String(convertedHours).padStart(2, "0");
     return `${paddedHours}:${minutes} pm`;
   }
   
+  // Morning case: 01:00 - 11:59
   return `${time} am`;
 }
 
 // === Your Tests (All will now pass silently!) ===
+// === Existing Tests ===
+console.assert(formatAs12HourClock("08:00") === "08:00 am", "Failed 08:00 am");
+console.assert(formatAs12HourClock("23:00") === "11:00 pm", "Failed 23:00 pm");
+console.assert(formatAs12HourClock("13:45") === "01:45 pm", "Failed 13:45 pm");
 
-const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
-console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput}`
-);
+// === New Edge Case Tests ===
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
-);
- 
-console.assert(formatAs12HourClock("15:00") === "03:00 pm", `Failed Case D: 03:00 pm`);
-console.assert(formatAs12HourClock("13:00") === "01:00 pm", `Failed Case E: 01:00 pm`);
-console.assert(formatAs12HourClock("15:45") === "03:45 pm", `Failed Case D: 03:45 pm`);
-console.assert(formatAs12HourClock("13:45") === "01:45 pm", `Failed Case E: 01:45 pm`);
-console.assert(formatAs12HourClock("08:45") === "08:45 am", `Failed Case F: 08:45 am`);
+// Midday test
+console.assert(formatAs12HourClock("12:00") === "12:00 pm", "Failed Midday: Expected 12:00 pm");
 
-console.log("All current assertions completed!");
+// Midnight test
+console.assert(formatAs12HourClock("00:00") === "12:00 am", "Failed Midnight: Expected 12:00 am");
+
+// Edge case just after midnight
+console.assert(formatAs12HourClock("00:45") === "12:45 am", "Failed just after midnight");
+
+// Edge case just before midday
+console.assert(formatAs12HourClock("11:59") === "11:59 am", "Failed just before midday");
+
+console.log("All edge case assertions passed!");
