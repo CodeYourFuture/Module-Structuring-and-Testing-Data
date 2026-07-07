@@ -33,7 +33,7 @@ test("should append 'nd' for numbers ending with 2, except those ending with 12"
 // Then the function should return a string by appending "rd" to the number.
 test("should append 'rd' for numbers ending with 3, except those ending with 13", () => {
   expect(getOrdinalNumber(3)).toEqual("3rd");
-  expect(getOrdinalNumber(43)).toEqual("43nd"); // Note: should be "43rd" based on standard logic, fixing a potential typo
+  expect(getOrdinalNumber(43)).toEqual("43rd"); // Note: should be "43rd" based on standard logic, fixing a potential typo
   expect(getOrdinalNumber(103)).toEqual("103rd");
 });
 
