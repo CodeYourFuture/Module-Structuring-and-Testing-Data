@@ -5,23 +5,21 @@
 
 // Try playing computer with the example to work out what is going on
 
-function convertToPercentage(decimalNumber) {
-  const decimal = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
+// function convertToPercentage(decimalNumber) {
+//   const decimal = 0.5;
+//   const percentage = `${decimalNumber * 100}%`;
 
-  return percentage;
-}
+//   return percentage;
+// }
 
-console.log(decimalNumber);
+// console.log(decimalNumber);
 
 // =============> Uncaught SyntaxError: Identifier 'decimalNumber' has already been declared - so the same issue as the previous
 //also after changing the decimalNumber to decimal inside the function: Uncaught ReferenceError ReferenceError: decimalNumber is not defined -->in console log we should ask for the function
 // Finally, correct the code to fix the problem
 // =============>
-function convertToPercentage() {
-  const decimalNumber = 0.5;
+function convertToPercentage(decimalNumber) {
   const percentage = `${decimalNumber * 100}%`;
-
   return percentage;
 }
-console.log(convertToPercentage());
+console.log(convertToPercentage(0.5));
