@@ -16,6 +16,24 @@
 
 function getAngleType(angle) {
   // TODO: Implement this function
+  if (angle > 0 && angle < 90){
+    return "Acute angle";
+  }
+  else if (angle == 90){
+    return "Right angle";
+  }
+  else if (angle > 90 && angle < 180){
+    return "Obtuse angle";
+  }
+  else if (angle == 180){
+    return "Straight angle";
+  }
+  else if (angle > 180 && angle < 360){
+    return "Reflex angle";
+  }
+  else{
+    return "Invalid angle";
+  }
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
@@ -32,6 +50,31 @@ function assertEquals(actualOutput, targetOutput) {
 }
 
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
-// Example: Identify Right Angles
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
+
+// Tests for right angles
+assertEquals(getAngleType(90), "Right angle");
+
+// Tests for acute angles
+assertEquals(getAngleType(56), "Acute angle");
+assertEquals(getAngleType(1), "Acute angle");
+
+// Test for a straight line
+assertEquals(getAngleType(180), "Straight angle");
+
+// Test for obtuse angle
+assertEquals(getAngleType(95), "Obtuse angle");
+assertEquals(getAngleType(160), "Obtuse angle");
+assertEquals(getAngleType(102), "Obtuse angle");
+
+// Test for reflex angle
+assertEquals(getAngleType(181), "Reflex angle");
+assertEquals(getAngleType(249), "Reflex angle");
+
+// Test for invalid angles
+assertEquals(getAngleType(0), "Invalid angle");
+assertEquals(getAngleType(361), "Invalid angle");
+assertEquals(getAngleType(-980), "Invalid angle");
+assertEquals(getAngleType(90), "Right angle"); 
+assertEquals(getAngleType(672), "Invalid angle");
+console.log("Execution finished! If any test failed, console.assert errors will appear above.");
+
