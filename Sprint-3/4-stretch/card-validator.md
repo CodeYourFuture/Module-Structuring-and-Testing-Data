@@ -33,3 +33,39 @@ These are the requirements your project needs to fulfill:
 - Return a boolean from the function to indicate whether the credit card number is valid.
 
 Good luck!
+
+
+function validateCreditCard(cardNumber) {
+  // Requirement Rule 1: Must be exactly 16 characters long and contain only numbers
+  const is16Digits = /^\d{16}$/.test(cardNumber);
+  if (!is16Digits) {
+    return false;
+  }
+
+  // Convert the string into an array of integers for numerical calculations
+  const digits = cardNumber.split("").map(Number);
+
+  // Requirement Rule 2: Must have at least two different digits represented
+  // We use a Set because it automatically filters out duplicate values
+  const uniqueDigits = new Set(digits);
+  if (uniqueDigits.size < 2) {
+    return false;
+  }
+
+  // Requirement Rule 3: The final digit must be even
+  const lastDigit = digits[digits.length - 1];
+  if (lastDigit % 2 !== 0) {
+    return false;
+  }
+
+  // Requirement Rule 4: The sum of all digits must be greater than 16
+  const totalSum = digits.reduce((sum, currentDigit) => sum + currentDigit, 0);
+  if (totalSum <= 16) {
+    return false;
+  }
+
+  // If the number passes every single gatekeeper conditional check above, it's valid!
+  return true;
+}
+
+module.exports = validateCreditCard;
