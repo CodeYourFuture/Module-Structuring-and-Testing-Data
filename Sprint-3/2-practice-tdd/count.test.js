@@ -22,3 +22,23 @@ test("should count multiple occurrences of a character", () => {
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
+
+test("should return 0 if the character does not exist in the string", () => {
+  const str = "hello";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+// Scenario: Boundary Case - Empty String
+// Given an empty input string `str`,
+// And any character `char`,
+// When the function is called with these inputs,
+// Then it should safely return 0.
+
+test("should return 0 when checking an empty string", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
