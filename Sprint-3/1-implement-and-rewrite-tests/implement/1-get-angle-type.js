@@ -37,39 +37,3 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// ==========================================
-// TEST SUITE
-// ==========================================
-
-console.log("Running tests...");
-
-// 1. Invalid Angles (Lower Bound & Below)
-assertEquals(getAngleType(-15), "Invalid angle");
-assertEquals(getAngleType(0), "Invalid angle");
-
-// 2. Acute Angles
-assertEquals(getAngleType(1), "Acute angle");
-assertEquals(getAngleType(45), "Acute angle");
-assertEquals(getAngleType(89.9), "Acute angle");
-
-// 3. Right Angle
-assertEquals(getAngleType(90), "Right angle");
-
-// 4. Obtuse Angles
-assertEquals(getAngleType(90.1), "Obtuse angle");
-assertEquals(getAngleType(135), "Obtuse angle");
-assertEquals(getAngleType(179.9), "Obtuse angle");
-
-// 5. Straight Angle
-assertEquals(getAngleType(180), "Straight angle");
-
-// 6. Reflex Angles
-assertEquals(getAngleType(180.1), "Reflex angle");
-assertEquals(getAngleType(270), "Reflex angle");
-assertEquals(getAngleType(359.9), "Reflex angle");
-
-// 7. Invalid Angles (Upper Bound & Above)
-assertEquals(getAngleType(360), "Invalid angle");
-assertEquals(getAngleType(400), "Invalid angle");
-
-console.log("All tests completed!");
