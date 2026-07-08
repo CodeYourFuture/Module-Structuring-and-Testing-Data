@@ -4,7 +4,7 @@ function repeatStr(stringOfCharacters, count) {
   if (count === 0) {
     return "";
   } else if (count > 0) {
-    return stringOfCharacters.repeat(count);
+    return repeatStr(stringOfCharacters, count - 1) + stringOfCharacters;
   }
   throw Error("Invalid input: count must be a non-negative integer");
 }
