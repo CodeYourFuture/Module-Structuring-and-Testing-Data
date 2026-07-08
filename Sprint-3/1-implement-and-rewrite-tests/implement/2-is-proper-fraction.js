@@ -11,7 +11,11 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+    if (Number.isFinite(numerator) && Number.isFinite(denominator)) {
+        if(numerator < denominator){
+            return true
+        }
+    } return false
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -20,10 +24,10 @@ module.exports = isProperFraction;
 
 // Here's our helper again
 function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
+    console.assert(
+        actualOutput === targetOutput,
+        `Expected ${actualOutput} to equal ${targetOutput}`
+    );
 }
 
 // TODO: Write tests to cover all cases.
@@ -31,3 +35,26 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(2, 1), false);
+assertEquals(isProperFraction(5, 5), false);
+assertEquals(isProperFraction(0, 5), true);
+assertEquals(isProperFraction(5, 0), false);
+assertEquals(isProperFraction(0, 0), false);
+assertEquals(isProperFraction(-1, 2), true);
+assertEquals(isProperFraction(1, -2), false);
+assertEquals(isProperFraction(-2, -1), true);
+assertEquals(isProperFraction(-1, -2), false);
+assertEquals(isProperFraction(0.5, 1), true);
+assertEquals(isProperFraction(1.5, 1), false);
+assertEquals(isProperFraction(Infinity, 2), false);
+assertEquals(isProperFraction(2, Infinity), false);
+assertEquals(isProperFraction(NaN, 2), false);
+assertEquals(isProperFraction(2, NaN), false);
+assertEquals(isProperFraction(999999999, 1000000000), true);
+
+
+
+
+
+
+
