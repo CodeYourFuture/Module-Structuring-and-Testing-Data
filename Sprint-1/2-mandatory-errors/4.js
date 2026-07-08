@@ -1,2 +1,2 @@
-const CivilTime = "8:53pm";
-const ContinentalTime = "20:53";
+const civilTime = "8:53pm";
+const continentalTime = "20:53";
