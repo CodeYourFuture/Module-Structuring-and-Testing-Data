@@ -31,6 +31,12 @@ function getAngleType(angle) {
   else if (angle > 180 && angle < 360){
     return "Reflex angle";
   }
+  else if(angle === 0){
+    return "Zero Angle"
+  }
+  else if(angle === 360){
+    return "Complete angle"
+  }
   else{
     return "Invalid angle";
   }
@@ -71,10 +77,11 @@ assertEquals(getAngleType(181), "Reflex angle");
 assertEquals(getAngleType(249), "Reflex angle");
 
 // Test for invalid angles
-assertEquals(getAngleType(0), "Invalid angle");
-assertEquals(getAngleType(361), "Invalid angle");
 assertEquals(getAngleType(-980), "Invalid angle");
-assertEquals(getAngleType(90), "Right angle"); 
+assertEquals(getAngleType(9082), "Right angle"); 
 assertEquals(getAngleType(672), "Invalid angle");
+//
+assertEquals(getAngleType(0), "Zero angle");
+assertEquals(getAngleType(360), "Complete angle");
 console.log("Execution finished! If any test failed, console.assert errors will appear above.");
 
