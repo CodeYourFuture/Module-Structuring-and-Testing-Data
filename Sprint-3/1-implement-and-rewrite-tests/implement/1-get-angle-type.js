@@ -62,3 +62,21 @@ assertEquals(straight, "Straight angle")
 
 const invalid1 = getAngleType(360);
 assertEquals(invalid1, "Invalid angle")
+
+const acute1 = getAngleType(1);
+assertEquals(acute1, "Acute angle")
+
+const obtuse1 = getAngleType(179);
+assertEquals(obtuse1, "Obtuse angle")
+
+const reflex = getAngleType(181);
+assertEquals(reflex, "Reflex angle")
+
+const  reflex1 = getAngleType(359);
+assertEquals(reflex1, "Reflex angle")
+
+const  invalid2 = getAngleType(-1);
+assertEquals(invalid2, "Invalid angle")
+
+const invalid3  = getAngleType(361);
+assertEquals(invalid3, "Invalid angle")
