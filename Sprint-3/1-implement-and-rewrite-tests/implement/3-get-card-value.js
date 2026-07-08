@@ -22,7 +22,7 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  // [ChunYanWong] Implement this function
   const suit = card.slice(-1);
   const rank = card.slice(0, -1);
 
