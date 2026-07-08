@@ -21,10 +21,12 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 
-    // a) There are 5 calls made:
-        // carPrice = Number(carPrice.replaceAll(",", ""));
-        // priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""))
-    // b) Error on line 5 for "," it is missing the seperating , between "," and "".
-    // c) 4 and 5
-    // d) 1 and 2, 7 and 8,
-    // e) It removes the , from the string and replaces it with nothing. Used to help change the string into a number with the "Number" function.
+/*    
+a) There are 5 calls made:
+    carPrice = Number(carPrice.replaceAll(",", ""));
+    priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""))
+b) Error on line 5 for "," it is missing the seperating , between "," and "".
+c) 4 and 5
+d) 1 and 2, 7 and 8,
+e) It removes the , from the string and replaces it with nothing. Used to help change the string into a number with the "Number" function.
+*/
