@@ -22,9 +22,9 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  const lastChar = card.length - 1;
-  const rank = card.slice(0, lastChar);
-  const suit = card.slice(lastChar);
+  const lastCharIndex = card.length - 1;
+  const rank = card.slice(0, lastCharIndex);
+  const suit = card.slice(lastCharIndex);
 
   if (rank === "10") {
     return 10;
