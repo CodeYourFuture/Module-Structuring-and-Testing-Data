@@ -15,10 +15,8 @@
 // It should return their Body Mass Index to 1 decimal place
 
 function calculateBMI(weight, height) {
-  let numWeight = Number(weight.slice(0, -2));
-  let numHeight = Number(height.slice(0, -1));
-  let BMI = numWeight / (numHeight * numHeight);
-  return Math.round(BMI * 10) / 10;
+  let BMI = weight / (height * height);
+  return (BMI * 10) / 10;
 }
 
-console.log(`Your BMI is: ${calculateBMI("70kg", "1.83m")}`);
+console.log(`Your BMI is: ${calculateBMI(70, 1.83)}`);
