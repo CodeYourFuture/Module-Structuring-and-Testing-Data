@@ -7,3 +7,4 @@ count = count + 1;
 
 //line 3: we are re-assigning count using the assignment operator (=). The " = " is used in JavaScript to assing a value
 // to a variable and in this case  we are re-assinging count to equal count + 1.
+// we are incrementing count
