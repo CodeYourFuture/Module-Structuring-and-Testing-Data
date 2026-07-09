@@ -35,7 +35,10 @@ function getCardValue(card) {
   }
 
   if (!(suit === "♠" || suit === "♥" || suit === "♦" || suit === "♣")) {
-    throw new Error("Invalid suit ", suit);
+    throw new Error(
+      "Invalid second character detected, only suits(♠♥♦♣) are allowed, but got this character:",
+      suit
+    );
   }
 
   if (rank == "A") {
