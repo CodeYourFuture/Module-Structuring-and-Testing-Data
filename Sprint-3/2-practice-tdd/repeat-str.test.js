@@ -9,42 +9,34 @@ const repeatStr = require("./repeat-str");
 // When the repeatStr function is called with these inputs,
 // Then it should return a string that contains the original `str` repeated `count` times.
 
-test("should repeat the string count times", () => {
+test("should repeat the string with no spaces 3 times when count is 3", () => {
   const str = "hello";
   const count = 3;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hellohellohello");
 });
 
-test("should repeat the string count times", () => {
+test("should repeat the string with no spaces 3 times when count is 3", () => {
   const str = "CYF";
   const count = 3;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("CYFCYFCYF");
 });
 
-test("should repeat the string count times", () => {
+test("should display the string with spaces one times where count is 1", () => {
   const str = "Code Your Future";
   const count = 1;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("Code Your Future");
 });
 
-test("should repeat the string count times", () => {
+test("should return empty string when count  is 0 times", () => {
   const str = "hello";
   const count = 0;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("");
 });
 
-test("should repeat the string count times", () => {
-  const str = "ITP";
-  const count = 5;
-  const repeatedStr = repeatStr(str, count);
-  expect(repeatedStr).toEqual("ITPITPITPITPITP");
-});
-
-// Case: handle count of 1:
 // Given a target string `str` and a `count` equal to 1,
 // When the repeatStr function is called with these inputs,
 // Then it should return the original `str` without repetition.

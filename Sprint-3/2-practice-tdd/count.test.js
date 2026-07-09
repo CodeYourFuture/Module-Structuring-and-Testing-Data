@@ -38,6 +38,33 @@ test("should count multiple occurrences of a character", () => {
   expect(count).toEqual(2);
 });
 // Scenario: No Occurrences
+test("should return 0 when the character does not occur in the string", () => {
+  const str = "No occurrences here";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+// for empty string scenario.
+test("should return 0 when the input string is empty", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+//Scenario: for empty find character.
+test("should return 0 when the find character is empty", () => {
+  const str = "empty find character";
+  const char = "";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+// Scenario: counting empty spaces in a string.
+test("should return the count of empty spaces in a string", () => {
+  const str = "The quick brown fox jumps over the lazy dog";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(8);
+});
 // Given the input string `str`,
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
