@@ -72,3 +72,11 @@ assertEquals(straight, "Straight angle");
 const reflex = getAngleType(270);
 assertEquals(reflex, "Reflex angle");
 
+const invalidAngle1 = getAngleType(360);
+assertEquals(invalidAngle1, "Invalid angle");
+
+const invalidAngle2 = getAngleType(0);
+assertEquals(invalidAngle2, "Invalid angle");
+
+const invalidAngle3 = getAngleType(-1);
+assertEquals(invalidAngle3, "Invalid angle");
