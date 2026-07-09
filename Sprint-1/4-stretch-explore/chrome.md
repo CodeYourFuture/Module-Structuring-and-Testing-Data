@@ -5,7 +5,7 @@ Just like the Node REPL, you can input JavaScript code into the Console tab and 
 
 Let's try an example.
 
-In the Chrome console, invoke the function `alert` with an input string of `"Hello world!"`;
+In the Chrome console, invoke the function `alert` with one argument, the string `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
