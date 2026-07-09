@@ -22,9 +22,21 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  let cardValue = card.slice(0, -1)
+  let cardValue1 = 0
+  if (Number(cardValue.match(/\d+(\.\d+)?/g)) < 10 && Number(cardValue.match(/\d+(\.\d+)?/g)) > 1) {
+      return Number(cardValue);
+  } else if (cardValue === "A") { 
+      return 11;
+  } else if (cardValue === "K" || cardValue === "Q" || cardValue === "J") {
+      return 10;
+  } else {
+      return cardValue1 = "Invalid card format";
+  }
+  console.log(cardValue1)
 }
 
+console.log(getCardValue("00"));
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -40,6 +52,18 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+
+assertEquals(getCardValue("A♠"), 11);
+
+assertEquals(getCardValue("K♠"), 10);
+
+assertEquals(getCardValue("Q♠"), 10);
+
+assertEquals(getCardValue("J♠"), 10);
+
+assertEquals(getCardValue("Nq"), "Invalid card format");
+
+assertEquals(getCardValue("00"), "Invalid card format");
 
 // Handling invalid cards
 try {
