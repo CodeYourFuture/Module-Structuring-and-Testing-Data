@@ -11,4 +11,4 @@ const cardNumber = 4533787178994213;
 // [ChunYanWong] The slice method extract substring starting with the first parameter position
 // There is no -4 starting position and hence it will not work
 
-const last4Digits = cardNumber.slice(cardNumber.length - 4)
+const last4Digits = cardNumber.toString().slice(cardNumber.length - 4)
