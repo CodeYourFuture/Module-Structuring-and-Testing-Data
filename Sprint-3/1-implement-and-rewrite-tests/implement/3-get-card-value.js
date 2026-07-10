@@ -172,3 +172,12 @@ try {
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
 }
+
+try {
+  getCardValue(""); // testing with "" the error will be thrown because "" is not a valid card
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
