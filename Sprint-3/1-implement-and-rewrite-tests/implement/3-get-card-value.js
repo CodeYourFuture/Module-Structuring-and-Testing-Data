@@ -43,6 +43,9 @@ function getCardValue(card) {
     return numericValue;
   }
 
+  throw new Error("Invalid card string");
+
+
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
