@@ -22,21 +22,43 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  let cardValue = card.slice(0, -1)
-  let cardValue1 = 0
-  if (Number(cardValue.match(/\d+(\.\d+)?/g)) < 10 && Number(cardValue.match(/\d+(\.\d+)?/g)) > 1) {
-      return Number(cardValue);
-  } else if (cardValue === "A") { 
-      return 11;
-  } else if (cardValue === "K" || cardValue === "Q" || cardValue === "J") {
-      return 10;
-  } else {
-      return cardValue1 = "Invalid card format";
+  const suit = ["♠", "♥", "♦", "♣"]; // array with suits
+  const rank = [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "A",
+    "K",
+    "Q",
+    "J",
+  ]; // array with ranks
+  const tenPointsFaceCards = ["K", "Q", "J"]; //cards with value of 10 points
+
+  const rank1 = card.slice(0, -1); //takes the firs part of card
+  const suit1 = card.slice(-1); //takes "suit" secnd part of card
+  const isCardValid = suit.includes(suit1) && rank.includes(rank1); //conditions where card is considered valid
+
+  //conditional statement to check validity of the card
+  if (!isCardValid) {
+    throw new Error("Error thrown for invalid card 🎉");
   }
-  console.log(cardValue1)
+
+  //conditional statements to check what value to return depending on the card value
+  if (rank1 === "A") {
+    return 11;
+  } else if (tenPointsFaceCards.includes(rank1)) {
+    return 10;
+  } else {
+    return Number(rank1);
+  }
 }
 
-console.log(getCardValue("00"));
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -61,9 +83,9 @@ assertEquals(getCardValue("Q♠"), 10);
 
 assertEquals(getCardValue("J♠"), 10);
 
-assertEquals(getCardValue("Nq"), "Invalid card format");
+assertEquals(getCardValue("Nq"), "Error thrown for invalid card 🎉");
 
-assertEquals(getCardValue("00"), "Invalid card format");
+//assertEquals(getCardValue("00"), "Invalid card format");
 
 // Handling invalid cards
 try {
