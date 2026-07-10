@@ -32,7 +32,7 @@ function getAngleType(angle) {
     return "Reflex angle";
   }
   else if(angle === 0){
-    return "Zero Angle"
+    return "Zero angle"
   }
   else if(angle === 360){
     return "Complete angle"
@@ -78,7 +78,7 @@ assertEquals(getAngleType(249), "Reflex angle");
 
 // Test for invalid angles
 assertEquals(getAngleType(-980), "Invalid angle");
-assertEquals(getAngleType(9082), "Right angle"); 
+assertEquals(getAngleType(9082), "Invalid angle"); 
 assertEquals(getAngleType(672), "Invalid angle");
 //
 assertEquals(getAngleType(0), "Zero angle");

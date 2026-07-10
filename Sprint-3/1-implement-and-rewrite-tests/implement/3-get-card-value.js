@@ -23,6 +23,9 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  if (typeof card !== "string" || card.length < 2 || card.length > 3) {
+    throw new Error("Invalid card");
+  }
   const ranks = [
     "A",
     "2",
@@ -41,11 +44,12 @@ function getCardValue(card) {
   const suits = ["♠", "♥", "♦", "♣"];
 let rank = card.slice(0, -1)// This is extracting the bit before the suits alone
 let suit = card.slice(-1) // THis is extracting the suit in the string
+  
   if(!ranks.includes(rank)){
-    throw new Error("Invalid rank")
+    throw new Error("Invalid card")
   }
   if (!suits.includes(suit)){
-    throw new Error("Invalid suit")
+    throw new Error("Invalid card")
   }
   if (rank === "A"){
     return 11}
@@ -55,6 +59,7 @@ let suit = card.slice(-1) // THis is extracting the suit in the string
   else{
     return Number(rank)
   }
+  
 }
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -100,20 +105,14 @@ try {
 
 try {
   getCardValue("A");
-  console.error("Error not thrown for missing suit");
+  console.error("Error not thrown for invalid card missing suit");
 } catch (e) {
-  console.log("Error thrown for missing suit 🎉");
+  console.log("Error thrown for invalid card missing suit🎉");
 }
 
 try {
   getCardValue("");
-  console.error("Error not thrown for empty string");
+  console.error("Error not thrown for invalid card containing empty string");
 } catch (e) {
-  console.log("Error thrown for empty string🎉");
-}
-try {
-  getCardValue("Apple");
-  console.error("Error not thrown");
-} catch {
-  console.log("Error thrown 🎉");
+  console.log("Error thrown for invalid card containing empty string");
 }

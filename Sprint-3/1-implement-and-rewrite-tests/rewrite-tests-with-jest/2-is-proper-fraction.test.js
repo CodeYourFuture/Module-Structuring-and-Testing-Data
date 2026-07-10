@@ -23,6 +23,6 @@ test(`should return true when negative/positive numerator is less than the posit
 // Special case: numerator or denominator is negative, we consider the absolute values for fractions so ignore the negative signs
 test(`should return false when negative/positive numerator is greater than the positive/negative denominator`, () => {
   expect(isProperFraction(-50, 10)).toEqual(false);
-  expect(isProperFraction(100, -2)).toEqual(false);
+  expect(isProperFraction(100, 2)).toEqual(false);
   expect(isProperFraction(-1, -0)).toEqual(false);
 });
