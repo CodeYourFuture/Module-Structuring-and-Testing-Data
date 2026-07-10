@@ -46,7 +46,7 @@ function getCardValue(card) {
 
   //conditional statement to check validity of the card
   if (!isCardValid) {
-    throw new Error("Error thrown for invalid card 🎉");
+    throw new Error("Invalid card format");
   }
 
   //conditional statements to check what value to return depending on the card value
@@ -73,6 +73,7 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
+
 assertEquals(getCardValue("9♠"), 9);
 
 assertEquals(getCardValue("A♠"), 11);
@@ -83,9 +84,11 @@ assertEquals(getCardValue("Q♠"), 10);
 
 assertEquals(getCardValue("J♠"), 10);
 
-assertEquals(getCardValue("Nq"), "Error thrown for invalid card 🎉");
+assertEquals(getCardValue("10♣"), 10);
 
-//assertEquals(getCardValue("00"), "Invalid card format");
+//assertEquals(getCardValue("11♣"), "Invalid card format"); i find that
+// this test will not work, because my function is throwing error before the program
+// reaches the assertEquals function.
 
 // Handling invalid cards
 try {
@@ -98,3 +101,74 @@ try {
 }
 
 // What other invalid card cases can you think of?
+try {
+  getCardValue("11♣"); // testing with "11♣" the error will be thrown because "11" is not a valid rank
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("A"); // testing with "A" the error will be thrown because there is no suit
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("10"); // testing with "10" the error will be thrown because there is no suit
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("1♣"); // testing with "1♣" the error will be thrown because "1" is not a valid rank
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("A5"); // testing with "A5" the error will be thrown because "5" is not a valid suit
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("♣6"); // testing with "♣6" the error will be thrown because "6" is not a valid suit and "♣" is not a valid rank
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("@@"); // testing with "@@" the error will be thrown because "@" is not a valid rank or suit
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("-6♣"); // testing with "-6♣" (negative number) the error will be thrown because "-" is not a valid rank
+
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
