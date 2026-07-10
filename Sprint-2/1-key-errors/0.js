@@ -1,7 +1,7 @@
 // Predict and explain first...
 //  =============> write your prediction here
 
-//I know that its going to say str has allready been declared.
+//str has allready been declared.
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
