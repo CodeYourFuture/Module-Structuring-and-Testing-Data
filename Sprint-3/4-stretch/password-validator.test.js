@@ -96,15 +96,6 @@ test("password has at least one non-alphanumeric symbol: (!, #, $, %, ., *, &)",
   expect(result).toEqual(true);
 });
 
-test("password has at least one non-alphanumeric symbol: (!, #, $, %, ., *, &)", () => {
-  // Arrange
-  const password = "12aA$12";
-  // Act
-  const result = isValidPassword(password);
-  // Assert
-  expect(result).toEqual(true);
-});
-
 test("must not be any previous password in the passwords array.", () => {
   // Arrange
   const password = "pas$W0rd";
