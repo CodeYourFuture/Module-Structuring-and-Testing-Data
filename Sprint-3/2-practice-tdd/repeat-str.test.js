@@ -15,18 +15,56 @@ test("should repeat the string count times", () => {
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hellohellohello");
 });
+test("should repeat the string count times", () => {
+  const str = "codeyourfuture";
+  const count = 2;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("codeyourfuturecodeyourfuture");
+});
 
 // Case: handle count of 1:
 // Given a target string `str` and a `count` equal to 1,
 // When the repeatStr function is called with these inputs,
 // Then it should return the original `str` without repetition.
-
+test("should repeat the string count times", () => {
+  const str = "hello";
+  const count = 1;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("hello");
+});
+test("should repeat the string count times", () => {
+  const str = "codeyourfuture";
+  const count = 1;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("codeyourfuture");
+});
 // Case: Handle count of 0:
 // Given a target string `str` and a `count` equal to 0,
 // When the repeatStr function is called with these inputs,
 // Then it should return an empty string.
-
+test("should repeat the string count times", () => {
+  const str = "hello";
+  const count = 0;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("");
+});
+test("should repeat the string count times", () => {
+  const str = "codeyourfuture";
+  const count = 0;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("");
+});
 // Case: Handle negative count:
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
+test("should repeat the string count times", () => {
+  const str = "hello";
+  const count = -4;
+  expect(() => repeatStr(str, count)).toThrow("Invalid count");
+});
+test("should repeat the string count times", () => {
+  const str = "codeyourfuture";
+  const count = -1;
+  expect(() => repeatStr(str, count)).toThrow("Invalid count");
+});
