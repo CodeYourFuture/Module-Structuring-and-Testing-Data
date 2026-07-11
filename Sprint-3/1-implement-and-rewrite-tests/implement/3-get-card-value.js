@@ -52,13 +52,12 @@ assertEquals(getCardValue("9♠"), 9);
 assertEquals(getCardValue("A♠"), 11);
 assertEquals(getCardValue("J♦"), 10);
 assertEquals(getCardValue("7♥"), 7);
-assertEquals(getCardValue("7♥"), "A");
+assertEquals(getCardValue("A♥"), 11);
 assertEquals(getCardValue("8♥"), 8);
 
 // Handling invalid cards
 try {
   getCardValue("invalid");
-
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
@@ -66,3 +65,10 @@ try {
 }
 
 // What other invalid card cases can you think of?
+try {
+  getCardValue("15♥");
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
