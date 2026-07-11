@@ -30,7 +30,7 @@ function formatTimeDisplay(seconds) {
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
 
-// The value assigned to num when pad is called for the first time is 0. This is because totalHours is calculated as (totalMinutes - remainingMinutes) / 60, which results in 0 when the input is 61 seconds.
+// The value assigned to num when pad is called for the first time is 00. This is because totalHours is calculated as (totalMinutes - remainingMinutes) / 60, which results in 0 when the input is 61 seconds.
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here

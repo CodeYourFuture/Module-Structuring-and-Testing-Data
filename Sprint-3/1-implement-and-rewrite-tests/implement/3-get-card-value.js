@@ -22,6 +22,8 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
+  let card = " ";
+  if (card.includes )
   // TODO: Implement this function
 }
 
