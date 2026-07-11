@@ -1,4 +1,7 @@
-function passwordValidator(password) {
+function passwordValidator(
+  password,
+  usedPasswords = ["pa$$w0rd", "Qwerty1#", "Adm1n2#", "$3cr4t"]
+) {
   /* To be valid, a password must:
         - Have at least 5 characters.
         - Have at least one English uppercase letter (A-Z)
@@ -7,14 +10,13 @@ function passwordValidator(password) {
         - Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
         - Must not be any previous password in the passwords array. 
   */
-  const passwords = ["pa$$w0rd", "Qwerty1#", "Adm1n2#", "$3cr4t"];
   if (
     password.length < 5 ||
     !/[A-Z]/.test(password) ||
     !/[a-z]/.test(password) ||
     !/[0-9]/.test(password) ||
     !/[!#\$%\.\*&]/.test(password) ||
-    passwords.includes(password)
+    usedPasswords.includes(password)
   ) {
     return false;
   }
