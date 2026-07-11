@@ -24,7 +24,7 @@ console.log(find("code your future", "z"));
 // In case of the call find("code your future", "u"), the index variable updates as follows:
 // 0, 1, 2, 3, 4, 5, 6, 7 - when it stops, because the character at index 7 is "u"
 // In case of the call find("code your future", "z"), the index variable updates as follows:
-// 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 - when it stops, because the condition index < str.length is no longer true
+// 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 - when it stops, because the condition index < str.length is no longer true
 // the and because the loop has arrived to the end of the string without finding "z".
 
 // b) What is the if statement used to check
