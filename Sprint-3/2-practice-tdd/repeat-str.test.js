@@ -24,7 +24,7 @@ test("should repeat the string count times", () => {
 test("Should return the original string with no repetitions", () => {
   const str = "hello";
   const count = 1;
-  const repeatedStr = repeatedStr(str, count);
+  const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hello");
 });
 
@@ -35,7 +35,7 @@ test("Should return the original string with no repetitions", () => {
 test("Should return an empty string", () => {
   const str = "hello";
   const count = 0;
-  const repeatedStr = repeatedStr(str, count);
+  const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("");
 });
 
@@ -47,6 +47,5 @@ test("Should return an empty string", () => {
 test("Should throw an error, as negative counts are not valid", () => {
   const str = "hello";
   const count = -1;
-  const repeatedStr = repeatedStr(str, count);
-  expect(repeatedStr).toThrow(Error);
+  expect(() => repeatStr(str, count)).toThrow("Expected a positive integer");
 });
