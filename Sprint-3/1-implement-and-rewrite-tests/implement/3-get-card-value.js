@@ -30,7 +30,7 @@ function getCardValue(card) {
   } else if (removeSuit > 1 && removeSuit < 11) {
     return Number(removeSuit);
   } else {
-    throw new Error("Parameter is not a number!")
+    throw new Error("Error")
   }
 }
 
@@ -72,3 +72,4 @@ try {
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
 }
+
