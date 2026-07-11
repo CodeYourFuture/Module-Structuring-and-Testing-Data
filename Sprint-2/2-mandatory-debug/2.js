@@ -25,7 +25,7 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`);
 // Explain why the output is the way it is
 // =============> write your explanation here
 
-// 1) The above output (3) is displayed because the variable num is declared as a constant 
+// 1) num isn't defined as the function's parameter so the function can take arguments later on when it's called.
 // 2) .slice(-1) is used to get the last digit of num inside the function.
 // 3) The function does not take any parameters so when it is called with an arguments it always returns the last digit of the constant num 103.
 
