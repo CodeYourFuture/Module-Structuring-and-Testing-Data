@@ -22,7 +22,35 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const number = card.slice(0, -1);
+  const suit = card.slice(-1);
+  //console.log(`number is ${number}`);
+  //console.log(typeof suit);
+  //console.log(suit);
+  if (suit == "♠" || suit == "♥" || suit == "♦" || suit == "♣"){
+    switch (number) {
+      case "A":
+        return 11;
+      case "J":
+      case "Q":
+      case "K":
+        return 10;
+      case "2":
+      case "3":
+      case "4":
+      case "5":
+      case "6":
+      case "7":
+      case "8":
+      case "9":
+        return Number(number);
+      default:
+        return "invalid";
+
+    }
+  }else{
+    return "invalid";
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -39,7 +67,19 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
-assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("A♥"), 11);
+assertEquals(getCardValue("J♦"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♦"), 10);
+assertEquals(getCardValue("2♣"), 2);
+assertEquals(getCardValue("3♣"), 3);
+assertEquals(getCardValue("4♦"), 4);
+assertEquals(getCardValue("5♦"), 5);
+assertEquals(getCardValue("6♦"), 6);
+assertEquals(getCardValue("7♦"), 7);
+assertEquals(getCardValue("8♣"), 8);
+assertEquals(getCardValue("9♣"), 9);
 
 // Handling invalid cards
 try {
