@@ -15,7 +15,7 @@ function passwordValidator(
     !/[A-Z]/.test(password) ||
     !/[a-z]/.test(password) ||
     !/[0-9]/.test(password) ||
-    !/[!#\$%\.\*&]/.test(password) ||
+    !/[!#$%.*&]/.test(password) ||
     usedPasswords.includes(password)
   ) {
     return false;
