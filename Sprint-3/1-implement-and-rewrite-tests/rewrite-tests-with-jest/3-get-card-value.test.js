@@ -29,6 +29,8 @@ test("should throw an error for invalid cards", () => {
   expect(() => getCardValue("11♣")).toThrow();
   expect(() => getCardValue("Z♥")).toThrow();
   expect(() => getCardValue("0♠")).toThrow();
+  expect(() => getCardValue("5")).toThrow(); // number without suit
+  expect(() => getCardValue("♠")).toThrow(); // suit without rank
   expect(() => getCardValue("invalid")).toThrow();
 });
 // Suggestion: Group the remaining test data into these categories:
