@@ -1,6 +1,6 @@
 // Predict and explain first...
 //  =============> write your prediction here
-
+// The Error will occur because we are trying to create a variable with same name in same scope.
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
 
