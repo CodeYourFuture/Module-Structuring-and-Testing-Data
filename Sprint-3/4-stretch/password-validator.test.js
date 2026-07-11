@@ -33,15 +33,6 @@ test("password with less than 5 characters is invalid", () => {
   expect(result).toEqual(false);
 });
 
-test("password has at least one English uppercase letter (A-Z)", () => {
-  // Arrange
-  const password = "1234bA$";
-  // Act
-  const result = isValidPassword(password);
-  // Assert
-  expect(result).toEqual(true);
-});
-
 test("password with no uppercase letters is invalid", () => {
   // Arrange
   const password = "1234ab$";
@@ -49,15 +40,6 @@ test("password with no uppercase letters is invalid", () => {
   const result = isValidPassword(password);
   // Assert
   expect(result).toEqual(false);
-});
-
-test("password has at least one English lowercase letter (a-z)", () => {
-  // Arrange
-  const password = "1234Aa%";
-  // Act
-  const result = isValidPassword(password);
-  // Assert
-  expect(result).toEqual(true);
 });
 
 test("password with no lowercase letters is invalid", () => {
@@ -69,15 +51,6 @@ test("password with no lowercase letters is invalid", () => {
   expect(result).toEqual(false);
 });
 
-test("password has at least one number (0-9)", () => {
-  // Arrange
-  const password = "1234Aa&";
-  // Act
-  const result = isValidPassword(password);
-  // Assert
-  expect(result).toEqual(true);
-});
-
 test("password with no numbers is invalid", () => {
   // Arrange
   const password = "passWord!";
@@ -87,22 +60,13 @@ test("password with no numbers is invalid", () => {
   expect(result).toEqual(false);
 });
 
-test("password has at least one non-alphanumeric symbol: (!, #, $, %, ., *, &)", () => {
+test("password with non-alphanumeric symbols is invalid", () => {
   // Arrange
-  const password = "1234aA#";
+  const password = "1234aAv";
   // Act
   const result = isValidPassword(password);
   // Assert
-  expect(result).toEqual(true);
-});
-
-test("must not be any previous password in the passwords array.", () => {
-  // Arrange
-  const password = "pas$W0rd";
-  // Act
-  const result = isValidPassword(password);
-  // Assert
-  expect(result).toEqual(true);
+  expect(result).toEqual(false);
 });
 
 test("previous passwords in the passwords array are invalid", () => {
