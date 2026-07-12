@@ -26,5 +26,11 @@ test("should append 'th' for numbers ending with 11", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(111)).toEqual("111th");
   expect(getOrdinalNumber(211)).toEqual("211th");
+  expect(getOrdinalNumber(312)).toEqual("311th");
 });
+
+// Case 3: Numbers ending with 2 (but not 12)
+
+
+
 
