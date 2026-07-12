@@ -14,13 +14,20 @@ test("should repeat the string count times", () => {
   const count = 3;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hellohellohello");
-});
+}); 
+
 
 // Case: handle count of 1:
 // Given a target string `str` and a `count` equal to 1,
 // When the repeatStr function is called with these inputs,
 // Then it should return the original `str` without repetition.
 
+test("should return the original string when count is 1", () => {
+  const str = "hello";
+  const count = 1;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("hello");
+});
 
 // Case: Handle count of 0:
 // Given a target string `str` and a `count` equal to 0,
