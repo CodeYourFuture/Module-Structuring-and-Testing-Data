@@ -10,19 +10,15 @@ function convertToPercentage(decimalNumber) {
   const decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
 
-  return percentage;
+ return percentage;
 
-  console.log(decimalNumber);
+ console.log(decimalNumber);
 }
 // =============> Our parameter has already been declared which is why the program is resulting in an error
 
 // Finally, correct the code to fix the problem
-// function convertToPercentage(decimalNumber) {
- // const decimalNumber1 = 0.5;
-  //const percentage = `${decimalNumber1 * 100}%`;
-
- // return percentage;
- //  console.log(decimalNumber1);
+//function convertToPercentage(decimalNumber) {
+  //return `${decimalNumber * 100}%`;
+   
 //}
-
-//
+//console.log(convertToPercentage(0.5));
