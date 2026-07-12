@@ -42,18 +42,18 @@ function getCardValue(card) {
   const validSuits = ["♠", "♥", "♦", "♣"]; // An array of suits are created here.
 
   if (typeof card !== "string") { // Here the type of values are checked whether they are string.
-    throw new Error("Invalid card: " + card);
+    return card + " Invalid card";
   }
   const suit = card.slice(-1);
   const rank = card.slice(0, -1);
 
   if (!validRanks.includes(rank) || !validSuits.includes(suit)) { //Here the values that are stored in rank and suit are checked whether they are valid are inside the validRank and validSuits arrays.
-    throw new Error("Invalid card: " + card);
+    return card + " Invalid card";
   }
 
   if (rank === "A") { // Here the code is testing wether the rank is an Ace.
     return 11;
-  } else if (cards === "J" || rank === "Q" || rank === "K") { // Here the ranks are checked if they are J, Q or K and it returns 10
+  } else if (rank === "J" || rank === "Q" || rank === "K") { // Here the ranks are checked if they are J, Q or K and it returns 10
     return 10;
   } else { // Lastly any rank between 2 and 10 get checked and the same number of value returned.
     return Number(rank);
