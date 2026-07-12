@@ -5,7 +5,7 @@ let testName = "Jerry";
 const greeting = "hello";
 
 function sayHello(greeting, name) {
-  const greetingStr = greeting + ", " + name + "!";
+  
   return `${greeting}, ${name}!`;
   
 }
