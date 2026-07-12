@@ -9,4 +9,5 @@ function repeatStr(str,count) {
 
 }
 console.log(repeatStr("hello", 3)); // Output: "hellohellohello"
+console.log(repeatStr("hello", 1)); // Output: "hello"
 module.exports = repeatStr;
