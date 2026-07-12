@@ -10,4 +10,5 @@ function repeatStr(str,count) {
 }
 console.log(repeatStr("hello", 3)); // Output: "hellohellohello"
 console.log(repeatStr("hello", 1)); // Output: "hello"
+console.log(repeatStr("hello", 0)); // Output: ""
 module.exports = repeatStr;
