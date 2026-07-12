@@ -43,6 +43,6 @@ console.log(convertToPercentage(decimalNumber));
 // And lastly, I have called function and passed decimalNumber as an argument and print the value what's function is returning.
 // The percentage is calculated by decimalNumber = 0.5 not 0.9 
 // As we passed decimalNumber as an argument with the value of 0.9 but inside the function we are assigning a value to the
-// decimalNumber so its value will be overwritten with parameter's local value and percentage will be calculated with decimalNumber=0.5
+// decimalNumber, its value will be overwritten with parameter's local value and percentage will be calculated with decimalNumber=0.5
 // If we don't assign a value inside the function then percentage will be calculated on the basis of the argument we passed,
 // though outside of const decimalNumber will be unchanged and remained 0.9.
