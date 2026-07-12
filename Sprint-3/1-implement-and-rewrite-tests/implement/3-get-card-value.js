@@ -41,10 +41,10 @@ function getCardValue(card) {
   let rank = card.slice(0, -1);
   let suit = card.slice(-1);
   if (!validSuits.includes(suit)) {
-    throw new Error("Invalid suit");
+    throw new Error("Invalid Cards");
   }
   if (!validRank.includes(rank)) {
-    throw new Error("Invalid rank");
+    throw new Error("Invalid Cards");
   }
   if (rank === "A") {
     return 11;

@@ -25,12 +25,27 @@ test(`Should return the Number it self when a given Number card`, () => {
 });
 // Invalid Cards
 test(`Should return Invalid Cards when given Invalid Cards`, () => {
-  expect(getCardValue("22♣")).toEqual("Invalid Cards");
-  expect(getCardValue("11♦")).toEqual("Invalid Cards");
-  expect(getCardValue("4♥♥")).toEqual("Invalid Cards");
-  expect(getCardValue("")).toEqual("Invalid Cards");
-  expect(getCardValue("♠")).toEqual("Invalid Cards");
-  expect(getCardValue("-9♥")).toEqual("Invalid Cards");
+  expect(() => {
+    getCardValue("22♣");
+  }).toThrow("Invalid Cards");
+  expect(() => {
+    getCardValue("22♣");
+  }).toThrow("Invalid Cards");
+  expect(() => {
+    getCardValue("11♦");
+  }).toThrow("Invalid Cards");
+  expect(() => {
+    getCardValue("4♥♥");
+  }).toThrow("Invalid Cards");
+  expect(() => {
+    getCardValue("");
+  }).toThrow("Invalid Cards");
+  expect(() => {
+    getCardValue("♠");
+  }).toThrow("Invalid Cards");
+  expect(() => {
+    getCardValue("-9♥");
+  }).toThrow("Invalid Cards");
 });
 
 // Suggestion: Group the remaining test data into these categories:
