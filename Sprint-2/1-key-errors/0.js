@@ -11,6 +11,6 @@ function capitalise(str) {
 // Te error message says 'str' has already been declared so we can use another name for our 
 //output to solve that error we change the output variable name
 // function capitalise(str) {
- // let str = `${str[0].toUpperCase()}${str.slice(1)}`;
- // return str;
+ // let str1 = `${str[0].toUpperCase()}${str.slice(1)}`;
+ // return str1;
 //}
