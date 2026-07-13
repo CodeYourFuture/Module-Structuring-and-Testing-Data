@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnRob-jnr/Module-Structuring-and-Testing-Data.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JohnRob-jnr/Module-Structuring-and-Testing-Data/issues"
+  },
+  "homepage": "https://github.com/JohnRob-jnr/Module-Structuring-and-Testing-Data#readme"
 }
