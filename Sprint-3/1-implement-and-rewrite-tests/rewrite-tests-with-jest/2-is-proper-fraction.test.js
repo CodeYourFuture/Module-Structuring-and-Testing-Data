@@ -24,8 +24,12 @@ test(` should return false when numerator is positive and denominator is negativ
   expect(isProperFraction(1, -2)).toEqual(true);
 })
 
-//negative numerator and denominator where numerator is smaller
-test(`should return false whe`)
+//negative numerator and denominator where numerator is smaller than denominator
+test(`should return true when numerator is negative and denominator is negative and numerator is smaller than denominator`, () => {
+  expect(isProperFraction(-1, -2)).toEqual(true);
+});
 
-
-
+//negative numerator and denominator where numerator is bigger than denominator
+test(`should return false when numerator is negative and denominator is negative and numerator is bigger than denominator`, () => {
+  expect(isProperFraction(-2, -1)).toEqual(false);
+});
