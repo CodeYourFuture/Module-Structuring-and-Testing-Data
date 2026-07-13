@@ -1,5 +1,11 @@
 function countChar(stringOfCharacters, findCharacter) {
-  return 5
+  let countTime = 0;
+  for (let i = 0; i < stringOfCharacters.length; i++) {
+    if (stringOfCharacters.slice(i, i + 1) == findCharacter) {//take each character out from string to compare with the given character. If true, then add one to countTime.
+      countTime = countTime + 1;
+    }
+  }
+  return countTime;
 }
 
 module.exports = countChar;
