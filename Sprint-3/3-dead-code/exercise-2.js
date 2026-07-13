@@ -5,10 +5,6 @@ const pets = ["parrot", "hamster", "horse", "dog", "hamster", "cat", "hamster"];
 const capitalisedPets = pets.map((pet) => pet.toUpperCase());
 const petsStartingWithH = pets.filter((pet) => pet[0] === "h");
 
-function logPets(petsArr) {
-  petsArr.forEach((pet) => console.log(pet));
-}
-
 function countAndCapitalisePets(petsArr) {
   const petCount = {};
 
@@ -23,6 +19,4 @@ function countAndCapitalisePets(petsArr) {
   return petCount;
 }
 
-const countedPetsStartingWithH = countAndCapitalisePets(petsStartingWithH);
-
-console.log(countedPetsStartingWithH); // { 'HAMSTER': 3, 'HORSE': 1 } <- Final console log
+console.log(countAndCapitalisePets(petsStartingWithH)); // { 'HAMSTER': 3, 'HORSE': 1 } <- Final console log
