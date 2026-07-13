@@ -9,6 +9,16 @@ test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♠")).toEqual(11);
 });
 
+// Case 2: Number cards (2-10)
+test(`Should return 2 when given a 2 card`, () => {
+  expect(getCardValue("2♠")).toEqual(2);
+});
+
+// Case 3: Number cards (2-10)
+test(`Should return 10 when given a 10 card`, () => {
+  expect(getCardValue("10♠")).toEqual(10);
+});
+
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
 //   Face Cards (J, Q, K)
