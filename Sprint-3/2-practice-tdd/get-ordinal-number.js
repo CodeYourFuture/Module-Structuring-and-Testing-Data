@@ -1,4 +1,8 @@
 function getOrdinalNumber(num) {
+  if ( typeof num !==  "number" ){
+    throw new Error('Not a number')
+  }
+
   if (num % 10 === 1 &&  num % 100 !== 11) {
     return `${num}st`;
   } else if (num % 10 === 2 && num % 100 !== 12 ) {
@@ -6,6 +10,7 @@ function getOrdinalNumber(num) {
   } else if (num % 10 === 3 && num % 100 !== 13) {
     return `${num}rd`;
   } else {
+   
     return `${num}th`;
   }
 }
