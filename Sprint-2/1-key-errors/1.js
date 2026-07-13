@@ -15,7 +15,8 @@ console.log(decimalNumber);
 
 // =============> write your explanation here
 // Since the parameter and variable have the same name, decimalNumber, we will get an error as we can not declare a
-// variable of the same name with in the functions local scope
+// variable of the same name with in the functions local scope. In addition to that setting decimalNumber to 0.5 means
+// the function will always return 50% no matter what number is passed into it.
 
 // Finally, correct the code to fix the problem
 // =============> write your new code here
