@@ -15,4 +15,4 @@ console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
 
 // Finally, correct the code to fix the problem
 //  =============> write your new code here
-// [ChunYanWong] return (a+b);
+// [ChunYanWong] return a+b;
