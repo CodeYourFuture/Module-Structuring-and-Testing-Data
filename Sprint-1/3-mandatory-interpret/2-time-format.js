@@ -1,4 +1,4 @@
-const movieLength = 6; // length of movie in seconds
+const movieLength = 3540; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -6,27 +6,28 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(result);
+const formattedtime = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+console.log(formattedtime);
 
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
-//6
+6
 // b) How many function calls are there?
-//1
+1
 // c) Using documentation, explain what the expression movieLength % 60 represents
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 
-//It divides totalMinutes into 60, see how much remainingMinutes left.
+It divides totalMinutes into 60, see how much remainingMinutes left.
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
-//After deducting the totalMinutes, and divide the second. How much do he have the totalMinutes ?
+After deducting the totalMinutes, and divide the second. How much do he have the totalMinutes ?
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//The total duration of the movieLength.
+ We can use formmattedtime to point out the time has been formatted.
 
-// f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-//for one hour = 3600 minutes .  1:00:00
-//for 59 minutes =  3540 minutes .  0:59:0
-//for seconds =  6 seconds .  0:0:6
+ // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+for one hour = 3600 second .      1:00:00. No, it does not work here, because the remaining minutes and second forgets the extra zero.
+
+//for 59 minutes =  3540 second .  0:59:0   No, it does not work here, because the remaining seconds and total hour forgets the extra zero.
+for seconds =  6 seconds .  0:0:6.  No, it does not work here, because the totalHours, remainingMinutes and remaining seconds forgets the extra zero.
