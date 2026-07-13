@@ -8,7 +8,5 @@ const cardNumber = 4533787178994213;
 // Consider: Why does it give this error? Is this what I predicted? If not, what's different?
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
-// [ChunYanWong] The slice method extract substring starting with the first parameter position
-// There is no -4 starting position and hence it will not work
 
-const last4Digits = cardNumber.toString().slice(cardNumber.toString().length - 4)
+const last4Digits = cardNumber.toString().slice(-4)
