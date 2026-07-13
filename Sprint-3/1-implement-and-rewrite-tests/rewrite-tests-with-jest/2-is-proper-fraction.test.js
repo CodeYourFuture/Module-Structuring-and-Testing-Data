@@ -24,6 +24,8 @@ test(` should return false when numerator is positive and denominator is negativ
   expect(isProperFraction(1, -2)).toEqual(true);
 })
 
+//negative numerator and denominator where numerator is smaller
+test(`should return false whe`)
 
 
 
