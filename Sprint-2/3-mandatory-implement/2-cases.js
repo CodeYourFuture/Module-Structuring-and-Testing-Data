@@ -16,5 +16,5 @@
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 function toUpperCase(words) {
-  return words.toUpperCase();
+ return words.split(" ").join("_").toUpperCase();
 }
