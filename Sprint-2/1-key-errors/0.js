@@ -18,7 +18,7 @@ function capitalise(str) {
 // To fix the error, you can simply remove the let keyword and just assign the new value to str without redeclaring it.
 
 function capitalise(str) {
-  if (typeof str !== "string") {
+  if (typeof str !== "string" || str.length === 0) {
     return str;
   }
 
