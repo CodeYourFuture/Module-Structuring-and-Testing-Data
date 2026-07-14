@@ -17,8 +17,8 @@ test(`should return false when the function is improper fraction`, () => {
 test(`should return false when the numerator is equal to denominator`, () => {
   expect(isProperFraction(4, 4)).toEqual(false);
 });
-test(`should return false when numerator is zero`, () => {
-  expect(isProperFraction(0, 1)).toEqual(false);
+test(`should return true when numerator is zero`, () => {
+  expect(isProperFraction(0, 1)).toEqual(true);
 });
 test(`should return false when numerator is negative`, () => {
   expect(isProperFraction(-1, 1)).toEqual(false);
