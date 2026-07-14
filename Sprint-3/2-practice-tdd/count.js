@@ -1,12 +1,14 @@
 function countChar(stringOfCharacters, findCharacter) {
   let count = 0;
 
-  for (let i = 0; i < stringOfCharacters; i++) {
+  for (let i = 0; i < stringOfCharacters.length; i++) {
     if (stringOfCharacters[i] === findCharacter) {
       count++;
     } else {
-      count = 0;
+      return count;
     }
   }
+  return count;
 }
+console.log(countChar("bbbbb", "b"));
 module.exports = countChar;
