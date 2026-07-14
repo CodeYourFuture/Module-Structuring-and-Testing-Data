@@ -12,7 +12,7 @@ function isProperFraction(numerator, denominator) {
 
   // A fraction is proper if the absolute value of the numerator 
   // is strictly less than the absolute value of the denominator.
-  return Math.abs(numerator) < Math.abs(denominator);
+  return denominator !== 0 && Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
