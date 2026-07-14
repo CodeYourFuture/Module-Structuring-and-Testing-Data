@@ -12,7 +12,7 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
-  if(denominator === 0){
+  if (denominator === 0) {
     return false;
   }
   let fraction = numerator / denominator;
@@ -34,26 +34,26 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all cases.
 // What combinations of numerators and denominators should you test?
 
-// Example: 1/2 is a proper fraction
+// Example: 1/2 is a proper fraction.
 assertEquals(isProperFraction(1, 2), true);
 
-// Example: numerator is 0 is a proper fraction
+// Example: numerator is 0, not a proper fraction.
 assertEquals(isProperFraction(0, 2), false);
 
-// Example: numerator is equal to denominators is a proper fraction
+// Example: numerator is equal to denominators, not a proper fraction.
 assertEquals(isProperFraction(2, 2), false);
 
-// Example: denominator is 0 is a proper fraction
+// Example: denominator is 0,not a proper fraction.
 assertEquals(isProperFraction(5, 0), false);
 
-// Example: numerator is negative is a proper fraction
+// Example: numerator is negative, not a proper fraction.
 assertEquals(isProperFraction(-1, 2), false);
 
-// Example: denominator is negative is a proper fraction
+// Example: denominator is negative,not a proper fraction.
 assertEquals(isProperFraction(4, -3), false);
 
-// Example: numerator and denominator are both negative values is a proper fraction
+// Example: numerator and denominator are both negative values is a proper fraction.
 assertEquals(isProperFraction(-5, -6), true);
 
-// Example: negative numerator with smaller value then negative dominator is a proper fraction
+// Example: negative numerator with smaller value then negative dominator, not a proper fraction.
 assertEquals(isProperFraction(-6, -5), false);
