@@ -27,27 +27,36 @@ function getCardValue(card) {
   let rank = card.slice(0, -1);
   let suit = card.slice(-1);
 
-  const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const validRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
   const validSuits = ["♠", "♥", "♦", "♣"];
 
   let isValidRank = validRanks.includes(rank);
   let isValidSuit = validSuits.includes(suit);
 
+  // Invalid  Card
+  if (!isValidRank || !isValidSuit) {
+    throw new Error("Invalid Card");
+  }
 
-
-// Invalid  Card
-if( !isValidRank || !isValidSuit ){
-  throw new Error("Invalid Card")
-}
-
-  if(rank == "A"){
+  if (rank == "A") {
     return 11;
-  }
-  else if(rank == "J"  || rank == "Q" || rank == "K"){
+  } else if (rank == "J" || rank == "Q" || rank == "K") {
     return 10;
-  }
-  else return Number(rank);
-
+  } else return Number(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -99,7 +108,6 @@ try {
   console.log("Error thrown for invalid card 🎉");
 }
 
-
 // What other invalid card cases can you think of?
 try {
   getCardValue("24♠");
@@ -109,7 +117,6 @@ try {
 } catch (e) {
   console.log("Error thrown for invalid card  🎉");
 }
-
 
 try {
   getCardValue("44");
