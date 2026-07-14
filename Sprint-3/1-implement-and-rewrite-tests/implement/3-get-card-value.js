@@ -50,9 +50,7 @@ function getCardValue(card) {
     return 11;
   } else if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
-  } else if (rank >= 2 && rank <= 10) {
-    return Number(rank);
-  }
+  } else return Number(rank);
 }
 
 function assertEquals(actualOutput, targetOutput) {

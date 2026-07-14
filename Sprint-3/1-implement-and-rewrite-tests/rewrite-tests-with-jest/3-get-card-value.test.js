@@ -47,4 +47,24 @@ describe("Invalid Cards", () => {
       getCardValue("Qxx");
     }).toThrow();
   });
+    test("throws error for invalid suit", () => {
+    expect(() => {
+      getCardValue("*");
+    }).toThrow();
+  });
+    test("throws error for invalid suit", () => {
+    expect(() => {
+      getCardValue("diamonds");
+    }).toThrow();
+  });
+    test("throws error for invalid suit", () => {
+    expect(() => {
+      getCardValue("♤");
+    }).toThrow();
+  });
+      test("throws error for invalid suit", () => {
+    expect(() => {
+      getCardValue("x");
+    }).toThrow();
+  });
 });
