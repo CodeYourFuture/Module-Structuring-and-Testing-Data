@@ -118,5 +118,30 @@ try {
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
 }
+try {
+  getCardValue("*");
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+try {
+  getCardValue("diamonds");
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+try {
+  getCardValue("♤");
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+try {
+  getCardValue("x");
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
 
 module.exports = getCardValue;
