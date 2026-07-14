@@ -7,5 +7,6 @@
     "ritwickdey.LiveServer",
     "vsliveshare.vsliveshare",
     "Orta.vscode-jest"
-  ]
+  ],
+  "unwantedRecommendations": ["github.copilot", "github.copilot-chat"]
 }
