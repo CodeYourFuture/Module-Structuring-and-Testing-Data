@@ -13,12 +13,19 @@ test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♠")).toEqual(11);
 });
 
-// Case 2: Number cards (2-10)
-test(`Should return 2 when given a 2 card`, () => {
+// Case 2: Number cards (2-9)
+test(`Should return corresponding number when given a number card`, () => {
   expect(getCardValue("2♠")).toEqual(2);
+  expect(getCardValue("3♠")).toEqual(3);
+  expect(getCardValue("4♠")).toEqual(4);
+  expect(getCardValue("5♠")).toEqual(5);
+  expect(getCardValue("6♠")).toEqual(6);
+  expect(getCardValue("7♠")).toEqual(7);
+  expect(getCardValue("8♠")).toEqual(8);
+  expect(getCardValue("9♠")).toEqual(9);
 });
 
-// Case 3: Number cards (2-10)
+// Case 3: Number cards (10)
 test(`Should return 10 when given a 10 card`, () => {
   expect(getCardValue("10♠")).toEqual(10);
 });
