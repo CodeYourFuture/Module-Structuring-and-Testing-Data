@@ -22,23 +22,40 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
+  const ranks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+  const rankNum = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  const rankFace = ["J", "Q", "K"];
   const suits = ["♠", "♥", "♦", "♣"];
-  if (card[0] === "A" && suits.includes(card[1]) && card.length === 2)
-    return 11;
-  if (
-    (card[0] === "J" || card[0] === "Q" || card[0] === "K") &&
-    suits.includes(card[1]) &&
-    card.length === 2
-  )
-    return 10;
-  if (
-    ["2", "3", "4", "5", "6", "7", "8", "9"].includes(card[0]) &&
-    suits.includes(card[1]) &&
-    card.length === 2
-  )
-    return Number(card[0]);
-  if (card.slice(0, 2) == "10" && suits.includes(card[2]) && card.length === 3)
-    return 10;
+
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+
+  if (suits.includes(suit) && ranks.includes(rank)) {
+    if (rank === "A") {
+      return 11;
+    }
+    if (rankNum.includes(rank)) {
+      return Number(rank);
+    }
+    if (rankFace.includes(rank)) {
+      return 10;
+    }
+  }
+
   throw new Error(
     'Invalid input: Expected rank followed by a suit symbol. For example: "A♠", "2♥", "10♥", "J♣", "Q♦", "K♦"'
   );
