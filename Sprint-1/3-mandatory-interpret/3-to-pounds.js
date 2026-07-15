@@ -25,3 +25,7 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 3-6. removes the p from "399p"
+// 8. If the string is shorter than 3 characters, it will add 0s to the front
+// 9-12. Extracts the pound part of the string
+// 14-6. Extracts the pence part of the string
