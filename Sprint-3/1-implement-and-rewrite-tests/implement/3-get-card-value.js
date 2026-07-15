@@ -26,7 +26,11 @@ function getCardValue(card) {
   const suit = card.slice(-1);
   const rank = card.slice(0, -1);
 
-
+  // check suit values
+  if !(["♠", "♥", "♦", "♣"].includes(suit)) {
+    throw new Error("Invalid card suit");
+  }
+  
   // Ace value
   if (rank === "A") {
     return 11;
