@@ -11,7 +11,7 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  if (denominator === 0 || numerator === 0) return false;
+  if (denominator === 0) return false;
   if (!(denominator % 1 === 0 && numerator % 1 === 0)) return false;
   if (Math.abs(numerator) < Math.abs(denominator)) return true;
   else return false;
@@ -36,9 +36,10 @@ function assertEquals(actualOutput, targetOutput) {
 assertEquals(isProperFraction(1, 2), true);
 assertEquals(isProperFraction(-3, 4), true);
 assertEquals(isProperFraction(3, -4), true);
+assertEquals(isProperFraction(0, 2), true);
 
-//numerator or denominator is 0
-assertEquals(isProperFraction(0, 2), false);
+//denominator is 0
+
 assertEquals(isProperFraction(2, 0), false);
 
 //result is a whole number
