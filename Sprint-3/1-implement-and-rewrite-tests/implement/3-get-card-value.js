@@ -23,24 +23,26 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
-   const value = card.slice(0, -1).toUpperCase();
+  const value = card.slice(0, -1).toUpperCase();
   const validSuits = "♠,♥,♦,♣".split(",");
   const suit = card.slice(-1);
 
-
-  if(!validSuits.includes(suit)) {
+  if (!validSuits.includes(suit)) {
     throw new Error("Invalid card");
   }
 
-  const faceCardValues = {'A': 11, 'J': 10, 'Q': 10, 'K': 10};
+  const faceCardValues = { A: 11, J: 10, Q: 10, K: 10 };
 
-  if(faceCardValues[value] === undefined && (Number(value) < 2 || Number(value) > 10)) {
+  if (
+    faceCardValues[value] === undefined &&
+    (Number(value) < 2 || Number(value) > 10)
+  ) {
     throw new Error("Invalid card");
   }
-  
+
   if (faceCardValues[value] !== undefined) {
     return faceCardValues[value];
-  } 
+  }
 
   const numvalue = Number(value);
   if (numvalue >= 2 && numvalue <= 10) {
@@ -64,9 +66,8 @@ function assertEquals(actualOutput, targetOutput) {
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
 
-assertEquals(getCardValue("A♥"),11);
-assertEquals(getCardValue("10♠"),10);
-
+assertEquals(getCardValue("A♥"), 11);
+assertEquals(getCardValue("10♠"), 10);
 
 assertEquals(getCardValue("2♠"), 2);
 assertEquals(getCardValue("K♠"), 10);
