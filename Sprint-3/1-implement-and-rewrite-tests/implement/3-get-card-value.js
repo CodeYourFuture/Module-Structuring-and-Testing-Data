@@ -30,25 +30,26 @@ function getCardValue(card) {
   if !(["♠", "♥", "♦", "♣"].includes(suit)) {
     throw new Error("Invalid card suit");
   }
-  
-  // Ace value
-  if (rank === "A") {
-    return 11;
+  else
+  {
+    // Ace value
+    if (rank === "A") {
+      return 11;
+    }
+
+    // Face card values
+    if (["J", "Q", "K"].includes(rank)) {
+      return 10;
+    }
+
+    // Number card values ("2" through "10")
+    const numericValue = parseInt(rank, 10);
+    if (!isNaN(numericValue) && numericValue >= 2 && numericValue <= 10) {
+      return numericValue;
+    }
+
+    throw new Error("Invalid card string");
   }
-
-  // Face card values
-  if (["J", "Q", "K"].includes(rank)) {
-    return 10;
-  }
-
-  // Number card values ("2" through "10")
-  const numericValue = parseInt(rank, 10);
-  if (!isNaN(numericValue) && numericValue >= 2 && numericValue <= 10) {
-    return numericValue;
-  }
-
-  throw new Error("Invalid card string");
-
 
 }
 
