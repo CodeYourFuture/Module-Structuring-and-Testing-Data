@@ -8,6 +8,13 @@ const totalHours = (totalMinutes - remainingMinutes) / 60;
 
 const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
+// There are 6 variables declared in this program: movieLength, remainingSeconds, totalMinutes, remainingMinutes, totalHours, and result.
+// There are 4 function calls in this program: console.log(), and the three arithmetic operations used to calculate remainingSeconds, totalMinutes, and remainingMinutes.
+// The expression movieLength % 60 calculates the remainder when movieLength is divided by 60. This gives the number of seconds remaining after converting the total length of the movie into minutes and hours.
+// Interpret line 4, the expression assigned to totalMinutes calculates the total number of minutes in the movie by subtracting the remaining seconds from the total length of the movie and dividing by 60.
+// The variable result represents the formatted string of the movie length in hours, minutes, and seconds. A better name for this variable could be formattedMovieLength or movieLengthString.
+// This code will work for all values of movieLength, as it correctly calculates the hours, minutes, and seconds regardless of the total length of the movie. However, if movieLength is negative, it may not produce a meaningful result.
+// experimenting with different values of movieLength, such as 2:25.833, 1:23:20, will show that the code correctly formats the length of the movie in hours, minutes, and seconds for all positive values.
 
 // For the piece of code above, read the code and then answer the following questions
 
