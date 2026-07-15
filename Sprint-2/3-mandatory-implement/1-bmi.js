@@ -19,3 +19,5 @@ function calculateBMI(weight, height) {
     const bmi = (weight / height **2);
     return bmi.toFixed(1);
 }
+
+console.log(calculateBMI(90, 1.80));
