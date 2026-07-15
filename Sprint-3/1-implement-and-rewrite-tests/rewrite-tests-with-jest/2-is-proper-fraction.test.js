@@ -19,14 +19,14 @@ test(`should return false when numerator is equal to denominator`, () => {
   expect(isProperFraction(2, 2)).toEqual(false);
 });
 
-// Special case: numerator is negative is not a proper fraction.
-test(`should return false when numerator is negative value`, () => {
-  expect(isProperFraction(-1, 2)).toEqual(false);
+// Special case: numerator is negative is a proper fraction.
+test(`should return true when numerator is negative but fraction is still proper`, () => {
+  expect(isProperFraction(-1, 2)).toEqual(true);
 });
 
-// Special case: denominator is negative is not a proper fraction.
-test(`should return false denominator  is negative value `, () => {
-  expect(isProperFraction(1, -2)).toEqual(false);
+// Special case: denominator is negative is a proper fraction.
+test(`should return true when denominator is negative but fraction is still proper`, () => {
+  expect(isProperFraction(1, -2)).toEqual(true);
 });
 
 // Special case: numerator and denominator are both negative values is a proper fraction.
