@@ -16,7 +16,7 @@ function isProperFraction(numerator, denominator) {
     return false;
   }
   let fraction = numerator / denominator;
-  return fraction > 0 && fraction < 1;
+  return Math.abs(fraction) < 1 && fraction !== 0;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -46,10 +46,10 @@ assertEquals(isProperFraction(2, 2), false);
 // Example: denominator is 0,not a proper fraction.
 assertEquals(isProperFraction(5, 0), false);
 
-// Example: numerator is negative, not a proper fraction.
-assertEquals(isProperFraction(-1, 2), false);
+// Example: numerator is negative,is a proper fraction.
+assertEquals(isProperFraction(-1, 2), true);
 
-// Example: denominator is negative,not a proper fraction.
+// Example: denominator is smaller than numerator,not a proper fraction.
 assertEquals(isProperFraction(4, -3), false);
 
 // Example: numerator and denominator are both negative values is a proper fraction.
