@@ -2,8 +2,8 @@
 
 // Predict the output of the following code:
 // =============> Write your prediction here
-// we are using the constant variable num, which is declared as a global variable. Inside function, we have declare it with no
-// parameter, but, while calling a function we're passing an argument. It can't use that argument because function is declare
+// we are using the constant variable num, and it is declared as a global variable. The function is declared with no
+// parameter, but, while calling a function we're passing an argument. It can't use that argument as function is declare
 // with no parameter so it will use the global variable whenever the function is being called.
 /*const num = 103;
 
