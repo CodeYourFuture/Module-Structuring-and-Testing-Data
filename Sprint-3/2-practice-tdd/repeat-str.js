@@ -5,3 +5,17 @@ function repeatStr() {
 }
 
 module.exports = repeatStr;
+
+//fixed
+
+function repeatStr(str, count) {
+  let result = "";
+
+  for (let i = 0; i < count; i++) {
+    result += str;
+  }
+
+  return result;
+}
+
+module.exports = repeatStr;
