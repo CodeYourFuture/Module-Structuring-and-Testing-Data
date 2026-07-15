@@ -31,7 +31,7 @@ function getCardValue(card) {
 
   // Parse numeric ranks ("2" through "10")
   const numericValue = parseInt(rank, 10);
-  if (!isNaN(numericValue) && numericValue >= 2 && numericValue <= 10 && String(numericValue) === rank) {
+  if (!isNaN(numericValue) && numericValue >= 2 && numericValue <= 10) {
     return numericValue;
   }
 
