@@ -1,5 +1,5 @@
-const 12HourClockTime = "8:53pm";
-const 24hourClockTime = "20:53";
+const twelveHourClockTime = "8:53pm";
+const twentyFourHourClockTime = "20:53";
 
 // 12 Hour clock time is a string that represents the time in 12-hour format, while 24hourClockTime is a string that represents the time in 24-hour format.
 // To convert 12HourClockTime to 24-hour format, we can use the following steps:
