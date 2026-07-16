@@ -26,3 +26,9 @@ test(`should return false when numerator is negative`, () => {
 test(`should return false when denominator is negative`, () => {
   expect(isProperFraction(1, -1)).toEqual(false);
 });
+test(`should return true when numerator is negative but not the same number as denominator`, () => {
+  expect(isProperFraction(-1, 2)).toEqual(true);
+});
+test(`should return true when denominator is negative but not the same number as denominator`, () => {
+  expect(isProperFraction(1, -2)).toEqual(true);
+});
