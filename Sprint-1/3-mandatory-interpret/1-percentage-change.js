@@ -20,4 +20,4 @@ console.log(`The percentage change is ${percentageChange}`);
 // d) Identify all the lines that are variable declarations
 // lines 1, 2, 7 and 8 are variable declarations
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
-// This expression is replacing the , in '10,000' with nothing - essentially removing it 
+// This expression is replacing the , in '10,000' with nothing - essentially removing it. Number() function can then convert the string into a number, allowing it to be used in calculations such as finding the price difference and percentage change.
