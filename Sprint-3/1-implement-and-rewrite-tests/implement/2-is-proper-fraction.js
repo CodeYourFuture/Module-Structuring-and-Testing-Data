@@ -14,11 +14,10 @@ function isProperFraction(numerator, denominator) {
   if (denominator === 0) {
     return false;
   }
-  else if (numerator >= 0 && denominator !== 0) {
 
   return Math.abs(numerator) < Math.abs(denominator);
   }
-}
+
   
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
@@ -54,6 +53,14 @@ console.log(isProperFraction(0, 6));
 const case7 = isProperFraction(5, 0);
 assertEquals(case7, false);
 console.log(isProperFraction(5, 0));
+
+const case8 = isProperFraction(-1, 2);
+assertEquals(case8, true);
+console.log(isProperFraction(-1, 2));
+
+const case9 = isProperFraction(1, -2);
+assertEquals(case9, true);
+console.log(isProperFraction(1, -2));
 
 module.exports = isProperFraction;
 
