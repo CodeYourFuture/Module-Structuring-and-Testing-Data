@@ -15,6 +15,8 @@ function getAngleType(angle) {
   }
 }
 
+module.exports = getAngleType;
+
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,

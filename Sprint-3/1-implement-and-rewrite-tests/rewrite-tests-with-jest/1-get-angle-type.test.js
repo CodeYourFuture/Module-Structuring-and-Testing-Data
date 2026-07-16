@@ -1,3 +1,5 @@
+const getAngleType = require("../implement/1-get-angle-type");
+
 
 // Case 1: Acute angles
 test('should return "Acute angle" when (0 < angle < 90)', () => {

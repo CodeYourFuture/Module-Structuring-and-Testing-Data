@@ -3,6 +3,8 @@ function isProperFraction(numerator, denominator) {
   return Math.abs(numerator) < Math.abs(denominator);
 }
 
+module.exports = isProperFraction;
+
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,

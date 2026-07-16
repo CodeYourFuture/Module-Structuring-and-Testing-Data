@@ -1,3 +1,4 @@
+const getCardValue = require("../implement/3-get-card-value");
 
 // Case 1: Ace (A)
 test("should return 11 when given an ace card", () => {

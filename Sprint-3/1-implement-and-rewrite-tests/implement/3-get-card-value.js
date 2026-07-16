@@ -50,6 +50,8 @@ function getCardValue(card) {
   return values[rank];
 }
 
+module.exports = getCardValue;
+
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
