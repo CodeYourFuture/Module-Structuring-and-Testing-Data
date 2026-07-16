@@ -22,7 +22,16 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  let removeSuit = card.slice(0, -1);
+  if (removeSuit === "A") {
+    return 11;
+  } else if (removeSuit === "J" || removeSuit === "Q" ||removeSuit === "K") {
+    return 10;
+  } else if (removeSuit > 1 && removeSuit < 11) {
+    return Number(removeSuit);
+  } else {
+    throw new Error("Error")
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,11 +49,15 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("J♦"), 10);
+assertEquals(getCardValue("7♥"), 7);
+assertEquals(getCardValue("A♥"), 11);
+assertEquals(getCardValue("8♥"), 8);
 
 // Handling invalid cards
 try {
   getCardValue("invalid");
-
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
@@ -52,3 +65,11 @@ try {
 }
 
 // What other invalid card cases can you think of?
+try {
+  getCardValue("15♥");
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
