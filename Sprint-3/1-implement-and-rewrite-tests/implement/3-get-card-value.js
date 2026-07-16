@@ -22,8 +22,36 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+    const rank = card.slice(0, card.length -1).toUpperCase()
+    const suit = card.slice(card.length -1)
+
+    const suits = ["♠", "♥", "♦", "♣"];
+    const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+    // Basic validation
+    if(card === ""){
+        throw new Error("No card was played")
+    }
+    if(card.length < 2 || card.length > 3 ){
+        throw new Error("Invalid card played, rank and suit cannot be less than 1 or more than 3")
+    }
+    // Suit validation
+    if(!suits.includes(suit)){
+        throw new Error("Invalid card played, suit is missing");
+    }
+    // Rank validation
+    if(!validRanks.includes(rank)){
+        throw new Error("Invalid rank played")
+    }
+    if(rank === "A"){
+        return 11
+    }else if(rank === "J" || rank === "Q" || rank === "K"){
+        return 10
+    }else{
+        return Number(rank)
+    }
 }
+
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -37,18 +65,59 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
-assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("A♥"), 11);
+assertEquals(getCardValue("A♦"), 11);
+assertEquals(getCardValue("A♣"), 11);
+assertEquals(getCardValue("2♠"), 2);
+assertEquals(getCardValue("3♥"), 3);
+assertEquals(getCardValue("4♦"), 4);
+assertEquals(getCardValue("5♣"), 5);
+assertEquals(getCardValue("6♠"), 6);
+assertEquals(getCardValue("7♥"), 7);
+assertEquals(getCardValue("8♦"), 8);
+assertEquals(getCardValue("9♣"), 9);
+assertEquals(getCardValue("10♠"), 10);
+assertEquals(getCardValue("J♠"), 10);
+assertEquals(getCardValue("Q♥"), 10);
+assertEquals(getCardValue("K♦"), 10);
 
 // Handling invalid cards
 try {
-  getCardValue("invalid");
+  getCardValue("");
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
-  console.log("Error thrown for invalid card 🎉");
+  console.log(e);
 }
 
 // What other invalid card cases can you think of?
+try{
+    getCardValue("100");
+    console.error("Error was not thrown for card with more than 3 in length");
+} catch (e){
+    console.log(e)
+}
+try{
+    getCardValue("1")
+    console.error("Error was not thrown for a card.lenght = 1")
+}catch (e){
+    console.log(e)
+}
+
+try{
+    getCardValue("♦")
+    console.error("Error was not thrown for a card play of just suits")
+}catch (e){
+    console.log(e)
+}
+
+try{
+    getCardValue("A😊")
+    console.error("Error was not thrown for a card play of a wrong suit")
+}catch (e){
+    console.log(e)
+}
+
