@@ -15,6 +15,7 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
+ // TODO: Implement this function
  // first converting conditions into variables
   const acuteAngle = (angle > 0 && angle < 90);
   const rightAngle = (angle === 90);
