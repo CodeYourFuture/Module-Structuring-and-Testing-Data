@@ -4,6 +4,19 @@ const repeatStr = require("./repeat-str");
 // When the repeatStr function is called with these inputs,
 // Then it should:
 
+// Case: Handle negative count:
+// Given a target string `str` and a negative integer `count`,
+// When the repeatStr function is called with these inputs,
+// Then it should throw an error, as negative counts are not valid.
+
+test("should throw an error when count is negative", () => {
+  const str = "error";
+  const count = -2;
+  expect(() => repeatStr(str, count)).toThrow(
+    "Invalid input: count must be a non-negative integer"
+  );
+});
+
 // Case: handle multiple repetitions:
 // Given a target string `str` and a positive integer `count` greater than 1,
 // When the repeatStr function is called with these inputs,
@@ -38,17 +51,4 @@ test("should return an empty string when count is 0", () => {
   const count = 0;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("");
-});
-
-// Case: Handle negative count:
-// Given a target string `str` and a negative integer `count`,
-// When the repeatStr function is called with these inputs,
-// Then it should throw an error, as negative counts are not valid.
-
-test("should throw an error when count is negative", () => {
-  const str = "error";
-  const count = -2;
-  expect(() => repeatStr(str, count)).toThrow(
-    "Invalid input: count must be a non-negative integer"
-  );
 });
