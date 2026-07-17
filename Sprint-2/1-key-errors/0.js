@@ -11,10 +11,11 @@
 // }
 
 // =============> write your explanation here
-// i will remove the let keyword, which is only used for declaration and assignment, when redeclaring we do not use the let keyword
+// I will remove the let keyword, which is only used for declaration and assignment, when redeclaring we do not use the let keyword
 // =============> write your new code here
-function capitalise(str){
-  str = `${str[0].toUpperCase()}${str.slice(0)}`;
-  return str
+function capitalise(str) {
+    const capitalisedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
+    return capitalisedStr
 }
+
 console.log(capitalise("butter"))
