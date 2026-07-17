@@ -10,6 +10,8 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 console.log(num);
 
-// Here, Math.random creates a random number between 0 to 1 and Math.floor rounds down to the nearest integer. 
-// After creating a random number between 0 and 1, we will multiply it by the result of (100 - 1 + 1), then round it down to the nearest integer
+// Here, Math.random creates a random decimal number greater than or equals to 0 and less than 1. It can be any decimal number in between.
+// The function Math.floor rounds down any decimal number to the nearest integer to give it a whole number.
+//In Javascript, the the expression in the bracket is read first. Here, we started by doing (maximum - minimum + 1) which is (100 - 1 + 1). The answer is 100.
+// The next evaluation is creating a random number by reading the function Math.random(0<= random number < 1), we will multiply it by the result of (100 - 1 + 1 which is 100), then round it down to the nearest integer
 // Then add all of that to 1 which is the minimum number.
