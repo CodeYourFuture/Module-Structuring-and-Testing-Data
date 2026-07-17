@@ -22,6 +22,7 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
+  // TODO: Implement this function
   const suit = ["♠", "♥", "♦", "♣"]; // array with suits
   const rank = [
     "2",
