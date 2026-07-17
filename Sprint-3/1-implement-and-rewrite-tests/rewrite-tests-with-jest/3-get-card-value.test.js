@@ -13,6 +13,7 @@ test(`Should return 11 when given an ace card`, () => {
 //   Number Cards (2-10)
 //   Face Cards (J, Q, K)
 //   Invalid Cards
+
 // Case 2: Number cards (2-9)
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
