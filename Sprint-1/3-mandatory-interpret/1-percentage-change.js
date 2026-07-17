@@ -24,6 +24,9 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // d) Identify all the lines that are variable declarations
 //Line 1, line 2, line 7 and line 8 have variable declarations
+// Here, we have declared variables by using let and const. We have variable called carPrice, priceAfterOneYear, priceDifference and percentageChange.
+// We have given values to these variables as well which can be seen after the equals sign.
 
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 //This expression removes the comma in the price from 10,000 to 10000
+//Here, every time the function reads a comma (","), it replaces the comma with "" which is basically an empty space. In other words, it removes the comma in a expression
