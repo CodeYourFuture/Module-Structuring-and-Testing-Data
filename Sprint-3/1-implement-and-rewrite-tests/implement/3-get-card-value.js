@@ -93,7 +93,7 @@ try {
   console.log(e);
 }
 
-// What other invalid card cases can you think of?
+//  What other invalid card cases can you think of?
 try{
     getCardValue("100");
     console.error("Error was not thrown for card with more than 3 in length");
@@ -120,4 +120,5 @@ try{
 }catch (e){
     console.log(e)
 }
+
 
