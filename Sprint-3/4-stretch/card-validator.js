@@ -57,15 +57,15 @@ const validateCard = (card) => {
     hasEvenFinalDigit &&
     hasSumOver15 &&
     hasMultipleDistinctDigits
-    ? "Valid card"
-    : "Invalid card";
+    ? true
+    : false;
 };
 
-console.log(validateCard(9999777788880000)); // valid
-console.log(validateCard(6666666666661666)); // valid
-console.log(validateCard("a92332119c011112")); // Invalid
-console.log(validateCard(4444444444444444)); // Invalid
-console.log(validateCard(1111111111111110)); // Invalid
-console.log(validateCard(6666666666666661)); // Invalid
+console.log(validateCard(9999777788880000)); // true
+console.log(validateCard(6666666666661666)); // true
+console.log(validateCard("a92332119c011112")); // false
+console.log(validateCard(4444444444444444)); // false
+console.log(validateCard(1111111111111110)); // false
+console.log(validateCard(6666666666666661)); // false
 
 module.exports = validateCard;
