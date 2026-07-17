@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 8784 // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -28,4 +28,7 @@ console.log(result);
 // The variable result shows the total remaining duration of a movie in terms of hours, minutes and seconds. We can also call it remainingTime.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-// The movieLength code will work work with all kinds of number. That is integers and floats. It will not work with strings
+// When using -8784, I had the same answers with 8784, except they were all negative numbers. -2:-26:-24
+// When using 87.84, I had 0:1:27.840000000000003 which is still a readable time. But it doesn't round up the decimal numbers. 
+// When using the String "8784", I had 2:26:24 which is the same answer as when I used 8784. Javascript is converts strings to integers automatically when subtracting
+// When using the string "hello", I get the outcome NaN:NaN:NaN which means "Not a Number". the string hello can't work in divisions. 
