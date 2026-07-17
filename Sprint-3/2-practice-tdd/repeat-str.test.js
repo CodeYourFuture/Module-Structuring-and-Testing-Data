@@ -26,7 +26,7 @@ test("should return the original string when count is 1", () => {
   const count = 1;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("world");
-}
+});
 
 // Case: Handle count of 0:
 // Given a target string `str` and a `count` equal to 0,
