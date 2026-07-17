@@ -8,6 +8,7 @@ const getCardValue = require("../implement/3-get-card-value");
 test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♠")).toEqual(11);
 });
+
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
 //   Face Cards (J, Q, K)
