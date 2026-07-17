@@ -20,10 +20,13 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
-// [MM] - The index variable increments by one each time the letter (str[index]) at the current index does not match the target letter (char)
+// The index starts at 0 and increments by one at each iteration as long as the nested if statement is not triggered.  In the case of find("code your future", "u"), the if statement is triggered at index 7 because a match is found for letter u at this index.  The while loop is exited and the number 7 is returned by the find function.  In the case of find("code your future", "z") no match is found by the time the while loop terminates.  In this case the find function returns -1 to indicate the letter z was not found in the string
+
 // b) What is the if statement used to check
-// [MM] - The if statement is used to check if the current letter matches the target letter (char).  If a match is found (str[index] === char) it will cause an early exit from the while loop at the current index
+// The if statement is used to check if the current letter in the string (str[index]) matches the target letter (char).  If a match is found (str[index] === char) it will cause an early exit from the while loop at the current index which will be returned by the find function
+
 // c) Why is index++ being used?
-// [MM] - The index++ increments the index variable by one each time the current letter (str[index]) does not match the target letter (char).  It only runs if a match is not found
+// index++ is being used because the while loop does not have a built in iterator (like the for loop).  Index is initiated at 0 outside the while loop and at each iteration, whenever the if statement is not triggered, index++ adds 1 to the index number
+
 // d) What is the condition index < str.length used for?
-// [MM] - The condition index < str.length is used to set the upper bound of the loop (the loop will run while index number is less than str.length)
+// The condition index < str.length is used to set the upper bound of the loop (the loop will run while index number is less than str.length and will terminate once index is equal to str.length, causing the while loop to stop.  If there is no condition to terminate the while loop it will run infinitely
