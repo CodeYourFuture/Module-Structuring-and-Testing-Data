@@ -3,16 +3,16 @@
 const getCardValue = require("../implement/3-get-card-value");
 
 // TODO: Write tests in Jest syntax to cover all possible outcomes.
-// Suggestion: Group the remaining test data into these categories:
-//   Number Cards (2-10)
-//   Face Cards (J, Q, K)
-//   Invalid Cards
+
 
 // Case 1: Ace (A)
 test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♠")).toEqual(11);
 });
-
+// Suggestion: Group the remaining test data into these categories:
+//   Number Cards (2-10)
+//   Face Cards (J, Q, K)
+//   Invalid Cards
 // Case 2: Number cards (2-9)
 test(`Should return corresponding number when given a number card`, () => {
   expect(getCardValue("2♠")).toEqual(2);
