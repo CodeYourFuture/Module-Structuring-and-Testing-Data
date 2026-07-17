@@ -3,18 +3,58 @@
 const getCardValue = require("../implement/3-get-card-value");
 
 // TODO: Write tests in Jest syntax to cover all possible outcomes.
+// Suggestion: Group the remaining test data into these categories:
+//   Number Cards (2-10)
+//   Face Cards (J, Q, K)
+//   Invalid Cards
 
 // Case 1: Ace (A)
 test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♠")).toEqual(11);
 });
 
-// Suggestion: Group the remaining test data into these categories:
-//   Number Cards (2-10)
-//   Face Cards (J, Q, K)
-//   Invalid Cards
+// Case 2: Number cards (2-9)
+test(`Should return corresponding number when given a number card`, () => {
+  expect(getCardValue("2♠")).toEqual(2);
+  expect(getCardValue("3♠")).toEqual(3);
+  expect(getCardValue("4♠")).toEqual(4);
+  expect(getCardValue("5♠")).toEqual(5);
+  expect(getCardValue("6♠")).toEqual(6);
+  expect(getCardValue("7♠")).toEqual(7);
+  expect(getCardValue("8♠")).toEqual(8);
+  expect(getCardValue("9♠")).toEqual(9);
+});
 
+// Case 3: Number cards (10)
+test(`Should return 10 when given a 10 card`, () => {
+  expect(getCardValue("10♠")).toEqual(10);
+});
+
+// Case 4: Face cards (J, Q, K)
+test(`Should return 10 when given a J card`, () => {
+  expect(getCardValue("J♠")).toEqual(10);
+});
+
+// Case 5: Face cards (J, Q, K)
+test(`Should return 10 when given a Q card`, () => {
+  expect(getCardValue("Q♠")).toEqual(10);
+});
+
+// Case 6: Face cards (J, Q, K)
+test(`Should return 10 when given a K card`, () => {
+  expect(getCardValue("K♠")).toEqual(10);
+});
+
+// Invalid cases
+test(`should throw an error with message "Invalid card format" when given invalid card`, () => {
+  expect(() => getCardValue("1♠")).toThrow("Invalid card format");
+  expect(() => getCardValue("11♥")).toThrow("Invalid card format");
+  expect(() => getCardValue("A1")).toThrow("Invalid card format");
+  expect(() => getCardValue("1A")).toThrow("Invalid card format");
+  expect(() => getCardValue("♣10")).toThrow("Invalid card format");
+  expect(() => getCardValue("$$")).toThrow("Invalid card format");
+  expect(() => getCardValue("-5♣")).toThrow("Invalid card format");
+});
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
-
