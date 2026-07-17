@@ -7,8 +7,8 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(result);
+const movieRuntime = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+console.log(movieRuntime);
 
 // For the piece of code above, read the code and then answer the following questions
 
@@ -28,7 +28,7 @@ the expression in brackets will evaluate first and then the result divided by 60
 */
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-//runTime
+//movieRunTime
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 /* I have experimented with different values by changing the movieLength variable, and they all work, it works because we have
 didn't hardcode our expressions and used variables.
