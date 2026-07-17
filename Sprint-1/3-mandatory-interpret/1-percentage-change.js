@@ -16,7 +16,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // line 12 console,log()
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-//A syntaxError is occurring on line 5, we are missing a "," and a closing ")"
+//A syntaxError is occurring on line 5, A comma is missing between the arguments
 
 // c) Identify all the lines that are variable reassignment statements
 // line 4 and 5
