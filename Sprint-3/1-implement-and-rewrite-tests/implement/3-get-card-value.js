@@ -21,34 +21,47 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
+function isSuit(suit) {
+  if (suit === "♠" || suit === "♥" || suit === "♦" || suit === "♣") {
+    return true;
+  }
+  return false;
+}
+
 function getCardValue(card) {
+  // the length has to be 2 or 3 then we pass this check
+
+  if (typeof card !== "string") {
+    throw new Error(
+      `Expected type for ${card} is string, but got ${typeof card}`
+    );
+  }
+
+  if (card.length !== 2 && card.length !== 3) {
+    throw new Error(`Invalid input length for ${card}`);
+  }
+
   const lastCharIndex = card.length - 1;
   const rank = card.slice(0, lastCharIndex);
   const suit = card.slice(lastCharIndex);
 
-  if (rank === "10") {
-    return 10;
-  }
-
-  if (card.length > 2) {
-    throw new Error("Invalid input length");
-  }
-
-  if (!(suit === "♠" || suit === "♥" || suit === "♦" || suit === "♣")) {
+  if (!isSuit(suit)) {
     throw new Error(
-      "Invalid second character detected, only suits(♠♥♦♣) are allowed, but got this character:",
-      suit
+      `Invalid last character detected, only suits(♠♥♦♣) are allowed, but got this character: ${suit}`
     );
   }
 
-  if (rank == "A") {
+  if (rank === "A") {
     return 11;
-  } else if (rank == "J" || rank == "Q" || rank == "K") {
+  } else if (rank === "J" || rank === "Q" || rank === "K") {
     return 10;
-  } else if (!isNaN(rank)) {
+  } else if (!isNaN(rank) && Number(rank) >= 2 && Number(rank) <= 10) {
+    // check if number and within bounds
     return Number(rank);
   } else {
-    throw new Error("Invalid card");
+    throw new Error(
+      `${card} was passed into the function which is invalid, because one of the conditions failed`
+    );
   }
 }
 
