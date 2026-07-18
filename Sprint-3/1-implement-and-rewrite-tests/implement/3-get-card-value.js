@@ -60,7 +60,7 @@ function getCardValue(card) {
     return Number(rank);
   } else {
     throw new Error(
-      `${card} was passed into the function which is invalid, because one of the conditions failed`
+      `Invalid rank "${rank}" in card "${card}": expected A, J, Q, K, or a number between 2 and 10`
     );
   }
 }
