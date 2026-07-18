@@ -11,11 +11,13 @@ test(`Should return 11 when given an ace card`, () => {
 });
 
 // Case 2
-test(`Should return 10 when given an jack, queen, king`, () => {
+test(`Should return 10 when given a jack, queen, king`, () => {
   expect(getCardValue("J♠")).toEqual(10);
   expect(getCardValue("Q♥")).toEqual(10);
   expect(getCardValue("K♠")).toEqual(10);
-  expect(() => getCardValue("K🤣")).toThrow(Error);
+  expect(() => getCardValue("K🤣")).toThrow(
+    "Invalid last character detected, only suits(♠♥♦♣) are allowed, but got this character:"
+  );
   expect(() => getCardValue("KKW🤣")).toThrow(Error);
 });
 
@@ -23,6 +25,9 @@ test(`Should return 10 when given an jack, queen, king`, () => {
 test(`Should return number when given a number`, () => {
   expect(getCardValue("2♠")).toEqual(2);
   expect(getCardValue("10♥")).toEqual(10);
+  expect(() => getCardValue("0♠")).toThrow(Error);
+  expect(() => getCardValue("1♠")).toThrow(Error);
+  expect(() => getCardValue("10Q")).toThrow(Error);
   expect(() => getCardValue("423🤣")).toThrow(Error);
 });
 
@@ -31,6 +36,7 @@ test("Should return error on invalid input", () => {
   expect(() => getCardValue(undefined)).toThrow(Error);
   expect(() => getCardValue(12398)).toThrow(Error);
   expect(() => getCardValue(NaN)).toThrow(Error);
+  expect(() => getCardValue("♠")).toThrow(Error);
 });
 
 // Suggestion: Group the remaining test data into these categories:
