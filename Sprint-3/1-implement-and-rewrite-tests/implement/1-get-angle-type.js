@@ -48,7 +48,6 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-//  cd Sprint-3    cd 1-implement-and-rewrite-tests   cd implement
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
 // Example: Identify Right Angles
 const right = getAngleType(90);
