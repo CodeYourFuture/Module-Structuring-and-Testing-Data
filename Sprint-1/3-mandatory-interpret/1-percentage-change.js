@@ -12,9 +12,9 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-//There are three function calls here. "replaceAll" which replaces every "," with an empty space, therefore removing the comma. 
-// We equally have console.log which prints out.
-//The last function is Number() which changes everything in it into a number/integer. Here, it changes String to numbers. 
+//There are five function calls here. "replaceAll" on line 4 and 5 which replaces every "," with an empty space, therefore removing the comma. 
+// We equally have console.log which prints out on line 10.
+//The last function is Number() on line 4 and 5 which changes everything in it into a number/integer. Here, it changes String to numbers. 
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 //Line 5 was missing a separation comma.
