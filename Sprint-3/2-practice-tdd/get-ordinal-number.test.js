@@ -29,7 +29,7 @@ test("should append 'rd' for numbers ending with 3, except those ending with 13"
   expect(getOrdinalNumber(23)).toEqual("23rd");
   expect(getOrdinalNumber(133)).toEqual("133rd");
 });
-test("should append 'th' for numbers ending with 0, 4-9, 11, 12, 13", () => {
+test("should append 'th' for numbers ending with 0, 4-9, 10, 11, 12, 13", () => {
   // 0
   expect(getOrdinalNumber(0)).toEqual("0th");
   expect(getOrdinalNumber(10)).toEqual("10th");
@@ -63,9 +63,21 @@ test("should append 'th' for numbers ending with 0, 4-9, 11, 12, 13", () => {
   expect(getOrdinalNumber(9)).toEqual("9th");
   expect(getOrdinalNumber(29)).toEqual("29th");
   expect(getOrdinalNumber(139)).toEqual("139th");
+
+  // 10
+  expect(getOrdinalNumber(10)).toEqual("10th");
+  expect(getOrdinalNumber(100)).toEqual("100th");
+
+  //  11, 12, 13
+  expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(13)).toEqual("13th");
 });
 
 // edge cases
 test("should throw an error when given a wrong input type", () => {
-  expect(getOrdinalNumber("string")).toThrow(Error);
+  expect(() => getOrdinalNumber("testing string")).toThrow("Invalid type for ");
+  expect(() => getOrdinalNumber("")).toThrow();
+  expect(() => getOrdinalNumber(null)).toThrow();
+  expect(() => getOrdinalNumber(undefined)).toThrow();
 });
