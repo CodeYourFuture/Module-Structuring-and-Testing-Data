@@ -22,34 +22,35 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-    const rank = card.slice(0, card.length -1).toUpperCase()
-    const suit = card.slice(card.length -1)
-
-    const suits = ["♠", "♥", "♦", "♣"];
-    const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-
-    // Basic validation
-    if(card === ""){
+    // Basic validation: validating the input before slicing
+    if (card === "") {
         throw new Error("No card was played")
     }
-    if(card.length < 2 || card.length > 3 ){
+    if (card.length < 2 || card.length > 3) {
         throw new Error("Invalid card played, rank and suit cannot be less than 1 or more than 3")
     }
-    // Suit validation
-    if(!suits.includes(suit)){
+    const rank = card.slice(0, card.length - 1).toUpperCase()
+    const suit = card.slice(card.length - 1)
+
+    const validSuits = ["♠", "♥", "♦", "♣"];
+    const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+    // Suit and rank validation
+    if (!validSuits.includes(suit)) {
         throw new Error("Invalid card played, suit is missing");
     }
-    // Rank validation
-    if(!validRanks.includes(rank)){
-        throw new Error("Invalid rank played")
+    if (validRanks.includes(rank)) {
+        if (rank === "A") {
+            return 11;
+        } else if (rank === "J" || rank === "Q" || rank === "K") {
+            return 10;
+        } else {
+            return Number(rank);
+        }
+    } else {
+        throw new Error("Invalid rank");
     }
-    if(rank === "A"){
-        return 11
-    }else if(rank === "J" || rank === "Q" || rank === "K"){
-        return 10
-    }else{
-        return Number(rank)
-    }
+
 }
 
 
@@ -59,10 +60,10 @@ module.exports = getCardValue;
 
 // Helper functions to make our assertions easier to read.
 function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
+    console.assert(
+        actualOutput === targetOutput,
+        `Expected ${actualOutput} to equal ${targetOutput}`
+    );
 }
 
 // Examples:
@@ -85,39 +86,39 @@ assertEquals(getCardValue("K♦"), 10);
 
 // Handling invalid cards
 try {
-  getCardValue("");
+    getCardValue("");
 
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card 😢");
+    // This line will not be reached if an error is thrown as expected
+    console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
-  console.log(e);
+    console.log(e);
 }
 
 //  What other invalid card cases can you think of?
-try{
+try {
     getCardValue("100");
     console.error("Error was not thrown for card with more than 3 in length");
-} catch (e){
+} catch (e) {
     console.log(e)
 }
-try{
+try {
     getCardValue("1")
     console.error("Error was not thrown for a card.lenght = 1")
-}catch (e){
+} catch (e) {
     console.log(e)
 }
 
-try{
+try {
     getCardValue("♦")
     console.error("Error was not thrown for a card play of just suits")
-}catch (e){
+} catch (e) {
     console.log(e)
 }
 
-try{
+try {
     getCardValue("A😊")
     console.error("Error was not thrown for a card play of a wrong suit")
-}catch (e){
+} catch (e) {
     console.log(e)
 }
 
