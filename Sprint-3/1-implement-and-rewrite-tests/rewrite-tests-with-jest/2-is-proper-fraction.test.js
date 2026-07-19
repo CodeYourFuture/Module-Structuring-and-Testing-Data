@@ -8,12 +8,14 @@ const isProperFraction = require("../implement/2-is-proper-fraction");
 test(`should return false when denominator is zero`, () => {
   expect(isProperFraction(1, 0)).toEqual(false);
 });
-test(`should return false when the denominator less nominator`, () => {
+test(`should return false when the abs(denominator) less abs(numerator)`, () => {
   expect(isProperFraction(7, 2)).toEqual(false);
   expect(isProperFraction(-17, -2)).toEqual(false);
-  expect(isProperFraction(0.5, 0.1)).toEqual(false);
+  expect(isProperFraction(1, 0)).toEqual(false);
+  expect(isProperFraction(0, 0)).toEqual(false);
+  expect(isProperFraction(2, -2)).toEqual(false);
 });
-test(`should return true when denominator is greater than nominator`, () => {
+test(`should return true when abs(denominator) is greater than abs(numerator)`, () => {
   expect(isProperFraction(2, 8)).toEqual(true);
   expect(isProperFraction(-3, -10)).toEqual(true);
   expect(isProperFraction(-3, 7)).toEqual(true);

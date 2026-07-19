@@ -22,7 +22,7 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  const validRank = [
+  const validRanks = [
     "A",
     "2",
     "3",
@@ -43,7 +43,7 @@ function getCardValue(card) {
   if (!validSuits.includes(suit)) {
     throw new Error("Invalid Cards");
   }
-  if (!validRank.includes(rank)) {
+  if (!validRanks.includes(rank)) {
     throw new Error("Invalid Cards");
   }
   if (rank === "A") {
