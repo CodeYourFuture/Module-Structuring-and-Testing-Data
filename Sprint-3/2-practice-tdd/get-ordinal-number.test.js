@@ -14,7 +14,35 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number ends with 1, except those ending with 11,
 // Then the function should return a string by appending "st" to the number.
 test("should append 'st' for numbers ending with 1, except those ending with 11", () => {
-  expect(getOrdinalNumber(1)).toEqual("1st");
-  expect(getOrdinalNumber(21)).toEqual("21st");
-  expect(getOrdinalNumber(131)).toEqual("131st");
+    expect(getOrdinalNumber(1)).toEqual("1st");
+    expect(getOrdinalNumber(21)).toEqual("21st");
+    expect(getOrdinalNumber(131)).toEqual("131st");
 });
+
+test("should append 'nd' for numbers ending with 2", () => {
+expect(getOrdinalNumber(2)).toEqual("2nd");
+expect(getOrdinalNumber(22)).toEqual("22nd");
+expect(getOrdinalNumber(32)).toEqual("32nd");
+
+});
+
+test("should append 'rd' for numbers ending with 3", () => {
+expect(getOrdinalNumber(3)).toEqual("3rd");
+expect(getOrdinalNumber(333)).toEqual("333rd");
+expect(getOrdinalNumber(303)).toEqual("303rd");
+
+});
+
+test("should append 'th' to numbers ending in 0, 4, 5, 6, 7, 8, 9, and to 11, 12, and 13", () => {
+expect(getOrdinalNumber(0)).toEqual("0th");
+expect(getOrdinalNumber(44)).toEqual("44th");
+expect(getOrdinalNumber(65)).toEqual("65th");
+expect(getOrdinalNumber(46)).toEqual("46th");
+expect(getOrdinalNumber(77)).toEqual("77th");
+expect(getOrdinalNumber(98)).toEqual("98th");
+expect(getOrdinalNumber(99)).toEqual("99th");
+expect(getOrdinalNumber(11)).toEqual("11th");
+expect(getOrdinalNumber(12)).toEqual("12th");
+expect(getOrdinalNumber(13)).toEqual("13th");
+})
+;
