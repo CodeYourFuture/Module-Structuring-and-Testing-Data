@@ -24,3 +24,46 @@ test("password has at least 5 characters", () => {
     expect(result).toEqual(true);
 }
 );
+// instruction 2 
+const isValidPassword = require("./password-validator");
+test("password has least one uppercase letter", () => {
+    // arrange 
+    const uppercase = "A -Z";
+    // act 
+    const result = isValidPassword(uppercase);
+    // assert
+    expect(result).toEqual(true);
+});
+  
+// instruction 3
+const isValidPassword = require("./password-validator");
+test("password has least one lowercase letter", () => {
+    // arrange
+    const lowercase = "a-z";
+    // act 
+    const result = isValidPassword(lowercase);
+    // assert
+    expect(result).toEqual(true);
+});
+  
+// instruction 4
+const isValidPassword = require("./password-validator");
+test("password has least one number", () => {
+    // arrange
+    const number = "0-9";
+    // act 
+    const result = isValidPassword(number);
+    // assert
+    expect(result).toEqual(true);
+});
+  
+// instruction 5
+const isValidPassword = require("./password-validator");
+test("password has least one non-alphanumeric symbol", () => {
+    // arrange
+    const symbol = "!#$%.*&";
+    // act 
+    const result = isValidPassword(symbol);
+    // assert
+    expect(result).toEqual(true);
+}); 
