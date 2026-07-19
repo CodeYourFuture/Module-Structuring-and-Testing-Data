@@ -30,7 +30,6 @@ function assertEquals(actualOutput, targetOutput) {
     );
 }
 
-// TODO: Write tests to cover all cases.
 // What combinations of numerators and denominators should you test?
 
 // Example: 1/2 is a proper fraction
