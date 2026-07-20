@@ -36,3 +36,9 @@ test("should be case-sensitive when matching characters", () => {
   expect(countChar("AaA", "A")).toEqual(2); // uppercase A occurrences
   expect(countChar("AaA", "a")).toEqual(1); // lowercase a occurrences
 });
+
+// New: non-alphabet characters
+test("should count non-alphabet characters", () => {
+  expect(countChar("1231", "1")).toEqual(2);
+  expect(countChar("!?!?", "!")).toEqual(2);
+});
