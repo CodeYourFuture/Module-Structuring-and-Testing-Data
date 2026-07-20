@@ -13,7 +13,8 @@ function repeatStr(str,count) {
   // The goal is to re-implement that function, not to use it.
 
 }
-console.log(repeatStr("hello", 3)); // Output: "hellohellohello"
-console.log(repeatStr("hello", 1)); // Output: "hello"
-console.log(repeatStr("hello", 0)); // Output: ""
+//console.log(repeatStr("hello", 3)); // Output: "hellohellohello"
+//console.log(repeatStr("hello", 1)); // Output: "hello"
+//console.log(repeatStr("hello", 0)); // Output: ""
+//console.log(repeatStr("hello",-1)); //
 module.exports = repeatStr;
