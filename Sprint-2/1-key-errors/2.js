@@ -8,8 +8,7 @@
 //    return num * num;
 //}
 
-// =============> write the error message here
-
+// =============> write the error message here SyntaxError: Unexpected token (1:16)
 // =============> explain this error message here
 
 // Finally, correct the code to fix the problem
