@@ -15,20 +15,25 @@ function formatTimeDisplay(seconds) {
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
 
-// a) pad is called 3 times per call to formatTimeDisplay (once for hours, minutes, seconds).
+// You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
+// to help you answer these questions
 
-// Call formatTimeDisplay(61):
-//   remainingSeconds = 61 % 60 = 1
-//   totalMinutes = (61 - 1) / 60 = 1
-//   remainingMinutes = 1 % 60 = 1
-//   totalHours = (1 - 1) / 60 = 0
-//   pad is called with: totalHours=0, remainingMinutes=1, remainingSeconds=1
+// Questions
 
-// b) num = 0 (totalHours) when pad is called for the first time.
+// a) When formatTimeDisplay is called how many times will pad be called?
+// =============> pad is called 3 times per call to formatTimeDisplay (once for totalHours, once for remainingMinutes, once for remainingSeconds).
 
-// c) pad(0): "0".length < 2, so prepend "0" -> "00". Return value: "00"
+// Call formatTimeDisplay with an input of 61, now answer the following:
+// (remainingSeconds = 1, totalMinutes = 1, remainingMinutes = 1, totalHours = 0)
 
-// d) num = 1 (remainingSeconds) when pad is called for the last time.
-//    It is the last argument passed in the template literal.
+// b) What is the value assigned to num when pad is called for the first time?
+// =============> num = 0 (totalHours), because totalHours is the first argument in the template literal.
 
-// e) pad(1): "1".length < 2, so prepend "0" -> "01". Return value: "01"
+// c) What is the return value of pad when it is called for the first time?
+// =============> "00" — "0".length < 2, so "0" is prepended, giving "00".
+
+// d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
+// =============> num = 1 (remainingSeconds). It is the last argument passed in the template literal, so pad is called with it last.
+
+// e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
+// =============> "01" — "1".length < 2, so "0" is prepended, giving "01".
