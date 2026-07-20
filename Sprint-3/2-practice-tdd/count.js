@@ -11,8 +11,5 @@ function countChar(stringOfCharacters, findCharacter) {
     }
   }
     return count
-
 }
-countChar("aeioyuyuuiiiiu", "i")
 module.exports = countChar;
-//push char into a new array and count the lenght on new array return the lenght
