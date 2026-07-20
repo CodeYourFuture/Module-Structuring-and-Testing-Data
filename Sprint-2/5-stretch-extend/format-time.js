@@ -1,10 +1,11 @@
 // This is the latest solution to the problem from the prep.
 // Make sure to do the prep before you do the coursework
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
-;
 function formatAs12HourClock(time) {
   const [hourString, minutes] = time.split(":");
-const hours = Number(hourString);
+  const hours = Number(hourString);
+
+  const pad = (h) => String(h).padStart(2, "0");
 
   if (hours === 0) {
     return `12:${minutes} am`;
@@ -15,16 +16,16 @@ const hours = Number(hourString);
   }
 
   if (hours < 12) {
-    return `${hours}:${minutes} am`;
+    return `${pad(hours)}:${minutes} am`;
   }
 
-  return `${hours - 12}:${minutes} pm`;
+  return `${pad(hours - 12)}:${minutes} pm`;
 }
 
-// Existing tests
+// Existing tests (updated to expect zero-padded hours)
 console.assert(
-  formatAs12HourClock("8:00") === "8:00 am",
-  "8:00 should be 8:00 am"
+  formatAs12HourClock("08:00") === "08:00 am",
+  "08:00 should be 08:00 am"
 );
 
 console.assert(
@@ -32,12 +33,10 @@ console.assert(
   "23:00 should be 11:00 pm"
 );
 
-// Additional tests
-
 // Midnight
 console.assert(
-  formatAs12HourClock("0:00") === "12:00 am",
-  "0:00 should be 12:00 am"
+  formatAs12HourClock("00:00") === "12:00 am",
+  "00:00 should be 12:00 am"
 );
 
 // Noon
@@ -46,16 +45,16 @@ console.assert(
   "12:00 should be 12:00 pm"
 );
 
-// PM with minutes
+// PM with minutes, hour needs padding
 console.assert(
-  formatAs12HourClock("13:30") === "1:30 pm",
-  "13:30 should be 1:30 pm"
+  formatAs12HourClock("13:30") === "01:30 pm",
+  "13:30 should be 01:30 pm"
 );
 
-// AM with minutes
+// AM with minutes, hour needs padding
 console.assert(
-  formatAs12HourClock("9:45") === "9:45 am",
-  "9:45 should be 9:45 am"
+  formatAs12HourClock("09:45") === "09:45 am",
+  "09:45 should be 09:45 am"
 );
 
 // Last minute of the day
@@ -76,8 +75,14 @@ console.assert(
   "12:01 should be 12:01 pm"
 );
 
-// 1 PM
+// 1 PM, hour needs padding
 console.assert(
-  formatAs12HourClock("13:00") === "1:00 pm",
-  "13:00 should be 1:00 pm"
+  formatAs12HourClock("13:00") === "01:00 pm",
+  "13:00 should be 01:00 pm"
+);
+
+// 1 AM, hour needs padding
+console.assert(
+  formatAs12HourClock("01:00") === "01:00 am",
+  "01:00 should be 01:00 am"
 );
