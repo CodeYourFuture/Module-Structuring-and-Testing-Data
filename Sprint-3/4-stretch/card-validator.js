@@ -52,13 +52,13 @@ const validateCard = (card) => {
   // Must have more than one type of number
   const hasMultipleDistinctDigits = new Set(cardStr.split("")).size > 1;
 
-  return has16Digits &&
+  return (
+    has16Digits &&
     hasMoreThanOneDigit &&
     hasEvenFinalDigit &&
     hasSumOver15 &&
     hasMultipleDistinctDigits
-    ? true
-    : false;
+  );
 };
 
 console.log(validateCard(9999777788880000)); // true
