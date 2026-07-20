@@ -16,29 +16,18 @@
 
 function getAngleType(angle) {
   // TODO: Implement this function
-  if (angle>0 && angle<90)
-  {
-return "Acute angle";
-  }
- else if (angle==90)
-  {
- return "Right angle";   
-  }
-  else if (angle>90 && angle<180)
-  {
+  if (angle > 0 && angle < 90) {
+    return "Acute angle";
+  } else if (angle == 90) {
+    return "Right angle";
+  } else if (angle > 90 && angle < 180) {
     return "Obtuse angle";
-  }
-  else if (angle==180)
-  {
+  } else if (angle == 180) {
     return "Straight angle";
-  }
-  else if (angle>180 && angle<360)
-  {
+  } else if (angle > 180 && angle < 360) {
     return "Reflex angle";
-  }
-  else
-    {
-  return "Invalid angle";
+  } else {
+    return "Invalid angle";
   }
 }
 
@@ -61,28 +50,28 @@ const right = getAngleType(90);
 assertEquals(right, "Right angle");
 
 const acute = getAngleType(1);
-assertEquals(acute,"Acute angle");
+assertEquals(acute, "Acute angle");
 
 const obtuse = getAngleType(90.5);
-assertEquals(obtuse,"Obtuse angle");
+assertEquals(obtuse, "Obtuse angle");
 
 const straight = getAngleType(180);
-assertEquals(straight,"Straight angle");
+assertEquals(straight, "Straight angle");
 
 const reflex = getAngleType(359.9);
-assertEquals(reflex,"Reflex angle");
+assertEquals(reflex, "Reflex angle");
 
 const invalid = getAngleType(380);
-assertEquals(invalid,"Invalid angle");
+assertEquals(invalid, "Invalid angle");
 
 const straight2 = getAngleType(180);
-assertEquals(straight2,"Straight angle");
+assertEquals(straight2, "Straight angle");
 
 const invalid2 = getAngleType(360);
-assertEquals(invalid2,"Invalid angle");
+assertEquals(invalid2, "Invalid angle");
 
 const acute2 = getAngleType(0.1);
-assertEquals(acute2,"Acute angle");
+assertEquals(acute2, "Acute angle");
 
 const invalid3 = getAngleType(0);
-assertEquals(invalid3,"Invalid angle");
+assertEquals(invalid3, "Invalid angle");

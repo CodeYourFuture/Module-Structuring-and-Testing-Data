@@ -45,9 +45,7 @@ function getCardValue(card) {
   }
 
   const numvalue = Number(value);
-  if (numvalue >= 2 && numvalue <= 10) {
-    return numvalue;
-  }
+  return numvalue;
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
