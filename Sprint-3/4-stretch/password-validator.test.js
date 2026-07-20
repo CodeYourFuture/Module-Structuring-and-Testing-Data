@@ -1,26 +1,36 @@
-/* 
-Password Validation
+const { passwordValidator, previousPasswords } = require("./password-validator");
 
-Write a program that should check if a password is valid
-and returns a boolean
+test("should return false when password has fewer than 5 characters", () => {
+  expect(passwordValidator("Ab1!")).toEqual(false);
+});
 
-To be valid, a password must:
-- Have at least 5 characters.
-- Have at least one English uppercase letter (A-Z)
-- Have at least one English lowercase letter (a-z)
-- Have at least one number (0-9)
-- Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
-- Must not be any previous password in the passwords array. 
+test("should return false when password has no uppercase letter", () => {
+  expect(passwordValidator("hello1!")).toEqual(false);
+});
 
-You must breakdown this problem in order to solve it. Find one test case first and get that working
-*/
-const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+test("should return false when password has no lowercase letter", () => {
+  expect(passwordValidator("HELLO1!")).toEqual(false);
+});
+
+test("should return false when password has no number", () => {
+  expect(passwordValidator("Hello!")).toEqual(false);
+});
+
+test("should return false when password has no special character", () => {
+  expect(passwordValidator("Hello1")).toEqual(false);
+});
+
+test("should return false when password is a previous password", () => {
+  expect(passwordValidator("Pass1!")).toEqual(false);
+});
+
+test("should return true for a valid password meeting all criteria", () => {
+  expect(passwordValidator("Valid1!")).toEqual(true);
+  expect(passwordValidator("MyP@ss1")).toEqual(false); // @ not in allowed symbols
+  expect(passwordValidator("MyPass1$")).toEqual(true);
+});
+
+test("should return false for password with exactly 5 chars but missing a required type", () => {
+  expect(passwordValidator("ab1!A")).toEqual(true);  // valid: 5 chars, all types present
+  expect(passwordValidator("ab1!!")).toEqual(false); // no uppercase
+});
