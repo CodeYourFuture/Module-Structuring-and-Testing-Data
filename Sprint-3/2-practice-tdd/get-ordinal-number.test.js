@@ -56,9 +56,9 @@ test("should append 'rd' for numbers ending with 3, except those ending with 13"
 });
 
 // Case 6: All other numbers
-// When the number does not fall into any of the above categories,
-// Then the function should return a string by appending "th" to the number.
-test("should append 'th' for all other numbers", () => {
+// When the number does not fall into the special 1/2/3 endings (or is one of the teen exceptions 11/12/13),
+// Then the function should return a string by appending "th" to the number. Examples: 4, 14, 20, 100.
+test("should append 'th' for numbers that neither end with 1/2/3 nor are 11/12/13 (e.g. 4, 14, 20, 100)", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(5)).toEqual("5th");
   expect(getOrdinalNumber(6)).toEqual("6th");
