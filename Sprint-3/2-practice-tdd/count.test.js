@@ -42,3 +42,8 @@ test("should count non-alphabet characters", () => {
   expect(countChar("1231", "1")).toEqual(2);
   expect(countChar("!?!?", "!")).toEqual(2);
 });
+
+// New: empty string
+test("should return 0 for empty string input", () => {
+  expect(countChar("", "a")).toEqual(0);
+});
