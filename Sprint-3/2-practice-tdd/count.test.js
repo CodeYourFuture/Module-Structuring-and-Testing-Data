@@ -29,3 +29,10 @@ test("should return 0 when character is not found", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+// Case : case-sensitivity expectations 
+// Test for when the alphabets are of different  case 
+test("should be case-sensitive when matching characters", () => {
+  expect(countChar("AaA", "A")).toEqual(2); // uppercase A occurrences
+  expect(countChar("AaA", "a")).toEqual(1); // lowercase a occurrences
+});
