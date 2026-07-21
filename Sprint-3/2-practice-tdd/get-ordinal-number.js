@@ -4,6 +4,10 @@ function getOrdinalNumber(num) {
   if (lastDigit === 1 && lastTwoDigits !== 11) {
     return `${num}st`;
   }
+    if (lastDigit === 2 && lastTwoDigits !== 12) {
+    return `${num}nd`;
+  }
+  if 
   return `${num}th`;
 }
 
