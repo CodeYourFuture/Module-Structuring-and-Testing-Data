@@ -7,7 +7,9 @@ function getOrdinalNumber(num) {
     if (lastDigit === 2 && lastTwoDigits !== 12) {
     return `${num}nd`;
   }
-  if 
+   if (lastDigit === 3 && lastTwoDigits !== 13) {
+     return `${num}rd`;
+   }
   return `${num}th`;
 }
 
