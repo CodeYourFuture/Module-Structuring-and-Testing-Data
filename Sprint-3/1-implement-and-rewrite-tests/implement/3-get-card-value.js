@@ -23,6 +23,10 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+   if (card <= 1 && card >= 10 || typeof card !== "string") {
+     // Here the type of values are checked whether they are string.
+     return card + " Invalid card";
+   }
 
   const validRanks = [ // An array of ranks are created here
     "A",
@@ -40,10 +44,6 @@ function getCardValue(card) {
     "K",
   ];
   const validSuits = ["♠", "♥", "♦", "♣"]; // An array of suits are created here.
-
-  if (typeof card !== "string") { // Here the type of values are checked whether they are string.
-    return card + " Invalid card";
-  }
   const suit = card.slice(-1);
   const rank = card.slice(0, -1);
 
