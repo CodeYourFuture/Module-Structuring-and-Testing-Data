@@ -38,7 +38,7 @@ function getAngleType(angle) {
       return "Reflex angle";
   } else if (acuteAngle) {
       return "Acute angle";
-  } else if (angle === zeroAngle || angle != acuteAngle || angle != rightAngle || angle != obtuseAngle || angle != straightAngle || angle != reflexAngle) {
+  } else if (zeroAngle || !acuteAngle || !rightAngle || !obtuseAngle || !straightAngle || !reflexAngle) {
         return "Invalid angle"; 
   }
 }
@@ -50,6 +50,8 @@ module.exports = getAngleType;
 
 // This helper function is written to make our assertions easier to read.
 // If the actual output matches the target output, the test will pass
+
+
 function assertEquals(actualOutput, targetOutput) {
   console.assert(
     actualOutput === targetOutput,
