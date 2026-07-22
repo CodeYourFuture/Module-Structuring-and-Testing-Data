@@ -21,8 +21,6 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
 
 // here are more test cases for different scenarios
 
-const getOrdinalNumber = require("./get-ordinal-number");
-
 describe("getOrdinalNumber", () => {
   // Case 1: Already defined in your prompt
   test("should append 'st' for numbers ending with 1, except those ending with 11", () => {
@@ -55,12 +53,26 @@ describe("getOrdinalNumber", () => {
     expect(getOrdinalNumber(113)).toEqual("113th");
   });
 
-  // Case 5: All other numbers
-  test("should append 'th' for all other numbers", () => {
-    expect(getOrdinalNumber(4)).toEqual("4th");
-    expect(getOrdinalNumber(10)).toEqual("10th");
-    expect(getOrdinalNumber(20)).toEqual("20th");
-    expect(getOrdinalNumber(34)).toEqual("34th");
-    expect(getOrdinalNumber(100)).toEqual("100th");
+  // Case 5: Numbers ending in 0, 4, 5, 6, 7, 8, or 9
+  describe("numbers ending with 0, 4, 5, 6, 7, 8, or 9", () => {
+    const defaultThCases = [
+      { endingDigit: 0, testValues: [0, 10, 20, 100, -10] },
+      { endingDigit: 4, testValues: [4, 24, 104, -4] },
+      { endingDigit: 5, testValues: [5, 25, 105, -5] },
+      { endingDigit: 6, testValues: [6, 26, 106, -6] },
+      { endingDigit: 7, testValues: [7, 27, 107, -7] },
+      { endingDigit: 8, testValues: [8, 28, 108, -8] },
+      { endingDigit: 9, testValues: [9, 29, 109, -9] },
+    ];
+  
+
+    defaultThCases.forEach(({ endingDigit, testValues }) => {
+      test.each(testValues)(
+        `appends "th" to %i (representative for digit ${endingDigit})`,
+        (num) => {
+          expect(getOrdinalNumber(num)).toBe(`${num}th`);
+        }
+      );
+    });
   });
-});
+}); 
