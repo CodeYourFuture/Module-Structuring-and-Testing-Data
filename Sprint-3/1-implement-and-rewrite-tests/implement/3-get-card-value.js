@@ -71,7 +71,7 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
+
 // Examples:
 
 assertEquals(getCardValue("9♠"), 9);
