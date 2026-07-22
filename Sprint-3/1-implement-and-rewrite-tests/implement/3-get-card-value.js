@@ -74,4 +74,6 @@ try {
 }
 
 // What other invalid card cases can you think of?
+// logging cards without suits to throw error 
+
 
