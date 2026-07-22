@@ -3,8 +3,6 @@ function repeatStr(str, num) {
   var i;
   if (num < 0) {
     throw new Error("negative numbers are not valid");
-  } else if (num === 0) {
-    result = "";
   } else {
     for (i = 0; i < num; i++) {
       result += str;
@@ -12,9 +10,5 @@ function repeatStr(str, num) {
   }
   return result;
 }
-
-//console.log(repeatStr("hello", -1));
-//console.log(repeatStr("hello", 0));
-//console.log(repeatStr("hello", 5))
 
 module.exports = repeatStr;
