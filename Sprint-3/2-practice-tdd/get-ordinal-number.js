@@ -1,9 +1,5 @@
 function getOrdinalNumber(num) {
-  if (num % 100 === 11) {
-      return `${num}th`;
-  } else if (num % 100 === 12) {
-      return `${num}th`;
-  } else if (num % 100 === 13) {
+  if (num % 100 === 11 || num % 100 === 12 || num % 100 === 13) {
       return `${num}th`;
   } else if (num % 10 === 1) {
       return `${num}st`;
@@ -22,9 +18,12 @@ console.log(getOrdinalNumber(1));
 console.log(getOrdinalNumber(2));
 console.log(getOrdinalNumber(3));
 console.log(getOrdinalNumber(4));
+console.log(getOrdinalNumber(5));
+console.log(getOrdinalNumber(6));
 console.log(getOrdinalNumber(11));
 console.log(getOrdinalNumber(12));
 console.log(getOrdinalNumber(13));
+console.log(getOrdinalNumber(14));
 console.log(getOrdinalNumber(21));
 console.log(getOrdinalNumber(52));
 console.log(getOrdinalNumber(63));
