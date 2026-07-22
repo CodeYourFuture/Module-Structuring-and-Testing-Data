@@ -10,7 +10,8 @@ const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
 );
-
+console.log(paddedPenceNumberString);
+console.log(pounds);
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
   .padEnd(2, "0");
