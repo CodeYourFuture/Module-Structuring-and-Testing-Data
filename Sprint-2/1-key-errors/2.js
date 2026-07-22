@@ -1,20 +1,18 @@
+// Predict and explain first BEFORE you run any code.
 
-// Predict and explain first BEFORE you run any code...
+// this function should square any number but instead
 
-// this function should square any number but instead we're going to get an error
+// ==============> This will throw a SyntaxError, because 3 is used as the parameter name in function square(3), but parameter names can't be numbers - they need to be valid identifiers like "num".
 
-// =============> write your prediction of the error here
-
-function square(3) {
-    return num * num;
+function square(num) {
+  return num * num;
 }
 
-// =============> write the error message here
+// ==============> The error is "SyntaxError: Unexpected number"
 
-// =============> explain this error message here
+// ==============> This happens because 3 is a number, not a valid parameter name. Parameter names must be identifiers, like "num" - JavaScript doesn't know what to do with a number in that position.
 
 // Finally, correct the code to fix the problem
-
-// =============> write your new code here
-
-
+// ==============> function square(num) {
+//   return num * num;
+// }
