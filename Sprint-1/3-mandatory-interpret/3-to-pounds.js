@@ -24,7 +24,7 @@ console.log(`£${pounds}.${pence}`);
 // Try and describe the purpose / rationale behind each step
 
 // To begin, we can start with
-// 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 1. const penceString = "399p": initialize a string variable with the value "399p"
 // 2. penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1): removes the trailing "p".
 // 3. paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"): pads the number with leading zeros to ensure it has at least 3 digits.
 // 4. pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2): Determines that the 'pound' is the first part of the string.
