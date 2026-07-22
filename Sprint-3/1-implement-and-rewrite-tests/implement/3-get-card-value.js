@@ -40,9 +40,9 @@ function getCardValue(card) {
   ]; // array with ranks
   const tenPointsFaceCards = ["K", "Q", "J"]; //cards with value of 10 points
 
-  const rank1 = card.slice(0, -1); //takes the firs part of card
-  const suit1 = card.slice(-1); //takes "suit" secnd part of card
-  const isCardValid = suit.includes(suit1) && rank.includes(rank1); //conditions where card is considered valid
+  const firstBit = card.slice(0, -1); //takes the firs part of card
+  const secondBit = card.slice(-1); //takes "suit" secnd part of card
+  const isCardValid = suit.includes(secondBit) && rank.includes(firstBit); //conditions where card is considered valid
 
   //conditional statement to check validity of the card
   if (!isCardValid) {
@@ -50,12 +50,12 @@ function getCardValue(card) {
   }
 
   //conditional statements to check what value to return depending on the card value
-  if (rank1 === "A") {
+  if (firstBit === "A") {
     return 11;
-  } else if (tenPointsFaceCards.includes(rank1)) {
+  } else if (tenPointsFaceCards.includes(firstBit)) {
     return 10;
   } else {
-    return Number(rank1);
+    return Number(firstBit);
   }
 }
 
