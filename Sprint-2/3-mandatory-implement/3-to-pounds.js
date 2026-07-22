@@ -19,4 +19,4 @@ function toPounds(penceString) {
 console.log(toPounds("399p"));
 console.log(toPounds("5p"));
 console.log(toPounds("99p"));
-console.log(toPounds("250p"))
+console.log(toPounds("250p"));
