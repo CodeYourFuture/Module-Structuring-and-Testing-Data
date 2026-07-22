@@ -22,9 +22,49 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  if (typeof card !== "string" || card.length < 2) {
+    throw new Error("Error: Invalid card format");
+  }
+
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+  
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  if (!validSuits.includes(suit)) {
+    throw new Error("Error: Invalid suit");
+  }
+
+  switch (rank) {
+    case "A":
+      return 11;
+    case "J":
+    case "Q":
+    case "K":
+      return 10;
+    case "2":
+      return 2;
+    case "3":
+      return 3;
+    case "4":
+      return 4;
+    case "5":
+      return 5;
+    case "6":
+      return 6;
+    case "7":
+      return 7;
+    case "8":
+      return 8;
+    case "9":
+      return 9;
+    case "10":
+      return 10;
+
+  default:
+    throw new Error("Error: Invalid card format");
 }
 
+}
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -40,8 +80,13 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♥"), 10);
+assertEquals(getCardValue("2♥"), 2);
+assertEquals(getCardValue("A♠"), 11);
 
-// Handling invalid cards
 try {
   getCardValue("invalid");
 
@@ -52,3 +97,4 @@ try {
 }
 
 // What other invalid card cases can you think of?
+// A) 1♠, 11♠, AA♠, ♠♠, 10  
