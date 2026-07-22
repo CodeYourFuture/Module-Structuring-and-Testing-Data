@@ -33,9 +33,23 @@ test("should return the original string when count is 1", () => {
 // When the repeatStr function is called with these inputs,
 // Then it should return an empty string.
 
-
+test("should return an empty string when count is 0", () => {
+  const str = "world";
+  const count = 0;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("");
+});
 
 // Case: Handle negative count:
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
+
+test("should throw an error when count is negative", () => {
+  const str = "world";
+  const count = -1;
+
+  expect(() => {
+    repeatStr(str, count);
+  }).toThrow("error");
+});
