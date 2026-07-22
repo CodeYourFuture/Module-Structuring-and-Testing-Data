@@ -15,7 +15,7 @@
 // execute the code to ensure all tests pass.
 
 function getAngleType(angle) {
-  // TODO: Implement this function
+  
    // first converting conditions into variables
   const acuteAngle = (angle > 0 && angle < 90);
   const rightAngle = (angle === 90);
@@ -57,7 +57,7 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all cases, including boundary and invalid cases.
+
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
