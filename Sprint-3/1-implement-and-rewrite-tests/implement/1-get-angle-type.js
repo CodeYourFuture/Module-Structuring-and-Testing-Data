@@ -16,7 +16,9 @@
 
 function getAngleType(angle) {
   // TODO: Implement this function
-  if (angle < 90) {
+  if (angle < 0) {
+    return "Invalid angle"
+  } else if (angle < 90) {
     return "Acute angle"
   } else if (angle ===90) {
     return "Right angle"
@@ -25,9 +27,17 @@ function getAngleType(angle) {
   } else if (angle ===180) {
     return "Straight angle"
   } else if (angle < 360) {
+    return "Reflex angle"
+  } else if (angle === 360) {
+    return "Acute angle" 
+  } else if (angle > 360) {
     return "Invalid angle"
   }
-}
+
+    }
+
+  
+
 
 // The line below allows us to load the getAngleType function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -46,3 +56,11 @@ function assertEquals(actualOutput, targetOutput) {
 // Example: Identify Right Angles
 const right = getAngleType(90);
 assertEquals(right, "Right angle");
+// const right = getAngleType(89);
+// assertEquals(right, "Acute angle");
+// const right = getAngleType(145);
+// assertEquals(right, "Obtuse angle");
+// const right = getAngleType(180);
+// assertEquals(right, "Straight angle");
+// const right = getAngleType(200);
+// assertEquals(right, "Invalid angle");
