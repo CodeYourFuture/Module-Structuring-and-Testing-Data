@@ -2,3 +2,5 @@
 
 const age = 33;
 age = age + 1;
+
+// unlike let, const variables cannot be reassigned once created.
