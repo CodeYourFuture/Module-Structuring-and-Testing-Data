@@ -18,3 +18,67 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(21)).toEqual("21st");
   expect(getOrdinalNumber(131)).toEqual("131st");
 });
+
+// Case 2: Numbers ending with 2 (but not 12)
+test("should append 'nd' for numbers ending with 2, except those ending with 12", () => {
+ expect(getOrdinalNumber(112)).toEqual("112th");
+ expect(getOrdinalNumber(32)).toEqual("32nd");
+ expect(getOrdinalNumber(332)).toEqual("332nd");
+});
+
+
+// Case 3: Numbers ending with 3 (but not 13)
+test("should append 'rd' for numbers ending with 3, except those ending with 13", () => {
+ expect(getOrdinalNumber(113)).toEqual("113th");
+ expect(getOrdinalNumber(23)).toEqual("23rd");
+ expect(getOrdinalNumber(453)).toEqual("453rd");
+});
+
+
+// Case 4: Numbers ending  with 4 -9
+test("should append 'th' for numbers ending with 4", () => {
+ expect(getOrdinalNumber(124)).toEqual("124th");
+ expect(getOrdinalNumber(235)).toEqual("235th");
+ expect(getOrdinalNumber(16)).toEqual("16th");
+ expect(getOrdinalNumber(17)).toEqual("17th");
+ expect(getOrdinalNumber(18)).toEqual("18th");
+ expect(getOrdinalNumber(19)).toEqual("19th");
+});
+
+
+
+
+// Case 5: Numbers ending with 11, 12, 13
+test("should append 'th' for numbers ending with 11, 12, 13", () => {
+ expect(getOrdinalNumber(11)).toEqual("11th");
+ expect(getOrdinalNumber(12)).toEqual("12th");
+ expect(getOrdinalNumber(13)).toEqual("13th");
+ expect(getOrdinalNumber(111)).toEqual("111th");
+ expect(getOrdinalNumber(112)).toEqual("112th");
+ expect(getOrdinalNumber(113)).toEqual("113th");
+});
+
+
+// Case 6: Numbers ending with 0
+test("should append 'th' for numbers ending with 0", () => {
+ expect(getOrdinalNumber(10)).toEqual("10th");
+ expect(getOrdinalNumber(20)).toEqual("20th");
+ expect(getOrdinalNumber(30)).toEqual("30th");
+ expect(getOrdinalNumber(140)).toEqual("140th");
+});
+function repeatStr() {
+   let result = "";
+
+
+ for (let i = 0; i < num; i++) {
+   result += str;
+ }
+
+
+ return result;
+}
+
+
+module.exports = repeatStr;
+
+
