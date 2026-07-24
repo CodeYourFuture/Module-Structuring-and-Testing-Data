@@ -22,7 +22,7 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  let removeSuit = card.slice(0, -1);
+  const removeSuit = card.slice(0, -1);
   if (removeSuit === "A") {
     return 11;
   } else if (removeSuit === "J" || removeSuit === "Q" ||removeSuit === "K") {
@@ -54,6 +54,8 @@ assertEquals(getCardValue("J♦"), 10);
 assertEquals(getCardValue("7♥"), 7);
 assertEquals(getCardValue("A♥"), 11);
 assertEquals(getCardValue("8♥"), 8);
+assertEquals(getCardValue("Q♠"), 10);
+assertEquals(getCardValue("K♦"), 10);
 
 // Handling invalid cards
 try {
