@@ -32,13 +32,33 @@ test(`Should return the card value when given a number card`, () => {
 });
 
 // Case 4: Invalid card
-test(`Should return 10 when given an ace card`, () => {
-  expect(getCardValue("invalid")).toEqual("invalid");
-  expect(getCardValue("♦")).toEqual("invalid");
-  expect(getCardValue("4")).toEqual("invalid");
-  expect(getCardValue("")).toEqual("invalid");
-  expect(getCardValue("m")).toEqual("invalid");
-  expect(getCardValue("300")).toEqual("invalid");
+// test(`Should return invalid as the case is not valid`, () => {
+//   expect(getCardValue("invalid")).toEqual("invalid");
+//   expect(getCardValue("♦")).toEqual("invalid");
+//   expect(getCardValue("4")).toEqual("invalid");
+//   expect(getCardValue("")).toEqual("invalid");
+//   expect(getCardValue("m")).toEqual("invalid");
+//   expect(getCardValue("300")).toEqual("invalid");
+// });
+test("throw an error as the case is not valid but in right format", () => {
+  expect(() => {
+    getCardValue("92");
+  }).toThrow();
+  expect(() => {
+    getCardValue("♦");
+  }).toThrow();
+  expect(() => {
+    getCardValue("A");
+  }).toThrow();
+  expect(() => {
+    getCardValue("*");
+  }).toThrow();
+  expect(() => {
+    getCardValue("");
+  }).toThrow();
+  expect(() => {
+    getCardValue(2);
+  }).toThrow();
 });
 
 // Suggestion: Group the remaining test data into these categories:

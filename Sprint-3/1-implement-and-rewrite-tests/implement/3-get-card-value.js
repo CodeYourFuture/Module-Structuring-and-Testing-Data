@@ -24,9 +24,6 @@
 function getCardValue(card) {
   const number = card.slice(0, -1);
   const suit = card.slice(-1);
-  //console.log(`number is ${number}`);
-  //console.log(typeof suit);
-  //console.log(suit);
   if (suit == "♠" || suit == "♥" || suit == "♦" || suit == "♣"){
     switch (number) {
       case "A":
@@ -45,11 +42,11 @@ function getCardValue(card) {
       case "9":
         return Number(number);
       default:
-        return "invalid";
+        throw new Error("Number is not valid");
 
     }
   }else{
-    return "invalid";
+    throw new Error("Suit is not valid");
   }
 }
 
@@ -83,7 +80,12 @@ assertEquals(getCardValue("9♣"), 9);
 
 // Handling invalid cards
 try {
-  getCardValue("invalid");
+  getCardValue("92");
+  getCardValue("♦");
+  getCardValue("A");
+  getCardValue("*");
+  getCardValue("");
+  getCardValue(2);
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
@@ -92,3 +94,4 @@ try {
 }
 
 // What other invalid card cases can you think of?
+// I tried different invalid card in the errror catch code above
