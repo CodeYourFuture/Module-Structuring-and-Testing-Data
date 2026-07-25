@@ -21,18 +21,20 @@ function formatTimeDisplay(seconds) {
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
-// =============> write your answer here
+// Answer: 3 times
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> write your answer here
+// Answer: 0
 
-// c) What is the return value of pad is called for the first time?
-// =============> write your answer here
+// c) What is the return value of pad when it is called for the first time?
+// Answer: "00"
 
-// d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// d) What is the value assigned to num when pad is called for the last time in this program? Explain your answer
+// Answer: 1
+// Explanation: The last call to pad is pad(remainingSeconds). When the input is 61 seconds, the remaining seconds are 1.
 
-// e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
-// =============> write your answer here
+// e) What is the return value of pad when it is called for the last time in this program? Explain your answer
+// Answer: "01"
+// Explanation: The pad function adds a leading zero to numbers with only one digit, so 1 becomes "01".
