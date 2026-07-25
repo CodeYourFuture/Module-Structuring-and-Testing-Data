@@ -36,3 +36,15 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+
+// Numerator > denominator
+assertEquals(isProperFraction(4, 1), false);
+
+// Numerator === denominator
+assertEquals(isProperFraction(2, 2), false);
+
+// Numerator is 0
+assertEquals(isProperFraction(0, 4), false);
+
+// Denominator is 0
+assertEquals(isProperFraction(6, 0), false);
