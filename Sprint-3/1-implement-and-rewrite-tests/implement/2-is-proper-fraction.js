@@ -10,8 +10,13 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+
+  function isProperFraction(numerator, denominator) {
+  if (numerator > 0 && denominator > 0 && numerator < denominator) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
