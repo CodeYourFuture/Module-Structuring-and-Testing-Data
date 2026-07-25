@@ -63,16 +63,49 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
-assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("Q♠"), 10);
+assertEquals(getCardValue("6♠"), 6);
 
 // Handling invalid cards
 try {
   getCardValue("invalid");
 
-  // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
 }
 
 // What other invalid card cases can you think of?
+
+try {
+  getCardValue("11♠");
+
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("X♠");
+
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("AA");
+
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
+
+try {
+  getCardValue("9");
+
+  console.error("Error was not thrown for invalid card 😢");
+} catch (e) {
+  console.log("Error thrown for invalid card 🎉");
+}
