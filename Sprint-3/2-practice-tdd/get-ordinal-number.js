@@ -1,5 +1,5 @@
 function getOrdinalNumber(num) {
-  if (typeof num !== "number" || Number.isNaN(num)) {
+  if (typeof num !== "number" || Number.isNaN(num) || !Number.isInteger(num)) {
     throw new Error(`Invalid type for ${num}, expected Number`);
   }
 
