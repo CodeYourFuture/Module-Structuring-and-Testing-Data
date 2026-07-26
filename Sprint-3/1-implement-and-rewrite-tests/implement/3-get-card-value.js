@@ -23,8 +23,44 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  if (typeof card !== "string" || card.length < 2 || card.length > 3) {
+    throw new Error("Invalid card");
+  }
+  const ranks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+  const suits = ["♠", "♥", "♦", "♣"];
+let rank = card.slice(0, -1)// This is extracting the bit before the suits alone
+let suit = card.slice(-1) // THis is extracting the suit in the string
+  
+  if(!ranks.includes(rank)){
+    throw new Error("Invalid card")
+  }
+  if (!suits.includes(suit)){
+    throw new Error("Invalid card")
+  }
+  if (rank === "A"){
+    return 11}
+  if (["J", "K", "Q"].includes(rank)){
+    return 10
+  }
+  else{
+    return Number(rank)
+  }
+  
 }
-
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
@@ -40,6 +76,20 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("K♦"), 10);
+assertEquals(getCardValue("5♣"), 5);
+assertEquals(getCardValue("2♣"), 2);
+assertEquals(getCardValue("10♥"), 10);
+assertEquals(getCardValue("6♥"), 6);
+assertEquals(getCardValue("5♥"), 5);
+assertEquals(getCardValue("8♥"), 8);
+assertEquals(getCardValue("4♥"), 4);
+assertEquals(getCardValue("3♥"), 3);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("7♥"), 7);
+
 
 // Handling invalid cards
 try {
@@ -52,3 +102,17 @@ try {
 }
 
 // What other invalid card cases can you think of?
+
+try {
+  getCardValue("A");
+  console.error("Error not thrown for invalid card missing suit");
+} catch (e) {
+  console.log("Error thrown for invalid card missing suit🎉");
+}
+
+try {
+  getCardValue("");
+  console.error("Error not thrown for invalid card containing empty string");
+} catch (e) {
+  console.log("Error thrown for invalid card containing empty string");
+}
