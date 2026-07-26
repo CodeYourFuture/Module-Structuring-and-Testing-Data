@@ -12,7 +12,7 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
- if (denominator === 0) {
+ if (denominator <= 0) {
     return false;
   }
   return numerator < denominator;
