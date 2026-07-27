@@ -27,5 +27,5 @@ test(`should return false when numerator is greater than denominator`, () => {
 // Case #4: numerator and/or denominator are negative numbers
 test(`should handle negative numbers`, () => {
   expect(isProperFraction(-1, 2)).toEqual(true);
-  expect(isProperFraction(-5, -2)).toEqual(true);
+  expect(isProperFraction(-5, -2)).toEqual(false);
 });
