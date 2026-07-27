@@ -43,4 +43,4 @@ assertEquals(isProperFraction(7, 4), false);
 
 // Example #5: -1/2 and -5/-2 are proper fractions
 assertEquals(isProperFraction(-1, 2), true);
-assertEquals(isProperFraction(-5, -2), true);
+assertEquals(isProperFraction(-5, -2), false);
