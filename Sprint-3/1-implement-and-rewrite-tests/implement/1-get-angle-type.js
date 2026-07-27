@@ -38,8 +38,8 @@ function getAngleType(angle) {
       return "Reflex angle";
   } else if (acuteAngle) {
       return "Acute angle";
-  } else if (zeroAngle || !acuteAngle || !rightAngle || !obtuseAngle || !straightAngle || !reflexAngle) {
-        return "Invalid angle"; 
+  } else {
+      return "Invalid angle"
   }
 }
 
