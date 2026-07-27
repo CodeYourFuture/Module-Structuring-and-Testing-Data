@@ -25,3 +25,7 @@ test('should return false when the fraction is improper', () => {
 test('should return true when numerator is zero', () => {
   expect(isProperFraction(0, 5)).toEqual(true);
 });
+// Case: negative improper fraction
+test('should return false when the fraction is a negative improper fraction', () => {
+  expect(isProperFraction(-7, 3)).toEqual(false);
+});
