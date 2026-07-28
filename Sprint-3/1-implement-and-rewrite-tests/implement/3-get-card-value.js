@@ -40,6 +40,8 @@ function getCardValue(card) {
       case "7":
       case "8":
       case "9":
+      case "10":
+        console.log(number);
         return Number(number);
       default:
         throw new Error("Number is not valid");

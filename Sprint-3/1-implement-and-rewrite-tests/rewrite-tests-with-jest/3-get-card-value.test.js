@@ -29,18 +29,19 @@ test(`Should return the card value when given a number card`, () => {
   expect(getCardValue("7♦")).toEqual(7);
   expect(getCardValue("8♣")).toEqual(8);
   expect(getCardValue("9♥")).toEqual(9);
+  expect(getCardValue("10♥")).toEqual(10);
 });
 
-// Case 4: Invalid card
-// test(`Should return invalid as the case is not valid`, () => {
-//   expect(getCardValue("invalid")).toEqual("invalid");
-//   expect(getCardValue("♦")).toEqual("invalid");
-//   expect(getCardValue("4")).toEqual("invalid");
-//   expect(getCardValue("")).toEqual("invalid");
-//   expect(getCardValue("m")).toEqual("invalid");
-//   expect(getCardValue("300")).toEqual("invalid");
-// });
 test("throw an error as the case is not valid but in right format", () => {
+  expect(() => {
+    getCardValue("16♦");
+  }).toThrow();
+    expect(() => {
+    getCardValue("100♦");
+  }).toThrow();
+});
+
+test("throw an error as the case is not valid in format", () => {
   expect(() => {
     getCardValue("92");
   }).toThrow();
@@ -48,7 +49,7 @@ test("throw an error as the case is not valid but in right format", () => {
     getCardValue("♦");
   }).toThrow();
   expect(() => {
-    getCardValue("A");
+    getCardValue("♥A");
   }).toThrow();
   expect(() => {
     getCardValue("*");
@@ -69,4 +70,3 @@ test("throw an error as the case is not valid but in right format", () => {
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
-
