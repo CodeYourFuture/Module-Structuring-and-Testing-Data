@@ -31,10 +31,10 @@ test(`Should return the card value when given number card`, () => {
 
 // Case 4: Invalid Cards
 test(`Should return invalid cards when given a face card`, () => {
-  expect(getCardValue("1♦")).toBe("Invalid card");
-  expect(getCardValue("10")).toBe("Invalid card");
-  expect(getCardValue("AZ")).toBe("Invalid card");
-  expect(getCardValue("")).toBe("Invalid card");
+  expect(() => getCardValue("1♦")).toThrow();
+  expect(() => getCardValue("10")).toThrow();
+  expect(() => getCardValue("AZ")).toThrow();
+  expect(() => getCardValue("")).toThrow();
 });
 
 // Suggestion: Group the remaining test data into these categories:
