@@ -13,9 +13,9 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 //1-carPrice.replaceAll(",", "") in line 4
-//3-number(...) in line 4 - enumerate the first result of replaceAll
+//3-Number(...) in line 4 - enumerate the first result of replaceAll
 //2-priceAfterOneYear.replaceAll("," ,"")) in line 5
-//4-number(...) in line 5 - enumerate the second result of replaceAll
+//4-Number(...) in line 5 - enumerate the second result of replaceAll
 //5-console.log(..) - line 9
 
 

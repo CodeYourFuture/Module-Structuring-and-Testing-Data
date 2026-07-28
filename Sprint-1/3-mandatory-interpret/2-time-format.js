@@ -6,7 +6,6 @@ const totalMinutes = (movieLength - remainingSeconds) / 60;
 
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
-
 const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
 
@@ -38,4 +37,4 @@ console.log(result);
 // zero value: the formatted duration would also be correct 0:0:0 even though it is an unusual value it still show that it can handle it 
 // Negative value: for the -8789 seconds would give us an output of -2:-26:-29 which is not a valid format and doesn't make any sense
 // the logic breaks where we need to give the user a message to enter a valid number 
-// 
+// s
