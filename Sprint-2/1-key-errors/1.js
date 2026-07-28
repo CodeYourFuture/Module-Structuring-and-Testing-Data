@@ -20,16 +20,16 @@
 
 
 // =============> write your explanation here
-//similar to the previous exercise where the variable decimal Number has already been declared in the parameter 
-// and already is a local variable which can't be declared again  
-//As the decimalNumber inside the function we can't print it using the console.log() as it has no power to the local scope
-//instead we can delete the second declaration and just leave the parameter as an input for the user which would be nicely work
-// Finally, correct the code to fix the problem
+/* The variable decimal Number has already been declared in the parameter 
+ and already is a local variable which can't be declared again causing a ReferenceError  
+As the decimalNumber inside the function we can't print it using the console.log() as it has no power to the local scope
+instead we can delete the second declaration and just leave the parameter as an input for the user 
+ Finally, correct the code to fix the problem */
 
 // =============> write your new code here
 function convertToPercentage(decimalNumber) {
   const percentage = `${decimalNumber * 100}%`;
-return percentage;
+ return percentage;
 }
 
 console.log(convertToPercentage(0.5));

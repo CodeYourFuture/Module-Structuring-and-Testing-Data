@@ -4,7 +4,7 @@
 // this function should square any number but instead we're going to get an error
 
 // =============> write your prediction of the error here
-//The error might be accuring because the parameter can't be a number and should be a variable 
+//I predict the funciton will throw a SyntaxEror as the perametters sould be valid variables like names or identifiers with upholding to the variable naming convention and in this case a number found 
 
 // function square(3) {
 //     return num * num;
@@ -14,13 +14,16 @@
 //the Error is a syntax error: Unexpected number 
 
 // =============> explain this error message here
-// we can put a number or any argument when we call the number not when we shape it 
+/* The function was givin a number as its perameter where in JS only allows varaible names and usnig a number causes a SyntaxError
+ Also, the function was returning num*num where num is undefined causing a ReferenceError
+ */
 
 // Finally, correct the code to fix the problem
+
+// =============> write your new code here
+
 function square(num) {
     return num * num;
  }
 
-// =============> write your new code here
-
-
+console.log(square(25));
