@@ -22,15 +22,18 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
+  if (Number(card) < 1 || Number(card) > 11) {
+    throw new Error("Error");
+  }
   const removeSuit = card.slice(0, -1);
   if (removeSuit === "A") {
     return 11;
-  } else if (removeSuit === "J" || removeSuit === "Q" ||removeSuit === "K") {
+  } else if (removeSuit === "J" || removeSuit === "Q" || removeSuit === "K") {
     return 10;
   } else if (removeSuit > 1 && removeSuit < 11) {
     return Number(removeSuit);
   } else {
-    throw new Error("Error")
+    throw new Error("Error");
   }
 }
 
@@ -74,4 +77,3 @@ try {
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
 }
-

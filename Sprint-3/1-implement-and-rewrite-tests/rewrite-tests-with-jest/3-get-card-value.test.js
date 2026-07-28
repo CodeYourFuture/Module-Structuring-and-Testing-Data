@@ -8,9 +8,7 @@ const getCardValue = require("../implement/3-get-card-value");
 test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♠")).toEqual(11);
 });
-
-// Case 2: 
-
+// Case 2:
 test(`should return 10 for face cards"`, () => {
   expect(getCardValue("J♥")).toEqual(10);
   expect(getCardValue("K♠")).toEqual(10);
@@ -20,10 +18,9 @@ test(`should return 10 for face cards"`, () => {
 //Case 3:
 test(`should return the numeric value of numbered cards`, () => {
   expect(getCardValue("2♠")).toEqual(2);
-  expect(getCardValue("5♠")).toEqual(5);
-  expect(getCardValue("8♠")).toEqual(8);
+  expect(getCardValue("5♣")).toEqual(5);
+  expect(getCardValue("8◆")).toEqual(8);
 });
-
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
 //   Face Cards (J, Q, K)
@@ -35,5 +32,9 @@ test(`should return the numeric value of numbered cards`, () => {
 test(`Should not return any card should throw an error message`, () => {
   expect(() => {
     getCardValue("QQ♥");
+    getCardValue("♠♥");
+    getCardValue("88");
+    getCardValue("00");
+    getCardValue("0");
   }).toThrow();
 });
