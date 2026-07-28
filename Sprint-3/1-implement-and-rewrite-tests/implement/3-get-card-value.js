@@ -22,7 +22,31 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+
+  const values = {
+    A: 11,
+    J: 10,
+    Q: 10,
+    K: 10,
+  };
+
+  const validSuits = ["♠", "♥", "♦", "♣"];
+
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card");
+  }
+
+  if (values[rank]) {
+    return values[rank];
+  }
+
+  if (Number(rank) >= 2 && Number(rank) <= 10) {
+    return Number(rank);
+  }
+
+  throw new Error("Invalid card");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -52,3 +76,38 @@ try {
 }
 
 // What other invalid card cases can you think of?
+// Invalid rank
+try {
+  getCardValue("1♠");
+
+  console.error("Error was not thrown for invalid rank 😢");
+} catch (e) {
+  console.log("Error thrown for invalid rank 🎉");
+}
+
+// Invalid suit
+try {
+  getCardValue("9X");
+
+  console.error("Error was not thrown for invalid suit 😢");
+} catch (e) {
+  console.log("Error thrown for invalid suit 🎉");
+}
+
+// Missing suit
+try {
+  getCardValue("A");
+
+  console.error("Error was not thrown for missing suit 😢");
+} catch (e) {
+  console.log("Error thrown for missing suit 🎉");
+}
+
+// Missing rank
+try {
+  getCardValue("♠");
+
+  console.error("Error was not thrown for missing rank 😢");
+} catch (e) {
+  console.log("Error thrown for missing rank 🎉");
+}
