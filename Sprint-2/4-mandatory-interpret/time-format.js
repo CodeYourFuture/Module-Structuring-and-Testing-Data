@@ -30,7 +30,7 @@ console.log(formatTimeDisplay(61))
 // =============> the first time pad was called with the totalHours
 
 // c) What is the return value of pad is called for the first time?
-// =============> "0"
+// =============> "00"
 
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
@@ -39,5 +39,4 @@ console.log(formatTimeDisplay(61))
 
 // e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
 // =============> "01"
-
-
+// the return value is 1 put as we are using pad wouldbe adding leading "0"
