@@ -35,4 +35,4 @@ console.log(formatTimeDisplay(60))
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> "01"
-// When it is call for the last time it adds 0 before 1 to make it 2 characters long
+// When it is called for the last time it adds 0 before 1 to make it 2 characters long

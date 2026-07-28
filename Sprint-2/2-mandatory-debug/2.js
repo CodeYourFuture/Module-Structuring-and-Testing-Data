@@ -2,8 +2,8 @@
 
 // Predict the output of the following code:
 // =============> Write your prediction here
-//getLastDigit will convert a number to a string and reverse it 
-// However, since there is no parameter or local variable we might run into an Error 
+//getLastDigit will convert a number to a string 
+// However, since there is no parameter or local variable to the function  we might run into an Error 
 
 // const num = 103;
 
@@ -40,3 +40,7 @@ function getLastDigit(num) {
 
 // This program should tell the user the last digit of each number.
 // Explain why getLastDigit is not working properly - correct the problem
+/* the reason why getLastDigit isn't working properly is that it doesn't accept any arrguments where there isn't any perameters in its difination.
+where it uses the golabal varaible 'num' decalred outside the funtion and already set to 103
+
+The correct code includes a parameter 'number' in the difination this allows the function to accept the number passed to it when called*/
