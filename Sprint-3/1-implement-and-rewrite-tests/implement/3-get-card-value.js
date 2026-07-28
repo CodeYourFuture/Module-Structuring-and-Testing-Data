@@ -23,9 +23,9 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
-   if (card <= 1 && card >= 10 || typeof card !== "string") {
+   if (typeof card !== "string") {
      // Here the type of values are checked whether they are string.
-     return card + " Invalid card";
+         throw new Error(" Invalid card");
    }
 
   const validRanks = [ // An array of ranks are created here
@@ -48,7 +48,7 @@ function getCardValue(card) {
   const rank = card.slice(0, -1);
 
   if (!validRanks.includes(rank) || !validSuits.includes(suit)) { //Here the values that are stored in rank and suit are checked whether they are valid are inside the validRank and validSuits arrays.
-    return card + " Invalid card";
+    throw new Error("Invalid card");
   }
 
   if (rank === "A") { // Here the code is testing wether the rank is an Ace.
