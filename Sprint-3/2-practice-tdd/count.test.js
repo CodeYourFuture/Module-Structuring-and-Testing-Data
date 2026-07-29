@@ -10,19 +10,19 @@ const countChar = require("./count");
 // When the function is called with these inputs,
 // Then it should correctly count occurrences of `char`.
 
-test("should count multiple occurrences of a character", () => {
+test("The function should return the number of times a character appears ", () => {
   const str = "aaaaa";
   const char = "a";
   const count = countChar(str, char);
   expect(count).toEqual(5);
 });
-test("should count multiple occurrences of a character", () => {
+test("The function should return the number of times a character appears", () => {
   const str = "hello";
   const char = "l";
   const count = countChar(str, char);
   expect(count).toEqual(2);
 });
-test("should count multiple occurrences of a character", () => {
+test("The function should return the number of times a character appears", () => {
   const str = "speed";
   const char = "e";
   const count = countChar(str, char);
@@ -34,19 +34,19 @@ test("should count multiple occurrences of a character", () => {
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
-test("should count multiple occurrences of a character", () => {
+test("the function should return 0 when there are no appears of the character", () => {
   const str = "kkkk";
   const char = "l";
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
-test("should count multiple occurrences of a character", () => {
+test("the function should return 0 when there are no appears of the character", () => {
   const str = "bbbb";
   const char = "c";
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
-test("should count multiple occurrences of a character", () => {
+test("the function should return 0 when there are no appears of the character", () => {
   const str = "mmmmmzmze";
   const char = "d";
   const count = countChar(str, char);
