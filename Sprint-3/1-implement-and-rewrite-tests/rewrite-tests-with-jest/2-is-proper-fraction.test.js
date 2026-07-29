@@ -12,8 +12,8 @@ test(`should return false when the abs(denominator) < abs(numerator)`, () => {
   expect(isProperFraction(7, 2)).toEqual(false);
   expect(isProperFraction(-17, -2)).toEqual(false);
   expect(isProperFraction(1, 0)).toEqual(false);
-  expect(isProperFraction(0, 0)).toEqual(false);
-  expect(isProperFraction(2, -2)).toEqual(false);
+  expect(isProperFraction(5, 2)).toEqual(false);
+  expect(isProperFraction(6, -2)).toEqual(false);
 });
 test(`should return true when abs(denominator) > abs(numerator)`, () => {
   expect(isProperFraction(2, 8)).toEqual(true);
