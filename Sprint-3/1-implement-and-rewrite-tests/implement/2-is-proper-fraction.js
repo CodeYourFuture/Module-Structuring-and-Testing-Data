@@ -12,6 +12,13 @@
 
 function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
+  if (denominator <= 0) {
+    return false;
+  }
+  if (numerator < 0) {
+    return false;
+  }
+  return numerator < denominator;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
