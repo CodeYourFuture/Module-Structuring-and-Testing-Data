@@ -15,7 +15,7 @@ console.log(`The percentage change is ${percentageChange}`);
 //There are 5 function calls on lines 4,5,7,8 and 10
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-//Line 5 Column 60 was missing a ',' to separate the fuction.
+//Line 5 Column 60 was missing a comma between the arguments to separate the fuction.
 
 // c) Identify all the lines that are variable reassignment statements
 //LInes 4 and 5 are variable reassignment statements.
