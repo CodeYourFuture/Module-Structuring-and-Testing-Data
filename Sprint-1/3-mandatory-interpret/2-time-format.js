@@ -22,10 +22,10 @@ console.log(result);
 //movie % 60 represents the remainder of the division of movieLength by 60.
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
-// The expression is an Assignment operator that assigns its right hand side value and equation to the variable on the left hand side.
+// totalMinutes is movieLength minus remainingMinutes, that sum is then minus by remainingMinutes then divided by 60.
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// The variable result represents the total hours,minutes and seconds of the movie. A better name for this could be runtime or duration.
+// The variable result represents the total hours,minutes and seconds of the movie. A better name for this is formattedMovieLength.
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // This code will not work for values of movieLength that are less than 60 seconds due to it needing to divide by 60 to get minutes and hours.
