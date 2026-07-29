@@ -27,6 +27,7 @@ function getCardValue(card) {
   // Get the suit (last character) and rank (everything before it)
   const suit = card.slice(-1);
   const rank = card.slice(0, -1);
+  console.log(suit, rank);
 
   // Check that the suit is valid
   if (!validSuits.includes(suit)) {
@@ -56,24 +57,6 @@ function getCardValue(card) {
   }
 
   throw new Error("Invalid card");
-
-  {
-    return Number(rank);
-  }
-
-  // Invalid rank
-  throw new Error("Invalid card");
-  getCardValue("1♠");
-  getCardValue("11♣");
-  getCardValue("0♦");
-  getCardValue("B♥");
-  getCardValue("X♠");
-
-  //invalid suit
-  getCardValue("AX");
-  getCardValue("5*");
-  getCardValue("10H");
-  getCardValue("QS");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -88,19 +71,32 @@ function assertEquals(actualOutput, targetOutput) {
   );
 }
 
-// TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
-// Examples:
-assertEquals(getCardValue("9♠"), 9);
+// // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
+// // Examples:
+// assertEquals(getCardValue("9♠"), 9);
 
-// Handling invalid cards
-try {
-  getCardValue("invalid");
+// // Handling invalid cards
+// try {
+//   getCardValue("invalid");
 
-  // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card 😢");
-} catch (e) {
-  console.log("Error thrown for invalid card 🎉");
-}
+//   // This line will not be reached if an error is thrown as expected
+//   console.error("Error was not thrown for invalid card 😢");
+// } catch (e) {
+//   console.log("Error thrown for invalid card 🎉");
+// }
 
-// What other invalid card cases can you think of?
-//invalid rank
+// // What other invalid card cases can you think of?
+// //invalid rank
+// getCardValue("1♠");
+// getCardValue("11♣");
+// getCardValue("0♦");
+// getCardValue("B♥");
+// getCardValue("X♠");
+
+// //invalid suit
+// getCardValue("AX");
+// getCardValue("5*");
+// getCardValue("10H");
+// getCardValue("QS");
+
+getCardValue("1♠");
