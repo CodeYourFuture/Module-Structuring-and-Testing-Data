@@ -2,7 +2,7 @@
 //  =============> write your prediction here
 /*
 I predict the function will throw a SyntaxError as the variable str has already been declared in the function parameter  
-function capitalize will capitalise the first letter with index 0 
+function capitalise will capitalise the first letter with index 0 
 and will append the sliced string from index 1 which is the second letter
 */
 
@@ -25,8 +25,8 @@ As we can see the str variable has already been declared in the prameter of the 
 As we can see the str variable has already been declared in the prameter of the function instead we just return the value */
 
 function capitalise(str) {
-return str[0].toUpperCase()+str.slice(1);
+    return str[0].toUpperCase()+str.slice(1);
 
 }
-capitalise("ebrahim");
-capitalise('salomi');
+console.log(capitalise("ebrahim"));
+console.log(capitalise('salomi'));

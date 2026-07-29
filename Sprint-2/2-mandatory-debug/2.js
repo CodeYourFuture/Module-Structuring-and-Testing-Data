@@ -43,4 +43,4 @@ function getLastDigit(num) {
 /* the reason why getLastDigit isn't working properly is that it doesn't accept any arrguments where there isn't any perameters in its difination.
 where it uses the golabal varaible 'num' decalred outside the funtion and already set to 103
 
-The correct code includes a parameter 'number' in the difination this allows the function to accept the number passed to it when called*/
+The correct code includes a parameter 'num' in the difination this allows the function to accept the number passed to it when called*/
