@@ -23,6 +23,57 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  // Get the suit (last character) and rank (everything before it)
+  const suit = card.slice(-1);
+  const rank = card.slice(0, -1);
+
+  // Check that the suit is valid
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card");
+  }
+  // Ace
+  if (rank === "A") {
+    return 11;
+  }
+
+  if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  }
+
+  if (
+    rank === "2" ||
+    rank === "3" ||
+    rank === "4" ||
+    rank === "5" ||
+    rank === "6" ||
+    rank === "7" ||
+    rank === "8" ||
+    rank === "9" ||
+    rank === "10"
+  ) {
+    return Number(rank);
+  }
+
+  throw new Error("Invalid card");
+
+  {
+    return Number(rank);
+  }
+
+  // Invalid rank
+  throw new Error("Invalid card");
+  getCardValue("1♠");
+  getCardValue("11♣");
+  getCardValue("0♦");
+  getCardValue("B♥");
+  getCardValue("X♠");
+
+  //invalid suit
+  getCardValue("AX");
+  getCardValue("5*");
+  getCardValue("10H");
+  getCardValue("QS");
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -52,3 +103,4 @@ try {
 }
 
 // What other invalid card cases can you think of?
+//invalid rank
