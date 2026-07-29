@@ -15,8 +15,21 @@ function isProperFraction(numerator, denominator) {
  if (denominator <= 0) {
     return false;
   }
+  if (numerator < 0) {
+    return false;
+  }
   return numerator < denominator;
 }
+
+/* A proper fraction is defined as a fraction where:
+- The numerator is less than the denominator.
+- The denominator is positive.
+
+Source: https://www.mathsisfun.com/proper-fractions.html
+*/
+
+
+
 
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -48,7 +61,7 @@ assertEquals(isProperFraction(7, 3), false);
 assertEquals(isProperFraction(5, 0), false);
 
 // Negative numerators
-assertEquals(isProperFraction(-1, 2), true);
+assertEquals(isProperFraction(-1, 2), false);
 
 // Negative denominators
 assertEquals(isProperFraction(1, -2), false);
