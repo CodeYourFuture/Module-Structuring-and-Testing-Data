@@ -98,5 +98,3 @@ function assertEquals(actualOutput, targetOutput) {
 // getCardValue("5*");
 // getCardValue("10H");
 // getCardValue("QS");
-
-getCardValue("1♠");

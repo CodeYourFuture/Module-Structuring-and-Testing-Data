@@ -27,10 +27,15 @@ test("should return error for invalid cards", () => {
   expect(() => {
     getCardValue("1♠");
   }).toThrow("Invalid card");
-  // expect(getCardValue("1♠")).toEqual(0);
-  // expect(getCardValue("11♣")).toEqual(0);
-  // expect(getCardValue("X♦")).toEqual(0);
-  // expect(getCardValue("")).toEqual(0);
+  expect(() => {
+    getCardValue("11♠");
+  }).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("X♦");
+  }).toThrow("Invalid card");
+  expect(() => {
+    getCardValue("");
+  }).toThrow("Invalid card");
 });
 
 // Suggestion: Group the remaining test data into these categories:
