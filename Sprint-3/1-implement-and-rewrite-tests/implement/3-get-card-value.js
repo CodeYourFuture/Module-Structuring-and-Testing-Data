@@ -22,37 +22,51 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-    // Basic validation: validating the input before slicing
-    if (card === "") {
-        throw new Error("No card was played")
-    }
-    if (card.length < 2 || card.length > 3) {
-        throw new Error("Invalid card played, rank and suit cannot be less than 1 or more than 3")
-    }
-    const rank = card.slice(0, card.length - 1).toUpperCase()
-    const suit = card.slice(card.length - 1)
+  // Basic validation: validating the input before slicing
+  if (card === "") {
+    throw new Error("No card was played");
+  }
+  if (card.length < 2 || card.length > 3) {
+    throw new Error(
+      "Invalid card played, rank and suit cannot be less than 1 or more than 3"
+    );
+  }
+  const rank = card.slice(0, -1).toUpperCase();
+  const suit = card.slice(-1);
 
-    const validSuits = ["♠", "♥", "♦", "♣"];
-    const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validRanks = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
 
-    // Suit and rank validation
-    if (!validSuits.includes(suit)) {
-        throw new Error("Invalid card played, suit is missing");
-    }
-    if (validRanks.includes(rank)) {
-        if (rank === "A") {
-            return 11;
-        } else if (rank === "J" || rank === "Q" || rank === "K") {
-            return 10;
-        } else {
-            return Number(rank);
-        }
+  // Suit and rank validation
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card played, suit is missing");
+  }
+  if (validRanks.includes(rank)) {
+    if (rank === "A") {
+      return 11;
+    } else if (rank === "J" || rank === "Q" || rank === "K") {
+      return 10;
     } else {
-        throw new Error("Invalid rank");
+      return Number(rank);
     }
-
+  } else {
+    throw new Error("Invalid rank");
+  }
 }
-
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -60,10 +74,10 @@ module.exports = getCardValue;
 
 // Helper functions to make our assertions easier to read.
 function assertEquals(actualOutput, targetOutput) {
-    console.assert(
-        actualOutput === targetOutput,
-        `Expected ${actualOutput} to equal ${targetOutput}`
-    );
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected ${actualOutput} to equal ${targetOutput}`
+  );
 }
 
 // Examples:
@@ -86,40 +100,38 @@ assertEquals(getCardValue("K♦"), 10);
 
 // Handling invalid cards
 try {
-    getCardValue("");
+  getCardValue("");
 
-    // This line will not be reached if an error is thrown as expected
-    console.error("Error was not thrown for invalid card 😢");
+  // This line will not be reached if an error is thrown as expected
+  console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
-    console.log(e);
+  console.log(e);
 }
 
 //  What other invalid card cases can you think of?
 try {
-    getCardValue("100");
-    console.error("Error was not thrown for card with more than 3 in length");
+  getCardValue("100");
+  console.error("Error was not thrown for card with more than 3 in length");
 } catch (e) {
-    console.log(e)
+  console.log(e);
 }
 try {
-    getCardValue("1")
-    console.error("Error was not thrown for a card.lenght = 1")
+  getCardValue("1");
+  console.error("Error was not thrown for a card.lenght = 1");
 } catch (e) {
-    console.log(e)
-}
-
-try {
-    getCardValue("♦")
-    console.error("Error was not thrown for a card play of just suits")
-} catch (e) {
-    console.log(e)
+  console.log(e);
 }
 
 try {
-    getCardValue("A😊")
-    console.error("Error was not thrown for a card play of a wrong suit")
+  getCardValue("♦");
+  console.error("Error was not thrown for a card play of just suits");
 } catch (e) {
-    console.log(e)
+  console.log(e);
 }
 
-
+try {
+  getCardValue("A😊");
+  console.error("Error was not thrown for a card play of a wrong suit");
+} catch (e) {
+  console.log(e);
+}
