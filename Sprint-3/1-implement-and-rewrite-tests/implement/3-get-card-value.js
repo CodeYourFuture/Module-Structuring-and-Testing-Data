@@ -26,11 +26,7 @@ function getCardValue(card) {
   if (card === "") {
     throw new Error("No card was played");
   }
-  if (card.length < 2 || card.length > 3) {
-    throw new Error(
-      "Invalid card played, rank and suit cannot be less than 1 or more than 3"
-    );
-  }
+
   const rank = card.slice(0, -1).toUpperCase();
   const suit = card.slice(-1);
 
