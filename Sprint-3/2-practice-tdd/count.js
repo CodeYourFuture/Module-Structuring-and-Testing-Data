@@ -1,7 +1,6 @@
 function countChar(str, char) {
-  const arrayOfChars = Array.from(str);
   let count = 0;
-  for (letter of arrayOfChars) {
+  for (letter of str) {
     if (char === letter) {
       count++;
     }
