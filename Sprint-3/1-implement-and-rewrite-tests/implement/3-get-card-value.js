@@ -23,8 +23,8 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
-  let rank = card.slice(0,-1);
-   let cardFace = card[card.length - 1];
+  const rank = card.slice(0,-1);
+  const cardFace = card[card.length - 1];
 
   if (!["♠", "♥", "♦", "♣"].includes(cardFace)) {
     throw new Error(`Invalid card face: ${cardFace}`);
@@ -39,9 +39,10 @@ function getCardValue(card) {
     return 10;
   }
   if (!["♠", "♥", "♦", "♣"].includes(cardFace)) {
-  }
-  throw new Error(`Invalid card`);
+    throw new Error(`Invalid card`);
 }
+
+  
 
 
 // The line below allows us to load the getCardValue function into tests in other files.

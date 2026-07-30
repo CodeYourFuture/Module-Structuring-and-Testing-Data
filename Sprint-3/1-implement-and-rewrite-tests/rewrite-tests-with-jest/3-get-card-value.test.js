@@ -24,7 +24,8 @@ test(`Should return 10 when given a face card (J, Q, K)`, () => {
 })
 //   Invalid Cards
 test(`Should throw an error when given an invalid card`, () => {
-  expect(() => getCardValue("5X")).toThrow("Invalid card ")}); //invalid suit 
+  expect(() => getCartValue("♠").toThrow("Invalid card"));
+  expect(() => getCardValue("5X")).toThrow("Invalid card "); //invalid suit 
   expect(() => getCardValue("1♠")).toThrow("Invalid card "); //invalid rank 
   expect(() => getCardValue("3")).toThrow("Invalid card "); //missing suit 
 })
