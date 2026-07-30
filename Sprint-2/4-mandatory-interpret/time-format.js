@@ -7,7 +7,6 @@ function pad(num) {
 }
 
 function formatTimeDisplay(seconds) {
-  formatTimeDisplay(61);
   const remainingSeconds = seconds % 60;
   const totalMinutes = (seconds - remainingSeconds) / 60;
   const remainingMinutes = totalMinutes % 60;
@@ -15,6 +14,7 @@ function formatTimeDisplay(seconds) {
 
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
+console.log(formatTimeDisplay(61));
 
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
