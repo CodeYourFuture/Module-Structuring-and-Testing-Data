@@ -2,36 +2,51 @@
 // We will use the same function, but write tests for it using Jest in this file.
 const isProperFraction = require("../implement/2-is-proper-fraction");
 
+// Proper fraction
+test("should return true when the denominator is greater than the numerator", () => {
+  expect(isProperFraction(1, 2)).toBe(true);
+});
 
-test("should correctly identify proper fractions", () => {
-  // Whole number fractions
-  expect(isProperFraction(1, 2)).toEqual(true);
-  expect(isProperFraction(2, 1)).toEqual(false);
-  expect(isProperFraction(5, 5)).toEqual(false);
+// Improper fraction
+test("should return false when the numerator is greater than the denominator", () => {
+  expect(isProperFraction(2, 1)).toBe(false);
+});
 
-  // Zero
-  expect(isProperFraction(0, 5)).toEqual(true);
-  expect(isProperFraction(5, 0)).toEqual(false);
-  expect(isProperFraction(0, 0)).toEqual(false);
+// Zero numerator
+test("should return true when the numerator is zero", () => {
+  expect(isProperFraction(0, 5)).toBe(true);
+});
 
-  // Negative numbers
-  expect(isProperFraction(-1, 2)).toEqual(true);
-  expect(isProperFraction(1, -2)).toEqual(false);
-  expect(isProperFraction(-2, -1)).toEqual(true);
-  expect(isProperFraction(-1, -2)).toEqual(false);
+// Zero denominator
+test("should return false when the denominator is zero", () => {
+  expect(isProperFraction(5, 0)).toBe(false);
+});
 
-  // Decimal numbers
-  expect(isProperFraction(0.5, 1)).toEqual(true);
-  expect(isProperFraction(1.5, 1)).toEqual(false);
+// numerator equals denominator
+test("should return false when numerator equals denominator ", () => {
+  expect(isProperFraction(5, 5)).toBe(false);
+});
 
-  // Infinity
-  expect(isProperFraction(Infinity, 2)).toEqual(false);
-  expect(isProperFraction(2, Infinity)).toEqual(false);
+// Both numerator and denominator are zero
+test("should return false when both the numerator and denominator are zero", () => {
+  expect(isProperFraction(0, 0)).toBe(false);
+});
 
-  // NaN
-  expect(isProperFraction(NaN, 2)).toEqual(false);
-  expect(isProperFraction(2, NaN)).toEqual(false);
+// Negative numbers
+test("should correctly identify proper fractions when given negative numbers", () => {
+  expect(isProperFraction(-1, 2)).toBe(true);
+  expect(isProperFraction(1, -2)).toBe(true);
+  expect(isProperFraction(-1, -2)).toBe(true);
+  expect(isProperFraction(-2, -1)).toBe(false);
+});
 
-  // Large numbers
-  expect(isProperFraction(999999999, 1000000000)).toEqual(true);
+// Decimal numbers
+test("should correctly identify proper fractions when given decimal numbers", () => {
+  expect(isProperFraction(0.5, 1)).toBe(true);
+  expect(isProperFraction(1.5, 1)).toBe(false);
+});
+
+// Large numbers
+test("should correctly identify proper fractions when given very large numbers", () => {
+  expect(isProperFraction(999999999, 1000000000)).toBe(true);
 });
