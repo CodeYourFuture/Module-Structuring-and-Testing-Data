@@ -53,7 +53,7 @@ function getCardValue(card) {
 
   // Suit and rank validation
   if (!validSuits.includes(suit)) {
-    throw new Error("Invalid card played, suit is missing");
+    throw new Error("Invalid card: suit is not recognised");
   }
   if (validRanks.includes(rank)) {
     if (rank === "A") {
