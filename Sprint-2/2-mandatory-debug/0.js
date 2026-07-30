@@ -3,11 +3,11 @@
 The function should return the multiplication result so that
 the returned value can be used inside the template literal.
 */
-function multiply(a, b) {
-  return a * b;
-}
+// function multiply(a, b) {
+//   return a * b;
+// }
 
-console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
+// console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
 // =============> write your explanation here
 /*
