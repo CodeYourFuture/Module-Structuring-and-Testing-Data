@@ -44,3 +44,18 @@ test(`should return "Invalid angle" for angles outside valid range (1-359)`, () 
   expect(getAngleType(360)).toEqual("Invalid angle");
   expect(getAngleType(400)).toEqual("Invalid angle");
 });
+
+// Case 7: Decimal angles
+test(`should correctly classify decimal angles`, () => {
+  // valid decimal angles
+  expect(getAngleType(0.5)).toEqual("Acute angle");
+  expect(getAngleType(89.9)).toEqual("Acute angle");
+  expect(getAngleType(90.1)).toEqual("Obtuse angle");
+  expect(getAngleType(179.9)).toEqual("Obtuse angle");
+  expect(getAngleType(180.1)).toEqual("Reflex angle");
+  expect(getAngleType(359.9)).toEqual("Reflex angle");
+
+  // invalid decimal angles
+  expect(getAngleType(-0.5)).toEqual("Invalid angle");
+  expect(getAngleType(360.1)).toEqual("Invalid angle");
+});
