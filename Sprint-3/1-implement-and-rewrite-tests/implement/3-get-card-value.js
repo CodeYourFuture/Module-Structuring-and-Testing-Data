@@ -1,4 +1,3 @@
-git commit -m "Remove Sprint 3 files from Sprint 2 branch"
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
 // Implement a function getCardValue, when given a string representing a playing card,
