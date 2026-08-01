@@ -1,10 +1,8 @@
-// fixed version of the function
-
 function countChar(stringOfCharacters, findCharacter) {
   let count = 0;
 
-  for (let char of stringOfCharacters) {
-    if (char === findCharacter) {
+  for (let i = 0; i < stringOfCharacters.length; i++) {
+    if (stringOfCharacters[i] === findCharacter) {
       count++;
     }
   }
