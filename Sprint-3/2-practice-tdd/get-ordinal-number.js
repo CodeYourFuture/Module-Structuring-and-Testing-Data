@@ -1,9 +1,3 @@
-function getOrdinalNumber(num) {
-  return "1st";
-}
-
-module.exports = getOrdinalNumber;
-
 //correct version of the function
 
 function getOrdinalNumber(num) {
