@@ -25,7 +25,7 @@ console.log(`The percentage change is ${percentageChange}`);
 a) There are 5 calls made:
     carPrice = Number(carPrice.replaceAll(",", ""));
     priceAfterOneYear = Number(priceAfterOneYear.replaceAll("," ""))
-b) Error on line 5 for "," it is missing the seperating , between "," and "".
+b) Error on line 5 for "," it is missing the seperating , between arguments.
 c) 4 and 5
 d) 1 and 2, 7 and 8,
 e) It removes the , from the string and replaces it with nothing. Used to help change the string into a number with the "Number" function.
