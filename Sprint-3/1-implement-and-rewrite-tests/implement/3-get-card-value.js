@@ -22,13 +22,12 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // Basic validation: validating the input before slicing
   if (card === "") {
     throw new Error("No card was played");
   }
-
-  const rank = card.slice(0, -1).toUpperCase();
-  const suit = card.slice(-1);
+  if (card.length < 2 || card.length > 3) {
+    throw new Error("Invalid card");
+  }
 
   const validSuits = ["♠", "♥", "♦", "♣"];
   const validRanks = [
@@ -47,21 +46,19 @@ function getCardValue(card) {
     "K",
   ];
 
-  // Suit and rank validation
+  const suit = card.slice(-1);
   if (!validSuits.includes(suit)) {
     throw new Error("Invalid card: suit is not recognised");
   }
-  if (validRanks.includes(rank)) {
-    if (rank === "A") {
-      return 11;
-    } else if (rank === "J" || rank === "Q" || rank === "K") {
-      return 10;
-    } else {
-      return Number(rank);
-    }
-  } else {
-    throw new Error("Invalid rank");
+
+  const rank = card.slice(0, -1).toUpperCase();
+  if (!validRanks.includes(rank)) {
+    throw new Error("Invalid card: rank is not recognised");
   }
+  if (rank === "A") return 11;
+  if (["J", "Q", "K"].includes(rank)) return 10;
+
+  return Number(rank);
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
