@@ -21,7 +21,7 @@ test(`Should return the number when given a number card`, () => {
   expect(getCardValue("2♦")).toEqual(2);
 });
 //Case 4: Invalid cards
-test(`Should return the invalid suit, invalid card or invalid card`, () => {
+test(`Should raise Invalid card error for an invalid Input`, () => {
   expect(() => getCardValue("Apple")).toThrow("Invalid card");
   expect(() => getCardValue("4🎉")).toThrow("Invalid card");
   expect(() => getCardValue("20♣")).toThrow("Invalid card");
