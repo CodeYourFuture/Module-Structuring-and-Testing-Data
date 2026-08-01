@@ -1,9 +1,3 @@
-function countChar(stringOfCharacters, findCharacter) {
-  return 5;
-}
-
-module.exports = countChar;
-
 // fixed version of the function
 
 function countChar(stringOfCharacters, findCharacter) {
