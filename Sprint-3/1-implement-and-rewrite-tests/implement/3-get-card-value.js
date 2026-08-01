@@ -32,14 +32,16 @@ function getCardValue(card) {
   if (rank === "A") {
     return 11;
   }
-  if (+rank >= 2 && +rank <= 9) {
+  if (rank >= 2 && rank <= 9) {
     return +rank;
+  }
+  if (!["K", "10", "Q", "J"].includes(rank)){
+    throw new error (`Invalid card rank: ${rank}`)
   }
   if (["K", "10", "Q", "J"].includes(rank)) {
     return 10;
   }
-  if (!["♠", "♥", "♦", "♣"].includes(cardFace)) {
-    throw new Error(`Invalid card`);
+  
 }
 
   
