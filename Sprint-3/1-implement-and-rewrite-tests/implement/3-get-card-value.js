@@ -42,8 +42,8 @@ function getCardValue(card) {
     "K",
   ];
   const suits = ["♠", "♥", "♦", "♣"];
-let rank = card.slice(0, -1)// This is extracting the bit before the suits alone
-let suit = card.slice(-1) // THis is extracting the suit in the string
+  let rank = card.slice(0, -1)// This is extracting the bit before the suits alone
+  let suit = card.slice(-1) // THis is extracting the suit in the string
   
   if(!ranks.includes(rank)){
     throw new Error("Invalid card")
