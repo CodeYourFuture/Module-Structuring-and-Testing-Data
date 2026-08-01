@@ -31,12 +31,6 @@ function getAngleType(angle) {
   else if (angle > 180 && angle < 360){
     return "Reflex angle";
   }
-  else if(angle === 0){
-    return "Zero angle"
-  }
-  else if(angle === 360){
-    return "Complete angle"
-  }
   else{
     return "Invalid angle";
   }
