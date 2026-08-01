@@ -6,7 +6,7 @@ function sayHello(greeting, name) {
   return greetingStr;
 }
 
-let testName = "Aman";
+const testName = "Aman";
 
 const greeting = "hello";
 const greetingMessage = sayHello(greeting, testName);
