@@ -26,3 +26,15 @@ test(`should return false when negative/positive numerator is greater than the p
   expect(isProperFraction(100, 2)).toEqual(false);
   expect(isProperFraction(-1, -0)).toEqual(false);
 });
+// Special case: Since the abs(denominator) is 1, only a numerator of 0 should be proper.
+test("should handle denominator of 1", () => {
+  expect(isProperFraction(1, 1)).toEqual(false);
+  expect(isProperFraction(2, 1)).toEqual(false);
+});
+// Special case: proper fraction requires the numerator to be strictly less than the denominator (in absolute value).
+test("should return false when numerator equals denominator", () => {
+  expect(isProperFraction(5, 5)).toEqual(false);
+  expect(isProperFraction(-5, 5)).toEqual(false);
+  expect(isProperFraction(5, -5)).toEqual(false);
+  expect(isProperFraction(-5, -5)).toEqual(false);
+});
