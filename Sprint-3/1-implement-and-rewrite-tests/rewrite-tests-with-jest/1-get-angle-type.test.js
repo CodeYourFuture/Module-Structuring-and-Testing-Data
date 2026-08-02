@@ -29,7 +29,7 @@ test(`should return "Reflect angle" when angle is greater than 180 but less than
   expect(getAngleType(359)).toEqual("Reflex angle");
 });
 // Case 6: Invalid angles
-test(`should return "Invalid angle" when angle is less than zero or angle is greater than 360)`, () => {
+test(`"should return 'Invalid angle' when angle is 0, 360, less than 0, or greater than 360")`, () => {
   expect(getAngleType(0)).toEqual("Invalid angle");
   expect(getAngleType(360)).toEqual("Invalid angle");
   expect(getAngleType(-1)).toEqual("Invalid angle");
