@@ -45,3 +45,4 @@ test("should throw an error when count is negative", () => {
 
   expect(() => repeatStr(str, count)).toThrow();
 });
+
