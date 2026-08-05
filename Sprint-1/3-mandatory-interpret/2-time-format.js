@@ -43,7 +43,7 @@ console.log(result);
 Firstly it will evaluate bracket i.e (movieLength - remainingSeconds) and then divide the value by 60.
 */
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// The result represents the how long the movie is, in hours, minutes and seconds. It can named as "Duration".
+// The result represents the how long the movie is, in hours, minutes and seconds. It can named a "movieDurationHHMMSS".
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
 // Yes, the code works for different values of movieLength and does not produce any errors. However, it does not always format 
 // the output correctly. If the hours, minutes, or seconds are less than 10(e.g 5, 7), they are displayed as a single 
