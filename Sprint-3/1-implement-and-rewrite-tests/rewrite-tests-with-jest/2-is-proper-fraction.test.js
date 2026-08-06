@@ -13,12 +13,12 @@ test(`should return false when |numerator| >= |denominator|`, () => {
   expect(isProperFraction(3, 3)).toEqual(false);
 });
 
-test(`should return true when |numerator| < |denominator| (negative numerator)`, () => {
+test(`should handle negative numerator: return abs(n) < abs(d)`, () => {
   expect(isProperFraction(-1, 2)).toEqual(true);
   expect(isProperFraction(-3, 2)).toEqual(false);
 });
 
-test(`should return true when |numerator| < |denominator| (negative denominator)`, () => {
+test(`should handle negative denominator: return abs(n) < abs(d)`, () => {
   expect(isProperFraction(1, -2)).toEqual(true);
   expect(isProperFraction(3, -2)).toEqual(false);
 });
