@@ -11,12 +11,26 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // Read the code and then answer the questions below
 
-// a) How many function calls are there in this file? Write down all the lines where a function call is made
+// a) There are 5 function calls.
+// Line 4: carPrice.replaceAll(",", "")
+// Line 4: Number(...)
+// Line 5: priceAfterOneYear.replaceAll(",", "")
+// Line 5: Number(...)
+// Line 10: console.log(...)
 
-// b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
+// b) There is no error in the current code because it has already been fixed.
+// The original error occurred because a comma was missing between the arguments in a function call.
+// The missing programming term is "arguments".
+// Adding the missing comma fixes the syntax error.
 
-// c) Identify all the lines that are variable reassignment statements
+// c) Variable reassignment statements:
+// Line 4: carPrice = Number(carPrice.replaceAll(",", ""));
+// Line 5: priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
-// d) Identify all the lines that are variable declarations
+// d) Variable declarations:
+// Line 1: let carPrice = "10,000";
+// Line 2: let priceAfterOneYear = "8,543";
+// Line 7: const priceDifference = carPrice - priceAfterOneYear;
+// Line 8: const percentageChange = (priceDifference / carPrice) * 100;
 
-// e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+// e) The expression Number(carPrice.replaceAll(",", "")) first removes the comma from the string "10,000", producing "10000". It then converts that string into the number 10000 so it can be used in mathematical calculations.
