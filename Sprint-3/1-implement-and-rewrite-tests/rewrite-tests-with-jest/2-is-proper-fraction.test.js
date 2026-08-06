@@ -1,11 +1,12 @@
-// This statement loads the isProperFraction function you wrote in the implement directory.
 const isProperFraction = require("../implement/2-is-proper-fraction");
+
+test(`should return false when denominator is zero`, () => {
+  expect(isProperFraction(1, 0)).toEqual(false);
+});
 
 test(`should return true when |numerator| < |denominator|`, () => {
   expect(isProperFraction(1, 2)).toEqual(true);
-  expect(isProperFraction(-1, 2)).toEqual(true);
-  expect(isProperFraction(1, -2)).toEqual(true);
-  expect(isProperFraction(-1, -2)).toEqual(true);
+  expect(isProperFraction(3, 7)).toEqual(true);
 });
 
 test(`should return false when |numerator| >= |denominator|`, () => {
@@ -13,12 +14,12 @@ test(`should return false when |numerator| >= |denominator|`, () => {
   expect(isProperFraction(3, 3)).toEqual(false);
 });
 
-test(`should handle negative numerator: return abs(n) < abs(d)`, () => {
+test(`should return true when numerator is negative and |numerator| < |denominator|`, () => {
   expect(isProperFraction(-1, 2)).toEqual(true);
   expect(isProperFraction(-3, 2)).toEqual(false);
 });
 
-test(`should handle negative denominator: return abs(n) < abs(d)`, () => {
+test(`should return true when denominator is negative and |numerator| < |denominator|`, () => {
   expect(isProperFraction(1, -2)).toEqual(true);
   expect(isProperFraction(3, -2)).toEqual(false);
 });
