@@ -35,4 +35,4 @@ function formatTimeDisplay(seconds) {
 // =============> 1, when pad is last called its at ${pad(remainingSeconds)} where the value left is 1
 
 // e) What is the return value of pad when it is called for the last time in this program?  Explain your answer
-// =============> 1 at const remainingSexonds = seconds % 60 gives 1
+// =============> 01 as its value is 1 and it pads to two digits, so makes it 01
