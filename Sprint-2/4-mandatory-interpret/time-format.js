@@ -26,10 +26,10 @@ function formatTimeDisplay(seconds) {
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
 // b) What is the value assigned to num when pad is called for the first time?
-// =============> 61 
+// =============> 0 
 
 // c) What is the return value of pad is called for the first time?
-// =============> "61"
+// =============> 00
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> 1, when pad is last called its at ${pad(remainingSeconds)} where the value left is 1
