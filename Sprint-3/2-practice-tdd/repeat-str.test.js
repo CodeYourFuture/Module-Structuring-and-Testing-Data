@@ -53,3 +53,15 @@ test("should throw an error when count is negative", () => {
     repeatStr(str, count);
   }).toThrow("error");
 });
+
+// Case: Handle empty string:
+// Given a target string empty `str`,
+// When the repeatStr function is called with any positive amount,
+// Then it should return an empty string.
+
+test("should return an empty string when str is empty", () => {
+  const str = "";
+  const count = 2;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("");
+});
