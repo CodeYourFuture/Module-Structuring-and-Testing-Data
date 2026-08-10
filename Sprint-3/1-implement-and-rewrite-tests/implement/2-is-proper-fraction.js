@@ -29,6 +29,9 @@ function assertEquals(actualOutput, targetOutput) {
 assertEquals(isProperFraction(1, 2), true);
 
 function isProperFraction(numerator, denominator) {
+  if (typeof numerator !== "number" || typeof denominator !== "number") {
+    throw new Error("Numerator and denominator must be numbers");
+  }
   if (denominator === 0) {
     return false;
   }

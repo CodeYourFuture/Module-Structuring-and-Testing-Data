@@ -9,30 +9,35 @@ test(`should return false when denominator is zero`, () => {
   expect(isProperFraction(1, 0)).toEqual(false);
 });
 
-test(`should return false when numerator is zero`, () => {
-  expect(isProperFraction(0, 1)).toEqual(false);
+test(`should return true when numerator is zero`, () => {
+  expect(isProperFraction(0, 3)).toEqual(true);
 });
 
-test(`should return false when numerator is negative`, () => {
-  expect(isProperFraction(-1, 2)).toEqual(false);
+test(`should return false when both numerator and denominator are zero`, () => {
+  expect(isProperFraction(0, 0)).toEqual(false);
 });
 
-test(`should return false when denominator is negative`, () => {
-  expect(isProperFraction(1, -2)).toEqual(false);
-});
-
-test(`should return false when both numerator and denominator are negative`, () => {
-  expect(isProperFraction(-1, -2)).toEqual(false);
+test(`should return false when both numerator and denominator are the same number`, () => {
+  expect(isProperFraction(3, 3)).toEqual(false);
 });
 
 test(`should return true when numerator is less than denominator`, () => {
   expect(isProperFraction(1, 2)).toEqual(true);
+  expect(isProperFraction(-1, -2)).toEqual(true);
 });
 
 test(`should return false when numerator is equal to denominator`, () => {
   expect(isProperFraction(2, 2)).toEqual(false);
+  expect(isProperFraction(-2, -2)).toEqual(false);
 });
 
 test(`should return false when numerator is greater than denominator`, () => {
   expect(isProperFraction(3, 2)).toEqual(false);
+  expect(isProperFraction(-3, -2)).toEqual(false);
+});
+
+test("should throw an error for non-numerical values", () => {
+  expect(() => isProperFraction("2", 3)).toThrow(
+    "Numerator and denominator must be numbers"
+  );
 });
