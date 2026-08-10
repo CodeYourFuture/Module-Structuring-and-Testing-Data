@@ -36,3 +36,26 @@ test("should return the number of occurrences of a character in a string with di
   const count = countChar(str, char);
   expect(count).toEqual(2);
 });
+
+test("should count spaces", () => {
+  const str = "hello world";
+  const char = " ";
+
+  expect(countChar(str, char)).toEqual(1);
+});
+
+test("should only count capitalised characters and when string contains common characters", () => {
+  const str = "Tortilla";
+  const char = "T";
+  const count = countChar(str, char);
+
+  expect(countChar(str, char)).toEqual(1);
+});
+
+test("should return 0 if characters in a string are not capitalised ", () => {
+  const str = "Hello";
+  const char = "L";
+  const count = countChar(str, char);
+
+  expect(countChar(str, char)).toEqual(0);
+});
