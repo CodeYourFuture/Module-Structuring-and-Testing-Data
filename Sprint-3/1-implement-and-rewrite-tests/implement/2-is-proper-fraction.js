@@ -10,7 +10,6 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-
 // The line below allows us to load the isProperFraction function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = isProperFraction;
@@ -33,13 +32,12 @@ function isProperFraction(numerator, denominator) {
   if (denominator === 0) {
     return false;
   }
-  if (numerator < denominator && numerator > 0) {
+  if (Math.abs(numerator) < Math.abs(denominator)) {
+    //Math.abs gives an absolute version of a number regardless of positive or negative
     return true;
   }
   return false;
-} 
-console.log(isProperFraction(2,3)); // true
-
+}
+console.log(isProperFraction(2, 3)); // true
 
 module.exports = isProperFraction;
-
