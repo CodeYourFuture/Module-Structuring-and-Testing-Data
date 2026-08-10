@@ -25,3 +25,35 @@ test("should append 'th' for numbers ending with 11", () => {
   expect(getOrdinalNumber(111)).toEqual("111th");
   expect(getOrdinalNumber(211)).toEqual("211th");
 });
+
+// Case 3: Numbers ending with 3
+test("should append 'rd' for numbers ending with 3 excluding 13", () => {
+  expect(getOrdinalNumber(3)).toEqual("3rd");
+  expect(getOrdinalNumber(23)).toEqual("23rd");
+  expect(getOrdinalNumber(103)).toEqual("103rd");
+});
+
+// Case 4: Numbers ending with 2
+test("should append 'nd' for numbers ending with 2 excluding 12", () => {
+  expect(getOrdinalNumber(2)).toEqual("2nd");
+  expect(getOrdinalNumber(42)).toEqual("42nd");
+  expect(getOrdinalNumber(422)).toEqual("422nd");
+});
+
+// Case 5: Large numbers
+test("should work with larger numbers", () => {
+  expect(getOrdinalNumber(1001)).toEqual("1001st");
+  expect(getOrdinalNumber(1002)).toEqual("1002nd");
+  expect(getOrdinalNumber(1003)).toEqual("1003rd");
+  expect(getOrdinalNumber(1004)).toEqual("1004th");
+});
+
+// Case 6: Numbers ending with 11 and above
+test("should append 'th' for multiple digit numbers where the second to last digit is 1,", () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(111)).toEqual("111th");
+  expect(getOrdinalNumber(1111)).toEqual("1111th");
+  expect(getOrdinalNumber(3213)).toEqual("3213th");
+  expect(getOrdinalNumber(14)).toEqual("14th");
+  expect(getOrdinalNumber(514)).toEqual("514th");
+});
