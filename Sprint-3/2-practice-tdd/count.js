@@ -1,11 +1,11 @@
 function countChar(stringOfCharacters, findCharacter) {
-  let count = 0
+  let count = 0;
   for (const char of stringOfCharacters) {
     if (char === findCharacter) {
-      count++
+      count++;
     }
   }
-  return count
+  return count;
 }
 
 module.exports = countChar;
