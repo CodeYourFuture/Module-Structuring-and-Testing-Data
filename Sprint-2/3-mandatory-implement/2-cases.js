@@ -15,10 +15,8 @@
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
+function capitalise(inputString) {
+  return inputString.toUpperCase().replaceAll(" ", "_");
+}
 
-function Capitalise(inputString) {
-    return inputString.toUpperCase()
-
-}   
-
-Console.log(Capitalise("hello there"));
+Console.log(capitalise("hello there"));
