@@ -22,6 +22,26 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
+  //check for suit
+  const suits = "♥♦♣♠";
+  if (!suits.includes(card.slice(-1))){
+    return "Invalid"
+  };
+  // check for face card or number
+  const cardFace = "AKJQ";
+  const numberCards = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  if (!cardFace.includes(card.slice(0, -1)) && !numberCards.includes(card.slice(0, -1))){
+    return "Invalid"
+  };
+  
+   const removeSuit = card.slice (0, -1);
+  if (removeSuit === "A") {
+    return 11
+    } else if (removeSuit === "J" || removeSuit === "Q" || removeSuit === "K" ){
+     return 10;
+  }
+     return Number(removeSuit);
+    
   // TODO: Implement this function
 }
 
@@ -35,7 +55,7 @@ function assertEquals(actualOutput, targetOutput) {
     actualOutput === targetOutput,
     `Expected ${actualOutput} to equal ${targetOutput}`
   );
-}
+};
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:

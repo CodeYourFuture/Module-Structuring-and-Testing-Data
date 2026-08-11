@@ -7,6 +7,28 @@ const getCardValue = require("../implement/3-get-card-value");
 // Case 1: Ace (A)
 test(`Should return 11 when given an ace card`, () => {
   expect(getCardValue("A♠")).toEqual(11);
+  expect(getCardValue("A♦")).toEqual(11);
+});
+
+// Case 2: Face cards (J, Q, K)
+test(`Should return 10 when given a face card`, () => {
+  expect(getCardValue("K♦")).toEqual(10);
+  expect(getCardValue("Q♥")).toEqual(10);
+  expect(getCardValue("J♣")).toEqual(10);
+}); 
+
+// Case 3: Number cards (1-10)
+test(`Should return number value when given a number card`, () => {
+  expect(getCardValue("2♦")).toEqual(2);
+  expect(getCardValue("8♥")).toEqual(8);
+  expect(getCardValue("10♥")).toEqual(10);
+});
+
+// Case 4: Invalid cards
+test(`Should return Invalid when given invalid cards`, () => {
+  expect(getCardValue("10")).toEqual("Invalid");
+  expect(getCardValue("ka9")).toEqual("Invalid");
+  expect(getCardValue("13♥")).toEqual("Invalid");
 });
 
 // Suggestion: Group the remaining test data into these categories:
@@ -18,3 +40,4 @@ test(`Should return 11 when given an ace card`, () => {
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
 
+//   "♠", "♥", "♦", "♣"
