@@ -31,3 +31,25 @@ test("should return false when numerator is greater than denominator", () => {
   expect(isProperFraction(6, 3)).toEqual(false);
   expect(isProperFraction(10, 4)).toEqual(false);
 });
+
+// Negative numerator
+test("should return true when numerator is negative and forms a proper fraction", () => {
+  expect(isProperFraction(-1, 5)).toEqual(true);
+  expect(isProperFraction(-9, 10)).toEqual(true);
+});
+
+// Negative denominator
+test("should return true when denominator is negative and forms a proper fraction", () => {
+  expect(isProperFraction(1, -5)).toEqual(true);
+});
+
+// Both numerator and denominator are negative
+test("should handle both numerator and denominator being negative", () => {
+  expect(isProperFraction(-1, -5)).toEqual(true);
+  expect(isProperFraction(-5, -5)).toEqual(false);
+});
+
+// Negative numerator with zero denominator
+test("should return false when denominator is zero with a negative numerator", () => {
+  expect(isProperFraction(-1, 0)).toEqual(false);
+});
