@@ -1,15 +1,20 @@
 function getOrdinalNumber(num) {
-  return "1st";
+  const lastTwoDigits = num % 100;
+  const lastDigit = num % 10;
+
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+    return `${num}th`;
+  }
+
+  if (lastDigit === 1) {
+    return `${num}st`;
+  } else if (lastDigit === 2) {
+    return `${num}nd`;
+  } else if (lastDigit === 3) {
+    return `${num}rd`;
+  } else {
+    return `${num}th`;
+  }
 }
 
 module.exports = getOrdinalNumber;
- test(`works with any number ending with 1, except for 11. For all other numbers, it should return the number followed by "th"  with exceptions to 2 and 3 `, () => {
-   expect(getOrdinalNumber(1)).toBe("1st");
-   expect(getOrdinalNumber(2)).toBe("2nd");
-   expect(getOrdinalNumber(3)).toBe("3rd");
-   expect(getOrdinalNumber(4)).toBe("4th");
-   expect(getOrdinalNumber(11)).toBe("11th");
-   expect(getOrdinalNumber(12)).toBe("12th");
- });
-
- 
