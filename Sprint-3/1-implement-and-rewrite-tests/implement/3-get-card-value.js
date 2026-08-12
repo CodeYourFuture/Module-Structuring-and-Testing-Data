@@ -22,7 +22,23 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  const rank = card.slice(0, -1); // everything except the last character (suit)
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const suit = card.slice(-1);
+
+  if (!validSuits.includes(suit)) {
+    throw new Error("Invalid card");
+  }
+
+  if (rank === "A") {
+    return 11;
+  } else if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  } else if (["2","3","4","5","6","7","8","9","10"].includes(rank)) {
+    return Number(rank);
+  } else {
+    throw new Error("Invalid card");
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -46,9 +62,37 @@ try {
   getCardValue("invalid");
 
   // This line will not be reached if an error is thrown as expected
-  console.error("Error was not thrown for invalid card 😢");
+  console.error("Error was not thrown for invalid card ");
 } catch (e) {
-  console.log("Error thrown for invalid card 🎉");
+  console.log("Error thrown for invalid card ");
 }
 
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♥"), 10);
+assertEquals(getCardValue("2♠"), 2);
+assertEquals(getCardValue("3♥"), 3);
+
+// What other valid card cases can you think of?
+function assertEqual(func, message) {
+  try {
+    func();
+    console.log("Valid card test passed: " + message);
+  } catch (e) {
+    console.error("Valid card test failed: " + message + " — " + e.message);
+  }
+}
 // What other invalid card cases can you think of?
+ function  assertThrows(func, errorMessage) {
+  try {
+    func();
+    console.error("Error was not thrown ");
+  } catch (e) {
+    if (e.message === errorMessage) {
+      console.log("Error thrown as expected ");
+    } else {
+      console.error(`Unexpected error message: ${e.message}`);
+    }
+  }
+}
