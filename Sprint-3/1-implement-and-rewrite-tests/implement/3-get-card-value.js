@@ -26,19 +26,19 @@ function getCardValue(card) {
   if(card=="A♠" || card=="A♥" || card=="A♦" || card == "A♣"){
     return 11;
   }
-  if(card=="J♠" || card=="J♥" || card=="J♦" || card == "J♣"  ){
+  if(card=="J♠" || card=="J♥" || card=="J♦" || card == "J♣" ||
+    card=="Q♠" || card=="Q♥" || card=="Q♦" || card == "Q♣" ||
+    card=="K♠" || card=="K♥" || card=="K♦" || card == "K♣"
+  ){
     return 10;
   }
-  if(card=="Q♠" || card=="Q♥" || card=="Q♦" || card == "Q♣"  ){
-    return 10;
-  }  
-  if(card=="K♠" || card=="K♥" || card=="K♦" || card == "K♣"  ){
-    return 10;
-  }
-  const rank = Number(card.slice(0,-1));
+  
+  const rank =card.slice(0,-1);
   const suit = card.slice(-1);
-  if(rank >= 2 && rank <=10 && ["♠","♥", "♦", "♣"].includes(suit)){
-    return rank;
+  const validRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  if(validRanks.includes(rank) && validSuits.includes(suit)){
+    return Number(rank);
   }
   throw new Error("Invalid card");
   
@@ -65,7 +65,6 @@ assertEquals(getCardValue("A♦"), 11);
 assertEquals(getCardValue("Q♦"), 10);
 assertEquals(getCardValue("10♠"), 10);
 assertEquals(getCardValue("4♠"), 4);
-
 // Handling invalid cards
 try {
   getCardValue("invalid");
@@ -107,4 +106,37 @@ try {
   console.error("Error was not thrown for invalid card 😢");
 } catch (e) {
   console.log("Error thrown for invalid card 🎉");
+}
+try {
+  getCardValue("0x02♠");
+  console.error("Error was not thrown for 0x02♠ 😢");
+} catch (e) {
+  console.log("Error thrown for 0x02♠ 🎉");
+}
+
+try {
+  getCardValue("2.1♠");
+  console.error("Error was not thrown for 2.1♠ 😢");
+} catch (e) {
+  console.log("Error thrown for 2.1♠ 🎉");
+}
+
+try {
+  getCardValue("0002♠");
+  console.error("Error was not thrown for 0002♠ 😢");
+} catch (e) {
+  console.log("Error thrown for 0002♠ 🎉");
+}
+
+try {
+  getCardValue("KX");
+  console.error("Error was not thrown for invalid suit 😢");
+} catch (e) {
+  console.log("Error thrown for invalid suit 🎉");
+}
+try {
+  getCardValue("5X");
+  console.error("Error was not thrown for invalid suit 😢");
+} catch (e) {
+  console.log("Error thrown for invalid suit 🎉");
 }

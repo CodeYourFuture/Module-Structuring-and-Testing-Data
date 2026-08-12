@@ -30,4 +30,9 @@ test("should throw an error for invalid cards", () => {
   expect(() => getCardValue("0")).toThrow();
   expect(() => getCardValue("-8♦")).toThrow();
   expect(() => getCardValue("a♣")).toThrow();
+  expect(() => getCardValue("KX")).toThrow();
+  expect(() => getCardValue("5X")).toThrow();
+  expect(() => getCardValue("0x02♠")).toThrow();
+  expect(() => getCardValue("2.1♠")).toThrow();
+  expect(() => getCardValue("0002♠")).toThrow();
 });
