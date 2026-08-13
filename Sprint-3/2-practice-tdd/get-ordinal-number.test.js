@@ -35,11 +35,10 @@ test("should append 'rd' for numbers ending with 3, except those ending with 13"
   expect(getOrdinalNumber(23)).toEqual("23rd");
   expect(getOrdinalNumber(103)).toEqual("103rd");
 });
-
-// Case 4: All other numbers, including 11, 12, and 13
-// When the number doesn't fall into the above categories,
+// Case 4: Numbers ending with 4-9, 0, or teen exceptions (11, 12, 13)
+// When the number ends in 4-9, 0, or ends in 11, 12, or 13,
 // Then the function should return a string by appending "th" to the number.
-test("should append 'th' for all other numbers, including 11, 12, and 13", () => {
+test("should append 'th' for numbers ending in 0, 4-9, or teen exceptions (11, 12, 13)", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(12)).toEqual("12th");
