@@ -36,6 +36,11 @@ test(`should return false when numerator is greater than denominator`, () => {
   expect(isProperFraction(-3, -2)).toEqual(false);
 });
 
+test("should handle decimal numbers", () => {
+  expect(isProperFraction(0.5, 2)).toEqual(true);
+  expect(isProperFraction(2.5, 2)).toEqual(false);
+});
+
 test("should throw an error for non-numerical values", () => {
   expect(() => isProperFraction("2", 3)).toThrow(
     "Numerator and denominator must be numbers"
