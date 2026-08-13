@@ -51,7 +51,7 @@ test("should throw an error when count is negative", () => {
 
   expect(() => {
     repeatStr(str, count);
-  }).toThrow("error");
+  }).toThrow("count cannot be negative");
 });
 
 // Case: Handle empty string:
@@ -64,4 +64,37 @@ test("should return an empty string when str is empty", () => {
   const count = 2;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("");
+});
+
+// Case: Handle non numeric count
+// given a count of a anything not a number
+// Should throw error
+test("should throw an error when count is not a number", () => {
+  const str = "world";
+  const count = "a";
+
+  expect(() => {
+    repeatStr(str, count);
+  }).toThrow("count must be a whole number");
+});
+
+test("should throw an error when str is empty and count is negative", () => {
+  const str = "";
+  const count = -2;
+
+  expect(() => {
+    repeatStr(str, count);
+  }).toThrow("count cannot be negative");
+});
+
+//Case: Handle decimal numbers
+//given a count with a decimal
+//should error
+test("should throw an error when count has a decimal", () => {
+  const str = "world";
+  const count = 3.4;
+
+  expect(() => {
+    repeatStr(str, count);
+  }).toThrow("count must be a whole number");
 });
