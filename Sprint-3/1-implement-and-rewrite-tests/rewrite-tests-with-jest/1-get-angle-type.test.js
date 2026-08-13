@@ -77,3 +77,10 @@ test("should return Invalid angle for negative angles", () => {
   expect(getAngleType(-90)).toEqual("Invalid angle");
   expect(getAngleType(-360)).toEqual("Invalid angle");
 });
+
+test(`should return "Invalid angle" for values just below 0 or just above 360`, () => {
+  expect(getAngleType(-0.1)).toEqual("Invalid angle");
+  expect(getAngleType(-0.001)).toEqual("Invalid angle");
+  expect(getAngleType(360.1)).toEqual("Invalid angle");
+  expect(getAngleType(360.001)).toEqual("Invalid angle");
+});
