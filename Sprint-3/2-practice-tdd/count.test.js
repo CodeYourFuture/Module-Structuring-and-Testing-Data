@@ -59,3 +59,10 @@ test("should return 0 if characters in a string are not capitalised ", () => {
 
   expect(countChar(str, char)).toEqual(0);
 });
+
+test("should return 0 if the string doesn't contain any characters", () => {
+  const str = " ";
+  const char = "a";
+
+  expect(countChar(str, char)).toEqual(0);
+});
