@@ -49,8 +49,8 @@ test("should return 0 for an empty string", () => {
 // Then it should only count exact case matches.
 
 test("should be case-sensitive", () => {
-  const str = "Banana";
+  const str = "Apple";
   const char = "a";
   const count = countChar(str, char);
-  expect(count).toEqual(3);
+  expect(count).toEqual(0);
 });
