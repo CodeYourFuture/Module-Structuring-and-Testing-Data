@@ -17,11 +17,11 @@ test("should count multiple occurrences of a character", () => {
   expect(count).toEqual(5);
 });
 
-test("should count multiple occurrences of a character", () => {
-  const str = "aaa  aa";
-  const char = "a";
+test("should count multiple occurrences of a character with spaces", () => {
+  const str = "eee  ee e e";
+  const char = "e";
   const count = countChar(str, char);
-  expect(count).toEqual(5);
+  expect(count).toEqual7;
 });
 
 test("should count multiple occurrences of a character with random characters", () => {
