@@ -25,7 +25,7 @@ test("should count multiple occurrences of a character with spaces", () => {
 });
 
 test("should count multiple occurrences of a character with random characters", () => {
-  const str = "ajhyabhaakaka";
+  const str = "ajhyabhaa kaak";
   const char = "a";
   const count = countChar(str, char);
   expect(count).toEqual(6);
