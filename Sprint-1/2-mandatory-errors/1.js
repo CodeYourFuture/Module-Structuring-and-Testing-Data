@@ -1,6 +1,6 @@
 // trying to create an age variable and then reassign the value by 1
 
-const age = 33;
+let age = 33;
 age = age + 1;
 
-// unlike let, const variables cannot be reassigned once created.
+// changed the variable from const (which cannot be reassigned) to let
