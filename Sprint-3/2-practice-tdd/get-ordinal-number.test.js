@@ -19,7 +19,31 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(131)).toEqual("131st");
 });
 
-test("should append 'th' for number 11", () => {
-  expect(getOrdinalNumber(11)).toEqual("11th");
+// Case 2: Numbers ending with 2 should return with "nd" to the number
+// Unless number 12 should return with the "th" to the number
+test("should append 'nd' for numbers ending in 2", () => {
+  expect(getOrdinalNumber(22)).toEqual("22nd");
+});
 
+// Case 3: Numbers ending with 3 should return with a "rd" to the number
+// Unless number is 13 then it should return with the "th" to the number
+test("should append 'rd' for numbers ending with 3", () => {
+  expect(getOrdinalNumber(23)).toEqual("23rd");
+});
+
+
+
+// Case 4: all other numbers should return with a "th" to the number
+
+test("should append 'th' for all other numbers", () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(13)).toEqual("13th");
+  expect(getOrdinalNumber(194)).toEqual("194th");
+});
+
+// Case 5: Negative numbers follow same rules.
+test("should follow rules as previous tests while still showing '-' value", () => {
+  expect(getOrdinalNumber(-12)).toEqual("-12th");
+  expect(getOrdinalNumber(-52)).toEqual("-52nd");
 });
