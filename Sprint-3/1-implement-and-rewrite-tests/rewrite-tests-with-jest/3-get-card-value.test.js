@@ -2,33 +2,27 @@
 // We will use the same function, but write tests for it using Jest in this file.
 const getCardValue = require("../implement/3-get-card-value");
 
-// TODO: Write tests in Jest syntax to cover all possible outcomes.
-
-// Case 1: Ace (A)
-test(`Should return 11 when given an ace card`, () => {
+test("returns 11 for an ace", () => {
   expect(getCardValue("A♠")).toEqual(11);
 });
 
-// case 2 : face cards (J, Q, K)
-test(`Should return 10 when given a face card`, () => {
+test("returns 10 for face cards", () => {
   expect(getCardValue("J♠")).toEqual(10);
   expect(getCardValue("Q♥")).toEqual(10);
   expect(getCardValue("K♦")).toEqual(10);
 });
 
-// Case 3: Number Cards (2-10)
-test(`Should return the correct value when given a number card`, () => {
+test("returns the correct value for number cards", () => {
   expect(getCardValue("2♠")).toEqual(2);
   expect(getCardValue("5♥")).toEqual(5);
   expect(getCardValue("10♦")).toEqual(10);
 });
 
-// Case 4: Invalid Cards
-test(`Should throw an error when given an invalid card`, () => {
+test("throws an error for invalid cards", () => {
   expect(() => getCardValue("invalid")).toThrow("Invalid card");
+  expect(() => getCardValue("")).toThrow("Invalid card");
+  expect(() => getCardValue("1♠")).toThrow("Invalid card");
+  expect(() => getCardValue("11♠")).toThrow("Invalid card");
+  expect(() => getCardValue("A")).toThrow("Invalid card");
+  expect(() => getCardValue("X♠")).toThrow("Invalid card");
 });
-
-// To learn how to test whether a function throws an error as expected in Jest,
-// please refer to the Jest documentation:
-// https://jestjs.io/docs/expect#tothrowerror
-
