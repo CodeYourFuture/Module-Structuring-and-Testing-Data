@@ -2,23 +2,38 @@
 // We will use the same function, but write tests for it using Jest in this file.
 const isProperFraction = require("../implement/2-is-proper-fraction");
 
-// TODO: Write tests in Jest syntax to cover all combinations of positives, negatives, zeros, and other categories.
-
-// Special case: numerator is zero
-test(`should return false when denominator is zero`, () => {
+test("returns false when denominator is zero", () => {
   expect(isProperFraction(1, 0)).toEqual(false);
 });
- 
-// special case : numerator is one 
-test(` should return true when the numerator is one and denominator is greater than one`, () => {
+
+test("returns true for a positive proper fraction", () => {
   expect(isProperFraction(1, 2)).toEqual(true);
 });
-// special case : denominator is negative to the numerator
-test(`should return false when the denominator is negative and the numerator is positive`, () => {
-  expect(isProperFraction(1, -2)).toEqual(false);
+
+test("returns true when numerator is negative and denominator is positive", () => {
+  expect(isProperFraction(-1, 2)).toEqual(true);
 });
 
-// special case : denominator  is negative to the numerator
-test(`should return false when the numerator is negative and the denominator is positive`, () => {
-  expect(isProperFraction(-1, 2)).toEqual(false);
+test("returns true when numerator is positive and denominator is negative", () => {
+  expect(isProperFraction(1, -2)).toEqual(true);
+});
+
+test("returns true when both numerator and denominator are negative", () => {
+  expect(isProperFraction(-1, -2)).toEqual(true);
+});
+
+test("returns true when numerator is zero and denominator is non-zero", () => {
+  expect(isProperFraction(0, 5)).toEqual(true);
+});
+
+test("returns false when numerator and denominator are equal", () => {
+  expect(isProperFraction(2, 2)).toEqual(false);
+});
+
+test("returns false when numerator is greater than denominator", () => {
+  expect(isProperFraction(3, 2)).toEqual(false);
+});
+
+test("returns false for a negative improper fraction", () => {
+  expect(isProperFraction(-3, 2)).toEqual(false);
 });
