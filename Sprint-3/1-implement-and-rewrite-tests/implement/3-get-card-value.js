@@ -23,7 +23,29 @@
 
 function getCardValue(card) {
   // TODO: Implement this function
+  const rank = card.slice(0,-1);
+  const cardFace = card[card.length - 1];
+
+  if (!["♠", "♥", "♦", "♣"].includes(cardFace)) {
+    throw new Error(`Invalid card face: ${cardFace}`);
+  }
+  if (rank === "A") {
+    return 11;
+  }
+  if (rank >= 2 && rank <= 9) {
+    return +rank;
+  }
+  if (!["K", "10", "Q", "J"].includes(rank)){
+    throw new error (`Invalid card rank: ${rank}`)
+  }
+  if (["K", "10", "Q", "J"].includes(rank)) {
+    return 10;
+  }
+  
 }
+
+  
+
 
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
@@ -39,9 +61,42 @@ function assertEquals(actualOutput, targetOutput) {
 
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
-assertEquals(getCardValue("9♠"), 9);
+// (Ace All suits)
+const aceOfSpades = getCardValue("A♠");
+assertEquals(aceOfSpades, 11);
+
+const aceOfHearts = getCardValue("A♥");
+assertEquals(aceOfHearts, 11);
+
+const aceOfDiamonds = getCardValue("A♦");
+assertEquals(aceOfDiamonds, 11);
+
+const aceOfClubs = getCardValue("A♣");
+assertEquals(aceOfClubs, 11);
+
+// (Face cards)
+const jackOfHearts = getCardValue("J♥");
+assertEquals(jackOfHearts, 10);
+
+const queenOfClubs = getCardValue("Q♣");
+assertEquals(queenOfClubs, 10);
+
+const kingOfSpades = getCardValue("K♠");
+assertEquals(kingOfSpades, 10);
+
+// (Number cards) 
+const threeOfDiamonds = getCardValue("3♦");
+assertEquals(threeOfDiamonds, 3);
+
+const sevenOfClubs = getCardValue("7♣");
+assertEquals(sevenOfClubs, 7);        
+
+
 
 // Handling invalid cards
+// giving an invalid rank (a number or an recognized face card)
+// When the function is called with such a card,
+// Then it should throw an error indicating "Invalid card rank."
 try {
   getCardValue("invalid");
 
@@ -52,3 +107,17 @@ try {
 }
 
 // What other invalid card cases can you think of?
+
+try {
+  getCardValue("1♠");
+  console.error("Error was not thrown for invalid card rank");
+} catch (error) {
+  assertEquals(error.message, "Invalid card rank");
+}
+
+try {
+  getCardValue("5X");
+  console.error("Error was not thrown for invalid card suit");
+} catch (error) {
+  assertEquals(error.message, "Invalid card suit");
+}
