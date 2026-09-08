@@ -5,7 +5,7 @@ const countChar = require("./count");
 // Then it should:
 
 // Scenario: Multiple Occurrences
-// Given the input string `str`,
+// Given the inpunt string `str`,
 // And a character `char` that occurs one or more times in `str` (e.g., 'a' in 'aaaaa'),
 // When the function is called with these inputs,
 // Then it should correctly count occurrences of `char`.
@@ -19,6 +19,32 @@ test("should count multiple occurrences of a character", () => {
 
 // Scenario: No Occurrences
 // Given the input string `str`,
+
 // And a character `char` that does not exist within `str`.
+test("should return 0 for an empty string", () => {
+  const str = "";
+  const char = "a";
+
+  const count = countChar(str, char);
+
+  expect(count).toEqual(0);
+});
+
 // When the function is called with these inputs,
+test("should return 0 when the character does not occur in the string", () => {
+  const str = "hello";
+  const char = "z";
+
+  const count = countChar(str, char);
+
+  expect(count).toEqual(0);
+});
 // Then it should return 0, indicating that no occurrences of `char` were found.
+test("should return 0 when the character does not occur in the string", () => {
+  const str = "hello";
+  const char = "z";
+
+  const count = countChar(str, char);
+
+  expect(count).toEqual(0);
+});

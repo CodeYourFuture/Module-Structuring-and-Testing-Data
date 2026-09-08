@@ -1,4 +1,3 @@
-const getOrdinalNumber = require("./get-ordinal-number");
 // In this week's prep, we started implementing getOrdinalNumber.
 
 // Continue testing and implementing getOrdinalNumber for additional cases.
@@ -12,9 +11,29 @@ const getOrdinalNumber = require("./get-ordinal-number");
 
 // Case 1: Numbers ending with 1 (but not 11)
 // When the number ends with 1, except those ending with 11,
-// Then the function should return a string by appending "st" to the number.
+
+const getOrdinalNumber = require("./get-ordinal-number");
+// Case 1: Numbers ending with 1 (but not 11)
 test("should append 'st' for numbers ending with 1, except those ending with 11", () => {
   expect(getOrdinalNumber(1)).toEqual("1st");
   expect(getOrdinalNumber(21)).toEqual("21st");
   expect(getOrdinalNumber(131)).toEqual("131st");
+});
+
+// Case 2: Numbers ending with 11
+test('should append "th" when the number ends with 11', () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+});
+// Then the function should return a string by appending "st" to the number.
+test('should append "th" when the number ends with 12', () => {
+  expect(getOrdinalNumber(12)).toEqual("12th");
+});
+test('should append "th" when the number is 13', () => {
+  expect(getOrdinalNumber(13)).toEqual("13th");
+});
+test('should append "nd" when the number ends with 2', () => {
+  expect(getOrdinalNumber(22)).toEqual("22nd");
+});
+test('should append "rd" when the number ends with 3', () => {
+  expect(getOrdinalNumber(23)).toEqual("23rd");
 });
