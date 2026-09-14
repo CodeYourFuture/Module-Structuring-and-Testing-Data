@@ -36,7 +36,7 @@ function getCardValue(card) {
     return +rank;
   }
   if (!["K", "10", "Q", "J"].includes(rank)){
-    throw new error (`Invalid card rank: ${rank}`)
+    throw new Error (`Invalid card rank: ${rank}`)
   }
   if (["K", "10", "Q", "J"].includes(rank)) {
     return 10;
