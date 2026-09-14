@@ -21,7 +21,6 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-
 function getCardValue(card) {
   // TODO: Implement this function
   const validSuits = ["♠", "♥", "♦", "♣"];
@@ -40,16 +39,13 @@ function getCardValue(card) {
   }
 
   if (rank === "J" || rank === "Q" || rank === "K") {
-  return 10;
+    return 10;
+  }
+  if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  }
 }
 
-if (Number(rank) >= 2 && Number(rank) <= 10) {
-  return Number(rank);
-}
-
-throw new Error("Invalid card");
-}
-  
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
