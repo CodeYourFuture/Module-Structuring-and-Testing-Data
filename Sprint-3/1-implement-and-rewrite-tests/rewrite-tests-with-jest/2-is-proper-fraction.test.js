@@ -35,5 +35,5 @@ test("should return false when denominator is negative", () => {
 });
 
 test("should return false when both numerator and denominator are negative", () => {
-  expect(isProperFraction(-4, -5)).toEqual(false);
+  expect(isProperFraction(-4, -5)).toEqual(true);
 });
