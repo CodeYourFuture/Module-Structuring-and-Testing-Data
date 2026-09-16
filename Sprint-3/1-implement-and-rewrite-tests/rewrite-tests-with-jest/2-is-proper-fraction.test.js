@@ -35,5 +35,12 @@ test("should return false when denominator is negative", () => {
 });
 
 test("should return false when both numerator and denominator are negative", () => {
-  expect(isProperFraction(-4, -5)).toEqual(true);
+  expect(isProperFraction(-4, -5)).toEqual(false);
 });
+//If you mean why isProperFraction(-4, -5) is false, look at your first condition:
+
+//if (denominator <= 0) {
+//return false;}
+//isProperFraction(-4, -5) the denominator is -5.so javascript -5 <= 0 // true
+// so Therefore JavaScript immediately does: :return false
+// It never gets to; return numerator < denominator;
