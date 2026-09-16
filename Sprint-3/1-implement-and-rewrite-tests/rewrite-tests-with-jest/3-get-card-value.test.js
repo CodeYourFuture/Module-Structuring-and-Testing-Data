@@ -23,7 +23,7 @@ test("should return 10 for face cards", () => {
 });
 
 // Case 4: Invalid cards
-test("should return error for invalid cards", () => {
+test("should throw an error for invalid cards", () => {
   expect(() => {
     getCardValue("1♠");
   }).toThrow("Invalid card");
