@@ -52,3 +52,68 @@ try {
 }
 
 // What other invalid card cases can you think of?
+
+function getCardValue(card) {
+  const cardPattern = /^(A|[2-9]|10|J|Q|K)[♠♥♦♣]$/;
+
+  if (!cardPattern.test(card)) {
+    throw new Error("Invalid card");
+  }
+
+  const rank = card.slice(0, -1);
+
+  if (rank === "A") {
+    return 11;
+  }
+
+  if (["J", "Q", "K"].includes(rank)) {
+    return 10;
+  }
+
+  return Number(rank);
+}
+
+module.exports = getCardValue;
+
+// Helper
+function assertEquals(actualOutput, targetOutput) {
+  console.assert(
+    actualOutput === targetOutput,
+    `Expected ${actualOutput} to equal ${targetOutput}`
+  );
+}
+
+// Tests
+assertEquals(getCardValue("2♥"), 2);
+assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("10♦"), 10);
+
+assertEquals(getCardValue("A♣"), 11);
+
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
+assertEquals(getCardValue("K♥"), 10);
+
+// Invalid tests
+try {
+  getCardValue("invalid");
+  console.error("❌ Failed");
+} catch {
+  console.log("✅ Invalid text");
+}
+
+try {
+  getCardValue("1♠");
+  console.error("❌ Failed");
+} catch {
+  console.log("✅ Invalid rank");
+}
+
+try {
+  getCardValue("AX");
+  console.error("❌ Failed");
+} catch {
+  console.log("✅ Invalid suit");
+}
+
+console.log("🎉 Tests completed");
