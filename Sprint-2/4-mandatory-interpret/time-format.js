@@ -28,7 +28,7 @@ function formatTimeDisplay(seconds) {
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
 
-// c) What is the return value of pad is called for the first time?
+// c) What is the return value of pad when it is called for the first time?
 // =============> write your answer here
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
