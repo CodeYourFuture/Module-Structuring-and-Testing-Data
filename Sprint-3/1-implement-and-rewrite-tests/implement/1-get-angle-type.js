@@ -16,6 +16,24 @@
 
 function getAngleType(angle) {
   // TODO: Implement this function
+  if (angle > 0 && angle < 90){
+    return 'Acute angle';
+  }
+  else if (angle == 90){
+    return 'Right angle';
+  }
+  else if (angle > 90 && angle < 180){
+    return 'Obtuse angle';
+  }
+  else if (angle == 180){
+    return 'Straight angle'
+  }
+  else if (angle > 180 && angle < 360){
+    return "Reflex angle"
+  }
+  else{
+    return 'Invalid angle'
+  }
 }
 
 // The line below allows us to load the getAngleType function into tests in other files.
@@ -32,6 +50,48 @@ function assertEquals(actualOutput, targetOutput) {
 }
 
 // TODO: Write tests to cover all cases, including boundary and invalid cases.
-// Example: Identify Right Angles
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
+
+// Right angle
+const rightAngle = getAngleType(90);
+assertEquals(rightAngle, "Right angle");
+
+// Acute angles
+const acuteAngle = getAngleType(75);
+assertEquals(acuteAngle, "Acute angle");
+
+const acuteAngleBoundary = getAngleType(89);
+assertEquals(acuteAngleBoundary, "Acute angle");
+
+// Obtuse angles
+const obtuseAngle = getAngleType(120);
+assertEquals(obtuseAngle, "Obtuse angle");
+
+const obtuseAngleBoundaryStart = getAngleType(91);
+assertEquals(obtuseAngleBoundaryStart, "Obtuse angle");
+
+const obtuseAngleBoundaryEnd = getAngleType(179);
+assertEquals(obtuseAngleBoundaryEnd, "Obtuse angle");
+
+// Straight angle
+const straightAngle = getAngleType(180);
+assertEquals(straightAngle, "Straight angle");
+
+// Reflex angles
+const reflexAngle = getAngleType(270);
+assertEquals(reflexAngle, "Reflex angle");
+
+const reflexAngleBoundary = getAngleType(359);
+assertEquals(reflexAngleBoundary, "Reflex angle");
+
+// Invalid angles
+const invalidAngleAboveRange = getAngleType(370);
+assertEquals(invalidAngleAboveRange, "Invalid angle");
+
+const invalidAngleBelowRange = getAngleType(-10);
+assertEquals(invalidAngleBelowRange, "Invalid angle");
+
+const invalidAngleZero = getAngleType(0);
+assertEquals(invalidAngleZero, "Invalid angle");
+
+const invalidAngleUpperBoundary = getAngleType(360);
+assertEquals(invalidAngleUpperBoundary, "Invalid angle");
