@@ -18,3 +18,12 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(21)).toEqual("21st");
   expect(getOrdinalNumber(131)).toEqual("131st");
 });
+test("converts 1 to an ordinal number",  () => {
+  expect(getOrdinalNumber(1)).toEqual("1st");
+  expect(getOrdinalNumber(11)).toEqual("11th");
+});
+test("converts numbers to ordinal number",  () => {
+  expect(getOrdinalNumber(21)).toEqual("21st");
+  expect(getOrdinalNumber(33)).toEqual("33rd");
+  expect(getOrdinalNumber(13)).toEqual("13th");
+});
