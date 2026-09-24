@@ -22,7 +22,21 @@
 // execute the code to ensure all tests pass.
 
 function getCardValue(card) {
-  // TODO: Implement this function
+  let regex = /^([2-9]|10|[AJQK])[♠♥♣♦]$/;
+  const valid = regex.test(card);
+  if (!valid) {
+    throw new Error("Invalid card");
+  }
+  let rank = card.slice(0, -1);
+
+  if (rank === "A") {
+    return 11;
+  } else if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  } else {
+    rank = Number(rank);
+    return rank;
+  }
 }
 
 // The line below allows us to load the getCardValue function into tests in other files.
@@ -40,6 +54,12 @@ function assertEquals(actualOutput, targetOutput) {
 // TODO: Write tests to cover all outcomes, including throwing errors for invalid cards.
 // Examples:
 assertEquals(getCardValue("9♠"), 9);
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("10♥"), 10);
+assertEquals(getCardValue("2♥"), 2);
+assertEquals(getCardValue("K♠"), 10);
+assertEquals(getCardValue("J♣"), 10);
+assertEquals(getCardValue("Q♦"), 10);
 
 // Handling invalid cards
 try {
@@ -52,3 +72,31 @@ try {
 }
 
 // What other invalid card cases can you think of?
+
+try {
+  getCardValue(3);
+  console.error("Error was not thrown for number 3");
+} catch (e) {
+  console.log("Error thrown for invalid format");
+}
+
+try {
+  getCardValue("11K♠");
+  console.error("Error format too long");
+} catch (e) {
+  console.log("Error thrown for too many characters");
+}
+
+try {
+  getCardValue(-1);
+  console.error("Error for negative number");
+} catch (e) {
+  console.log("Error thrown for negative number");
+}
+
+try {
+  getCardValue("22♥");
+  console.error("Error for string 22♥");
+} catch (e) {
+  console.log("Error thrown for string 22♥");
+}
