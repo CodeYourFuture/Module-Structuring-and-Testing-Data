@@ -11,7 +11,15 @@
 // execute the code to ensure all tests pass.
 
 function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+  // Non-unit fractions have a numerator that is more than 1, but less than the denominator.
+  //Unit fractions all have a numerator of 1.
+
+  let validFraction = numerator < denominator && numerator > 0;
+  if (validFraction) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
@@ -31,3 +39,9 @@ function assertEquals(actualOutput, targetOutput) {
 
 // Example: 1/2 is a proper fraction
 assertEquals(isProperFraction(1, 2), true);
+assertEquals(isProperFraction(1, 5), true);
+assertEquals(isProperFraction(0, 4), false);
+assertEquals(isProperFraction(5, 5), false);
+assertEquals(isProperFraction(6, 5), false);
+assertEquals(isProperFraction(3, 5), true);
+assertEquals(isProperFraction(1, 0), false);
