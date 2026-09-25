@@ -1,6 +1,4 @@
-// This statement loads the getCardValue function you wrote in the implement directory.
-// We will use the same function, but write tests for it using Jest in this file.
-const getCardValue = require("../implement/3-get-card-value");
+import { getCardValue } from "../implement/3-get-card-value.js";
 
 // TODO: Write tests in Jest syntax to cover all possible outcomes.
 

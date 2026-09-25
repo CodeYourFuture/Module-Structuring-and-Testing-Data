@@ -1,5 +1,5 @@
 // Implement a function repeatStr
-const repeatStr = require("./repeat-str");
+import { repeatStr } from "./repeat-str.js";
 // Given a target string `str` and a positive integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should:

@@ -1,6 +1,4 @@
-// This statement loads the isProperFraction function you wrote in the implement directory.
-// We will use the same function, but write tests for it using Jest in this file.
-const isProperFraction = require("../implement/2-is-proper-fraction");
+import { isProperFraction } from "../implement/2-is-proper-fraction.js";
 
 // TODO: Write tests in Jest syntax to cover all combinations of positives, negatives, zeros, and other categories.
 

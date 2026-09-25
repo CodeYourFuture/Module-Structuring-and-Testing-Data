@@ -1,6 +1,4 @@
-// This statement loads the getAngleType function you wrote in the implement directory.
-// We will use the same function, but write tests for it using Jest in this file.
-const getAngleType = require("../implement/1-get-angle-type");
+import { getAngleType } from "../implement/1-get-angle-type.js";
 
 // TODO: Write tests in Jest syntax to cover all cases/outcomes,
 // including boundary and invalid cases.

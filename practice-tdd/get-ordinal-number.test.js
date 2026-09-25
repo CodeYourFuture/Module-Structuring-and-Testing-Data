@@ -1,4 +1,4 @@
-const getOrdinalNumber = require("./get-ordinal-number");
+import { getOrdinalNumber } from "./get-ordinal-number.js";
 // In this week's prep, we started implementing getOrdinalNumber.
 
 // Continue testing and implementing getOrdinalNumber for additional cases.

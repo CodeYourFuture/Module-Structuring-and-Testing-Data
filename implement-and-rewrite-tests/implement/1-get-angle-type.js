@@ -1,5 +1,7 @@
 // Implement a function getAngleType
 //
+// Don't forget to write tests in implement-tests-with-node-test.
+//
 // When given an angle in degrees, it should return a string indicating the type of angle:
 // - "Acute angle" for angles greater than 0° and less than 90°
 // - "Right angle" for exactly 90°
@@ -14,24 +16,6 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-function getAngleType(angle) {
+export function getAngleType(angle) {
   // TODO: Implement this function
 }
-
-// The line below allows us to load the getAngleType function into tests in other files.
-// This will be useful in the "rewrite tests with jest" step.
-module.exports = getAngleType;
-
-// This helper function is written to make our assertions easier to read.
-// If the actual output matches the target output, the test will pass
-function assertEquals(actualOutput, targetOutput) {
-  console.assert(
-    actualOutput === targetOutput,
-    `Expected ${actualOutput} to equal ${targetOutput}`
-  );
-}
-
-// TODO: Write tests to cover all cases, including boundary and invalid cases.
-// Example: Identify Right Angles
-const right = getAngleType(90);
-assertEquals(right, "Right angle");
