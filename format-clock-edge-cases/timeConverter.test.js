@@ -10,6 +10,11 @@ test("can correctly convert just after midnight", function () {
   assert.equal(formatAs12HourClock("00:01"), "12:01 AM");
 });
 
+test("can correctly convert first normal hour", function () {
+  assert.equal(formatAs12HourClock("01:00"), "01:00 AM");
+});
+
+
 test("correctly convert time after 12:00", function(){
     assert.equal(formatAs12HourClock("23:00"), "11:00 PM");
 });
