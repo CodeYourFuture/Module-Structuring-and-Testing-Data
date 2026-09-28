@@ -14,6 +14,13 @@ test("can correctly convert first normal hour", function () {
   assert.equal(formatAs12HourClock("01:00"), "01:00 AM");
 });
 
+test("can correctly convert leading zeros in hour and minute", function () {
+  assert.equal(formatAs12HourClock("09:05"), "09:05 AM");
+});
+
+test("can correctly convert last minute before noon", function () {
+  assert.equal(formatAs12HourClock("11:59"), "11:59 AM");
+});
 
 test("correctly convert time after 12:00", function(){
     assert.equal(formatAs12HourClock("23:00"), "11:00 PM");
