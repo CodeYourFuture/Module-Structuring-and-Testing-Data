@@ -39,7 +39,7 @@ test("can correctly convert time last minute of the noon hour", function () {
 });
 
 test("can correctly convert time first hour after noon", function () {
-  assert.equal(formatAs12HourClock("13:00"), "1:00 PM");
+  assert.equal(formatAs12HourClock("13:00"), "01:00 PM");
 });
 
 test("correctly convert time after 12:00", function () {
