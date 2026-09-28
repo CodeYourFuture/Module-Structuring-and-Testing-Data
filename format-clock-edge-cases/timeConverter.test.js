@@ -7,3 +7,5 @@ test("correctly convert time after 12:00", () => assert.equal(formatAs12HourCloc
 test("can correctly convert morning time", () => assert.equal(formatAs12HourClock("08:00"), "08:00 am"));
 
 test("can correctly convert noon time", () => assert.equal(formatAs12HourClock("12:00"), "12:00 pm"));
+
+test("can format afternoon time with minutes other than 00", () => assert.equal(formatAs12HourClock("15:45"), "03:45 pm"));
