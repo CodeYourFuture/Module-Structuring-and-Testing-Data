@@ -6,21 +6,26 @@ test("correctly convert time after 12:00", function(){
     assert.equal(formatAs12HourClock("23:00"), "11:00 pm");
 });
 
-test("can correctly convert morning time", function() {
+test("can correctly convert morning time", function(){
     assert.equal(formatAs12HourClock("08:00"), "08:00 am");
+});
+
+test("can correctly convert morning time", function (){
+  assert.equal(formatAs12HourClock("00:00"), "12:00 am");
 });
 
 /* 
 Edge cases to be tested.
+   Input    Expected  What it tests
 
-1. 00:00
-2. 00:01
-3. 01:00
-4. 09:05
-5. 11:59
-6. 23:59
-7. 12:00
-8. 12:01
-9. 12:59
-10.13:00
+1. 00:00 -> 12:00 am  Midnight: hour 0 becomes 12
+2. 00:01 -> 12:01 am  Just after midnight, still 12
+3. 01:00 -> 01:00 am  First normal morning hour
+4. 09:05 -> 09:05 am  Leading zeros in hour and minute
+5. 11:59 -> 11:59 am  Last minute before noon
+6. 23:59 -> 11:59 pm  Last minute of the day
+7. 12:00 -> 12:00 pm  Noon: switches to pm, hour stays 12
+8. 12:01 -> 12:01 pm  Just after noon, must not become 00
+9. 12:59 -> 12:59 pm  Last minute of the noon hour
+10.13:00 -> 01:00 pm  First hour after noon: 13 - 12, padded
 */ 
