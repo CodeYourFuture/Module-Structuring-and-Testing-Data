@@ -1,15 +1,14 @@
 function formatAs12HourClock(time) {
-
   const hours = Number(time.slice(0, 2));
 
   if (hours > 12) {
     return `${hours - 12 < 10 ? "0" : ""}${hours - 12}:${time.slice(-2)} pm`;
-  } else if (hours === 12){
+  } else if (hours === 12) {
     return `${time} pm`;
-  } else if (hours === 0){
+  } else if (hours === 0) {
     return `12:${time.slice(-2)} am`;
   }
   return `${time} am`;
 }
 
-export {formatAs12HourClock};
+export { formatAs12HourClock };
