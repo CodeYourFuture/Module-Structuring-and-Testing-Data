@@ -1,4 +1,4 @@
-import {formatAs12HourClock} from "./timeConverter.js";
+import { formatAs12HourClock } from "./timeConverter.js";
 import assert from "node:assert";
 import test from "node:test";
 
@@ -42,13 +42,13 @@ test("can correctly convert time first hour after noon", function () {
   assert.equal(formatAs12HourClock("13:00"), "1:00 PM");
 });
 
-test("correctly convert time after 12:00", function(){
-    assert.equal(formatAs12HourClock("23:00"), "11:00 PM");
+test("correctly convert time after 12:00", function () {
+  assert.equal(formatAs12HourClock("23:00"), "11:00 PM");
 });
 
-
-
-
+test("can correctly convert time last minute of the day", function () {
+  assert.equal(formatAs12HourClock("23:59"), "11:59 PM");
+});
 
 /* 
 Edge cases to be tested.
@@ -59,10 +59,9 @@ Edge cases to be tested.
 3. 01:00 -> 01:00 am  First normal morning hour
 4. 09:05 -> 09:05 am  Leading zeros in hour and minute
 5. 11:59 -> 11:59 am  Last minute before noon
-
-7. 12:00 -> 12:00 pm  Noon: switches to pm, hour stays 12
-8. 12:01 -> 12:01 pm  Just after noon, must not become 00
-9. 12:59 -> 12:59 pm  Last minute of the noon hour
-10.13:00 -> 01:00 pm  First hour after noon: 13 - 12, padded
-6. 23:59 -> 11:59 pm  Last minute of the day
-*/ 
+6. 12:00 -> 12:00 pm  Noon: switches to pm, hour stays 12
+7. 12:01 -> 12:01 pm  Just after noon, must not become 00
+8. 12:59 -> 12:59 pm  Last minute of the noon hour
+9. 13:00 -> 01:00 pm  First hour after noon: 13 - 12, padded
+10.23:59 -> 11:59 pm  Last minute of the day
+*/
