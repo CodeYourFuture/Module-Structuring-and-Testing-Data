@@ -2,15 +2,15 @@ import { formatAs12HourClock } from "./timeConverter.js";
 import assert from "node:assert";
 import test from "node:test";
 
-test("can correctly convert midnight time", function () {
+test("can correctly convert time at midnight ", function () {
   assert.equal(formatAs12HourClock("00:00"), "12:00 AM");
 });
 
-test("can correctly convert just after midnight", function () {
+test("can correctly convert time just after midnight", function () {
   assert.equal(formatAs12HourClock("00:01"), "12:01 AM");
 });
 
-test("can correctly convert first normal hour", function () {
+test("can correctly convert time at the first normal hour", function () {
   assert.equal(formatAs12HourClock("01:00"), "01:00 AM");
 });
 
@@ -18,15 +18,15 @@ test("can correctly convert morning time", function () {
   assert.equal(formatAs12HourClock("08:00"), "08:00 AM");
 });
 
-test("can correctly convert leading zeros in hour and minute", function () {
+test("can correctly convert time on leading zeros in hour and minute", function () {
   assert.equal(formatAs12HourClock("09:05"), "09:05 AM");
 });
 
-test("can correctly convert last minute before noon", function () {
+test("can correctly convert time just last minute before noon", function () {
   assert.equal(formatAs12HourClock("11:59"), "11:59 AM");
 });
 
-test("can correctly convert time to PM noon", function () {
+test("can correctly convert time to PM at noon", function () {
   assert.equal(formatAs12HourClock("12:00"), "12:00 PM");
 });
 
