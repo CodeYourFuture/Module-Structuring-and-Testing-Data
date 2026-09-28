@@ -13,3 +13,5 @@ test("can format afternoon time with minutes other than 00", () => assert.equal(
 test("can format morning time with complex minutes", () => assert.equal(formatAs12HourClock("08:25"), "08:25 am"));
 
 test("can format early noon complex minutes", () => assert.equal(formatAs12HourClock("12:17"), "12:17 pm"));
+
+test("can format between midnight and 1 am", () => assert.equal(formatAs12HourClock("00:15"), "12:15 am"));
