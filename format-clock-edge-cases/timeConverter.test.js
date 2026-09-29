@@ -53,7 +53,6 @@ test("can correctly convert time last minute of the day", function () {
 /* 
 Edge cases to be tested.
    Input    Expected  What it tests
-
 1. 00:00 -> 12:00 am  Midnight: hour 0 becomes 12
 2. 00:01 -> 12:01 am  Just after midnight, still 12
 3. 01:00 -> 01:00 am  First normal morning hour
