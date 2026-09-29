@@ -15,11 +15,7 @@ function isProperFraction(numerator, denominator) {
   //Unit fractions all have a numerator of 1.
 
   let validFraction = numerator < denominator && numerator > 0;
-  if (validFraction) {
-    return true;
-  } else {
-    return false;
-  }
+  return validFraction;
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
