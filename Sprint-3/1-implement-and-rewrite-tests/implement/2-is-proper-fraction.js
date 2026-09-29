@@ -14,7 +14,8 @@ function isProperFraction(numerator, denominator) {
   // Non-unit fractions have a numerator that is more than 1, but less than the denominator.
   //Unit fractions all have a numerator of 1.
 
-  let validFraction = numerator < denominator && numerator > 0;
+  let validFraction =
+    Math.abs(numerator) < Math.abs(denominator) && Math.abs(numerator) > 0;
   return validFraction;
 }
 
