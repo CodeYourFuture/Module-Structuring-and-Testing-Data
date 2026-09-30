@@ -6,18 +6,20 @@ const pets = ["parrot", "hamster", "horse", "dog", "hamster", "cat", "hamster"];
 function countAndCapitalisePets(petsArr) {
   const petCount = {};
 
-  petsArr.filter((pet) => pet[0] === "h").forEach((pet) => {
-    const capitalisedPet = pet.toUpperCase()
+  petsArr
+    .filter((pet) => pet[0] === "h")
+    .forEach((pet) => {
+      const capitalisedPet = pet.toUpperCase();
 
-    if (petCount[capitalisedPet]) {
-      petCount[capitalisedPet] += 1;
-    } else {
-      petCount[capitalisedPet] = 1;
-    }
-  });
-  
+      if (petCount[capitalisedPet]) {
+        petCount[capitalisedPet] += 1;
+      } else {
+        petCount[capitalisedPet] = 1;
+      }
+    });
+
   return petCount;
 }
 
-const animals = ["lion", "hyena", "elephant", "hippo", "tiger", "hippo"]
+const animals = ["lion", "hyena", "elephant", "hippo", "tiger", "hippo"];
 console.log(countAndCapitalisePets(animals));
