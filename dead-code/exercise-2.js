@@ -19,4 +19,5 @@ function countAndCapitalisePets(petsArr) {
   return petCount;
 }
 
-console.log(countAndCapitalisePets(pets));
+const animals = ["lion", "hyena", "elephant", "hippo", "tiger", "hippo"]
+console.log(countAndCapitalisePets(animals));
