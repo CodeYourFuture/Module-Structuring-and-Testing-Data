@@ -2,52 +2,52 @@ import { formatAs12HourClock } from "./timeConverter.js";
 import assert from "node:assert";
 import test from "node:test";
 
-test("can correctly convert time at midnight ", function () {
-  assert.equal(formatAs12HourClock("00:00"), "12:00 AM");
-});
-
-test("can correctly convert time just after midnight", function () {
-  assert.equal(formatAs12HourClock("00:01"), "12:01 AM");
-});
-
-test("can correctly convert time at the first normal hour", function () {
-  assert.equal(formatAs12HourClock("01:00"), "01:00 AM");
+test("can correctly convert time last minute of the day", function () {
+  assert.equal(formatAs12HourClock("23:59"), "11:59 pm");
 });
 
 test("can correctly convert morning time", function () {
-  assert.equal(formatAs12HourClock("08:00"), "08:00 AM");
+  assert.equal(formatAs12HourClock("08:00"), "08:00 am");
+});
+
+test("can correctly convert time at midnight ", function () {
+  assert.equal(formatAs12HourClock("00:00"), "12:00 am");
+});
+
+test("can correctly convert time just after midnight", function () {
+  assert.equal(formatAs12HourClock("00:01"), "12:01 am");
+});
+
+test("can correctly convert time at the first normal hour", function () {
+  assert.equal(formatAs12HourClock("01:00"), "01:00 am");
 });
 
 test("can correctly convert time on leading zeros in hour and minute", function () {
-  assert.equal(formatAs12HourClock("09:05"), "09:05 AM");
+  assert.equal(formatAs12HourClock("09:05"), "09:05 am");
 });
 
 test("can correctly convert time just last minute before noon", function () {
-  assert.equal(formatAs12HourClock("11:59"), "11:59 AM");
+  assert.equal(formatAs12HourClock("11:59"), "11:59 am");
 });
 
 test("can correctly convert time to PM at noon", function () {
-  assert.equal(formatAs12HourClock("12:00"), "12:00 PM");
+  assert.equal(formatAs12HourClock("12:00"), "12:00 pm");
 });
 
 test("can correctly convert time just afternoon", function () {
-  assert.equal(formatAs12HourClock("12:01"), "12:01 PM");
+  assert.equal(formatAs12HourClock("12:01"), "12:01 pm");
 });
 
 test("can correctly convert time last minute of the noon hour", function () {
-  assert.equal(formatAs12HourClock("12:59"), "12:59 PM");
+  assert.equal(formatAs12HourClock("12:59"), "12:59 pm");
 });
 
 test("can correctly convert time first hour after noon", function () {
-  assert.equal(formatAs12HourClock("13:00"), "01:00 PM");
+  assert.equal(formatAs12HourClock("13:00"), "01:00 pm");
 });
 
-test("correctly convert time after 12:00", function () {
-  assert.equal(formatAs12HourClock("23:00"), "11:00 PM");
-});
-
-test("can correctly convert time last minute of the day", function () {
-  assert.equal(formatAs12HourClock("23:59"), "11:59 PM");
+test("correctly convert time before midnight", function () {
+  assert.equal(formatAs12HourClock("23:00"), "11:00 pm");
 });
 
 /* 
