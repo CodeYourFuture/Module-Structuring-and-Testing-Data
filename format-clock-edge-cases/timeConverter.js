@@ -10,8 +10,7 @@ function formatAs12HourClock(time) {
     return `12:${minutes} PM`;
   }
   if (hours > 12) {
-    const paddedHours = String(hours - 12).padStart(2, "0");
-    return `${paddedHours}:${minutes} PM`;
+    return `${String(hours - 12).padStart(2, "0")}:${minutes} PM`;
   }
   return `${time} AM`;
 }
