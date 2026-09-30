@@ -2,7 +2,7 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(-2);
 
-  if (hours > 24 || hours < 0) {
+  if (hours > 24 || hours < 0 || time.includes("-")) {
     return "invalid input.";
   } else if (hours === 24 || hours === 0) {
     return `${12}:${minutes}am`;
