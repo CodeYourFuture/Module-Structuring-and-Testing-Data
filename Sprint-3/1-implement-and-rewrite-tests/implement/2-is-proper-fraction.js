@@ -9,13 +9,16 @@
 // Acceptance criteria:
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
-
 function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
-  if (denominator <= 0) {
+  if (denominator === 0) {
     return false;
   }
-  return numerator < denominator;
+
+  if (denominator < 0 && numerator >= 0) {
+    return false;
+  }
+
+  return Math.abs(numerator) < Math.abs(denominator);
 }
 
 // The line below allows us to load the isProperFraction function into tests in other files.
