@@ -17,3 +17,7 @@ test("can correctly convert time with minutes for am", function(){
 test("can correctly convert time with minutes for pm", function(){
     assert.equal(formatAs12HourClock("18:35"), "06:35 pm");
 });
+
+test("can correctly convert time with minutes with 0 pad such as 12:04", function(){
+    assert.equal(formatAs12HourClock("13:04"), "01:04 pm");
+});
