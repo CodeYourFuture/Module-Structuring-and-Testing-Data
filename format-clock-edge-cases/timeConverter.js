@@ -12,7 +12,7 @@ function formatAs12HourClock(time) {
     return `${hours - 12}:${minutes}pm`;
   } else {
     return `${hours}:${minutes}am`;
-  } 
   }
+}
 
 export { formatAs12HourClock };
