@@ -19,5 +19,11 @@ test("can correctly convert minutes", function () {
 });
 
 test("can correctly convert noon", function () {
-  assert.equal(formatAs12HourClock("12:30"), "12:30 pm");
+  assert.equal(formatAs12HourClock("12:00"), "12:00 pm");
+});
+test("can correctly convert noon", function () {
+  assert.equal(formatAs12HourClock("11:59"), "11:59 am");
+});
+test("can correctly convert one hour after noon", function () {
+  assert.equal(formatAs12HourClock("13:00"), "01:00 pm");
 });
