@@ -10,7 +10,7 @@ function formatAs12HourClock(time) {
   }
 
   if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+    return `${hours - 12}:${time.slice(-2)} pm`;
   }
   return `${time} am`;
 }
