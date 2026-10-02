@@ -24,3 +24,9 @@ test("converts 12:59", () =>
 
 test("converts 23:59 at night", () =>
   assert.equal(formatAs12HourClock("23:59"), "11:59 pm"));
+
+test("converts 00:59 after midnight", () =>
+  assert.equal(formatAs12HourClock("00:59"), "12:59 am"));
+
+test("converts 11:59 before noon", () =>
+  assert.equal(formatAs12HourClock("11:59"), "11:59 am"));
