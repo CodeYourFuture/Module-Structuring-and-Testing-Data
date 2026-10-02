@@ -15,3 +15,6 @@ test("can correctly convert midnight", () =>
 
 test("converts noon 12:00", () =>
   assert.equal(formatAs12HourClock("12:00"), "12:00 pm"));
+
+test("converts 13:00", () =>
+  assert.equal(formatAs12HourClock("13:00"), "1:00 pm"));
