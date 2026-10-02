@@ -5,13 +5,13 @@ function formatAs12HourClock(time) {
   if (hours > 24 || hours < 0 || time.includes("-")) {
     return "invalid input.";
   } else if (hours === 24 || hours === 0) {
-    return `${12}:${minutes}am`;
+    return `${12}:${minutes} am`;
   } else if (hours === 12) {
-    return `${hours}:${minutes}pm`;
+    return `${hours}:${minutes} pm`;
   } else if (hours > 12) {
-    return `${hours - 12}:${minutes}pm`;
+    return `${hours - 12}:${minutes} pm`;
   } else {
-    return `${hours}:${minutes}am`;
+    return `${hours}:${minutes} am`;
   }
 }
 
