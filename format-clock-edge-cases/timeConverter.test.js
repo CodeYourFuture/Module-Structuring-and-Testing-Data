@@ -14,3 +14,7 @@ test("can correctly convert morning time", function() {
     assert.equal(formatAs12HourClock("12:00"), "12:00 pm");
 });
 
+test("can correctly convert morning time", function() {
+    assert.equal(formatAs12HourClock("12:30"), "12:30 pm");
+});
+
