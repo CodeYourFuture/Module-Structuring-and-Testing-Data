@@ -25,7 +25,7 @@ test("convert time just after noon", () => {
     assert.equal(formatAs12HourClock("12:30"), "12:30pm");
 })
 test("converts the first afternoon hour", () => {
-    assert.equal(formatAs12HourClock("13:00"), "1:30pm");
+    assert.equal(formatAs12HourClock("13:00"), "1:00pm");
 })
 test("converts late evening hour", () => {
     assert.equal(formatAs12HourClock("23:00"), "11:00pm");
