@@ -7,7 +7,7 @@ test("correctly convert time afternoon time: 23:00", function () {
 });
 
 test("can correctly convert morning time 08:00", function () {
-  assert.equal(formatAs12HourClock("08:00"), "8:00 am");
+  assert.equal(formatAs12HourClock("08:00"), "08:00 am");
 });
 
 test("can correctly convert morning time 11:59", function () {

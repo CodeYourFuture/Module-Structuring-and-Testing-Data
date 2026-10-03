@@ -11,8 +11,10 @@ function formatAs12HourClock(time) {
   } else if (hours > 12) {
     return `${hours - 12}:${minutes} pm`;
   } else {
-    return `${hours}:${minutes} am`;
+    return `${time.slice(0, 2)}:${minutes} am`;
   }
 }
 
 export { formatAs12HourClock };
+
+ console.log(formatAs12HourClock("08:00"))
