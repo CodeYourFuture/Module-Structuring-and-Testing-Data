@@ -12,3 +12,6 @@ test("can correctly convert morning time", () => {
 test("converts a single-digit morning hour and drops leading zero", () => {
     assert.equal(formatAs12HourClock("08:00"), "8:00am");
 })
+test("converts correctly to midnight", () => {
+    assert.equal(formatAs12HourClock("00:00"), "12:00am");
+})
