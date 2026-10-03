@@ -26,3 +26,4 @@ function formatAs12HourClock(time){
     displayHour = 12;
   } 
 }
+export {formatAs12HourClock};
