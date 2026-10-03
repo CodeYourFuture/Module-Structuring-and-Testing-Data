@@ -3,12 +3,9 @@ import assert from "node:assert";
 import test from "node:test";
 
 test("correctly convert time after 12:00", () => {
-    assert.equal(formatAs12HourClock("23:00"), "11:00 pm");
+    assert.equal(formatAs12HourClock("23:00"), "11:00pm");
 });
 
-test("can correctly convert morning time", () => {
-    assert.equal(formatAs12HourClock("08:00"), "08:00 am");
-});
 test("converts a single-digit morning hour and drops leading zero", () => {
     assert.equal(formatAs12HourClock("08:00"), "8:00am");
 })
@@ -26,4 +23,7 @@ test("converts exact noon to pm", () => {
 })
 test("convert time just after noon", () => {
     assert.equal(formatAs12HourClock("12:30"), "12:30pm");
+})
+test("converts the first afternoon hour", () => {
+    assert.equal(formatAs12HourClock("13:00"), "1:30pm");
 })
