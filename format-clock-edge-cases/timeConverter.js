@@ -28,4 +28,4 @@ function formatAs12HourClock(time){
   return `${displayHour}:${minutePart}${period}`;
 }
 export {formatAs12HourClock};
-console.log(formatAs12HourClock("08:00"))
+console.log(formatAs12HourClock("08:40"))
