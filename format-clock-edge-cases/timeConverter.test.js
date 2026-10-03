@@ -33,3 +33,6 @@ test("converts late evening hour", () => {
 test("converts last minute of the day", () => {
     assert.equal(formatAs12HourClock("23:59"), "11:59pm");
 })
+test("preserves minutes with leading zero", () => {
+    assert.equal(formatAs12HourClock("09:05"), "9:05am");
+})
