@@ -24,3 +24,6 @@ test("converts the last minute before noon", () => {
 test("converts exact noon to pm", () => {
     assert.equal(formatAs12HourClock("12:00"), "12:00pm");
 })
+test("convert time just after noon", () => {
+    assert.equal(formatAs12HourClock("12:30"), "12:30pm");
+})
