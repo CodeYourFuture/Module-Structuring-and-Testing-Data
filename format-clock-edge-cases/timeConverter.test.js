@@ -30,3 +30,6 @@ test("converts the first afternoon hour", () => {
 test("converts late evening hour", () => {
     assert.equal(formatAs12HourClock("23:00"), "11:00pm");
 })
+test("converts last minute of the day", () => {
+    assert.equal(formatAs12HourClock("23:59"), "11:59pm");
+})
