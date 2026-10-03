@@ -25,7 +25,7 @@ function formatAs12HourClock(time){
   if(displayHour === 0){
     displayHour = 12;
   } 
-  return `${displayHour}:${minutePart} ${period}`
+  return `${displayHour}:${minutePart}${period}`;
 }
 export {formatAs12HourClock};
 console.log(formatAs12HourClock("24:00"))
