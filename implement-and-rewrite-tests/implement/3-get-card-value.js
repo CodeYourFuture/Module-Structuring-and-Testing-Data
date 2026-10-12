@@ -23,6 +23,38 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-export function getCardValue(card) {
-  // TODO: Implement this function
+function getCardValue(card) {
+  if (card == "") {
+    throw new Error(`Missing a specific number and specific suit symbol`);
+  }
+  const cardRank = card.slice(0, -1);
+  const suit = card.slice(-1);
+
+  if (!["♠", "♥", "♦", "♣"].includes(suit)) {
+    throw new Error(`Missing a specific suit symbol`);
+  }
+
+  if (cardRank == "A") {
+    return 11;
+  }
+  if (cardRank == "J" || cardRank == "K" || cardRank == "Q") {
+    return 10;
+  }
+  if (
+    cardRank == "2" ||
+    cardRank == "3" ||
+    cardRank == "4" ||
+    cardRank == "5" ||
+    cardRank == "6" ||
+    cardRank == "7" ||
+    cardRank == "8" ||
+    cardRank == "9" ||
+    cardRank == "10"
+  ) {
+    return Number(cardRank);
+  } else {
+    throw new Error(`Missing a specific number and specific suit symbol`);
+  }
 }
+
+export { getCardValue };
