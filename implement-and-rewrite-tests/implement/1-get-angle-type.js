@@ -16,6 +16,20 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-export function getAngleType(angle) {
-  // TODO: Implement this function
+function getAngleType(angle) {
+  if (angle >= 360 || angle <= 0 || angle === "" || isNaN(angle)) {
+    return "invalid angle";
+  } else if (angle > 180 && angle < 360) {
+    return "Reflex angle";
+  } else if (angle === 180) {
+    return "Straight angle";
+  } else if (angle < 180 && angle > 90) {
+    return "Obtuse angle";
+  } else if (angle === 90) {
+    return "Right angle";
+  } else if (angle < 90 && angle > 0) {
+    return "Acute angle";
+  }
 }
+
+export { getAngleType };
