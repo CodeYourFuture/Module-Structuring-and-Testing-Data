@@ -24,5 +24,27 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  // TODO: Implement this function
+  const errorMessage = `Expected a number followed by a suit, but got "${card}"`;
+
+  if (typeof card !== "string") {
+    throw new Error(errorMessage);
+  }
+
+  const value = card.slice(0, -1);
+  const suit = card.slice(-1);
+
+  if (!["♠", "♥", "♦", "♣"].includes(suit)) {
+    throw new Error(errorMessage);
+  }
+
+  if (value === "A") {
+    return 11;
+  } else if (value === "J" || value === "Q" || value === "K") {
+    return 10;
+  } else if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(value)) {
+    return Number(value);
+  } else {
+    throw new Error(errorMessage);
+  }
 }
+console.log(getCardValue("K♠"));
