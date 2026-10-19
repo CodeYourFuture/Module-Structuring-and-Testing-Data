@@ -6,7 +6,71 @@ import { isProperFraction } from "../implement/2-is-proper-fraction.js";
 // TODO: Write tests to cover all cases.
 // What combinations of numerators and denominators should you test?
 
-test("Basic proper fraction", () => {
+test("Basic proper fraction: Numerator < Denominator", () => {
   // Example: 1/2 is a proper fraction
   assert.equal(isProperFraction(1, 2), true);
+});
+
+test("Proper fraction with negative number: -Numerator < Denominator", () => {
+  assert.equal(isProperFraction(-1, 2), true);
+});
+
+test("Proper fraction with negative number: Numerator < -Denominator", () => {
+  assert.equal(isProperFraction(1, -2), true);
+});
+
+test("Proper fraction with negative numbers: -Numerator < -Denominator", () => {
+  assert.equal(isProperFraction(-1, -2), true);
+});
+
+test("Improper fraction: Numerator = Denominator", () => {
+  assert.equal(isProperFraction(2, 2), false);
+});
+
+test("Improper fraction with same value and negative number: -Numerator > Denominator", () => {
+  assert.equal(isProperFraction(-2, 2), false);
+});
+
+test("Improper fraction with same value and negative number: Numerator > -Denominator", () => {
+  assert.equal(isProperFraction(2, -2), false);
+});
+
+test("Improper fraction same value and both negative: Numerator = Denominator", () => {
+  assert.equal(isProperFraction(-2, -2), false);
+});
+
+test("improper fraction: Numerator > Denominator", () => {
+  assert.equal(isProperFraction(2, 1), false);
+});
+
+test("Improper fraction with negative number: -Numerator > Denominator", () => {
+  assert.equal(isProperFraction(-2, 1), false);
+});
+
+test("Improper fraction with negative number: Numerator > -Denominator", () => {
+  assert.equal(isProperFraction(2, -1), false);
+});
+
+test("Improper fraction with negative numbers: -Numerator > -Denominator", () => {
+  assert.equal(isProperFraction(-2, -1), false);
+});
+
+test("Improper fraction: Denominator = 0", () => {
+  assert.equal(isProperFraction(1, 0), false);
+});
+
+test("Proper fraction with negative Numerator and Zero: -Numerator < 0", () => {
+  assert.equal(isProperFraction(-1, 0), false);
+});
+
+test("Improper fraction: Nominator = 0", () => {
+  assert.equal(isProperFraction(0, 2), false);
+});
+
+test("Proper fraction with Zero and negative Denominator: 0 < -Denominator", () => {
+  assert.equal(isProperFraction(0, -2), false);
+});
+
+test("Proper fraction with both being Zero", () => {
+  assert.equal(isProperFraction(0, 0), false);
 });

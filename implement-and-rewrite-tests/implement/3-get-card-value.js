@@ -25,4 +25,26 @@
 
 export function getCardValue(card) {
   // TODO: Implement this function
+  if (card === "") {
+    throw new Error("Input needed");
+  } else if (card.length >= 5) {
+    throw new Error("Invalid");
+  }
+
+  let suit = card.slice(-1);
+  let cardNumber = card.slice(0, -1);
+  let value = Number(cardNumber);
+  if (!(suit === "♠" || suit === "♥" || suit === "♦" || suit === "♣")) {
+    throw new Error("Incorrect suit given");
+  } else if (cardNumber === "J" || cardNumber === "Q" || cardNumber === "K") {
+    return 10;
+  } else if (cardNumber === "A") {
+    return 11;
+  } else if (Number.isNaN(value)) {
+    throw new Error("Incorrect face given");
+  } else if (value >= 2 && value <= 10) {
+    return value;
+  } else if (value < 2 || value > 10) {
+    throw new Error("Incorrect face given");
+  }
 }
