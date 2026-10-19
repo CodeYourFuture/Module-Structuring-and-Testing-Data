@@ -10,3 +10,43 @@ test("Basic proper fraction", () => {
   // Example: 1/2 is a proper fraction
   assert.equal(isProperFraction(1, 2), true);
 });
+
+test("Basic improper fraction", () => {
+  assert.equal(isProperFraction(3, 2), false);
+});
+
+test("equal numerator and denominator", () => {
+  assert.equal(isProperFraction(5, 5), false);
+});
+
+test("negative numerator proper fraction", () => {
+  assert.equal(isProperFraction(-1, 2), true);
+});
+
+test("negative denominator proper fraction", () => {
+  assert.equal(isProperFraction(1, -2), true);
+});
+
+test("negative denominator and negative numerator proper fraction", () => {
+  assert.equal(isProperFraction(-1, -2), true);
+});
+
+test("negative numerator improper fraction", () => {
+  assert.equal(isProperFraction(-3, 2), false);
+});
+
+test("negative denominator improper fraction", () => {
+  assert.equal(isProperFraction(3, -2), false);
+});
+
+test("negative denominator and negative numerator improper fraction", () => {
+  assert.equal(isProperFraction(-3, -2), false);
+});
+
+test("zero denominator", () => {
+  assert.equal(isProperFraction(3, 0), false);
+});
+
+test("zero numerator", () =>{
+  assert.equal(isProperFraction(0,2), true);
+})

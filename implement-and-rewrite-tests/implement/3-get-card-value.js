@@ -24,5 +24,31 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  // TODO: Implement this function
+  const validSuits = ["♠", "♥", "♦", "♣"];
+  const validNumberRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  const validFace = ["J", "Q", "K"];
+
+  const suit = card.at(-1);
+  const rank = card.slice(0, -1);
+
+  if (!validSuits.includes(suit)) {
+    throw new Error(
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
+    );
+  }
+  if (validNumberRanks.includes(rank)) {
+    return Number(rank);
+  }
+
+  if (validFace.includes(rank)) {
+    return 10;
+  }
+
+  if (rank === "A") {
+    return 11;
+  }
+
+  throw new Error(
+    `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
+  );
 }
