@@ -1,4 +1,4 @@
-// Implement a function isProperFraction,
+// Implement a function isProperFraction, fix
 //
 // Don't forget to write tests in implement-tests-with-node-test.
 //
@@ -14,5 +14,5 @@
 // execute the code to ensure all tests pass.
 
 export function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+  return Math.abs(numerator) < Math.abs(denominator)
 }
