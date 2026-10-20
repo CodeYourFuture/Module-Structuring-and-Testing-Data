@@ -1,18 +1,45 @@
 import { getCardValue } from "../implement/3-get-card-value.js";
 
-// TODO: Write tests in Jest syntax to cover all possible outcomes.
-
-// Case 1: Ace (A)
-test(`Should return 11 when given an ace card`, () => {
-  expect(getCardValue("A♠")).toEqual(11);
+test.each([
+  ["2♠", 2],
+  ["9♠", 9],
+  ["10♥", 10],
+  ["A♠", 11],
+  ["J♣", 10],
+  ["Q♦", 10],
+  ["K♥", 10],
+])("returns the value of %s", (card, expectedValue) => {
+  expect(getCardValue(card)).toEqual(expectedValue);
 });
 
-// Suggestion: Group the remaining test data into these categories:
-//   Number Cards (2-10)
-//   Face Cards (J, Q, K)
-//   Invalid Cards
+const ranks = [
+  ["A", 11],
+  ["2", 2],
+  ["3", 3],
+  ["4", 4],
+  ["5", 5],
+  ["6", 6],
+  ["7", 7],
+  ["8", 8],
+  ["9", 9],
+  ["10", 10],
+  ["J", 10],
+  ["Q", 10],
+  ["K", 10],
+];
+const suits = ["♠", "♥", "♦", "♣"];
 
-// To learn how to test whether a function throws an error as expected in Jest,
-// please refer to the Jest documentation:
-// https://jestjs.io/docs/expect#tothrowerror
+test.each(
+  ranks.flatMap(([rank, expectedValue]) =>
+    suits.map((suit) => [`${rank}${suit}`, expectedValue]),
+  ),
+)("returns the expected value for %s", (card, expectedValue) => {
+  expect(getCardValue(card)).toEqual(expectedValue);
+});
 
+test.each(["invalid", "1♠", "11♠", "A", "A X", "A🃏"])(
+  "rejects invalid card %s",
+  (card) => {
+    expect(() => getCardValue(card)).toThrow();
+  },
+);
