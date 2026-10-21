@@ -24,5 +24,32 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  // TODO: Implement this function
+  const suitString = "♠♥♦♣";
+  const rankString = "JQK";
+
+  if (card) {
+    const suit = card[card.length - 1];
+    if (suitString.includes(suit)) {
+      const rank = card.slice(0, -1);
+      if (rank === "10") {
+        return 10;
+      } else if (rank.length === 1) {
+        if (rank === "A") {
+          return 11;
+        }
+
+        if (rankString.includes(rank)) {
+          return 10;
+        }
+
+        const rankNum = Number(rank);
+
+        if (rankNum >= 2) {
+          return rankNum;
+        }
+      }
+    }
+  }
+
+  throw new Error(`/Expected a number followed by a suit, but got "${card}"/`);
 }
