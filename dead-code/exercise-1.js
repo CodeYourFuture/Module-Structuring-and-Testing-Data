@@ -1,11 +1,9 @@
-const greeting = "hello";
+let testName = "Aman";
 
 function sayHello(greeting, name) {
   return `${greeting}, ${name}!`;
 }
 
-let testName = "Aman";
-
-const greetingMessage = sayHello(greeting, testName);
+const greetingMessage = sayHello("hello", testName);
 
 console.log(greetingMessage);
