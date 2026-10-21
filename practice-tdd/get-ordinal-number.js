@@ -1,3 +1,18 @@
 export function getOrdinalNumber(num) {
-  return "1st";
+  let numString = num.toString();
+  if (11 <= Number(numString.slice(-2)) && 19 >= Number(numString.slice(-2))) {
+    return numString + "th";
+  } else if (
+    -11 >= Number(numString.slice(-2)) &&
+    -19 <= Number(numString.slice(-2))
+  ) {
+    return numString + "th";
+  } else if (numString.slice(-1) === "1") {
+    return numString + "st";
+  } else if (numString.slice(-1) === "2") {
+    return numString + "nd";
+  } else if (numString.slice(-1) === "3") {
+    return numString + "rd";
+  }
+  return numString + "th";
 }
