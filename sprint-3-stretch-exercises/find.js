@@ -20,6 +20,13 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+// "Index" starts at 0 and increases by 1 when there is no match.
+
 // b) What is the if statement used to check
+// It's checking whether the character at the current position equals the character we are looking for.
+
 // c) Why is index++ being used?
+// Without index++ there would be an infinite loop, whereby index would never change.
+
 // d) What is the condition index < str.length used for?
+// It is used to stop the loop as soon as it reaches the end of the string, so we don't look at positions that don't exist.
