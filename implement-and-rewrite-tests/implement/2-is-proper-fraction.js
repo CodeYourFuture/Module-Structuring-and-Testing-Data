@@ -12,7 +12,13 @@
 // Acceptance criteria:
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
-
 export function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+  if (numerator == 0) {
+    // 0 is not a proper fraction it is a whole number
+    return false;
+  }
+  if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  }
+  return false;
 }
