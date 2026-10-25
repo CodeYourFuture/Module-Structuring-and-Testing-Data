@@ -22,3 +22,37 @@ test("should count multiple occurrences of a character", () => {
 // And a character `char` that does not exist within `str`.
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
+test("should return 0 when the character does not occur in the string", () => {
+  const str = "hello";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+test("should count correctly when the character appears in only part of the string", () => {
+  const str = "hello";
+  const char = "l";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+});
+
+test("should count a character that appears once in the middle of the string", () => {
+  const str = "abc";
+  const char = "b";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
+
+test("should count a character that appears in separate parts of the string", () => {
+  const str = "banana";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(3);
+});
+
+test("should return 0 when the string is empty", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
