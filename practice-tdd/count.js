@@ -1,3 +1,6 @@
 export function countChar(stringOfCharacters, findCharacter) {
-  return 5
+  if (findCharacter === "") {
+    return 0;
+  }
+  return stringOfCharacters.split(findCharacter).length - 1;
 }
