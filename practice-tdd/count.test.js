@@ -31,7 +31,7 @@ test("should return 0 when the character does not occur", () => {
 
 test("should count multiple occurrences of a character", () => {
   const str = "aaaaa";
-  const char = "b";
+  const char = "d";
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
