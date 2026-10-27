@@ -5,4 +5,6 @@ function sayHello(greeting, name) {
   return `${greeting}, ${name}!`;
 }
 
-console.log(sayHello("hello", "Aman")); // 'hello, Aman!'
+let testName = "Aman"
+
+console.log(sayHello("hello", testName)); 
