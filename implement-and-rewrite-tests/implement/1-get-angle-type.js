@@ -17,5 +17,32 @@
 // execute the code to ensure all tests pass.
 
 export function getAngleType(angle) {
-  // TODO: Implement this function
+  if (angle <= 0 || angle >= 360) {
+    return `Invalid angle`;
+  }
+  if (angle < 90) {
+    return `Acute angle`;
+  }
+  if (angle === 90) {
+    return `Right angle`;
+  }
+  if (angle === 180) {
+    return `Straight angle`;
+  }
+  if (angle < 180) {
+    return `Obtuse angle`;
+  }
+  return `Reflex angle`;
 }
+
+//Pseudo codes
+//First define type: Num (whole number)
+//Then range: 0 - 360
+//Cases:
+//1. 0-89 : Actute angle
+//2. 90   : Right angle
+//3. 91-179: Obtuse angle
+//4. 180: Straight angle
+//5. 181-359 : Reflex angle
+//6. 360 and beyond Invalid angle
+//Key word to use : If?
