@@ -55,9 +55,18 @@ test("password has at least non-alphanumeric symbols", () => {
 //  Must not be any previous password in the passwords array.
 test("password must not be any previous password in the passwords array", () => {
   const password = "1Az9!";
-  const previousPassword = ["1Az9!", "1HBz2!"];
-  const result = isValidPassword(password, previousPassword);
-  expect(result).toEqual(false);
+
+  const previousPassword1 = ["1Az9!", "1HBz2!"];
+  const result1 = isValidPassword(password, previousPassword1);
+  expect(result1).toEqual(false);
+
+  const previousPassword2 = ["1HBz2!", "1Az9!"];
+  const result2 = isValidPassword(password, previousPassword2);
+  expect(result2).toEqual(false);
+
+  const previousPassword3 = ["1Az8!", "1HBz2!"];
+  const result3 = isValidPassword(password, previousPassword3);
+  expect(result3).toEqual(true);
 });
 
 // Valid password returns true.
