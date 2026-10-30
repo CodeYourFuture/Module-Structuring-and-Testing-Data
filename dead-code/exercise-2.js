@@ -6,19 +6,19 @@ const pets = ["parrot", "hamster", "horse", "dog", "hamster", "cat", "hamster"];
 function countAndCapitalisePets(petsArr) {
   const petCount = {};
 
-  petsArr
-    .filter((pet) => pet[0] === "h")
-    .forEach((pet) => {
-      const capitalisedPet = pet.toUpperCase();
+  petsArr.forEach((pet) => {
+    const capitalisedPet = pet.toUpperCase();
 
-      if (petCount[capitalisedPet]) {
-        petCount[capitalisedPet] += 1;
-      } else {
-        petCount[capitalisedPet] = 1;
-      }
-    });
+    if (petCount[capitalisedPet]) {
+      petCount[capitalisedPet] += 1;
+    } else {
+      petCount[capitalisedPet] = 1;
+    }
+  });
 
   return petCount;
 }
 
-console.log(countAndCapitalisePets(pets));
+const petsStartingWithH = pets.filter((pet) => pet[0] === "h");
+
+console.log(countAndCapitalisePets(petsStartingWithH));
