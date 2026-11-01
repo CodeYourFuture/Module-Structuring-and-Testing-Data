@@ -11,20 +11,11 @@ function formatAs12HourClock(time) {
   }
 
   if (hours > 12) {
-    const time = hours - 12;
-
-    if (time < 10) {
-      return `0${time}:${minutes} pm`;
-    }
-
-    return `${hours - 12}:${minutes} pm`;
+    const pmHours = hours - 12;
+    return `${String(pmHours).padStart(2, "0")}:${minutes} pm`;
   }
 
-  if (hours < 10) {
-    return `0${hours}:${minutes} am`;
-  }
-
-  return `${hours}:${minutes} am`;
+  return `${String(hours).padStart(2, "0")}:${minutes} am`;
 }
 
 export { formatAs12HourClock };
