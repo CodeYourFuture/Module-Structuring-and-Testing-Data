@@ -21,4 +21,4 @@ function countAndCapitalisePets(petsArr) {
 
 const countedPetsStartingWithH = countAndCapitalisePets(petsStartingWithH);
 
-console.log(countedPetsStartingWithH); // { 'HAMSTER': 3, 'HORSE': 1 } <- Final console log
+console.log(countedPetsStartingWithH);
