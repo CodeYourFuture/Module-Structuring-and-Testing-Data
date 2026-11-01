@@ -23,21 +23,31 @@ test("should return false when numerator is greater than denominator", () => {
 });
 
 // Case 4: Zero numerator
-test("should return true when numerator is zero", () => {
-  assert.equal(isProperFraction(0, 2), true);
+test("should return false when numerator is zero", () => {
+  assert.equal(isProperFraction(0, 2), false);
 });
 
 // Case 5: Negative numerator
-test("should return true when numerator is negative and denominator is positive", () => {
-  assert.equal(isProperFraction(-1, 2), true);
+test("should return false when numerator is negative and denominator is positive", () => {
+  assert.equal(isProperFraction(-1, 2), false);
 });
 
 // Case 6: Negative denominator
-test("should return false when denominator is negative", () => {
+test("should return false when denominator is negative and numerator is positive", () => {
   assert.equal(isProperFraction(1, -2), false);
 });
 
 // Case 7: Zero denominator
 test("should return false when denominator is zero", () => {
   assert.equal(isProperFraction(1, 0), false);
+});
+
+// Case 8: Both numerator and denominator are negative
+test("should return false when both are negative and numerator has a smaller magnitude", () => {
+  assert.equal(isProperFraction(-1, -2), false);
+});
+
+// Case 9: Both negative but numerator has a larger magnitude
+test("should return false when both are negative and numerator has a larger magnitude", () => {
+  assert.equal(isProperFraction(-2, -1), false);
 });
