@@ -1,27 +1,28 @@
 import { getAngleType } from "../implement/1-get-angle-type.js";
 
-// TODO: Write tests in Jest syntax to cover all cases/outcomes,
-// including boundary and invalid cases.
-
 // Case 1: Acute angles
 test(`should return "Acute angle" when (0 < angle < 90)`, () => {
   // Test various acute angles, including boundary cases
+  expect(getAngleType(0.1)).toEqual("Acute angle");
   expect(getAngleType(1)).toEqual("Acute angle");
   expect(getAngleType(0.5)).toEqual("Acute angle");
   expect(getAngleType(45)).toEqual("Acute angle");
+  expect(getAngleType(89.9)).toEqual("Acute angle");
   expect(getAngleType(89.5)).toEqual("Acute angle");
   expect(getAngleType(89)).toEqual("Acute angle");
 });
 
 // Case 2: Right angle
-test('should return "right angle" when angle is 90', () => {
+test('should return "Right angle" when angle is 90', () => {
   expect(getAngleType(90)).toEqual("Right angle");
 });
 // Case 3: Obtuse angles
 test('should return "Obtuse angle" when (90 < angle < 180)', () => {
+  expect(getAngleType(90.1)).toEqual("Obtuse angle");
   expect(getAngleType(90.5)).toEqual("Obtuse angle");
   expect(getAngleType(91)).toEqual("Obtuse angle");
   expect(getAngleType(120)).toEqual("Obtuse angle");
+  expect(getAngleType(179.9)).toEqual("Obtuse angle");
   expect(getAngleType(179.5)).toEqual("Obtuse angle");
   expect(getAngleType(179)).toEqual("Obtuse angle");
 });
@@ -31,9 +32,11 @@ test('should return "Straight angle" when angle is 180', () => {
 });
 // Case 5: Reflex angles
 test('should return "Reflex angle" when (180 < angle < 360)', () => {
+  expect(getAngleType(180.1)).toEqual("Reflex angle");
   expect(getAngleType(180.5)).toEqual("Reflex angle");
   expect(getAngleType(181)).toEqual("Reflex angle");
   expect(getAngleType(270)).toEqual("Reflex angle");
+  expect(getAngleType(359.9)).toEqual("Reflex angle");
   expect(getAngleType(359.5)).toEqual("Reflex angle");
   expect(getAngleType(359)).toEqual("Reflex angle");
 });
@@ -41,6 +44,7 @@ test('should return "Reflex angle" when (180 < angle < 360)', () => {
 
 test('should return "Invalid angle" for invalid angles', () => {
   expect(getAngleType(-1)).toEqual("Invalid angle");
+  expect(getAngleType(-0.5)).toEqual("Invalid angle");
   expect(getAngleType(-10)).toEqual("Invalid angle");
   expect(getAngleType(0)).toEqual("Invalid angle");
   expect(getAngleType(360)).toEqual("Invalid angle");
