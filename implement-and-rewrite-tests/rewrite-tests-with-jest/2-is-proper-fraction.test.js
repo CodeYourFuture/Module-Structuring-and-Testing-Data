@@ -11,12 +11,16 @@ test("should return true for a proper fraction", () => {
 
 test("should return false when the numerator and denominator have equal magnitudes", () => {
   expect(isProperFraction(5, 5)).toEqual(false);
+  expect(isProperFraction(-5, 5)).toEqual(false);
+  expect(isProperFraction(5, -5)).toEqual(false);
   expect(isProperFraction(-5, -5)).toEqual(false);
 });
 
 test("should return false when the numerator's magnitude exceeds the denominator's", () => {
   expect(isProperFraction(7, 3)).toEqual(false);
   expect(isProperFraction(-7, 3)).toEqual(false);
+  expect(isProperFraction(7, -3)).toEqual(false);
+  expect(isProperFraction(-7, -3)).toEqual(false);
 });
 
 test("should return true when numerator is zero", () => {
@@ -38,4 +42,8 @@ test("should return true for positive numerator and negative denominator when th
 
 test("should return false for negative numerator and positive denominator when the numerator is larger", () => {
   expect(isProperFraction(-3, 2)).toEqual(false);
+});
+
+test("should return false for positive numerator and negative denominator when the numerator is larger", () => {
+  expect(isProperFraction(3, -2)).toEqual(false);
 });
