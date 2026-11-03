@@ -23,6 +23,33 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
+const cardValues = new Map([
+  ["A", 11],
+  ["2", 2],
+  ["3", 3],
+  ["4", 4],
+  ["5", 5],
+  ["6", 6],
+  ["7", 7],
+  ["8", 8],
+  ["9", 9],
+  ["10", 10],
+  ["J", 10],
+  ["Q", 10],
+  ["K", 10],
+]);
+
 export function getCardValue(card) {
-  // TODO: Implement this function
+  const suit = card.slice(-1);
+  const rank = card.slice(0, -1);
+
+  if (!["♠", "♥", "♦", "♣"].includes(suit)) {
+    throw new Error(`Expected a number followed by a suit, but got "${card}"`);
+  }
+
+  if (cardValues.has(rank)) {
+    return cardValues.get(rank);
+  }
+
+  throw new Error(`Expected a number followed by a suit, but got "${card}"`);
 }
