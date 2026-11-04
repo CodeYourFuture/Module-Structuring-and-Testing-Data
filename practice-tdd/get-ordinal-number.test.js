@@ -37,4 +37,20 @@ test("should append 'th' for all other numbers, including 11, 12 and 13", () => 
   expect(getOrdinalNumber(12)).toEqual("12th");
   expect(getOrdinalNumber(13)).toEqual("13th");
   expect(getOrdinalNumber(111)).toEqual("111th");
+  expect(getOrdinalNumber(112)).toEqual("112th");
+  expect(getOrdinalNumber(113)).toEqual("113th");
+});
+
+test("should return '0th' for zero", () => {
+  expect(getOrdinalNumber(0)).toEqual("0th");
+});
+
+test("should handle negative numbers", () => {
+  expect(getOrdinalNumber(-1)).toEqual("-1st");
+  expect(getOrdinalNumber(-2)).toEqual("-2nd");
+  expect(getOrdinalNumber(-3)).toEqual("-3rd");
+  expect(getOrdinalNumber(-4)).toEqual("-4th");
+  expect(getOrdinalNumber(-11)).toEqual("-11th");
+  expect(getOrdinalNumber(-12)).toEqual("-12th");
+  expect(getOrdinalNumber(-13)).toEqual("-13th");
 });
