@@ -18,9 +18,9 @@ test("should count multiple occurrences of a character", () => {
 // Then it should return 1.
 test("should count a single occurrence of a character", () => {
   const str = "banana";
-  const char = "n";
+  const char = "b";
   const count = countChar(str, char);
-  expect(count).toEqual(2);
+  expect(count).toEqual(1);
 });
 
 // Scenario: No Occurrences
