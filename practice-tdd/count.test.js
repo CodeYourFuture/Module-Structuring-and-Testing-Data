@@ -45,6 +45,10 @@ test("should return 0 for an empty string", () => {
   expect(count).toEqual(0);
 });
 
+test("should return 0 when the character to find is empty", () => {
+  expect(countChar("abc", "")).toEqual(0);
+});
+
 // Edge case: Character at start and end
 // Given a string where the character appears at both ends,
 // When the function is called,
