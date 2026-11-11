@@ -46,6 +46,21 @@ test("classifies obtuse angle boundary ", () => {
   assert.equal(obtuseBoundary, "Straight angle");
 });
 
+test("classifies reflex angle boundary ", () => {
+  const reflexBoundary = getAngleType(270);
+  assert.equal(reflexBoundary, "Reflex angle");
+});
+
+test("classifies right angle boundary ", () => {
+  const rightBoundary = getAngleType(90);
+  assert.equal(rightBoundary, "Right angle");
+});
+
+test("classifies straight angle boundary ", () => {
+  const straightBoundary = getAngleType(180);
+  assert.equal(straightBoundary, "Straight angle");
+});
+
 test("Handles invalid angles (greater than 360)", () => {
   const invalidGreaterThan360 = getAngleType(400);
   assert.equal(invalidGreaterThan360, "Invalid angle");
