@@ -35,3 +35,18 @@ test("Handles invalid angles (negative)", () => {
   const invalidNegative = getAngleType(-30);
   assert.equal(invalidNegative, "Invalid angle");
 });
+
+test("classifies acute angle boundary ", () => {
+  const acuteBoundary = getAngleType(1);
+  assert.equal(acuteBoundary, "Acute angle");
+});
+
+test("classifies obtuse angle boundary ", () => {
+  const obtuseBoundary = getAngleType(180);
+  assert.equal(obtuseBoundary, "Straight angle");
+});
+
+test("Handles invalid angles (greater than 360)", () => {
+  const invalidGreaterThan360 = getAngleType(400);
+  assert.equal(invalidGreaterThan360, "Invalid angle");
+});
