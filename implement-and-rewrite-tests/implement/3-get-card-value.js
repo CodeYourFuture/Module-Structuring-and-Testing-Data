@@ -24,28 +24,5 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  if (typeof card !== "string" || card.length < 2) {
-    throw new Error(`Invalid card: "${card}"`);
-  }
-
-  const rank = card.slice(0, -1);
-  const suit = card.slice(-1);
-
-  if (!["♠", "♥", "♦", "♣"].includes(suit)) {
-    throw new Error(`Invalid suit: "${suit}"`);
-  }
-
-  if (rank === "A") {
-    return 11;
-  }
-
-  if (["J", "Q", "K"].includes(rank)) {
-    return 10;
-  }
-
-  if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(rank)) {
-    return Number(rank);
-  }
-
-  throw new Error(`Invalid rank: "${rank}"`);
+  // TODO: Implement this function
 }
