@@ -26,6 +26,12 @@ test("should return 0 for an empty string", () => {
   const count = countChar("", "a");
   expect(count).toEqual(0);
 });
+
+test("should return 0 when character does not occur", () => {
+  const count = countChar("hello", "z");
+  expect(count).toEqual(0);
+});
+
 // Scenario: No Occurrences
 // Given the input string `str`,
 // And a character `char` that does not exist within `str`.
