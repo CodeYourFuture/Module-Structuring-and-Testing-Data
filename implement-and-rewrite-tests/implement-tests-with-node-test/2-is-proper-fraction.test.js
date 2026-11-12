@@ -26,3 +26,25 @@ test("Checks equal numerator & denominator 5/5", () => {
 test("Checks numerator greater than denominator 7/5", () => {
   assert.equal(isProperFraction(7, 5), false);
 });
+
+test("Checks negative numerator", () => {
+  assert.equal(isProperFraction(-2, 5), true);
+});
+
+test("Checks negative denominator", () => {
+  assert.equal(isProperFraction(2, -5), true);
+});
+
+test("Checks both numerator and denominator are negative", () => {
+  assert.equal(isProperFraction(-2, -5), true);
+  assert.equal(isProperFraction(-5, -2), false);
+});
+
+test("Checks zero numerator", () => {
+  assert.equal(isProperFraction(0, 5), true);
+});
+
+test("Checks zero denominator", () => {
+  assert.equal(isProperFraction(5, 0), false);
+  assert.equal(isProperFraction(0, 0), false);
+});
