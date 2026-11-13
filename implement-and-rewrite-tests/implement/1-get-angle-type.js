@@ -17,31 +17,38 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
+
 export function getAngleType(angle) {
-   if (angle ==0) {
-     return "Zero angle";
-   }
-   if (angle == 360) {
-     return "Complete angle";
-   }
-  if (angle <0||angle >360) {
-    return "Invalid angle";
+  switch (angle) {
+    case 0:
+      return "Zero angle";
+
+    case 360:
+      return "Complete angle";
+
+    case 90:
+      return "Right angle";
+
+    case 180:
+      return "Straight angle";
+
+    default:
+      if (angle < 0 || angle > 360) {
+        return "Invalid angle";
+      }
+
+      if (angle < 90) {
+        return "Acute angle";
+      }
+
+      if (angle < 180) {
+        return "Obtuse angle";
+      }
+
+      if (angle < 360) {
+        return "Reflex angle";
+      }
+
+      return "Invalid angle";
   }
-  if (angle < 90) {
-    return "Acute angle";
-  }
-  if (angle == 90) {
-    return "Right angle";
-  }
-  if (angle < 180) {
-    return "Obtuse angle";
-  }
-  if (angle == 180) {
-    return "Straight angle";
-  }
-  if (angle < 360) {
-    return "Reflex angle";
-  }
- 
- 
 }
