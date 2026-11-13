@@ -3,40 +3,42 @@ import test from "node:test";
 
 import { getAngleType } from "../implement/1-get-angle-type.js";
 
-test("Classifies right angles", () => {
-  const right = getAngleType(90);
-  assert.equal(right, "Right angle");
-});
-test("Classifies acute angles", () => {
-  const acute = getAngleType(60);
-  assert.equal(acute, "Acute angle");
-});
-test("Classifies obtuse angles", () => {
-  const obtuse = getAngleType(120);
-  assert.equal(obtuse, "Obtuse angle");
-});
-test("Classifies straight angles", () => {
-  const straight = getAngleType(180);
-  assert.equal(straight, "Straight angle");
-});
-test("Classifies reflex angles", () => {
-  const reflex = getAngleType(350);
-  assert.equal(reflex, "Reflex angle");
-});
-test("Classifies invalid angles", () => {
-  const invalid = getAngleType(370);
-  assert.equal(invalid, "Invalid angle");
-});
-test("Classifies invalid angles", () => {
-  const invalid = getAngleType(-10);
-  assert.equal(invalid, "Invalid angle");
-});
-test("Classifies Zero angle", () => {
-  const zero = getAngleType(0);
-  assert.equal(zero, "Zero angle");
+// Zero and complete angles
+test("Classifies zero angles", () => {
+  assert.equal(getAngleType(0), "Zero angle");
 });
 
-test("Classifies Complete angle", () => {
-  const complete = getAngleType(360);
-  assert.equal(complete, "Complete angle");
+test("Classifies complete angles", () => {
+  assert.equal(getAngleType(360), "Complete angle");
+});
+
+// Acute, right, obtuse and straight angles
+test("Classifies acute angles", () => {
+  assert.equal(getAngleType(60), "Acute angle");
+});
+
+test("Classifies right angles", () => {
+  assert.equal(getAngleType(90), "Right angle");
+});
+
+test("Classifies obtuse angles", () => {
+  assert.equal(getAngleType(120), "Obtuse angle");
+});
+
+test("Classifies straight angles", () => {
+  assert.equal(getAngleType(180), "Straight angle");
+});
+
+// Reflex angles
+test("Classifies reflex angles", () => {
+  assert.equal(getAngleType(350), "Reflex angle");
+});
+
+// Invalid angles
+test("Classifies angles greater than 360 as invalid", () => {
+  assert.equal(getAngleType(370), "Invalid angle");
+});
+
+test("Classifies negative angles as invalid", () => {
+  assert.equal(getAngleType(-10), "Invalid angle");
 });
